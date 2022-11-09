@@ -5,5 +5,8 @@
 # To change the home page layout, edit the _layouts/home.html file.
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
+
 layout: static-home
+title: Welcome to Living Earth
+subheading: Welcome to Living Earth
 ---

@@ -15,24 +15,26 @@ layout: static-default
 
 <div class="home">
 
-    <!-- welcome-to-start -->
-    <div class="main-home-section">
-        <img class="main-benner-img" src="assets/img/home.jpg" alt="">
-        <div class="container welcome-living-main">
-            <div class="row">
-                <div class="col-12 col-lg-8 welcome-living-earth">
-                    <h5>all-in-one</h5>
-                    <h1>Welcome to Living Earth</h1>
-                    <p>Living Earth is providing new capacity to support planetary restoration, primarily through use of Earth observations.</p>
-                    <div class="welcome-living-button">
-                        <button type="button" class="search hover-slide-right">Search</button>
-                        <button type="button" onclick="location.href='/contact'" class="get-in-touch hover-slide-transparent">Get in touch</button>
+    {%- if page.title -%}
+        <!-- welcome-to-start -->
+        <div class="main-home-section">
+            <img class="main-benner-img" src="assets/img/home.jpg" alt="">
+            <div class="container welcome-living-main">
+                <div class="row">
+                    <div class="col-12 col-lg-8 welcome-living-earth">
+                        <h5>all-in-one</h5>
+                        <h1>{{ page.title | escape }}</h1>
+                        <p>Living Earth is providing new capacity to support planetary restoration, primarily through use of Earth observations.</p>
+                        <div class="welcome-living-button">
+                            <button type="button" class="search hover-slide-right">Search</button>
+                            <button type="button" onclick="location.href='/contact'" class="get-in-touch hover-slide-transparent">Get in touch</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- welcome-to-end -->
+        <!-- welcome-to-end -->
+    {%- endif -%}
 
     <!-- search-landscapes-start -->
     <div class="container mt-80 search-landscapes-main">
