@@ -1,5 +1,6 @@
-<?php $activepage = "";
-include($_SERVER['DOCUMENT_ROOT'] . '/header.php'); ?>
+---
+layout: page
+---
 
     <!-- country-subpage-banner-section-start -->
     <div class="row country_subpage-main-section mb-80 mx-0">
@@ -9,7 +10,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/header.php'); ?>
         </div>
         <div class="col-md-7 m-0 p-0 position-relative">
             <div class="country_subpage-img-layer"></div>
-            <img class="country_subpage-benner-img" src="/assets/img/Wales/big/marine.jpg" alt="Marine">
+            <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/marine.jpg" alt="Marine">
         </div>
         <div class="dsc-about-page container">
             <div class="row text-white">
@@ -117,12 +118,12 @@ include($_SERVER['DOCUMENT_ROOT'] . '/header.php'); ?>
     <div class="container mb-100">
         <div class="get-in-section-main">
             <div class="get-in-section-dsc">
-                <h3>We need your help...</h3>
+                <h3>We need your help&hellip;</h3>
                 <p>Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow.</p>
             </div>
-            <button type="button"><a href="/contact.php">Get in touch</a></button>
+            <button type="button"><a href="/contact/">Get in touch</a></button>
         </div>
     </div>
     <!-- get-in-section-End -->
 
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/footer.php'); ?>
+

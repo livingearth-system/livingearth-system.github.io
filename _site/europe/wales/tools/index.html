@@ -90,10 +90,13 @@
         <img class="countrypage-benner-img" src="/assets/img/countrypageMainImg.jpg" alt="countrypageMainImg">
     </div>
     <div class="dsc-country-page container">
-        <?php
-			//breadcrumbs
-			include($_SERVER['DOCUMENT_ROOT'] . '/inc/breadcrumbs.php');
-			?>
+        <div class="row text-white">
+            <div class="col-12">
+                <ul class="breadcrumbs list-unstyled d-flex">
+                    <li class="breadcrumbs-item"><a href="/">Home</a></li><span class="separator1">/</span> <a href="/europe">Europe</a><span class="separator1">/</span> <a href="/europe/wales/">Wales</a><span class="separator1">/</span> Tools
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="dsc-countrypage-inner col-12 col-md-5">
                 <h3 class="mb-3 mb-md-4 text-uppercase">Tools</h3>
@@ -119,9 +122,9 @@
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
-            <a href="./data/"><img src="/assets/img/tools2.jpg" alt="Get the data"/></a>
+            <a href="/europe/wales/data/"><img src="/assets/img/tools2.jpg" alt="Get the data"/></a>
             <div class="pastcurrent-dsc">
-                <h4><a href="./data/">Get the data</a></h4>
+                <h4><a href="/europe/wales/data/">Get the data</a></h4>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
@@ -131,7 +134,7 @@
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
-            <a href="./tools/bigdata"><img src="/assets/img/tools5.jpg" alt="img"/></a>
+            <a href="./bigdata"><img src="/assets/img/tools5.jpg" alt="img"/></a>
             <div class="pastcurrent-dsc">
                 <h4><a href="./bigdata/">Big Data</a></h4>
             </div>
