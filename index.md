@@ -6,7 +6,7 @@ title: Welcome to Living Earth
 {%-
         include title-index.liquid
         title="All-in-one"
-        heading="Welcome to Living Moon"
+        heading="Welcome to Living Earth"
         subheading="Living Earth is providing new capacity to support planetary restoration, primarily through use of Earth observations."
         search="Search" search-url="/search/"
         contact="Get in touch" contact-url="/contact/"
