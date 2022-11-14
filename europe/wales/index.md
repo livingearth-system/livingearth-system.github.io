@@ -230,7 +230,7 @@ layout: page
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/biodiversity/"><img src="/assets/img/biodiversity.jpeg" alt="img"></a>
+            <a href="/themes/biodiversity/"><img src="/assets/img/biodiversity.jpg" alt="img"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Biodiversity</div>
                 <p>How is Living Wales helping to better understand the past, present and future distributiosn of biodiversity with a view to reversing declines and proactively promoting recovery.</p>
