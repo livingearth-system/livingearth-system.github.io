@@ -1,0 +1,23 @@
+<!-- BOXES -->
+<section class="container mt-100 mb-100 future-landscapes-main">
+    <div class="row">
+        <div class="col-12">
+            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}</h2>{% endif %}
+            {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
+        </div>
+    </div>
+    <div class="row">
+        {% for box in site.data[include.data] %}
+            <div class="col-12 col-sm-6 col-md-4">
+                <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                <div class="future-dsc">
+                    <a href="{{ box.url }}">
+                        <div class="future-dsc-title">{{ box.title }}</div>
+                    </a>
+                    {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- /BOXES -->

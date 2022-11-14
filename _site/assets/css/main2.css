@@ -8,17 +8,6 @@ Use main.css instead
 //    object-fit: fill;
 }
 
-.breadcrumbs,
-.breadcrumbs a {
-    color: #fff !important;
-    font-size: 12px !important;
-}
-
-span.separator1 {
-    margin-left: 7px;
-    margin-right: 7px;
-}
-
 .event-our-right-inner button,
 .join-our-card button {
     text-transform: none !important;
@@ -126,20 +115,6 @@ body {
   transform: scale(1.1);
 }
 
-
-.country_subpage-img-layer {
-    background-image: linear-gradient(to left, #f000, #000000) !important;
-}
-
-.country_subpage-background-color {
-    background-color: #000000 !important;
-}
-
-
-.continent-background-color {
-    position: relative;
-    background-color: #000000;
-}
 
 .continent-img-layer {
     background: linear-gradient(90deg, #000000 8.92%, rgba(7, 7, 63, 0) 100%);

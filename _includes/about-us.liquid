@@ -1,0 +1,17 @@
+<!-- ABOUT-US -->
+<section class="container mt-100 mb-100 aboutus-main">
+    <div class="row">
+        <div class="col-12 col-md-6 aboutus-left">
+            <div class="aboutus-left-dsc">
+                {%- if include.title -%}<h5>{{ include.title | escape }}</h5>{%- endif -%}
+                {%- if include.heading -%}<h2>{{ include.heading | escape }}</h2>{%- endif -%}
+                {%- if include.subheading -%}<p>{{ include.subheading | escape }}</p>{%- endif -%}
+                {%- if include.button -%}<button type="button" onclick="location.href='{{ include.url }}'">{{ include.button | escape }}</button>{%- endif -%}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 aboutus-right-img">
+            {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.heading | escape }}">{%- endif -%}
+        </div>
+    </div>
+</section>
+<!-- /ABOUT-US -->

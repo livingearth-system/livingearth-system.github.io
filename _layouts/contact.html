@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{%-
+        include title.liquid
+        image="/assets/img/contactus.png"
+-%}
+
+<div class="container mb-100">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <section class="contactus-dsc-content">
+                {{ content }}
+            </section>
+        </div>
+        <div class="col-12 col-md-6 offset-md-2">
+            {%- include contact-us.liquid -%}
+        </div>
+    </div>
+</div>

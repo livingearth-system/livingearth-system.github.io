@@ -1,0 +1,40 @@
+{% assign title = include.title | default: page.title %}
+{% assign subtitle = include.subtitle | default: page.subtitle %}
+{% assign background = include.background | default: "#000000" %}
+
+<!-- TITLE -->
+<div class="row position-relative mb-100 mx-0" style="background: {{ background }};">
+    <div class="col-md-5 position-relative m-0 p-0">
+        <div class="mx-md-5 d-flex flex-column h-100 main-content"></div>
+    </div>
+    <div class="col-md-7 position-relative m-0 p-0">
+        <div class="country_subpage-img-layer" style="background: linear-gradient(to left, {{ background }}00, {{ background }});"></div>
+        {%- if include.image -%}<img class="country_subpage-benner-img" src="{{ include.image }}" alt="{{ include.alt | default: title }}">{% endif %}
+    </div>
+    <div class="dsc-about-page container">
+        <div class="row text-white">
+            <div class="col-12">
+                <div class="row text-white">
+                    <div class="col-12">
+                        {%- include breadcrumbs.liquid -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="dsc-about-inner col-12 col-md-6">
+                {%- if title -%}<h3 class="mb-3 mb-md-4 text-uppercase">{{ title | escape }}</h3>{% endif %}
+                {%- if subtitle -%}<p>{{ subtitle | escape }}</p>{% endif %}
+            </div>
+        </div>
+        <div class="country-subpage-welcome-living-button d-flex justify-content-xs-center justify-content-md-start mt-3">
+            {%- if include.button1 -%}
+                <button type="button" onclick="location.href='{{ include.button1_url }}'" class="country-subpage-search">{{ include.button1 }}</button>
+            {%- endif -%}
+            {%- if include.button2 -%}
+                <button type="button" onclick="location.href='{{ include.button2_url }}'" class="country-subpage-get-in-touch">{{ include.button2 }}</button>
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+<!-- /TITLE -->
