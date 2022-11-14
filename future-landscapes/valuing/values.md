@@ -1,15 +1,11 @@
 ---
 layout: page
 permalink: /future-landscapes/valuing/values/
-title: Values
----
 
-{%-
-        include page-heading.liquid
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/wales/big/environmental-descriptors.jpg"
--%}
+title: Values
+image: "/assets/img/wales/big/environmental-descriptors.jpg"
+nocontact: true
+---
 
 {%-
         include boxes.liquid

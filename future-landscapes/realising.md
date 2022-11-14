@@ -1,17 +1,12 @@
 ---
 layout: page
 permalink: /future-landscapes/realising/
-title: Realising
----
 
-{%-
-        include page-heading.liquid
-        title="Realising"
-        subtitle="How can we be certain?"
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/Future3.jpg"
--%}
+title: Realising
+subtitle: "How can we be certain?"
+image: "/assets/img/Future3.jpg"
+nocontact: true
+---
 
 <!-- future-landscapes-start -->
 <div class="container mt-100 mb-100 future-landscapes-main">

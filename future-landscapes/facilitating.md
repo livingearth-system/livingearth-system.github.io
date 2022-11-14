@@ -1,17 +1,12 @@
 ---
 layout: page
 permalink: /future-landscapes/facilitating/
-title: Facilitating
----
 
-{%-
-        include page-heading.liquid
-        title="Facilitating"
-        subtitle="How can we track progress?"
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/Future4.jpg"
--%}
+title: Facilitating
+subtitle: "How can we track progress?"
+image: "/assets/img/Future4.jpg"
+nocontact: true
+---
 
 <!-- Past & Current landscapes-start -->
 <div class="container mt-100 mb-100 pastcurrent-landscapes-main">

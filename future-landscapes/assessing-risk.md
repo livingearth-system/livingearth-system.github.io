@@ -1,17 +1,11 @@
 ---
 layout: page
 permalink: /future-landscapes/assessing-risk/
-title: Assessing Risk
----
 
-{%-
-        include page-heading.liquid
-        title="Assessing Risk"
-        subtitle="How can we protect our assets?"
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/Future6.jpg"
--%}
+title: Assessing Risk
+subtitle: "How can we protect our assets?"
+image:"/assets/img/Future6.jpg"
+nocontact: true
 
 <!-- future-landscapes-start -->
 <div class="container mt-100 mb-100 future-landscapes-main">

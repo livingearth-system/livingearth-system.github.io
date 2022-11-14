@@ -1,15 +1,11 @@
 ---
 layout: page
 permalink: /future-landscapes/valuing/values/biodiversity/
-title: Biodiversity
----
 
-{%-
-		include page-heading.liquid
-		button1="Contact Us" button1_url="/contact/"
-		button2="Contribute" button2_url="/contribute/"
-		image="/assets/img/wales/big/environmental-descriptors.jpg"
--%}
+title: Biodiversity
+image: "/assets/img/wales/big/environmental-descriptors.jpg"
+nocontact: true
+---
 
 <div class="container mt-100 mb-100 future-landscapes-main">
 	<div class="mb-80">

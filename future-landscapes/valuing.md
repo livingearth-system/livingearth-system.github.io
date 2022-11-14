@@ -1,17 +1,12 @@
 ---
 layout: page
 permalink: /future-landscapes/valuing/
-title: Valuing
----
 
-{%-
-        include page-heading.liquid
-        title="Valuing"
-        subtitle="How can we value our futures?"
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/Future5.jpg"
--%}
+title: Valuing
+subtitle: "How can we value our futures?"
+image: "/assets/img/Future5.jpg"
+nocontact: true
+---
 
 {%-
         include boxes.liquid

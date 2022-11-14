@@ -20,21 +20,19 @@ image: "/assets/img/img78.jpg"
                 <div class="options-container">
                     <div class="option">
                         <input type="radio" class="radio" id="grade-a" name="category">
-                        <label for="grade-a"><h3>Highest Grade</h3></label>
+                        <label for="grade-a">Highest Grade</label>
                     </div>
-
                     <div class="option">
                         <input type="radio" class="radio" id="grade-b" name="category">
-                        <label for="grade-b"><h3>Average</h3></label>
-                    </div>
-
-                    <div class="option">
-                        <input type="radio" class="radio" id="grade-c" name="category">
-                        <label for="grade-c"><h3>Grade</h3></label>
+                        <label for="grade-b">Average</label>
                     </div>
                     <div class="option">
                         <input type="radio" class="radio" id="grade-c" name="category">
-                        <label for="grade-c"><h3>Low</h3></label>
+                        <label for="grade-c">Grade</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="grade-d" name="category">
+                        <label for="grade-d">Low</label>
                     </div>
                 </div>
                 <div class="selected">
@@ -65,26 +63,10 @@ image: "/assets/img/img78.jpg"
 </div>
 <!-- continent-data-showing-end -->
 
-<!-- other-continents-start -->
-<div class="container mb-100">
-    <h2 class="common-title">other continents <a href="#">View all</a></h2>
-    <div class="row continent-data-section">
-        <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/continents/america.jpg" alt=""></a>
-            <h3><a href="#">America</a></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/continents/africa.jpg" alt=""></a>
-            <h3><a href="#">Africa</a></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/continents/asia.jpg" alt=""></a>
-            <h3><a href="#">Asia</a></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/continents/oceania.jpg" alt=""></a>
-            <h3><a href="#">Oceania</a></h3>
-        </div>
-    </div>
-</div>
-<!-- other-continents-end -->
+{%-
+        include continents.liquid
+        heading="Other Continents"
+        all="#"
+        data="continents"
+        exclude="oceania"
+-%}

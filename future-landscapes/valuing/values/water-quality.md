@@ -1,15 +1,11 @@
 ---
 layout: page
 permalink: /future-landscapes/valuing/values/water-quality/
-title: Water Quality
----
 
-{%-
-		include page-heading.liquid
-		button1="Contact Us" button1_url="/contact/"
-		button2="Contribute" button2_url="/contribute/"
-		image="/assets/img/wales/big/environmental-descriptors.jpg"
--%}
+title: "Water Quality"
+image: "/assets/img/wales/big/environmental-descriptors.jpg"
+nocontact: true
+---
 
 <div class="container mt-100 mb-100 future-landscapes-main">
 	<div class="mb-80">
