@@ -2,8 +2,8 @@
 layout: page
 permalink: /past-present-landscapes/
 
-title: Past & Present Landscapes
-subtitle: How can we track progress?
+title: "Past & Present Landscapes"
+subtitle: "How can we track progress?"
 image: "/assets/img/wales/big/environmental-descriptors.jpg"
 nocontact: true
 ---

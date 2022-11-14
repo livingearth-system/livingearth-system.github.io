@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: Welcome to Living Earth
+title: "Welcome to Living Earth"
 ---
 
 {%-
@@ -61,8 +61,4 @@ title: Welcome to Living Earth
         title="Our blog"
         heading="Stay up to date"
         button="Read all articles" url="/blog/"
--%}
-
-{%- include
-        get-in-touch.liquid
 -%}
