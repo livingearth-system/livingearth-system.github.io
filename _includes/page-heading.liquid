@@ -1,0 +1,50 @@
+{%- if include.title -%}
+    {% assign title = include.title | default: page.title %}
+{% else %}
+    {% assign title = page.heading | default: page.title %}
+{% endif %}
+{% assign subtitle = include.subtitle | default: page.subtitle %}
+{% assign background = include.background | default: page.background %}
+{% assign image = include.image | default: page.image %}
+{% assign alt = include.alt | default: page.alt %}
+{% assign nobuttons = include.nobuttons | default: page.nobuttons %}
+{% assign button1 = include.button1 | default: page.button1 %}
+{% assign button1_url = include.button1_url | default: page.button1_url %}
+{% assign button2 = include.button2 | default: page.button2 %}
+{% assign button2_url = include.button2_url | default: page.button2_url %}
+
+
+<!-- PAGE-HEADING -->
+<header class="row position-relative mb-100 mx-0" style="background: {{ background | default: "#000000" }};">
+    <div class="col-md-5 position-relative m-0 p-0">
+        <div class="mx-md-5 d-flex flex-column h-100 main-content"></div>
+    </div>
+    <div class="col-md-7 position-relative m-0 p-0">
+        <div class="country_subpage-img-layer" style="background: linear-gradient(to left, {{ background }}00, {{ background }});"></div>
+        {%- if image -%}<img class="country_subpage-benner-img" src="{{ image }}" alt="{{ alt | default: title }}">{% endif %}
+    </div>
+    <div class="dsc-about-page container">
+        <div class="row text-white">
+            <div class="col-12">
+                <div class="row text-white">
+                    <div class="col-12">
+                        {%- include breadcrumbs.liquid -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="dsc-about-inner col-12 col-md-6">
+                {%- if title -%}<h3 class="mb-3 mb-md-4 text-uppercase">{{ title }}</h3>{% endif %}
+                {%- if subtitle -%}<p>{{ subtitle }}</p>{% endif %}
+            </div>
+        </div>
+        <div class="country-subpage-welcome-living-button d-flex justify-content-xs-center justify-content-md-start mt-3">
+            {%- if nobuttons != true -%}
+                <button type="button" onclick="location.href='{{ button1_url | default: "/contact/" }}'" class="country-subpage-search">{{ button1 | default: "Contact Us" }}</button>
+                <button type="button" onclick="location.href='{{ button2_url | default: "/contribute/" }}'" class="country-subpage-get-in-touch">{{ button2 | default: "Contribute" }}</button>
+            {% endif %}
+        </div>
+    </div>
+</header>
+<!-- /PAGE-HEADING -->
