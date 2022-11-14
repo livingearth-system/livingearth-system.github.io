@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /future-landscapes/
 title: Future Landscapes
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-
+permalink: /future-landscapes/valuing/values/biodiversity/
 title: Biodiversity
 ---
 

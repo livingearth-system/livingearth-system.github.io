@@ -1,6 +1,6 @@
 ---
 layout: page
-
+permalink: /future-landscapes/valuing/values/soil-quality/
 title: Soil Quality
 ---
 

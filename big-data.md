@@ -1,6 +1,6 @@
 ---
 layout: page
-
+permalink: /big-data/
 title: Big Data
 ---
 

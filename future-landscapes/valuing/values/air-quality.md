@@ -1,6 +1,6 @@
 ---
 layout: page
-
+permalink: /future-landscapes/valuing/values/air-quality/
 title: Air Quality
 ---
 

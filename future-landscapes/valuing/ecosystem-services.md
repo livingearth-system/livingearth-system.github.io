@@ -1,6 +1,6 @@
 ---
 layout: page
-
+permalink: /future-landscapes/valuing/ecosystem-services/
 title: Ecosystem Services
 ---
 
