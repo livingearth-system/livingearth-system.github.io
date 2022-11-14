@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Themes
 ---
 
 <!-- country-subpage-banner-section-start -->
@@ -33,19 +34,19 @@ layout: page
 <div class="container mt-80 mb-80 future-landscapes-main">
     <div class="row">
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/changes/"><img src="/assets/img/change.jpg" alt="img"></a>
+            <a href="/themes/changes"><img src="/assets/img/change.jpg" alt="img"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Change</div>
                 <p>Changes in Wales related to semi-natural/natural, cultivated/managed, urban, naturally bare and water environments.</p>
-                <p class="pt-2"><a href="/themes/changes/" class="learn-more-link">Read more</a></p>
+                <p class="pt-2"><a href="/themes/changes" class="learn-more-link">Read more</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/welsh-reference-ecosystems-and-modified-states/"><img src="/assets/img/welsh-reference-ecosystems.jpg" alt="img"></a>
+            <a href="/themes/welsh-reference-ecosystems-and-modified-states"><img src="/assets/img/welsh-reference-ecosystems.jpg" alt="img"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Welsh Reference Ecosystems and Modified States</div>
                 <p>Ecosystems are generally complex and difficult to define and, more often than not, comprise a wide range of habitats; typically combining semi-natural, agricultural and non-natural components.</p>
-                <p class="pt-2"><a href="/themes/welsh-reference-ecosystems-and-modified-states/" class="learn-more-link">Read more</a></p>
+                <p class="pt-2"><a href="/themes/welsh-reference-ecosystems-and-modified-states" class="learn-more-link">Read more</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
@@ -57,27 +58,27 @@ layout: page
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/biodiversity/"><img src="/assets/img/biodiversity.jpeg" alt="img"></a>
+            <a href="/themes/biodiversity"><img src="/assets/img/biodiversity.jpeg" alt="img"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Biodiversity</div>
                 <p>Wales has a rich biodiversity with many icon species.</p>
-                <p class="pt-2"><a href="/themes/biodiversity/" class="learn-more-link">Read more</a></p>
+                <p class="pt-2"><a href="/themes/biodiversity" class="learn-more-link">Read more</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/linking-with-farming-forestry-and-fisheries/"><img src="/assets/img/linking-with-farming.png" alt="img"></a>
+            <a href="/themes/linking-with-farming-forestry-and-fisheries"><img src="/assets/img/linking-with-farming.png" alt="img"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Linking with farming, forestry and fisheries</div>
                 <p>Agriculture, forestry and fisheries are dominant land uses across Wales, which can benefit from the resources provided by Living Wales, and particularly those associated with Earth observations.</p>
-                <p class="pt-2"><a href="/themes/linking-with-farming-forestry-and-fisheries/" class="learn-more-link">Read more</a></p>
+                <p class="pt-2"><a href="/themes/linking-with-farming-forestry-and-fisheries" class="learn-more-link">Read more</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/learning-resources/"><img src="/assets/img/learning-and-art.jpg" alt="img"></a>
+            <a href="/themes/learning-resources"><img src="/assets/img/learning-and-art.jpg" alt="img"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Learning & Art</div>
                 <p>Living Wales provides a wide range of teaching and learning resources relevant to primary school years through to universities and professional training.</p>
-                <p class="pt-2"><a href="/themes/learning-resources/" class="learn-more-link">Read more</a></p>
+                <p class="pt-2"><a href="/themes/learning-resources" class="learn-more-link">Read more</a></p>
             </div>
         </div>
     </div>

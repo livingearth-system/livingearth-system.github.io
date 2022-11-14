@@ -1,7 +1,11 @@
 <!-- TOOLS -->
 <section class="container mt-100 mb-100 tools-main">
-    {%- if include.heading -%}<h2 class="common-title">{{ include.heading | escape }}</h2>{% endif %}
-    {%- if include.subheading -%}<p>{{ include.subheading | escape }}</p>{% endif %}
+    <div class="row">
+        <div class="col-12">
+            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}</h2>{% endif %}
+            {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
+        </div>
+    </div>
     <div class="row">
         <div class="col-12">
             <div id="owl-tools" class="owl-carousel owl-theme owl-img-responsive">
@@ -30,7 +34,7 @@
                     </div>
                 </section>
                 <section class="item">
-                    <a href="/bigdata/"><img src="/assets/img/tools5.jpg" alt="Big data"/></a>
+                    <a href="/big-data/"><img src="/assets/img/tools5.jpg" alt="Big data"/></a>
                     <div class="pastcurrent-dsc">
                         <h4><a href="/bigdata/">Big data</a></h4>
                     </div>

@@ -1,13 +1,12 @@
 ---
 layout: page
-permalink: /about/
-
 title: About Us
-subtitle: Living Earth is about proactively restoring the planet by sharing knowledge, skills and data.
 ---
 
 {%-
         include title.liquid
+        title="About Us"
+        subtitle="Living Earth is about proactively restoring the planet by sharing knowledge, skills and data."
         background="#4375a9" image="/assets/img/aboutus.png"
 -%}
 

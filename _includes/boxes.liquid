@@ -9,12 +9,22 @@
     <div class="row">
         {% for box in site.data[include.data] %}
             <div class="col-12 col-sm-6 col-md-4">
-                <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                {%- if box.newtab -%}
+                    {% assign target="_blank" %}
+                {% endif %}
+                <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
                 <div class="future-dsc">
-                    <a href="{{ box.url }}">
+                    {%- if box.button -%}
                         <div class="future-dsc-title">{{ box.title }}</div>
-                    </a>
+                    {% else %}
+                        <a href="{{ box.url }}" target="{{ target }}">
+                            <div class="future-dsc-title">{{ box.title }}</div>
+                        </a>
+                    {% endif %}
                     {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                    {%- if box.button -%}
+                        <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

@@ -1,0 +1,20 @@
+- title: Open Data Cube
+  subtitle: Open source geospatial data management and analysis software and capablity for processing and analysing Earth observation data.
+  image: /assets/img/Wales/bathymetry.jpg
+  button: Learn More
+  url: https://www.opendatacube.org
+  newtab: true
+
+- title: Google Earth Engine
+  subtitle: A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels.
+  image: /assets/img/Wales/environmental-descriptors.jpg
+  button: Learn More
+  url: https://earthengine.google.com
+  newtab: true
+
+- title: Planetary Computer
+  subtitle: A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels.
+  image: /assets/img/Wales/remote-sensing.jpg
+  button: Learn More
+  url: https://planetarycomputer.microsoft.com
+  newtab: true
