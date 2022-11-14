@@ -5,7 +5,7 @@ title: Assessing Risk
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="Assessing Risk"
         subtitle="How can we protect our assets?"
         button1="Contact Us" button1_url="/contact/"

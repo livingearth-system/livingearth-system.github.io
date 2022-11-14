@@ -1,15 +1,12 @@
 ---
 layout: page
 permalink: /oceania/
-title: Oceania
----
 
-{%-
-        include title.liquid
-        title="Oceania"
-        subtitle="We aim to capture the state and dynamics of Oceania’s landscape."
-        background="#07073f" image="/assets/img/img78.jpg"
--%}
+title: Oceania
+subtitle: "We aim to capture the state and dynamics of Oceania’s landscape."
+background: "#07073f"
+image: "/assets/img/img78.jpg"
+---
 
 <!-- continent-data-showing-start -->
 <div class="container mb-100 data-continent-main">
@@ -73,29 +70,21 @@ title: Oceania
     <h2 class="common-title">other continents <a href="#">View all</a></h2>
     <div class="row continent-data-section">
         <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/America.jpg" alt=""></a>
+            <a href="#"><img src="/assets/img/continents/america.jpg" alt=""></a>
             <h3><a href="#">America</a></h3>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/Africa-c.jpg" alt=""></a>
+            <a href="#"><img src="/assets/img/continents/africa.jpg" alt=""></a>
             <h3><a href="#">Africa</a></h3>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/Asia-c.jpg" alt=""></a>
+            <a href="#"><img src="/assets/img/continents/asia.jpg" alt=""></a>
             <h3><a href="#">Asia</a></h3>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-            <a href="#"><img src="/assets/img/Oceania-c.jpg" alt=""></a>
+            <a href="#"><img src="/assets/img/continents/oceania.jpg" alt=""></a>
             <h3><a href="#">Oceania</a></h3>
         </div>
     </div>
 </div>
 <!-- other-continents-end -->
-
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch"
-        url="/contact/"
--%}

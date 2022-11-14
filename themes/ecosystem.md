@@ -1,14 +1,15 @@
 ---
-layout: page
+layout: post
 permalink: /themes/ecosystem/
-title: Ecosystem Restoration
+
+title: "Ecosystem Restoration"
 ---
 
 <!--Faciliting-section-start -->
 <div class="container">
     <div class="row">
         <div class="col-12 mt-60">
-            <h5 class="common-title">Facilitating</h5>
+            <h5 class="common-title">Ecosystem Restoration</h5>
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="pb-5">
@@ -120,11 +121,3 @@ title: Ecosystem Restoration
     </div>
 </div>
 <!-- other-wales-ecosystems-end -->
-
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch"
-        url="/contact/"
--%}

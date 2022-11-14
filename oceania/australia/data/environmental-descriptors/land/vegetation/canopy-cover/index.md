@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/canopy-cover.jpg" class="img-fluid" alt="Canopy Cover">
+                <img src="/assets/img/wales/big/canopy-cover.jpg" class="img-fluid" alt="Canopy Cover">
             </div>
             <div>
                 <h5 class="font-weight-bold">The canopy cover is defined as the fraction of ground covered by green vegetation.</h5>

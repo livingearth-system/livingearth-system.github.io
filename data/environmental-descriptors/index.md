@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/environmental-descriptors.jpg" alt="Environmental Descriptors">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/environmental-descriptors.jpg" alt="Environmental Descriptors">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -32,7 +32,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./land-and-water"><img src="/assets/img/Wales/land-and-water.jpg" alt="Land and Water"></a>
+                <a href="./land-and-water"><img src="/assets/img/wales/land-and-water.jpg" alt="Land and Water"></a>
                 <div class="data-heading">
                     <h4><a href="./land-and-water">Land and Water</a></h4>
                 </div>
@@ -40,7 +40,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./marine"><img src="/assets/img/Wales/marine.jpg" alt="Marine"></a>
+                <a href="./marine"><img src="/assets/img/wales/marine.jpg" alt="Marine"></a>
                 <div class="data-heading">
                     <h4><a href="./marine">Marine</a></h4>
                 </div>
@@ -48,7 +48,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./atmosphere"><img src="/assets/img/Wales/atmosphere.jpg" alt="Atmosphere"></a>
+                <a href="./atmosphere"><img src="/assets/img/wales/atmosphere.jpg" alt="Atmosphere"></a>
                 <div class="data-heading">
                     <h4><a href="./atmosphere">Atmosphere</a></h4>
                 </div>

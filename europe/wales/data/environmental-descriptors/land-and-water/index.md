@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/land-and-water.jpg" alt="Land and Water">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/land-and-water.jpg" alt="Land and Water">
     </div>
     <div class="dsc-about-page container">
         <div class="row text-white">
@@ -36,7 +36,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./vegetation"><img src="/assets/img/Wales/vegetation.jpg" alt="Vegetation"></a>
+                <a href="./vegetation"><img src="/assets/img/wales/vegetation.jpg" alt="Vegetation"></a>
                 <div class="data-heading">
                     <h4><a href="./vegetation">Vegetation</a></h4>
                 </div>
@@ -44,7 +44,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./snow"><img src="/assets/img/Wales/snow.jpg" alt="Snow"></a>
+                <a href="./snow"><img src="/assets/img/wales/snow.jpg" alt="Snow"></a>
                 <div class="data-heading">
                     <h4><a href="./snow">Snow</a></h4>
                 </div>
@@ -52,7 +52,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./urban"><img src="/assets/img/Wales/urban.jpg" alt="Urban"></a>
+                <a href="./urban"><img src="/assets/img/wales/urban.jpg" alt="Urban"></a>
                 <div class="data-heading">
                     <h4><a href="./urban">Urban</a></h4>
                 </div>
@@ -60,7 +60,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./water"><img src="/assets/img/Wales/water.jpg" alt="Water"></a>
+                <a href="./water"><img src="/assets/img/wales/water.jpg" alt="Water"></a>
                 <div class="data-heading">
                     <h4><a href="./water">Water</a></h4>
                 </div>
@@ -68,7 +68,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./soil"><img src="/assets/img/Wales/soil.jpg" alt="Soil"></a>
+                <a href="./soil"><img src="/assets/img/wales/soil.jpg" alt="Soil"></a>
                 <div class="data-heading">
                     <h4><a href="./soil">Soil</a></h4>
                 </div>
@@ -76,7 +76,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./energy"><img src="/assets/img/Wales/energy.jpg" alt="Energy"></a>
+                <a href="./energy"><img src="/assets/img/wales/energy.jpg" alt="Energy"></a>
                 <div class="data-heading">
                     <h4><a href="./energy">Energy</a></h4>
                 </div>
@@ -84,7 +84,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./terrain"><img src="/assets/img/Wales/terrain.jpg" alt="Terrain"></a>
+                <a href="./terrain"><img src="/assets/img/wales/terrain.jpg" alt="Terrain"></a>
                 <div class="data-heading">
                     <h4><a href="./terrain">Terrain</a></h4>
                 </div>

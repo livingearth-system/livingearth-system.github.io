@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/water.jpg" alt="Water">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/water.jpg" alt="Water">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -31,7 +31,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./water-turbidity"><img src="/assets/img/Wales/water-turbidity.jpg" alt="Water Turbidity"></a>
+                <a href="./water-turbidity"><img src="/assets/img/wales/water-turbidity.jpg" alt="Water Turbidity"></a>
                 <div class="data-heading">
                     <h4><a href="./water-turbidity">Water Turbidity</a></h4>
                 </div>
@@ -39,7 +39,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./water-depth"><img src="/assets/img/Wales/water-depth.jpg" alt="Water Depth"></a>
+                <a href="./water-depth"><img src="/assets/img/wales/water-depth.jpg" alt="Water Depth"></a>
                 <div class="data-heading">
                     <h4><a href="./water-depth">Water Depth</a></h4>
                 </div>
@@ -47,7 +47,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./water-seasonality"><img src="/assets/img/Wales/water-seasonality.jpg" alt="Water Seasonality"></a>
+                <a href="./water-seasonality"><img src="/assets/img/wales/water-seasonality.jpg" alt="Water Seasonality"></a>
                 <div class="data-heading">
                     <h4><a href="./water-seasonality">Water Seasonality</a></h4>
                 </div>

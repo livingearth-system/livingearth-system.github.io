@@ -5,7 +5,7 @@ title: Reimagining
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="(Re)Imagining"
         subtitle="What would you like to see?"
         button1="Contact Us" button1_url="/contact/"

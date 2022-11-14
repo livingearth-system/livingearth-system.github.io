@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/phenology.jpg" class="img-fluid" alt="Phenology">
+                <img src="/assets/img/wales/big/phenology.jpg" class="img-fluid" alt="Phenology">
             </div>
             <div>
                 <h5 class="font-weight-bold">Phenology is the study of the timing of vegetation life-cycle events, such as budburst, flowering, leaf colouring, leaf fall, ect.</h5>
@@ -35,7 +35,7 @@ layout: page
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <div class="pt-2 pb-5">
-                        <img src="/assets/img/Wales/maps/phenology.png" class="img-fluid" alt="Map">
+                        <img src="/assets/img/wales/maps/phenology.png" class="img-fluid" alt="Map">
                     </div>
                 </div>
             </div>

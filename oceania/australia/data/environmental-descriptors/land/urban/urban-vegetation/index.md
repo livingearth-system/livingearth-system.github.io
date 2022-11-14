@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="pb-5">
-                <img src="/assets/img/Wales/Big/urban-vegetation.jpg" class="img-fluid" alt="Urban Vegetation">
+                <img src="/assets/img/wales/big/urban-vegetation.jpg" class="img-fluid" alt="Urban Vegetation">
             </div>
             <div>
                 <h5 class="font-weight-bold">Urban vegetation is defined as the vegetation in cities.</h5>

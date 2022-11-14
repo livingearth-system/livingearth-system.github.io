@@ -1,16 +1,10 @@
 ---
 layout: page
-title: Agriculture Changes
----
 
-{%-
-        include title.liquid
-        title="Agriculture Changes"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/wild.png"
--%}
+title: "Agriculture Changes"
+subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+image: "/assets/img/wild.png"
+---
 
 <!-- country-subpage-blog-start -->
 <div class="container mt-80 mb-80 future-landscapes-main">
@@ -111,11 +105,3 @@ title: Agriculture Changes
     </div>
 </div>
 <!-- country-subpage-blog-end -->
-
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch"
-        url="/contact/"
--%}

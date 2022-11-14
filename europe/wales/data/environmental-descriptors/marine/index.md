@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/marine.jpg" alt="Marine">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/marine.jpg" alt="Marine">
     </div>
     <div class="dsc-about-page container">
         <div class="row text-white">
@@ -35,7 +35,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./bathymetry"><img src="/assets/img/Wales/bathymetry.jpg" alt="Bathymetry"></a>
+                <a href="./bathymetry"><img src="/assets/img/wales/bathymetry.jpg" alt="Bathymetry"></a>
                 <div class="data-heading">
                     <h4><a href="./bathymetry">Bathymetry</a></h4>
                 </div>
@@ -43,7 +43,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./sea-surface-temperature"><img src="/assets/img/Wales/sea-surface-temperature.jpg" alt="Sea Surface Temperature"></a>
+                <a href="./sea-surface-temperature"><img src="/assets/img/wales/sea-surface-temperature.jpg" alt="Sea Surface Temperature"></a>
                 <div class="data-heading">
                     <h4><a href="./sea-surface-temperature">Sea Surface Temperature</a></h4>
                 </div>
@@ -51,7 +51,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./sea-surface-salinity"><img src="/assets/img/Wales/sea-surface-salinity.jpg" alt="Sea Surface Salinity"></a>
+                <a href="./sea-surface-salinity"><img src="/assets/img/wales/sea-surface-salinity.jpg" alt="Sea Surface Salinity"></a>
                 <div class="data-heading">
                     <h4><a href="./sea-surface-salinity">Sea Surface Salinity</a></h4>
                 </div>
@@ -59,7 +59,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./net-primary-production"><img src="/assets/img/Wales/net-primary-production.jpg" alt="Net Primary Production"></a>
+                <a href="./net-primary-production"><img src="/assets/img/wales/net-primary-production.jpg" alt="Net Primary Production"></a>
                 <div class="data-heading">
                     <h4><a href="./net-primary-production">Net Primary Production</a></h4>
                 </div>
@@ -67,7 +67,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./ph"><img src="/assets/img/Wales/ph.jpg" alt="pH"></a>
+                <a href="./ph"><img src="/assets/img/wales/ph.jpg" alt="pH"></a>
                 <div class="data-heading">
                     <h4><a href="./ph">pH</a></h4>
                 </div>
@@ -75,7 +75,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./chemistry"><img src="/assets/img/Wales/chemistry.jpg" alt="Chemistry"></a>
+                <a href="./chemistry"><img src="/assets/img/wales/chemistry.jpg" alt="Chemistry"></a>
                 <div class="data-heading">
                     <h4><a href="./chemistry">Chemistry</a></h4>
                 </div>
@@ -84,7 +84,7 @@ layout: page
 
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./chlorophyll"><img src="/assets/img/Wales/chlorophyll.jpg" alt="Chlorophyll"></a>
+                <a href="./chlorophyll"><img src="/assets/img/wales/chlorophyll.jpg" alt="Chlorophyll"></a>
                 <div class="data-heading">
                     <h4><a href="./chlorophyll">Chlorophyll</a></h4>
                 </div>
@@ -92,7 +92,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./cdom"><img src="/assets/img/Wales/cdom.jpg" alt="CDOM"></a>
+                <a href="./cdom"><img src="/assets/img/wales/cdom.jpg" alt="CDOM"></a>
                 <div class="data-heading">
                     <h4><a href="./cdom">CDOM</a></h4>
                 </div>
@@ -100,7 +100,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./total-suspended-matter"><img src="/assets/img/Wales/total-suspended-matter.jpg" alt="Total Suspended Matter"></a>
+                <a href="./total-suspended-matter"><img src="/assets/img/wales/total-suspended-matter.jpg" alt="Total Suspended Matter"></a>
                 <div class="data-heading">
                     <h4><a href="./total-suspended-matter">Total Suspended Matter</a></h4>
                 </div>

@@ -5,10 +5,10 @@ title: Biodiversity
 ---
 
 {%-
-		include title.liquid
+		include page-heading.liquid
 		button1="Contact Us" button1_url="/contact/"
 		button2="Contribute" button2_url="/contribute/"
-		image="/assets/img/Wales/Big/environmental-descriptors.jpg"
+		image="/assets/img/wales/big/environmental-descriptors.jpg"
 -%}
 
 <div class="container mt-100 mb-100 future-landscapes-main">

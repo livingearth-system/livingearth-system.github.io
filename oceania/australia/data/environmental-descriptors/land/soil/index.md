@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/soil.jpg" alt="Soil">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/soil.jpg" alt="Soil">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -31,7 +31,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./soil-moisture"><img src="/assets/img/Wales/soil-moisture.jpg" alt="Soil Moisture"></a>
+                <a href="./soil-moisture"><img src="/assets/img/wales/soil-moisture.jpg" alt="Soil Moisture"></a>
                 <div class="data-heading">
                     <h4><a href="./soil-moisture">Soil Moisture</a></h4>
                 </div>
@@ -39,7 +39,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./soil-acidity"><img src="/assets/img/Wales/soil-acidity.jpg" alt="Soil Acidity"></a>
+                <a href="./soil-acidity"><img src="/assets/img/wales/soil-acidity.jpg" alt="Soil Acidity"></a>
                 <div class="data-heading">
                     <h4><a href="./soil-acidity">Soil Acidity</a></h4>
                 </div>
@@ -47,7 +47,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./soil-texture"><img src="/assets/img/Wales/soil-texture.jpg" alt="Soil Texture"></a>
+                <a href="./soil-texture"><img src="/assets/img/wales/soil-texture.jpg" alt="Soil Texture"></a>
                 <div class="data-heading">
                     <h4><a href="./soil-texture">Soil Texture</a></h4>
                 </div>

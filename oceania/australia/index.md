@@ -4,7 +4,7 @@ title: Australia
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="Australia"
         subtitle="Novel world-first concept that aims to capture the state and dynamics of Australia’s landscape"
         background="#07073f" image="/assets/img/img78.jpg"
@@ -135,10 +135,4 @@ title: Australia
 
 -%}
 
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch"
-        url="/contact/"
--%}
+{%- include get-in-touch.liquid -%}

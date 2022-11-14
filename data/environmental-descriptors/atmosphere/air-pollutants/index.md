@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/pollutants.jpg" class="img-fluid" alt="Air pollutants">
+                <img src="/assets/img/wales/big/pollutants.jpg" class="img-fluid" alt="Air pollutants">
             </div>
             <div>
                 <div class="pt-4">

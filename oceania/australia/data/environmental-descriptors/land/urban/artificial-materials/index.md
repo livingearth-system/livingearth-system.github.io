@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/artificial-materials.jpg" class="img-fluid" alt="Artificial Materials">
+                <img src="/assets/img/wales/big/artificial-materials.jpg" class="img-fluid" alt="Artificial Materials">
             </div>
             <div>
                 <h5 class="font-weight-bold">Urban areas are characterised by substitution of natural covers with artificial covers, which are most of the time impervious.</h5>

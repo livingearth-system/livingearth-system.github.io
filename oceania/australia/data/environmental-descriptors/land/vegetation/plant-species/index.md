@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/plant-species.jpg" class="img-fluid" alt="Plant Species">
+                <img src="/assets/img/wales/big/plant-species.jpg" class="img-fluid" alt="Plant Species">
             </div>
             <div>
                 <h5 class="font-weight-bold">Plant species are defined as categories of plants which show common attributes and which are called by a common name.</h5>

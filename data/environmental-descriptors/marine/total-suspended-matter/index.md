@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/total-suspended-matter.jpg" class="img-fluid" alt="Total Suspended Matter">
+                <img src="/assets/img/wales/big/total-suspended-matter.jpg" class="img-fluid" alt="Total Suspended Matter">
             </div>
             <div>
                 <h5 class="font-weight-bold">Total Suspended Matter (TSM) is defined as the concentration of the total suspended matter in water. TSM includes both organic particles (plankton, detritus, etc.) and mineral particles (e.g. clay particles), and is a measure of the water turbidity.</h5>

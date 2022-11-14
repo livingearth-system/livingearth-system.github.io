@@ -1,15 +1,12 @@
 ---
 layout: page
 permalink: /about/
-title: About Us
----
 
-{%-
-        include title.liquid
-        title="About Us"
-        subtitle="Living Earth is about proactively restoring the planet by sharing knowledge, skills and data."
-        background="#4375a9" image="/assets/img/aboutus.png"
--%}
+title: About Us
+subtitle: "Living Earth is about proactively restoring the planet by sharing knowledge, skills and data."
+background: "#4375a9"
+image: "/assets/img/aboutus.png"
+---
 
 <!-- who-we-are-Start -->
 <div class="container mb-100">
@@ -267,12 +264,4 @@ title: About Us
         heading="Join our events"
         button="Check All Events"
         url="/events/"
--%}
-
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch"
-        url="/contact/"
 -%}

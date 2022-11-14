@@ -39,7 +39,7 @@ layout: page
 <div class="container mt-80 mb-80 future-landscapes-main">
 	<div class="row">
 		<div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-			<a href="https://www.opendatacube.org/" target="_blank"><img src="/assets/img/Wales/bathymetry.jpg" alt="Open Data Cube"></a>
+			<a href="https://www.opendatacube.org/" target="_blank"><img src="/assets/img/wales/bathymetry.jpg" alt="Open Data Cube"></a>
 			<div class="future-dsc">
 				<div class="future-dsc-title">Open Data Cube</div>
 				<p>Open source geospatial data management and analysis software and capablity for processing and analysing Earth observation data.</p>
@@ -47,7 +47,7 @@ layout: page
 			</div>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-			<a href="https://earthengine.google.com" target="_blank"><img src="/assets/img/Wales/environmental-descriptors.jpg" alt="Ground Measurements"></a>
+			<a href="https://earthengine.google.com" target="_blank"><img src="/assets/img/wales/environmental-descriptors.jpg" alt="Ground Measurements"></a>
 			<div class="future-dsc">
 				<div class="future-dsc-title">Google Earth Engine</div>
 				<p>A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels.</p>
@@ -55,7 +55,7 @@ layout: page
 			</div>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-			<a href="https://planetarycomputer.microsoft.com" target="_blank"><img src="/assets/img/Wales/remote-sensing.jpg" alt="Planetary Computer"></a>
+			<a href="https://planetarycomputer.microsoft.com" target="_blank"><img src="/assets/img/wales/remote-sensing.jpg" alt="Planetary Computer"></a>
 			<div class="future-dsc">
 				<div class="future-dsc-title">Planetary Computer</div>
 				<p>A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels.</p>

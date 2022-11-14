@@ -1,5 +1,6 @@
 ---
 layout: home
+
 title: Welcome to Living Earth
 ---
 
@@ -10,7 +11,7 @@ title: Welcome to Living Earth
         subheading="Living Earth is providing new capacity to support planetary restoration, primarily through use of Earth observations."
         search="Search" search-url="/search/"
         contact="Get in touch" contact-url="/contact/"
-        background="/assets/img/home.jpg"
+        background="/assets/img/title-index.jpg"
 -%}
 
 {%-
@@ -62,9 +63,6 @@ title: Welcome to Living Earth
         button="Read all articles" url="/blog/"
 -%}
 
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch" url="/contact/"
+{%- include
+        get-in-touch.liquid
 -%}

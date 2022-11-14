@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="pb-5">
-                <img src="/assets/img/Wales/Big/macroalgae.jpg" class="img-fluid" alt="Macroalgae">
+                <img src="/assets/img/wales/big/macroalgae.jpg" class="img-fluid" alt="Macroalgae">
             </div>
             <div class="pb-5">
                 <div class="pt-4">

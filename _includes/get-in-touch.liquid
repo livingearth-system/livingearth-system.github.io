@@ -3,9 +3,9 @@
     <div class="get-in-section-main">
         <div class="get-in-section-dsc">
             <h3 class="text-uppercase">{{ include.heading | default: "We need your help&hellip;" }}</h3>
-            {%- if include.subheading -%}<p>{{ include.subheading }}</p>{%- endif -%}
+            <p>{{ include.subheading | default: "Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow." }}</p>
         </div>
-        {%- if include.button -%}<button type="button" onclick="location.href='{{ include.url }}'">{{ include.button }}</button>{%- endif -%}
+        <button type="button" onclick="location.href='{{ include.url | default: "/contact/" }}'">{{ include.button | default: "Get in touch" }}</button>
     </div>
 </section>
 <!-- /GET-IN-TOUCH -->

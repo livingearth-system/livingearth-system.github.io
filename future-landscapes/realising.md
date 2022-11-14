@@ -5,7 +5,7 @@ title: Realising
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="Realising"
         subtitle="How can we be certain?"
         button1="Contact Us" button1_url="/contact/"

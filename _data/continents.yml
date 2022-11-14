@@ -1,0 +1,19 @@
+- title: "America"
+  image: "/assets/img/continents/america.jpg"
+  url: "#"
+
+- title: "Africa"
+  image: "/assets/img/continents/africa.jpg"
+  url: "#"
+
+- title: "Asia"
+  image: "/assets/img/continents/asia.jpg"
+  url: "#"
+
+- title: "Europe"
+  image: "/assets/img/continents/europe.jpg"
+  url: "/europe/"
+
+- title: "Oceania"
+  image: "/assets/img/continents/oceania.jpg"
+  url: "/oceania/"

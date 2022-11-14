@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/algae-biomass.jpg" class="img-fluid" alt="Algae Biomass">
+                <img src="/assets/img/wales/big/algae-biomass.jpg" class="img-fluid" alt="Algae Biomass">
             </div>
             <div class="pb-5">
                 <h5 class="font-weight-bold">Chlorophyll a is ubiquitous in phytoplankton and higher plants and a proxy for phytoplankton biomass.</h5>

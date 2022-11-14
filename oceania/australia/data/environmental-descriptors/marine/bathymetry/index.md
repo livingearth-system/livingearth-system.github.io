@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/bathymetry.jpg" class="img-fluid" alt="Bathymetry">
+                <img src="/assets/img/wales/big/bathymetry.jpg" class="img-fluid" alt="Bathymetry">
             </div>
             <div>
                 <h5 class="font-weight-bold">Bathymetry is defined as the underwater depth of the floor of water bodies, such as oceans and seas as well as lakes and rivers. In other terms, it is the relief map of underwater land.</h5>
@@ -33,7 +33,7 @@ layout: page
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <div class="py-5">
-                        <img src="/assets/img/Wales/maps/bathymetry.png" class="img-fluid" alt="Map">
+                        <img src="/assets/img/wales/maps/bathymetry.png" class="img-fluid" alt="Map">
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/canopy-height.jpg" class="img-fluid" alt="Canopy Height">
+                <img src="/assets/img/wales/big/canopy-height.jpg" class="img-fluid" alt="Canopy Height">
             </div>
             <div>
                 <h5 class="font-weight-bold">Canopy height is the height (in meters) of the top aboveground vegetation.</h5>

@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/snow-cover-fraction.jpg" class="img-fluid" alt="Snow Cover Fraction">
+                <img src="/assets/img/wales/big/snow-cover-fraction.jpg" class="img-fluid" alt="Snow Cover Fraction">
             </div>
             <div>
                 <h5 class="font-weight-bold">Snow Cover Fraction (SCF) is defined as the fraction of land area covered by snow.</h5>
@@ -40,7 +40,7 @@ layout: page
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <div class="pt-2 pb-5">
-                        <img src="/assets/img/Wales/maps/snow-cover-fraction.png" class="img-fluid" alt="Map">
+                        <img src="/assets/img/wales/maps/snow-cover-fraction.png" class="img-fluid" alt="Map">
                     </div>
                 </div>
             </div>

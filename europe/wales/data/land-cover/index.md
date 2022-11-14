@@ -34,7 +34,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/measurement-techniques.jpg" alt="Measurement Techniques"></a>
+                <a href="#"><img src="/assets/img/wales/measurement-techniques.jpg" alt="Measurement Techniques"></a>
                 <div class="data-heading">
                     <h4><a href="#">Measurement Techniques</a></h4>
                 </div>
@@ -42,7 +42,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/measurement-protocol.jpg" alt="Measurement Protocol"></a>
+                <a href="#"><img src="/assets/img/wales/measurement-protocol.jpg" alt="Measurement Protocol"></a>
                 <div class="data-heading">
                     <h4><a href="#">Measurement Protocol</a></h4>
                 </div>
@@ -50,7 +50,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/data-access.jpg" alt="Data Access"></a>
+                <a href="#"><img src="/assets/img/wales/data-access.jpg" alt="Data Access"></a>
                 <div class="data-heading">
                     <h4><a href="#">Data Access</a></h4>
                 </div>

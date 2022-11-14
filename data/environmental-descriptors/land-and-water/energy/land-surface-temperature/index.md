@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/land-surface-temperature.jpg" class="img-fluid" alt="Land Surface Temperature">
+                <img src="/assets/img/wales/big/land-surface-temperature.jpg" class="img-fluid" alt="Land Surface Temperature">
             </div>
             <div>
                 <h5 class="font-weight-bold">Land Surface Temperature (LST) is the radiative skin temperature of the land.</h5>

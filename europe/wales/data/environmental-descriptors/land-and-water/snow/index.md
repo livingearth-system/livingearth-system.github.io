@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/snow.jpg" alt="Snow">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/snow.jpg" alt="Snow">
     </div>
     <div class="dsc-about-page container">
         <div class="row text-white">
@@ -36,7 +36,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./snow-cover-fraction"><img src="/assets/img/Wales/snow-cover-fraction.jpg" alt="Snow Cover Fraction"></a>
+                <a href="./snow-cover-fraction"><img src="/assets/img/wales/snow-cover-fraction.jpg" alt="Snow Cover Fraction"></a>
                 <div class="data-heading">
                     <h4><a href="./snow-cover-fraction">Snow Cover Fraction</a></h4>
                 </div>
@@ -44,7 +44,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./snow-water-equivalent"><img src="/assets/img/Wales/snow-water-equivalent.jpg" alt="Snow Water Equivalent"></a>
+                <a href="./snow-water-equivalent"><img src="/assets/img/wales/snow-water-equivalent.jpg" alt="Snow Water Equivalent"></a>
                 <div class="data-heading">
                     <h4><a href="./snow-water-equivalent">Snow Water Equivalent</a></h4>
                 </div>
@@ -52,7 +52,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./snow-depth"><img src="/assets/img/Wales/snow-depth.jpg" alt="Snow Depth"></a>
+                <a href="./snow-depth"><img src="/assets/img/wales/snow-depth.jpg" alt="Snow Depth"></a>
                 <div class="data-heading">
                     <h4><a href="./snow-depth">Snow Depth</a></h4>
                 </div>

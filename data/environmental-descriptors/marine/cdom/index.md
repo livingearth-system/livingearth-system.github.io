@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/cdom.jpg" class="img-fluid" alt="CDOM">
+                <img src="/assets/img/wales/big/cdom.jpg" class="img-fluid" alt="CDOM">
             </div>
             <div>
                 <h5 class="font-weight-bold">CDOM, for Coloured Dissolved Organic Matter, is the absorption coefficient of various dissolved organic materials in the water.</h5>

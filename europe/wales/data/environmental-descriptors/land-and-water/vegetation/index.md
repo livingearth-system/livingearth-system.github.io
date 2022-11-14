@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-md-7 m-0 p-0 position-relative">
             <div class="country_subpage-img-layer"></div>
-            <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/vegetation.jpg" alt="Vegetation">
+            <img class="country_subpage-benner-img" src="/assets/img/wales/big/vegetation.jpg" alt="Vegetation">
         </div>
         <div class="dsc-about-page container">
             <div class="row text-white">
@@ -35,7 +35,7 @@ layout: page
         <div class="row">
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./lifeform"><img src="/assets/img/Wales/lifeform.jpg" alt="Lifeform"></a>
+                    <a href="./lifeform"><img src="/assets/img/wales/lifeform.jpg" alt="Lifeform"></a>
                     <div class="data-heading">
                         <h4><a href="./lifeform">Lifeform</a></h4>
                     </div>
@@ -43,7 +43,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./leaf-type"><img src="/assets/img/Wales/leaf-type.jpg" alt="Leaf type"></a>
+                    <a href="./leaf-type"><img src="/assets/img/wales/leaf-type.jpg" alt="Leaf type"></a>
                     <div class="data-heading">
                         <h4><a href="./leaf-type">Leaf type</a></h4>
                     </div>
@@ -51,7 +51,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./phenology"><img src="/assets/img/Wales/phenology.jpg" alt="Phenology"></a>
+                    <a href="./phenology"><img src="/assets/img/wales/phenology.jpg" alt="Phenology"></a>
                     <div class="data-heading">
                         <h4><a href="./phenology">Phenology</a></h4>
                     </div>
@@ -59,7 +59,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./canopy-cover"><img src="/assets/img/Wales/canopy-cover.jpg" alt="Canopy Cover"></a>
+                    <a href="./canopy-cover"><img src="/assets/img/wales/canopy-cover.jpg" alt="Canopy Cover"></a>
                     <div class="data-heading">
                         <h4><a href="./canopy-cover">Canopy Cover</a></h4>
                     </div>
@@ -67,7 +67,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./canopy-height"><img src="/assets/img/Wales/canopy-height.jpg" alt="Canopy Height"></a>
+                    <a href="./canopy-height"><img src="/assets/img/wales/canopy-height.jpg" alt="Canopy Height"></a>
                     <div class="data-heading">
                         <h4><a href="./canopy-height">Canopy Height</a></h4>
                     </div>
@@ -75,7 +75,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./crop-type"><img src="/assets/img/Wales/crop-type.jpg" alt="Crop Type"></a>
+                    <a href="./crop-type"><img src="/assets/img/wales/crop-type.jpg" alt="Crop Type"></a>
                     <div class="data-heading">
                         <h4><a href="./crop-type">Crop Type</a></h4>
                     </div>
@@ -83,7 +83,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./plant-species"><img src="/assets/img/Wales/plant-species.jpg" alt="Plant Species"></a>
+                    <a href="./plant-species"><img src="/assets/img/wales/plant-species.jpg" alt="Plant Species"></a>
                     <div class="data-heading">
                         <h4><a href="./plant-species">Plant Species</a></h4>
                     </div>
@@ -91,7 +91,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./woody-biomass"><img src="/assets/img/Wales/woody-biomass.jpg" alt="Woody Biomass"></a>
+                    <a href="./woody-biomass"><img src="/assets/img/wales/woody-biomass.jpg" alt="Woody Biomass"></a>
                     <div class="data-heading">
                         <h4><a href="./woody-biomass">Woody Biomass</a></h4>
                     </div>
@@ -99,7 +99,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./herbaceous-biomass"><img src="/assets/img/Wales/herbaceous-biomass.jpg" alt="img"></a>
+                    <a href="./herbaceous-biomass"><img src="/assets/img/wales/herbaceous-biomass.jpg" alt="img"></a>
                     <div class="data-heading">
                         <h4><a href="./herbaceous-biomass">Herbaceous Biomass</a></h4>
                     </div>
@@ -107,7 +107,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./foliar-chemistry"><img src="/assets/img/Wales/foliar-chemistry.jpg" alt="img"></a>
+                    <a href="./foliar-chemistry"><img src="/assets/img/wales/foliar-chemistry.jpg" alt="img"></a>
                     <div class="data-heading">
                         <h4><a href="./foliar-chemistry">Foliar Chemistry</a></h4>
                     </div>
@@ -115,7 +115,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./canopy-layers"><img src="/assets/img/Wales/canopy-layers.jpg" alt="img"></a>
+                    <a href="./canopy-layers"><img src="/assets/img/wales/canopy-layers.jpg" alt="img"></a>
                     <div class="data-heading">
                         <h4><a href="./canopy-layers">Canopy Layers</a></h4>
                     </div>
@@ -123,7 +123,7 @@ layout: page
             </div>
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="data-item">
-                    <a href="./non-photosynthetic-vegetation"><img src="/assets/img/Wales/non-photosynthetic-vegetation.jpg" alt="img"></a>
+                    <a href="./non-photosynthetic-vegetation"><img src="/assets/img/wales/non-photosynthetic-vegetation.jpg" alt="img"></a>
                     <div class="data-heading">
                         <h4><a href="./non-photosynthetic-vegetation">Non Photosynthetic Vegetation</a></h4>
                     </div>

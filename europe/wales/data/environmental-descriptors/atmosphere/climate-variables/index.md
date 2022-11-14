@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/tree.jpg" class="img-fluid" alt="Snow Cover Fraction">
+                <img src="/assets/img/wales/big/tree.jpg" class="img-fluid" alt="Snow Cover Fraction">
             </div>
 
             <div>

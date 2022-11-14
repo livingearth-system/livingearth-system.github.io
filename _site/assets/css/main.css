@@ -5,21 +5,15 @@ body {
 }
 
 /* common-margin */
-.mt-60 {
-  margin-top: 60px;
-}
-.mt-80 {
-  margin-top: 80px;
-}
-.mb-80 {
-  margin-bottom: 80px;
-}
-.mb-100 {
-  margin-bottom: 100px;
-}
-.mt-100 {
-  margin-top: 100px;
-}
+.mt-40 {margin-top: 40px;}
+.mb-40 {margin-bottom: 40px;}
+.mt-60 {margin-top: 60px;}
+.mb-60 {margin-bottom: 60px;}
+.mt-80 {margin-top: 80px;}
+.mb-80 {margin-bottom: 80px;}
+.mb-100 {margin-bottom: 100px;}
+.mt-100 {margin-top: 100px;}
+
 .common-title {
   font-size: 28px;
   font-weight: 700;
@@ -3078,21 +3072,17 @@ ul.social-links li {
 
 /* common-margin-reponsive */
 @media (max-width: 991px) {
-  .mt-60 {
-    margin-top: 35px;
-  }
-  .mt-80 {
-    margin-top: 80px;
-  }
+  .mt-40 {margin-top: 20px;}
+  .mb-40 {margin-bottom: 20px;}
+  .mt-60 {margin-top: 40px;}
+  .mb-60 {margin-bottom: 40px;}
+  .mt-80 {margin-top: 60px;}
+  .mb-80 {margin-bottom: 60px;}
+  .mb-100 {margin-bottom: 80px;}
+  .mt-100 {margin-top: 80px;}
   .common-title {
     font-size: 22px;
     margin-bottom: 25px;
-  }
-  .mt-100 {
-    margin-top: 80px;
-  }
-  .mb-100 {
-    margin-bottom: 80px;
   }
   .common-blog-title h3 {
     font-size: 32px;
@@ -3109,18 +3099,14 @@ ul.social-links li {
   }
 }
 @media (max-width: 767px) {
-  .mt-80 {
-    margin-top: 60px;
-  }
-  .mb-80 {
-    margin-bottom: 60px;
-  }
-  .mt-100 {
-    margin-top: 60px;
-  }
-  .mb-100 {
-    margin-bottom: 60px;
-  }
+  .mt-40 {margin-top: 40px;}
+  .mb-40 {margin-bottom: 40px;}
+  .mt-60 {margin-top: 60px;}
+  .mb-60 {margin-bottom: 60px;}
+  .mt-80 {margin-top: 60px;}
+  .mb-80 {margin-bottom: 60px;}
+  .mb-100 {margin-bottom: 60px;}
+  .mt-100 {margin-top: 60px;}
   .common-title a {
     min-width: 66px;
     font-size: 14px;

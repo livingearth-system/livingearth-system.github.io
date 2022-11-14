@@ -10,7 +10,7 @@ layout: page
 		</div>
 		<div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
 			<div class="common-image pb-5">
-				<img src="/assets/img/Wales/Big/foliar-chemistry.jpg" class="img-fluid" alt="Foliar Chemistry">
+				<img src="/assets/img/wales/big/foliar-chemistry.jpg" class="img-fluid" alt="Foliar Chemistry">
 			</div>
 			<div>
 				<h5 class="font-weight-bold">Foliar chemistry represents the chemical content within the leaves of canopy.</h5>

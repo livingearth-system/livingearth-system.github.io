@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/terrain.jpg" alt="Terrain">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/terrain.jpg" alt="Terrain">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -31,7 +31,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./dem"><img src="/assets/img/Wales/dem.jpg" alt="DEM"></a>
+                <a href="./dem"><img src="/assets/img/wales/dem.jpg" alt="DEM"></a>
                 <div class="data-heading">
                     <h4><a href="./dem">DEM</a></h4>
                 </div>
@@ -39,7 +39,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./slope"><img src="/assets/img/Wales/slope.jpg" alt="Slope"></a>
+                <a href="./slope"><img src="/assets/img/wales/slope.jpg" alt="Slope"></a>
                 <div class="data-heading">
                     <h4><a href="./slope">Slope</a></h4>
                 </div>
@@ -47,7 +47,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./aspect"><img src="/assets/img/Wales/aspect.jpg" alt="Aspect"></a>
+                <a href="./aspect"><img src="/assets/img/wales/aspect.jpg" alt="Aspect"></a>
                 <div class="data-heading">
                     <h4><a href="./aspect">Aspect</a></h4>
                 </div>

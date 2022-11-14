@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/woody-biomass.jpg" class="img-fluid" alt="Woody Biomass">
+                <img src="/assets/img/wales/big/woody-biomass.jpg" class="img-fluid" alt="Woody Biomass">
             </div>
             <div>
                 <h5 class="font-weight-bold">Woody biomass is defined as the total mass of living plant material per woody area.</h5>

@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/sea-surface-salinity.jpg" class="img-fluid" alt="Sea Surface Salinity">
+                <img src="/assets/img/wales/big/sea-surface-salinity.jpg" class="img-fluid" alt="Sea Surface Salinity">
             </div>
             <div>
                 <h5 class="font-weight-bold">Surface salinity (SSS) is defined as the salt concentration in seawater. More precisely, it is the number of grams of salt per 1000 grams of water. One gram of salt per 1000 grams of water is defined as the Practical Salinity Unit (PSU) or as the Part Per Thousand (PPT) unit.</h5>
@@ -37,7 +37,7 @@ layout: page
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <div class="py-5">
-                        <img src="/assets/img/Wales/maps/sea-surface-salinity.webp" class="img-fluid" alt="Map">
+                        <img src="/assets/img/wales/maps/sea-surface-salinity.webp" class="img-fluid" alt="Map">
                     </div>
                 </div>
             </div>

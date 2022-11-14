@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/dem.jpg" class="img-fluid" alt="Digital Terrain Models">
+                <img src="/assets/img/wales/big/dem.jpg" class="img-fluid" alt="Digital Terrain Models">
             </div>
             <div>
                 <p>Digital Terrain Models (DTMs) represent the elevation of bare terrain whilst Digital Surface Models (DSMs) represent the upper height of all objects on the land surface.</p>

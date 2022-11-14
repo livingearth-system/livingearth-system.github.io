@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/cyanobacteria.jpg" class="img-fluid" alt="Cyanobacteria">
+                <img src="/assets/img/wales/big/cyanobacteria.jpg" class="img-fluid" alt="Cyanobacteria">
             </div>
             <div class="pb-5">
                 <h5 class="font-weight-bold">Free-living photosynthetic bacteria more commonly known as blue green algae. </h5>

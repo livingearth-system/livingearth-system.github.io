@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/chlorophyll.jpg" class="img-fluid" alt="Chlorophyll">
+                <img src="/assets/img/wales/big/chlorophyll.jpg" class="img-fluid" alt="Chlorophyll">
             </div>
             <div>
                 <h5 class="font-weight-bold">Chlorophyll is the green pigment of the photosynthesis process. Chlorophyll concentration is the amount of chlorophyll per cube meter of water.</h5>

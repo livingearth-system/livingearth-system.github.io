@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: post
 permalink: /themes/linking/
-title: Linking with farming, forestry and fisheries
+
+title: "Linking with farming, forestry and fisheries"
 ---
 
 <!--Faciliting-section-start -->
@@ -103,12 +104,4 @@ title: Linking with farming, forestry and fisheries
     </div>
 </div>
 <!-- other-wales-ecosystems-end -->
-
-{%-
-        include get-in-touch.liquid
-        heading="We need your help&hellip;"
-        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
-        button="Get in touch"
-        url="/contact/"
--%}
 

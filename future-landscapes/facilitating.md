@@ -5,7 +5,7 @@ title: Facilitating
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="Facilitating"
         subtitle="How can we track progress?"
         button1="Contact Us" button1_url="/contact/"

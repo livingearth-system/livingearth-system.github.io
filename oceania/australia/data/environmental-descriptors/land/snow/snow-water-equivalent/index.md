@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="pb-5">
-                <img src="/assets/img/Wales/Big/snow-water-equivalent.jpg" class="img-fluid" alt="Snow Water Equivalent">
+                <img src="/assets/img/wales/big/snow-water-equivalent.jpg" class="img-fluid" alt="Snow Water Equivalent">
             </div>
             <div>
                 <h5 class="font-weight-bold">Snow Water Equivalent (SWE) is the amount of water contained within the snowpack.</h5>

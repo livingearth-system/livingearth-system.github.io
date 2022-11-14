@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/aspect.jpg" class="img-fluid" alt="Aspect">
+                <img src="/assets/img/wales/big/aspect.jpg" class="img-fluid" alt="Aspect">
             </div>
             <div>
                 <h5 class="font-weight-bold">Aspect is defined as the orientation of slope and it is measured clockwise from north (0 to 360deg).</h5>

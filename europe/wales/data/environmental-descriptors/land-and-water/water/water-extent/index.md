@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/water-extent.jpg" class="img-fluid" alt="Water Extent">
+                <img src="/assets/img/wales/big/water-extent.jpg" class="img-fluid" alt="Water Extent">
             </div>
             <div class="pb-5">
                 <p>The location of the boundary between a water body and the adjoining land surface or the of a surface that is covered by water. Note that water can exist as snow or ice.</p>

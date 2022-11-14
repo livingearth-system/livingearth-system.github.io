@@ -5,7 +5,7 @@ title: Harmonising
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="Harmonising"
         subtitle="How can we agree?"
         button1="Contact Us" button1_url="/contact/"

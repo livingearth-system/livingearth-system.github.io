@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/snow-depth.jpg" class="img-fluid" alt="img">
+                <img src="/assets/img/wales/big/snow-depth.jpg" class="img-fluid" alt="img">
             </div>
             <div>
                 <h5 class="font-weight-bold">Ecosystems are generally complex and difficult to define and, more often than not, comprise a wide range of habitats; typically combining semi-natural, agricultural and non-natural components.</h5>

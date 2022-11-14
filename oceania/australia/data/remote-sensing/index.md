@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/remote-sensing.jpg" alt="Remote Sensing Algorithms">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/remote-sensing.jpg" alt="Remote Sensing Algorithms">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -32,7 +32,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/vegetation-algorithms.jpg" alt="Vegetation Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/vegetation-algorithms.jpg" alt="Vegetation Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Vegetation Algorithms</a></h4>
                 </div>
@@ -40,7 +40,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/snow-algorithms.jpg" alt="Snow Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/snow-algorithms.jpg" alt="Snow Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Snow Algorithms</a></h4>
                 </div>
@@ -48,7 +48,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/urban-algorithms.jpg" alt="Urban Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/urban-algorithms.jpg" alt="Urban Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Urban Algorithms</a></h4>
                 </div>
@@ -56,7 +56,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/water-algorithms.jpg" alt="Water Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/water-algorithms.jpg" alt="Water Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Water Algorithms</a></h4>
                 </div>
@@ -64,7 +64,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/soil-algorithms.jpg" alt="Soil Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/soil-algorithms.jpg" alt="Soil Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Soil Algorithms</a></h4>
                 </div>
@@ -72,7 +72,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/energy-algorithms.jpg" alt="Energy Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/energy-algorithms.jpg" alt="Energy Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Energy Algorithms</a></h4>
                 </div>
@@ -80,7 +80,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="#"><img src="/assets/img/Wales/terrain-algorithms.jpg" alt="Terrain Algorithms"></a>
+                <a href="#"><img src="/assets/img/wales/terrain-algorithms.jpg" alt="Terrain Algorithms"></a>
                 <div class="data-heading">
                     <h4><a href="#">Terrain Algorithms</a></h4>
                 </div>

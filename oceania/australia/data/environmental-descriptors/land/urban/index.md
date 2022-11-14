@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="country_subpage-benner-img" src="/assets/img/Wales/Big/urban.jpg" alt="">
+        <img class="country_subpage-benner-img" src="/assets/img/wales/big/urban.jpg" alt="">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -31,7 +31,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./artificial-materials"><img src="/assets/img/Wales/artificial-materials.jpg" alt="Artificial Materials"></a>
+                <a href="./artificial-materials"><img src="/assets/img/wales/artificial-materials.jpg" alt="Artificial Materials"></a>
                 <div class="data-heading">
                     <h4><a href="./artificial-materials">Artificial Materials</a></h4>
                 </div>
@@ -39,7 +39,7 @@ layout: page
         </div>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./urban-vegetation"><img src="/assets/img/Wales/urban-vegetation.jpg" alt="Urban Vegetation"></a>
+                <a href="./urban-vegetation"><img src="/assets/img/wales/urban-vegetation.jpg" alt="Urban Vegetation"></a>
                 <div class="data-heading">
                     <h4><a href="./urban-vegetation">Urban Vegetation</a></h4>
                 </div>

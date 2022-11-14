@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/leaf-type.jpg" class="img-fluid" alt="Leaf Type">
+                <img src="/assets/img/wales/big/leaf-type.jpg" class="img-fluid" alt="Leaf Type">
             </div>
             <div>
                 <h5 class="font-weight-bold">There are many types of leaves.</h5>
@@ -36,7 +36,7 @@ layout: page
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <div class="pt-2 pb-5">
-                        <img src="/assets/img/Wales/maps/leaf-type.png" class="img-fluid" alt="Map">
+                        <img src="/assets/img/wales/maps/leaf-type.png" class="img-fluid" alt="Map">
                     </div>
                 </div>
             </div>

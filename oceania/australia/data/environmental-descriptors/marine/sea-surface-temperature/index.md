@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/sea-surface-temperature.jpg" class="img-fluid" alt="Sea Surface Temperature">
+                <img src="/assets/img/wales/big/sea-surface-temperature.jpg" class="img-fluid" alt="Sea Surface Temperature">
             </div>
             <div>
                 <h5 class="font-weight-bold">Sea Surface Temperature (SST) is defined as the temperature of the uppermost mixed layer of the ocean (i.e. the water column close to the surface).</h5>
@@ -44,7 +44,7 @@ layout: page
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <div class="py-5">
-                        <img src="/assets/img/Wales/maps/sea-surface-temperature.webp" class="img-fluid" alt="Map">
+                        <img src="/assets/img/wales/maps/sea-surface-temperature.webp" class="img-fluid" alt="Map">
                     </div>
                 </div>
             </div>

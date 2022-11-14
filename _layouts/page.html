@@ -3,6 +3,12 @@ layout: default
 ---
 <article>
 
+    {%- include page-heading.liquid -%}
+
     {{ content }}
+
+    {%- if page.nocontact != true -%}
+        {%- include get-in-touch.liquid -%}
+    {% endif %}
 
 </article>

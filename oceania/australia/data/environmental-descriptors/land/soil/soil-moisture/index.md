@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/soil-moisture.jpg" class="img-fluid" alt="Soil Moisture">
+                <img src="/assets/img/wales/big/soil-moisture.jpg" class="img-fluid" alt="Soil Moisture">
             </div>
             <div>
                 <h5 class="font-weight-bold">The soil moisture is expressed as the volume of water contained within soils.</h5>

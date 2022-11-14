@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/water-turbidity.jpg" class="img-fluid" alt="Water Turbidity">
+                <img src="/assets/img/wales/big/water-turbidity.jpg" class="img-fluid" alt="Water Turbidity">
             </div>
             <div>
                 <h5 class="font-weight-bold">The water turbidity is the measure of water transparency. Water turbidity is used to assess the water quality.</h5>

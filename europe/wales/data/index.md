@@ -40,35 +40,35 @@ layout: page
 <div class="container mt-80 mb-80 future-landscapes-main">
     <div class="row">
         <div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-            <a href="./environmental-descriptors"><img src="/assets/img/Wales/environmental-descriptors.jpg" alt="Environmental Descriptors"></a>
+            <a href="./environmental-descriptors"><img src="/assets/img/wales/environmental-descriptors.jpg" alt="Environmental Descriptors"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Environmental Descriptors</div>
                 <p class="pt-2"><a href="./environmental-descriptors" class="learn-more-link">LEARN MORE</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-            <a href="./land-cover"><img src="/assets/img/Wales/land-and-water.jpg" alt="Land Cover"></a>
+            <a href="./land-cover"><img src="/assets/img/wales/land-and-water.jpg" alt="Land Cover"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Land Cover</div>
                 <p class="pt-2"><a href="./land-cover" class="learn-more-link">LEARN MORE</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-            <a href="#"><img src="/assets/img/Wales/soil-acidity.jpg" alt="Land Cover"></a>
+            <a href="#"><img src="/assets/img/wales/soil-acidity.jpg" alt="Land Cover"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Habitats</div>
                 <p class="pt-2"><a href="#" class="learn-more-link">LEARN MORE</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-            <a href="#"><img src="/assets/img/Wales/dem.jpg" alt="Change"></a>
+            <a href="#"><img src="/assets/img/wales/dem.jpg" alt="Change"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Change</div>
                 <p class="pt-2"><a href="#" class="learn-more-link">LEARN MORE</a></p>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 hover-zoomin">
-            <a href="#"><img src="/assets/img/Wales/ground-measurements.jpg" alt="Earthtrack points"></a>
+            <a href="#"><img src="/assets/img/wales/ground-measurements.jpg" alt="Earthtrack points"></a>
             <div class="future-dsc">
                 <div class="future-dsc-title">Earthtrack points</div>
                 <p class="pt-2"><a href="#" class="learn-more-link">LEARN MORE</a></p>

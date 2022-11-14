@@ -1,16 +1,12 @@
 ---
 layout: page
 permalink: /past-present-landscapes/
+
 title: Past & Present Landscapes
 subtitle: How can we track progress?
+image: "/assets/img/wales/big/environmental-descriptors.jpg"
+nocontact: true
 ---
-
-{%-
-        include title.liquid
-        button1="Contact Us" button1_url="/contact/"
-        button2="Contribute" button2_url="/contribute/"
-        image="/assets/img/Wales/Big/environmental-descriptors.jpg" alt=""
--%}
 
 <!-- Past & Current landscapes-start -->
 <div class="container mb-100 pastcurrent-landscapes-main">

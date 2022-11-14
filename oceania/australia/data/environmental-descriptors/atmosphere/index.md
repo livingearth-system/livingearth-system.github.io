@@ -31,7 +31,7 @@ layout: page
     <div class="row">
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./air-pollutants"><img src="/assets/img/Wales/air-polutants.jpg" alt="Air Pollutants"></a>
+                <a href="./air-pollutants"><img src="/assets/img/wales/air-polutants.jpg" alt="Air Pollutants"></a>
                 <div class="data-heading">
                     <h4><a href="./air-pollutants">Air Pollutants</a></h4>
                 </div>
@@ -40,7 +40,7 @@ layout: page
 
         <div class="col-lg-4 col-md-6 col-12">
             <div class="data-item">
-                <a href="./climate-variables"><img src="/assets/img/Wales/variants.jpg" alt="Climate Variables"></a>
+                <a href="./climate-variables"><img src="/assets/img/wales/variants.jpg" alt="Climate Variables"></a>
                 <div class="data-heading">
                     <h4><a href="./climate-variables">Climate Variables</a></h4>
                 </div>

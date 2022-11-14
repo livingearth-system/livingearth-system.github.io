@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/leaf-type.jpg" class="img-fluid" alt="FAPAR">
+                <img src="/assets/img/wales/big/leaf-type.jpg" class="img-fluid" alt="FAPAR">
             </div>
             <div>
                 <h5 class="font-weight-bold">The FAPAR is defined as the fraction of photosynthetically active radiation (400-700 nm) absorbed by the green vegetation (Fraction of Absorbed Photosynthetically Active Radiation).</h5>

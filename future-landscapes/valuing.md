@@ -5,7 +5,7 @@ title: Valuing
 ---
 
 {%-
-        include title.liquid
+        include page-heading.liquid
         title="Valuing"
         subtitle="How can we value our futures?"
         button1="Contact Us" button1_url="/contact/"

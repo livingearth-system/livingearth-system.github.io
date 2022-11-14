@@ -10,7 +10,7 @@ layout: page
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="common-image pb-5">
-                <img src="/assets/img/Wales/Big/non-photosynthetic-vegetation.jpg" class="img-fluid" alt="Non Photosynthetic Vegetation">
+                <img src="/assets/img/wales/big/non-photosynthetic-vegetation.jpg" class="img-fluid" alt="Non Photosynthetic Vegetation">
             </div>
             <div class="pb-5">
                 <h5 class="font-weight-bold">Non-Photosynthetic Vegetation (NPV) is defined as the vegetation cover which does not take part into photosynthesis process.</h5>
