@@ -1,12 +1,13 @@
 ---
 layout: page
+title: Tillage
 ---
 
 <!--Faciliting-section-start -->
 <div class="container">
     <div class="row">
         <div class="col-12 mt-60">
-            <h5 class="common-title">Facilitating</h5>
+            <h5 class="common-title">Tillage</h5>
         </div>
         <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
             <div class="pb-5">
@@ -15,30 +16,10 @@ layout: page
                 <img src="/assets/img/wild-2.png" class="img-fluid" alt="img">
             </div>
             <div>
-                <!-- <h5 class="font-weight-bold">The breaking of ground with into furrows for planting, with this undertaken using a plough</h5> -->
+                <h5 class="font-weight-bold">The preparation of soil for agricultural use through mechanical intervention such as digging, stirring, and overturning. Tillage disrupts the soil structure in a way that increases porosity and accelerates soil erosion.</h5>
                 <div class="pt-4">
-                    <p>Agriculture, forestry and fisheries are dominant land uses across Wales, which can benefit from the resources provided by Living Wales, and particularly those associated with Earth observations. Examples include informing on crop and tree health, harvesting cycles, understanding how past land use has impacted on yields and accessibility, informing and valuing ecosystem services, and ensuring future resilience to climate change and changes in biodiversity.</p>
+                    <p>Remains as non-vegetated land (level 1). Level 3: from NS (P1) to AS (P2).</p>
                 </div>
-            </div>
-            <div class="pt-5">
-                <h5 class="font-weight-bold mb-4">Available products over Wales:</h5>
-                <ul class="list-title">
-                    <li class="list-item">
-                        <a href="#">National Forest Inventory (NFI) woodland map</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">COPERNICUS High Resolution Forest Type</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">NASA Land Cover Type MCD12Q1 (version 6)</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">ESA CCI Land Cover Map (second phase)</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">ESA CORINE Land Cover</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <!--Faciliting-section-end -->
@@ -48,9 +29,15 @@ layout: page
             <section class=" wales-tabs-section text-white">
                 <h5 class="tab-title">Wales Ecosystems</h5>
                 <ul class="nav wales-nav-tabs flex-column mb-3">
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-1">Ecosystem 1</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item active show text-dark wales-tab-link" data-toggle="tab" href="#tab-2">Ecosystem 2</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-3">Ecosystem 3</a></li>
+                    <li class="wales-nav-item">
+                        <a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-1">Ecosystem 1</a>
+                    </li>
+                    <li class="wales-nav-item">
+                        <a class="wales-nav-link list-item active show text-dark wales-tab-link" data-toggle="tab" href="#tab-2">Ecosystem 2</a>
+                    </li>
+                    <li class="wales-nav-item">
+                        <a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-3">Ecosystem 3</a>
+                    </li>
                     <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-4">Ecosystem 4</a></li>
                     <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-5">Ecosystem 5</a></li>
                     <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-6">Ecosystem 6</a></li>
@@ -102,15 +89,10 @@ layout: page
 </div>
 <!-- other-wales-ecosystems-end -->
 
-<!-- get-in-section-Start -->
-<div class="container mb-100">
-    <div class="get-in-section-main">
-        <div class="get-in-section-dsc">
-            <h3>WE NEED YOUR HELP&hellip;</h3>
-            <p>Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow.</p>
-        </div>
-        <button type="button">Get in touch</button>
-    </div>
-</div>
-<!-- get-in-section-End -->
-
+{%-
+        include get-in-touch.liquid
+        heading="We need your help&hellip;"
+        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
+        button="Get in touch"
+        url="/contact/"
+-%}

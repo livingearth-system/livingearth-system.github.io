@@ -1,0 +1,17 @@
+- title: "Environmental Descriptors"
+  subtitle: "View the wide range of environmental descriptors describing the land, marine and atmosphere at multiple spatial and temporal scales for Wales, many of which have been provided through Earth observations."
+  image: "/assets/img/Wales/environmental-descriptors.jpg"
+  button: "Learn More"
+  url: "/data/environmental-descriptors"
+
+- title: "Ground Measurements"
+  subtitle: "Ground measurements are essential for developing algorithms for retrieving environmental variables from Earth observation data and for validating land cover and change classifications."
+  image: "/assets/img/Wales/ground-measurements.jpg"
+  button: "Learn More"
+  url: "/data/ground-measurements"
+
+- title: "Remote Sensing Alhorithms"
+  subtitle: "A range of satellite data based products are available globally and/or regionally. The products provide valuable spatiotemporal information for a range of environmental descriptors"
+  image: "/assets/img/Wales/remote-sensing.jpg"
+  button: "Learn More"
+  url: "#"

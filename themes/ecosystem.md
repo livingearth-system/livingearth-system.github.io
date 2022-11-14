@@ -1,5 +1,7 @@
 ---
 layout: page
+permalink: /themes/ecosystem/
+title: Ecosystem Restoration
 ---
 
 <!--Faciliting-section-start -->
@@ -119,14 +121,10 @@ layout: page
 </div>
 <!-- other-wales-ecosystems-end -->
 
-<!-- get-in-section-Start -->
-<div class="container mb-100">
-    <div class="get-in-section-main">
-        <div class="get-in-section-dsc">
-            <h3>WE NEED YOUR HELP&hellip;</h3>
-            <p>Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow.</p>
-        </div>
-        <button type="button">Get in touch</button>
-    </div>
-</div>
-<!-- get-in-section-End -->
+{%-
+        include get-in-touch.liquid
+        heading="We need your help&hellip;"
+        subheading="Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow."
+        button="Get in touch"
+        url="/contact/"
+-%}
