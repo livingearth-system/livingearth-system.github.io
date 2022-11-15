@@ -1,0 +1,15 @@
+- title: "Australia"
+  image: "/assets/img/countries/australia.jpg"
+  url: "/oceania/australia/"
+
+- title: "New Zealand"
+  image: "/assets/img/countries/new-zealand.jpg"
+  url: "#"
+
+- title: "Fiji"
+  image: "/assets/img/countries/fiji.jpg"
+  url: "#"
+
+- title: "Tonga"
+  image: "/assets/img/countries/tonga.jpg"
+  url: "#"
