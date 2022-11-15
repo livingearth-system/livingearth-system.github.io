@@ -10,14 +10,14 @@ nobuttons: true
 ---
 
 {%-
-        include countries.liquid
-        data="oceania"
+include countries.liquid
+data="oceania"
 -%}
 
 {%-
-        include continents.liquid
-        heading="Other Continents"
-        data="continents"
-        exclude="oceania"
-        more="#"
+include continents.liquid
+heading="Other Continents"
+data="continents"
+exclude="oceania"
+more="#"
 -%}

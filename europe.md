@@ -10,16 +10,16 @@ nobuttons: true
 ---
 
 {%-
-        include countries.liquid
-        data="europe"
-        search=true
-        more=true
+include countries.liquid
+data="europe"
+search=true
+more=true
 -%}
 
 {%-
-        include continents.liquid
-        heading="Other Continents"
-        data="continents"
-        exclude="europe"
-        more="#"
+include continents.liquid
+heading="Other Continents"
+data="continents"
+exclude="europe"
+more="#"
 -%}

@@ -7,7 +7,6 @@ image: "/assets/img/wales/big/environmental-descriptors.jpg"
 nocontact: true
 ---
 
-
 <div class="container mt-100 mb-100 future-landscapes-main">
     <div class="mb-80">
         <h2 class="common-title">{{ page.title }}</h2>

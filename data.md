@@ -8,6 +8,6 @@ image: "/assets/img/wild.png"
 ---
 
 {%-
-        include boxes.liquid
-        data="data"
+include boxes.liquid
+data="data"
 -%}

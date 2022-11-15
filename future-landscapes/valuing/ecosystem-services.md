@@ -3,7 +3,7 @@ layout: page
 permalink: /future-landscapes/valuing/ecosystem-services/
 
 title: Ecosystem Services
-image:"/assets/img/wales/big/environmental-descriptors.jpg"
+image: "/assets/img/wales/big/environmental-descriptors.jpg"
 nocontact: true
 ---
 

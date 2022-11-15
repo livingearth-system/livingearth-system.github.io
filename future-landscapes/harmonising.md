@@ -2,7 +2,7 @@
 layout: page
 permalink: /future-landscapes/harmonising/
 
-title: Harmonising
+title: "Harmonising"
 subtitle: "How can we agree?"
 image: "/assets/img/Future2.jpg"
 nocontact: true

@@ -9,6 +9,6 @@ image: "/assets/img/countrypageMainImg.jpg"
 ---
 
 {%-
-        include boxes.liquid
-        data="big-data"
+include boxes.liquid
+data="big-data"
 -%}

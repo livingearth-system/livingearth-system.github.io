@@ -2,10 +2,11 @@
 layout: page
 permalink: /future-landscapes/assessing-risk/
 
-title: Assessing Risk
+title: "Assessing Risk"
 subtitle: "How can we protect our assets?"
-image:"/assets/img/Future6.jpg"
+image: "/assets/img/Future6.jpg"
 nocontact: true
+---
 
 <!-- future-landscapes-start -->
 <div class="container mt-100 mb-100 future-landscapes-main">

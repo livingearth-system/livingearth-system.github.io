@@ -8,7 +8,7 @@ image: "/assets/img/wild.png"
 ---
 
 {%-
-        include boxes.liquid
-        data="themes"
-        only="changes,welsh,ecosystem,biodiversity,linking,learning"
+include boxes.liquid
+data="themes"
+only="changes,welsh,ecosystem,biodiversity,linking,learning"
 -%}

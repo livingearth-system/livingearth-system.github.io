@@ -2,7 +2,7 @@
 layout: page
 permalink: /future-landscapes/facilitating/
 
-title: Facilitating
+title: "Facilitating"
 subtitle: "How can we track progress?"
 image: "/assets/img/Future4.jpg"
 nocontact: true

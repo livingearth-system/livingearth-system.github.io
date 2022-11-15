@@ -8,7 +8,7 @@ image: "/assets/img/wales/big/environmental-descriptors.jpg"
 ---
 
 {%-
-        include boxes.liquid
-        heading="Future Landscapes"
-        data="future-landscapes"
+include boxes.liquid
+heading="Future Landscapes"
+data="future-landscapes"
 -%}

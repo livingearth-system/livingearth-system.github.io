@@ -2,7 +2,7 @@
 layout: page
 permalink: /future-landscapes/valuing/
 
-title: Valuing
+title: "Valuing"
 subtitle: "How can we value our futures?"
 image: "/assets/img/Future5.jpg"
 nocontact: true

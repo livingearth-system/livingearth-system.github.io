@@ -2,7 +2,7 @@
 layout: page
 permalink: /future-landscapes/reimagining/
 
-title: Reimagining
+title: "Reimagining"
 heading: "(Re)Imagining"
 subtitle: "What would you like to see?"
 image: "/assets/img/Future1.jpg"
