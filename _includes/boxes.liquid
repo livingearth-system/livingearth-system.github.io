@@ -2,31 +2,45 @@
 <section class="container mt-100 mb-100 future-landscapes-main">
     <div class="row">
         <div class="col-12 mb-40">
-            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }} {%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
+            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }} {%- if include.more -%}<a href="{{ include.more }}">View all</a>{% endif %}</h2>{% endif %}
             {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
         </div>
     </div>
     <div class="row">
+        {%- if include.only -%}
+            {% assign filter = include.only | split: "," %}
+        {% endif %}
+
         {% for box in site.data[include.data] %}
-            <div class="col-12 col-sm-6 col-md-4">
-                {%- if box.newtab -%}
-                    {% assign target="_blank" %}
-                {% endif %}
-                <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
-                <div class="future-dsc">
-                    {%- if box.button -%}
-                        <div class="future-dsc-title">{{ box.title }}</div>
-                    {% else %}
-                        <a href="{{ box.url }}" target="{{ target }}">
+            {%- if filter and box.id -%}
+                {% assign exclude = false %}
+                {% for id in filter %}
+                    {%- if id == box.id -%}
+                        {% assign exclude = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {%- if exclude != false -%}
+                <div class="col-12 col-sm-6 col-md-4">
+                    {%- if box.newtab -%}
+                        {% assign target = "_blank" %}
+                    {% endif %}
+                    <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                    <div class="future-dsc">
+                        {%- if box.button -%}
                             <div class="future-dsc-title">{{ box.title }}</div>
-                        </a>
-                    {% endif %}
-                    {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
-                    {%- if box.button -%}
-                        <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
-                    {% endif %}
+                        {% else %}
+                            <a href="{{ box.url }}" target="{{ target }}">
+                                <div class="future-dsc-title">{{ box.title }}</div>
+                            </a>
+                        {% endif %}
+                        {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                        {%- if box.button -%}
+                            <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
 </section>

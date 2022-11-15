@@ -1,13 +1,12 @@
 <!-- CONTINENTS -->
 <section class="container mt-100 mb-100">
     <div class="col-12">
-        {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
+        {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.more -%}<a href="{{ include.more }}">View all</a>{% endif %}</h2>{% endif %}
         {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
     </div>
     <div class="row continent-data-section">
-        {% for box_hash in site.data[include.data] %}
-            {% if box_hash[0] != include.exclude %}
-                {% assign box = box_hash[1] %}
+        {% for box in site.data[include.data] %}
+            {% if box.id != include.exclude %}
                 <section class="col-6 col-md-4 col-lg-3">
                     <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
                     <h3><a href="{{ box.url }}">{{ box.title }}</a></h3>

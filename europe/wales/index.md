@@ -87,37 +87,13 @@ image: "/assets/img/countrypageMainImg.jpg"
 </div>
 <!-- TOOLS landscapes-end -->
 
-<!-- country-subpage-blog-start -->
-<div class="container mt-100 mb-100 future-landscapes-main">
-    <h2 class="common-title">Themes <a href="/themes/">View all</a></h2>
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/welsh-reference-ecosystems-and-modified-states/"><img src="/assets/img/welsh-reference-ecosystems.jpg" alt="img"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title">Welsh reference and modified ecosystem states</div>
-                <p>Explore the truly natural ecosystems of Wales and how these have been modified by natural events and processes and/or human activities.</p>
-                <p class="pt-2"><a href="/themes/welsh-reference-ecosystems-and-modified-states/" class="learn-more-link">Read more</a></p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/ecosystem-restoration"><img src="/assets/img/ecosystem-restoration.jpg" alt="img"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title">Ecosystem Restoration</div>
-                <p>Find out about efforts to restore ecosystems in Wales</p>
-                <p class="pt-2"><a href="/themes/ecosystem-restoration" class="learn-more-link">Read more</a></p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="/themes/biodiversity/"><img src="/assets/img/biodiversity.jpg" alt="img"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title">Biodiversity</div>
-                <p>How is Living Wales helping to better understand the past, present and future distributiosn of biodiversity with a view to reversing declines and proactively promoting recovery.</p>
-                <p class="pt-2"><a href="/themes/biodiversity/" class="learn-more-link">Read more</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- country-subpage-blog-end -->
+{%-
+        include boxes.liquid
+        heading="Themes"
+        data="themes"
+        only="welsh,ecosystem,biodiversity"
+        more="/themes/"
+-%}
 
 <div class="container mt-100 mb-100 future-landscapes-main">
     <h2 class="common-title">Learning and Art</h2>

@@ -84,8 +84,9 @@ image: "/assets/img/img78.jpg"
 {%-
         include boxes.liquid
         heading="Themes"
-        all="/themes/"
-        data="themes-australia"
+        data="themes"
+        only="australian,ecosystem,biodiversity"
+        more="/themes/"
 -%}
 
 <div class="container mt-100 mb-100 future-landscapes-main">

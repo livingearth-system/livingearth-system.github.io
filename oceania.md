@@ -17,7 +17,7 @@ nobuttons: true
 {%-
         include continents.liquid
         heading="Other Continents"
-        all="#"
         data="continents"
         exclude="oceania"
+        more="#"
 -%}
