@@ -1,17 +1,14 @@
 ---
 layout: page
+
 title: Australia
+subtitle: "Novel world-first concept that aims to capture the state and dynamics of Australia’s landscape"
+background: "#07073f"
+image: "/assets/img/img78.jpg"
 ---
 
-{%-
-        include page-heading.liquid
-        title="Australia"
-        subtitle="Novel world-first concept that aims to capture the state and dynamics of Australia’s landscape"
-        background="#07073f" image="/assets/img/img78.jpg"
--%}
-
 <!-- Past & Current landscapes-start -->
-<div class="container mt-100 pastcurrent-landscapes-main">
+<div class="container mt-100 mb-100 pastcurrent-landscapes-main">
     <h2 class="common-title">Past &amp; Current Landscapes <a href="/past-present-landscapes/">View all</a></h2>
     <p>From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.</p>
     <div class="row effect">
@@ -91,8 +88,7 @@ title: Australia
         data="themes-australia"
 -%}
 
-
-<div class="container mt-120 mb-120 future-landscapes-main">
+<div class="container mt-100 mb-100 future-landscapes-main">
     <h2 class="common-title">Learning and Art</h2>
     <div class="row">
         <div class="col-12 col-sm-6 col-md-4">
@@ -134,5 +130,3 @@ title: Australia
         image="/assets/img/contribute.jpg"
 
 -%}
-
-{%- include get-in-touch.liquid -%}
