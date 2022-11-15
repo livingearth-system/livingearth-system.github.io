@@ -11,7 +11,7 @@ nobuttons: true
 ##### Keep in touch
 ### We are always here to help
 
-**[hello@livingearthhub.org](mailto:hello@livingearthhub.org)**
+**[hello@livingearthhub.org](mailto:hello@livingearthhub.org)**  
 **[+42 1 234 5678](tel:+42-1-234-5678)**
 
 PENGLAIS,  
