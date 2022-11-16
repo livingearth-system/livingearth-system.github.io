@@ -6,7 +6,7 @@
 - title: "Environmental Descriptors"
   subtitle: "Obtaining from existing sources or algorithms for retrieving or classifying from Earth observation data"
   image: "/assets/img/past-present/environmental-descriptors.jpg"
-  url: "/data/environmental-descriptors/"
+  url: "/oceania/australia/data/environmental-descriptors/"
 
 - title: "Mapping"
   subtitle: "Combining the environmental descriptors to generate maps of land cover according to the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS)."
