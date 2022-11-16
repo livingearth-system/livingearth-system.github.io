@@ -66,6 +66,9 @@
                             {%- if box.button -%}
                                 <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
                             {% endif %}
+                            {%- if box.external -%}
+                                <p style="white-space:normal;"><a class="future-dsc-external" href="{{ box.url }}" target="{{ target }}">{{ box.external }}</a></p>
+                            {% endif %}
                         </div>
                     </div>
                 {% endunless %}

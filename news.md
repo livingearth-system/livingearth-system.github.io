@@ -3,6 +3,7 @@ layout: page
 permalink: /news/
 
 title: News
+nocontact: true
 ---
 
 <!-- blog-main-section-Start -->

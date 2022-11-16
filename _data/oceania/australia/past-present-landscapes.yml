@@ -1,7 +1,7 @@
 - title: "Analysis Ready Data"
   subtitle: "Download and pre-process satellite sensor data to an analysis ready format"
   image: "/assets/img/past-present/analysis-ready-data.jpg"
-  url: "#"
+  url: "/oceania/australia/analysis-ready-data/"
 
 - title: "Environmental Descriptors"
   subtitle: "Obtaining from existing sources or algorithms for retrieving or classifying from Earth observation data"
@@ -9,16 +9,19 @@
   url: "/data/environmental-descriptors/"
 
 - title: "Mapping"
-  subtitle: "Combining the environmental descriptors to generate maps of land cover"
+  subtitle: "Combining the environmental descriptors to generate maps of land cover according to the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS)."
   image: "/assets/img/past-present/mapping.jpg"
-  url: "#"
+  url: "https://livingearth-lccs.readthedocs.io/en/latest/index.html"
+  newtab: true
 
 - title: "Monitoring"
   subtitle: "Consistenty describe and quantify change based on impacts and pressures"
   image: "/assets/img/past-present/monitoring.jpg"
-  url: "#"
+  url: "https://github.com/livingearth-system/Globalchangeframework"
+  newtab: true
 
 - title: "Validation and calibration"
   subtitle: "Record environmental descriptors, land cover, habitats and change on the ground"
   image: "/assets/img/past-present/validation-calibration.jpg"
-  url: "#"
+  url: "https://earthtrack.aber.ac.uk/lccs/world.html"
+  newtab: true

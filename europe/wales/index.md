@@ -7,53 +7,13 @@ background: "#07073f"
 image: "/assets/img/heading/country.jpg"
 ---
 
-<!-- Past & Current landscapes-start -->
-<div class="container mt-100 mb-100 pastcurrent-landscapes-main">
-    <h2 class="common-title">Past &amp; Current Landscapes <a href="./past-present-landscapes/">View all</a></h2>
-    <p>From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.</p>
-    <div class="row effect">
-        <div class="col-12">
-            <div id="owl-past-current" class="owl-carousel owl-theme owl-img-responsive">
-                <div class="item">
-                    <a href="./past-present-landscapes/analysis-ready-data/"><img src="/assets/img/past-present/analysis-ready-data.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="./past-present-landscapes/analysis-ready-data/">Analysis Ready Data</a></h4>
-                        <p>Download and pre-process satellite sensor data to an analysis ready format</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="./data/environmental-descriptors/"><img src="/assets/img/past-present/environmental-descriptors.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="./data/environmental-descriptors/">Environmental Descriptors</a></h4>
-                        <p>Obtaining from existing sources or algorithms for retrieving or classifying from Earth observation data</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://livingearth-lccs.readthedocs.io/en/latest/index.html" target="_blank"><img src="/assets/img/past-present/mapping.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="https://livingearth-lccs.readthedocs.io/en/latest/index.html" target="_blank">Mapping</a></h4>
-                        <p>Combining the environmental descriptors to generate maps of land cover according to the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS).</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://github.com/livingearth-system/Globalchangeframework" target="_blank"><img src="/assets/img/past-present/monitoring.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="https://github.com/livingearth-system/Globalchangeframework" target="_blank">Monitoring</a></h4>
-                        <p>Consistenty describe and quantify change based on impacts and pressures</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://earthtrack.aber.ac.uk/lccs/wales.html" target="_blank"><img src="/assets/img/past-present/validation-calibration.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="https://earthtrack.aber.ac.uk/lccs/wales.html" target="_blank">Validation and calibration</a></h4>
-                        <p>Record environmental descriptors, land cover, habitats and change on the ground</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Past & Current landscapes-end -->
+{%-
+        include past-present.liquid
+        heading="Past & Present Landscapes"
+        subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
+        all="./past-present-landscapes/"
+        data="europe.wales.past-present-landscapes"
+-%}
 
 <!-- TOOLS landscapes-start -->
 <div class="container mt-100 mb-100 tools-main">

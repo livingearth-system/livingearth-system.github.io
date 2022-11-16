@@ -11,9 +11,8 @@ nobuttons: true
 
 {%-
 include countries.liquid
-data="europe"
-search=true
-more=true
+data="europe.countries"
+search=true more=true
 -%}
 
 {%-

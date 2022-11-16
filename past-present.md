@@ -5,6 +5,7 @@ permalink: /past-present/
 title: "Past & Present Landscapes"
 subtitle: "How can we track progress?"
 image: "/assets/img/heading/environmental.jpg"
+nocontact: true
 ---
 
 {%-

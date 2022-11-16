@@ -1,0 +1,30 @@
+- title: "Openly available optical and radar"
+  subtitle: "Provides access to Landsat and Sentinel-1 and Sentinel-2 data"
+  image: "/assets/img/Future1.jpg"
+  url: "https://livingwales.aber.ac.uk/"
+  newtab: true
+
+- title: "Lidar"
+  subtitle: "Airborne and spaceborne Lidar"
+  image: "/assets/img/Future2.jpg"
+  url: "#"
+
+- title: "Thermal"
+  subtitle: "Thermal data"
+  image: "/assets/img/Future3.jpg"
+  url: "#"
+
+- title: "Data"
+  subtitle: "A list of data sources relevant to environmental descriptors in Wales"
+  image: "/assets/img/Future5.jpg"
+  url: "#"
+
+- title: "Algorithms"
+  subtitle: "Algorithms for retreiving environmental deescriptors"
+  image: "/assets/img/Future6.jpg"
+  url: "#"
+
+- title: "Othersa"
+  subtitle: "Other Earth observation datasets"
+  image: "/assets/img/Future4.jpg"
+  url: "#"

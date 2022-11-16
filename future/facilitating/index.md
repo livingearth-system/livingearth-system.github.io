@@ -7,50 +7,41 @@ image: "/assets/img/Future4.jpg"
 nocontact: true
 ---
 
-<!-- Past & Current landscapes-start -->
-<div class="container mt-100 mb-100 pastcurrent-landscapes-main">
-    <h2 class="common-title">Past &amp; Current Landscapes <a href="/past-present-landscapes/">View all</a></h2>
-    <p>From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.</p>
-    <div class="row effect">
-        <div class="col-12">
-            <div id="owl-past-current" class="owl-carousel owl-theme owl-img-responsive">
-                <div class="item">
-                    <a href="#"><img src="/assets/img/past-present/analysis-ready-data.jpg" alt="img"/></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">Analysis Ready Data</a></h4>
-                        <p>Download and pre-process satellite sensor data to an analysis ready format</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="/data/environmental-descriptors"><img src="/assets/img/past-present/environmental-descriptors.jpg" alt="img"/></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="/data/environmental-descriptors">Environmental Descriptors</a></h4>
-                        <p>Obtain from existing sources oor retrieve or classify from Earth observation data</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="/assets/img/past-present/mapping.jpg" alt="img"/></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">Mapping</a></h4>
-                        <p>Combine the environmental descriptors to generate maps of land cover</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="/assets/img/past-present/monitoring.jpg" alt="img"/></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">Monitoring</a></h4>
-                        <p>Consistenty describe and quantify change based on impacts and pressures</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="/assets/img/past-present/validation-calibration.jpg" alt="img"/></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">Validation and calibration</a></h4>
-                        <p>Record environmental descriptors, land cover, habitats and change on the ground</p>
-                    </div>
-                </div>
+{%-
+include boxes.liquid
+subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque tortor ipsum, nec sodales velit faucibus a. Vestibulum id laoreet mi. In eget tristique eros, at viverra elit. Nulla facilisi. Donec congue risus nunc, nec scelerisque augue blandit in. Fusce dignissim ultricies arcu non venenatis. In elementum luctus varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur aliquet libero lorem, sit amet viverra ex placerat vitae. Nullam fermentum dolor massa, vitae ultricies ante sagittis non. Curabitur ut nisl eros. Sed sit amet neque sed ante viverra accumsan. Maecenas diam urna, ultricies ut elementum quis, tincidunt ac turpis. Phasellus aliquet quis diam vel malesuada. Fusce malesuada dolor non turpis mollis, eget aliquam nunc tincidunt."
+data="future.boxes"
+cols="4"
+-%}
+
+<!-- TOOLS landscapes-start -->
+<div class="container mt-100 mb-100 tools-main">
+    <h2 class="common-title">TOOLS</h2>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+            <a href="#"><img src="/assets/img/tools1.jpg" alt="View prediction of future landscapes" style="width:100%;height:253px;object-fit:cover;"></a>
+            <div class="future-dsc">
+                <a href="#">
+                    <div class="future-dsc-title" style="text-transform: none;">View prediction of future landscapes</div>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+            <a href="#"><img src="/assets/img/tools2.jpg" alt="Contribute feedback" style="width:100%;height:253px;object-fit:cover;"></a>
+            <div class="future-dsc">
+                <a href="#">
+                    <div class="future-dsc-title" style="text-transform: none;">Contribute feedback</div>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+            <a href="#"><img src="/assets/img/tools3.jpg" alt="Analyze your options" style="width:100%;height:253px;object-fit:cover;"></a>
+            <div class="future-dsc">
+                <a href="#">
+                    <div class="future-dsc-title" style="text-transform: none;">Analyze your options</div>
+                </a>
             </div>
         </div>
     </div>
 </div>
-<!-- Past & Current landscapes-end -->
+<!-- TOOLS landscapes-end -->

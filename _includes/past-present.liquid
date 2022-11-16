@@ -1,7 +1,11 @@
 <!-- PAST-PRESENT-LANDSCAPES -->
 <section class="mt-100 mb-100 pastcurrent-landscapes-main">
-    {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
-    {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
+    <div class="row">
+        <div class="col-12">
+            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
+            {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
+        </div>
+    </div>
     {%- if include.data -%}
         <div class="row effect">
             <div class="col-12">
@@ -22,9 +26,10 @@
 
                     {% for box in data %}
                         <section class="item">
-                            <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.heading }}"></a>
+                            {%- if box.newtab -%}{% assign target = "_blank" %}{% endif %}
+                            <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.heading }}"></a>
                             <div class="pastcurrent-dsc">
-                                {%- if box.title -%}<h4><a href="{{ box.url }}">{{ box.title }}</a></h4>{% endif %}
+                                {%- if box.title -%}<h4><a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a></h4>{% endif %}
                                 {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
                             </div>
                         </section>
