@@ -1,0 +1,19 @@
+- title: "Carbon"
+  image: "/assets/img/Future1.jpg"
+  url: "/future/valuing/values/carbon/"
+
+- title: "Biodiversity"
+  image: "/assets/img/Future2.jpg"
+  url: "/future/valuing/values/biodiversity/"
+
+- title: "Water Quality"
+  image: "/assets/img/Future3.jpg"
+  url: "/future/valuing/values/water-quality/"
+
+- title: "Air Quality"
+  image: "/assets/img/Future4.jpg"
+  url: "/future/valuing/values/air-quality/"
+
+- title: "Soil Quality"
+  image: "/assets/img/Future5.jpg"
+  url: "/future/valuing/values/soil-quality/"

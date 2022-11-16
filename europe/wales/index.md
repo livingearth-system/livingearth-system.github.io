@@ -4,7 +4,7 @@ layout: page
 title: Wales
 subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales’s landscape"
 background: "#07073f"
-image: "/assets/img/countrypageMainImg.jpg"
+image: "/assets/img/heading/country.jpg"
 ---
 
 <!-- Past & Current landscapes-start -->

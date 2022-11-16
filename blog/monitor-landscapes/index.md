@@ -52,7 +52,7 @@ layout: page
             <!-- article-social-user-start -->
             <div class="row article-social-user-main">
                 <div class="col-md-6 col-12 d-flex align-items-center">
-                    <img src="/assets/img/aboutUser.jpg" alt="img">
+                    <img src="/assets/img/avatar/richard-lucas.jpg" alt="img">
                     <div class="article-user-details">
                         <h5>Prof. Richard Lucas</h5>
                         <p>Apr 10,2022 <span>7 mins read</span></p>

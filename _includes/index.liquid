@@ -1,0 +1,30 @@
+{%- if include.title -%}
+    {% assign title = include.title | default: page.title %}
+{% else %}
+    {% assign title = page.heading | default: page.title %}
+{% endif %}
+{% assign subtitle = include.subtitle | default: page.subtitle %}
+{% assign smalltitle = include.smalltitle | default: page.smalltitle %}
+{% assign image = include.image | default: page.image %}
+{% assign alt = include.alt | default: page.alt %}
+
+<!-- INDEX -->
+<header class="main-home-section">
+    {%- if image -%}<img class="main-benner-img" src="{{ image }}" alt="{{ alt | default: title }}">{% endif %}
+    <div class="container welcome-living-main">
+        <div class="row">
+            <div class="col-12 col-lg-8 welcome-living-earth">
+                {%- if smalltitle -%}<h5>{{ smalltitle }}</h5>{% endif %}
+                {%- if title -%}<h1>{{ title }}</h1>{% endif %}
+                {%- if subtitle -%}<p>{{ subtitle }}</p>{% endif %}
+                <div class="welcome-living-button">
+                    {%- if nobuttons != true -%}
+                        <button type="button" onclick="location.href='{{ button1_url | default: "/search/" }}'" class="search hover-slide-right">{{ button1 | default: "Search" }}</button>
+                        <button type="button" onclick="location.href='{{ button2_url | default: "/contact/" }}'" class="get-in-touch hover-slide-transparent">{{ button2 | default: "Get in touch" }}</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /INDEX -->

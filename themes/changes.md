@@ -4,7 +4,7 @@ permalink: /themes/changes/
 
 title: Changes
 subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
-image: "/assets/img/wild.png"
+image: "/assets/img/heading/wild.jpg"
 ---
 
 <!-- country-subpage-blog-start -->

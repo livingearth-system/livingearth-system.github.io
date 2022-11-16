@@ -3,12 +3,16 @@ layout: default
 ---
 <section>
 
-    {%- include page-heading.liquid -%}
+    {%- include heading.liquid -%}
 
-    {{ content }}
+    <div class="container mt-100 mb-100">
 
-    {%- if page.nocontact != true -%}
-        {%- include get-in-touch.liquid -%}
-    {% endif %}
+        {{ content }}
+
+        {%- if page.nocontact != true -%}
+            {%- include get-in-touch.liquid -%}
+        {% endif %}
+
+    </div>
 
 </section>

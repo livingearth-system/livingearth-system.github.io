@@ -1,0 +1,15 @@
+- title: "Values"
+  image: "/assets/img/Future1.jpg"
+  url: "/future/valuing/values/"
+
+- title: "Sustainability"
+  image: "/assets/img/Future2.jpg"
+  url: "/future/valuing/sustainability/"
+
+- title: "Ecosystem Services"
+  image: "/assets/img/Future3.jpg"
+  url: "/future/valuing/ecosystem-services/"
+
+- title: "Environmental Accounts"
+  image: "/assets/img/Future4.jpg"
+  url: "/future/valuing/environmental-accounts/"

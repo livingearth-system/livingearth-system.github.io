@@ -1,0 +1,29 @@
+- title: "(Re)imagining"
+  subtitle: "What would you like to see?"
+  image: "/assets/img/Future1.jpg"
+  url: "/future/reimagining/"
+
+- title: "Harmonising"
+  subtitle: "How can we agree?"
+  image: "/assets/img/Future2.jpg"
+  url: "/future/harmonising/"
+
+- title: "Realising"
+  subtitle: "How can we be certain?"
+  image: "/assets/img/Future3.jpg"
+  url: "/future/realising/"
+
+- title: "Facilitating"
+  subtitle: "How can we track progress?"
+  image: "/assets/img/Future4.jpg"
+  url: "/future/facilitating/"
+
+- title: "Valuing"
+  subtitle: "How can we value our futures?"
+  image: "/assets/img/Future5.jpg"
+  url: "/future/valuing/"
+
+- title: "Assessing Risk"
+  subtitle: "How can we protect our assets?"
+  image: "/assets/img/Future6.jpg"
+  url: "/future/assessing-risk/"

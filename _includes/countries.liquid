@@ -1,6 +1,6 @@
 <!-- COUNTRIES -->
 {%- if include.search -%}
-    <div class="container mt-100 mb-100 search-continent-main">
+    <div class="mt-100 mb-100 search-continent-main">
         <div class="row">
             <div class="col-12 col-lg-8 m-auto">
                 <ul class="continent-country-history">
@@ -41,7 +41,7 @@
     </div>
 {% endif %}
 
-<section class="container mt-100 mb-100 data-continent-main">
+<section class="mt-100 mb-100 data-continent-main">
     {% assign array = site.data[include.data] %}
     <div class="data-continent-fillter">
         <div class="continent-count">{{ array | size }} countries</div>

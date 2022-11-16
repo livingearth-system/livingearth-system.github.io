@@ -1,5 +1,5 @@
 <!-- BOXES -->
-<section class="container mt-100 mb-100 future-landscapes-main">
+<section class="mt-100 mb-100 future-landscapes-main">
     <div class="row">
         <div class="col-12 mb-40">
             {%- if include.heading -%}<h2 class="common-title">{{ include.heading }} {%- if include.more -%}<a href="{{ include.more }}">View all</a>{% endif %}</h2>{% endif %}
@@ -11,7 +11,32 @@
             {% assign filter = include.only | split: "," %}
         {% endif %}
 
-        {% for box in site.data[include.data] %}
+        {% case include.cols %}
+            {% when "2" %}
+                {% assign cols = "col-md-6" %}
+            {% when "3" %}
+                {% assign cols = "col-md-4" %}
+            {% when "4" %}
+                {% assign cols = "col-md-3" %}
+            {% else %}
+                {% assign cols = "col-md-4" %}
+        {% endcase %}
+
+        {% assign array = include.data | split: '.' %}
+        {% assign arraysize = array | size %}
+
+        {% if arraysize > 1 %}
+            {% assign data = site.data %}
+            {% for entry in array %}
+                {% assign temp = array[forloop.index0] %}
+                {% assign data = data[temp] %}
+            {% endfor %}
+        {% else %}
+            {% assign data = site.data[include.data] %}
+        {% endif %}
+
+        {% for box in data %}
+
             {%- if filter and box.id -%}
                 {% assign exclude = false %}
                 {% for id in filter %}
@@ -20,8 +45,9 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            {%- if exclude != false -%}
-                <div class="col-12 col-sm-6 col-md-4">
+
+            {%- unless exclude == false -%}
+                <div class="col-12 col-sm-6 {{ cols }}">
                     {%- if box.newtab -%}
                         {% assign target = "_blank" %}
                     {% endif %}
@@ -40,7 +66,7 @@
                         {% endif %}
                     </div>
                 </div>
-            {% endif %}
+            {% endunless %}
         {% endfor %}
     </div>
 </section>

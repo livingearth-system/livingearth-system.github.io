@@ -10,7 +10,7 @@ nocontact: true
 
 <!-- Past & Current landscapes-start -->
 <div class="container mb-100 pastcurrent-landscapes-main">
-    <h2 class="common-title">Past &amp; Current Landscapes</h2>
+    <h2 class="common-title">Past &amp; Present Landscapes</h2>
     <p>From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.</p>
     <div class="row effect">
         <div class="col-12">

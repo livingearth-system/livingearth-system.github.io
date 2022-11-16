@@ -1,0 +1,24 @@
+<!-- VIDEO -->
+<section class="mt-100 mb-100">
+    {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}</h2>{% endif %}
+    <div class="row">
+        <div class="col-md-8 col-12">
+            <div class="row user-details-content">
+                <div class="col-md-2 col-3">
+                    {%- if include.avatar -%}<img src="{{ include.avatar }}" alt="{{ include.name }}">{% endif %}
+                </div>
+                <div class="col-md-10 col-9 user-details-content-dsc">
+                    {%- if include.name -%}<p>{{ include.name }}</p>{% endif %}
+                    {%- if include.position -%}<span>{{ include.position }}</span>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-40 abouts-video-section">
+            {%- if include.preview -%}<img src="{{ include.preview }}" alt="">{% endif %}
+            <button type="button"><img src="/assets/img/play.png" alt="Play"></button>
+        </div>
+    </div>
+</section>
+<!-- /VIDEO -->

@@ -5,51 +5,23 @@ permalink: /about/
 title: "About Us"
 subtitle: "Living Earth is about proactively restoring the planet by sharing knowledge, skills and data."
 background: "#4375a9"
-image: "/assets/img/aboutus.png"
+image: "/assets/img/heading/about-us.jpg"
 ---
 
-<!-- who-we-are-Start -->
-<div class="container mb-100">
-    <div class="row">
-        <div class="col-md-6 col-12 who-we-count">
-            <div class="row">
-                <div class="col-md-6 col-4">
-                    <h3>2506 M</h3>
-                    <p>consectetur elit</p>
-                </div>
-                <div class="col-md-6 col-4">
-                    <h3>1567 M</h3>
-                    <p>laboris nisi</p>
-                </div>
-                <div class="col-md-6 col-4">
-                    <h3>741+</h3>
-                    <p>quis nostrud</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-12 who-we-content">
-            <h3>Who we are?</h3>
-            <p class="mb-4">Living Earth is you and everyone. We are all part of this one planet and we need to make sure that our ecosystems function as they should and our environments are clean for ourselves and nature but also support us in the long term. Collectively, we are providing a capacity to achieve our ambitions and one that builds on our knowledge of the past.</p>
-        </div>
-    </div>
-</div>
-<!-- who-we-are-End -->
+{%-
+        include who-we-are.liquid
+        heading="Who we are?"
+        subheading="Living Earth is you and everyone. We are all part of this one planet and we need to make sure that our ecosystems function as they should and our environments are clean for ourselves and nature but also support us in the long term. Collectively, we are providing a capacity to achieve our ambitions and one that builds on our knowledge of the past."
+        count="2506 M, consectetur elit; 1567 M, laboris nisi; 741+, quis nostrud"
+-%}
 
-<!-- our-vision-Start -->
-<div class="container mb-100">
-    <div class="row our-vision-main">
-        <div class="col-12 col-md-6 our-vision-dsc">
-            <div class="d-flex justify-content-center flex-column h-100">
-                <h3>Our Vision</h3>
-                <p>A healthy planet that provides for nature and society. </p>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 flex-column d-flex">
-            <img src="/assets/img/office.jpg" alt="img">
-        </div>
-    </div>
-</div>
-<!-- our-vision-End -->
+
+{%-
+        include our-vision.liquid
+        heading="Our Vision"
+        subheading="A healthy planet that provides for nature and society."
+        image="/assets/img/office.jpg" alt="Office"
+-%}
 
 <!-- living-earth-Start -->
 <div class="container mb-100 living-earth-main">
@@ -163,105 +135,33 @@ image: "/assets/img/aboutus.png"
 </div>
 <!-- living-earth-End -->
 
-<!-- organisations-earth-Start -->
-<div class="container mb-100 organisations-earth">
-    <div class="row">
-        <div class="col-md-6 col-lg-3 col-12">
-            <div class="organisations-earth-inner">
-                <div class="organisations-img organisations-content">
-                    <h3>Organisations Behind Living Earth.</h3>
-                    <a href="#">View all</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3 col-6">
-            <div class="organisations-earth-inner">
-                <div class="organisations-img">
-                    <a href="#"><img src="/assets/img/organisations.png" alt="img"></a>
-                </div>
-                <div class="organisations-dsc">
-                    <h4>Aberystwyth University</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3 col-6">
-            <div class="organisations-earth-inner">
-                <div class="organisations-img">
-                    <a href="#"><img src="/assets/img/organisations.png" alt="img"></a>
-                </div>
-                <div class="organisations-dsc">
-                    <h4>Aberystwyth University</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3 col-6">
-            <div class="organisations-earth-inner">
-                <div class="organisations-img">
-                    <a href="#"><img src="/assets/img/organisations.png" alt="img"></a>
-                </div>
-                <div class="organisations-dsc">
-                    <h4>Aberystwyth University</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3 col-6 organisations-hidden">
-            <div class="organisations-earth-inner">
-                <div class="organisations-img">
-                    <a href="#"><img src="/assets/img/organisations.png" alt="img"></a>
-                </div>
-                <div class="organisations-dsc">
-                    <h4>Aberystwyth University</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- organisations-earth-End -->
+{%-
+        include organisations.liquid
+        heading="Organisations Behind Living Earth."
+        all="View all"
+-%}
 
-<!-- user-details-content-Start -->
-<div class="container mb-100">
-    <h2 class="common-title-big">The world is changing rapidly and there is an urgent need to monitor our landscapes and proactively plan for the future.</h2>
-    <div class="row">
-        <div class="col-md-8 col-12">
-            <div class="row user-details-content">
-                <div class="col-md-2 col-3">
-                    <img src="/assets/img/aboutUser.jpg" alt="img">
-                </div>
-                <div class="col-md-10 col-9 user-details-content-dsc">
-                    <p>Prof. Richard Lucas</p>
-                    <span>Department of Geography and Earth Sciences, Aberystwyth University</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- user-details-ads-content-End -->
-
-<!-- abouts-video-Start -->
-<div class="container mb-100">
-    <div class="row">
-        <div class="col-12 abouts-video-section">
-            <img src="/assets/img/abouts-video.jpg" alt="">
-            <button type="button">
-                <img alt="img" src="/assets/img/play-button.png"/>
-            </button>
-        </div>
-    </div>
-</div>
-<!-- abouts-video-End -->
+{%-
+        include video.liquid
+        heading="The world is changing rapidly and there is an urgent need to monitor our landscapes and proactively plan for the future."
+        name="Prof. Richard Lucas"
+        position="Department of Geography and Earth Sciences, Aberystwyth University"
+        avatar="/assets/img/avatar/richard-lucas.jpg"
+        preview="/assets/img/video.jpg"
+-%}
 
 {%-
         include our-blog.liquid
         title="Our blog"
         heading="Stay up to date"
-        button="Read all articles"
-        url="/blog/"
+        all="Read all articles"
+        url="/news/"
 -%}
 
 {%-
         include our-events.liquid
         title="Our events"
         heading="Join our events"
-        button="Check All Events"
-        url="/events/"
+        all="Check All Events"
+        url="/news/"
 -%}

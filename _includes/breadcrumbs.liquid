@@ -6,7 +6,18 @@
         {% if forloop.last %}
             <li class="breadcrumbs-item">{{ page.title }}</li>
         {% else %}
-            <li class="breadcrumbs-item"><a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace: 'without-plugin/', 'without-plugins/' }}{% endfor %}">{{ crumb | replace: '-', ' ' | remove: '.html' | capitalize }}</a></li>
+            <li class="breadcrumbs-item">
+                <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace: 'without-plugin/', 'without-plugins/' }}{% endfor %}">
+                    {% assign cr = crumb | replace: '-', ' ' | remove: '.html' %}
+
+                    {% case cr %}
+                        {% when "future" %}
+                            {% assign cr = "Future Landscapes" %}
+                    {% endcase %}
+
+                    {{ cr | capitalize }}
+                </a>
+            </li>
         {% endif %}
     {% endfor %}
 </ul>

@@ -1,0 +1,19 @@
+- title: "Box 1"
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  image: "/assets/img/Future1.jpg"
+  url: "#"
+
+- title: "Box 2"
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  image: "/assets/img/Future2.jpg"
+  url: "#"
+
+- title: "Box 3"
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  image: "/assets/img/Future3.jpg"
+  url: "#"
+
+- title: "Box 4"
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  image: "/assets/img/Future4.jpg"
+  url: "#"

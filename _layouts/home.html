@@ -4,10 +4,16 @@ home: true
 ---
 <section>
 
-    {{ content }}
+    {%- include index.liquid -%}
 
-    {%- if page.nocontact != true -%}
-        {%- include get-in-touch.liquid -%}
-    {% endif %}
+    <div class="container mt-100 mb-100">
+
+        {{ content }}
+
+        {%- if page.nocontact != true -%}
+            {%- include get-in-touch.liquid -%}
+        {% endif %}
+
+    </div>
 
 </section>

@@ -1,0 +1,15 @@
+<!-- OUR-VISION -->
+<section class="mt-100 mb-100">
+    <div class="row our-vision-main">
+        <div class="col-12 col-md-6 our-vision-dsc">
+            <div class="d-flex justify-content-center flex-column h-100">
+                {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
+                {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 flex-column d-flex">
+            {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.alt }}">{% endif %}
+        </div>
+    </div>
+</section>
+<!-- /OUR-VISION -->

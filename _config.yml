@@ -1,10 +1,9 @@
 title: LivingEarth
 author:
-  name: GitHub User
+  name: LivingEarth
   email: your-email@domain.com
 description:
-
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: false
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -17,35 +16,6 @@ minima:
     instagram: #
     twitter: #
     youtube: #
-
-    # github:
-    # devto: jekyll
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # linkedin: jekyll
-    # pinterest: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
-    # google_scholar_id: qc6CJjYAAAAJ
-
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
-
-    # GitLab instances
-    # gitlab:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up

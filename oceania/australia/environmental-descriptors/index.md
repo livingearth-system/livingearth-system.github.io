@@ -10,7 +10,7 @@ layout: page
 	</div>
 	<div class="col-md-7 m-0 p-0 position-relative">
 		<div class="country_subpage-img-layer"></div>
-		<img class="countrypage-benner-img" src="/assets/img/img78.jpg" alt="countrypageMainImg">
+		<img class="countrypage-benner-img" src="/assets/img/heading/australia.jpg" alt="countrypageMainImg">
 	</div>
 	<div class="dsc-about-page container">
 		<div class="row text-white">

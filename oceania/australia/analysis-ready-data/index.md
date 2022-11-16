@@ -10,7 +10,7 @@ layout: page
     </div>
     <div class="col-md-7 m-0 p-0 position-relative">
         <div class="country_subpage-img-layer"></div>
-        <img class="countrypage-benner-img" src="/assets/img/img78.jpg" alt="countrypageMainImg">
+        <img class="countrypage-benner-img" src="/assets/img/heading/australia.jpg" alt="countrypageMainImg">
     </div>
     <div class="dsc-about-page container">
         <div class="row">
@@ -100,7 +100,7 @@ layout: page
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
-            <a href="/future-landscapes/realising/"><img src="/assets/img/australia/dea-via-amazon-web-services.jpg" alt="DEA via Amazon Web Services"></a>
+            <a href="/future/realising/"><img src="/assets/img/australia/dea-via-amazon-web-services.jpg" alt="DEA via Amazon Web Services"></a>
             <div class="future-dsc">
                 <a href="https://data.dea.ga.gov.au/" target="_blank">
                     <div class="future-dsc-title">DEA via Amazon Web Services</div>

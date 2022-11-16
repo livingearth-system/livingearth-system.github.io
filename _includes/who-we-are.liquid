@@ -1,0 +1,24 @@
+<!-- WHO-WE-ARE -->
+<section class="mt-100 mb-100">
+    <div class="row">
+        <div class="col-md-6 col-12 who-we-count">
+            <div class="row">
+                {%- if include.count -%}
+                    {% assign array = include.count | split: ';' %}
+                    {% for entry in array %}
+                        <div class="col-md-6 col-4">
+                            {% assign e = entry | split: ',' %}
+                            <h3>{{ e[0] | strip }}</h3>
+                            <p>{{ e[1] | strip }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-6 col-12 who-we-content">
+            {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
+            {%- if include.subheading -%}<p class="mb-4">{{ include.subheading }}</p>{% endif %}
+        </div>
+    </div>
+</section>
+<!-- WHO-WE-ARE -->

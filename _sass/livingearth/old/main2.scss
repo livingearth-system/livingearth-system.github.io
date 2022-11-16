@@ -1,0 +1,133 @@
+/* 
+note for developer
+Don't add css on this file. 
+Use main.css instead
+*/
+.container.mt-80.mb-80.future-landscapes-main img {
+  //    height: 363px;
+  //    object-fit: fill;
+}
+
+.event-our-right-inner button,
+.join-our-card button {
+  text-transform: none !important;
+}
+
+body {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.effect a,
+.future-landscapes-main .col-12 a,
+.hover-zoomin a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.effect a img,
+.future-landscapes-main .col-12 a img,
+.hover-zoomin img {
+  width: 100%;
+  height: auto;
+  transition: all .3s ease-in-out;
+}
+
+
+.effect a:hover img,
+.future-landscapes-main .col-12 a:hover img,
+.hover-zoomin:hover img {
+  transform: scale(1.2);
+}
+
+
+.future-landscapes-main .col-12 a {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.future-landscapes-main .col-12 a::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 70%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg) translateX(-150%);
+  z-index: 1;
+}
+
+
+.future-landscapes-main .col-12 a:hover::before {
+  transform: skewX(-25deg) translateX(250%);
+  transition: transform 1s;
+}
+
+
+.landscapes-catogories img {
+  transition: transform 0.4s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(100%);
+}
+
+.landscapes-catogories:hover img {
+  filter: brightness(90%);
+  transform: scale(1.1);
+}
+
+
+.continent-img-layer {
+  background: linear-gradient(90deg, #000 8.92%, rgba(7, 7, 63, 0) 100%);
+}
+
+.country-page-main-section img,
+img.continent-benner-img {
+  object-fit: cover;
+}
+
+
+@media (max-width: 767px) {
+  .continent-img-layer {
+    height: auto !important;
+  }
+}
+
+.bg-dark.pb-3.pl-3.pr-3 {
+  display: none;
+}
+
+button.right-btn {
+  background: transparent !important;
+}
+
+.main-home-section {
+  animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes slide-bck-center {
+  0% {transform: translateZ(0);}
+  100% {transform: translateZ(-400px);}
+}
+@keyframes slide-bck-center {
+  0% {transform: translateZ(0);}
+  100% {transform: translateZ(-400px);}
+}

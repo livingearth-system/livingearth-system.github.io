@@ -1,0 +1,19 @@
+// PLUGINS
+@import 'plugins/normalize';
+@import 'plugins/font-awesome';
+@import 'plugins/owl.carousel';
+@import 'plugins/owl.theme.default';
+@import 'plugins/select2';
+
+// CORE
+// @import 'parts/variables';
+@import 'parts/fonts';
+
+// LAYOUT
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+
+// OLD
+@import 'old/main';
+@import 'old/main2';

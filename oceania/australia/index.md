@@ -4,7 +4,7 @@ layout: page
 title: Australia
 subtitle: "Novel world-first concept that aims to capture the state and dynamics of Australia’s landscape"
 background: "#07073f"
-image: "/assets/img/img78.jpg"
+image: "/assets/img/heading/australia.jpg"
 ---
 
 <!-- Past & Current landscapes-start -->
