@@ -6,68 +6,71 @@
             {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
         </div>
     </div>
-    <div class="row">
-        {%- if include.only -%}
-            {% assign filter = include.only | split: "," %}
-        {% endif %}
+    {%- if include.data -%}
+        <div class="row">
+            {% comment %} Columns support {% endcomment %}
+            {% case include.cols %}
+                {% when "2" %}
+                    {% assign cols = "col-md-6" %}
+                {% when "3" %}
+                    {% assign cols = "col-md-4" %}
+                {% when "4" %}
+                    {% assign cols = "col-md-3" %}
+                {% else %}
+                    {% assign cols = "col-md-4" %}
+            {% endcase %}
 
-        {% case include.cols %}
-            {% when "2" %}
-                {% assign cols = "col-md-6" %}
-            {% when "3" %}
-                {% assign cols = "col-md-4" %}
-            {% when "4" %}
-                {% assign cols = "col-md-3" %}
-            {% else %}
-                {% assign cols = "col-md-4" %}
-        {% endcase %}
-
-        {% assign array = include.data | split: '.' %}
-        {% assign arraysize = array | size %}
-
-        {% if arraysize > 1 %}
-            {% assign data = site.data %}
-            {% for entry in array %}
-                {% assign temp = array[forloop.index0] %}
-                {% assign data = data[temp] %}
-            {% endfor %}
-        {% else %}
-            {% assign data = site.data[include.data] %}
-        {% endif %}
-
-        {% for box in data %}
-
-            {%- if filter and box.id -%}
-                {% assign exclude = false %}
-                {% for id in filter %}
-                    {%- if id == box.id -%}
-                        {% assign exclude = true %}
-                    {% endif %}
+            {% comment %} Data subfolders support {% endcomment %}
+            {% assign array = include.data | split: '.' %}
+            {% assign arraysize = array | size %}
+            {% if arraysize > 1 %}
+                {% assign data = site.data %}
+                {% for entry in array %}
+                    {% assign temp = array[forloop.index0] %}
+                    {% assign data = data[temp] %}
                 {% endfor %}
+            {% else %}
+                {% assign data = site.data[include.data] %}
             {% endif %}
 
-            {%- unless exclude == false -%}
-                <div class="col-12 col-sm-6 {{ cols }}">
-                    {%- if box.newtab -%}
-                        {% assign target = "_blank" %}
-                    {% endif %}
-                    <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
-                    <div class="future-dsc">
-                        {%- if box.button -%}
-                            <div class="future-dsc-title">{{ box.title }}</div>
-                        {% else %}
-                            <a href="{{ box.url }}" target="{{ target }}">
+            {% comment %} Exclude filters support {% endcomment %}
+            {%- if include.only -%}
+                {% assign filter = include.only | split: "," %}
+            {% endif %}
+
+            {% for box in data %}
+                {%- if filter and box.id -%}
+                    {% assign exclude = false %}
+                    {% for id in filter %}
+                        {%- if id == box.id -%}
+                            {% assign exclude = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {%- unless exclude == false -%}
+                    <div class="col-12 col-sm-6 {{ cols }}">
+                        {%- if box.newtab -%}
+                            {% assign target = "_blank" %}
+                        {% endif %}
+                        <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                        <div class="future-dsc">
+                            {%- if box.button -%}
                                 <div class="future-dsc-title">{{ box.title }}</div>
-                            </a>
-                        {% endif %}
-                        {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
-                        {%- if box.button -%}
-                            <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
-                        {% endif %}
+                            {% else %}
+                                <a href="{{ box.url }}" target="{{ target }}">
+                                    <div class="future-dsc-title">{{ box.title }}</div>
+                                </a>
+                            {% endif %}
+                            {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                            {%- if box.button -%}
+                                <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
-            {% endunless %}
-        {% endfor %}
-    </div>
+                {% endunless %}
+            {% endfor %}
+        </div>
+    {% endif %}
 </section>
 <!-- /BOXES -->

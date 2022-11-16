@@ -1,0 +1,24 @@
+- title: "Analysis Ready Data"
+  subtitle: "Download and pre-process satellite sensor data to an analysis ready format"
+  image: "/assets/img/past-present/analysis-ready-data.jpg"
+  url: "#"
+
+- title: "Environmental Descriptors"
+  subtitle: "Obtain from existing sources oor retrieve or classify from Earth observation data"
+  image: "/assets/img/past-present/environmental-descriptors.jpg"
+  url: "/data/environmental-descriptors/"
+
+- title: "Mapping"
+  subtitle: "Combine the environmental descriptors to generate maps of land cover"
+  image: "/assets/img/past-present/mapping.jpg"
+  url: "#"
+
+- title: "Monitoring"
+  subtitle: "Consistenty describe and quantify change based on impacts and pressures"
+  image: "/assets/img/past-present/monitoring.jpg"
+  url: "#"
+
+- title: "Validation and calibration"
+  subtitle: "Record environmental descriptors, land cover, habitats and change on the ground"
+  image: "/assets/img/past-present/validation-calibration.jpg"
+  url: "#"

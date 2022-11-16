@@ -15,35 +15,35 @@ image: "/assets/img/heading/australia.jpg"
         <div class="col-12">
             <div id="owl-past-current" class="owl-carousel owl-theme owl-img-responsive">
                 <div class="item">
-                    <a href="https://www.dea.ga.gov.au/products/dea-surface-reflectance" target="_blank"><img src="/assets/img/PastCurrent1.jpg" alt=""/></a>
+                    <a href="https://www.dea.ga.gov.au/products/dea-surface-reflectance" target="_blank"><img src="/assets/img/past-present/analysis-ready-data.jpg" alt=""/></a>
                     <div class="pastcurrent-dsc">
                         <h4><a href="https://www.dea.ga.gov.au/products/dea-surface-reflectance" target="_blank">Analysis Ready Data</a></h4>
                         <p>Download and pre-process satellite sensor data to an analysis ready format</p>
                     </div>
                 </div>
                 <div class="item">
-                    <a href="./data/environmental-descriptors/"><img src="/assets/img/PastCurrent2.jpg" alt=""/></a>
+                    <a href="./data/environmental-descriptors/"><img src="/assets/img/past-present/environmental-descriptors.jpg" alt=""/></a>
                     <div class="pastcurrent-dsc">
                         <h4><a href="./data/environmental-descriptors/">Environmental Descriptors</a></h4>
                         <p>Obtain from existing sources oor retrieve or classify from Earth observation data</p>
                     </div>
                 </div>
                 <div class="item">
-                    <a href="https://livingearth-lccs.readthedocs.io/en/latest/index.html" target="_blank"><img src="/assets/img/PastCurrent3.jpg" alt=""/></a>
+                    <a href="https://livingearth-lccs.readthedocs.io/en/latest/index.html" target="_blank"><img src="/assets/img/past-present/mapping.jpg" alt=""/></a>
                     <div class="pastcurrent-dsc">
                         <h4><a href="https://livingearth-lccs.readthedocs.io/en/latest/index.html" target="_blank">Mapping</a></h4>
                         <p>Combine the environmental descriptors to generate maps of land cover</p>
                     </div>
                 </div>
                 <div class="item">
-                    <a href="https://github.com/livingearth-system/Globalchangeframework" target="_blank"><img src="/assets/img/PastCurrent4.jpg" alt=""/></a>
+                    <a href="https://github.com/livingearth-system/Globalchangeframework" target="_blank"><img src="/assets/img/past-present/monitoring.jpg" alt=""/></a>
                     <div class="pastcurrent-dsc">
                         <h4><a href="https://github.com/livingearth-system/Globalchangeframework" target="_blank">Monitoring</a></h4>
                         <p>Consistenty describe and quantify change based on impacts and pressures</p>
                     </div>
                 </div>
                 <div class="item">
-                    <a href="https://earthtrack.aber.ac.uk/lccs/world.html" target="_blank"><img src="/assets/img/PastCurrent5.jpg" alt=""/></a>
+                    <a href="https://earthtrack.aber.ac.uk/lccs/world.html" target="_blank"><img src="/assets/img/past-present/validation-calibration.jpg" alt=""/></a>
                     <div class="pastcurrent-dsc">
                         <h4><a href="https://earthtrack.aber.ac.uk/lccs/world.html" target="_blank">Validation</a></h4>
                         <p>Record environmental descriptors, land cover, habitats and change on the ground</p>

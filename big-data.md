@@ -10,5 +10,5 @@ image: "/assets/img/heading/country.jpg"
 
 {%-
 include boxes.liquid
-data="big-data"
+data="big-data.index"
 -%}

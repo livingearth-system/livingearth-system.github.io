@@ -29,9 +29,11 @@ image="/assets/img/pexels-anne.jpg"
 -%}
 
 {%-
-include past-landscapes.liquid
-heading="Past & Current Landscapes"
+include past-present.liquid
+heading="Past & Present Landscapes"
 subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
+all="/past-present/"
+data="past-present.index"
 -%}
 
 {%-

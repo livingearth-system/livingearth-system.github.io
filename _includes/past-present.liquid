@@ -1,0 +1,38 @@
+<!-- PAST-PRESENT-LANDSCAPES -->
+<section class="mt-100 mb-100 pastcurrent-landscapes-main">
+    {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
+    {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
+    {%- if include.data -%}
+        <div class="row effect">
+            <div class="col-12">
+                <div id="owl-past-current" class="owl-carousel owl-theme owl-img-responsive">
+
+                    {% comment %} Data subfolders support {% endcomment %}
+                    {% assign array = include.data | split: '.' %}
+                    {% assign arraysize = array | size %}
+                    {% if arraysize > 1 %}
+                        {% assign data = site.data %}
+                        {% for entry in array %}
+                            {% assign temp = array[forloop.index0] %}
+                            {% assign data = data[temp] %}
+                        {% endfor %}
+                    {% else %}
+                        {% assign data = site.data[include.data] %}
+                    {% endif %}
+
+                    {% for box in data %}
+                        <section class="item">
+                            <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.heading }}"></a>
+                            <div class="pastcurrent-dsc">
+                                {%- if box.title -%}<h4><a href="{{ box.url }}">{{ box.title }}</a></h4>{% endif %}
+                                {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                            </div>
+                        </section>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</section>
+<!-- /PAST-PRESENT-LANDSCAPES -->

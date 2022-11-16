@@ -2,7 +2,7 @@
 layout: page
 
 title: "Air Quality"
-image: "/assets/img/wales/big/environmental-descriptors.jpg"
+image: "/assets/img/heading/environmental.jpg"
 nocontact: true
 ---
 

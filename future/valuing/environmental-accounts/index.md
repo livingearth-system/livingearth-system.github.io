@@ -2,7 +2,7 @@
 layout: page
 
 title: "Environmental Accounts"
-image: "/assets/img/wales/big/environmental-descriptors.jpg"
+image: "/assets/img/heading/environmental.jpg"
 nocontact: true
 ---
 
