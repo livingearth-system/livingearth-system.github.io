@@ -1,32 +1,20 @@
 ---
 layout: post
-
+title: Canopy Height
 ---
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 mt-60">
-            <h5 class="common-title">Canopy Height</h5>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
-            <div class="common-image pb-5">
-                <img src="/assets/img/wales/big/canopy-height.jpg" class="img-fluid" alt="Canopy Height">
-            </div>
-            <div>
-                <h5 class="font-weight-bold">Canopy height is the height (in meters) of the top aboveground vegetation.</h5>
-                <div class="pt-4">
-                    <p>Canopy height is an important structural variable as it directly influences a large number of processes. This variable is a major concern for agricultural, ecological and meteorological fields and their applications. For instance, canopy height has a direct impact on wind speed which is an important variable for weather forecasting and all the resulting applications.</p>
-                    <p>Canopy height can be measured through field campaigns (see <a href="https://livingearth.aber.ac.uk/data/ground-measurements/technics/canopy-height-measurements/" target="_blank">here</a>) or remote sensed from LiDAR or radar sensors.</p>
-                    <p>Unit: <i>m</i></p>
-                </div>
-            </div>
-            <div class="py-5">
-                <h5 class="font-weight-bold mb-4">Available products over Australia:</h5>
-                <ul class="list-title">
-                    <li class="list-item"><a href="http://livingearth-online.stackstaging.com/wp/data/remote-sensing-algorithms/canopy-height-remote-sensing-algorithms/nceo-global-vegetation-height-frequency-distribution-v1-1/">NCEO Global Vegetation Height Frequency Distribution v1.1</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+## Canopy Height
 
+![Canopy Height](/assets/img/wales/big/canopy-height.jpg)
+
+##### Canopy height is the height (in meters) of the top aboveground vegetation.
+
+Canopy height is an important structural variable as it directly influences a large number of processes. This variable is a major concern for agricultural, ecological and meteorological fields and their applications. For instance, canopy height has a direct impact on wind speed which is an important variable for weather forecasting and all the resulting applications.
+
+Canopy height can be measured through field campaigns (see [here](https://livingearth.aber.ac.uk/data/ground-measurements/technics/canopy-height-measurements/)) or remote sensed from LiDAR or radar sensors.
+
+Unit: _m_
+
+##### Available products over Australia:
+
+*   [NCEO Global Vegetation Height Frequency Distribution v1.1](http://livingearth-online.stackstaging.com/wp/data/remote-sensing-algorithms/canopy-height-remote-sensing-algorithms/nceo-global-vegetation-height-frequency-distribution-v1-1/)

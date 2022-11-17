@@ -1,32 +1,22 @@
 ---
 layout: post
-
+title: Snow Depth
 ---
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 mt-60">
-            <h5 class="common-title">Snow Depth</h5>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
-            <div class="common-image pb-5">
-                <img src="/assets/img/wales/big/snow-depth.jpg" class="img-fluid" alt="img">
-            </div>
-            <div>
-                <h5 class="font-weight-bold">Ecosystems are generally complex and difficult to define and, more often than not, comprise a wide range of habitats; typically combining semi-natural, agricultural and non-natural components.</h5>
-                <div class="pt-4">
-                    <p>Snow depth is the total depth of the snowpack. It allows to estimate the amount of snow covering the ground.</p>
-                    <p>Snow depth and snow water equivalent are two linked variables. They are both very important variables for different applications such as water stocks monitoring and flood events forecasting.</p>
-                    <p>Snow depth can be manually measured or estimated through non-contact devices from ground-level or space.</p>
-                    <p>Unit: <i>cm</i></p>
-                </div>
-            </div>
-            <div class="py-5">
-                <h5 class="font-weight-bold mb-4">Available products over Australia:</h5>
-                <ul class="list-title">
-                    <li class="list-item"><a href="https://www.star.nesdis.noaa.gov/smcd/emb/snow/viirs/viirs-snow-fraction.html" target="_blank">S-NPP VIIRS snow depth</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+## Snow Depth
+
+![Snow Depth](/assets/img/wales/big/snow-depth.jpg)
+
+##### Ecosystems are generally complex and difficult to define and, more often than not, comprise a wide range of habitats; typically combining semi-natural, agricultural and non-natural components.
+
+Snow depth is the total depth of the snowpack. It allows to estimate the amount of snow covering the ground.
+
+Snow depth and snow water equivalent are two linked variables. They are both very important variables for different applications such as water stocks monitoring and flood events forecasting.
+
+Snow depth can be manually measured or estimated through non-contact devices from ground-level or space.
+
+Unit: _cm_
+
+##### Available products over Australia:
+
+*   [S-NPP VIIRS snow depth](https://www.star.nesdis.noaa.gov/smcd/emb/snow/viirs/viirs-snow-fraction.html)

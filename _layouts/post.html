@@ -1,12 +1,18 @@
 ---
 layout: default
 ---
-<article class="container">
+<div class="container">
 
-    {{ content }}
+    <article class="post mt-100 mb-100">
+        <div class="row">
+            <div class="col col-xs-12 col-sm-12 col-ms-9 col-lg-9 col-xl-9 col-xxl-9">
+                {{ content }}
+            </div>
+        </div>
+    </article>
 
     {%- if page.nocontact != true -%}
         {%- include get-in-touch.liquid -%}
     {% endif %}
 
-</article>
+</div>
