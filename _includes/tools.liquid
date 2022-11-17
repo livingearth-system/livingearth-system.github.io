@@ -11,7 +11,6 @@
         {% comment %} Data subfolders support {% endcomment %}
         {% assign array = include.data | split: '.' %}
         {% assign arraysize = array | size %}
-
         {% if arraysize > 1 %}
             {% assign data = site.data %}
             {% for entry in array %}
