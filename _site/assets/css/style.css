@@ -2159,14 +2159,6 @@ h2 a, .common-title a { font-size: 18px; margin-left: auto; text-decoration: und
 
 .aboutus-benner-img { width: 100%; }
 
-.breadcrumbs { padding-top: 15px; margin-bottom: 0; color: white; cursor: default; }
-
-.breadcrumbs > .breadcrumbs-item + .breadcrumbs-item:before { content: "/ "; padding: 0 5px; }
-
-.breadcrumbs-item { font-style: normal; font-weight: 400; font-size: 12px; display: flex; align-items: center; line-height: 19px; text-transform: capitalize; }
-
-.breadcrumbs-item a { color: white; }
-
 .center-block h3 { font-weight: 700; font-size: 40px; }
 
 .center-block p { font-weight: 400; line-height: 28.8px; font-size: 18px; }
@@ -2821,6 +2813,19 @@ button.right-btn { background: transparent !important; }
 
 @keyframes slide-bck-center { 0% { transform: translateZ(0); }
   100% { transform: translateZ(-400px); } }
+
+/* ========================================================================== BREADCRUMBS ========================================================================== */
+.breadcrumbs { padding: 0; margin: 15px 0 0 0; list-style: none; display: flex; color: black; cursor: default; }
+
+.breadcrumbs li { font-style: normal; font-weight: 400; font-size: 12px; line-height: 20px; display: flex; align-items: center; text-transform: capitalize; }
+
+.breadcrumbs li a { color: inherit; text-decoration: none; }
+
+.breadcrumbs li a:hover { text-decoration: underline; }
+
+.breadcrumbs li + li:before { margin: 0 5px; content: '/'; }
+
+.heading .breadcrumbs { margin-bottom: 0; color: white; }
 
 /* ========================================================================== POST ========================================================================== */
 .post img { max-width: 978px; height: auto; margin: 0 0 3rem; display: block; object-fit: cover; }

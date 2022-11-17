@@ -1,12 +1,12 @@
 <!-- BREADCRUMBS -->
-<ul class="list-unstyled d-flex breadcrumbs">
+<ul class="breadcrumbs">
     {% assign crumbs = page.url | remove: '/index.html' | split: '/' %}
-    <li class="breadcrumbs-item"><a href="/">Home</a></li>
+    <li><a href="/">Home</a></li>
     {% for crumb in crumbs offset: 1 %}
         {% if forloop.last %}
-            <li class="breadcrumbs-item">{{ page.title }}</li>
+            <li>{{ page.title }}</li>
         {% else %}
-            <li class="breadcrumbs-item">
+            <li>
                 <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace: 'without-plugin/', 'without-plugins/' }}{% endfor %}">
                     {% assign cr = crumb | replace: '-', ' ' | remove: '.html' %}
 

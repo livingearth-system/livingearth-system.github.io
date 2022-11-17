@@ -1144,29 +1144,6 @@ h2 a, .common-title a {
   width: 100%;
 }
 
-.breadcrumbs {
-  padding-top: 15px;
-  margin-bottom: 0;
-  color: white;
-  cursor: default;
-}
-.breadcrumbs > .breadcrumbs-item + .breadcrumbs-item:before {
-  content: "/ ";
-  padding: 0 5px;
-}
-.breadcrumbs-item {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  line-height: 19px;
-  text-transform: capitalize;
-}
-.breadcrumbs-item a {
-  color: white;
-}
-
 .center-block h3 {
   font-weight: 700;
   font-size: 40px;
