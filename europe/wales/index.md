@@ -8,99 +8,39 @@ image: "/assets/img/heading/country.jpg"
 ---
 
 {%-
-        include past-present.liquid
-        heading="Past & Present Landscapes"
-        subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
-        all="./past-present-landscapes/"
-        data="europe.wales.past-present-landscapes"
+include tools.liquid
+heading="Past & Present Landscapes"
+subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
+all="./past-present-landscapes/"
+data="europe.wales.past-present-landscapes"
 -%}
 
-<!-- TOOLS landscapes-start -->
-<div class="container mt-100 mb-100 tools-main">
-    <h2 class="common-title">Tools <a href="./tools/">View all</a></h2>
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-3">
-            <a href="https://earthtrack.aber.ac.uk/livingwales/maps.html" target="_blank"><img src="/assets/img/tools1.jpg" alt=""></a>
-            <div class="pastcurrent-dsc">
-                <h4><a href="https://earthtrack.aber.ac.uk/livingwales/maps.html" target="_blank">See on Map</a></h4>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-            <a href="./data/"><img src="/assets/img/tools2.jpg" alt="Get the data"/></a>
-            <div class="pastcurrent-dsc">
-                <h4><a href="./data/">Get the data</a></h4>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-            <a href="https://livingwales.aber.ac.uk/jhub/" target="_blank"><img src="/assets/img/tools3.jpg" alt=""></a>
-            <div class="pastcurrent-dsc">
-                <h4><a href="https://livingwales.aber.ac.uk/jhub/" target="_blank">Analyse The Data</a></h4>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-            <a href="./tools/bigdata"><img src="/assets/img/tools5.jpg" alt=""></a>
-            <div class="pastcurrent-dsc">
-                <h4><a href="tools/bigdata/">Big Data</a></h4>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- TOOLS landscapes-end -->
-
 {%-
-        include boxes.liquid
-        heading="Themes"
-        data="themes"
-        only="welsh,ecosystem,biodiversity"
-        more="/themes/"
+include tools.liquid
+heading="Tools"
+data="europe.wales.tools"
+cols="4"
 -%}
 
-<div class="container mt-100 mb-100 future-landscapes-main">
-    <h2 class="common-title">Learning and Art</h2>
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="https://cat.org.uk/visiting/living-wales/"><img src="/assets/img/edu1.png" alt="Living Wales Exhibition and Training Centre"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="https://cat.org.uk/visiting/living-wales/" target="_blank">Living Wales Exhibition and Training Centre</a></div>
-                <p>Come and see our public exhibition aimed at characterising, mapping, monitoring and planning landscapes, from Wales to the World.</p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu2.png" alt="Education and training"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Education and training</a></div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu2.png" alt="Research"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Research</a></div>
-                <p>An overview of research relevant to Living Earth in Wales</p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu3.png" alt="Art"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Art</a></div>
-                <p>Designs relevant to Living Earth</p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu1.png" alt="Photography"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Photography</a></div>
-                <p>Photographs of Wales</p>
-            </div>
-        </div>
-    </div>
-</div>
+{%-
+include boxes.liquid
+heading="Themes"
+data="themes.all"
+only="welsh,ecosystem,biodiversity"
+more="/themes/"
+-%}
 
 {%-
-        include contribute.liquid
-        title="Join Livingearth"
-        heading="How to contribute"
-        subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
-        button="Learn more" url="/contribute/"
-        image="/assets/img/contribute.jpg"
+include boxes.liquid
+heading="Learning and Art"
+data="europe.wales.learning-and-art"
+-%}
 
+{%-
+include contribute.liquid
+title="Join Livingearth"
+heading="How to contribute"
+subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
+button="Learn more" url="/contribute/"
+image="/assets/img/contribute.jpg"
 -%}

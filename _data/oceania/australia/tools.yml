@@ -1,0 +1,14 @@
+- title: "See on Map"
+  image: "/assets/img/tools1.jpg"
+  url: "https://maps.dea.ga.gov.au/story/DEALandCover"
+  newtab: true
+
+- title: "Get the data"
+  image: "/assets/img/tools2.jpg"
+  url: "https://cmi.ga.gov.au/data-products/dea/607/dea-land-cover-landsat#access"
+  newtab: true
+
+- title: "Analyze your options"
+  image: "/assets/img/tools3.jpg"
+  url: "https://docs.dea.ga.gov.au/notebooks/DEA_datasets/DEA_Land_Cover.html"
+  newtab: true

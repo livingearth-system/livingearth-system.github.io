@@ -1,0 +1,13 @@
+- id: "learning-resources"
+  title: "Learning resources"
+  subtitle: "The ambition of Living Wales if for people to be informed about the landscapes of Wales"
+  image: "/assets/img/learning-resources.png"
+  button: "Read More"
+  url: "#"
+
+- id: "photography"
+  title: "Photography"
+  subtitle: "Wales supports diverse landscapes and iconic biodiversity, much of which is evident on the pages of the Living Wales website courtesy of Clive Hurford."
+  image: "/assets/img/photography.jpg"
+  button: "Read More"
+  url: "#"

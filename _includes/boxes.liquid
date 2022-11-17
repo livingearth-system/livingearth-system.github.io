@@ -51,6 +51,7 @@
 
                 {%- unless exclude == false -%}
                     <div class="col-12 col-sm-6 {{ cols }}">
+                        {% assign target = "" %}
                         {%- if box.newtab -%}
                             {% assign target = "_blank" %}
                         {% endif %}

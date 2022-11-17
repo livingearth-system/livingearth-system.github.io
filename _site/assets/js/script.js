@@ -12,7 +12,7 @@ $(function() {
 	});
 });		
 
-$('#owl-past-current').owlCarousel({
+$('.tools .owl-carousel').owlCarousel({
 	loop:false,
 	margin: 20,
 	nav:false,

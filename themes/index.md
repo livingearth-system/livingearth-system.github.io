@@ -8,6 +8,6 @@ image: "/assets/img/heading/wild.jpg"
 
 {%-
 include boxes.liquid
-data="themes"
+data="themes.all"
 only="changes,welsh,ecosystem,biodiversity,linking,learning"
 -%}

@@ -1,0 +1,24 @@
+- title: "Living Wales Exhibition and Training Centre"
+  subtitle: "Come and see our public exhibition aimed at characterising, mapping, monitoring and planning landscapes, from Wales to the World."
+  image: "/assets/img/edu1.png"
+  url: "https://cat.org.uk/visiting/living-wales/"
+  newtab: true
+
+- title: "Education and training"
+  image: "/assets/img/edu2.png"
+  url: "#"
+
+- title: "Research"
+  subtitle: "An overview of research relevant to Living Earth in Wales"
+  image: "/assets/img/edu2.png"
+  url: "#"
+
+- title: "Art"
+  subtitle: "Designs relevant to Living Earth"
+  image: "/assets/img/edu3.png"
+  url: "#"
+
+- title: "Photography"
+  subtitle: "Photographs of Australia"
+  image: "/assets/img/edu1.png"
+  url: "#"

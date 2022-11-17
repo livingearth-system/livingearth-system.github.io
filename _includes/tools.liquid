@@ -1,46 +1,65 @@
 <!-- TOOLS -->
-<section class="mt-100 mb-100 tools-main">
+<section class="mt-100 mb-100 tools">
     <div class="row">
         <div class="col-12">
-            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}</h2>{% endif %}
+            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
             {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div id="owl-tools" class="owl-carousel owl-theme owl-img-responsive">
-                <section class="item">
-                    <a href="#"><img src="/assets/img/tools1.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">See on Map</a></h4>
+
+    {%- if include.data -%}
+        {% comment %} Data subfolders support {% endcomment %}
+        {% assign array = include.data | split: '.' %}
+        {% assign arraysize = array | size %}
+
+        {% if arraysize > 1 %}
+            {% assign data = site.data %}
+            {% for entry in array %}
+                {% assign temp = array[forloop.index0] %}
+                {% assign data = data[temp] %}
+            {% endfor %}
+        {% else %}
+            {% assign data = site.data[include.data] %}
+        {% endif %}
+
+        <div class="row effect">
+            {%- if include.cols -%}
+                {% for box in data %}
+                    {%- if include.cols == "4" -%}
+                        {% assign cols = "col-md-3" %}
+                    {%- else -%}
+                        {% assign cols = "col-md-4" %}
+                    {% endif %}
+                    <div class="col-12 col-sm-6 {{ cols }}">
+                        <section class="item">
+                            {% assign target = "" %}
+                            {%- if box.newtab -%}{% assign target = "_blank" %}{% endif %}
+                            <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.heading }}" style="width:100%;height:253px;object-fit:cover;"></a>
+                            <div class="tools-content">
+                                {%- if box.title -%}<h4><a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a></h4>{% endif %}
+                                {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                            </div>
+                        </section>
                     </div>
-                </section>
-                <section class="item">
-                    <a href="#"><img src="/assets/img/tools2.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">Get the data</a></h4>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <div class="owl-carousel owl-theme owl-img-responsive">
+                        {% for box in data %}
+                            <section class="item">
+                                {% assign target = "" %}
+                                {%- if box.newtab -%}{% assign target = "_blank" %}{% endif %}
+                                <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.heading }}"></a>
+                                <div class="tools-content">
+                                    {%- if box.title -%}<h4><a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a></h4>{% endif %}
+                                    {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
+                                </div>
+                            </section>
+                        {% endfor %}
                     </div>
-                </section>
-                <section class="item">
-                    <a href="https://jupyter.org" target="_blank"><img src="/assets/img/tools3.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="https://jupyter.org" target="_blank">Analyse the data</a></h4>
-                    </div>
-                </section>
-                <section class="item">
-                    <a href="#"><img src="/assets/img/tools4.jpg" alt=""></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="#">Models</a></h4>
-                    </div>
-                </section>
-                <section class="item">
-                    <a href="/big-data/"><img src="/assets/img/tools5.jpg" alt="Big data"/></a>
-                    <div class="pastcurrent-dsc">
-                        <h4><a href="/bigdata/">Big data</a></h4>
-                    </div>
-                </section>
-            </div>
+                </div>
+            {% endif %}
         </div>
-    </div>
+    {% endif %}
 </section>
 <!-- /TOOLS -->

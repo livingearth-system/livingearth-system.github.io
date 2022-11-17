@@ -6,4 +6,6 @@ title: News
 nocontact: true
 ---
 
-{%- include blog.liquid -%}
+{%-
+include blog.liquid
+-%}

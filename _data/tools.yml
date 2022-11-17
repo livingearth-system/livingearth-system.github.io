@@ -1,0 +1,20 @@
+- title: "See on Map"
+  image: "/assets/img/tools1.jpg"
+  url: "#"
+
+- title: "Get the data"
+  image: "/assets/img/tools2.jpg"
+  url: "#"
+
+- title: "Analyse the data"
+  image: "/assets/img/tools3.jpg"
+  url: "https://jupyter.org"
+  newtab: true
+
+- title: "Models"
+  image: "/assets/img/tools4.jpg"
+  url: "#"
+
+- title: "Big data"
+  image: "/assets/img/tools5.jpg"
+  url: "/big-data/"

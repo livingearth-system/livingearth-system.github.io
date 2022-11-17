@@ -1,0 +1,11 @@
+- title: "View prediction of future landscapes"
+  image: "/assets/img/tools1.jpg"
+  url: "/future/"
+
+- title: "Contribute feedback"
+  image: "/assets/img/tools2.jpg"
+  url: "/contribute/"
+
+- title: "Analyze your options"
+  image: "/assets/img/tools3.jpg"
+  url: "#"

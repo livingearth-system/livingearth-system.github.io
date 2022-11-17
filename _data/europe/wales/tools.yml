@@ -1,0 +1,17 @@
+- title: "See on Map"
+  image: "/assets/img/tools1.jpg"
+  url: "https://earthtrack.aber.ac.uk/livingwales/maps.html"
+  newtab: true
+
+- title: "Get the data"
+  image: "/assets/img/tools2.jpg"
+  url: "./data/"
+
+- title: "Analyse the data"
+  image: "/assets/img/tools3.jpg"
+  url: "https://livingwales.aber.ac.uk/jhub/"
+  newtab: true
+
+- title: "Big Data"
+  image: "/assets/img/tools5.jpg"
+  url: "./big-data/"
