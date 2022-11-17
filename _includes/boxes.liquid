@@ -34,6 +34,7 @@
             {% endif %}
 
             {% comment %} Exclude filters support {% endcomment %}
+            {% assign exclude = true %}
             {%- if include.only -%}
                 {% assign filter = include.only | split: "," %}
             {% endif %}

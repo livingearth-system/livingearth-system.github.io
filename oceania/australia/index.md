@@ -48,38 +48,12 @@ image: "/assets/img/heading/australia.jpg"
         more="/themes/"
 -%}
 
-<div class="container mt-100 mb-100 future-landscapes-main">
-    <h2 class="common-title">Learning and Art</h2>
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu1.png" alt="Education"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Education</a></div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu2.png" alt="Training"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Training</a></div>
-                <p>An overview of research relevant to Living Earth in Wales</p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu3.png" alt="Art"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Art</a></div>
-                <p>Designs relevant to Living Earth</p>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <a href="#"><img src="/assets/img/edu1.png" alt="Photography"></a>
-            <div class="future-dsc">
-                <div class="future-dsc-title"><a href="#">Photography</a></div>
-                <p>Photographs of Wales</p>
-            </div>
-        </div>
-    </div>
-</div>
+
+{%-
+        include boxes.liquid
+        heading="Learning and Art"
+        data="oceania.australia.learning-and-art"
+-%}
 
 {%-
         include contribute.liquid

@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /themes/australian/
 
 title: "Australian Reference Ecosystems"
 subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"

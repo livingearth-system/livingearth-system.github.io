@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /themes/welsh/
 
 title: "Welsh Reference Ecosystems"
 heading: "Welsh Reference Ecosystems and Modified States"

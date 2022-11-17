@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: post
+
 ---
 
-<!-- Content-section-start -->
 <div class="container">
     <div class="row">
         <div class="col-12 mt-60">
@@ -26,16 +26,5 @@ layout: page
         </div>
     </div>
 </div>
-<!-- Content-section-end -->
 
-<!-- get-in-section-Start -->
-<div class="container mb-100">
-    <div class="get-in-section-main">
-        <div class="get-in-section-dsc">
-            <h3>WE NEED YOUR HELP&hellip;</h3>
-            <p>Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow.</p>
-        </div>
-        <button type="button"><a href="/contact/">Get in touch</a></button>
-    </div>
-</div>
-<!-- get-in-section-End -->
+

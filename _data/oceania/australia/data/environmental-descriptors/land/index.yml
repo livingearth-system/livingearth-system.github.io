@@ -1,0 +1,27 @@
+- title: "Vegetation"
+  image: "/assets/img/australia/vegetation.jpg"
+  url: "./vegetation/"
+
+- title: "Snow"
+  image: "/assets/img/australia/snow.jpg"
+  url: "./snow/"
+
+- title: "Urban"
+  image: "/assets/img/australia/urban.jpg"
+  url: "./urban/"
+
+- title: "Water"
+  image: "/assets/img/australia/water.jpg"
+  url: "./water/"
+
+- title: "Soil"
+  image: "/assets/img/australia/soil.jpg"
+  url: "./soil/"
+
+- title: "Energy"
+  image: "/assets/img/australia/energy.jpg"
+  url: "./energy/"
+
+- title: "Terrain"
+  image: "/assets/img/australia/land.jpg"
+  url: "./terrain/"

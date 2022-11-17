@@ -8,7 +8,6 @@ nobuttons: true
 ---
 
 {%-
-        include boxes.liquid
-        heading="Future Landscapes"
-        data="oceania.australia.data.remote-sensing-alhorithms.index"
+include boxes.liquid
+data="oceania.australia.data.remote-sensing-alhorithms.index"
 -%}

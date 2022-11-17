@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: post
+
 ---
 
-<!-- Content-section-start -->
 <div class="container">
 	<div class="row">
 		<div class="col-12 mt-60">
@@ -33,7 +33,7 @@ layout: page
 		</div>
 	</div>
 </div>
-<!-- Content-section-end -->
+
 
 <!-- get-in-section-Start -->
 <div class="container mb-100">

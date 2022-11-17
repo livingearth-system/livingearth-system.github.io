@@ -1,0 +1,11 @@
+- title: "Land"
+  image: "/assets/img/australia/land.jpg"
+  url: "./land/"
+
+- title: "Marine"
+  image: "/assets/img/australia/marine.jpg"
+  url: "./marine/"
+
+- title: "Atmosphere"
+  image: "/assets/img/australia/atmosphere.jpg"
+  url: "./atmosphere/"

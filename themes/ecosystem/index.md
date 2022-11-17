@@ -1,8 +1,8 @@
 ---
 layout: post
-permalink: /themes/ecosystem/
 
 title: "Ecosystem Restoration"
+
 ---
 
 <!--Faciliting-section-start -->

@@ -1,0 +1,11 @@
+- title: "Water Turbidity"
+  image: "/assets/img/wales/water-turbidity.jpg"
+  url: "./water-turbidity/"
+
+- title: "Water Depth"
+  image: "/assets/img/wales/water-depth.jpg"
+  url: "./water-depth/"
+
+- title: "Water Seasonality"
+  image: "/assets/img/wales/water-seasonality.jpg"
+  url: "./water-seasonality/"

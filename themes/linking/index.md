@@ -1,8 +1,8 @@
 ---
 layout: post
-permalink: /themes/linking/
 
 title: "Linking with farming, forestry and fisheries"
+
 ---
 
 <!--Faciliting-section-start -->

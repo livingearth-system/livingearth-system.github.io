@@ -5,7 +5,7 @@ author:
 description:
 show_excerpts: false
 
-# Minima date format
+# Date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
   date_format: "%b %-d, %Y"
@@ -16,11 +16,6 @@ minima:
     instagram: #
     twitter: #
     youtube: #
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
 
 # Build settings
 theme: minima

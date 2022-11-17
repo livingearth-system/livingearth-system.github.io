@@ -7,6 +7,6 @@ image: "/assets/img/heading/australia.jpg"
 ---
 
 {%-
-        include boxes.liquid
-        data="oceania.australia.analysis-ready-data"
+include boxes.liquid
+data="oceania.australia.analysis-ready-data"
 -%}

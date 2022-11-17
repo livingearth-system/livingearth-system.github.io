@@ -1,0 +1,71 @@
+- title: "Leaf Area Index"
+  image: "/assets/img/australia/leaf-area-index.jpg"
+  url: "./leaf-area-index/"
+
+- title: "Fapar"
+  image: "/assets/img/australia/fapar.jpg"
+  url: "./fapar/"
+
+- title: "Canopy Height"
+  image: "/assets/img/australia/canopy-height.jpg"
+  url: "./canopy-height/"
+
+- title: "Canopy Cover"
+  image: "/assets/img/australia/canopy-cover.jpg"
+  url: "./canopy-cover/"
+
+- title: "Lifeform"
+  image: "/assets/img/australia/lifeform.jpg"
+  url: "./lifeform/"
+
+- title: "Leaf type"
+  image: "/assets/img/australia/leaf-type.jpg"
+  url: "./leaf-type/"
+
+- title: "Phenology"
+  image: "/assets/img/australia/phenology.jpg"
+  url: "./phenology/"
+
+- title: "Net Primary Production"
+  image: "/assets/img/australia/net-primary-production.jpg"
+  url: "./net-primary-production/"
+
+- title: "Gross Primary Production"
+  image: "/assets/img/australia/gross-primary-production.jpg"
+  url: "./gross-primary-production/"
+
+- title: "Woody Biomass"
+  image: "/assets/img/australia/woody-biomass.jpg"
+  url: "./woody-biomass/"
+
+- title: "Plant Species"
+  image: "/assets/img/australia/plant-species.jpg"
+  url: "./plant-species/"
+
+- title: "Crop Type"
+  image: "/assets/img/australia/crop-type.jpg"
+  url: "./crop-type/"
+
+- title: "Vegetation Moisture"
+  image: "/assets/img/australia/vegetation-moisture.jpg"
+  url: "./vegetation-moisture/"
+
+- title: "Foliar Chemistry"
+  image: "/assets/img/australia/foliar-chemistry.jpg"
+  url: "./foliar-chemistry/"
+
+- title: "Burnt Area"
+  image: "/assets/img/australia/burnt-area.jpg"
+  url: "./burnt-area/"
+
+- title: "Herbaceous Biomass"
+  image: "/assets/img/australia/herbaceous-biomass.jpg"
+  url: "./herbaceous-biomass/"
+
+- title: "Canopy Layers"
+  image: "/assets/img/australia/canopy-layers.jpg"
+  url: "./canopy-layers/"
+
+- title: "Non Photosynthetic Vegetation"
+  image: "/assets/img/australia/non-photosynthetic-vegetation.jpg"
+  url: "./non-photosynthetic-vegetation/"

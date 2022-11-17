@@ -9,6 +9,6 @@ nocontact: true
 ---
 
 {%-
-        include boxes.liquid
-        data="oceania.australia.data.ground-measurements.measurement-techniques.index"
+include boxes.liquid
+data="oceania.australia.data.ground-measurements.measurement-techniques.index"
 -%}

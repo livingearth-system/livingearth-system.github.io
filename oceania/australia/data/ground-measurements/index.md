@@ -8,7 +8,7 @@ nobuttons: true
 ---
 
 {%-
-        include boxes.liquid
-        heading="Future Landscapes"
-        data="oceania.australia.data.ground-measurements.index"
+include boxes.liquid
+heading="Future Landscapes"
+data="oceania.australia.data.ground-measurements.index"
 -%}
