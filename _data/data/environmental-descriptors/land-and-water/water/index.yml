@@ -1,0 +1,27 @@
+- title: "Water Extent"
+  image: "/assets/img/wales/water-extent.jpg"
+  url: "./water-extent/"
+
+- title: "Water Depth"
+  image: "/assets/img/wales/water-depth.jpg"
+  url: "./water-depth/"
+
+- title: "Water Turbidity"
+  image: "/assets/img/wales/water-turbidity.jpg"
+  url: "./water-turbidity/"
+
+- title: "Water Seasonality"
+  image: "/assets/img/wales/water-seasonality.jpg"
+  url: "./water-seasonality/"
+
+- title: "Cyanobacteria"
+  image: "/assets/img/wales/cyanobacteria.jpg"
+  url: "./cyanobacteria/"
+
+- title: "Algae Biomass"
+  image: "/assets/img/wales/algae-biomass.jpg"
+  url: "./algae-biomass/"
+
+- title: "Macroalgae"
+  image: "/assets/img/wales/macroalgae.jpg"
+  url: "./macroalgae/"

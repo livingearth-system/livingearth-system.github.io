@@ -5,7 +5,7 @@ title: Soil Algorithms
 
 ## {{ page.title }}
 
-![{{ page.title }}](/assets/img/wales/big/ground-measurements.jpg)
+![{{ page.title }}](/assets/img/wales/soil-algorithms.jpg)
 
 ##### Donec volutpat mi eu nisi fermentum iaculis. Integer bibendum consequat libero, eget convallis tortor consequat eu.
 

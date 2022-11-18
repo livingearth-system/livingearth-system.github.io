@@ -1,0 +1,35 @@
+- title: "Bathymetry"
+  image: "/assets/img/wales/bathymetry.jpg"
+  url: "./bathymetry/"
+
+- title: "Sea Surface Temperature"
+  image: "/assets/img/wales/sea-surface-temperature.jpg"
+  url: "./sea-surface-temperature/"
+
+- title: "Sea Surface Salinity"
+  image: "/assets/img/wales/sea-surface-salinity.jpg"
+  url: "./sea-surface-salinity/"
+
+- title: "Net Primary Production"
+  image: "/assets/img/wales/net-primary-production.jpg"
+  url: "./net-primary-production/"
+
+- title: "pH"
+  image: "/assets/img/wales/ph.jpg"
+  url: "./ph/"
+
+- title: "Chemistry"
+  image: "/assets/img/wales/chemistry.jpg"
+  url: "./chemistry/"
+
+- title: "Chlorophyll"
+  image: "/assets/img/wales/chlorophyll.jpg"
+  url: "./chlorophyll/"
+
+- title: "CDOM"
+  image: "/assets/img/wales/cdom.jpg"
+  url: "./cdom/"
+
+- title: "Total Suspended Matter"
+  image: "/assets/img/wales/total-suspended-matter.jpg"
+  url: "./total-suspended-matter/"

@@ -1,0 +1,11 @@
+- title: "DEM"
+  image: "/assets/img/wales/dem.jpg"
+  url: "./dem/"
+
+- title: "Slope"
+  image: "/assets/img/wales/slope.jpg"
+  url: "./slope/"
+
+- title: "Aspect"
+  image: "/assets/img/wales/aspect.jpg"
+  url: "./aspect/"

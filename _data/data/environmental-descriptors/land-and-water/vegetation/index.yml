@@ -1,0 +1,47 @@
+- title: "Lifeform"
+  image: "/assets/img/wales/lifeform.jpg"
+  url: "./lifeform/"
+
+- title: "Leaf type"
+  image: "/assets/img/wales/leaf-type.jpg"
+  url: "./leaf-type/"
+
+- title: "Phenology"
+  image: "/assets/img/wales/phenology.jpg"
+  url: "./phenology/"
+
+- title: "Canopy Cover"
+  image: "/assets/img/wales/canopy-cover.jpg"
+  url: "./canopy-cover/"
+
+- title: "Canopy Height"
+  image: "/assets/img/wales/canopy-height.jpg"
+  url: "./canopy-height/"
+
+- title: "Crop Type"
+  image: "/assets/img/wales/crop-type.jpg"
+  url: "./crop-type/"
+
+- title: "Plant Species"
+  image: "/assets/img/wales/plant-species.jpg"
+  url: "./plant-species/"
+
+- title: "Woody Biomass"
+  image: "/assets/img/wales/woody-biomass.jpg"
+  url: "./woody-biomass/"
+
+- title: "Herbaceous Biomass"
+  image: "/assets/img/wales/herbaceous-biomass.jpg"
+  url: "./herbaceous-biomass/"
+
+- title: "Foliar Chemistry"
+  image: "/assets/img/wales/foliar-chemistry.jpg"
+  url: "./foliar-chemistry/"
+
+- title: "Canopy Layers"
+  image: "/assets/img/wales/canopy-layers.jpg"
+  url: "./canopy-layers/"
+
+- title: "Non Photosynthetic Vegetation"
+  image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+  url: "./non-photosynthetic-vegetation/"

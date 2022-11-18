@@ -1,0 +1,11 @@
+- title: "Field Data"
+  image: "/assets/img/wales/measurement-techniques.jpg"
+  url: "./field-data/"
+
+- title: "Drone Data"
+  image: "/assets/img/wales/measurement-protocol.jpg"
+  url: "./drone-data/"
+
+- title: "Sensor Networks"
+  image: "/assets/img/wales/data-access.jpg"
+  url: "./sensor-networks/"

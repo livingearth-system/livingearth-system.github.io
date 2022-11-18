@@ -1,0 +1,7 @@
+- title: "Albedo"
+  image: "/assets/img/wales/albedo.jpg"
+  url: "./albedo/"
+
+- title: "Land Surface Temperature"
+  image: "/assets/img/wales/land-surface-temperature.jpg"
+  url: "./land-surface-temperature/"

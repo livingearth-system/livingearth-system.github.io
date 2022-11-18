@@ -1,0 +1,11 @@
+- title: "Soil Moisture"
+  image: "/assets/img/wales/soil-moisture.jpg"
+  url: "./soil-moisture/"
+
+- title: "Soil Acidity"
+  image: "/assets/img/wales/soil-acidity.jpg"
+  url: "./soil-acidity/"
+
+- title: "Soil Texture"
+  image: "/assets/img/wales/soil-texture.jpg"
+  url: "./soil-texture/"

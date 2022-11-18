@@ -1,0 +1,27 @@
+- title: "Vegetation Algorithms"
+  image: "/assets/img/wales/vegetation-algorithms.jpg"
+  url: "./vegetation-algorithms/"
+
+- title: "Snow Algorithms"
+  image: "/assets/img/wales/snow-algorithms.jpg"
+  url: "./snow-algorithms/"
+
+- title: "Urban Algorithms"
+  image: "/assets/img/wales/urban-algorithms.jpg"
+  url: "./urban-algorithms/"
+
+- title: "Water Algorithms"
+  image: "/assets/img/wales/water-algorithms.jpg"
+  url: "./water-algorithms/"
+
+- title: "Soil Algorithms"
+  image: "/assets/img/wales/soil-algorithms.jpg"
+  url: "./soil-algorithms/"
+
+- title: "Energy Algorithms"
+  image: "/assets/img/wales/energy-algorithms.jpg"
+  url: "./energy-algorithms/"
+
+- title: "Terrain Algorithms"
+  image: "/assets/img/wales/terrain-algorithms.jpg"
+  url: "./terrain-algorithms/"

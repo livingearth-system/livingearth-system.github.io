@@ -1,0 +1,11 @@
+- title: "Land and Water"
+  image: "/assets/img/wales/land-and-water.jpg"
+  url: "./land-and-water/"
+
+- title: "Marine"
+  image: "/assets/img/wales/marine.jpg"
+  url: "./marine/"
+
+- title: "Atmosphere"
+  image: "/assets/img/wales/atmosphere.jpg"
+  url: "./atmosphere/"
