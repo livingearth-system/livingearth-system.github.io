@@ -12,7 +12,6 @@ nobuttons: true
 {%-
 include countries.liquid
 data="europe.countries"
-search=true more=true
 -%}
 
 {%-
