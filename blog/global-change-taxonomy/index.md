@@ -1,4 +1,6 @@
-improve-retrieval-of-forest
+---
+layout: page
+---
 
 <!-- article-heading-time-start -->
 <div class="container mt-3">
