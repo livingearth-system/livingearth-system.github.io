@@ -79,10 +79,8 @@ Customisation of headings inside layouts `_layout/home.html` and typical `_layou
 - `nocontact: true/false` &mdash; hides/shows `get-in-touch.liquid` module at the bottom.
 
 
-## Pages
-
-
-### Homepage `index.md`
+## Homepage
+#### `index.md`
 
 This page uses default `_layout/home.html` layout.  
 Page heading settings are set in General settings at the top of page.  
@@ -97,7 +95,8 @@ This page uses modules below with attibutes:
 - **Our Blog** `our-blog.liquid` - Fetches latest blog posts. `heading`, `title`, `all`, `url` could be customized.
 
 
-### Future Landscapes `future.md`
+## Future Landscapes
+#### `future.md`
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
@@ -105,7 +104,8 @@ This page uses modules below with attibutes:
 - **Future Landscapes** (`boxes.liquid`) - Array of landscapes is fetched from in `_data/future/index.yml`. `heading` and `subheading` could be set as attribute.
 
 
-### Past & Present Landscapes `past-present.md`
+## Past & Present Landscapes
+#### `past-present.md`
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
@@ -113,7 +113,8 @@ This page uses modules below with attibutes:
 - **Tools** (`tools.liquid`) - Array of tools is stored in `_data/tools.yml`. `heading` and `subheading` could be customized in attributes.
 
 
-### Europe `europe.md`
+## Europe
+#### `europe.md`
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
@@ -122,7 +123,8 @@ This page uses modules below with attibutes:
 - **Other Continents** (`continents.liquid`) - Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current one).
 
 
-### Oceania `oceania.md`
+## Oceania
+#### `oceania.md`
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
@@ -131,7 +133,8 @@ This page uses modules below with attibutes:
 - **Other Continents** (`continents.liquid`) - Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current one).
 
 
-### About `about.md`
+## About
+#### `about.md`
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
@@ -145,7 +148,8 @@ This page uses modules below with attibutes:
 - **Our Events**  `our-events.liquid` - Fetches latest events form blog. `heading`, `title`, `all`, `url` could be customized.
 
 
-### Contact `contact.md`
+## Contact
+#### `contact.md`
 
 This page uses `_layout/contact.html` as layout.  
 Page heading settings are set in General settings at the top of page.      
