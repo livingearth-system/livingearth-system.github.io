@@ -14,7 +14,7 @@ After that website could be acessed via URL `http://127.0.0.1:4000/`
 
 ### Layouts
 
-Refers to files within the `_layouts` directory, that define the markup for your theme.
+Refers to files within the `_layouts` directory, that define the markup for website.
 
 - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} `.
 - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
@@ -23,23 +23,42 @@ Refers to files within the `_layouts` directory, that define the markup for your
 - `contact.html` &mdash; Custom layout for contacts page.
 - `404.html` &mdash; The layout for 404.
 
-### Includes
+### Modules
 
-Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
+Refers to modules within the `_includes` directory that can be inserted in multiple layouts across website.
 
-- `footer.html` &mdash; Defines the site's footer section.
-- `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-- `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
+- `footer.liquid` &mdash; Defines the site's footer section.
+- `head.liquid` &mdash; Code-block that defines the `<head></head>` in *default* layout.
+- `header.liquid` &mdash; Defines the site's main header section.
 
+- `about-us.liquid` &mdash; About Us on homepage. Attributes: `title`, `heading`, `subheading`, `image`, `button`, `url`
+- `blog.liquid` &mdash; Blog module
+- `boxes.liquid` &mdash; Default module to show boxed sections like 'FUTURE LANDSCAPES'. `data` sets a path to `.yml` array inside `_data`. Other attributes: `heading`, `subheading`. Columns number could be changed in `cols`.
+- `breadcrumbs.liquid` &mdash; Breadcrumbs module that included in heading module.
+- `contact-us.liquid` &mdash; Contact Us form.
+- `continents.liquid` &mdash; 'OTHER CONTINENTS' module from Europe/Oceania pages. Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current continent).
+- `contribute.liquid` &mdash; 'HOW TO CONTRIBUTE' section from homepage. Attributes: `title`, `heading`, `subheading`, `image`, `button`, `url`
+- `countries.liquid` &mdash; Countries section from Europe/Oceania pages. `data` points to an array of countries. Example: `_data/europe/countries.yml`.
+- `get-in-touch.liquid` &mdash; 'GET IN TOUCH' section which automatically included in `page` layout. Attributes: `heading`, `subheading`, `button`, `url`
+- `heading.liquid` &mdash; Page heading which automatically included in `page` layout and could be customized in general oage settings. Attributes: `heading`, `subtitle`, `background`, `image`, `alt`, `nobuttons`, `button1`, `button1_url`, `button2`, `button2_url`
+- `index.liquid` &mdash; Homepage heading which automatically included in `home` layout and could be customized in general oage settings. Attributes: `smalltitle`, `title`, `subtitle`, `image`, `nobuttons`, `button1`, `button1_url`, `button2`, `button2_url`
+- `organisations.liquid` &mdash; 'ORGANISATIONS' module from About page. Array of organisations is stored in `_data/organisations.yml`. `heading` and `all` could be customized in attributes.
+- `our-blog.liquid` &mdash; 'OUR BLOG' module from About page. `heading`, `title`, `all`, `url` could be customized in attributes.
+- `our-events.liquid` &mdash; 'OUR EVENTS' module from About page. `heading`, `title`, `all`, `url` could be customized in attributes.
+- `our-vision.liquid` &mdash; 'OUR VISION' section from About page. Attributes: `heading`, `subheading`, `image`, `alt`
+
+### Data
+
+Array-like data is stored in `_data` folder and used for arrayed data by many modules.
 
 ### Assets
 
 Refers to various asset files within the `assets` directory.
 
 - `assets/css/style.scss` &mdash; Imports sass files from within the `_sass` directory and gets processed into the theme's stylesheet: `_site/assets/css/styles.css`.
-- `assets/fonts/*.*` &mdash; Local fonts.
-- `assets/img/*.*` &mdash; Site images.
-- `assets/js/*.*` &mdash; Javascript.
+- `assets/fonts/*.*` &mdash; local fonts.
+- `assets/img/*.*` &mdash; site images.
+- `assets/js/*.*` &mdash; javascript.
 
 
 ## Page settings
@@ -100,6 +119,7 @@ This page uses modules below with attibutes:
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
+
 This page uses modules below with attibutes:
 - **Future Landscapes** (`boxes.liquid`) - Array of landscapes is fetched from in `_data/future/index.yml`. `heading` and `subheading` could be set as attribute.
 
@@ -109,6 +129,7 @@ This page uses modules below with attibutes:
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
+
 This page uses modules below with attibutes:
 - **Tools** (`tools.liquid`) - Array of tools is stored in `_data/tools.yml`. `heading` and `subheading` could be customized in attributes.
 
@@ -118,9 +139,10 @@ This page uses modules below with attibutes:
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
+
 This page uses modules below with attibutes:
 - **Countries** (`countries.liquid`) - Array of countries is stored in `_data/europe/countries.yml`.
-- **Other Continents** (`continents.liquid`) - Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current one).
+- **Other Continents** (`continents.liquid`) - Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current continent).
 
 
 ## Oceania
@@ -128,9 +150,10 @@ This page uses modules below with attibutes:
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
+
 This page uses modules below with attibutes:
 - **Countries** (`countries.liquid`) - Array of countries is stored in `_data/oceania/countries.yml`.
-- **Other Continents** (`continents.liquid`) - Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current one).
+- **Other Continents** (`continents.liquid`) - Array of continents is stored in `_data/continents.yml`. `heading` could be customized in attributes. `exclude` sets continent to exclude from list (current continent).
 
 
 ## About
@@ -138,6 +161,7 @@ This page uses modules below with attibutes:
 
 This page uses default `_layout/page.html` layout.  
 Page heading settings are set in General settings at the top of page.  
+
 This page uses modules below with attibutes:
 - **Who We Are** `who-we-are.liquid` - `heading` and `subheading` could be set as strings, `count` attriblute sets big numbers (comma and semicolon separated string)
 - **Our Vision** `our-vision.liquid` - `heading`, `subheading` and `image` could be customized for this module
@@ -145,7 +169,7 @@ This page uses modules below with attibutes:
 - **Organisations**  `organisations.liquid` - `heading` set in attribute, `_data/organisations.yml` stores data array of organisations 
 - **Video**  `video.liquid` - `heading`, `name`, `position`, `avatar`, `preview` could be customized as attributes.
 - **Our Blog**  `our-blog.liquid` - Fetches latest blog posts. `heading`, `title`, `all`, `url` could be customized.
-- **Our Events**  `our-events.liquid` - Fetches latest events form blog. `heading`, `title`, `all`, `url` could be customized.
+- **Our Events**  `our-events.liquid` - Fetches latest events from blog. `heading`, `title`, `all`, `url` could be customized.
 
 
 ## Contact
@@ -153,5 +177,6 @@ This page uses modules below with attibutes:
 
 This page uses `_layout/contact.html` as layout.  
 Page heading settings are set in General settings at the top of page.      
-Content in left coulmn data could be added and customized simply using markdown markup.  
-Contact form source is in `_includes/contact-us.liquid`
+
+- **Contacts** in left coulmn data could be added and customized simply using markdown markup.  
+- **Contact form** source code is in `_includes/contact-us.liquid`
