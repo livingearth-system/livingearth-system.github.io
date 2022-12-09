@@ -3,7 +3,7 @@ layout: page
 permalink: /future/
 
 title: "Future Landscapes"
-subtitle: "Imagining landscapes of the future.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque tortor ipsum, nec sodales velit faucibus a. Vestibulum id laoreet mi."
+subtitle: "How would you like to see your landscape"
 image: "/assets/img/heading/environmental.jpg"
 ---
 
