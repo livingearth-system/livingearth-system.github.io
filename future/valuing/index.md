@@ -10,7 +10,7 @@ nocontact: true
 {%-
 include boxes.liquid
 heading="Valuing"
-subheading="How do we _value_ components of our landscapes?"
+subheading="How do we value components of our landscapes?"
 data="future.valuing.index"
 cols="4"
 -%}
