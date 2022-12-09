@@ -9,7 +9,7 @@ nocontact: true
 
 {%-
 include boxes.liquid
-subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque tortor ipsum, nec sodales velit faucibus a. Vestibulum id laoreet mi. In eget tristique eros, at viverra elit. Nulla facilisi. Donec congue risus nunc, nec scelerisque augue blandit in. Fusce dignissim ultricies arcu non venenatis. In elementum luctus varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur aliquet libero lorem, sit amet viverra ex placerat vitae. Nullam fermentum dolor massa, vitae ultricies ante sagittis non. Curabitur ut nisl eros. Sed sit amet neque sed ante viverra accumsan. Maecenas diam urna, ultricies ut elementum quis, tincidunt ac turpis. Phasellus aliquet quis diam vel malesuada. Fusce malesuada dolor non turpis mollis, eget aliquam nunc tincidunt."
+subheading="Our assets can be vulnerable to a range of pressures, whether natural events or processes or human activities, that can lead to adverse impacts. Each will operate across a different time frame (e.g., hours to decades) and can lead to partial or full loss of the asset. The likelihood of these pressures occurring and of the associated impact can be informed by their past occurrance, which can be discerned from Earth observtion data, or through predictive models.  The following lists common risks to assests, with this based on the impacts and pressures listed in the Global Change Taxonomy.
 data="future.boxes"
 cols="4"
 -%}
