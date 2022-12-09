@@ -12,7 +12,7 @@ include boxes.liquid
 heading="assessing-risk"
 subheading="What are the risks?"
 data="future.assessing-risk.index"
-cols="4"
+cols="5"
 -%}
 
 {%-
