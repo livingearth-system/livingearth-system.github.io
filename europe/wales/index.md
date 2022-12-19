@@ -16,6 +16,12 @@ data="europe.wales.past-present-landscapes"
 -%}
 
 {%-
+include boxes.liquid
+heading="Future Landscapes"
+data="future.index"
+-%}
+
+{%-
 include tools.liquid
 heading="Tools"
 data="europe.wales.tools"
