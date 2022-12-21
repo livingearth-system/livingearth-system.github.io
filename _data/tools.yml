@@ -1,20 +1,25 @@
 - title: "See on Map"
+  subtitle: "View the land cover, habitat and change maps for Wales"
   image: "/assets/img/tools1.jpg"
   url: "#"
 
 - title: "Get the data"
+  subtitle: "Download or stream the data"
   image: "/assets/img/tools2.jpg"
   url: "/data/"
 
 - title: "Analyse the data"
+  subtitle: "Access the Welsh Data Cube"
   image: "/assets/img/tools3.jpg"
   url: "https://jupyter.org"
   newtab: true
 
 - title: "Models"
+  subtitle: "Model future elements of the Welsh landscapes"
   image: "/assets/img/tools4.jpg"
   url: "#"
 
 - title: "Big data"
+  subtitle: "Learn about data processing engines"
   image: "/assets/img/tools5.jpg"
   url: "/big-data/"
