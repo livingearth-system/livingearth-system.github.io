@@ -1,4 +1,4 @@
-- title: "See on Map"
+- title: "See it on a Map"
   subtitle: "View the land cover, habitat and change maps for Wales"
   image: "/assets/img/tools1.jpg"
   url: "#"
@@ -14,7 +14,7 @@
   url: "https://jupyter.org"
   newtab: true
 
-- title: "Models"
+- title: "Model the environment"
   subtitle: "Model future elements of the Welsh landscapes"
   image: "/assets/img/tools4.jpg"
   url: "#"
