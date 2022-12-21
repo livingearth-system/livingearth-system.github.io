@@ -3,7 +3,7 @@ layout: page
 
 title: "Welsh Reference Ecosystems"
 heading: "Welsh Reference Ecosystems and Modified States"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Describing the primary ecosystems of Wales, whether in what is termed a reference (relatively intact and undisturbed) state and modified state, primarily through human activities."
 image: "/assets/img/heading/wild.jpg"
 ---
 
