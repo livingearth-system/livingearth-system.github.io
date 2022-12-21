@@ -16,16 +16,16 @@ data="europe.wales.past-present-landscapes"
 -%}
 
 {%-
-include boxes.liquid
-heading="Future Landscapes"
-data="future.wales"
--%}
-
-{%-
 include tools.liquid
 heading="Tools"
 data="europe.wales.tools"
 cols="4"
+-%}
+
+{%-
+include boxes.liquid
+heading="Future Landscapes"
+data="future.wales"
 -%}
 
 {%-
