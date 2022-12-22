@@ -2,7 +2,7 @@
 layout: page
 
 title: Themes
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Explore different aspects of the Welsh environment, including the semi-natural, agricultural and forested landscapes and their dynamics"
 image: "/assets/img/heading/wild.jpg"
 ---
 
