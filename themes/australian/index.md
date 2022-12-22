@@ -2,7 +2,7 @@
 layout: page
 
 title: "Australian Reference Ecosystems"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Characteristics of ecosystems in terms of their floristics, structure, biomass and environmental settings."
 image: "/assets/img/heading/wild.jpg"
 ---
 
