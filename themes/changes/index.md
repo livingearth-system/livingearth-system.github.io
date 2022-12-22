@@ -2,7 +2,7 @@
 layout: page
 
 title: Changes
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Highlights the change impacts and driving pressures across Wales"
 image: "/assets/img/heading/wild.jpg"
 ---
 
