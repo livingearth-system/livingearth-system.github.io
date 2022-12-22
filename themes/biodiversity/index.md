@@ -2,7 +2,7 @@
 layout: page
 
 title: "Biodiversity"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Highlighting the biodiversity of Wales and importance in the landscape"
 image: "/assets/img/heading/wild.jpg"
 ---
 
