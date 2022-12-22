@@ -5,6 +5,7 @@
   newtab: true
 
 - title: "Education and training"
+  subtitle: "View learning material for all levels and higher education courses that provide training relevant to Living Earth."
   image: "/assets/img/edu2.png"
   url: "#"
 
@@ -14,11 +15,11 @@
   url: "#"
 
 - title: "Art"
-  subtitle: "Designs relevant to Living Earth"
+  subtitle: "Creations and designs relevant to Living Earth"
   image: "/assets/img/edu3.png"
   url: "#"
 
 - title: "Photography"
-  subtitle: "Photographs of Australia"
+  subtitle: "Photographs from Wales"
   image: "/assets/img/edu1.png"
   url: "#"
