@@ -2,7 +2,7 @@
 layout: page
 
 title: "Learning & Art"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Introducing ways to learn and create through Living Earth. "
 image: "/assets/img/heading/wild.jpg"
 ---
 
