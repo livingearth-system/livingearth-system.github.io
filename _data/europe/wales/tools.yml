@@ -1,17 +1,21 @@
 - title: "See on Map"
+  subtitle: "Environmental descriptors, land cover, habitats and change"
   image: "/assets/img/tools1.jpg"
   url: "https://earthtrack.aber.ac.uk/livingwales/maps.html"
   newtab: true
 
 - title: "Get the data"
+  subtitle: "Download or stream the data to your computer"
   image: "/assets/img/tools2.jpg"
   url: "./data/"
 
 - title: "Analyse the data"
+  subtitle: "Access the Welsh Data Cube"
   image: "/assets/img/tools3.jpg"
   url: "https://livingwales.aber.ac.uk/jhub/"
   newtab: true
 
 - title: "Big Data"
+  subtitle: "Background to systems that process large datasets"
   image: "/assets/img/tools5.jpg"
   url: "./big-data/"
