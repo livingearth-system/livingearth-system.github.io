@@ -10,6 +10,6 @@ image: "/assets/img/heading/wild.jpg"
 {%-
 include boxes.liquid
 subheading="Forests are complex."
-data="themes.welsh/forests.all"
+data="themes.welsh.forests.all"
 -%}
 
