@@ -13,10 +13,3 @@ subheading="Our assets can be vulnerable to a range of pressures, whether natura
 data="future.boxes"
 cols="4"
 -%}
-
-{%-
-include tools.liquid
-heading="Tools"
-data="future.tools"
-cols="3"
--%}
