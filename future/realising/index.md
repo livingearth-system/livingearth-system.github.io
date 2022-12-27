@@ -9,7 +9,7 @@ nocontact: true
 
 {%-
 include boxes.liquid
-subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque tortor ipsum, nec sodales velit faucibus a. Vestibulum id laoreet mi. In eget tristique eros, at viverra elit. Nulla facilisi. Donec congue risus nunc, nec scelerisque augue blandit in. Fusce dignissim ultricies arcu non venenatis. In elementum luctus varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur aliquet libero lorem, sit amet viverra ex placerat vitae. Nullam fermentum dolor massa, vitae ultricies ante sagittis non. Curabitur ut nisl eros. Sed sit amet neque sed ante viverra accumsan. Maecenas diam urna, ultricies ut elementum quis, tincidunt ac turpis. Phasellus aliquet quis diam vel malesuada. Fusce malesuada dolor non turpis mollis, eget aliquam nunc tincidunt."
+subheading="In order to establish whether are proposed landscapes are realistic, we need to consider what has happened in the past but also use predictive capacity in the forms of models including those that deal with ecosystem processes and distributions of flora and fauna. The following provides insights into the types of tools that can be used.
 data="future.boxes"
 cols="4"
 -%}
