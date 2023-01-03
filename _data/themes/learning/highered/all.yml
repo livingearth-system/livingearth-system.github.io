@@ -3,11 +3,11 @@
   subtitle: "Undergraduate and postgraduate course"
   image: "/assets/img/learning-resources.png"
   button: "Read More"
-  url: "#"
+  url: "/themes/learning/highered"
 
 - id: "secondary-education"
   title: "Secondary education"
   subtitle: "Secondary education"
   image: "/assets/img/photography.jpg"
   button: "Read More"
-  url: "#"
+  url: "/themes/learning/highered"
