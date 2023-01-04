@@ -9,6 +9,6 @@ image: "/assets/img/heading/wild.jpg"
 
 {%-
 include boxes.liquid
-data=~welsh.welshref.all
+data=~welsh.all
 only="forests,bracken"
 -%}
