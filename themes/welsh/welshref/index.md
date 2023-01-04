@@ -10,5 +10,4 @@ image: "/assets/img/heading/wild.jpg"
 {%-
 include boxes.liquid
 data="welshref.all
-only="woodlands,bracken"
 -%}
