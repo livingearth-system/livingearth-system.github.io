@@ -2,14 +2,14 @@
 layout: page
 
 title: Australia
-subtitle: "Novel world-first concept that aims to capture the state and dynamics of Australia’s landscape"
+subtitle: "Novel world-first concept that captures the state and dynamics of Australia’s landscape"
 image: "/assets/img/heading/australia.jpg"
 ---
 
 {%-
 include tools.liquid
 heading="Past & Present Landscapes"
-subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
+subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the Australian landscape of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
 all="./past-present-landscapes/"
 data="oceania.australia.past-present-landscapes"
 -%}
