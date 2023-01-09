@@ -9,5 +9,5 @@ image: "/assets/img/heading/wild.jpg"
 
 {%-
 include boxes.liquid
-data="themes.welsh.welshref.all
+data="themes.welsh.welshref.all"
 -%}
