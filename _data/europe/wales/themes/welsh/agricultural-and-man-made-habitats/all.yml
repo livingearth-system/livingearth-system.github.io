@@ -1,0 +1,6 @@
+- id: "arable-habitats"
+  title: "Arable Habitats"
+  subtitle: "According to the latest agricultural statistics, the area of agricultural habitats in Wales is 1,677, 072 ha, which represents c.80% of the land area"
+  image: "/assets/img/agricultural-habitats.jpg"
+  button: "Read More"
+  url: "./arable-habitats/"
