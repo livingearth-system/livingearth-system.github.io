@@ -30,9 +30,9 @@ data="future.index"
 {%-
 include boxes.liquid
 heading="Themes"
-data="themes.all"
+data="oceania.australia.themes.all"
 only="australian,ecosystem,biodiversity"
-more="/themes/"
+more="./themes/"
 -%}
 
 {%-

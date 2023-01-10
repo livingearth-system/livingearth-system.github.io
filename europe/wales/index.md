@@ -31,9 +31,9 @@ data="future.wales"
 {%-
 include boxes.liquid
 heading="Themes"
-data="themes.all"
+data="europe.wales.themes.all"
 only="welsh,ecosystem,biodiversity"
-more="/themes/"
+more="./themes/"
 -%}
 
 {%-

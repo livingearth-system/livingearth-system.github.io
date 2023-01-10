@@ -1,0 +1,13 @@
+- id: "semi-natural"
+  title: "Reference ecosystems"
+  subtitle: "Ecosystems that have been part of the Australian landscape prior to European colonisation "
+  image: "/assets/img/australia/whitingbeachfigs.jpg"
+  button: "Read More"
+  url: "#"
+
+- id: "modified ecosysystems"
+  title: "MOdified ecosystems"
+  subtitle: "Ecosystems that have been modified by humans from their reference state"
+  image: "/assets/img/australia/whitingbeachfigs.jpg"
+  button: "Read More"
+  url: "#"
