@@ -1,3 +1,10 @@
+- id: "agricultural-and-man-made-habitats"
+  title: "Agricultural and Man Made Habitats"
+  subtitle: "The habitats in this section are considered to be ‘semi-natural’ as they are recognised as having been a part of the UK landscape for hundreds"
+  image: "/assets/img/agricultural-habitats.jpg"
+  button: "Read More"
+  url: "#"
+
 - id: "semi-natural"
   title: "Semi-natural ecosystems"
   subtitle: "The habitats in this section are considered to be ‘semi-natural’ as they are recognised as having been a part of the UK landscape for hundreds"
