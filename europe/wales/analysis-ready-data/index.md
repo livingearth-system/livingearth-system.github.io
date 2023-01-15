@@ -9,6 +9,6 @@ image: "/assets/img/heading/country.jpg"
 
 {%-
 include boxes.liquid
-subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque tortor ipsum, nec sodales velit faucibus a. Vestibulum id laoreet mi. In eget tristique eros, at viverra elit. Nulla facilisi. Donec congue risus nunc, nec scelerisque augue blandit in. Fusce dignissim ultricies arcu non venenatis. In elementum luctus varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur aliquet libero lorem, sit amet viverra ex placerat vitae. Nullam fermentum dolor massa, vitae ultricies ante sagittis non. Curabitur ut nisl eros. Sed sit amet neque sed ante viverra accumsan. Maecenas diam urna, ultricies ut elementum quis, tincidunt ac turpis. Phasellus aliquet quis diam vel malesuada. Fusce malesuada dolor non turpis mollis, eget aliquam nunc tincidunt."
+subheading="For decades, airborne and spaceborne sensors have been acquring data across all or part of Wales in varying modes and across a range of spatial resoutions and temporal freqencies.  These sections provide information on and access to a range of data, much of which is in an analysis ready data (ARD) format.  These include freely accessible radar and optical data acquired by the Sentinel-1 and 2 respectively, which are provided in both near real time and as historical archives and can be downloaded at no cost.
 data="europe.wales.analysis-ready-data"
 -%}
