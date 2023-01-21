@@ -3,7 +3,7 @@ layout: page
 
 title: "Agricultural and Man Made Habitats"
 heading: "Agricultural and Man Made Habitats"
-subtitle: "Describing the primary ecosystems of Wales, whether in what is termed a reference (relatively intact and undisturbed) state and modified state, primarily through human activities."
+subtitle: "Describing habitats that have developed through agricultural use and practices."
 image: "/assets/img/agricultural-habitats.jpg"
 ---
 
