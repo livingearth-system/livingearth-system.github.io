@@ -3,7 +3,7 @@ layout: page
 
 title: "Non-natural ecosystems"
 heading: "Non-natural ecosystems"
-subtitle: "Describing the primary ecosystems of Wales, whether in what is termed a reference (relatively intact and undisturbed) state and modified state, primarily through human activities."
+subtitle: "Describing those habitats that are not natural to Wales."
 image: "/assets/img/agricultural-habitats.jpg"
 ---
 
