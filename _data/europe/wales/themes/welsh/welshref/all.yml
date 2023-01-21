@@ -1,0 +1,77 @@
+id: "forestwoods"
+  title: "Forest, woodland and scrub"
+  subtitle: "Woodlands are broadleaved evergreen or deciduous although some coniferous species (e.g., Scots Pine, Yew) can also dominate or be part of the community.."
+  image: "/assets/img/change.jpg"
+  button: "Read More"
+  url: "./forestwoods/"
+
+- id: "bracken"
+  title: "Bracken and scrub"
+  subtitle: "Talk about bracken"
+  image: "/assets/img/invasive-species.jpg"
+  button: "Read More"
+  url: "./bracken/"
+
+- id: "seminatgrass"
+  title: "Semi-natural grasslands"
+  subtitle: "Talk about semi-natural grasslands"
+  image: "/assets/img/plant-habitats.jpg"
+  button: "Read More"
+  url: ".seminatgrass/"
+
+- id: "heathmire"
+  title: ""Heaths and mires
+  subtitle: "Meadows and pastures Permanent pasture grassland in Wales accounts for more than 75% of the utilised agricultural land"
+  image: "/assets/img/grassland-habitats.jpg"
+  button: "Read More"
+  url: "./heathmire/"
+
+- id: "fenswamp"
+  title: "Fens and swamaps"
+  subtitle: "Talk about fens and swamps"
+  image: "/assets/img/grassland-habitats.jpg"
+  button: "Read More"
+  url: "./fenswamp/"
+
+- id: "waterbodies"
+  title: "Standing water and watercourses"
+  subtitle: "Talk about waterbodies"
+  image: "/assets/img/polli-habitats.jpg"
+  button: "Read More"
+  url: "./waterbodies/"
+
+- id: "coastdunes"
+  title: "Coastal dunes"
+  subtitle: "Talk about coastal dunes"
+  image: "/assets/img/road-verges.jpg"
+  button: "Read More"
+  url: "./coastdunes/"
+
+- id: "cliffscree"
+  title: "Cliffs, bounlder fields and screes"
+  subtitle: "Talk about cliffs, boulderfields and screes"
+  image: "/assets/img/stubble-farmland-birds.jpg"
+  button: "Read More"
+  url: "./cliffscree/"
+
+- id: "intertidal"
+  title: "Intertidal"
+  subtitle: "Talk about intertidal"
+  image: "/assets/img/yellowhammer-breeding.jpg"
+  button: "Read More"
+  url: "./intertidal/"
+  
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
