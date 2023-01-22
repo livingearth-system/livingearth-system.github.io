@@ -17,7 +17,7 @@
   subtitle: "Talk about semi-natural grasslands"
   image: "/assets/img/plant-habitats.jpg"
   button: "Read More"
-  url: ".seminatgrass/"
+  url: "./seminatgrass/"
 
 - id: "heathmire"
   title: ""Heaths and mires
