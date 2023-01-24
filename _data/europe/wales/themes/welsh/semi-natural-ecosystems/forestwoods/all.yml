@@ -40,3 +40,17 @@
   image: "/assets/img/grassland-habitats.jpg"
   button: "Read More"
   url: "./willowcarr/"
+
+- id: "birchthicket"
+  title: "Birch thicket"
+  subtitle: "Text"
+  image: "/assets/img/grassland-habitats.jpg"
+  button: "Read More"
+  url: "./birchthicket/"
+  
+  id: "yewwood"
+  title: "yew woodland"
+  subtitle: "Text"
+  image: "/assets/img/grassland-habitats.jpg"
+  button: "Read More"
+  url: "./yewwood/"
