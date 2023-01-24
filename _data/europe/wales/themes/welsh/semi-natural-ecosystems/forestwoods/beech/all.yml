@@ -1,42 +1,9 @@
 
 - id: "directory1"
   title: "Descriptive name"
-  subtitle: "Text."
+  subtitle: "Native beech (Fagus sylvatica) woods occur on neutral to acidic soils and reach their western UK limit at Castell Coch – on the western boundary of Cardiff.  The reference state for beech woodland is defined by a mixed age structure and the presence of successful regeneration under canopy gaps.  However, as a consequence of intensive deer grazing, the classic image of a UK beech wood shows mature single-aged stands lacking an understorey, regeneration and field layer. 
+The beechwoods in south-east Wales are less intensively deer-grazed than those in England, and some stands of beech on south-facing slopes in the Castell Coch area of Cardiff are good examples of the reference state.
+Beech is considered likely to benefit from climate change, with a predicted spread to the north and west. "
   image: "/assets/img/change.jpg"
   button: "Read More"
-  url: "./sessile/"
-
-- id: "directory1"
-  title: "Descriptive name"
-  subtitle: "Text1"
-  image: "/assets/img/photo1.jpg"
-  button: "Read More"
-  url: "./directory1/"
-
-- id: "directory2"
-  title: "Descriptive name"
-  subtitle: "Text2"
-  image: "/assets/img/photo2.jpg"
-  button: "Read More"
-  url: "./directory2/"
-
-- id: "directory3"
-  title: "Descriptive name"
-  subtitle: "Text3"
-  image: "/assets/img/grassland-habitats.jpg"
-  button: "Read More"
-  url: "./directory3/"
-
-- id: "directory4"
-  title: "Descriptive name"
-  subtitle: "Text4"
-  image: "/assets/img/grassland-habitats.jpg"
-  button: "Read More"
-  url: "./directory4/"
-
-- id: "directory5"
-  title: "Descriptive name"
-  subtitle: "Text5"
-  image: "/assets/img/grassland-habitats.jpg"
-  button: "Read More"
-  url: "./directory5/"
+  url: "#"
