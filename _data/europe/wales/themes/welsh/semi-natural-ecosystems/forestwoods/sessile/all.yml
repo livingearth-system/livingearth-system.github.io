@@ -1,0 +1,13 @@
+id: "sessile_ref"
+  title: "Reference sessile oak states"
+  subtitle: "Text"
+  image: "/assets/img/change.jpg"
+  button: "Read More"
+  url: "./forestwoods/"
+
+- id: "sessile_mod"
+  title: "Modified sessile oak states"
+  subtitle: "Text"
+  image: "/assets/img/invasive-species.jpg"
+  button: "Read More"
+  url: "./bracken/"
