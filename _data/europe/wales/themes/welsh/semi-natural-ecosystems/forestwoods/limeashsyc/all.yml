@@ -1,34 +1,8 @@
 id: "directory1"
   title: "Descriptive name"
-  subtitle: "Text1"
+  subtitle: "This is a scarce woodland type in Wales and is restricted to relatively small fragmented stands in the limestone areas.  These woods equate to the Natura 2000 ‘Tilio-Acerion forests of slopes, screes and ravines’ habitat (9180), with the best, and most extensive, examples in the UK found in the Wye Valley.
+
+The Welsh stands of the habitat tend to have a lot of ash (Fraxinus excelsior), small-leaved lime (Tilia cordata), sycamore (Acer pseudoplatanus) and wych elm (Ulmus glabra) in the canopy, though ash is likely to decline through Chalara infections, with sycamore the most likely beneficiary.   Although not considered native in the UK, sycamore is well-represented in many Welsh stands, as it is in the continental examples of this woodland community"
   image: "/assets/img/photo1.jpg"
   button: "Read More"
-  url: "./directory1/"
-
-- id: "directory2"
-  title: "Descriptive name"
-  subtitle: "Text2"
-  image: "/assets/img/photo2.jpg"
-  button: "Read More"
-  url: "./directory2/"
-
-- id: "directory3"
-  title: "Descriptive name"
-  subtitle: "Text3"
-  image: "/assets/img/grassland-habitats.jpg"
-  button: "Read More"
-  url: "./directory3/"
-
-- id: "directory4"
-  title: "Descriptive name"
-  subtitle: "Text4"
-  image: "/assets/img/grassland-habitats.jpg"
-  button: "Read More"
-  url: "./directory4/"
-
-- id: "directory5"
-  title: "Descriptive name"
-  subtitle: "Text5"
-  image: "/assets/img/grassland-habitats.jpg"
-  button: "Read More"
-  url: "./directory5/"
+  url: "#"
