@@ -1,9 +1,6 @@
-
 - id: "directory1"
   title: "Descriptive name"
-  subtitle: "Naturally-ocurring beechwoods (Fagus sylvatica) occur on neutral to acidic soils and reach their western UK limit at Castell Coch – on the western boundary of Cardiff.  The least modified state for beech woodland is defined by a mixed age structure and the presence of successful regeneration under canopy gaps.  However, as a consequence of intensive deer grazing, the classic image of a UK beech wood shows mature single-aged stands lacking an understorey, regeneration and field layer. 
-The beechwoods in south-east Wales are less intensively deer-grazed than those in England, and some stands on south-facing slopes in the Castell Coch area of Cardiff exhibit a mixed age-structure and successful regeneration.
-Beech is considered likely to benefit from climate change, with a predicted spread to the north and west. "
+  subtitle: "Native beech (Fagus sylvatica) woods occur on neutral to acidic soils and reach their western UK limit at Castell Coch – on the western boundary of Cardiff.  The reference state for beech woodland is defined by a mixed age structure and the presence of successful regeneration under canopy gaps.  However, as a consequence of intensive deer grazing, the classic image of a UK beech wood shows mature single-aged stands lacking an understorey, regeneration and field layer. The beechwoods in south-east Wales are less intensively deer-grazed than those in England, and some stands of beech on south-facing slopes in the Castell Coch area of Cardiff are good examples of the reference state. Beech is considered likely to benefit from climate change, with a predicted spread to the north and west. "
   image: "/assets/img/change.jpg"
   button: "Read More"
   url: "#"
