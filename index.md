@@ -54,5 +54,6 @@ image="/assets/img/contribute.jpg"
 include our-blog.liquid
 title="Our blog"
 heading="Stay up to date"
-all="Read all articles" url="/news/"
+all="Read all articles"
+url="/news/"
 -%}
