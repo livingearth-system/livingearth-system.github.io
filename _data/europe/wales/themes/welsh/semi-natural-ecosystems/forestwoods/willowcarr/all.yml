@@ -1,7 +1,6 @@
-id: "directory1"
+- id: "directory1"
   title: "Descriptive name"
   subtitle: "Text1"
   image: "/assets/img/photo1.jpg"
   button: "Read More"
   url: "#"
-  
