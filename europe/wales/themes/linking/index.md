@@ -45,22 +45,6 @@ title: "Linking with farming, forestry and fisheries"
             </div>
         </div>
         <!--Faciliting-section-end -->
-
-        <!--wales-tab-section-strat -->
-        <div class="col-xs-3 col-sm-3 col-ms-3 col-lg-3 col-xl-3 col-xxl-3  wales-tab">
-            <section class=" wales-tabs-section text-white">
-                <h5 class="tab-title">Wales Ecosystems</h5>
-                <ul class="nav wales-nav-tabs flex-column mb-3">
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-1">Ecosystem 1</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item active show text-dark wales-tab-link" data-toggle="tab" href="#tab-2">Ecosystem 2</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-3">Ecosystem 3</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-4">Ecosystem 4</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-5">Ecosystem 5</a></li>
-                    <li class="wales-nav-item"><a class="wales-nav-link list-item text-dark wales-tab-link" data-toggle="tab" href="#tab-6">Ecosystem 6</a></li>
-                </ul>
-            </section>
-        </div>
-        <!--wales-tab-section-end -->
     </div>
 </div>
 <!--Faciliting-section-end -->
