@@ -1,0 +1,13 @@
+- id: "sessile_ref"
+  title: "Reference sessile oak states"
+  subtitle: "Text"
+  image: "/assets/img/photo1.jpg"
+  button: "Read More"
+  url: "./sessile_ref/"
+
+- id: "sessile_mod"
+  title: "Modified sessile oak states"
+  subtitle: "Text"
+  image: "/assets/img/photo2.jpg"
+  button: "Read More"
+  url: "./sessile_mod/"

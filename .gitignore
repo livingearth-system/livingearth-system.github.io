@@ -7,6 +7,8 @@
 node_modules/
 dist/
 
+_site/
+
 # Compiled Java class files
 *.class
 
