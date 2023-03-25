@@ -8,14 +8,14 @@
 - id: "bracken"
   title: "Bracken and scrub"
   subtitle: ""
-  image: "/assets/img/ecosystems/1_1QuercusPetraeaRavineWithRhododendron.jpg"
+  image: "/assets/img/wales/ecosystems/1_1QuercusPetraeaRavineWithRhododendron.jpg"
   button: "Read More"
   url: "./bracken/"
 
 - id: "seminatgrass"
   title: "Semi-natural grasslands"
   subtitle: ""
-  image: "/assets/img/ecosystems/14_SessileOakAtlanticGrazed.jpg"
+  image: "/assets/img/wales/ecosystems/14_SessileOakAtlanticGrazed.jpg"
   button: "Read More"
   url: "./seminatgrass/"
 
