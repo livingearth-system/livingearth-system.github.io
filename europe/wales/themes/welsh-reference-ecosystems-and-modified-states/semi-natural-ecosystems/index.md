@@ -4,7 +4,7 @@ layout: page
 title: "Semi-natural ecosystems"
 heading: "Semi-natural Ecosystems"
 subtitle: "Describing the primary ecosystems of Wales in terms of their reference (or benchmark) or modified states."
-image: "/assets/img/wales/2.1 Semi-natural ecosystem components.jpg"
+image: "/assets/img/wales/ecosystems/1_SessileOak.jpg"
 ---
 
 {%-
