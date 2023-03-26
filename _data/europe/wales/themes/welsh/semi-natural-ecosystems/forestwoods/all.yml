@@ -13,16 +13,16 @@
   url: "./beech/"
 
 - id: "limeashsyc"
-  title: "Lime, ash and sycamore woodlandd"
+  title: "Lime, ash and sycamore woodland"
   subtitle: ""
-  image: "/assets/img/wwales/ecosystems/forestwoods/LowlandAshOakWoods.jpg"
+  image: "/assets/img/wales/ecosystems/forestwoods/LowlandAshOakWoods.jpg"
   button: "Read More"
   url: "./limeashsyc/"
 
 - id: "lowlandashoak"
   title: "Lowland ash/oak woods"
   subtitle: ""
-  image: "/assets/img/wales/wales/ecosystems/forestwoods/LimeAshOakWoods.jpg"
+  image: "/assets/img/wales/ecosystems/forestwoods/LimeAshOakWoods.jpg"
   button: "Read More"
   url: "./lowlandashoak/"
 
