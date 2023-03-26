@@ -1,0 +1,14 @@
+---
+layout: page
+
+title: "sessile_mod"
+heading: "Sessile oak forests"
+subtitle: "Modified states"
+image: "/assets/img/wales/ecosystems/1_SessileOak.jpg"
+---
+
+{%-
+include boxes.liquid
+subheading="Comprised of grazed Atlantic or single-aged sessile oak woodlands or those with a bluebell understorey"
+data="europe.wales/themes/welsh-reference-ecosystems-and-modified-states/semi-natural-ecosystems/forestwoods/sessile_mod/sessile_mod.all"
+-%}
