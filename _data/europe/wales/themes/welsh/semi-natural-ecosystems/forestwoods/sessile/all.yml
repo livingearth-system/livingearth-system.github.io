@@ -7,7 +7,7 @@
 
 - id: "sessile_mod"
   title: "Modified sessile oak states"
-  subtitle: ""
+  subtitle: " "
   image: "/assets/img/wales/ecosystems/16_SessileOakWithBluebells.jpg"
   button: "Read More"
   url: "./sessile/"
