@@ -8,14 +8,14 @@
 - id: "beech"
   title: "Beech woods"
   subtitle: ""
-  image: "/assets/img/wales/ecosystems/forestwoods/Beechwoods.jpg"
+  image: "/assets/img/wales/ecosystems/forestwoods/BeechWoods.jpg"
   button: "Read More"
   url: "./beech/"
 
 - id: "limeashsyc"
   title: "Lime, ash and sycamore woodlandd"
   subtitle: ""
-  image: "/assets/img/wwales/ecosystems/forestwoods/LowlandAshWoods.jpg"
+  image: "/assets/img/wwales/ecosystems/forestwoods/LowlandAshOakWoods.jpg"
   button: "Read More"
   url: "./limeashsyc/"
 
@@ -29,7 +29,7 @@
 - id: "aldercarr"
   title: "Alder carr"
   subtitle: ""
-  image: "/assets/img/wales/2.1.1.5 Alder Carr.jpg"
+  image: "/assets/img/wales/ecosystems/forestwoods/ Aldercarr.jpg"
   button: "Read More"
   url: "./aldercarr/"
 
