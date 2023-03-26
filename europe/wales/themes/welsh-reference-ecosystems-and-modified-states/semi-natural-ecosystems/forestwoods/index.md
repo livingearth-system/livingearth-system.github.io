@@ -9,5 +9,5 @@ image: "/assets/img/wales/ecosystems/1_SessileOak.jpg"
 
 {%-
 include boxes.liquid
-data="europe.wales.themes.welsh.semi-natural-ecosystems.all"
+data="europe.wales.themes.welsh.semi-natural-ecosystems.forestwoods.all"
 -%}
