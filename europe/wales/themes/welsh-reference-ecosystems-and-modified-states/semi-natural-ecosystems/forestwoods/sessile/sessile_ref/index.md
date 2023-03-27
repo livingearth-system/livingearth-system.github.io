@@ -2,8 +2,8 @@
 layout: page
 
 title: "sessile_ref"
-heading: "Sessile oak forests (Reference or Benchmark States)"
-subtitle: ""
+heading: "Sessile oak forests"
+subtitle: "Reference (benchmark) states"
 image: "/assets/img/wales/ecosystems/forestwoods/sessile/13_SessileOakMatureContinental.jpg"
 ---
 
