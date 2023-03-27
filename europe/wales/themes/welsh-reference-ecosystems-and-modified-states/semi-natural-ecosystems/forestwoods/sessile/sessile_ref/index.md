@@ -10,5 +10,5 @@ image: "/assets/img/wales/ecosystems/forestwoods/sessile/12_SessileOakMatureAtla
 {%-
 include boxes.liquid
 subheading=""
-data="europe.wales.themes.welsh/.emi-natural-ecosystems.forestwoods.sessile.sessile_ref.all"
+data="europe.wales.themes.welsh.semi-natural-ecosystems.forestwoods.sessile.sessile_ref.all"
 -%}
