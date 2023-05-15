@@ -20,17 +20,22 @@
                     {% assign cols = "col-md-4" %}
             {% endcase %}
 
-            {% comment %} Data subfolders support {% endcomment %}
-            {% assign array = include.data | split: '.' %}
-            {% assign arraysize = array | size %}
-            {% if arraysize > 1 %}
-                {% assign data = site.data %}
-                {% for entry in array %}
-                    {% assign temp = array[forloop.index0] %}
-                    {% assign data = data[temp] %}
-                {% endfor %}
+
+            {% if include.local == "true" %}
+                {% assign data = page[include.data] %}
             {% else %}
-                {% assign data = site.data[include.data] %}
+                {% comment %} Data subfolders support {% endcomment %}
+                {% assign array = include.data | split: '.' %}
+                {% assign arraysize = array | size %}
+                {% if arraysize > 1 %}
+                    {% assign data = site.data %}
+                    {% for entry in array %}
+                        {% assign temp = array[forloop.index0] %}
+                        {% assign data = data[temp] %}
+                    {% endfor %}
+                {% else %}
+                    {% assign data = site.data[include.data] %}
+                {% endif %}
             {% endif %}
 
             {% comment %} Exclude filters support {% endcomment %}
@@ -55,14 +60,22 @@
                         {%- if box.newtab -%}
                             {% assign target = "_blank" %}
                         {% endif %}
-                        <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                        {% if include.local == "true" %}
+                            <img src="{{ box.image }}" alt="{{ box.title }}">
+                        {% else %}
+                            <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                        {% endif %}
                         <div class="future-dsc">
-                            {%- if box.button -%}
+                            {% if include.local == "true" %}
                                 <div class="future-dsc-title">{{ box.title }}</div>
                             {% else %}
-                                <a href="{{ box.url }}" target="{{ target }}">
+                                {%- if box.button -%}
                                     <div class="future-dsc-title">{{ box.title }}</div>
-                                </a>
+                                {% else %}
+                                    <a href="{{ box.url }}" target="{{ target }}">
+                                        <div class="future-dsc-title">{{ box.title }}</div>
+                                    </a>
+                                {% endif %}
                             {% endif %}
                             {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
                             {%- if box.button -%}

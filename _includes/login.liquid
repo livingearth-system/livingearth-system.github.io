@@ -1,0 +1,68 @@
+{%- if include.data -%}
+    {% assign data = page[include.data] %}
+{% else %}
+    {% assign data = page.login %}
+{% endif %}
+
+{%- if data.class -%}
+    {% assign class = data.class | prepend: ' ' %}
+{% else %}
+    {% assign class = "" %}
+{% endif %}
+
+{%- if data.buttons -%}
+    {% assign buttons = " hero__content-buttons" %}
+{% endif %}
+
+<section class="login{{ class }}">
+    <div class="row">
+        <div class="col-12 col-lg-6 col-xl-5">
+            <div class="login-content">
+                {%- if data.content -%}{{ data.content | markdownify }}{% endif %}
+                {%- if data.form -%}
+                    <div class="login-form">
+                        <form action="../farm-one/" class="form validate" method="get" novalidate>
+                            <div class="mb-4">
+                                <label for="login" class="form-label">Email <sup>*</sup></label>
+                                <input id="login" name="login" type="email" class="form-control" placeholder="" required>
+                                <div class="invalid-feedback">Email is required</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label">Password <sup>*</sup></label>
+                                <input id="password" name="password" type="password" class="form-control" required>
+                                <div class="invalid-feedback">Password is required</div>
+                            </div>
+                            <div class="invalid-feedback form-error"></div>
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                            <a href="#" class="forgot">Forgot your password?</a>
+                            <p class="required">* Required fields</p>
+                        </form>
+                        <script src="/login/data.json" defer=""></script>
+                    </div>
+                {% else %}
+                    {%- if data.downloads -%}
+                        <div class="login-download">
+                            <p class="title">Download Your Report:</p>
+                            <select class="form-select login-selectbox">
+                                <option value="">Select year</option>
+                                {% for download in data.downloads %}
+                                    <option value="{{ download.url }}">{{ download.title }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+            {%- if data.image -%}
+                <figure class="login-image"><img class="img-fluid" src="{{ data.image.src | prepend: site.path.images | relative_url }}" alt="{{ data.image.alt }}"></figure>
+            {% endif %}
+        </div>
+    </div>
+    {%- if data.session -%}
+        <script>const sessionID = '{{ data.session }}';</script>
+        <a class="btn btn-primary login-logout" href="../login/">Logout</a>
+    {% endif %}
+</section>
+<script src="/assets/js/login.js" defer=""></script>

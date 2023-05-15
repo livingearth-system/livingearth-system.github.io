@@ -1,0 +1,29 @@
+{%- if include.data -%}
+    {% assign data = page[include.data] %}
+{% else %}
+    {% assign data = page.pre-login %}
+{% endif %}
+
+{%- if data.buttons -%}
+    {% assign buttons = " hero__content-buttons" %}
+{% endif %}
+
+<section class="pre-login">
+    <div class="row">
+        <div class="col-12 col-lg-6 col-xl-5">
+            <div class="pre-login-content">
+                {%- if data.content -%}{{ data.content | markdownify }}{% endif %}
+                {%- if data.buttons -%}
+                    {% for button in data.buttons %}
+                        <a href="{{ button.url }}" class="btn btn-primary {{ button.class }}">{{ button.title }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+            {%- if data.image -%}
+                <figure class="pre-login-image"><img class="img-fluid" src="{{ data.image.src | prepend: site.path.images | relative_url }}" alt="{{ data.image.alt }}"></figure>
+            {% endif %}
+        </div>
+    </div>
+</section>

@@ -160,14 +160,3 @@ try {
 } catch (err) {
     console.log(err);
 }
-
-// Validation
-document.querySelectorAll('.validate').forEach(form => {
-	form.addEventListener('submit', event => {
-		if (!form.checkValidity()) {
-			event.preventDefault()
-			event.stopPropagation()
-		}
-		form.classList.add('was-validated')
-	}, false)
-})
