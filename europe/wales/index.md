@@ -5,6 +5,9 @@ title: Wales
 subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales’s landscape"
 background: "#07073f"
 image: "/assets/img/heading/country.jpg"
+
+button2: "MLLM Project"
+button2_url: "./monmouthshire/"
 ---
 
 {%-
@@ -20,6 +23,15 @@ include tools.liquid
 heading="Tools"
 data="europe.wales.tools"
 cols="4"
+-%}
+
+{%-
+include contribute.liquid
+title="Project"
+heading="Monmoutshire Living <br>Land Management <br>Project"
+subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
+button="Find Out More" url="./monmouthshire/"
+image="/assets/img/monmoutshire-login.jpg"
 -%}
 
 {%-
