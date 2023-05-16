@@ -43,12 +43,15 @@
                     {%- if data.downloads -%}
                         <div class="login-download">
                             <p class="title">Download Your Report:</p>
-                            <select class="form-select login-selectbox">
-                                <option value="">Select year</option>
-                                {% for download in data.downloads %}
-                                    <option value="{{ download.url }}">{{ download.title }}</option>
-                                {% endfor %}
-                            </select>
+                            <div class="space">
+                                <select class="form-select login-selectbox">
+                                    <option value="">Select year</option>
+                                    {% for download in data.downloads %}
+                                        <option value="{{ download.url }}">{{ download.title }}</option>
+                                    {% endfor %}
+                                </select>
+                                <button class="btn btn-primary">Download</button>
+                            </div>
                         </div>
                     {% endif %}
                 {% endif %}

@@ -209,7 +209,7 @@
   }
 
   &-download {
-    padding: 33px 33px 33px 24px;
+    padding: 33px 24px;
     margin-bottom: 40px;
     color: black;
     background: #f5f5f5;
@@ -225,18 +225,37 @@
       font-weight: bold;
     }
 
+    .space {
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+
     .form-select {
       width: 100%;
       padding: 15px 28px 13px;
-      margin-left: 2px;
+      margin-bottom: 30px;
       font-size: 18px;
       background: white url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") no-repeat right 1em center;
       background-size: 20px 15px;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
       @media (min-width: 992px) {
         max-width: 283px;
+        margin-left: 2px;
+      }
+    }
+
+    .btn {
+      min-width: 150px;
+      margin: 0 auto;
+      display: block;
+      @media (min-width: 768px) {
+        margin-left: 20px;
       }
     }
   }

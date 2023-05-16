@@ -40,8 +40,13 @@ $(function () {
       }
     }
 
-    $('.login-download', this).find('select').on('change', function () {
-      window.open($(this).val(), '_blank');
+    $('.login-download', this).each(function () {
+      var that = $(this), select = $('select', that);
+      that.find('.btn').on('click', function () {
+        if (select.val()) {
+          window.open(select.val(), '_blank');
+        }
+      });
     });
 
     $('.login-logout', this).on('click', function (e) {
