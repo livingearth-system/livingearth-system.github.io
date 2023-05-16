@@ -16,7 +16,7 @@ login:
     ---
     Please sign in with your email address and password.
   image:
-    src: "/assets/img/login.jpg"
+    src: "/assets/img/monmoutshire.jpg"
   form: true
 
 ---
