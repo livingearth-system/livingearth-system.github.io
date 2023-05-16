@@ -2,11 +2,13 @@
 layout: page
 permalink: /europe/wales/monmouthshire/
 
-title: Monmoutshire
-heading: "Monmoutshire Living <br>Land Management <br>Project"
+title: Monmouthshire
+heading: "Monmouthshire Living <br>Land Management <br>Project"
 image: "/assets/img/heading/monmouthshire.jpg"
 nocontact: true
-nobuttons: true
+button1: "none"
+button2: "Land Owner Login"
+button2_url: "./login/"
 
 ### Pre-Login
 pre-login:

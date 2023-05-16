@@ -3,7 +3,7 @@ layout: page
 permalink: /europe/wales/monmouthshire/login/
 
 title: Login
-heading: "Monmoutshire Living <br>Land Management <br>Project"
+heading: "Monmouthshire Living <br>Land Management <br>Project"
 titleclass: heading-white
 nocontact: true
 nobuttons: true
@@ -16,7 +16,7 @@ login:
     ---
     Please sign in with your email address and password.
   image:
-    src: "/assets/img/monmoutshire.jpg"
+    src: "/assets/img/monmouthshire.jpg"
   form: true
 
 ---

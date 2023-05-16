@@ -41,8 +41,8 @@
         </div>
         <div class="country-subpage-welcome-living-button d-flex justify-content-xs-center justify-content-md-start mt-3">
             {%- if nobuttons != true -%}
-                <button type="button" onclick="location.href='{{ button1_url | default: "/contact/" }}'" class="country-subpage-search">{{ button1 | default: "Contact Us" }}</button>
-                <button type="button" onclick="location.href='{{ button2_url | default: "/contribute/" }}'" class="country-subpage-get-in-touch">{{ button2 | default: "Contribute" }}</button>
+                {%- if button1 != 'none' -%}<button type="button" onclick="location.href='{{ button1_url | default: "/contact/" }}'" class="country-subpage-search">{{ button1 | default: "Contact Us" }}</button>{% endif %}
+                {%- if button2 != 'none' -%}<button type="button" onclick="location.href='{{ button2_url | default: "/contribute/" }}'" class="country-subpage-get-in-touch">{{ button2 | default: "Contribute" }}</button>{% endif %}
             {% endif %}
         </div>
     </div>
