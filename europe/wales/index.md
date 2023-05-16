@@ -31,7 +31,7 @@ title="Project"
 heading="Monmoutshire Living <br>Land Management <br>Project"
 subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
 button="Find Out More" url="./monmouthshire/"
-image="/assets/img/monmoutshire-login.jpg"
+image="/assets/img/monmouthshire-login.jpg"
 -%}
 
 {%-
