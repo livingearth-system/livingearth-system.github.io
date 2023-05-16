@@ -43,4 +43,4 @@ boxes:
 
 {%- include login.liquid -%}
 
-{%- include boxes.liquid heading="Your Maps" local="true" data="boxes" -%}
+{%- include boxes.liquid heading="What your report will show" local="true" data="boxes" -%}
