@@ -15,12 +15,7 @@
     font-size: 16px;
     line-height: 26px;
     @media (min-width: 992px) {
-      padding-right: 20px;
       padding-bottom: 0;
-    }
-    @media (min-width: 1440px) {
-      padding-right: 35px;
-      padding-left: 45px;
     }
 
     h3 {
@@ -43,17 +38,6 @@
         margin-left: auto;
         display: block;
       }
-    }
-  }
-
-  &-more {
-    @media (min-width: 992px) {
-      padding-right: 20px;
-      padding-bottom: 0;
-    }
-    @media (min-width: 1440px) {
-      padding-right: 35px;
-      padding-left: 45px;
     }
   }
 

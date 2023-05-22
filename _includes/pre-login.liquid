@@ -22,8 +22,20 @@
         </div>
     </div>
     {%- if data.more -%}
+        <div class="row mt-5 mt-lg-4">
+            {%- if data.more1 -%}
+                <div class="col col-12 col-lg-6">
+                    {{ data.more1 | markdownify }}
+                </div>
+            {% endif %}
+            {%- if data.more2 -%}
+                <div class="col col-12 col-lg-6">
+                    {{ data.more2 | markdownify }}
+                </div>
+            {% endif %}
+        </div>
         <div class="row pt-5">
-            <div class="col-12">
+            <div class="col col-12 col-xl-10 mx-auto text-center">
                 {%- if data.more -%}
                     <div class="pre-login-more">
                         {{ data.more | markdownify }}
