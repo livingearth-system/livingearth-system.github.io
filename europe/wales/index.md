@@ -6,7 +6,7 @@ subtitle: "Novel world-first concept that aims to capture the state and dynamics
 background: "#07073f"
 image: "/assets/img/heading/country.jpg"
 
-button2: "MLLM Project"
+button2: "Monmouthshire Pilot"
 button2_url: "./monmouthshire/"
 ---
 
@@ -27,9 +27,9 @@ cols="4"
 
 {%-
 include contribute.liquid
-title="Project"
-heading="Monmoutshire Living <br>Land Management <br>Project"
-subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
+title="Monmouthshire Pilot"
+heading="Living Land Management Wales"
+subheading="Living Land Management Wales is a Monmouthshire-based project that is using satellite mapping, socio-economic and environmental data, and computer modelling to address the fundamental question ‘How should we use our land now and into the future?’."
 button="Find Out More" url="./monmouthshire/"
 image="/assets/img/monmouthshire-login.jpg"
 -%}

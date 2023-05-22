@@ -10,20 +10,31 @@
 
 <section class="pre-login">
     <div class="row">
-        <div class="col-12 col-lg-6 col-xl-5">
+        <div class="col-12 col-lg-6">
             <div class="pre-login-content">
                 {%- if data.content -%}{{ data.content | markdownify }}{% endif %}
-                {%- if data.buttons -%}
-                    {% for button in data.buttons %}
-                        <a href="{{ button.url }}" class="btn btn-primary {{ button.class }}">{{ button.title }}</a>
-                    {% endfor %}
-                {% endif %}
             </div>
         </div>
-        <div class="col-12 col-lg-6 col-xl-7">
+        <div class="col-12 col-lg-6">
             {%- if data.image -%}
                 <figure class="pre-login-image"><img class="img-fluid" src="{{ data.image.src | prepend: site.path.images | relative_url }}" alt="{{ data.image.alt }}"></figure>
             {% endif %}
         </div>
     </div>
+    {%- if data.more -%}
+        <div class="row pt-5">
+            <div class="col-12">
+                {%- if data.more -%}
+                    <div class="pre-login-more">
+                        {{ data.more | markdownify }}
+                    </div>
+                {% endif %}
+                {%- if data.buttons -%}
+                    {% for button in data.buttons %}
+                        <div class="text-center"><a href="{{ button.url }}" class="btn btn-primary mt-5 {{ button.class }}">{{ button.title }}</a></div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
 </section>
