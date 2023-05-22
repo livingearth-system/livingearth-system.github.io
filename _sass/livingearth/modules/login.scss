@@ -45,6 +45,18 @@
       }
     }
   }
+
+  &-more {
+    @media (min-width: 992px) {
+      padding-right: 20px;
+      padding-bottom: 0;
+    }
+    @media (min-width: 1440px) {
+      padding-right: 35px;
+      padding-left: 45px;
+    }
+  }
+
   &-image {
     padding: 0;
     margin: 0;
