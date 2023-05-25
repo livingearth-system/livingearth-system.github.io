@@ -13,10 +13,10 @@ login:
   class: hidden
   session: "0085c484-2d44-458b-b055-2b8e4fe56d31"
   content: |
-    ## Welcome Bryn Edrych,
-    __Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.__
+    ## Byrn Edrych Farm Report
+    __Byrn Edrych farm is located in Monmouthshire and is largely producing dairy. The farm is comprised primarily of pasture with a proportion containing rich broadleaved woodland. Areas of wetland also provide valuable habitat for biodiversity.__
 
-    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since 2018 and derived products with these including land cover, broad habitats and water/moisture persistence.
   image:
     src: "/assets/img/login.jpg"
   downloads:
@@ -29,15 +29,15 @@ login:
 
 ### Your Maps
 boxes:
-  - title: "Water Persistence"
-    subtitle: "Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."
-    image: "/assets/img/login-1.jpg"
-  - title: "Broad Habitats"
-    subtitle: "Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."
-    image: "/assets/img/login-2.jpg"
   - title: "Land Cover"
-    subtitle: "Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."
+    subtitle: "Land Cover is the physical and biological cover of the land surface and includes vegetation (managed or semi-natural), water and bare surfaces. The land cover maps generated through Living Land Management use the legends of the United Nation's Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS)."
     image: "/assets/img/login-3.jpg"
+  - title: "Broad Habitats"
+    subtitle: "Habitats represent the natural environments in which individual or groups of plant or animal species lives. The habitat maps are generated from satellite data and are based on Wales' Phase 1 Habitat Taxonomy."
+    image: "/assets/img/login-2.jpg"
+  - title: "Water Persistence"
+    subtitle: "The water/moisture persistence is obtained from time-series of radar data that are acquired almost every day over Wales and indicate relative frequency of wet conditions across the landscape."
+    image: "/assets/img/login-1.jpg"
 
 ---
 
