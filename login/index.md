@@ -32,7 +32,7 @@ pre-login:
 
     Through these two strands Living Land Management Wales will demonstrate how innovation and technology such as Living Wales, along with socio-economic and environmental data analysis and climate modelling, can be used to inform and enhance integrated long-term decision making for sustainable local food production, support preventative action to reverse the nature and climate emergencies, and build understanding of the value of our land in a changing climate.
   more: |
-    __Living Land Management Wales is a collaborative partnership project delivered by Aberystwyth University, Dwr Cymru Welsh Water, Monmouthshire County Council, and Natural Resources__
+    __Living Land Management Wales is a collaborative partnership project delivered by Aberystwyth University, Dwr Cymru Welsh Water, Monmouthshire County Council, and Natural Resources Wales.__
 ---
 
 {%- include pre-login.liquid -%}
