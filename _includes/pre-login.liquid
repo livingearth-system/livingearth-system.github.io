@@ -34,6 +34,17 @@
                 </div>
             {% endif %}
         </div>
+        {%- if data.logos -%}
+            <div class="logos pt-4 pt-md-3 pt-xl-5">
+                <div class="row">
+                    {% for logo in data.logos %}
+                        <div class="col col-6 col-md-4 col-xl-2 mb-4 md-md-3 mb-xl-5">
+                            <figure><img class="img-fluid" src="{{ logo.image }}" alt="{{ logo.title }}"></figure>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
         <div class="row pt-5">
             <div class="col col-12 col-xl-10 mx-auto text-center">
                 {%- if data.more -%}

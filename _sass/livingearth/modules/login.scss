@@ -321,3 +321,18 @@
     background: #1d2865;
   }
 }
+
+.logos {
+  figure {
+    max-width: 210px;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      user-select: none;
+    }
+  }
+}
