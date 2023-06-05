@@ -14,11 +14,9 @@ login:
   session: "3279fcbf-6506-471d-9b22-d7a133560fab"
   content: |
     ## Llanarth Estate Report
-    __The Llanarth Estate is a privately owned and run estate located between Abergavenny and Monmouth adjoining the Usk valley, in Monmouthshire,  in a beautiful part of South East Wales, close to the Black Mountains, and the Brecon Beacons.__
+    __This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since 2018 and derived products with these including land cover, broad habitats and water/moisture persistence.__
 
-    With over 100 residential, 5 farms and many small holdings as well as several commercial spaces.
-
-    This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since 2018 and derived products with these including land cover, broad habitats and water/moisture persistence.
+    _This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time._
   image:
     src: "/assets/img/login.jpg"
   downloads:
