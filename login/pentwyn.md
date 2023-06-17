@@ -13,10 +13,10 @@ login:
   class: hidden
   session: "f2d044d8-4aa4-4568-a9fc-9bd2f5016816"
   content: |
-    ## Pentwyn Farm Report
-    __This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since 2018 and derived products with these including land cover, broad habitats and water/moisture persistence.__
+    ## Pentwyn
+    __Located in Trellech Ward this Land is centered at postcode NP254SE and is approximately 141.2 acres. The highest point of the land is 210m and the lowest is 110m.__
 
-    This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time.
+    This land lies in the Wye catchment. Your closest main river is the Wye which lies 286m to the ENE. Local River Catchment of the river Wye called: R Wye - conf Walford Bk to Bigsweir Br.
   image:
     src: "/assets/img/login.jpg"
   downloads:
@@ -43,4 +43,6 @@ boxes:
 
 {%- include login.liquid -%}
 
-{%- include boxes.liquid heading="What your report will show" local="true" data="boxes" -%}
+{%- include boxes.liquid heading="What your report will show" subheading="<strong>This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since</strong>" local="true" data="boxes" -%}
+
+*This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time.*

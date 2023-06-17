@@ -1,9 +1,9 @@
 ---
 layout: page
-permalink: /europe/wales/monmouthshire/llanarth-estate/
+permalink: /europe/wales/monmouthshire/llanover-estate/
 
-title: Llanarth Estate
-heading: Llanarth Estate
+title: Llanover Estate
+heading: Llanover Estate
 titleclass: heading-white
 nocontact: true
 nobuttons: true
@@ -13,7 +13,7 @@ login:
   class: hidden
   session: "3279fcbf-6506-471d-9b22-d7a133560fab"
   content: |
-    ## Llanarth Estate Report
+    ## Llanover Estate Report
     __This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since 2018 and derived products with these including land cover, broad habitats and water/moisture persistence.__
 
     This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time.
@@ -43,4 +43,6 @@ boxes:
 
 {%- include login.liquid -%}
 
-{%- include boxes.liquid heading="What your report will show" local="true" data="boxes" -%}
+{%- include boxes.liquid heading="What your report will show" subheading="<strong>This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since</strong>" local="true" data="boxes" -%}
+
+*This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time.*

@@ -13,10 +13,10 @@ login:
   class: hidden
   session: "0085c484-2d44-458b-b055-2b8e4fe56d31"
   content: |
-    ## Byrn Edrych Farm Report
-    __This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since 2018 and derived products with these including land cover, broad habitats and water/moisture persistence.__
+    ## Bryn Edrych
+    __Located in Llantilio Crossenny Ward this Land is centered at postcode NP25 5NL and is approximately 96.1 acres. The highest point of the land is 120m and the lowest is 70m.__
 
-    This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time.
+    This land lies in the [Wye] catchment. Your closest main river is the Afon Troddi which lies 859m to the SSW. Local River Catchment of the river Wye called: R Wye - conf Walford Bk to Bigsweir Br.
   image:
     src: "/assets/img/login.jpg"
   downloads:
@@ -43,4 +43,6 @@ boxes:
 
 {%- include login.liquid -%}
 
-{%- include boxes.liquid heading="What your report will show" local="true" data="boxes" -%}
+{%- include boxes.liquid heading="What your report will show" subheading="<strong>This brochure extracts information on your landholding for different years from the newly developed Welsh Data Cube (WDC), which houses all satellite data acquired over Wales since</strong>" local="true" data="boxes" -%}
+
+*This log-in space is secure and not publicly accessible. It has been developed as part of the Living Land Management Wales project as proof of concept; additional maps and functionality may be added from time to time.*
