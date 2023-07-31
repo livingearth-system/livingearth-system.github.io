@@ -1,7 +1,7 @@
 - id: "ravine"
   title: "Ravine woodlands"
-  subtitle: ""
-  image: "/assets/img/wales/benchmark/Ravine_woodlands.jpg"
+  subtitle: "Ravine woodlands are found in Devils Bridge"
+  image: "/assets/img/wales/benchmark/Ravine woodlands.jpg"
   button: "Read More"
   url: "./ravine/"
 
