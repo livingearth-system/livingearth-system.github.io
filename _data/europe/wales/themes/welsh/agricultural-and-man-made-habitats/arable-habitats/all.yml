@@ -1,6 +1,6 @@
 - id: "tilled-land"
   title: "Tilled Land"
-  subtitle: "For the purposes of this section, we are referring to ‘tilled’ land as illustrated in the image above. Tilled land tends be visible for relatively short periods but becomes a striking feature of the landscape in the period from ploughing to seed germination and crop development. It can attract large groups of invertebrate feeding birds, e.g., crows and gulls, and seed-eating pigeons and finches. For research purposes, from the increasingly regular availability of high resolution satellite images we can detect both the approximate timing of ploughing and crop harvesting, which is important land use information."
+  subtitle: "For the purposes of this section, we are referring to ‘tilled’ land as illustrated in the image above. "
   image: "/assets/img/wales/benchmark/Tilled land.jpg"
-  button: "Read More"
+  button: "Tilled land tends be visible for relatively short periods but becomes a striking feature of the landscape in the period from ploughing to seed germination and crop development. It can attract large groups of invertebrate feeding birds, e.g., crows and gulls, and seed-eating pigeons and finches. For research purposes, from the increasingly regular availability of high resolution satellite images we can detect both the approximate timing of ploughing and crop harvesting, which is important land use information."
   url: "./tilled-land/"
