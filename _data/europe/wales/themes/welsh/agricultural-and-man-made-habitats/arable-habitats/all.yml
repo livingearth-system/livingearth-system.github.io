@@ -11,3 +11,10 @@
   image: "/assets/img/wales/benchmark/Maize.jpg"
   button: "Read More"
   url: "./cultivated-crops/"
+  
+- id: "untreated-fallow"
+  title: "Untreated fallow land and crops"
+  subtitle: "Untreated crops, i.e., crops that have not been treated with fertilisers, herbicides and insecticides, are extremely rare in the Welsh countryside now and any that do exist will almost certainly be owned and/or managed for biodiversity reasons. The last example of a ‘poppy field’ in West Wales has been ‘under grass’ and not been cultivated for more than a decade at the time of writing, due largely to pressure from neighbouring landowners not wanting seeds contaminating their crops. The arable flora on this farm was nationally important at the time and also supported flocks of larks, pipits. finches and buntings during the winter months. In the current climate, the plants, insects and birds associated with arable habitats in Wales are under serious threat of disappearing from the landscape. It is a failing of nature conservation that, despite covering about 10% of the land area, there is only one protected site in Wales that was designated for the protection of arable plant habitats."
+  image: "/assets/img/wales/benchmark/Untreated fallow.jpg"
+  button: "Read More"
+  url: "./untreated-fallow/"
