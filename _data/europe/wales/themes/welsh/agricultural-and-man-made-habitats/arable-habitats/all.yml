@@ -4,3 +4,10 @@
   image: "/assets/img/wales/benchmark/Tilled land.jpg"
   button: "Read More"
   url: "./tilled-land/"
+  
+- id: "cultivated-crops"
+  title: "Cultivated crops"
+  subtitle: "The most commonly grown cultivated crops in Wales are fodder crops, e.g. maize and oilseed rape, which account for about 30% of the total area. Barley (25%) and wheat (24%) are the most popular cereals, with c.4% of cultivated land supporting potato crops. A combination of less commonly grown crops, e.g. field beans and flax, accounts for the remaining area. The intensity of the cultivation management regime will determine the biodiversity associated with it. The highest biodiversity will be found in crops, or crop margins, that are not fertilised with nitrogen and/or phosphorus based products, or sprayed with herbicides or insecticides. Sadly, the vast majority of cultivated crops in Wales are planted right up to the field boundaries, heavily fertilised and sprayed with both herbicides and insecticides, leaving the crop virtually devoid of biodiversity value. This is a relative trend in Wales at least and the situation could still be recovered to some degree through the availability of appropriate incentives in the agri-environment scheme and through modifying the qualification guidelines for the selection of arable Sites of Special Scientific Interest so that to is possible for sites in Wales to be designated. In the absence of these changes the outlook for the threatened fauna and flora associated with arable land in Wales is bleak, and fields of poppies (Papaver rhoeas) and the song of yellowhammers (Emberiza citronella) will be consigned to the past. Some states of arable habitats are described in the sections below."
+  image: "/assets/img/wales/2.2.1.2 Cultivated Crops.jpg"
+  button: "Read More"
+  url: "./cultivated-crops/"
