@@ -1,5 +1,45 @@
 /* ==========================================================================
    HEADER
    ========================================================================== */
-.header {
+.header {}
+.form-control-search {
+   display: flex;
+   gap: 8px;
+   .has-search{
+      display: flex;
+      align-items: center;
+      
+      .form-control {
+        padding-left: 2.375rem;
+        border-radius: 0;
+        width: 275px;
+        height: 48px;
+        background-color: black;
+     }
+     .form-control-feedback {
+         position: absolute;
+         z-index: 2;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 38px;
+         height: 38px;
+         flex-shrink: 0;
+         text-align: center;
+         pointer-events: none;
+         color: #aaa;
+      }
+   }
+   .commit-search {
+      width: 48px; 
+      height: 48px; 
+      border: none;
+      background-color: #FFFFFF;
+   }
 }
+
+@media (max-width: 768px) {
+   .form-control-search {
+     display: none;
+   }
+ }
