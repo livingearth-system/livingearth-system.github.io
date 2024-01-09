@@ -1,0 +1,129 @@
+.map-container {
+  overflow: hidden;
+}
+#map {
+  height: 100vh;
+  width: 100vw;
+}
+.leaflet-popup-close-button {
+  margin: 8px !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0px !important;
+  border-radius: 0 !important;
+}
+
+.leaflet-popup-content p {
+  margin: 0 !important;
+}
+
+.leaflet-point-title-wrapper {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(
+    --Gradient-Gradient,
+    linear-gradient(72deg, #1d2865 0%, #0a4863 100%)
+  );
+  .leaflet-point-title {
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .leaflet-point-date {
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.leaflet-point-content-wrapper {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  width: 282px;
+  .leaflet-point-content-desc {
+    color: #535353;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    span {
+      color: #535353;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Raleway;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+    }
+  }
+  .leaflet-point-content-imgages-wrapper {
+    display: flex;
+    gap: 8px;
+    .leaflet-point-content-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      span {
+        color: #535353;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Raleway;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400 !important;
+}
+@media (max-width: 860px) {
+  .map-container {
+    background-color: white;
+    padding: 30px 30px;
+    #map {
+      width: calc(100vw - 60px);
+      height: 50vh;
+    }
+  }
+}

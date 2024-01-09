@@ -1,0 +1,25 @@
+- title: "See it on the map"
+  subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..." 
+  image: "../assets/img/tools1.jpg"
+  url: "/tools/interactive-map"
+
+- title: "Get the data"
+  subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..."  
+  image: "/assets/img/tools2.jpg"
+  url: "/tools/get-the-data"
+
+- title: "Analyse the data"
+  subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..." 
+  image: "/assets/img/tools3.jpg"
+  url: "/tools/analyze-the-data"
+  newtab: true
+
+- title: "EARTHTRACK App Verification"
+  subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..." 
+  image: "/assets/img/tools4.jpg"
+  url: "#"
+
+- title: "Industry Specific Site"
+  subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..."  
+  image: "/assets/img/tools5.jpg"
+  url: "#"

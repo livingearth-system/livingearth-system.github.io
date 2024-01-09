@@ -1,64 +1,111 @@
 <!-- TOOLS -->
-<section class="mt-100 mb-100 tools">
-    <div class="row">
-        <div class="col-12">
-            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.all -%}<a href="{{ include.all }}">View all</a>{% endif %}</h2>{% endif %}
-            {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
-        </div>
+<section class="mt-80 mb-80 tools-learning">
+  <div class="row">
+    <div class="col-12">
+      {%- if include.heading -%}
+        <h2 class="common-title">
+          {{ include.heading }}
+          {%- if include.all -%}
+            <a href="{{ include.all }}">View all</a>
+          {%- endif %}
+        </h2>
+      {% endif %}
+      {%- if include.subheading -%}
+        <p>{{ include.subheading }}</p>
+      {% endif %}
     </div>
+  </div>
 
-    {%- if include.data -%}
-        {% comment %} Data subfolders support {% endcomment %}
-        {% assign array = include.data | split: '.' %}
-        {% assign arraysize = array | size %}
-        {% if arraysize > 1 %}
-            {% assign data = site.data %}
-            {% for entry in array %}
-                {% assign temp = array[forloop.index0] %}
-                {% assign data = data[temp] %}
-            {% endfor %}
-        {% else %}
-            {% assign data = site.data[include.data] %}
-        {% endif %}
-
-        <div class="row effect">
-            {%- if include.cols -%}
-                {% for box in data %}
-                    {%- if include.cols == "4" -%}
-                        {% assign cols = "col-md-3" %}
-                    {%- else -%}
-                        {% assign cols = "col-md-4" %}
-                    {% endif %}
-                    <div class="col-12 col-sm-6 {{ cols }}">
-                        <section class="item">
-                            {% assign target = "" %}
-                            {%- if box.newtab -%}{% assign target = "_blank" %}{% endif %}
-                            <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.heading }}" style="width:100%;height:253px;object-fit:cover;"></a>
-                            <div class="tools-content">
-                                {%- if box.title -%}<h4><a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a></h4>{% endif %}
-                                {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
-                            </div>
-                        </section>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <div class="col-12">
-                    <div class="owl-carousel owl-theme owl-img-responsive">
-                        {% for box in data %}
-                            <section class="item">
-                                {% assign target = "" %}
-                                {%- if box.newtab -%}{% assign target = "_blank" %}{% endif %}
-                                <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.heading }}"></a>
-                                <div class="tools-content">
-                                    {%- if box.title -%}<h4><a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a></h4>{% endif %}
-                                    {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
-                                </div>
-                            </section>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-        </div>
+  {%- if include.data -%}
+    {% assign array = include.data | split: '.' %}
+    {% assign arraysize = array | size %}
+    {% if arraysize > 1 %}
+      {% assign data = site.data %}
+      {% for entry in array %}
+        {% assign temp = array[forloop.index0] %}
+        {% assign data = data[temp] %}
+      {% endfor %}
+    {% else %}
+      {% assign data = site.data[include.data] %}
     {% endif %}
+
+    <div class="row effect">
+      {%- if include.cols -%}
+        {% for box in data %}
+          {%- if include.cols == '4' -%}
+            {% assign cols = 'col-md-3' %}
+          {%- else -%}
+            {% assign cols = 'col-md-4' %}
+          {% endif %}
+          <div class="col-12 col-sm-6 {{ cols }}">
+            <section class="item">
+              {% assign target = '' %}
+              {%- if box.newtab -%}{% assign target = '_blank' %}{% endif %}
+              <a href="{{ box.url }}" target="{{ target }}"
+                ><img
+                  src="{{ box.image }}"
+                  alt="{{ box.heading }}"
+                  style="width:100%;height:253px;object-fit:cover;"
+              ></a>
+              <div class="tools-content">
+                {%- if box.title -%}
+                  <h4>
+                    <a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a>
+                  </h4>
+                {% endif %}
+                {%- if box.subtitle -%}
+                  <p>{{ box.subtitle }}</p>
+                {% endif %}
+              </div>
+            </section>
+          </div>
+          5
+        {% endfor %}
+      {% elsif include.scrollable == true %}
+        <div class="d-flex col-12 tools-container">
+          {% for box in site.data.tools.index %}
+            <div class="tools_wrapper">
+              <a class="tools-img-container" href="blog/monitor-landscapes"
+                ><img
+                  class="tools-img"
+                  src="{{ box.image }}"
+                  alt=""
+              ></a>
+              <div class="tools_title_wrapper">
+                <p class="tools_title">
+                  {{ box.title }}
+                </p>
+                <p class="tools_subtitle">
+                  {{ box.subtitle }}
+                </p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="col-12">
+          <div class="owl-carousel owl-theme owl-img-responsive">
+            {% for box in data %}
+              <section class="item">
+                {% assign target = '' %}
+                {%- if box.newtab -%}{% assign target = '_blank' %}{% endif %}
+                <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.heading }}"></a>
+                <div class="tools-content">
+                  {%- if box.title -%}
+                    <h4>
+                      <a href="{{ box.url }}" target="{{ target }}">{{ box.title }}</a>
+                    </h4>
+                  {% endif %}
+                  {%- if box.subtitle -%}
+                    <p>{{ box.subtitle }}</p>
+                  {% endif %}
+                </div>
+              </section>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
 </section>
 <!-- /TOOLS -->

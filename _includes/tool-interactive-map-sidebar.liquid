@@ -1,0 +1,233 @@
+<script>
+    function toggleDropdown2() {
+        var selectedYear = document.getElementById('yearDropdown2').value;
+
+        if (!isNaN(selectedYear)) {
+            document.querySelector('.before').style.display = 'none';
+            document.querySelector('.after').style.display = 'block';
+        }
+        var afterSelect = document.querySelector('.after #yearDropdown2');
+        afterSelect.value = selectedYear;
+
+        document.querySelector('.after .select-base-map').textContent = 'select a base map for ' + selectedYear;
+        document.querySelector('.after .option-year').textContent = 'Select a year to see options for ' + selectedYear;
+    }
+
+    document.getElementById('yearDropdown2').onchange = toggleDropdown2;
+</script>
+
+
+<!-- TOOL-HEADING -->
+<div class="commom-class-disabled">
+    <div id="interactive-map" class="interactiveMap-display-by-id">
+        <div class="tool_side_bar">
+            <div class="country_form">
+                <select class="form-select" aria-label="Default select example" class="choose_country">
+                    <option selected>Wales</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+                <!-- INTERACTIVE-MAP-BEFORE -->
+                <div class="before">
+                    <div class="living-earth">
+                        <div class="left-content">
+                            <img src="/assets/img/living_wales.png">
+                        </div>
+                        <div class="right-content">
+                            <img src="/assets/img/list.svg">
+                            <p>LEGEND</p>
+                        </div>
+                    </div>
+                    <div class="banner-button">
+                        {% for tool_item in site.data.tools.sidebar.interactive-map %}
+                        <button type="button" class="tool-button-banner">
+                            <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
+                            <p>{{ tool_item.title }}</p>
+                        </button>
+                        {% endfor %}
+                    </div>
+                    <div class="select-year">
+                        <div class="select-year-title">select a year</div>
+                        <select id="yearDropdown2" class="form-select" aria-label="Select a year" size="1"
+                            onclick="toggleDropdown2()">
+                            <option class="label-dropdown" disabled selected>Select a year</option>
+                            {% for year_item in site.data.year.index %}
+                            <option value="{{ year_item.year }}">{{ year_item.year }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="base-map">
+                        <p class="select-base-map">select a base map</p>
+                        <p class="option-year">Select a year to see options</p>
+                    </div>
+                    <div class="additional-layer">
+                        <p class="select-additional-layer">select an additional layer</p>
+                        <p class="option-layer">Select a year to see options</p>
+                    </div>
+                </div>
+                <!-- /INTERACTIVE-MAP-BEFORE -->
+
+
+                <!-- INTERACTIVE-MAP-AFTER -->
+                <div class="after" style="display: none;">
+                    <div class="living-earth">
+                        <div class="left-content">
+                            <img src="/assets/img/living_wales.png">
+                        </div>
+                        <div class="right-content">
+                            <img src="/assets/img/list.svg">
+                            <p>LEGEND</p>
+                        </div>
+                    </div>
+                    <div class="banner-button">
+                        {% for tool_item in site.data.tools.sidebar.interactive-map %}
+                        <button type="button" class="tool-button-banner">
+                            <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
+                            <p>{{ tool_item.title }}</p>
+                        </button>
+                        {% endfor %}
+                    </div>
+                    <div class="select-year">
+                        <div class="select-year-title">select a year</div>
+                        <select id="yearDropdown2" class="form-select" aria-label="Select a year" size="1"
+                            onclick="toggleDropdown2()">
+                            <option class="label-dropdown" disabled selected>Select a year</option>
+                            {% for year_item in site.data.year.index %}
+                            <option value="{{ year_item.year }}">{{ year_item.year }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="under-select-year"></div>
+                    <div class="after-selected-year">
+                        <p class="select-base-map">select a base map</p>
+                        <div class="base-land">
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="base-land">
+                            <label for="checkbox1">
+                                <p>Base Land cover map plus 2017</p>
+                            </label>
+                            <p class="icon-atfer-selected-year">
+                                <span><img src="/assets/icon/download.svg"></span>
+                                <span><img src="/assets//icon/questionmark.svg"></span>
+                            </p>
+                        </div>
+                        <div class="no-basemap">
+                            <input type="checkbox" id="checkbox2" name="checkbox2" value="no-base-map">
+                            <label for="checkbox2">
+                                <p> No basemap</p>
+                            </label>
+                            <p class="icon-atfer-selected-year">
+                                <span><img src="/assets/icon/download.svg"></span>
+                                <span><img src="/assets//icon/questionmark.svg"></span>
+                            </p>
+                        </div>
+                        <p class="select-base-map">land</p>
+                        <div class="after-selected-line"></div>
+                        <div class="land-checkbox">
+                            <div class="Canopy">
+                                <input type="checkbox" id="landcheckbox1" name="landcheckbox1" value="canopy">
+                                <label for="landcheckbox1">Canopy cover 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="Canopy-continous">
+                                <input type="checkbox" id="landcheckbox2" name="landcheckbox2" value="canopy-continous">
+                                <label for="landcheckbox2"> Canopy cover (continuous) 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="life-form">
+                                <input type="checkbox" id="landcheckbox3" name="landcheckbox3" value="lifeform">
+                                <label for="landcheckbox3"> Lifeform 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="leaf-type">
+                                <input type="checkbox" id="landcheckbox4" name="landcheckbox4" value="leaf-type">
+                                <label for="landcheckbox4"> Leaftype / phenology 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="non-stress">
+                                <input type="checkbox" id="landcheckbox5" name="landcheckbox5" value="leaf-type">
+                                <label for="landcheckbox5"> Non-trees semi-natural communities 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="select-base-map">Water</p>
+                        <div class="after-selected-line"></div>
+                        <div class="water-checkbox">
+                            <div class="vegetation">
+                                <input type="checkbox" id="checkbox3" name="checkbox3" value="vegetation">
+                                <label for="checkbox3">Water/moiture - persistence/ seasonality seminatural vegetation
+                                    2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="continous">
+                                <input type="checkbox" id="checkbox4" name="checkbox4" value="moiture">
+                                <label for="checkbox4"> Water/moiture - persistence/ seasonality (continuous)
+                                    2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="select-base-map">Land</p>
+                        <div class="after-selected-line"></div>
+                        <div class="second-land">
+                            <div class="above-ground">
+                                <input type="checkbox" id="checkbox5" name="checkbox5" value="above-ground">
+                                <label for="checkbox5">Above ground biomass 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /INTERACTIVE-MAP-AFTER -->
+
+            </div>
+            <div class="learning_resource">
+                <div class="button-tool">
+                    <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
+                    <img src="/assets/img/Arrow.png" alt="Arrow Image">
+                </div>
+                <div class="brand_logo">
+                    <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
+                    <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
+                    <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
+                    <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var learningResourceButton = document.getElementById('learningResourceButton');
+
+        if (learningResourceButton) {
+            learningResourceButton.addEventListener('click', function () {
+                window.location.href = '/tools/learning-resources';
+            });
+        }
+    });
+</script>

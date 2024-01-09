@@ -1,0 +1,34 @@
+---
+layout: default
+home: true
+---
+
+<!-- Modal -->
+<div class="modal fade" id="gettingStartedModal" tabindex="-1" role="dialog" aria-labelledby="gettingStartedModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xs modal-sm modal-lg modal-xl modal-xxl custom-modal-width">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Include the getting-started content here -->
+        {% include getting-started.liquid %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    $('#gettingStartedModal').modal('show');
+
+    $('#understoodButton').on('click', function () {
+      $('#gettingStartedModal').modal('hide');
+    });
+  });
+</script>
+
+
+{% include tool-heading.liquid %}
+<div class="tool_container">
+  {% include tool-sidebar.liquid %}
+  {{content}}
+</div>

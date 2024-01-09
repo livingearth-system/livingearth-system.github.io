@@ -1,0 +1,112 @@
+.tool-button {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  text-decoration: none !important;
+  color: #072857;
+  text-transform: uppercase;
+  display: flex;
+  font-size: 12px;
+  padding: 25px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  outline: none; 
+  letter-spacing: 0.5px;
+  background-color: #f1f2f8;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.tool-button-case-study {
+  margin-top: 0 !important;
+}
+.tool-button-disable {
+  color: #808da1;
+}
+
+.svg-icon {
+  fill: #072857;
+  transition: fill 0.3s; 
+}
+.svg-icon2 {
+  display: none;
+}
+
+.toolpage {
+  display: flex;
+  background-color: #f1f2f8;
+  box-shadow: 0 0 0 100vmax #f1f2f8;
+  clip-path: inset(0 -100vmax);
+}
+
+.tool-button.active {
+  background-color: #072857;
+  color: white;
+  .svg-icon {
+    display: none;
+    fill: #fff;
+    transition: fill 0.3s;
+  }
+  .svg-icon2 {
+    display: block;
+    fill: #fff;
+    transition: fill 0.3s; 
+  }
+}
+
+.tool-button.active .svg-icon {
+  fill: white; 
+}
+
+
+.tool-button:hover {
+  background-color: #072857;
+  color: white;
+  .svg-icon {
+    display: none;
+    fill: #fff;
+    transition: fill 0.3s;
+  }
+  .svg-icon2 {
+    display: block;
+    fill: #fff;
+    transition: fill 0.3s; 
+  }
+}
+
+.tool-button:hover .svg-icon {
+  fill: white; 
+}
+.tool-button p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1399px) {
+  .tool-button {
+    flex-direction: column;
+    margin-top: 0;
+    width: 170px;
+  }
+  .toolpage {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 369px) {
+  .tool-button {
+    flex-direction: column;
+    margin-top: 0;
+    width: 170px;
+  }
+  .toolpage {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 62px;
+  }
+}

@@ -1,0 +1,53 @@
+.form-select-indsutry {
+  width: 94%;
+  height: auto;
+  padding: 15px 0 15px 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.select-site-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: -20px;
+}
+.select-site-title-industry {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.industry-select-year-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: -20px;
+}
+.select-base-map-industry {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.industry-selected-line {
+  max-width: 372px;
+  height: 1px;
+  background-color: #9f9f9f;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.tool_container .tool_side_bar .country_form .form-select-indsutry {
+  color: #1d1b24;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #d0cfd5;
+}
