@@ -17,9 +17,9 @@
 - title: "EARTHTRACK App Verification"
   subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..." 
   image: "/assets/img/tools4.jpg"
-  url: "#"
+  url: "/tools/earthtrack-app"
 
 - title: "Industry Specific Site"
   subtitle: "Lorem ipsum dolor sit amet, conse adipiscing elit..."  
   image: "/assets/img/tools5.jpg"
-  url: "#"
+  url: "/tools/industry-specific-site"

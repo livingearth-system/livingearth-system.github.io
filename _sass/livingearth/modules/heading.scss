@@ -49,6 +49,9 @@
 }
 
 @media (max-width: 767px) {
+  .country_subpage-benner-img {
+    height: 610px;
+  }
   .dsc-about-inner {
     margin-top: 10px;
   }
@@ -102,6 +105,6 @@
 
   .country_subpage-benner-img {
     max-width: 100%;
-    height: 400px;
+    height: 450px;
   }
 }

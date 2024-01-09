@@ -1,5 +1,5 @@
 .form-select {
-  width: 94%;
+  width: 100%;
   height: auto;
   padding: 15px 0 15px 0;
   margin-top: 25px;
@@ -51,6 +51,7 @@
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .tool-button-banner:nth-child(1) {
@@ -65,12 +66,25 @@
 .tool-button-banner:nth-child(5) {
   width: 121px;
 }
-
+.tool-button-banner:hover {
+  background-color: #072857;
+  color: #ffffff;
+}
 .tool-button-banner:active {
   background-color: #072857;
   color: #ffffff;
 }
+.tool-button-banner:focus{
+  background-color:#072857;
+  color: white;
+}
+.tool-button-banner:hover img {
+  filter: invert(100%);
+}
 .tool-button-banner:active img {
+  filter: invert(100%);
+}
+.tool-button-banner:focus img {
   filter: invert(100%);
 }
 .select-year {

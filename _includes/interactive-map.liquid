@@ -17,7 +17,7 @@
     }).addTo(mymap);
     json.features.forEach(item => {
       L.marker(item.geometry.coordinates.reverse()).addTo(mymap).bindPopup(`
-          <div class="col-12">
+          <div>
             <div class="leaflet-point-title-wrapper"
             >
               <p class="leaflet-point-title">${ item.properties.legend }</p>

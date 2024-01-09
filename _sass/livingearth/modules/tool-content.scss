@@ -20,7 +20,6 @@
       flex-grow: 1;
 
       select {
-        width: 372px;
         flex-shrink: 0;
         stroke-width: 1px;
         stroke: rgba(96, 92, 114, 0.3);
@@ -61,7 +60,6 @@
         padding: 16px 0;
 
         .title-sub {
-          width: 388px;
           height: 68px;
 
           .title {
@@ -81,7 +79,6 @@
 
           .subtitle {
             color: #535353;
-
             font-feature-settings: "clig" off, "liga" off;
             font-family: Raleway;
             font-size: 14px;
