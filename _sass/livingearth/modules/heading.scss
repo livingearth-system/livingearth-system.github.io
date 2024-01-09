@@ -1,0 +1,107 @@
+.subtitle {
+  display: flex;
+  width: 80%;
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.country-subpage-welcome-living-button {
+  padding-left: 50px;
+}
+
+.main-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.dsc-about-inner {
+  padding-left: 0;
+}
+
+.heading-subtitle {
+  margin-top: 1px;
+}
+
+.checkbox-heading {
+  padding-right: 10px;
+}
+
+@media (max-width: 1399px) {
+  .dsc-about-inner h3 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 958px) {
+  .subtitle:nth-child(1n) {
+    width: 90%;
+  }
+
+  .dsc-about-inner h3 {
+    padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .dsc-about-inner {
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .dsc-about-inner {
+    margin-top: 10px;
+  }
+
+  .dsc-about-inner h3 {
+    font-size: 20px;
+  }
+
+  .subtitle:nth-child(1n) {
+    width: 100%;
+  }
+
+  .subtitle {
+    margin-bottom: 0.5rem;
+    letter-spacing: 0;
+  }
+  .country_subpage-benner-img {
+    max-width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 465px) {
+  .dsc-about-inner h3 {
+    font-size: 20px;
+    padding-left: 0px !important;
+  }
+
+  .dsc-about-inner {
+    margin-top: 10px;
+  }
+
+  .dsc-about-inner h5 {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .subtitle:nth-child(1n) {
+    font-size: 12px !important;
+  }
+
+  .country_subpage-benner-img {
+    max-width: 100%;
+    height: 400px;
+  }
+}

@@ -15,6 +15,7 @@
         width: 275px;
         height: 48px;
         background-color: black;
+        border: 1px solid #9F9F9F;
      }
      .form-control-feedback {
          position: absolute;
@@ -28,6 +29,7 @@
          text-align: center;
          pointer-events: none;
          color: #aaa;
+         
       }
    }
    .commit-search {
@@ -37,8 +39,17 @@
       background-color: #FFFFFF;
    }
 }
+.other-page-header .form-control-search .has-search .form-control {
+   background-color: white;
+ }
+ .other-page-header .form-control-search .commit-search {
+   background-color: #072857;
+   svg path {
+     fill: white;
+   }
+ }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
    .form-control-search {
      display: none;
    }

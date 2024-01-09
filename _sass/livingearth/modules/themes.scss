@@ -1,0 +1,41 @@
+/* ==========================================================================
+   THEMES
+   ========================================================================== */
+   .themes_wrapper {
+     .themes_title_wrapper {
+        width: 217px;
+       .themes_title {
+         margin-top: 24px;
+         color: #000;
+         font-feature-settings: 'clig' off, 'liga' off;
+         /* Title/T1 */
+         font-family: Raleway;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 24px; /* 150% */
+         letter-spacing: 0.5px;
+         text-transform: uppercase;
+        }
+        
+        
+        .themes_subtitle {
+          color: var(--Grayscale-700, #535353);
+          font-feature-settings: 'clig' off, 'liga' off;
+          /* Paragraph/P2 */
+          font-family: Raleway;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+          letter-spacing: 0.5px;
+        }
+      }
+   }
+
+   @media (max-width: 1439px) {
+    .themes_wrapper {
+      flex: 1;
+      overflow-x: scroll;
+    }
+}

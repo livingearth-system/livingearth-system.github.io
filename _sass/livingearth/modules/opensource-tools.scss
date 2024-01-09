@@ -1,0 +1,75 @@
+/* ==========================================================================
+   OPENSOURCE TOOLS
+   ========================================================================== */
+
+.opensource-tools-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.opensource-tools {
+  padding: 24px;
+  background: #f8f9ff;
+  width: 170px;
+}
+
+.opensource-tools {
+  text-align: center;
+}
+.opensource-tools a {
+  text-decoration: none;
+  display: block;
+}
+.opensource-tools span {
+  display: block;
+  margin-top: 16px;
+  color: #072857;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.icon {
+    padding: 0;
+}
+.white-icon {
+    display: none !important;
+}
+.opensource-tools:hover {
+  background: #072857;
+  filter: brightness(90%);
+  transform: scale(1.1);
+  span {
+    color: #ffffff;
+  }
+  .white-icon {
+    display: block !important;
+  }
+  .icon {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .opensource-tools span {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .opensource-tools img {
+    transition: transform 0.4s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(100%);
+  }
+
+  .opensource-tools:hover img {
+    filter: brightness(90%);
+    transform: scale(1.1);
+  }
+}

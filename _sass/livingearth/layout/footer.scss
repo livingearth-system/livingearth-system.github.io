@@ -3,3 +3,43 @@
    ========================================================================== */
 .footer {
 }
+.sites-list{
+   .list-title {
+      display: none !important;
+      text-decoration: none;
+   }
+   .footer-site-list {
+      color: #FFF;
+      font-family: Raleway;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+   }
+}
+.footer-download-app {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   .download-app-button {
+      width: fit-content;
+      padding: 0;
+      border: none;
+      border-radius: 4px;
+   }
+   margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+   .sites-list{
+      .list-title {
+         display: flex !important;
+      }
+   }
+   .footer-download-app {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+   }
+ }
