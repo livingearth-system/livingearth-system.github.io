@@ -1,0 +1,74 @@
+.meetourteam-img {
+  height: auto;
+  width: 100%;
+  align-self: stretch;
+}
+
+.meetourteam-earth-inner {
+  width: 100%;
+  align-self: stretch;
+}
+
+.meetourteam-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.meetourteam-dsc {
+  margin-top: 15px;
+}
+
+.meetourteam-dsc h4 {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meetourteam-dsc p {
+  margin-bottom: 0;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #535353;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #535353;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+  .organisations-hidden {
+    display: block;
+  }
+
+  .organisations-dsc {
+    margin-top: 10px;
+  }
+
+  .organisations-dsc h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .organisations-dsc p {
+    font-size: 12px;
+  }
+
+  .organisations-content h3 {
+    font-size: 20px;
+  }
+
+  .organisations-content a {
+    font-size: 15px;
+  }
+}

@@ -1,11 +1,18 @@
 <!-- GET-IN-TOUCH -->
-<aside class="mt-100 mb-100">
-    <div class="get-in-section-main">
-        <div class="get-in-section-dsc">
-            <h3 class="text-uppercase">{{ include.heading | default: "We need your help&hellip;" }}</h3>
-            <p>{{ include.subheading | default: "Find out how you contribute to the website by joining our community and helping the Living Earth Hub grow." }}</p>
+<aside class="mt-100 mb-100 container">
+    <div class="get-in-section-main d-flex flex-row-reverse">
+        <div class="get-in-section-container">
+            <div class="get-in-section-dsc">
+                <h3 class="text-capitalize mb-20">{{ include.heading | default: "help us make change happen&hellip;" }}</h3>
+                <p>{{ include.subheading | default: "Find out how you can contribute to or collaborate with Living Earth by joining our community...." }}</p>
+            </div>
+            <button type="button" onclick="location.href='{{ include.url | default: "/contact/" }}'">
+            {{ include.button | default: "Contact Us" }} 
+            <svg class="ml-12" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+            <path d="M19.5489 11.4863L13.3614 17.6738C13.2324 17.8028 13.0574 17.8753 12.875 17.8753C12.6926 17.8753 12.5176 17.8028 12.3886 17.6738C12.2596 17.5448 12.1871 17.3698 12.1871 17.1874C12.1871 17.005 12.2596 16.83 12.3886 16.701L17.403 11.6874H3.9375C3.75516 11.6874 3.5803 11.615 3.45136 11.486C3.32243 11.3571 3.25 11.1822 3.25 10.9999C3.25 10.8176 3.32243 10.6427 3.45136 10.5138C3.5803 10.3848 3.75516 10.3124 3.9375 10.3124H17.403L12.3886 5.2988C12.2596 5.1698 12.1871 4.99483 12.1871 4.81239C12.1871 4.62996 12.2596 4.45499 12.3886 4.32599C12.5176 4.19698 12.6926 4.12451 12.875 4.12451C13.0574 4.12451 13.2324 4.19698 13.3614 4.32599L19.5489 10.5135C19.6128 10.5773 19.6635 10.6532 19.6981 10.7366C19.7327 10.8201 19.7505 10.9095 19.7505 10.9999C19.7505 11.0902 19.7327 11.1797 19.6981 11.2632C19.6635 11.3466 19.6128 11.4224 19.5489 11.4863Z" fill="black"/>
+            </svg>
+            </button>
         </div>
-        <button type="button" onclick="location.href='{{ include.url | default: "/contact/" }}'">{{ include.button | default: "Get in touch" }}</button>
     </div>
 </aside>
 <!-- /GET-IN-TOUCH -->

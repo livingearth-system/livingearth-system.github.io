@@ -1,17 +1,55 @@
 <!-- CONTRIBUTE -->
 <section class="mt-100 mb-100 contribute-main">
-    <div class="row">
-        <div class="col-12 col-md-6 contribute-left-img">
-            {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.heading }}">{%- endif -%}
-        </div>
-        <div class="col-12 col-md-6 contribute-right">
-            <div class="contribute-left-dsc">
-                {%- if include.title -%}<h5>{{ include.title }}</h5>{%- endif -%}
-                {%- if include.heading -%}<h2>{{ include.heading }}</h2>{%- endif -%}
-                {%- if include.subheading -%}<p>{{ include.subheading }}</p>{%- endif -%}
-                {%- if include.button -%}<button type="button" onclick="location.href='{{ include.url }}'">{{ include.button | escape }}</button>{%- endif -%}
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-12 col-md-6 contribute-left-img">
+      {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.heading }}">{%- endif -%}
     </div>
+    <div class="col-md-1"></div>
+    <div class="col-12 col-md-5 contribute-right">
+      <div class="contribute-left-dsc">
+        {%- if include.title -%}
+          <h5>{{ include.title }}</h5>
+        {%- endif -%}
+        {%- if include.heading -%}
+          <h2>{{ include.heading }}</h2>
+        {%- endif -%}
+        {%- if include.subheading -%}
+          <p>{{ include.subheading }}</p>
+        {%- endif -%}
+        {% comment %}
+          {%- if include.button -%}
+            <button type="button" onclick="location.href='{{ include.url }}'">{{ include.button | escape }}</button>
+          {%- endif -%}
+        {% endcomment %}
+
+        {%- if include.link_url -%}
+          <div class="learn-more">
+            <a href="#"
+              >Learn More
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <g id="ArrowRight">
+                <path id="Vector" d="M13.8538 8.85378L9.35375 13.3538C9.25993 13.4476 9.13268 13.5003 9 13.5003C8.86732 13.5003 8.74007 13.4476 8.64625 13.3538C8.55243 13.26 8.49972 13.1327 8.49972 13C8.49972 12.8674 8.55243 12.7401 8.64625 12.6463L12.2931 9.00003H2.5C2.36739 9.00003 2.24021 8.94736 2.14645 8.85359C2.05268 8.75982 2 8.63264 2 8.50003C2 8.36743 2.05268 8.24025 2.14645 8.14648C2.24021 8.05271 2.36739 8.00003 2.5 8.00003H12.2931L8.64625 4.35378C8.55243 4.25996 8.49972 4.13272 8.49972 4.00003C8.49972 3.86735 8.55243 3.7401 8.64625 3.64628C8.74007 3.55246 8.86732 3.49976 9 3.49976C9.13268 3.49976 9.25993 3.55246 9.35375 3.64628L13.8538 8.14628C13.9002 8.19272 13.9371 8.24786 13.9623 8.30856C13.9874 8.36926 14.0004 8.43433 14.0004 8.50003C14.0004 8.56574 13.9874 8.63081 13.9623 8.6915C13.9371 8.7522 13.9002 8.80735 13.8538 8.85378Z" fill="#1D2865"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        {%- endif -%}
+
+        {%- if include.link_url -%}
+          <div class="get-in-touch">
+            <a href="#"
+              >Get In Touch
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <g id="ArrowRight">
+                <path id="Vector" d="M13.8538 8.85378L9.35375 13.3538C9.25993 13.4476 9.13268 13.5003 9 13.5003C8.86732 13.5003 8.74007 13.4476 8.64625 13.3538C8.55243 13.26 8.49972 13.1327 8.49972 13C8.49972 12.8674 8.55243 12.7401 8.64625 12.6463L12.2931 9.00003H2.5C2.36739 9.00003 2.24021 8.94736 2.14645 8.85359C2.05268 8.75982 2 8.63264 2 8.50003C2 8.36743 2.05268 8.24025 2.14645 8.14648C2.24021 8.05271 2.36739 8.00003 2.5 8.00003H12.2931L8.64625 4.35378C8.55243 4.25996 8.49972 4.13272 8.49972 4.00003C8.49972 3.86735 8.55243 3.7401 8.64625 3.64628C8.74007 3.55246 8.86732 3.49976 9 3.49976C9.13268 3.49976 9.25993 3.55246 9.35375 3.64628L13.8538 8.14628C13.9002 8.19272 13.9371 8.24786 13.9623 8.30856C13.9874 8.36926 14.0004 8.43433 14.0004 8.50003C14.0004 8.56574 13.9874 8.63081 13.9623 8.6915C13.9371 8.7522 13.9002 8.80735 13.8538 8.85378Z" fill="#1D2865"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
 </section>
 <!-- /CONTRIBUTE -->
