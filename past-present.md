@@ -1,11 +1,13 @@
 ---
-layout: page
+layout: second-page
 permalink: /past-present/
 
+header: "Past & Present Landscapes"
 title: "Past & Present Landscapes"
 subtitle: "How can we track progress?"
 image: "/assets/img/heading/environmental.jpg"
 nocontact: true
+Noheader: false
 ---
 
 {%-
