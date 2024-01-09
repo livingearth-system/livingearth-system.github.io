@@ -1,0 +1,199 @@
+.news-header-container {
+    margin-top: 40px;
+    align-items: center;
+    gap: 40px;
+    margin-left: 15px;
+    margin-bottom: 64px;
+
+    .news-header-search {
+        display: flex;
+
+        .search-box {
+            width: 260px;
+            height: 48px;
+            padding-left: 15px;
+            flex-shrink: 0;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9F9F9F;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            margin-right: 8px;
+            stroke-width: 1px;
+            border-color: rgba(96, 92, 114, 0.30);
+
+        }
+
+        .a-to-z {
+            display: flex;
+            width: 48px;
+            height: 48px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            background: #072857;
+            border: none;
+        }
+    }
+
+    .news-header-option {
+        display: flex;
+        gap: 8px;
+        margin-top: 40px;
+        width: auto;
+        flex-wrap: wrap;
+
+        .header-button-1 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #333042;
+
+            p {
+                text-wrap: nowrap;
+                color: #F8F9FF;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .header-button-2 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #E9EEDE;
+
+            p {
+                text-wrap: nowrap;
+                color: #5F6949;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .header-button-3 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #E9EFF7;
+
+            p {
+                text-wrap: nowrap;
+                color: #072857;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .header-button-4 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #EBEBEB;
+
+            p {
+                text-wrap: nowrap;
+                color: #333042;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .header-button-5 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #F7E7DB;
+
+            p {
+                text-wrap: nowrap;
+                color: #DF6B17;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .header-button-6 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #F3E9FB;
+
+            p {
+                text-wrap: nowrap;
+                color: #683D89;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+.news-blog {
+    clip-path: inset(0 -100vmax);
+    background-color: #fff;
+    padding-top: 0.5px;
+}
+
+.news-container {
+    max-width: 1246px;
+    display: flex;
+}
+
+.news-container ::-webkit-scrollbar {
+    display: none;
+    height: 0;
+}
+
+@media (max-width: 1199px) {
+    .news-container {
+        overflow-x: scroll;
+        max-width: 1246px;
+        display: flex;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}

@@ -1,0 +1,265 @@
+---
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/oldman-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/forecast-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/eventImage-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/oldman-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/rocket.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/eventImage-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/rocket.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/forecast-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/eventImage-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/oldman-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/rocket.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- button:
+    - class: button-1
+      id: button1
+      name: Research
+    - class: button-2
+      id: button2
+      name: Case study
+    - class: button-3
+      id: button3
+      name: News
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 11, 2022
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/forecast-fix.png
+  subtitle: >
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches

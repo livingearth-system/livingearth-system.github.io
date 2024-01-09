@@ -1,11 +1,29 @@
 ---
-layout: page
+layout: news
 permalink: /news/
 
-title: News
+header: News
+headerTop: News
 nocontact: true
+nobuttons: true
 ---
+{%-
+include breadcrumbs.liquid
+-%}
 
 {%-
-include blog.liquid
+include news-header.liquid
+-%}
+
+{%-
+include news-main.liquid
+-%}
+
+{%-
+include news-blog.liquid
+-%}
+
+
+{%-
+include news-footer.liquid
 -%}

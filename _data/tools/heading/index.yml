@@ -1,0 +1,113 @@
+- title: interactive map
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+- title: get the data
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+- title: analyze the data
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+- title: earthtrack.app
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+- title: industry specific site
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+- title: past and present
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+- title: future landscapes
+  icon:
+    type: svg
+    value: >-
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="currentColor">
+        <mask id="mask0_711_673" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
+          <path d="M0.166016 3.8147e-06H32.166V32H0.166016V3.8147e-06Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_711_673)">
+          <path d="M17.0733 9.6895L21.791 16.9375L26.5088 9.6895C27.0826 8.80788 27.416 7.69288 27.416 6.5625C27.416 3.45594 24.8976 0.937502 21.791 0.937502C18.6844 0.937502 16.166 3.45594 16.166 6.5625C16.166 7.69288 16.4994 8.80788 17.0733 9.6895Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 8.5C20.7574 8.5 19.916 7.59613 19.916 6.5625C19.916 5.52887 20.7574 4.6875 21.791 4.6875C22.8246 4.6875 23.666 5.52887 23.666 6.5625C23.666 7.59613 22.8246 8.5 21.791 8.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M17.8945 10.9509L10.541 8.49976L1.10352 12.2498V30.6873L10.541 27.3123L21.791 30.9998L31.2285 27.3123V8.49976L25.9161 10.5998" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M10.541 8.5V27.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+          <path d="M21.791 16.9375V31" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+
