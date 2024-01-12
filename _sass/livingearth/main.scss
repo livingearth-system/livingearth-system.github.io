@@ -13,6 +13,7 @@
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/footer';
+@import 'layout/tool_page.scss';
 
 // OLD
 @import 'old/main';
@@ -22,3 +23,25 @@
 @import 'modules/breadcrumbs';
 @import 'modules/post';
 @import 'modules/login';
+@import 'modules/about-us';
+@import 'modules/themes';
+@import 'modules/our-blog';
+@import 'modules/heading';
+@import 'modules/our-vision';
+@import 'modules/our-event';
+@import 'modules/tools.scss';
+@import 'modules/interactive-map.scss';
+@import 'modules/who-we-are.scss';
+@import 'modules/meetourteam';
+@import 'modules/tool';
+@import 'modules/tool-interactive-map.scss';
+@import 'modules/getting-started';
+@import 'modules/tool-content';
+@import 'modules/opensource-tools.scss';
+@import 'modules/second-heading.scss';
+@import 'modules/leaflet-popup.scss';
+@import 'modules/case-study-content.scss';
+@import 'modules/leaflet-popup.scss';
+@import 'modules/news-header';
+@import 'modules/tool-earth-track-sidebar.scss';
+@import 'modules/tool-industry-sidebar.scss';

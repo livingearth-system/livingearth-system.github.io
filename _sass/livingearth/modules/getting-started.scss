@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.getting-started-container {
+  width: 680px;
+  height: 680px;
+  padding: 40px 57px;
+  background-color: white;
+  color: #535353;
+}
+
+.getting-started-heading {
+  text-align: center;
+}
+
+.getting-started-heading h1 {
+  color: #123B63;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.getting-started-heading div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+
+.a p {
+  width: 306px;
+  color: #535353;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.getting-started-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.getting-started-middle {
+  width: 139px;
+}
+
+.getting-started-icon {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.getting-started-content {
+  width: 100%;
+  text-align: center;
+}
+
+.getting-started-content p {
+  width: 100%;
+  color: #535353;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.getting-started-link {
+  width: 256px;
+}
+
+.getting-started-link div {
+  display: flex;
+  margin-bottom: 13px;
+}
+
+.getting-started-link p {
+  margin-top: 17px;
+  color: #535353;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  /* 142.857% */
+}
+
+.getting-started-link div a {
+  color: #1D2865;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin-right: 8px;
+}
+
+.getting-started-learning {
+  margin-top: 40px;
+}
+
+.getting-started-learning-title {
+  color: #1D1B24;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.getting-started-learning-content {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.getting-started-learning-items p {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Title/T3 */
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.img {
+  cursor: pointer;
+  width: 170px;
+  height: 109px;
+}
+
+.img img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.getting-started-end {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#closeButton {
+  display: flex;
+  height: 48px;
+  width: 198px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #fff;
+  background-color: #072856;
+  cursor: pointer;
+}
+
+#closeButton p {
+  color: #FFF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 680px;
+}
+
+.modal {
+  padding-right: 0!important;
+}
+@media (max-width: 700px) {
+  .getting-started-container {
+    width: 600px;
+    height: 650px;
+    padding: 10px 57px;
+
+    .getting-started-heading {
+      h1 {
+        margin-top: 10px;
+      }
+
+      div {
+        margin: 0;
+      }
+
+      .a p {
+        margin: 0;
+      }
+    }
+
+    .getting-started-nav {
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .getting-started-link {
+        margin-top: 20px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .getting-started-learning {
+      width: 76vw;
+      margin-top: 10px;
+
+      .getting-started-learning-content {
+        width: 100%;
+        overflow-x: scroll;
+      }
+    }
+  }
+
+  .modal-body {
+    max-height: 650px;
+  }
+}

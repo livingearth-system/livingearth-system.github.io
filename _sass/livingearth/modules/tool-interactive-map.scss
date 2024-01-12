@@ -1,0 +1,296 @@
+.form-select {
+  width: 100%;
+  height: auto;
+  padding: 15px 0 15px 0;
+  margin-top: 25px;
+}
+.under-select-year {
+  margin-top: 20px;
+}
+.side-bar-interactive-map {
+  margin-bottom: 250px;
+}
+.living-earth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 40px 0;
+}
+.world {
+  max-width: 1084px;
+  height: 676px;
+}
+.right-content {
+  display: flex;
+}
+.right-content p {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.banner-button {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tool-button-banner p {
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tool-button-banner {
+  background-color: transparent;
+  border: 1px solid gray;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.tool-button-banner:nth-child(1) {
+  width: 136px;
+}
+.tool-button-banner:nth-child(4) {
+  width: 136px;
+}
+.tool-button-banner:nth-child(2) {
+  width: 121px;
+}
+.tool-button-banner:nth-child(5) {
+  width: 121px;
+}
+.tool-button-banner:hover {
+  background-color: #072857;
+  color: #ffffff;
+}
+.tool-button-banner:active {
+  background-color: #072857;
+  color: #ffffff;
+}
+.tool-button-banner:focus{
+  background-color:#072857;
+  color: white;
+}
+.tool-button-banner:hover img {
+  filter: invert(100%);
+}
+.tool-button-banner:active img {
+  filter: invert(100%);
+}
+.tool-button-banner:focus img {
+  filter: invert(100%);
+}
+.select-year {
+  margin-top: 24px;
+}
+.select-year-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.base-map,
+.additional-layer {
+  margin-top: 20px;
+}
+.select-base-map,
+.select-additional-layer {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.option-year,
+.option-layer {
+  color: #9f9f9f;
+  margin-top: -15px;
+}
+.no-basemap,
+.base-land,
+.vegetation,
+.continous,
+.Canopy,
+.Canopy-continous,
+.life-form,
+.leaf-type,
+.non-stress,
+.above-ground {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.no-basemap span,
+.base-land span,
+.vegetation span,
+.continous span,
+.Canopy span,
+.Canopy-continous span,
+.life-form span,
+.leaf-type span,
+.non-stress span,
+.above-ground span {
+  padding-left: 10px;
+}
+.icon-atfer-selected-year {
+  display: flex;
+}
+.after-selected-line {
+  height: 1px;
+  background-color: #9f9f9f;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+label[for="checkbox1"],
+label[for="checkbox2"] {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+label[for="checkbox1"]:before,
+label[for="checkbox2"]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #072857;
+}
+
+label[for="checkbox1"]:hover:before,
+label[for="checkbox2"]:hover:before {
+  background-color: #ddd;
+}
+
+label[for="checkbox1"] span,
+label[for="checkbox2"] span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+label[for="checkbox1"]:hover span,
+label[for="checkbox2"]:hover span {
+  filter: brightness(1.5);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label[for="checkbox3"],
+label[for="checkbox4"],
+label[for="landcheckbox1"],
+label[for="landcheckbox2"],
+label[for="landcheckbox3"],
+label[for="landcheckbox4"],
+label[for="landcheckbox5"] {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+label[for="checkbox3"]:before,
+label[for="checkbox4"]:before,
+label[for="landcheckbox1"]:before,
+label[for="landcheckbox2"]:before,
+label[for="landcheckbox3"]:before,
+label[for="landcheckbox4"]:before,
+label[for="landcheckbox5"]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked + label[for="checkbox3"]:before,
+input[type="checkbox"]:checked + label[for="checkbox4"]:before,
+input[type="checkbox"]:checked + label[for="landcheckbox1"]:before,
+input[type="checkbox"]:checked + label[for="landcheckbox2"]:before,
+input[type="checkbox"]:checked + label[for="landcheckbox3"]:before,
+input[type="checkbox"]:checked + label[for="landcheckbox4"]:before,
+input[type="checkbox"]:checked + label[for="landcheckbox5"]:before {
+  background-color: #072857;
+}
+
+label[for="checkbox3"]:hover:before,
+label[for="checkbox4"]:hover:before,
+label[for="landcheckbox1"]:hover:before,
+label[for="landcheckbox2"]:hover:before,
+label[for="landcheckbox3"]:hover:before,
+label[for="landcheckbox4"]:hover:before,
+label[for="landcheckbox5"]:hover:before {
+  background-color: #ddd;
+}
+
+label[for="checkbox3"] span,
+label[for="checkbox4"] span,
+label[for="landcheckbox1"] span,
+label[for="landcheckbox2"] span,
+label[for="landcheckbox3"] span,
+label[for="landcheckbox4"] span,
+label[for="landcheckbox5"] span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+label[for="checkbox3"]:hover span,
+label[for="checkbox4"]:hover span,
+label[for="landcheckbox1"]:hover span,
+label[for="landcheckbox2"]:hover span,
+label[for="landcheckbox3"]:hover span,
+label[for="landcheckbox4"]:hover span,
+label[for="landcheckbox5"]:hover span {
+  filter: brightness(1.5);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #072857;
+  content: "\2713";
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}

@@ -1,0 +1,169 @@
+<!-- First-Page-Tools -->
+<section class="mt-80 mb-80 tools">
+  {% for item in site.data.tools.landing-page.index %}
+  {% assign id = item.id | plus: 0 %}
+  {% assign isEven = id | modulo: 2 == 0 %}
+  <div class="row {% if id == 4 or id == 6 %}special-row{% endif %}" style="display: flex; margin-top: 70px;">
+    {% if isEven == 0 %}
+    <div class="col-md-6 col-left" style="width: 50%;">
+      <img class="img-responsive" src="{{ item.image }}" alt="Image">
+    </div>
+    <div class="col-md-6 col-right" style="width: 50%;">
+      {% if item.heading %}
+      <h2>{{ item.heading }}</h2>
+      {% endif %}
+      <h3>{{ item.title }}</h3>
+      {% assign subtitleParts = item.subtitle | split: ';' %}
+      {% for part in subtitleParts %}
+      <div class="subtitle-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN
+          HERE</button>' }}</div>
+      {% endfor %}
+      {% if item.subtitle2 %}
+      {% assign subtitle2Parts = item.subtitle2 | split: ';' %}
+      {% for part in subtitle2Parts %}
+      <div class="subtitle2-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN
+          HERE</button>' }}</div>
+      {% endfor %}
+      {% endif %}
+      {% if id == 5 %}
+      <div class="img-row-5">
+        <img src="/assets/img/appstore.png" alt="Image 1">
+        <img src="/assets/img/CHplay.png" alt="Image 2">
+      </div>
+      {% endif %}
+      {% assign buttons = item.button | split: '; ' %}
+      {% assign urls = item.url | split: '; ' %}
+      {% for button in buttons %}
+      {% assign url = urls[forloop.index0] %}
+      <div class="button-tool">
+        <button class="">
+          <a href="{{ url }}" class="custom-button">{{ button }}</a>
+          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+    {% elsif id == 5 %}
+    <div class="col-md-6 col-left" style="width: 50%;">
+      {% if item.heading %}
+      <h2>{{ item.heading }}</h2>
+      {% endif %}
+      <h3>{{ item.title }}</h3>
+      {% assign subtitleParts = item.subtitle | split: ';' %}
+      {% for part in subtitleParts %}
+      <div class="subtitle-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN
+          HERE</button>' }}</div>
+      {% endfor %}
+      {% if item.subtitle2 %}
+      {% assign subtitle2Parts = item.subtitle2 | split: ';' %}
+      {% for part in subtitle2Parts %}
+      <div class="subtitle2-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN
+          HERE</button>' }}</div>
+      {% endfor %}
+      {% endif %}
+      <div class="img-row-5">
+        <img src="/assets/img/appstore.png" alt="Image 1">
+        <img src="/assets/img//CHplay.png" alt="Image 2">
+      </div>
+      {% assign urls = item | where: "contains", "url_" %}
+      {% assign buttons = item.button | split: '; ' %}
+      {% assign urls = item.url | split: '; ' %}
+
+      {% for button in buttons %}
+      {% assign url_key = 'url_' | append: button | downcase %}
+      {% assign url = urls[forloop.index0] %}
+      <div class="button-tool">
+        <button class="">
+          <a href="{{ url }}" class="custom-button">{{ button }}</a>
+          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-md-6 col-right" style="width: 50%;">
+      <img class="img-responsive" src="{{ item.image }}" alt="Image">
+    </div>
+    {% else %}
+    <div class="col-md-6 col-left" style="width: 50%;">
+      {% if item.heading %}
+      <h2>{{ item.heading }}</h2>
+      {% endif %}
+      <h3>{{ item.title }}</h3>
+      {% assign subtitleParts = item.subtitle | split: ';' %}
+      {% for part in subtitleParts %}
+      <div class="subtitle-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN
+          HERE</button>' }}</div>
+      {% endfor %}
+      {% if item.subtitle2 %}
+      {% assign subtitle2Parts = item.subtitle2 | split: ';' %}
+      {% for part in subtitle2Parts %}
+      <div class="subtitle2-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN
+          HERE</button>' }}</div>
+      {% endfor %}
+      {% endif %}
+      {% assign urls = item.url | split: '; ' %}
+      {% assign buttons = item.button | split: '; ' %}
+
+      {% for button in buttons %}
+      {% assign url = urls[forloop.index0] %}
+      <div class="button-tool">
+        <button class="">
+          <a href="{{ url }}" class="custom-button">{{ button }}</a>
+          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-md-6 col-right" style="width: 50%;">
+      <img class="img-responsive" src="{{ item.image }}" alt="Image">
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+
+
+<section class="mt-80 mb-80 tools-2">
+  {% for item in site.data.tools.landing-page.index %}
+    {% assign id = item.id | plus: 0 %}
+    <div class="row {% if id == 4 or id == 6 %}special-row{% endif %}">
+      <div class="content-container">
+        <div class="content">
+          <img class="img-responsive" src="{{ item.image }}" alt="Image">
+          {% if item.heading %}
+            <h2>{{ item.heading }}</h2>
+          {% endif %}
+          <h3>{{ item.title }}</h3>
+          {% assign subtitleParts = item.subtitle | split: ';' %}
+          {% for part in subtitleParts %}
+            <div class="subtitle-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN HERE</button>' }}</div>
+          {% endfor %}
+          {% if item.subtitle2 %}
+            {% assign subtitle2Parts = item.subtitle2 %}
+            {% for part in subtitle2Parts %}
+              <div class="subtitle2-tool">{{ part | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN HERE</button>' }}</div>
+            {% endfor %}
+          {% endif %}
+          {% if id == 5 %}
+            <div class="img-row-5">
+              <img class="img-responsive" src="/assets/img/appstore.png" alt="Image 1">
+              <img class="img-responsive" src="/assets/img//CHplay.png" alt="Image 2">
+            </div>
+          {% endif %}
+          {% assign buttons = item.button | split: '; ' %}
+          <div style="display: flex; margin-bottom: 50px;">
+          {% for button in buttons %}
+            <div class="button-tool">
+              <button class="">
+                {{ button | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN HERE</button>' }}
+                <img src="/assets/img/Arrow.png" alt="Arrow Image">
+              </button>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+<!-- /First-Page-Tools -->

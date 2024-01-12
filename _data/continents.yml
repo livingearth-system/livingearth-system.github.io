@@ -2,7 +2,7 @@
   title: "Americas"
   image: "/assets/img/continents/americas.jpg"
   icon: "/assets/img/continents/americas-icon.jpg"
-  url: "#"
+  url: "/data/environmental-descriptors/"
 
 - id: "africa"
   title: "Africa"
@@ -20,10 +20,10 @@
   title: "Europe"
   image: "/assets/img/continents/europe.jpg"
   icon: "/assets/img/continents/europe-icon.jpg"
-  url: "/europe/"
+  url: "/europe"
 
 - id: "oceania"
   title: "Oceania"
   image: "/assets/img/continents/oceania.jpg"
   icon: "/assets/img/continents/oceania-icon.jpg"
-  url: "/oceania/"
+  url: "/oceania"

@@ -1,0 +1,27 @@
+<!-- OUR-BLOG -->
+<div class="mt-100 mb-100">
+    <div class="common-blog-main">
+        {%- if include.title -%}<p>{{ include.title }}</p>{% endif %}
+        <div class="common-blog-title">
+            {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
+            {%- if include.all -%}<button type="button" onclick="location.href='{{ include.url }}'">{{ include.all }}
+                <img src="/assets/icon/arrowright.svg" alt=""></button>{% endif %}
+        </div>
+    </div>
+    <div class="d-flex themes_wrapper">
+        {% for box in site.data.themes.index %}
+        <div class="theme_wrapper">
+            <a href="#"><img src="{{ box.image }}" alt=""></a>
+            <div class="themes_title_wrapper">
+                <p class="themes_title">
+                    {{ box.title }}
+                </p>
+                <p class="themes_subtitle">
+                    {{ box.subtitle }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- /OUR-BLOG -->

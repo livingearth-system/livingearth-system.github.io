@@ -1,22 +1,28 @@
 <!-- ORGANISATIONS -->
-<div class="mt-100 mb-100 organisations-earth">
+<div class="mt-80 mb-80 organisations-earth container">
     <div class="row">
-        <div class="col-md-6 col-lg-3 col-12">
+        <div class="col-12">
+            <p class="header">Organisations working with living earth</p>
+        </div>
+    </div>
+    <div class="row">
+        {% comment %} <div class="col-md-6 col-lg-3 col-12">
             <div class="organisations-earth-inner">
                 <div class="organisations-img organisations-content">
                     {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
                     {%- if include.all -%}<a href="#">{{ include.all }}</a>{% endif %}
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
         {% for organisation in site.data.organisations %}
-            <div class="col-md-6 col-lg-3 col-6 {% if forloop.index > 3 %}organisations-hidden{%- endif -%}">
+            <div class="col-md-6 col-lg-3 col-6 mb-40">
                 <div class="organisations-earth-inner">
                     <div class="organisations-img">
                         {%- if organisation.image -%}<a href="{{ organisation.url }}"><img src="{{ organisation.image }}" alt="{{ organisation.name }}"></a>{% endif %}
                     </div>
                     <div class="organisations-dsc">
                         {%- if organisation.name -%}<h4>{{ organisation.name }}</h4>{% endif %}
+                        {%- if organisation.subtitle -%}<p class="subtitle">{{ organisation.subtitle }}</p>{% endif %}
                     </div>
                 </div>
             </div>

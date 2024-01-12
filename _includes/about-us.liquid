@@ -7,6 +7,12 @@
                 {%- if include.heading -%}<h2>{{ include.heading | escape }}</h2>{%- endif -%}
                 {%- if include.subheading -%}<p>{{ include.subheading | escape }}</p>{%- endif -%}
                 {%- if include.button -%}<button type="button" onclick="location.href='{{ include.url }}'">{{ include.button | escape }}</button>{%- endif -%}
+                {%- if include.author -%}
+                    <div class="author">
+                        <div class="author_portrait"></div>
+                        <p class="author_name">{{ include.author | escape }}</p>
+                    </div>
+                {%- endif -%}
             </div>
         </div>
         <div class="col-12 col-md-6 aboutus-right-img">

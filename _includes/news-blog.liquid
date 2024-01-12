@@ -1,0 +1,35 @@
+<!-- OUR-BLOG -->
+<div class="container-fluid news-blog">
+  <div class="mb-60">
+    <div class="row mb-60">
+      {% for infor in site.data['news-blog'].index %}
+        <div class="col-xl-4 col-md-6">
+          <div class="item mt-60">
+            <div class="stay-up-card">
+              <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
+              <div>
+                {% for button in infor.button %}
+                  <button class="{{ button.class }}">
+                    <p>{{ button.name }}</p>
+                  </button>
+                {% endfor %}
+              </div>
+              <p class="title-img">
+                <a href="{{ infor.href }}">{{ infor.title }}</a>
+              </p>
+              <span class="body-img">{{ infor.subtitle }}</span>
+              <div class="line-card"></div>
+              <div class="date-card">
+                <span>{{ infor.date }}</span>
+                <div class="dot-card"></div>
+                <span>{{ infor.min }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- /OUR-BLOG -->

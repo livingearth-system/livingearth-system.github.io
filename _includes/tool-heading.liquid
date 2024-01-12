@@ -1,0 +1,136 @@
+<!-- TOOL-HEADING -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('.tool-button');
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        buttons.forEach(function (btn) {
+          btn.classList.remove('active');
+        });
+        button.classList.add('active');
+
+        var oldImagePath = button.querySelector('.svg-icon').src;
+
+        var newImagePath = oldImagePath.replace(/\.svg$/, '-white-color.svg');
+
+        var svgIcon = button.querySelector('.svg-icon');
+        if (svgIcon) {
+          svgIcon.src = newImagePath;
+        }
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var isCaseStudyPage = window.location.href.includes('/about/case-study/');
+    var isDataPage = window.location.href.includes('/data/');
+    var toolPageElement = document.querySelector('.toolpage');
+    var toolButtons = document.querySelectorAll('.tool-button');
+
+    if (isCaseStudyPage || isDataPage) {
+      toolPageElement.classList.add('toolpage-case-study');
+
+      toolButtons.forEach(function (button) {
+        button.classList.add('tool-button-case-study');
+      });
+    }
+  });
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('.tool-button');
+    arrayToolTabs = Object.values(buttons)
+    arrayToolTabs.forEach(tab => {
+      const conditionActivate = window.location.href.includes(tab.textContent.replace(/\s+/g, '-').replace(/\./g, '-').toLowerCase().replace(/^-+|-+$/g, ''))
+      if (conditionActivate) {
+        tab.classList.add('active')
+      }
+    })
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var index = Array.from(buttons).indexOf(button);
+
+        var paths = [
+          "/tools/interactive-map",
+          "/tools/get-the-data",
+          "/tools/analyze-the-data",
+          "/tools/earthtrack-app",
+          "/tools/industry-specific-site",
+          "/tools/past-and-present",
+          "/tools/future-landscapes"
+        ];
+
+        if (paths[index]) {
+          window.location.href = paths[index];
+        }
+      });
+    });
+
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('.tool-button');
+
+    buttons.forEach(function (button) {
+      var img = button.querySelector('.svg-icon');
+      var newImg = document.createElement('img');
+      newImg.classList.add('svg-icon2');
+      newImg.src = img.src.replace(/\.svg$/, '-white-color.svg');
+      button.insertBefore(newImg, img.nextSibling);
+
+      button.addEventListener('click', function () {
+        buttons.forEach(function (btn) {
+          btn.classList.remove('active');
+          btn.querySelector('.svg-icon').style.display = 'inline-block';
+          btn.querySelector('.svg-icon2').style.display = 'none';
+        });
+
+        button.classList.add('active');
+        img.style.display = 'none';
+        newImg.style.display = 'inline-block';
+      });
+    });
+  });
+
+</script>
+
+
+<section>
+  <div class="container-fluid">
+    <div class="toolpage">
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-map.svg">
+        <p>interactive map</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-getdata.svg">
+        <p>get the data</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-analyze.svg">
+        <p>analyze the data</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-earthTrack.svg">
+        <p>earthtrack.app</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-industry.svg">
+        <p>industry specific site</p>
+      </button>
+      <button class="tool-button tool-button-disable" disabled>
+        <img class="svg-icon" src="/assets/icon/icon-pastandpresent.svg">
+        <p>past and present</p>
+      </button>
+      <button class="tool-button tool-button-disable" disabled>
+        <img class="svg-icon" src="/assets/icon/icon-future.svg">
+        <p>future landscapes</p>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- /TOOL-HEADING -->

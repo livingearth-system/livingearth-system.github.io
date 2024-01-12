@@ -1,0 +1,14 @@
+- icon: "/assets/img/landcover.svg"
+  title: "land-cover"
+
+- icon: "/assets/img/water.svg"
+  title: "water"
+
+- icon: "/assets/img/change.svg"
+  title: "change"
+
+- icon: "/assets/img/biodiversity.svg"
+  title: "biodiversity"
+
+- icon: "/assets/img/account.svg"
+  title: "account"

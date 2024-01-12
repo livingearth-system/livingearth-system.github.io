@@ -1,0 +1,40 @@
+<div class="tool_side_bar">
+  <div class="country_form">
+    <select class="form-select" aria-label="Default select example" class="choose_country">
+      <option selected>Choose a country</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+
+    <button class="sign_in_github">Sign in with GitHub</button>
+  </div>
+
+  <div class="learning_resource">
+    <a href="tools/learning-resources">
+      <div class="button-tool">
+        <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
+        <img src="/assets/img/Arrow.png" alt="Arrow Image">
+      </div>
+    </a>
+    <div class="brand_logo">
+      <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
+      <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
+      <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
+      <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var learningResourceButton = document.getElementById('learningResourceButton');
+
+    if (learningResourceButton) {
+      learningResourceButton.addEventListener('click', function () {
+        window.location.href = '/tools/learning-resources';
+      });
+    }
+  });
+</script>

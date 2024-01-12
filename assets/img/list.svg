@@ -1,0 +1,55 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="list" clip-path="url(#clip0_379_10946)">
+<g id="Mask group">
+<mask id="mask0_379_10946" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+<g id="Group">
+<path id="bg" d="M16 0H0V16H16V0Z" fill="white"/>
+<g id="Group_2">
+<path id="path1697" d="M3.07296 4.70801H0.470337V2.10538H3.07296V4.70801Z" fill="white"/>
+<path id="path1699" d="M15.5313 4.70801H5.1355V2.10538H15.5313V4.70801Z" fill="white"/>
+<path id="path1701" d="M3.07296 9.30127H0.470337V6.69864H3.07296V9.30127Z" fill="white"/>
+<path id="path1703" d="M15.5313 9.30127H5.1355V6.69864H15.5313V9.30127Z" fill="white"/>
+<path id="path1705" d="M3.07296 13.895H0.470337V11.2924H3.07296V13.895Z" fill="white"/>
+<path id="path1707" d="M15.5313 13.895H5.1355V11.2924H15.5313V13.895Z" fill="white"/>
+</g>
+</g>
+</mask>
+<g mask="url(#mask0_379_10946)">
+<g id="Group_3">
+<g id="g1695">
+<path id="path1697_2" d="M3.07296 4.70801H0.470337V2.10538H3.07296V4.70801Z" fill="black"/>
+<path id="path1699_2" d="M15.5312 4.70801H5.13538V2.10538H15.5312V4.70801Z" fill="black"/>
+<path id="path1701_2" d="M3.07296 9.30127H0.470337V6.69864H3.07296V9.30127Z" fill="black"/>
+<path id="path1703_2" d="M15.5312 9.30127H5.13538V6.69864H15.5312V9.30127Z" fill="black"/>
+<path id="path1705_2" d="M3.07296 13.895H0.470337V11.2924H3.07296V13.895Z" fill="black"/>
+<path id="path1707_2" d="M15.5312 13.895H5.13538V11.2924H15.5312V13.895Z" fill="black"/>
+<g id="g1709">
+<g id="Clip path group">
+<mask id="mask1_379_10946" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+<g id="clipPath1715">
+<path id="path1713" d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask1_379_10946)">
+<g id="g1711">
+<path id="path1717" d="M3.07296 4.70801H0.470337V2.10538H3.07296V4.70801Z" stroke="black" stroke-width="1.2" stroke-miterlimit="10"/>
+<path id="path1719" d="M15.5313 4.70801H5.1355V2.10538H15.5313V4.70801Z" stroke="black" stroke-width="1.2" stroke-miterlimit="10"/>
+<path id="path1721" d="M3.07296 9.30127H0.470337V6.69864H3.07296V9.30127Z" stroke="black" stroke-width="1.2" stroke-miterlimit="10"/>
+<path id="path1723" d="M15.5313 9.30127H5.1355V6.69864H15.5313V9.30127Z" stroke="black" stroke-width="1.2" stroke-miterlimit="10"/>
+<path id="path1725" d="M3.07296 13.895H0.470337V11.2924H3.07296V13.895Z" stroke="black" stroke-width="1.2" stroke-miterlimit="10"/>
+<path id="path1727" d="M15.5313 13.895H5.1355V11.2924H15.5313V13.895Z" stroke="black" stroke-width="1.2" stroke-miterlimit="10"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_379_10946">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
