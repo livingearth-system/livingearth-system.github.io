@@ -53,6 +53,21 @@
   }
 }
 
+.opensource-tools.active {
+  background: #072857;
+  filter: brightness(90%);
+  transform: scale(1.1);
+  span {
+    color: #ffffff;
+  }
+  .white-icon {
+    display: block !important;
+  }
+  .icon {
+    display: none !important;
+  }
+}
+
 
 @media (max-width: 991px) {
   .opensource-tools span {

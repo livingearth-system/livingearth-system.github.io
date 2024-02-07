@@ -1,91 +1,101 @@
 <!-- /TOOL-EARTH-TRACK-SIDEBAR -->
 <div class="commom-class-disabled">
-    <div id="earth-track-app" class="earth-track-app-display-by-id">
-        <div class="tool_side_bar">
-            <div class="country_form">
-                <select class="form-select" aria-label="Default select example" class="choose_country">
-                    <option selected>Wales</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+  <div id="earth-track-app" class="earth-track-app-display-by-id">
+    <div class="tool_side_bar">
+      <div class="country_form">
+        <select class="form-select" aria-label="Default select example" class="choose_country">
+          <option selected>Choose a country</option>
+          <option value="1">Wales</option>
+          <option value="2">Australia</option>
+          <option value="3">Switzerland</option>
+          <option value="4">Southeast Asia</option>
+        </select>
 
-                <div class="living-earth">
-                    <div class="left-content">
-                        <img src="/assets/img/living_wales.png">
-                    </div>
-                    <div class="right-content">
-                        <img src="/assets/img/list.svg">
-                        <p>LEGEND</p>
-                    </div>
-                </div>
-                <div class="banner-button">
-                    {% for tool_item in site.data.tool_page.index %}
-                    <button type="button" class="tool-button-banner">
-                        <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
-                        <p>{{ tool_item.title }}</p>
-                    </button>
-                    {% endfor %}
-                </div>
-                <div class="separated-item">
-                    <div class="left-item">
-                        <span>Separated by color of dot</span>
-                        <img src="/assets/icon/questionmark.svg">
-                    </div>
-                    <div class="toggle-button" onclick="toggleSwitch(this)">
-                        <div class="toggle-slider"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="separated-item">
-                        <span class="repeated">Repeated measurement visualization</span>
-                        <img src="/assets/icon/questionmark.svg">
-                    </div>
-                    <div class="space-between-title-img"></div>
-                    <div class="separated-item-img">
-                        <div class="item-one">
-                            <img src="/assets/img/earthTrack/analyze-forest.png">
-                            <p class="date-earth-track">2021/4/21</p>
-                        </div>
-                        <div class="item-two">
-                            <img src="/assets/img/earthTrack/analyze-bridge.png">
-                            <p class="date-earth-track">2021/4/21</p>
-                        </div>
-                    </div>
-                    <div class="separated-item-img">
-                        <div class="item-three">
-                            <img src="/assets/img/earthTrack/analyze-leaf.png">
-                            <p class="date-earth-track">2021/4/21</p>
-                        </div>
-                        <div class="item-four">
-                            <img src="/assets/img/earthTrack/analyze-nation.png">
-                            <p class="date-earth-track">2021/4/21</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="learning_resource">
-                <div class="button-tool">
-                    <button class="button_tool_tilte">Go to learning resource</button>
-                    <img src="/assets/img/Arrow.png" alt="Arrow Image">
-                </div>
-                <div class="brand_logo">
-                    <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
-                    <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
-                    <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
-                    <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
-                </div>
-            </div>
+        <div class="living-earth">
+          <div class="left-content">
+            <img src="/assets/img/living_wales.png">
+          </div>
+          <div class="right-content">
+            <img src="/assets/img/list.svg">
+            <p>LEGEND</p>
+          </div>
         </div>
+        <div class="banner-button">
+          {% for tool_item in site.data.tool_page.index %}
+            <button type="button" class="tool-button-banner">
+              <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
+              <p>{{ tool_item.title }}</p>
+            </button>
+          {% endfor %}
+        </div>
+        <div class="separated-item">
+          <div class="left-item">
+            <span>Separated by color of dot</span>
+            <img src="/assets/icon/questionmark.svg">
+          </div>
+          <div class="toggle-button" onclick="toggleSwitch(this)">
+            <div class="toggle-slider"></div>
+          </div>
+        </div>
+        <div>
+          <div class="separated-item">
+            <span class="repeated">Repeated measurement visualization</span>
+            <img src="/assets/icon/questionmark.svg">
+          </div>
+          <div class="space-between-title-img"></div>
+          <div class="separated-item-img">
+            <div class="item-one">
+              <img src="/assets/img/earthTrack/analyze-forest.png">
+              <p class="date-earth-track">2021/4/21</p>
+            </div>
+            <div class="item-two">
+              <img src="/assets/img/earthTrack/analyze-bridge.png">
+              <p class="date-earth-track">2021/4/21</p>
+            </div>
+          </div>
+          <div class="separated-item-img">
+            <div class="item-three">
+              <img src="/assets/img/earthTrack/analyze-leaf.png">
+              <p class="date-earth-track">2021/4/21</p>
+            </div>
+            <div class="item-four">
+              <img src="/assets/img/earthTrack/analyze-nation.png">
+              <p class="date-earth-track">2021/4/21</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="learning_resource">
+        <div class="button-tool">
+          <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
+          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+        </div>
+        <div class="brand_logo">
+          <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
+          <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
+          <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
+          <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <script>
-    function toggleSwitch(button) {
-      button.classList.toggle("active");
+  function toggleSwitch(button) {
+    button.classList.toggle('active');
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var learningResourceButton = document.getElementById('learningResourceButton');
+
+    if (learningResourceButton) {
+      learningResourceButton.addEventListener('click', function () {
+        window.location.href = '/tools/learning-resources';
+      });
     }
-  </script>
+  });
+</script>
 <!-- /TOOL-EARTH-TRACK-SIDEBAR -->

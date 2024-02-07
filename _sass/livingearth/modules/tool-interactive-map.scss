@@ -47,7 +47,6 @@
   border: 1px solid gray;
   display: flex;
   padding: 10px;
-  justify-content: center;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
@@ -64,6 +63,12 @@
   width: 121px;
 }
 .tool-button-banner:nth-child(5) {
+  width: 121px;
+}
+.tool-button-banner:nth-child(3) {
+  width: 121px;
+}
+.tool-button-banner:nth-child(6) {
   width: 121px;
 }
 .tool-button-banner:hover {

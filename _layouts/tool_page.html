@@ -18,7 +18,46 @@ home: true
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    $('#gettingStartedModal').modal('show');
+    // Check if the modal has been shown before
+    var modalShown = getCookie('modalShown');
+
+    if (!modalShown) {
+      // Show the modal
+      $('#gettingStartedModal').modal('show');
+
+      // Set a flag in a cookie to indicate that the modal has been shown
+      setCookie('modalShown', true, 365);
+    }
+
+    $('#understoodButton').on('click', function () {
+      $('#gettingStartedModal').modal('hide');
+    });
+
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); // Set the expiration time to 30 days
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    if (!modalShown) {
+      $('#gettingStartedModal').modal('show');
+      localStorage.setItem('modalShown', true);
+    }
 
     $('#understoodButton').on('click', function () {
       $('#gettingStartedModal').modal('hide');
