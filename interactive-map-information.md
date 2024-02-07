@@ -21,6 +21,5 @@ heading="Opensource Tools for earth scientists & policymakers"
 -%}
 
 {%-
-include tools-slide16.liquid
+include interactive-map-information.liquid
 -%}
-
