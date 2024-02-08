@@ -1,5 +1,12 @@
 <script>
     let mymap
+    let disableCountries = ['Australia', 'Switzerland', 'Southeast Asia']
+    let locationCoordination = {
+        'Wales': [ 51.8370798, -3.3925456999999994],
+        'Australia': [40.737, -73.923],
+        'Switzerland': [46.8182, 8.2275],
+        'Southeast Asia': [1.3521, 103.8198]
+    }
     function toggleDropdown2() {
         var selectedYear = document.getElementById('yearDropdown2').value;
 
@@ -23,7 +30,11 @@
         const selectElement = document.getElementById('choose_country');
         const selectedValue = selectElement.value;
         const yearSelectElement = document.getElementById('yearDropdown2');
-        selectedValue === 'Australia' ? yearSelectElement.classList.add('tools-interactivemap--select---year----disabled') : yearSelectElement.classList.remove('tools-interactivemap--select---year----disabled')
+        if(disableCountries.includes(selectedValue)){
+            yearSelectElement.classList.add('tools-interactivemap--select---year----disabled')
+        } else {
+            yearSelectElement.classList.remove('tools-interactivemap--select---year----disabled')
+        }
     }
     function disableButton() {
         const selectElement = document.getElementById('choose_country');
@@ -32,8 +43,8 @@
         const interactiveMapButtonsArray = Array.from(interactiveMapButtons);
         interactiveMapButtonsArray.forEach((button) => {
             const pElement = button.querySelector('p');
-            if (selectedValue === 'Australia') {
-                if (pElement.textContent === 'water' || pElement.textContent === 'change' || pElement.textContent === 'biodiversity' || pElement.textContent === 'account') {
+            if(disableCountries.includes(selectedValue)){
+                if (pElement.textContent === 'water' || pElement.textContent === 'change' || pElement.textContent === 'biodiversity' || pElement.textContent === 'accounts' || pElement.textContent === 'feature') {
                     button.classList.add('tools-interactivemap--button---disabled');
                 }
             } else {
@@ -44,14 +55,7 @@
     function setViewforMap() {
         let selectElement = document.getElementById('choose_country');
         let selectedValue = selectElement.value;
-        
-        if (selectedValue === 'Australia') {
-            mymap.panTo([40.737, -73.923], 13)
-        }
-
-        if (selectedValue === 'Wales') {
-            mymap.panTo([ 51.8370798, -3.3925456999999994], 13)
-        }
+        mymap.panTo(locationCoordination[selectedValue], 13)
     }
     async function setupPoint(mymap){
         const json = await fetch('/assets/json/habitat_pts.json').then(res => res.json());
@@ -122,7 +126,6 @@
         disableBySelected()
         selectElement.addEventListener('change', function () {
             disableBySelected()
-            {% comment %} setViewforMap(mymap) {% endcomment %}
         });
     });
     
@@ -136,10 +139,10 @@
             <div class="country_form">
                 <select class="form-select" aria-label="Default select example" class="choose_country" id="choose_country">
                     <option selected>Country</option>
-                    <option value="1">Wales</option>
-                    <option value="2">Australia</option>
-                    <option value="3">Switzerland</option>
-                    <option value="4">Southeast Asia</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Southeast Asia">Southeast Asia</option>
                 </select>
 
                 <!-- INTERACTIVE-MAP-BEFORE -->
