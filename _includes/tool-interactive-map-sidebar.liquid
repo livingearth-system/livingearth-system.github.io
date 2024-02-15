@@ -1,4 +1,12 @@
 <script>
+    let mymap
+    let disableCountries = ['Australia', 'Switzerland', 'Southeast Asia']
+    let locationCoordination = {
+        'Wales': [ 51.8370798, -3.3925456999999994],
+        'Australia': [40.737, -73.923],
+        'Switzerland': [46.8182, 8.2275],
+        'Southeast Asia': [1.3521, 103.8198]
+    }
     function toggleDropdown2() {
         var selectedYear = document.getElementById('yearDropdown2').value;
 
@@ -13,7 +21,114 @@
         document.querySelector('.after .option-year').textContent = 'Select a year to see options for ' + selectedYear;
     }
 
-    document.getElementById('yearDropdown2').onchange = toggleDropdown2;
+    function disableBySelected() {
+        disableYearSelect()
+        disableButton()
+    }
+
+    function disableYearSelect() {
+        const selectElement = document.getElementById('choose_country');
+        const selectedValue = selectElement.value;
+        const yearSelectElement = document.getElementById('yearDropdown2');
+        if(disableCountries.includes(selectedValue)){
+            yearSelectElement.classList.add('tools-interactivemap--select---year----disabled')
+        } else {
+            yearSelectElement.classList.remove('tools-interactivemap--select---year----disabled')
+        }
+    }
+    function disableButton() {
+        const selectElement = document.getElementById('choose_country');
+        const selectedValue = selectElement.value;
+        const interactiveMapButtons = document.getElementsByClassName('tool-button-banner');
+        const interactiveMapButtonsArray = Array.from(interactiveMapButtons);
+        interactiveMapButtonsArray.forEach((button) => {
+            const pElement = button.querySelector('p');
+            if(disableCountries.includes(selectedValue)){
+                if (pElement.textContent === 'water' || pElement.textContent === 'change' || pElement.textContent === 'biodiversity' || pElement.textContent === 'accounts' || pElement.textContent === 'feature') {
+                    button.classList.add('tools-interactivemap--button---disabled');
+                }
+            } else {
+                button.classList.remove('tools-interactivemap--button---disabled');
+            }
+        });
+    }
+    function setViewforMap() {
+        let selectElement = document.getElementById('choose_country');
+        let selectedValue = selectElement.value;
+        mymap.panTo(locationCoordination[selectedValue], 13)
+    }
+    async function setupPoint(mymap){
+        const json = await fetch('/assets/json/habitat_pts.json').then(res => res.json());
+        L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            minZoom: 10,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+          }).addTo(mymap);
+          json.features.forEach(item => {
+            L.marker(item.geometry.coordinates.reverse()).addTo(mymap).bindPopup(`
+                <div>
+                  <div class="leaflet-point-title-wrapper"
+                  >
+                    <p class="leaflet-point-title">${ item.properties.legend }</p>
+                    <p class="leaflet-point-date">${ new Date(item.properties._CREATION_DATE).getFullYear() }-${ new Date(item.properties._CREATION_DATE).getMonth() + 1 }-${ new Date(item.properties._CREATION_DATE).getDate() - 1 } </p>
+                  </div>
+                  <div class="leaflet-point-content-wrapper">
+                    <p class="leaflet-point-content-desc"><span>Habitat</span> : Open (40 to 60-70%) > 14m Needle-leaved Evergreen Trees</p>
+                    <div class="leaflet-point-content-imgages-wrapper">
+                      <div class="leaflet-point-content-image">
+                        <img src="${item.properties.images.photoAhead}" alt="" />
+                        <span>Site Picture</span>
+                      </div>
+                      <div class="leaflet-point-content-image">
+                        <img src="${item.properties.images.photoGround}" alt="" />
+                        <span>Down picture</span>
+                      </div>
+                      <div class="leaflet-point-content-image">
+                        <img src="${item.properties.images.photoSky}" alt="" />
+                        <span>Up picture</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>`);
+          
+          })
+    }
+
+    function handleToolsInteractiveMapFunction (button_name) {
+        switch(button_name) {
+            case 'land-cover':
+                setViewforMap()
+                break
+            case 'water':
+                setViewforMap()
+            break;
+            case 'change':
+                setViewforMap()
+            break;
+            case 'biodiversity':
+                setViewforMap()
+            break;
+            case 'account':
+                {% comment %} window.location.href = '/tools/account'; {% endcomment %}
+            break;
+            default:
+                break;
+        }   
+    }
+
+    document.addEventListener('DOMContentLoaded',  function () {
+        let selectElement = document.getElementById('choose_country');
+        let selectedValue = selectElement.value;
+        mymap = L.map('map').setView([ 51.8370798, -3.3925456999999994], 13);
+        setupPoint(mymap)
+    
+
+        disableBySelected()
+        selectElement.addEventListener('change', function () {
+            disableBySelected()
+        });
+    });
+    
 </script>
 
 
@@ -22,11 +137,12 @@
     <div id="interactive-map" class="interactiveMap-display-by-id">
         <div class="tool_side_bar">
             <div class="country_form">
-                <select class="form-select" aria-label="Default select example" class="choose_country">
-                    <option selected>Wales</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="form-select" aria-label="Default select example" class="choose_country" id="choose_country">
+                    <option selected>Country</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Southeast Asia">Southeast Asia</option>
                 </select>
 
                 <!-- INTERACTIVE-MAP-BEFORE -->
@@ -42,7 +158,7 @@
                     </div>
                     <div class="banner-button">
                         {% for tool_item in site.data.tools.sidebar.interactive-map %}
-                        <button type="button" class="tool-button-banner">
+                        <button type="button" class="tool-button-banner" onclick="handleToolsInteractiveMapFunction(`{{tool_item.title}}`)">
                             <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
                             <p>{{ tool_item.title }}</p>
                         </button>

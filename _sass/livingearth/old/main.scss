@@ -1514,7 +1514,7 @@ h2 a,
 
 .dsc-about-inner {
   margin-top: 80px;
-  padding-left: 50px !important;
+  //padding-left: 50px !important;
   color: white;
 }
 
@@ -1584,7 +1584,6 @@ h2 a,
 @media (min-width: 1599px) {
   .dsc-about-inner {
     margin-top: 80px;
-    margin-left: 100px;
     color: white;
   }
 }

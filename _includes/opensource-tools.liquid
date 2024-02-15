@@ -1,17 +1,32 @@
 <div class="mt-100 mb-100 search-landscapes-main">
-    <div class="d-flex justify-content-center align-items-center">
-        <h2 class="text-center">Opensource Tools for earth scientists & policymakers</h2>
-    </div>
+  <div class="d-flex justify-content-center align-items-center">
+    <h2 class="text-center">Opensource Tools for earth scientists & policymakers</h2>
+  </div>
 
-    <div class="row d-flex justify-content-center opensource-tools-wrapper">
-        {% for box in site.data.opensource-tools.index %}
-            <div class="col-6 col-md-3 col-lg opensource-tools">
-                <a href="{{ box.url }}">
-                    <span class="icon">{{ box.icon.value }}</span>
-                    <span class="white-icon">{{ box.white-icon }}</span>
-                    <span>{{ box.title }}</span>
-                </a>
-            </div>
-        {% endfor %}
-    </div>
+  <div class="row d-flex justify-content-center opensource-tools-wrapper">
+    {% for box in site.data['opensource-tools'].index %}
+      <div class="col-6 col-md-3 col-lg opensource-tools">
+        <a href="{{ box.url }}">
+          <span class="icon">{{ box.icon.value }}</span>
+          <span class="white-icon">{{ box['white-icon'] }}</span>
+          <span>{{ box.title }}</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Kiểm tra đường dẫn hiện tại
+    if (window.location.pathname === '/tools/interactive-map-information') {
+      // Lấy danh sách các button
+      var buttons = document.querySelectorAll('.opensource-tools');
+
+      // Kích hoạt button đầu tiên
+      if (buttons.length > 0) {
+        buttons[0].classList.add('active');
+      }
+    }
+  });
+</script>

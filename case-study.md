@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /about/case-study/
+permalink: /case-study/
 
 title: "Data"
 

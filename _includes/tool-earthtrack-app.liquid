@@ -1,0 +1,47 @@
+<div class="map-container">
+  <div id="map"></div>
+</div>
+
+<!-- Include Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', async function () {
+  document.querySelector("#map")
+    const json = await fetch('/assets/json/habitat_pts.json').then(res => res.json());
+    var mymap = L.map('map').setView([ 51.8370798, -3.3925456999999994], 13);
+    L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      minZoom: 10,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+    }).addTo(mymap);
+    json.features.forEach(item => {
+      L.marker(item.geometry.coordinates.reverse()).addTo(mymap).bindPopup(`
+          <div>
+            <div class="leaflet-point-title-wrapper"
+            >
+              <p class="leaflet-point-title">${ item.properties.legend }</p>
+              <p class="leaflet-point-date">${ new Date(item.properties._CREATION_DATE).getFullYear() }-${ new Date(item.properties._CREATION_DATE).getMonth() + 1 }-${ new Date(item.properties._CREATION_DATE).getDate() - 1 } </p>
+            </div>
+            <div class="leaflet-point-content-wrapper">
+              <p class="leaflet-point-content-desc"><span>Habitat</span> : Open (40 to 60-70%) > 14m Needle-leaved Evergreen Trees</p>
+              <div class="leaflet-point-content-imgages-wrapper">
+                <div class="leaflet-point-content-image">
+                  <img src="${item.properties.images.photoAhead}" alt="" />
+                  <span>Site Picture</span>
+                </div>
+                <div class="leaflet-point-content-image">
+                  <img src="${item.properties.images.photoGround}" alt="" />
+                  <span>Down picture</span>
+                </div>
+                <div class="leaflet-point-content-image">
+                  <img src="${item.properties.images.photoSky}" alt="" />
+                  <span>Up picture</span>
+                </div>
+              </div>
+            </div>
+          </div>`);
+    
+    })
+  });
+</script>

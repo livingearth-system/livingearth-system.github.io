@@ -11,4 +11,7 @@
   title: "biodiversity"
 
 - icon: "/assets/img/account.svg"
-  title: "account"
+  title: "accounts"
+
+- icon: "/assets/img/change.svg"
+  title: "feature"
