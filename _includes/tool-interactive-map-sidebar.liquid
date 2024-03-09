@@ -55,7 +55,9 @@
     function setViewforMap() {
         let selectElement = document.getElementById('choose_country');
         let selectedValue = selectElement.value;
-        mymap.panTo(locationCoordination[selectedValue], 13)
+        if(selectedValue !== 'Country') {
+            mymap.panTo(locationCoordination[selectedValue], 13)
+        }
     }
     async function setupPoint(mymap){
         const json = await fetch('/assets/json/habitat_pts.json').then(res => res.json());
