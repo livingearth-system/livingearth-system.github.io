@@ -5,21 +5,20 @@
     </div>
     <div class="col-12 col-md-6 blog-main-right">
       <div class="blog-main-right-dsc">
-        <button type="button">RESEARCH</button>
-        <h5>an artist’s surreal view of Australia</h5>
+        <button type="button">{{include.title-button}}</button>
+        <h5>{{include.heading}}</h5>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam,...
+          {{include.subheading}}
         </p>
         <div class="user-profile">
           <div class="user-profile-img">
-            <img src="/assets/img/avatar/profile.png" alt="user">
+            <img src="{{include.avatar}}" alt="user">
           </div>
           <div>
-            <h2 class="user-name">Malcom Jacobs</h2>
+            <h2 class="user-name">{{include.username}}</h2>
             <div class="user-status">
-              <p class="user-status-date">Apr 10,2022</p>
-              <p class="user-status-type">7 mins read</p>
+              <p class="user-status-date">{{include.user-status-date}}</p>
+              <p class="user-status-type">{{include.user-status-type}}</p>
             </div>
           </div>
         </div>
