@@ -22,4 +22,6 @@ heading="Opensource Tools for earth scientists & policymakers"
 
 {%-
 include get-the-data.liquid
+title="Get the Data"
+description="Our access portal provides Living Earth regional products as well as links and directories to other Opensource EO datasets."
 -%}

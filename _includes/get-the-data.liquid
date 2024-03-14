@@ -1,139 +1,32 @@
 <div class="tool_img">
   <div class="row">
     <div class="tool_content col-8">
-      <h2 class="title">Get the Data</h2>
+      <h2 class="title">{{ include.title }}</h2>
       <p class="article_description">
-        Our access portal provides Living Earth regional products as well as links and directories to other Opensource
-        EO datasets.
+        {{ include.description }}
       </p>
-      <h3 class="article_heading">Why are Earth observation data important?</h3>
-      <p class="article_description">
-        For decades, airborne and spaceborne sensors have been acquiring data across all or part of Wales in varying
-        modes and across a range of spatial resolutions and temporal frequencies. These sections provide information on
-        and access to a range of data, much of which is in an analysis ready data (ARD) format.
-      </p>
-      <p class="article_description">
-        These data include freely accessible radar and optical data acquired by the Sentinel-1 and 2 respectively, which
-        are provided in both near real time and as historical archives and can be downloaded at no cost. For more
-        information on the ARD, go to [LINK TO DATA – ARD]
-      </p>
-      <h3 class="article_heading">How can I download satellite data to an analysis ready data (ARD) format?</h3>
-      <p class="article_description">You can download the ARD data directly from for each country or region at:</p>
-      <div class="row data-table">
-        <div class="col-3">
-          <p class="data-table-heading">Country/Region</p>
-          <p class="data-table-list">Australia</p>
-          <p class="data-table-list">Wales</p>
-          <p class="data-table-list">Switzerland</p>
-          <p class="data-table-list-bot">Southeast Asia</p>
+      {% for item in site.data['get-the-data-information'].index['available-link-data'] %}
+        <h3 class="article_heading">{{ item.title }}</h3>
+        {% assign descriptions = item.description | newline_to_br | split: '<br>' %}
+        {% for description in descriptions %}
+          <p class="article_description">{{ description }}</p>
+        {% endfor %}
+        <div class="row data-table">
+          <div class="col-3">
+            <p class="data-table-heading">{{ item['country/region-header'] }}</p>
+            {% for row in item.data_table %}
+              <p class="data-table-list">{{ row.country_region }}</p>
+            {% endfor %}
+          </div>
+          <div class="col-8">
+            <p class="data-table-heading">{{ item['link-header'] }}</p>
+            {% for row in item.data_table %}
+              <a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a>
+              <br>
+            {% endfor %}
+          </div>
         </div>
-        <div class="col-8">
-          <p class="data-table-heading">Access to Jupyter notebooks</p>
-          <a
-            class="data-table-link"
-            href="http://livingearthhub.org/oceania/australia/analysis-ready-data/#"
-            >http://livingearthhub.org/oceania/australia/analysis-ready-data/#
-          </a>
-          <a
-            class="data-table-link"
-            href="http://livingearthhub.org/europe/wales/analysis-ready-data/"
-            >http://livingearthhub.org/europe/wales/analysis-ready-data/
-          </a>
-          <a
-            class="data-table-link"
-            href="https://explorer.swissdatacube.org/"
-            >https://explorer.swissdatacube.org/
-          </a>
-        </div>
-      </div>
-      <h3 class="article_heading">
-        How can I download the Living Earth products, such as land cover, habitat and change maps and the environmental
-        descriptors?
-      </h3>
-      <p class="article_description">
-        The products generated through Living Earth can be downloaded directly from the interactive map [LINK to
-        INTERACTIVE MAP].
-      </p>
-      <h3 class="article_heading">Can I access the data through your Countries data cube?</h3>
-      <p class="article_description">
-        If you do not want to download the data but instead use within the Open Date Cube for your country or region to
-        access the ARD and derived products. You will need to request a login on each occasion. All data and derived
-        products can be downloaded whilst your own datasets can be u;loaded and integrated into your workflows. See
-        [LINK TO: EDUCATION]
-      </p>
-      <div class="row data-table">
-        <div class="col-3">
-          <p class="data-table-heading">Country/Region</p>
-          <p class="data-table-list">Australia</p>
-          <p class="data-table-list">Wales</p>
-          <p class="data-table-list">Switzerland</p>
-          <p class="data-table-list-bot">Southeast Asia</p>
-        </div>
-        <div class="col-5">
-          <p class="data-table-heading">Access to Jupyter notebooks</p>
-          <a
-            class="data-table-link"
-            href="https://app.sandbox.dea.ga.gov.au/"
-            >https://app.sandbox.dea.ga.gov.au/
-          </a>
-          <a
-            class="data-table-link"
-            href="https://livingwales.aber.ac.uk/jhub"
-            >https://livingwales.aber.ac.uk/jhub
-          </a>
-          <a
-            class="data-table-link"
-            href="https://www.swissdatacube.org/index.php/platform/"
-            >https://www.swissdatacube.org/index.php/platform/
-          </a>
-        </div>
-      </div>
-      <h3 class="article_heading">How do I get access to the ground observation records submitted to Earthtrack?</h3>
-      <p class="article_description">
-        Earthtrack data are available for viewing on the Earthtrack mobile application MAP page (LINK TO: EARTHTRACK]
-        immediately following submission.
-      </p>
-      <p class="article_description">
-        Submitted data are also transferred immediately to Natural Apptitude’s Coreo database, whereupon they are
-        reviewed internally for record and image quality and content, and released within a day of submission to the
-        Earthtrack Geoportal where they are available for download.
-      </p>
-      <p class="article_description">
-        All points can be downloaded from the Geoportal, but subsets can be selected by defining or drawing a region of
-        interest. The direct access links are below:
-      </p>
-      <div class="row data-table">
-        <div class="col-3">
-          <p class="data-table-heading">Dataset</p>
-          <p class="data-table-list">Land cover</p>
-          <p class="data-table-list">Habitat</p>
-          <p class="data-table-list">Change</p>
-          <p class="data-table-list-bot">Fire</p>
-        </div>
-        <div class="col-5">
-          <p class="data-table-heading">Direct link</p>
-          <a
-            class="data-table-link"
-            href="https://earthtrack.aber.ac.uk/lccs/lccs_world.html"
-            >https://earthtrack.aber.ac.uk/lccs/lccs_world.html
-          </a>
-          <a
-            class="data-table-link"
-            href="https://earthtrack.aber.ac.uk/campaign/habitat_world.html"
-            >https://earthtrack.aber.ac.uk/campaign/habitat_world.html
-          </a>
-          <a
-            class="data-table-link"
-            href="https://earthtrack.aber.ac.uk/campaign/change_world.html"
-            >https://earthtrack.aber.ac.uk/campaign/change_world.html
-          </a>
-          <a
-            class="data-table-link"
-            href="https://earthtrack.aber.ac.uk/campaign/fire_world.html"
-            >https://earthtrack.aber.ac.uk/campaign/fire_world.html
-          </a>
-        </div>
-      </div>
+      {% endfor %}
       <h3 class="article_heading">Can the Earthtrack data be accessed via a web-service?</h3>
       <p class="article_description">
         All Earthtrack points can be accessed by connecting to the Web Feature Service on your software through the URL
