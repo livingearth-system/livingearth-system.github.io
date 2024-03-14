@@ -9,6 +9,7 @@ nobuttons: true
 ---
 {% include tool-content.liquid
 title="analyze the data with jupyter notebooks"
+permal="Home / Tools / Analyze the Data/ Openly Available Optical and Radar"
 first-heading="what is jupyterhub?"
 first-content-top="JupyterHub brings the power of notebooks to groups of users. It gives users      access to
 
