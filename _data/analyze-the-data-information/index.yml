@@ -1,0 +1,17 @@
+available-link-data:
+  - description: "Within Living Earth, you can access the data cube for your country or region through the following links."
+    country/region-header: "Country/Region"
+    link-header: "Access to Jupyter notebooks"
+    data_table:
+      - country_region: "Australia"
+        access_link: "https://app.sandbox.dea.ga.gov.au/"
+      - country_region: "Wales"
+        access_link: "https://livingwales.aber.ac.uk/jhub"
+      - country_region: "Switzerland"
+        access_link: "https://www.swissdatacube.org/index.php/platform/"
+      - country_region: "Southeast Asia"
+        access_link: ""
+    description2: "Once you have obtained a login and password, you can access default notebooks that are relevant generally or specifically to Living Earth.
+    
+    
+    A notebook repository is also available [LINK TO NOTEBOOK REPOSITORY – TO BE SET UP]"
