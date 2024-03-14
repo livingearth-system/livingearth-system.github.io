@@ -1,0 +1,31 @@
+- title: "LIVING EARTH MASTERS MODULE AT ABERYSTWYTH UNIVERSITY"
+  image: "/assets/img/oldman-fix.png"
+  content: >
+    New to Aberystwyth University Masters in Remote Sensing and GIS: Living Earth: Past and Future Environmental Monitoring. This new module introduces students to a sequence of steps involving:
+    
+    a. Generating or accessing Earth observation data in an Analysis Ready Data (ARD) format.
+    
+    b. Retrieving or classifying environmental descriptors from these data.
+    
+    c. Classifying land covers, including through environmental descriptors, and translating to habitats.
+    
+    d. Detecting and describing change impacts and driving pressures based on evidence.
+    
+    e. Validating the resulting thematic products through ground and remote observations.
+    
+    The module explains locally relevant frameworks for classifying land covers (the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS) and detecting, describing, mapping and monitoring change (a Global Change Taxonomy and Evidence-Based Change Framework). The module also connects to a wide range of stakeholders and interest groups, from the public through to those involved in national and international land management and policy.
+  link: "#"
+
+- title: "THE LIVING EARTH EXHIBITION AND TRAINING CENTRE AT THE CENTRE FOR ALTERNATIVE TECHNOLOGY"
+  image: "/assets/img/oldman-fix.png"
+  content: >
+      The Living Earth Exhibition and Training Centre (LINK TO: https://cat.org.uk/living-wales-1/) is open at the Centre for Alternative Technology (www.cat.org) near Machynlleth and can be booked for tours as part of the educational program. (see LINK HERE)
+  link: "https://cat.org.uk/living-wales-1/"
+
+- title: "LIVING EARTH AND PROTECTING OUR PLANET 2023"
+  image: "/assets/img/oldman-fix.png"
+  content: >
+      New: Living Earth Scientists along with the European Space Agency (ESA), the Centre for Alternative Technology (CAT) and the Eden Project contributed to the STEM event, Protecting Our Planet (POP23). With 262,591, POP23 had made a major contribution to educating our younger generation and teachers on our changing planet and what we can do to help.
+  links:
+    - url: "https://www.stem.org.uk/enrichment/protecting-our-planet-day"
+    - url: "https://www.stem.org.uk/enrichment/protecting-our-planet-day/pop-sessions/protecting-our-forests-pop23"
