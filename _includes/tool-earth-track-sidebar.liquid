@@ -4,20 +4,19 @@
     <div class="tool_side_bar">
       <div class="country_form">
         <select class="form-select" aria-label="Default select example" class="choose_country" id="choose_country">
-          <option selected>Choose a country</option>
-          <option value="1">Wales</option>
-          <option value="2">Australia</option>
-          <option value="3">Switzerland</option>
-          <option value="4">Southeast Asia</option>
+          <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
+          {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
+            <option value="{{ country.value }}">{{ country.name }}</option>
+          {% endfor %}
         </select>
 
         <div class="living-earth">
           <div class="left-content">
-            <img src="/assets/img/living_wales.png">
+            <img src="{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}">
           </div>
           <div class="right-content">
-            <img src="/assets/img/list.svg">
-            <p>LEGEND</p>
+            <img src="{{ site.data.tool-earth-track-sidebar.index.content.right-content.src }}">
+            <p>{{ site.data.tool-earth-track-sidebar.index.content.right-content.title }}</p>
           </div>
         </div>
         <div class="banner-button">
@@ -30,52 +29,53 @@
         </div>
         <div class="separated-item">
           <div class="left-item">
-            <span>Separated by color of dot</span>
-            <img src="/assets/icon/questionmark.svg">
+            <span>{{ site.data.tool-earth-track-sidebar.index.dot-infor.title }}</span>
+            <img src="{{ site.data.tool-earth-track-sidebar.index.dot-infor.src }}">
           </div>
           <div class="toggle-button" onclick="toggleSwitch(this)">
             <div class="toggle-slider"></div>
           </div>
         </div>
-        <div>
-          <div class="separated-item">
-            <span class="repeated">Repeated measurement visualization</span>
-            <img src="/assets/icon/questionmark.svg">
+        {% for item in site.data.tool-earth-track-sidebar.index.visualization_items %}
+          <div>
+            <div class="separated-item">
+              <span class="repeated">{{ item.title }}</span>
+              <img src="/assets/icon/questionmark.svg">
+            </div>
+            <div class="space-between-title-img"></div>
+            <div class="separated-item-img">
+              <div class="item-one">
+                <img src="{{ item.image_one_src }}">
+                <p class="date-earth-track">{{ item.image_one_date }}</p>
+              </div>
+              <div class="item-two">
+                <img src="{{ item.image_two_src }}">
+                <p class="date-earth-track">{{ item.image_two_date }}</p>
+              </div>
+            </div>
+            <div class="separated-item-img">
+              <div class="item-three">
+                <img src="{{ item.image_three_src }}">
+                <p class="date-earth-track">{{ item.image_three_date }}</p>
+              </div>
+              <div class="item-four">
+                <img src="{{ item.image_four_src }}">
+                <p class="date-earth-track">{{ item.image_four_date }}</p>
+              </div>
+            </div>
           </div>
-          <div class="space-between-title-img"></div>
-          <div class="separated-item-img">
-            <div class="item-one">
-              <img src="/assets/img/earthTrack/analyze-forest.png">
-              <p class="date-earth-track">2021/4/21</p>
-            </div>
-            <div class="item-two">
-              <img src="/assets/img/earthTrack/analyze-bridge.png">
-              <p class="date-earth-track">2021/4/21</p>
-            </div>
-          </div>
-          <div class="separated-item-img">
-            <div class="item-three">
-              <img src="/assets/img/earthTrack/analyze-leaf.png">
-              <p class="date-earth-track">2021/4/21</p>
-            </div>
-            <div class="item-four">
-              <img src="/assets/img/earthTrack/analyze-nation.png">
-              <p class="date-earth-track">2021/4/21</p>
-            </div>
-          </div>
-        </div>
+          {% endfor %}          
       </div>
 
       <div class="learning_resource">
         <div class="button-tool">
-          <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
+          <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
         </div>
         <div class="brand_logo">
-          <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
-          <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
-          <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
-          <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
+          {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
+            <img src="{{ logo.src }}" alt="{{ logo.name }}">
+          {% endfor %}
         </div>
       </div>
     </div>

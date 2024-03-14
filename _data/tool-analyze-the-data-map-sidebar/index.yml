@@ -24,3 +24,7 @@ sponsor_logos:
     src: "/assets/img/sponsor-logo/pml.png"
   - name: australian_government
     src: "/assets/img/sponsor-logo/australian_goverment.png"
+
+arrow_img:
+  src: /assets/img/Arrow.png
+  alt: Arrow Image
