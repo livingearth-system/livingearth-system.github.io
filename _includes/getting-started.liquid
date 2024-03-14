@@ -35,25 +35,16 @@
   <div class="getting-started-learning">
     <p class="getting-started-learning-title">Learning Resources</p>
     <div class="getting-started-learning-content">
-      <div class="getting-started-learning-items">
-        <div class="img">
-          <img src="/assets/img/tools1.jpg">
-        </div>
-        <p>TAKE THE TOUR</p>
+  {% for item in site.data.getting-started.index %}
+    <div class="getting-started-learning-items">
+      <div class="img">
+        <img src="{{ item.link }}">
       </div>
-      <div class="getting-started-learning-items">
-        <div class="img">
-          <img src="/assets/img/tools2.jpg">
-        </div>
-        <p>GETTING STARTED</p>
-      </div>
-      <div class="getting-started-learning-items">
-        <div class="img">
-          <img src="/assets/img/tools3.jpg">
-        </div>
-        <p>UNDERSTAND THE DATA</p>
-      </div>
+      <p>{{ item.title }}</p>
     </div>
+  {% endfor %}
+</div>
+
   </div>
   <div class="getting-started-end">
     <button id="closeButton" type="submit" data-dismiss="modal">
