@@ -3,11 +3,10 @@
         <div class="tool_side_bar">
             <div class="country_form">
                 <select class="form-select" aria-label="Default select example" class="choose_country">
-                    <option selected>Choose a country</option>
-                    <option value="1">Wales</option>
-                    <option value="2">Australia</option>
-                    <option value="3">Switzerland</option>
-                    <option value="4">Southeast Asia</option>
+                    <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
+                    {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
+                        <option value="{{ country.value }}">{{ country.name }}</option>
+                    {% endfor %}
                 </select>
 
                 <!-- INTERACTIVE-MAP-AFTER -->
@@ -71,46 +70,16 @@
                         </div>
                         <div class="after-selected-line"></div>
                         <div class="land-checkbox">
-                            <div class="Canopy">
-                                <input type="checkbox" id="landcheckbox1" name="landcheckbox1" value="canopy">
-                                <label for="landcheckbox1">Canopy cover 2017</label>
+                            {% for item in site.data.industry-sidebar-content.index %}
+                                <div class="{{ item.class }}">
+                                <input type="checkbox" id="{{ item.id }}" name="{{ item.id }}" value="{{ item.value }}">
+                                <label for="{{ item.id }}">{{ item.label }}</label>
                                 <p class="icon-atfer-selected-year">
                                     <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                    <span><img src="/assets/icon/questionmark.svg"></span>
                                 </p>
-                            </div>
-                            <div class="Canopy-continous">
-                                <input type="checkbox" id="landcheckbox2" name="landcheckbox2" value="canopy-continous">
-                                <label for="landcheckbox2"> Canopy cover (continuous) 2017</label>
-                                <p class="icon-atfer-selected-year">
-                                    <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets//icon/questionmark.svg"></span>
-                                </p>
-                            </div>
-                            <div class="life-form">
-                                <input type="checkbox" id="landcheckbox3" name="landcheckbox3" value="lifeform">
-                                <label for="landcheckbox3"> Lifeform 2017</label>
-                                <p class="icon-atfer-selected-year">
-                                    <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets//icon/questionmark.svg"></span>
-                                </p>
-                            </div>
-                            <div class="leaf-type">
-                                <input type="checkbox" id="landcheckbox4" name="landcheckbox4" value="leaf-type">
-                                <label for="landcheckbox4"> Leaftype / phenology 2017</label>
-                                <p class="icon-atfer-selected-year">
-                                    <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets//icon/questionmark.svg"></span>
-                                </p>
-                            </div>
-                            <div class="non-stress">
-                                <input type="checkbox" id="landcheckbox5" name="landcheckbox5" value="leaf-type">
-                                <label for="landcheckbox5"> Non-trees semi-natural communities 2017</label>
-                                <p class="icon-atfer-selected-year">
-                                    <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets//icon/questionmark.svg"></span>
-                                </p>
-                            </div>
+                                </div>
+                            {% endfor %}
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
@@ -150,10 +119,9 @@
                     <img src="/assets/img/Arrow.png" alt="Arrow Image">
                 </div>
                 <div class="brand_logo">
-                    <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
-                    <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
-                    <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
-                    <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
+                    {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
+                        <img src="{{ logo.src }}" alt="{{ logo.name }}">
+                    {% endfor %}
                 </div>
             </div>
         </div>
