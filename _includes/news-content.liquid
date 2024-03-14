@@ -1,0 +1,131 @@
+<div class="news-header-container">
+    <div class="news-header-search">
+      <input
+        class="search-box "
+        type="text"
+        placeholder="Search by key word"
+      >
+  
+      <button class="a-to-z ">
+        <img src="/assets/icon/icon-a-to-z.svg">
+      </button>
+    </div>
+  
+    <div class="news-header-option">
+      <button class="header-button-1" data-filter-by="all">
+        <p>ALL (81)</p>
+      </button>
+      <button class="header-button-2" data-filter-by="research">
+        <p>RESEARCH (15)</p>
+      </button>
+      <button class="header-button-3" data-filter-by="case-study">
+        <p>CASE STUDY (3)</p>
+      </button>
+      <button class="header-button-4" data-filter-by="news">
+        <p>NEWS (6)</p>
+      </button>
+      <button class="header-button-5" data-filter-by="events">
+        <p>EVENTS (34)</p>
+      </button>
+      <button class="header-button-6" data-filter-by="other">
+        <p>OTHER (23)</p>
+      </button>
+    </div>
+  </div>
+  <div class="container mb-64 mt-64 blog-main">
+    <div class="row">
+      <div class="col-12 col-md-6 blog-main-left-img">
+        <a href="#"><img src="/assets/img/blogMainLeft.png" alt=""></a>
+      </div>
+      <div class="col-12 col-md-6 blog-main-right">
+        <div class="blog-main-right-dsc">
+          <button type="button">RESEARCH</button>
+          <h5>an artist’s surreal view of Australia</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam,...
+          </p>
+          <div class="user-profile">
+            <div class="user-profile-img">
+              <img src="/assets/img/avatar/profile.png" alt="user">
+            </div>
+            <div>
+              <h2 class="user-name">Malcom Jacobs</h2>
+              <div class="user-status">
+                <p class="user-status-date">Apr 10,2022</p>
+                <p class="user-status-type">7 mins read</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- OUR-BLOG -->
+  <div class="container-fluid news-blog">
+    <div class="mb-60">
+      <div class="row mb-60">
+        {% for infor in site.data['news-blog'].index %}
+          <div class="col-xl-4 col-md-6">
+            <div class="item mt-60" data-filter-by="{{ infor['filter-by'] }}">
+              <div class="stay-up-card">
+                <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
+                <div>
+                  {% for button in infor.button %}
+                    <button class="{{ button.class }}" data-filter-by="{{ infor['filter-by'] }}">
+                      <p>{{ button.name }}</p>
+                    </button>
+                  {% endfor %}
+                </div>
+                <p class="title-img">
+                  <a href="{{ infor.href }}">{{ infor.title }}</a>
+                </p>
+                <span class="body-img">{{ infor.subtitle }}</span>
+                <div class="line-card"></div>
+                <div class="date-card">
+                  <span>{{ infor.date }}</span>
+                  <div class="dot-card"></div>
+                  <span>{{ infor.min }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <!-- /OUR-BLOG -->
+  <div class="container mb-100">
+    <div class="row">
+      <div class="col-3 m-auto text-center d-flex align-items-center justify-content-center flex-column">
+        <p class="total-view">You are viewing 8 of 46 articles</p>
+        <button type="button" class="load-more-btn">Learn more</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.news-header-option button');
+      const items = document.querySelectorAll('.item');
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          const filterBy = button.dataset.filterBy;
+          items.forEach(function (item) {
+            const itemFilterBy = item.dataset.filterBy;
+            console.log('item.dataset.filterBy', item.dataset.filterBy);
+            console.log('filterBy', filterBy);
+            if (filterBy === 'all') {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+              if (filterBy === itemFilterBy) {
+                item.style.display = 'block';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>

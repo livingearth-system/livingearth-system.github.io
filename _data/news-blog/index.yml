@@ -1,5 +1,6 @@
 ---
-- button:
+- filter-by: "research"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -21,7 +22,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "research"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -43,7 +45,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "research"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -65,7 +68,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "case-study"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -87,7 +91,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "case-study"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -109,7 +114,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "case-study"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -131,7 +137,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "news"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -153,7 +160,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "news"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -175,7 +183,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "news"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -197,7 +206,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "events"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -219,7 +229,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "events"
+  button:
     - class: button-1
       id: button1
       name: Research
@@ -241,7 +252,8 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
-- button:
+- filter-by: "events"
+  button:
     - class: button-1
       id: button1
       name: Research
