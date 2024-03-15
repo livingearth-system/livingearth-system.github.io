@@ -13,30 +13,30 @@
                 <div class="after">
                     <div class="select-year">
                         <div class="select-site-title-industry">
-                            <span>SITE</span>
-                            <span><img src="/assets//icon/questionmark.svg"></span>
+                            <span>{{ site.data.tool-industry-sidebar.index.choose }}</span>
+                            <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
                         </div>
                         <select id="yearDropdown2" class="form-select" aria-label="Select a year" size="1">
-                            <option class="label-dropdown" disabled selected>SITE 1</option>
-                            <option selected>SITE 1</option>
-                            <option value="1">SITE 2</option>
-                            <option value="2">SITE 3</option>
-                            <option value="3">SITE 4</option>
+                            <option class="label-dropdown" disabled selected>{{ site.data.tool-industry-sidebar.index.choose }}</option>
+                            <option selected>{{ site.data.tool-industry-sidebar.index.choose }}</option>
+                            {% for country in site.data['tool-industry-sidebar'].index.site %}
+                                <option value="{{ country.value }}">{{ country.name }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="select-year">
                         <div class="select-site-title-industry">
-                            <span>select a year</span>
-                            <span><img src="/assets//icon/questionmark.svg"></span>
+                            <span>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</span>
+                            <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
                             </div>
                         <select id="yearDropdown2" class="form-select" aria-label="Select a year" size="1">
-                            <option class="label-dropdown" disabled selected>Select a year</option>
+                            <option class="label-dropdown" disabled selected>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</option>
                             {% for year_item in site.data.year.index %}
                             <option value="{{ year_item.year }}">{{ year_item.year }}</option>
                             {% endfor %}
                         </select>
                     </div>
-                    <p class="select-base-map-industry">land</p>
+                    <p class="select-base-map-industry">{{ site.data.tool-industry-sidebar.index.title.land }}</p>
                     <div class="industry-selected-line"></div>
                     <div class="banner-button">
                         {% for tool_item in site.data.tools.sidebar.interactive-map %}
@@ -51,21 +51,21 @@
                         <div class="base-land">
                             <input type="checkbox" id="checkbox1" name="checkbox1" value="base-land">
                             <label for="checkbox1">
-                                <p>Base Land cover map plus 2017</p>
+                                <p>{{ site.data.tool-industry-sidebar.index.base_land }}</p>
                             </label>
                             <p class="icon-atfer-selected-year">
                                 <span><img src="/assets/icon/download.svg"></span>
-                                <span><img src="/assets//icon/questionmark.svg"></span>
+                                <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
                             </p>
                         </div>
                         <div class="no-basemap">
                             <input type="checkbox" id="checkbox2" name="checkbox2" value="no-base-map">
                             <label for="checkbox2">
-                                <p> No basemap</p>
+                                <p> {{ site.data.tool-industry-sidebar.index.no_base_map }}</p>
                             </label>
                             <p class="icon-atfer-selected-year">
                                 <span><img src="/assets/icon/download.svg"></span>
-                                <span><img src="/assets//icon/questionmark.svg"></span>
+                                <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
                             </p>
                         </div>
                         <div class="after-selected-line"></div>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
-                                <option class="label-dropdown-industry" >Water</span>
+                                <option class="label-dropdown-industry" >{{ site.data.tool-industry-sidebar.index.title.water }}</span>
                                 </option>
                                 {% for year_item in site.data.year.index %}
                                 <option value="{{ year_item.year }}">{{ year_item.year }}</option>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
-                                <option class="label-dropdown-industry" >bIOMASS/CARBON</span>
+                                <option class="label-dropdown-industry" >{{ site.data.tool-industry-sidebar.index.title.biomass }}</span>
                                 </option>
                                 {% for year_item in site.data.year.index %}
                                 <option value="{{ year_item.year }}">{{ year_item.year }}</option>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
-                                <option class="label-dropdown-industry" >Accounting</span>
+                                <option class="label-dropdown-industry" >{{ site.data.tool-industry-sidebar.index.title.accounting }}</span>
                                 </option>
                                 {% for year_item in site.data.year.index %}
                                 <option value="{{ year_item.year }}">{{ year_item.year }}</option>
@@ -115,8 +115,8 @@
             </div>
             <div class="learning_resource">
                 <div class="button-tool">
-                    <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
-                    <img src="/assets/img/Arrow.png" alt="Arrow Image">
+                    <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
+                    <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
                 </div>
                 <div class="brand_logo">
                     {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
