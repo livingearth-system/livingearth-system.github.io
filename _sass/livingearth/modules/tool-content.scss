@@ -227,6 +227,25 @@
     font-size: 14px;
       }
 }
+.row:nth-child(n) h3 {
+  padding-left: 0;
+  margin-top: 20px;
+}
+.row:nth-child(n) h2 {
+  margin-left: 0;
+}
+.data-table-th,
+.data-table-td {
+  padding: 10px 20px 10px 0;
+  word-wrap: break-word;
+  text-align: left;
+  @media (max-width: 400px) {
+    max-width: 150px;
+  }
+  @media (max-width: 600px) {
+    max-width: 200px;
+  }
+}
 
 @media (max-width: 860px) {
 

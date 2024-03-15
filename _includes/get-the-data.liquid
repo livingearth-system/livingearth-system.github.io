@@ -1,6 +1,6 @@
 <div class="tool_img">
   <div class="row">
-    <div class="tool_content col-8">
+    <div class="tool_content col-12 col-lg-8">
       <h2 class="title">{{ include.title }}</h2>
       <p class="article_description">
         {{ include.description }}
@@ -11,22 +11,25 @@
         {% for description in descriptions %}
           <p class="article_description">{{ description }}</p>
         {% endfor %}
-        <div class="row data-table">
-          <div class="col-3">
-            <p class="data-table-heading">{{ item['country/region-header'] }}</p>
+        
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="data-table-th">{{ item['country/region-header'] }}</th>
+              <th class="data-table-th">{{ item['link-header'] }}</th>
+            </tr>
+          </thead>
+          <tbody>
             {% for row in item.data_table %}
-              <p class="data-table-list">{{ row.country_region }}</p>
+              <tr>
+                <td class="data-table-td">{{ row.country_region }}</td>
+                <td class="data-table-td"><a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a></td>
+              </tr>
             {% endfor %}
-          </div>
-          <div class="col-8">
-            <p class="data-table-heading">{{ item['link-header'] }}</p>
-            {% for row in item.data_table %}
-              <a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a>
-              <br>
-            {% endfor %}
-          </div>
-        </div>
+          </tbody>
+        </table>
       {% endfor %}
+      
       <h3 class="article_heading">{{ site.data.get-the-data-information.index.bottom-box.title }}</h3>
       <p class="article_description">
         {{ site.data.get-the-data-information.index.bottom-box.description_1 }}
@@ -35,7 +38,7 @@
       </p>
     </div>
 
-    <div class="col-4 mt-5">
+    <div class="col-12 col-lg-4 mt-5">
       <video width="auto" controls>
         <source src="{{ site.data.get-the-data-information.index.video.video_1.src }}" type="{{ site.data.get-the-data-information.index.video.video_1.type }}">
         <source src="{{ site.data.get-the-data-information.index.video.video_2.src }}" type="{{ site.data.get-the-data-information.index.video.video_2.type }}">
