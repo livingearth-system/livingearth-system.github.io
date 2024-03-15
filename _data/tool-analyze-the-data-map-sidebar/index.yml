@@ -1,14 +1,14 @@
 countries:
   - name: Wales
-    value: 1
+    value: Wales
   - name: Australia
-    value: 2
+    value: Australia
   - name: Switzerland
-    value: 3
+    value: Switzerland
   - name: Southeast Asia
-    value: 4
+    value: Southeast Asia
 
-choose: Choose a country
+choose: Country
 
 learning_resources:
   button_text1: Go to learning resource
