@@ -15,5 +15,4 @@ Noheader: true
 
 {%-
 include meet-our-team.liquid
-header="Meet our team"
 -%}

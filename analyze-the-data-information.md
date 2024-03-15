@@ -22,5 +22,4 @@ heading="Opensource Tools for earth scientists & policymakers"
 
 {%-
 include analyze-the-data.liquid
-title="analyze the data"
 -%}

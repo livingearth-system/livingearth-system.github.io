@@ -22,5 +22,4 @@ heading="Opensource Tools for earth scientists & policymakers"
 
 {%-
 include interactive-map-information.liquid
-heading="Interactive Map"
 -%}
