@@ -1,0 +1,88 @@
+available-link-data:
+  - title: "Why are Earth observation data important?"
+    description: "For decades, airborne and spaceborne sensors have been acquiring data across all or part of Wales in varying modes and across a range of spatial resolutions and temporal frequencies. These sections provide information on and access to a range of data, much of which is in an analysis ready data (ARD) format.
+
+    
+    These data include freely accessible radar and optical data acquired by the Sentinel-1 and 2 respectively, which are provided in both near real time and as historical archives and can be downloaded at no cost. For more information on the ARD, go to [LINK TO DATA – ARD]"
+    country/region-header: ""
+    link-header: ""
+    data_table:
+      - country_region: ""
+        access_link: ""
+      - country_region: ""
+        access_link: ""
+      - country_region: ""
+        access_link: ""
+
+  - title: "How can I download satellite data to an analysis ready data (ARD) format?"
+    description: "You can download the ARD data directly from for each country or region at:"
+    country/region-header: "Country/Region"
+    link-header: "Access to Jupyter notebooks"
+    data_table:
+      - country_region: "Australia"
+        access_link: "http://livingearthhub.org/oceania/australia/analysis-ready-data/#"
+      - country_region: "Wales"
+        access_link: "http://livingearthhub.org/europe/wales/analysis-ready-data/"
+      - country_region: "Switzerland"
+        access_link: "https://explorer.swissdatacube.org/"
+
+  - title: "How can I download the Living Earth products, such as land cover, habitat and change maps and the environmental descriptors?"
+    description: "The products generated through Living Earth can be downloaded directly from the interactive map [LINK to INTERACTIVE MAP]."
+    country/region-header: ""
+    link-header: ""
+    data_table:
+      - country_region: ""
+        access_link: ""
+      - country_region: ""
+        access_link: ""
+      - country_region: ""
+        access_link: ""
+
+  - title: "Can I access the data through your Countries data cube?"
+    description: "If you do not want to download the data but instead use within the Open Date Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be u;loaded and integrated into your workflows. See [LINK TO: EDUCATION]"
+    country/region-header: "Country/Region"
+    link-header: "Access to Jupyter notebooks"
+    data_table:
+      - country_region: "Australia"
+        access_link: "https://app.sandbox.dea.ga.gov.au/"
+      - country_region: "Wales"
+        access_link: "https://livingwales.aber.ac.uk/jhub"
+      - country_region: "Switzerland"
+        access_link: "https://www.swissdatacube.org/index.php/platform/"
+      - country_region: "Southeast Asia"
+        access_link: ""
+
+  - title: "How do I get access to the ground observation records submitted to Earthtrack?"
+    description: "Earthtrack data are available for viewing on the Earthtrack mobile application MAP page (LINK TO: EARTHTRACK] immediately following submission.
+
+    
+    Submitted data are also transferred immediately to Natural Apptitude’s Coreo database, whereupon they are reviewed internally for record and image quality and content, and released within a day of submission to the Earthtrack Geoportal where they are available for download.
+    
+    
+    All points can be downloaded from the Geoportal, but subsets can be selected by defining or drawing a region of interest. The direct access links are below:"
+    country/region-header: "Dataset"
+    link-header: "Direct link"
+    data_table:
+      - country_region: "Land cover"
+        access_link: "https://earthtrack.aber.ac.uk/lccs/lccs_world.html"
+      - country_region: "Habitat"
+        access_link: "https://earthtrack.aber.ac.uk/campaign/habitat_world.html"
+      - country_region: "Change"
+        access_link: "https://earthtrack.aber.ac.uk/campaign/change_world.html"
+      - country_region: "Fire"
+        access_link: "https://earthtrack.aber.ac.uk/campaign/fire_world.html"
+
+bottom-box:
+  title: "Can the Earthtrack data be accessed via a web-service?"
+  description_1: "All Earthtrack points can be accessed by connecting to the Web Feature Service on your software through the URL"
+  description_2: "Instructional videos for both QGIS and ARCGIS Pro are available at [LINK: VIDEO – QGIS, LINK: VIDEO – ARCGIS PRO."
+  url: "https://earthtrack.aber.ac.uk/services/wfs"
+
+video: 
+  title: "Your browser does not support HTML video."
+  video_1:
+    src: "mov_bbb.mp4"
+    type: "video/mp4"
+  video_2:
+    src: "mov_bbb.ogg"
+    type: "video/ogg"

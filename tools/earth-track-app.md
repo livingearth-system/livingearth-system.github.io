@@ -8,7 +8,7 @@ image: "/assets/img/contactus.png"
 nobuttons: true
 ---
 
-{% include interactive-map.liquid %}
+{% include tool-earthtrack-app.liquid %}
 
 
 

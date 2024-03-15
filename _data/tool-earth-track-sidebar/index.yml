@@ -1,0 +1,32 @@
+sponsor_logos:
+  - name: aberystwyth_university
+    src: "/assets/img/sponsor-logo/aberystwyth_university.png"
+  - name: Llywodraeth
+    src: "/assets/img/sponsor-logo/Llywodraeth.png"
+  - name: pml
+    src: "/assets/img/sponsor-logo/pml.png"
+  - name: australian_government
+    src: "/assets/img/sponsor-logo/australian_goverment.png"
+
+visualization_items:
+  - title: Repeated measurement visualization
+    image_one_src: "/assets/img/earthTrack/analyze-forest.png"
+    image_one_date: "2021/4/21"
+    image_two_src: "/assets/img/earthTrack/analyze-bridge.png"
+    image_two_date: "2021/4/21"
+    image_three_src: "/assets/img/earthTrack/analyze-leaf.png"
+    image_three_date: "2021/4/21"
+    image_four_src: "/assets/img/earthTrack/analyze-nation.png"
+    image_four_date: "2021/4/21"
+
+dot-infor:
+  title: Separated by color of dot
+  src: /assets/icon/questionmark.svg
+
+content:
+  left-content:
+    src: /assets/img/living_wales.png
+    title: ""
+  right-content:
+    src: /assets/img/list.svg
+    title: LEGEND 

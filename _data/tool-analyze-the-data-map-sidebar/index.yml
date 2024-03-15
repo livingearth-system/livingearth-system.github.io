@@ -1,0 +1,30 @@
+countries:
+  - name: Wales
+    value: Wales
+  - name: Australia
+    value: Australia
+  - name: Switzerland
+    value: Switzerland
+  - name: Southeast Asia
+    value: Southeast Asia
+
+choose: Country
+
+learning_resources:
+  button_text1: Go to learning resource
+  button_text2: Sign in with GitHub
+  button_url: /tools/learning-resources
+
+sponsor_logos:
+  - name: aberystwyth_university
+    src: "/assets/img/sponsor-logo/aberystwyth_university.png"
+  - name: Llywodraeth
+    src: "/assets/img/sponsor-logo/Llywodraeth.png"
+  - name: pml
+    src: "/assets/img/sponsor-logo/pml.png"
+  - name: australian_government
+    src: "/assets/img/sponsor-logo/australian_goverment.png"
+
+arrow_img:
+  src: /assets/img/Arrow.png
+  alt: Arrow Image
