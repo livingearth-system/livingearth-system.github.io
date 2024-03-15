@@ -15,5 +15,4 @@ Noheader: true
 
 {%-
 include organisations.liquid
-header= "Organisations working with living earth"
 -%}

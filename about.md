@@ -31,7 +31,7 @@ image="/assets/img/office.jpg" alt="Office"
 
 
 {%-
-include new-our-event.liquid
+include our-event.liquid
 -%}
 
 

@@ -102,12 +102,34 @@
 <section>
   <div class="container-fluid">
     <div class="toolpage">
-      {% for item in site.data.tool-heading.index %}
-        <button class="tool-button{% if item.status == 'disabled' %} tool-button-disable{% endif %}" {% if item.status == 'disabled' %}disabled{% endif %}>
-          <img class="svg-icon" src="{{ item.icon }}">
-          <p>{{ item.title }}</p>
-        </button>
-      {% endfor %}
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-map.svg">
+        <p>interactive map</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-getdata.svg">
+        <p>get the data</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-analyze.svg">
+        <p>analyze the data</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-earthTrack.svg">
+        <p>earthtrack.app</p>
+      </button>
+      <button class="tool-button">
+        <img class="svg-icon" src="/assets/icon/icon-industry.svg">
+        <p>organisation specific site</p>
+      </button>
+      <button class="tool-button tool-button-disable" disabled>
+        <img class="svg-icon" src="/assets/icon/icon-pastandpresent.svg">
+        <p>past and present</p>
+      </button>
+      <button class="tool-button tool-button-disable" disabled>
+        <img class="svg-icon" src="/assets/icon/icon-future.svg">
+        <p>future landscapes</p>
+      </button>
     </div>
   </div>
 </section>

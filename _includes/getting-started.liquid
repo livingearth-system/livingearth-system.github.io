@@ -2,48 +2,63 @@
 
 <div class="getting-started-container">
   <div class="getting-started-heading">
-    <h1>{{include.heading}}</h1>
+    <h1>Getting Started</h1>
     <div class="a">
-      <p>{{include.subtile}}</p>
+      <p>Welcome to the LIVINGEARTH Interactive map. Please start by Choosing a Country</p>
     </div>
   </div>
   <div class="getting-started-nav">
-    {% for item in site.data.getting-started.infor.items %}
     <div class="getting-started-middle">
       <div class="getting-started-icon">
-        <img src="{{ item.icon }}">
+        <img src="/assets/icon/questionmark.svg">
       </div>
       <div class="getting-started-content">
-        <p>{{ item.text }}</p>
+        <p>Press this icon to learn about datasets​</p>
       </div>
     </div>
-    {% endfor %}
+    <div class="getting-started-middle">
+      <div class="getting-started-icon">
+        <img src="/assets/icon/download.svg">
+      </div>
+      <div class="getting-started-content">
+        <p>Press this icon to download datasets​</p>
+      </div>
+    </div>
     <div class="getting-started-link">
       <div>
-        <a href="{{ site.data.getting-started.infor.link.href }}">{{ site.data.getting-started.infor.link.text }}</a>
+        <a href="/tools/learning-resources">Go to learning resource</a>
         <img src="/assets/icon/arrowright.svg">
       </div>
-      <p>{{ site.data.getting-started.infor.link.tooltip }}</p>
+      <p>At any point you can go to our ​learning page from the toolbar​</p>
     </div>
   </div>
   <div class="getting-started-learning">
-    <p class="getting-started-learning-title">{{include.pic-title}}</p>
+    <p class="getting-started-learning-title">Learning Resources</p>
     <div class="getting-started-learning-content">
-  {% for item in site.data.getting-started.index %}
-    <div class="getting-started-learning-items">
-      <div class="img">
-        <img src="{{ item.link }}">
+      <div class="getting-started-learning-items">
+        <div class="img">
+          <img src="/assets/img/tools1.jpg">
+        </div>
+        <p>TAKE THE TOUR</p>
       </div>
-      <p>{{ item.title }}</p>
+      <div class="getting-started-learning-items">
+        <div class="img">
+          <img src="/assets/img/tools2.jpg">
+        </div>
+        <p>GETTING STARTED</p>
+      </div>
+      <div class="getting-started-learning-items">
+        <div class="img">
+          <img src="/assets/img/tools3.jpg">
+        </div>
+        <p>UNDERSTAND THE DATA</p>
+      </div>
     </div>
-  {% endfor %}
-</div>
-
   </div>
   <div class="getting-started-end">
     <button id="closeButton" type="submit" data-dismiss="modal">
       <div style="display: flex; margin-top: 15px;">
-        <p>{{include.button-text}}</p>
+        <p>Got it</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
           <path
               d="M14.3538 8.85354L9.85375 13.3535C9.75993 13.4474 9.63268 13.5001 9.5 13.5001C9.36732 13.5001 9.24007 13.4474 9.14625 13.3535C9.05243 13.2597 8.99972 13.1325 8.99972 12.9998C8.99972 12.8671 9.05243 12.7399 9.14625 12.646L12.7931 8.99979H3C2.86739 8.99979 2.74021 8.94711 2.64645 8.85334C2.55268 8.75958 2.5 8.6324 2.5 8.49979C2.5 8.36718 2.55268 8.24 2.64645 8.14624C2.74021 8.05247 2.86739 7.99979 3 7.99979H12.7931L9.14625 4.35354C9.05243 4.25972 8.99972 4.13247 8.99972 3.99979C8.99972 3.86711 9.05243 3.73986 9.14625 3.64604C9.24007 3.55222 9.36732 3.49951 9.5 3.49951C9.63268 3.49951 9.75993 3.55222 9.85375 3.64604L14.3538 8.14604C14.4002 8.19248 14.4371 8.24762 14.4623 8.30832C14.4874 8.36902 14.5004 8.43408 14.5004 8.49979C14.5004 8.5655 14.4874 8.63056 14.4623 8.69126C14.4371 8.75196 14.4002 8.8071 14.3538 8.85354Z"

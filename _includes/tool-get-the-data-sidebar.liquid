@@ -3,44 +3,136 @@
 <div class="tool_side_bar">
   <div class="country_form">
     <select class="form-select" aria-label="Default select example" class="choose_country">
-      <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
-      {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
-        <option value="{{ country.value }}">{{ country.name }}</option>
-      {% endfor %}
+      <option selected>Choose a country</option>
+      <option value="1">Wales</option>
+      <option value="2">Australia</option>
+      <option value="3">Switzerland</option>
+      <option value="4">Southeast Asia</option>
     </select>
     <div class="tool-sidebar-content">
-      {% for item in site.data.get-the-data-sidebar-content.index %}
-        <div class="tool-sidebar-content-items">
-          <div class="title-sub">
-            <p class="title">
-              {{ item.title }}
-              <button
-                type="button"
-                class="btn"
-                data-toggle="tooltip"
-                data-placement="right"
-                title="{{ item.tooltip }}"
-              >
-                <img src="{{ item.link }}">
-              </button>
-            </p>
-            <p class="subtitle">{{ item.subtitle }}</p>
-          </div>
+      <div class="tool-sidebar-content-items">
+        <div class="title-sub">
+          <p class="title">
+            Openly available optical and radar
+            <button
+              type="button"
+              class="btn"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="
+                              Within the Open Data Cube, Landsat (mid 1980s onwards) and Sentinel-2 optical and Sentinel-1 C-band radar (2017 onwards) data are integrated as these have been made freely available respectively  by the United States Geological Survey (USGS) and Copernicus/European Space Agency.
+              "
+            >
+              <img src="../assets/icon/questionmark-toolsidebar.svg">
+            </button>
+          </p>
+          <p class="subtitle">Previous access to Landsat and Sentinel-1 and Sentinel-2 data</p>
         </div>
-      {% endfor %}
+      </div>
+      <div class="tool-sidebar-content-items">
+        <div class="title-sub">
+          <p class="title">
+            Lidar
+            <button
+              type="button"
+              class="btn"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="
+                              Light Detection and Ranging (LIDAR) is a remote sensing optically-based technology that allows the height of Earth’s objects to be measured.
+              "
+            >
+              <img src="../assets/icon/questionmark-toolsidebar.svg">
+            </button>
+          </p>
+          <p class="subtitle">Airborne and spaceborne Lidar</p>
+        </div>
+      </div>
+      <div class="tool-sidebar-content-items">
+        <div class="title-sub">
+          <p class="title">
+            Thermal<button
+              type="button"
+              class="btn"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="
+                              Within the Open Data Cube, Landsat (mid 1980s onwards) and Sentinel-2 optical and Sentinel-1 C-band radar (2017 onwards) data are integrated as these have been made freely available respectively  by the United States Geological Survey (USGS) and Copernicus/European Space Agency.
+              "
+            >
+              <img src="../assets/icon/questionmark-toolsidebar.svg">
+            </button>
+          </p>
+          <p class="subtitle">Thermal data</p>
+        </div>
+      </div>
+      <div class="tool-sidebar-content-items">
+        <div class="title-sub">
+          <p class="title">
+            Data<button
+              type="button"
+              class="btn"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="
+                              Within the Open Data Cube, Landsat (mid 1980s onwards) and Sentinel-2 optical and Sentinel-1 C-band radar (2017 onwards) data are integrated as these have been made freely available respectively  by the United States Geological Survey (USGS) and Copernicus/European Space Agency.
+              "
+            >
+              <img src="../assets/icon/questionmark-toolsidebar.svg">
+            </button>
+          </p>
+          <p class="subtitle">A list of data sources relevant to environmental descriptors in Wales</p>
+        </div>
+      </div>
+      <div class="tool-sidebar-content-items">
+        <div class="title-sub">
+          <p class="title">
+            Algorithms<button
+              type="button"
+              class="btn"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="
+                              Within the Open Data Cube, Landsat (mid 1980s onwards) and Sentinel-2 optical and Sentinel-1 C-band radar (2017 onwards) data are integrated as these have been made freely available respectively  by the United States Geological Survey (USGS) and Copernicus/European Space Agency.
+              "
+            >
+              <img src="../assets/icon/questionmark-toolsidebar.svg">
+            </button>
+          </p>
+          <p class="subtitle">Algorithms for retreiving environmental descriptiors</p>
+        </div>
+      </div>
+      <div class="tool-sidebar-content-items">
+        <div class="title-sub">
+          <p class="title">
+            Others<button
+              type="button"
+              class="btn"
+              data-toggle="tooltip"
+              data-placement="right"
+              title="
+                              Within the Open Data Cube, Landsat (mid 1980s onwards) and Sentinel-2 optical and Sentinel-1 C-band radar (2017 onwards) data are integrated as these have been made freely available respectively  by the United States Geological Survey (USGS) and Copernicus/European Space Agency.
+              "
+            >
+              <img src="../assets/icon/questionmark-toolsidebar.svg">
+            </button>
+          </p>
+          <p class="subtitle">Other Earth observation datasets</p>
+        </div>
+      </div>
     </div>
-    
   </div>
 
   <div class="learning_resource">
     <div class="button-tool">
-      <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
-      <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
+      <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
+      <img src="/assets/img/Arrow.png" alt="Arrow Image">
     </div>
     <div class="brand_logo">
-      {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
-        <img src="{{ logo.src }}" alt="{{ logo.name }}">
-      {% endfor %}
+      <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
+      <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
+      <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
+      <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
     </div>
   </div>
 </div>
@@ -51,6 +143,7 @@
 
     if (learningResourceButton) {
       learningResourceButton.addEventListener('click', function () {
+        // Redirect to the specified URL
         window.location.href = '/tools/learning-resources';
       });
     }

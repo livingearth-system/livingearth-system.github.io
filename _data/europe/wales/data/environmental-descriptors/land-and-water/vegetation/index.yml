@@ -45,3 +45,7 @@
 - title: "Non Photosynthetic Vegetation"
   image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
   url: "./non-photosynthetic-vegetation/"
+
+- title: "Leaf Area Index"
+  image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+  url: "./leaf-area-index/"

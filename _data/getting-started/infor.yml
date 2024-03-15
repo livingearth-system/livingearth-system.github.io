@@ -1,9 +1,0 @@
-items:
-  - icon: /assets/icon/questionmark.svg
-    text: Press this icon to learn about datasets
-  - icon: /assets/icon/download.svg
-    text: Press this icon to download datasets
-link:
-  href: /tools/learning-resources
-  text: Go to learning resource
-  tooltip: At any point you can go to our learning page from the toolbar

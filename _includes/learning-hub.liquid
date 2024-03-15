@@ -1,40 +1,85 @@
 <div class="container">
   <div class="row mt-5 learning-hub-heading">
     <div class="col-12">
-      {% if include['header-Italic'] %}
-        <p class="learning-hub-heading-content">
-          {% if include.header %}
-            <span class="learning-hub-italic">{{ include['header-Italic'] }}</span>
-            {{ include.header }}
-            </p>
-          {% endif %}
-      {% endif %}
+      <p class="learning-hub-heading-content">
+        <span class="learning-hub-italic">Living Earth</span>
+        provides significant capacity for learning about our environment and ecosystems and the important role of Earth
+        observations. Here, we show you some of the opportunities that we are providing for learning at the primary,
+        secondary and tertiary levels and how we are informing professional and third age activities.
+      </p>
     </div>
   </div>
   <div class="row mt-5 mb-5 ">
     <div class="col-12 ">
-      <h3 class="learning-hub-title">{{ include.title }}</h3>
+      <h3 class="learning-hub-title">Case Studies, News and Articles</h3>
     </div>
   </div>
   <div class="row">
-    {% for post in site.data['learning-hub'].index %}
-      <div class="col-4">
-        <div>
-          <img src="{{ post.image }}">
-        </div>
-        <p class="learning-hub-post-title">
-          <span class="learning-hub-italic"> {{ post.title }} </span>
-        </p>
-        {% assign content_lines = post.content | newline_to_br | split: '<br />' %}
-        {% for line in content_lines %}
-          <p>{{ line }}</p>
-        {% endfor %}
-        {% if post.link %}
-          {% for link in post.links %}
-            <a href="{{ link.url }}">{{ link.url }}</a>
-          {% endfor %}
-        {% endif %}
+    <div class="col-4">
+      <div>
+        <img src="/assets/img/oldman-fix.png">
       </div>
-    {% endfor %}
+      <p class="learning-hub-post-title">
+        <span class="learning-hub-italic">LIVING EARTH</span> MASTERS MODULE AT ABERYSTWYTH UNIVERSITY
+      </p>
+      <p>
+        New to Aberystwyth University M asters in Remote Sensing and GIS: Living Earth: Past and Future Environmental
+        Monitoring. This new module introduces students to a sequence of steps involving:
+      </p>
+      <p>
+        a. Generating or accessing Earth observation data in an Analysis Ready Data (ARD) format.
+        <br>
+        b. Retrieving or classifying environmental descriptors from these data.
+        <br>
+        c. Classifying land covers, including through environmental descriptors, and translating to habitats.
+        <br>
+        d. Detecting and describing change impacts and driving pressures based on evidence.
+        <br>
+        e. Validating the resulting thematic products through ground and remote observations.
+      </p>
+      <p>
+        The module explains locally relevant frameworks for classifying land covers (the Food and Agriculture
+        Organisation (FAO) Land Cover Classification System (LCCS) and detecting, describing, mapping and monitoring
+        change (a Global Change Taxonomy and Evidence-Based Change Framework). The module also connects to a wide range
+        of stakeholders and interest groups, from the public through to those involved in national and international
+        land management and policy.
+      </p>
+    </div>
+    <div class="col-4">
+      <div>
+        <img src="/assets/img/oldman-fix.png">
+      </div>
+      <p class="learning-hub-post-title">
+        <span class="learning-hub-italic">THE LIVING EARTH </span> EXHIBITION AND TRAINING CENTRE AT THE CENTRE FOR
+        ALTERNATIVE TECHNOLOGY
+      </p>
+      <p>
+        The Living Earth Exhibition and Training Centre (LINK TO: https://cat.org.uk/living-wales-1/) is open at the
+        Centre for Alternative Technology (www.cat.org) near Machynlleth and can be booked for tours as part of the
+        educational program. (see LINK HERE)
+      </p>
+    </div>
+    <div class="col-4">
+      <div>
+        <img src="/assets/img/oldman-fix.png">
+      </div>
+      <p class="learning-hub-post-title">
+        <span class="learning-hub-italic">LIVING EARTH</span> AND PROTECTING OUR PLANET 2023
+      </p>
+      <p>
+        New: Living Earth Scientists along with the European Space Agency (ESA), the Centre for Alternative Technology
+        (CAT) and the Eden Project contributed to the STEM event, Protecting Our Planet (POP23). With 262,591, POP23 had
+        made a major contribution to educating our younger generation and teachers on our changing planet and what we
+        can do to help.
+      </p>
+      <a
+        href="https://www.stem.org.uk/enrichment/protecting-our-planet-day"
+        >https://www.stem.org.uk/enrichment/protecting-our-planet-day
+      </a>
+      <a
+        href="https://www.stem.org.uk/enrichment/protecting-our-planet-day/pop-sessions/protecting-our-forests-pop23"
+        >https://www.stem.org.uk/enrichment/protecting-our-planet-day/pop-sessions/protecting-our-forests-pop23
+      </a>
+    </div>
   </div>
 </div>

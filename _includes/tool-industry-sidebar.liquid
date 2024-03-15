@@ -3,40 +3,41 @@
         <div class="tool_side_bar">
             <div class="country_form">
                 <select class="form-select" aria-label="Default select example" class="choose_country">
-                    <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
-                    {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
-                        <option value="{{ country.value }}">{{ country.name }}</option>
-                    {% endfor %}
+                    <option selected>Choose a country</option>
+                    <option value="1">Wales</option>
+                    <option value="2">Australia</option>
+                    <option value="3">Switzerland</option>
+                    <option value="4">Southeast Asia</option>
                 </select>
 
                 <!-- INTERACTIVE-MAP-AFTER -->
                 <div class="after">
                     <div class="select-year">
                         <div class="select-site-title-industry">
-                            <span>{{ site.data.tool-industry-sidebar.index.choose }}</span>
-                            <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
+                            <span>SITE</span>
+                            <span><img src="/assets//icon/questionmark.svg"></span>
                         </div>
                         <select id="yearDropdown2" class="form-select" aria-label="Select a year" size="1">
-                            <option class="label-dropdown" disabled selected>{{ site.data.tool-industry-sidebar.index.choose }}</option>
-                            <option selected>{{ site.data.tool-industry-sidebar.index.choose }}</option>
-                            {% for country in site.data['tool-industry-sidebar'].index.site %}
-                                <option value="{{ country.value }}">{{ country.name }}</option>
-                            {% endfor %}
+                            <option class="label-dropdown" disabled selected>SITE 1</option>
+                            <option selected>SITE 1</option>
+                            <option value="1">SITE 2</option>
+                            <option value="2">SITE 3</option>
+                            <option value="3">SITE 4</option>
                         </select>
                     </div>
                     <div class="select-year">
                         <div class="select-site-title-industry">
-                            <span>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</span>
-                            <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
+                            <span>select a year</span>
+                            <span><img src="/assets//icon/questionmark.svg"></span>
                             </div>
                         <select id="yearDropdown2" class="form-select" aria-label="Select a year" size="1">
-                            <option class="label-dropdown" disabled selected>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</option>
+                            <option class="label-dropdown" disabled selected>Select a year</option>
                             {% for year_item in site.data.year.index %}
                             <option value="{{ year_item.year }}">{{ year_item.year }}</option>
                             {% endfor %}
                         </select>
                     </div>
-                    <p class="select-base-map-industry">{{ site.data.tool-industry-sidebar.index.title.land }}</p>
+                    <p class="select-base-map-industry">land</p>
                     <div class="industry-selected-line"></div>
                     <div class="banner-button">
                         {% for tool_item in site.data.tools.sidebar.interactive-map %}
@@ -51,39 +52,69 @@
                         <div class="base-land">
                             <input type="checkbox" id="checkbox1" name="checkbox1" value="base-land">
                             <label for="checkbox1">
-                                <p>{{ site.data.tool-industry-sidebar.index.base_land }}</p>
+                                <p>Base Land cover map plus 2017</p>
                             </label>
                             <p class="icon-atfer-selected-year">
                                 <span><img src="/assets/icon/download.svg"></span>
-                                <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
+                                <span><img src="/assets//icon/questionmark.svg"></span>
                             </p>
                         </div>
                         <div class="no-basemap">
                             <input type="checkbox" id="checkbox2" name="checkbox2" value="no-base-map">
                             <label for="checkbox2">
-                                <p> {{ site.data.tool-industry-sidebar.index.no_base_map }}</p>
+                                <p> No basemap</p>
                             </label>
                             <p class="icon-atfer-selected-year">
                                 <span><img src="/assets/icon/download.svg"></span>
-                                <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
+                                <span><img src="/assets//icon/questionmark.svg"></span>
                             </p>
                         </div>
                         <div class="after-selected-line"></div>
                         <div class="land-checkbox">
-                            {% for item in site.data.industry-sidebar-content.index %}
-                                <div class="{{ item.class }}">
-                                <input type="checkbox" id="{{ item.id }}" name="{{ item.id }}" value="{{ item.value }}">
-                                <label for="{{ item.id }}">{{ item.label }}</label>
+                            <div class="Canopy">
+                                <input type="checkbox" id="landcheckbox1" name="landcheckbox1" value="canopy">
+                                <label for="landcheckbox1">Canopy cover 2017</label>
                                 <p class="icon-atfer-selected-year">
                                     <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets/icon/questionmark.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
                                 </p>
-                                </div>
-                            {% endfor %}
+                            </div>
+                            <div class="Canopy-continous">
+                                <input type="checkbox" id="landcheckbox2" name="landcheckbox2" value="canopy-continous">
+                                <label for="landcheckbox2"> Canopy cover (continuous) 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="life-form">
+                                <input type="checkbox" id="landcheckbox3" name="landcheckbox3" value="lifeform">
+                                <label for="landcheckbox3"> Lifeform 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="leaf-type">
+                                <input type="checkbox" id="landcheckbox4" name="landcheckbox4" value="leaf-type">
+                                <label for="landcheckbox4"> Leaftype / phenology 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
+                            <div class="non-stress">
+                                <input type="checkbox" id="landcheckbox5" name="landcheckbox5" value="leaf-type">
+                                <label for="landcheckbox5"> Non-trees semi-natural communities 2017</label>
+                                <p class="icon-atfer-selected-year">
+                                    <span><img src="/assets/icon/download.svg"></span>
+                                    <span><img src="/assets//icon/questionmark.svg"></span>
+                                </p>
+                            </div>
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
-                                <option class="label-dropdown-industry" >{{ site.data.tool-industry-sidebar.index.title.water }}</span>
+                                <option class="label-dropdown-industry" >Water</span>
                                 </option>
                                 {% for year_item in site.data.year.index %}
                                 <option value="{{ year_item.year }}">{{ year_item.year }}</option>
@@ -92,7 +123,7 @@
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
-                                <option class="label-dropdown-industry" >{{ site.data.tool-industry-sidebar.index.title.biomass }}</span>
+                                <option class="label-dropdown-industry" >bIOMASS/CARBON</span>
                                 </option>
                                 {% for year_item in site.data.year.index %}
                                 <option value="{{ year_item.year }}">{{ year_item.year }}</option>
@@ -101,7 +132,7 @@
                         </div>
                         <div class="select-year-industry">
                             <select class="form-select-indsutry" aria-label="Select a year industry" size="1">
-                                <option class="label-dropdown-industry" >{{ site.data.tool-industry-sidebar.index.title.accounting }}</span>
+                                <option class="label-dropdown-industry" >Accounting</span>
                                 </option>
                                 {% for year_item in site.data.year.index %}
                                 <option value="{{ year_item.year }}">{{ year_item.year }}</option>
@@ -115,13 +146,14 @@
             </div>
             <div class="learning_resource">
                 <div class="button-tool">
-                    <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
-                    <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
+                    <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
+                    <img src="/assets/img/Arrow.png" alt="Arrow Image">
                 </div>
                 <div class="brand_logo">
-                    {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
-                        <img src="{{ logo.src }}" alt="{{ logo.name }}">
-                    {% endfor %}
+                    <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
+                    <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
+                    <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
+                    <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
                 </div>
             </div>
         </div>

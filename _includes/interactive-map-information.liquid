@@ -1,23 +1,64 @@
 <div class="container new-tools-container">
-  {% if include.heading %}
-    <p class="new-tools-container-heading">{{ include.heading }}</p>
-  {% endif %}
+  <p class="new-tools-container-heading">Interactive Map</p>
   <div class="row">
     <div class="new-tools-container-content col-6">
-      {% for item in site.data['interactive-map-information'].index %}
-        <div class="paragraph">
-          <p class="title">{{ item.title }}</p>
-          <p class="subtitle">
-            {% assign lines = item.subtitle | newline_to_br | split: '<br>' %}
-            {% for line in lines %}
-              {{ line }}
-            {% endfor %}
-          </p>
-          {% if item['subtitle-link'] != '' %}
-            <p class="subtitle-link">{{ item['subtitle-link'] }}</p>
-          {% endif %}
-        </div>
-      {% endfor %}
+      <div class="paragraph">
+        <p class="title">Exploring Living Earth products</p>
+        <p class="subtitle">
+          Our Interactive map of the country provides a platform for visualizing how people and nature have shaped the
+          landscapes we see today. These maps have been obtained primarily from historical satellite data and are
+          updated through near daily observations.
+        </p>
+        <p class="subtitle">
+          Initially, select the broad land cover as the base map, and then add layers that represent different
+          categorical (e.g., crop type) or continuous (e.g., water persistence, above ground biomass) environmental
+          descriptors to give more detail. See the video for a
+        </p>
+        <p class="subtitle">
+          View maps of habitat extent (for Wales only), with these generated through direct translation of some classes
+          (e.g., broadleaved forest) from the land cover map or by splitting mapped classes using contextual information
+          (e.g., the extent of peatlands or coastal environments).
+        </p>
+        <p class="subtitle">
+          Compare maps of land cover or habitats for any two dates to highlight areas of significant change and explore
+          the evidence for change impacts and driving pressures.
+        </p>
+        <p class="subtitle">
+          See the video for a step-by-step guide to displaying the environmental descriptors and maps of land cover,
+          habitats and change.
+        </p>
+        <p class="subtitle-link">A full list of layers is available here and can be downloaded from</p>
+      </div>
+      <div class="paragraph">
+        <p class="title">Free and open for everyone</p>
+        <p class="subtitle">
+          All Living Earth layers are openly available and accessible for people to use but also to view current and
+          historical changes in the national landscape over varying time periods and understand the reasons for these.
+        </p>
+      </div>
+      <div class="paragraph">
+        <p class="title">The uniqueness of Living Earth legends</p>
+        <p class="subtitle">
+          The legends used for land cover and change are globally relevant as they are based on the Food and Agriculture
+          Organisation (FAO) Land Cover Classification System (LCCS) and Living Earth’s Global Change Taxonomy. The
+          taxonomies used for habitats maps (where existing) are specific to the country.
+        </p>
+      </div>
+      <div class="paragraph">
+        <p class="title">Free to use</p>
+        <p class="subtitle">
+          The maps can be used for multiple purposes, including assessing past and current land management and use and
+          impacts on carbon, biodiversity and soil, water and air quality. They can also inform local, national and
+          international policy.
+        </p>
+      </div>
+      <div class="paragraph">
+        <p class="title">Publications</p>
+        <p class="subtitle">
+          Refer to the LINK TO: PUBLICATIONS publications page to learn about conceptual and practical development of
+          Living Earth.
+        </p>
+      </div>
     </div>
     <div class="col-6 img-container">
       <img src="/assets/img/tools1.jpg" alt="Interactive Map" class="img-fluid">

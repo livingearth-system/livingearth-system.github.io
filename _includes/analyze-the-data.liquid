@@ -1,38 +1,44 @@
 <div class="tool_img">
   <div class="row">
     <div class="tool_content col-8">
-      <h2 class="title">{{ include.title }}</h2>
+      <h2 class="title">analyze the data</h2>
       <p class="article_description">
-        {{ include.description }}
+        Within Living Earth, you can access the data cube for your country or region through the following links.
       </p>
-      {% for item in site.data['analyze-the-data-information'].index['available-link-data'] %}
-        <h3 class="article_heading">{{ item.title }}</h3>
-        {% assign descriptions = item.description | newline_to_br | split: '<br>' %}
-        {% for description in descriptions %}
-          <p class="article_description">{{ description }}</p>
-        {% endfor %}
-        <div class="row data-table">
-          <div class="col-3">
-            <p class="data-table-heading">{{ item['country/region-header'] }}</p>
-            {% for row in item.data_table %}
-              <p class="data-table-list">{{ row.country_region }}</p>
-            {% endfor %}
-          </div>
-          <div class="col-8">
-            <p class="data-table-heading">{{ item['link-header'] }}</p>
-            {% for row in item.data_table %}
-              {% if row.access_link != '' %}
-                <a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a>
-                <br>
-              {% endif %}
-            {% endfor %}
-          </div>
+      <div class="row analyze-table">
+        <div class="col-3">
+          <p class="analyze-table-heading">Country/Region</p>
+          <p class="analyze-table-list">Australia</p>
+          <p class="analyze-table-list">Wales</p>
+          <p class="analyze-table-list">Switzerland</p>
+          <p class="analyze-table-list-bot">Southeast Asia</p>
         </div>
-        {% assign descriptions = item.description2 | newline_to_br | split: '<br>' %}
-        {% for description in descriptions %}
-          <p class="article_description">{{ description }}</p>
-        {% endfor %}
-      {% endfor %}
+        <div class="col-5">
+          <p class="analyze-table-heading">Access to Jupyter notebooks</p>
+          <a
+            class="analyze-table-link"
+            href="https://app.sandbox.dea.ga.gov.au/"
+            >https://app.sandbox.dea.ga.gov.au/
+          </a>
+          <a
+            class="analyze-table-link"
+            href="https://livingwales.aber.ac.uk/jhub"
+            >https://livingwales.aber.ac.uk/jhub
+          </a>
+          <a
+            class="analyze-table-link"
+            href="https://www.swissdatacube.org/index.php/platform/"
+            >https://www.swissdatacube.org/index.php/platform/
+          </a>
+        </div>
+      </div>
+      <p class="article_description">
+        Once you have obtained a login and password, you can access default notebooks that are relevant generally or
+        specifically to Living Earth.
+
+        <br>
+        A notebook repository is also available [LINK TO NOTEBOOK REPOSITORY – TO BE SET UP]
+      </p>
     </div>
     <div class="col-4 mt-5">
       <video width="auto" controls>

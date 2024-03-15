@@ -7,8 +7,4 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
 image: "/assets/img/contactus.png"
 nobuttons: true
 ---
-{% include tool-get-the-data.liquid 
-title="Living Wales data Directory (EODataDown)"
-permal="Home / Tools / Analyze the Data/ Openly Available Optical and Radar"
-img="../assets/img/getdata2.png"
-%}
+{% include tool-get-the-data.liquid %}
