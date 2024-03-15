@@ -1,28 +1,26 @@
 <div class="tool_side_bar">
   <div class="country_form">
     <select class="form-select" aria-label="Default select example" class="choose_country">
-      <option selected>Choose a country</option>
-      <option value="1">Wales</option>
-      <option value="2">Australia</option>
-      <option value="3">Switzerland</option>
-      <option value="4">Southeast Asia</option>
+      <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
+      {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
+        <option value="{{ country.value }}">{{ country.name }}</option>
+      {% endfor %}
     </select>
 
-    <button class="sign_in_github">Sign in with GitHub</button>
+    <button class="sign_in_github">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text2 }}</button>
   </div>
 
   <div class="learning_resource">
-    <a href="tools/learning-resources">
+    <a href="{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_url }}">
       <div class="button-tool">
-        <button class="button_tool_tilte" id="learningResourceButton">Go to learning resource</button>
-        <img src="/assets/img/Arrow.png" alt="Arrow Image">
+        <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
+        <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
       </div>
     </a>
     <div class="brand_logo">
-      <img src="/assets/img/sponsor-logo/aberystwyth_university.png" alt="aberystwyth_university">
-      <img src="/assets/img/sponsor-logo/Llywodraeth.png" alt="Llywodraeth">
-      <img src="/assets/img/sponsor-logo/pml.png" alt="pml">
-      <img src="/assets/img/sponsor-logo/australian_goverment.png" alt="australian_goverment">
+      {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
+        <img src="{{ logo.src }}" alt="{{ logo.name }}">
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,7 +1,9 @@
 <div class="mt-100 mb-100 search-landscapes-main">
-  <div class="d-flex justify-content-center align-items-center">
-    <h2 class="text-center">Opensource Tools for earth scientists & policymakers</h2>
-  </div>
+  {% if include.heading %}
+    <div class="d-flex justify-content-center align-items-center">
+      <h2 class="text-center">{{ include.heading }}</h2>
+    </div>
+  {% endif %}
 
   <div class="row d-flex justify-content-center opensource-tools-wrapper">
     {% for box in site.data['opensource-tools'].index %}
@@ -18,12 +20,9 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Kiểm tra đường dẫn hiện tại
     if (window.location.pathname === '/tools/interactive-map-information') {
-      // Lấy danh sách các button
       var buttons = document.querySelectorAll('.opensource-tools');
 
-      // Kích hoạt button đầu tiên
       if (buttons.length > 0) {
         buttons[0].classList.add('active');
       }
