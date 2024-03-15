@@ -4,15 +4,6 @@
     - class: button-1
       id: button1
       name: Research
-    - class: button-2
-      id: button2
-      name: Case study
-    - class: button-3
-      id: button3
-      name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -27,15 +18,6 @@
     - class: button-1
       id: button1
       name: Research
-    - class: button-2
-      id: button2
-      name: Case study
-    - class: button-3
-      id: button3
-      name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -50,15 +32,6 @@
     - class: button-1
       id: button1
       name: Research
-    - class: button-2
-      id: button2
-      name: Case study
-    - class: button-3
-      id: button3
-      name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -70,18 +43,9 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "case-study"
   button:
-    - class: button-1
-      id: button1
-      name: Research
     - class: button-2
       id: button2
       name: Case study
-    - class: button-3
-      id: button3
-      name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -93,18 +57,9 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "case-study"
   button:
-    - class: button-1
-      id: button1
-      name: Research
     - class: button-2
       id: button2
       name: Case study
-    - class: button-3
-      id: button3
-      name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -116,18 +71,9 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "case-study"
   button:
-    - class: button-1
-      id: button1
-      name: Research
     - class: button-2
       id: button2
       name: Case study
-    - class: button-3
-      id: button3
-      name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -139,18 +85,9 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "news"
   button:
-    - class: button-1
-      id: button1
-      name: Research
-    - class: button-2
-      id: button2
-      name: Case study
     - class: button-3
       id: button3
       name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -162,18 +99,9 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "news"
   button:
-    - class: button-1
-      id: button1
-      name: Research
-    - class: button-2
-      id: button2
-      name: Case study
     - class: button-3
       id: button3
       name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -185,18 +113,9 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "news"
   button:
-    - class: button-1
-      id: button1
-      name: Research
-    - class: button-2
-      id: button2
-      name: Case study
     - class: button-3
       id: button3
       name: News
-    - class: button-4
-      id: button4
-      name: Events
   date: Sep 11, 2022
   href: '#'
   id: infor
@@ -208,15 +127,6 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "events"
   button:
-    - class: button-1
-      id: button1
-      name: Research
-    - class: button-2
-      id: button2
-      name: Case study
-    - class: button-3
-      id: button3
-      name: News
     - class: button-4
       id: button4
       name: Events
@@ -231,15 +141,6 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "events"
   button:
-    - class: button-1
-      id: button1
-      name: Research
-    - class: button-2
-      id: button2
-      name: Case study
-    - class: button-3
-      id: button3
-      name: News
     - class: button-4
       id: button4
       name: Events
@@ -254,15 +155,6 @@
   title: How AI can improve the speed and accuracy of geological researches
 - filter-by: "events"
   button:
-    - class: button-1
-      id: button1
-      name: Research
-    - class: button-2
-      id: button2
-      name: Case study
-    - class: button-3
-      id: button3
-      name: News
     - class: button-4
       id: button4
       name: Events
