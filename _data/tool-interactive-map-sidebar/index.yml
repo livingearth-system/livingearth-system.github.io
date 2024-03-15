@@ -1,6 +1,8 @@
 basemap:
   select_map: select a base map
   option_year: Select a year to see options
+  land: "land"
+  water: "water"
 
 additional_layer:
   select: select an additional layer
