@@ -71,3 +71,18 @@ available-link-data:
         access_link: "https://earthtrack.aber.ac.uk/campaign/change_world.html"
       - country_region: "Fire"
         access_link: "https://earthtrack.aber.ac.uk/campaign/fire_world.html"
+
+bottom-box:
+  title: "Can the Earthtrack data be accessed via a web-service?"
+  description_1: "All Earthtrack points can be accessed by connecting to the Web Feature Service on your software through the URL"
+  description_2: "Instructional videos for both QGIS and ARCGIS Pro are available at [LINK: VIDEO – QGIS, LINK: VIDEO – ARCGIS PRO."
+  url: "https://earthtrack.aber.ac.uk/services/wfs"
+
+video: 
+  title: "Your browser does not support HTML video."
+  video_1:
+    src: "mov_bbb.mp4"
+    type: "video/mp4"
+  video_2:
+    src: "mov_bbb.ogg"
+    type: "video/ogg"

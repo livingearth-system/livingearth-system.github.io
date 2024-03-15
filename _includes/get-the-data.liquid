@@ -27,20 +27,19 @@
           </div>
         </div>
       {% endfor %}
-      <h3 class="article_heading">Can the Earthtrack data be accessed via a web-service?</h3>
+      <h3 class="article_heading">{{ site.data.get-the-data-information.index.bottom-box.title }}</h3>
       <p class="article_description">
-        All Earthtrack points can be accessed by connecting to the Web Feature Service on your software through the URL
-        <a href="https://earthtrack.aber.ac.uk/services/wfs">https://earthtrack.aber.ac.uk/services/wfs</a>.
-        Instructional videos for both QGIS and ARCGIS Pro are available at [LINK: VIDEO – QGIS, LINK: VIDEO – ARCGIS
-        PRO.
+        {{ site.data.get-the-data-information.index.bottom-box.description_1 }}
+        <a href="{{ site.data.get-the-data-information.index.bottom-box.url }}">{{ site.data.get-the-data-information.index.bottom-box.url }}</a>.
+        {{ site.data.get-the-data-information.index.bottom-box.description_2 }}
       </p>
     </div>
 
     <div class="col-4 mt-5">
       <video width="auto" controls>
-        <source src="mov_bbb.mp4" type="video/mp4">
-        <source src="mov_bbb.ogg" type="video/ogg">
-        Your browser does not support HTML video.
+        <source src="{{ site.data.get-the-data-information.index.video.video_1.src }}" type="{{ site.data.get-the-data-information.index.video.video_1.type }}">
+        <source src="{{ site.data.get-the-data-information.index.video.video_2.src }}" type="{{ site.data.get-the-data-information.index.video.video_2.type }}">
+        {{ site.data.get-the-data-information.index.video.title }}
       </video>
     </div>
   </div>
