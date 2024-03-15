@@ -1,0 +1,212 @@
+<div class="news-header-container">
+  <div class="news-header-search">
+    <input
+      class="search-box "
+      type="text"
+      placeholder="Search by key word"
+    >
+
+    <button class="a-to-z ">
+      <img src="/assets/icon/icon-a-to-z.svg">
+    </button>
+  </div>
+
+  <div class="news-header-option">
+    <button id="all-button" class="header-button-1" data-filter-by="all">
+      <p>ALL (<span id="all-count">0</span>)</p>
+    </button>
+    <button id="research-button" class="header-button-2" data-filter-by="research">
+      <p>RESEARCH (<span id="research-count">0</span>)</p>
+    </button>
+    <button id="case-study-button" class="header-button-3" data-filter-by="case-study">
+      <p>CASE STUDY (<span id="case-study-count">0</span>)</p>
+    </button>
+    <button id="news-button" class="header-button-4" data-filter-by="news">
+      <p>NEWS (<span id="news-count">0</span>)</p>
+    </button>
+    <button id="events-button" class="header-button-5" data-filter-by="events">
+      <p>EVENTS (<span id="events-count">0</span>)</p>
+    </button>
+    <button id="other-button" class="header-button-6" data-filter-by="other">
+      <p>OTHER (<span id="other-count">0</span>)</p>
+    </button>
+  </div>
+</div>
+<div class="container mb-64 mt-64 blog-main">
+  <div class="row">
+    <div class="col-12 col-md-6 blog-main-left-img">
+      <a href="#"><img src="/assets/img/blogMainLeft.png" alt=""></a>
+    </div>
+    <div class="col-12 col-md-6 blog-main-right">
+      <div class="blog-main-right-dsc">
+        <button type="button">{{ include['title-button'] }}</button>
+        <h5>{{ include.heading }}</h5>
+        <p>
+          {{ include.subheading }}
+        </p>
+        <div class="user-profile">
+          <div class="user-profile-img">
+            <img src="{{include.avatar}}" alt="user">
+          </div>
+          <div>
+            <h2 class="user-name">{{ include.username }}</h2>
+            <div class="user-status">
+              <p class="user-status-date">{{ include['user-status-date'] }}</p>
+              <p class="user-status-type">{{ include['user-status-type'] }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- OUR-BLOG -->
+<div class="container-fluid news-blog">
+  <div class="mb-60">
+    <div class="row mb-60">
+      {% for infor in site.data['news-blog'].index %}
+        <div class="col-xl-4 col-md-6">
+          <div class="item mt-60" data-filter-by="{{ infor['filter-by'] }}">
+            <div class="stay-up-card">
+              <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
+              <div>
+                {% for button in infor.button %}
+                  <button class="{{ button.class }}" data-filter-by="{{ infor['filter-by'] }}">
+                    <p>{{ button.name }}</p>
+                  </button>
+                {% endfor %}
+              </div>
+              <p class="title-img">
+                <a href="{{ infor.href }}">{{ infor.title }}</a>
+              </p>
+              <span class="body-img">{{ infor.subtitle }}</span>
+              <div class="line-card"></div>
+              <div class="date-card">
+                <span>{{ infor.date }}</span>
+                <div class="dot-card"></div>
+                <span>{{ infor.min }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- /OUR-BLOG -->
+<div class="container mb-100">
+  <div class="row">
+    <div class="col-3 m-auto text-center d-flex align-items-center justify-content-center flex-column">
+      <p class="total-view">
+        You are viewing <span id="current-view">0</span> of <span id="total-articles">0</span> articles
+      </p>
+      <button type="button" class="load-more-btn">Learn more</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var totalArticles = {{ site.data['news-blog'].index.size }};
+    var currentViewSpan = document.getElementById("current-view");
+    var totalArticlesSpan = document.getElementById("total-articles");
+
+    var loadMoreBtn = document.querySelector(".load-more-btn");
+    var articlesPerPage = 8;
+    var currentPage = 1;
+
+    if (totalArticlesSpan) {
+        totalArticlesSpan.textContent = totalArticles;
+    }
+
+    function updateCurrentView() {
+        var currentViewCount = Math.min(currentPage * articlesPerPage, totalArticles);
+        if (currentViewSpan) {
+            currentViewSpan.textContent = currentViewCount;
+        }
+    }
+
+    updateCurrentView();
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", function() {
+            currentPage++;
+            updateCurrentView();
+        });
+    }
+});
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var data = {{ site.data['news-blog'].index | jsonify }};
+      var counts = {};
+      var totalCount = 0;
+
+      data.forEach(function(item) {
+          var filterBy = item['filter-by'];
+          if (counts[filterBy] === undefined) {
+              counts[filterBy] = 0;
+          }
+          counts[filterBy]++;
+          totalCount++;
+      });
+
+      Object.keys(counts).forEach(function(filterBy) {
+          var count = counts[filterBy];
+          var countSpanId = filterBy + "-count";
+          var countSpan = document.getElementById(countSpanId);
+          if (countSpan) {
+              countSpan.textContent = count;
+          }
+      });
+
+      var allCountSpan = document.getElementById("all-count");
+      if (allCountSpan) {
+          allCountSpan.textContent = totalCount;
+      }
+  });
+      document.addEventListener("DOMContentLoaded", function() {
+      var data = {{ site.data['news-blog'].index | jsonify }};
+      var counts = {};
+      data.forEach(function(item) {
+          var filterBy = item['filter-by'];
+          if (counts[filterBy] === undefined) {
+              counts[filterBy] = 0;
+          }
+          counts[filterBy]++;
+      });
+
+      Object.keys(counts).forEach(function(filterBy) {
+          var count = counts[filterBy];
+          var buttonId = filterBy + "-button";
+          var countSpanId = filterBy + "-count";
+          var button = document.getElementById(buttonId);
+          var countSpan = document.getElementById(countSpanId);
+          if (button && countSpan) {
+              countSpan.textContent = count;
+          }
+      });
+  });
+      document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.news-header-option button');
+        const items = document.querySelectorAll('.item');
+        buttons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            const filterBy = button.dataset.filterBy;
+            items.forEach(function (item) {
+              const itemFilterBy = item.dataset.filterBy;
+              console.log('item.dataset.filterBy', item.dataset.filterBy);
+              console.log('filterBy', filterBy);
+              if (filterBy === 'all') {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+                if (filterBy === itemFilterBy) {
+                  item.style.display = 'block';
+                }
+              }
+            });
+          });
+        });
+      });
+</script>

@@ -1,0 +1,27 @@
+- icon: "/assets/icon/icon-map.svg"
+  status: ""
+  title: "interactive map"
+
+- icon: "/assets/icon/icon-getdata.svg"
+  status: ""
+  title: "get the data"
+
+- icon: "/assets/icon/icon-analyze.svg"
+  status: ""
+  title: "analyze the data"
+
+- icon: "/assets/icon/icon-earthTrack.svg"
+  status: ""
+  title: "earthtrack.app"
+
+- icon: "/assets/icon/icon-industry.svg"
+  status: ""
+  title: "organisation specific site"
+
+- icon: "/assets/icon/icon-pastandpresent.svg"
+  status: "disabled"
+  title: "past and present"
+
+- icon: "/assets/icon/icon-future.svg"
+  status: "disabled"
+  title: "future landscapes"

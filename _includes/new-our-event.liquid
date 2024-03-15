@@ -1,0 +1,55 @@
+<!-- OUR-BLOG -->
+<div class="container-fluid our-event">
+  <div class="mt-80 mb-100">
+    <div class="row">
+      <div class="col-12">
+        <div id="owl-stay-up" class="owl-carousel owl-theme owl-img-responsive">
+          <div class="item">
+            {% for infor in site.data.our-event.index %}
+            <div class="stay-up-card">
+              <a href="{{ infor.href-1 }}"><img src="{{ infor.organisations }}" alt=""></a>
+              
+              <p class="title-img">
+                <a href="{{ infor.href-1 }}">{{ infor.title1 }}</a>
+              </p>
+              <span class="body-img"
+                >{{ infor.subtitle }}</span
+              >
+            </div>
+          {% endfor %}
+          </div>
+          <div class="item">
+            {% for infor in site.data.our-event.index %}
+            <div class="stay-up-card">
+              <a href="{{ infor.href-2 }}"><img src="{{ infor.meetourteam }}" alt=""></a>
+              <p class="title-img">
+                <a href="{{ infor.href-2 }}">{{ infor.title2 }}</a>
+              </p>
+              <span class="body-img"
+                >{{ infor.subtitle }}</span
+              >
+            </div>
+          {% endfor %}
+          </div>
+          <div class="item">
+            {% for infor in site.data.our-event.index %}
+            <div class="stay-up-card">
+              <a href="{{ infor.href }}"><img src="{{ infor.subpages }}" alt=""></a>
+              
+              <p class="title-img">
+                <a href="{{ infor.href }}">{{ infor.title3 }}</a>
+              </p>
+              <span class="body-img"
+                >{{ infor.subtitle }}</span
+              >       
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- /OUR-BLOG -->

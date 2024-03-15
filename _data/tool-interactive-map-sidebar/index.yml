@@ -1,0 +1,51 @@
+basemap:
+  select_map: select a base map
+  option_year: Select a year to see options
+  land: "land"
+  water: "water"
+
+additional_layer:
+  select: select an additional layer
+  option_layer: Select a year to see options
+
+select_year: Select a year
+
+base_land:
+  - id: checkbox1
+    name: base-land
+    label: Base Land cover map plus 2017
+
+no_basemap:
+  - id: checkbox2
+    name: no-base-map
+    label: No basemap
+
+land:
+  - id: landcheckbox1
+    name: canopy
+    label: Canopy cover 2017
+  - id: landcheckbox2
+    name: canopy-continuous
+    label: Canopy cover (continuous) 2017
+  - id: landcheckbox3
+    name: lifeform
+    label: Lifeform 2017
+  - id: landcheckbox4
+    name: leaf-type
+    label: Leaftype / phenology 2017
+  - id: landcheckbox5
+    name: non-trees-semi-natural-communities
+    label: Non-trees semi-natural communities 2017
+
+water:
+  - id: checkbox3
+    name: vegetation
+    label: Water/moisture - persistence/seasonality semi-natural vegetation 2017
+  - id: checkbox4
+    name: moisture-continuous
+    label: Water/moisture - persistence/seasonality (continuous) 2017
+
+second_land:
+  - id: checkbox5
+    name: above-ground
+    label: Above ground biomass 2017
