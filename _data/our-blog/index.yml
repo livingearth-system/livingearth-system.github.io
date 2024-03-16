@@ -18,11 +18,10 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/oldman-fix.png
+  oldman-img: assets/img/living_coasts/landslides_cyclonejasper
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 images acquired over Wales.
+  title: The Welsh Data Cube
 - button:
     - class: button-1
       id: button1
@@ -44,9 +43,8 @@
   min: 5 min read
   oldman-img: /assets/img/eventImage-fix.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    The Earthtrack mobile application has been evaluated in Australia
+  title: Australian evaluation of Earthtrack
 - button:
     - class: button-1
       id: button1
