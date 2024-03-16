@@ -84,17 +84,17 @@ layout: page
         <div class="stay-up-card col-md-4 col-12">
             <a href="#"><img src="/assets/img/forecasts.jpg" alt=""></a>
             <button>forecasts</button>
-            <p><a href="#">How AI can improve the speed and accuracy of geological researches</a></p>
+            <p><a href="#">The Welsh Data Cube: New opportunities for Wales</a></p>
         </div>
         <div class="stay-up-card col-md-4 col-12">
             <a href="#"><img src="/assets/img/oldman.jpg" alt=""></a>
             <button>Research</button>
-            <p><a href="#">How AI can improve the speed and accuracy of geological researches</a></p>
+            <p><a href="#">Earthtrack testing in Australia</a></p>
         </div>
         <div class="stay-up-card col-md-4 col-12">
             <a href="#"><img src="/assets/img/forecasts.jpg" alt=""></a>
             <button>forecasts</button>
-            <p><a href="#">How AI can improve the speed and accuracy of geological researches</a></p>
+            <p><a href="#">Recording land cover in intertidal zones</a></p>
         </div>
     </div>
 </div>
