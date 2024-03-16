@@ -14,11 +14,11 @@ include breadcrumbs.liquid
 {%-
 include news-content.liquid
 title-button="RESEARCH"
-heading="an artist’s surreal view of Australia"
-subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,..."
-avatar="/assets/img/avatar/profile.png"
-username="Malcom Jacobs"
-user-status-date="Apr 10,2022"
-user-status-type="7 mins read"
+heading="Landslides from Cyclone Jasper"
+subheading="Landslides resulting from Cyclone Jasper made landfall near Wujal Wujal, Cape York, with over 22500 mm of rainfall recorded in the Daintree region of Far North Queensland.  Many of the rivers in the region experienced extensive flooding, including the Barron, Daintree and Mossman, but also numerous landslides on the coast but also on the mountains of the Great Dividing Range.  These led to loss of vegetation, including both upland and lowland forests, erosion along river banks (particularly those without vegetation) and large amounts of sediment being deposited along the riverbanks and along the coast.   The Living Coasts Team recorded information on change impacts and associated pressures using the Earthtrack mobile application and these can be viewed at https://earthtrack.aber.ac.uk/lccs/world.html."
+avatar="/assets/img/living_coast/landslides_cyclonejasper.png"
+username="Richard Lucas"
+user-status-date="March 19,2024"
+user-status-type="2 mins read"
 -%}
 
