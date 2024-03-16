@@ -18,7 +18,7 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: assets/img/living_coasts/landslides_cyclonejasper
+  oldman-img: assets/img/wales/welshdatacube_a.png
   subtitle: >
     The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 images acquired over Wales.
   title: The Welsh Data Cube
@@ -41,7 +41,7 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/eventImage-fix.png
+  oldman-img: assets/img/living_coasts/landslides_cyclonejasper.png
   subtitle: >
     The Earthtrack mobile application has been evaluated in Australia
   title: Australian evaluation of Earthtrack
@@ -64,8 +64,7 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/forecast-fix.png
+  oldman-img: assets/img/living_coasts/intertida.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    When recording information in the intertidal zone, all areas should be associated with water as if it was high tide.
+  title: Earthtrack users: water or mudflat?
