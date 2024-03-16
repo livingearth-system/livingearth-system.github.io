@@ -12,7 +12,7 @@
   subtitle: >
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+  title: News 1
 - filter-by: "research"
   button:
     - class: button-1
@@ -26,7 +26,7 @@
   subtitle: >
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+  title: News 2
 - filter-by: "research"
   button:
     - class: button-1
@@ -40,7 +40,7 @@
   subtitle: >
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+  title: News 3
 - filter-by: "case-study"
   button:
     - class: button-2
