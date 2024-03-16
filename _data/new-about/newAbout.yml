@@ -14,25 +14,25 @@
   image: "/assets/img/projects/ecopotential_a.png"
   subtitle: "Development of EODESM – the forerunner to Living Earth."
   content: "A large European-funded H2020 project that focuses its activities on a targeted set of internationally recognised Protected Areas, blending Earth Observations from remote sensing and field measurements, data analysis and modelling of current and future ecosystem conditions and services. ECOPOTENTIAL considers cross-scale geosphere-biosphere interactions at regional to continental scales, addressing long-term and large-scale environmental and ecological challenges. ECOPOTENTIAL followed BIOSOS and allowed the development of the Earth Observation Data for EcoSystem Monitoring (EODESM) and subsequently Living Earth"
-  tagline: "Funded by the European Union H2020, University of New South Wales, Sydney, Australia"
+  tagline: "Funded by the European Union H2020, University of New South Wales, Sydney, Australia."
 
 - title: "LIVING COASTS"
   image: "/assets/img/living_coasts/livingcoasts_moreton_a.jpg"
   subtitle: "Mapping, monitoring and future planning of coastal ecosystems."
   content: "Adapting existing capacity to allow coastal and influencing inland landscapes to be consistently characterised, mapped and monitored from dense time-series of Earth observation data. Focusing on Australia, Wales (UK) and selected regions of Southeast Asia, the Pacific Islands and South America, Living Coasts is linking activities, events and processes on land with those occuring in the intertidal and subtidal zones."
-  tagline: "Funded by the UKRI EO4AgriClimate, Aberystwyth University, CSIRO and University of Newcastle Australia"
+  tagline: "Funded by the UKRI EO4AgriClimate, Aberystwyth University, CSIRO and University of Newcastle Australia."
 
 - title: "LIVING PNG"
   image: "/assets/img/living_coasts/livingcoasts_png_a.png"
   subtitle: "Living Earth for Papua New Guinea"
-  content: "Focused on building analytical processing capacity to support assessment of carbon stocks in coastal ecosystems (mangroves, tidal wetlands and seagrasses) of Papua New Guinea by transferring Living Earth into CSIRO's Earth Analytics Science and Innovation (EASI) platform.  
+  content: "Focused on building analytical processing capacity to support assessment of carbon stocks in coastal ecosystems (mangroves, tidal wetlands and seagrasses) of Papua New Guinea by transferring Living Earth into CSIRO's Earth Analytics Science and Innovation (EASI) platform."  
   tagline: "Funded by CSIRO, University of Newcastle Australia, Aberystwyth University and Plymouth Marine Laboratory."
 
 - title: "LIVING WATERSOURCES"
   image: "/assets/img/livingwatersources/livingwatersources_a.png"
   subtitle: "Applying Living Earth to freshwater environments."
-  content: "Developing new capacity for characterising, mapping and monitoring catchments in Wales. The project is working alongside Living Wales, with focus on retrieving or classifying environmental descriptors relevant to freshwater systems from Earth observation data and quantifying and mapping change impacts and driving pressures.  The project is also developing new capacity for improving water quality and use through improved catchment management in Welsh river catchments.  "
-  tagline: "Funded by Welsh Water, Aberystwyth University"
+  content: "Developing new capacity for characterising, mapping and monitoring catchments in Wales. The project is working alongside Living Wales, with focus on retrieving or classifying environmental descriptors relevant to freshwater systems from Earth observation data and quantifying and mapping change impacts and driving pressures.  The project is also developing new capacity for improving water quality and use through improved catchment management in Welsh river catchments."
+  tagline: "Funded by Welsh Water, Aberystwyth University."
 
 - title: "DEA LAND COVER"
   image: "/assets/img/australia/australia_dea_a.png"
@@ -50,13 +50,13 @@
   image: ""/assets/img/projects/biosos_greece_a.png""
   subtitle: "Land cover mapping from spectral data and derived metrics."
   content: "A pilot project to develop effective and timely multi-annual monitoring of European and NATURA 2000 sites and their surrounds in support to management decisions and reporting on the status and trends according to National and EU obligations. Focus was on the mapping of habitats in Europe from very-high resolution satellite sensor data, with focus on sites in the Mediterranean but also in Wales (United Kingdom). BIO_SOS was instrumental in developing the Living Earth approach."
-  tagline: "Funded by EU Horizon 2020"
+  tagline: "Funded by EU Horizon 2020."
 
-- title: "Living Land Management"
+- title: "LIVING LAND MANAGEMENT"
   image: "/assets/img/projects/livinglandmanagement_a.png"
   subtitle: "Farm level mapping and monitoring"
-  content: "Exploring and demonstrating how Living Earth can inform land managers of the changing extent and condition of land covers and habitats on farms in Wales, with a view to addressing planning decisions and monitoring progress towards ambitions.  The project, which focused on the county of Monmouthshire, demonstrated the power of accessing the full archive of Copernicus Sentinel satellites through the Welsh Data Cube and extracting information on changes associated with land management activities (e.g., cropping, forest harvesting) and natural events (e.g., flooding and fires)/"
-  tagline: ""
+  content: "Exploring and demonstrating how Living Earth can inform land managers of the changing extent and condition of land covers and habitats on farms in Wales, with a view to addressing planning decisions and monitoring progress towards ambitions.  The project, which focused on the county of Monmouthshire, demonstrated the power of accessing the full archive of Copernicus Sentinel satellites through the Welsh Data Cube and extracting information on changes associated with land management activities (e.g., cropping, forest harvesting) and natural events (e.g., flooding and fires)."
+  tagline: "Funded by Welsh Government, Aberystwyth University and Monmouthshire County Council."
 
 - title: "CCI BIOMASS"
   image: "/assets/img/projects/cci_biomass_a.png"
