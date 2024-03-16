@@ -47,7 +47,7 @@
   tagline: "Funded by the Belgium Science Policy Office (BELSPO), University of New South Wales, Australia." 
 
 - title: "BIO_SOS"
-  image: ""/assets/img/projects/biosos_greece_a.png""
+  image: "/assets/img/projects/biosos_greece_a.png"
   subtitle: "Land cover mapping from spectral data and derived metrics."
   content: "A pilot project to develop effective and timely multi-annual monitoring of European and NATURA 2000 sites and their surrounds in support to management decisions and reporting on the status and trends according to National and EU obligations. Focus was on the mapping of habitats in Europe from very-high resolution satellite sensor data, with focus on sites in the Mediterranean but also in Wales (United Kingdom). BIO_SOS was instrumental in developing the Living Earth approach."
   tagline: "Funded by EU Horizon 2020."
