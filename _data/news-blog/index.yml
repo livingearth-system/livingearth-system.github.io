@@ -10,7 +10,7 @@
   min: 1 min read
   oldman-img: /assets/img/wales/welshdatacube_a.png
   subtitle: >
-    The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 images acquired over Wales.
+    The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 radar and optical images acquired over Wales.
   title: The Welsh Data Cube
 - filter-by: "research"
   button:
