@@ -5,7 +5,7 @@ permalink: /about/
 header: "About"
 headerTop: "Tools"
 title: "About"
-subtitle: "Living Earth vision and mission and pathways to achievement."
+subtitle: "Living Earth"
 image: "/assets/img/heading/enviromental.png"
 background: "#252C0B"
 nocontact: true
