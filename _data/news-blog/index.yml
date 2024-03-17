@@ -9,7 +9,7 @@
   min: 1 min read
   oldman-img: /assets/img/wales/welshdatacube_a.png
   subtitle: >
-    The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 radar and optical images acquired over Wales.
+    The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 radar and optical data acquired over Wales.
   title: The Welsh Data Cube
 - filter-by: "research"
   button:
@@ -48,7 +48,7 @@ date: Mar 16, 2024
   min: 5 min read
   oldman-img: /assets/img/wales/livingwales_habitatmap_a.png
   subtitle: >
-    The Living Wales Habitat map is produced annually for Wales but requires both Earth observations as well as contextual informaiton.
+    The Living Wales Habitat map is produced annually for Wales but requires both Earth observations as well as contextual information.
   title: Living Wales maps Welsh habitats.
 - filter-by: "research"
   button:
