@@ -1,3 +1,4 @@
+---
 - filter-by: "research"
   button:
     - class: button-1
