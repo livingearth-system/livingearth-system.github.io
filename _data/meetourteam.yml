@@ -1,3 +1,8 @@
+- name: 'Richard Lucas'
+  subtitle: 'Ser Cymru Chair, Aberystwyth University'
+  image: '/assets/img/meetourteam/1.png'
+  url: '#'
+  
 - name: "Carole Planque"
   subtitle: "Research Scientist, University of Geneva"
   image: "/assets/img/meetourteam/2.png"
@@ -20,10 +25,10 @@
   
 - name: "Sebastien Chognard"
   subtitle: "Researcher, University of Geneva"
-  image: "/assets/img/meetourteam/7.png"
+  image: "/assets/img/meetourteam/6.png"
   url: "#"
 
 - name: "Anthea Mitchell"
   subtitle: "Research Scientist, University of New South Wales"
-  image: "/assets/img/meetourteam/6.png"
+  image: "/assets/img/meetourteam/7.png"
   url: "#"
