@@ -3,7 +3,7 @@ layout: contact
 permalink: /contact/
 
 title: "Contact Us"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+subtitle: "For more information on Living Earth, please contact Richard Lucas "
 image: "/assets/img/contactus.png"
 nobuttons: true
 ---
@@ -11,10 +11,11 @@ nobuttons: true
 ##### Keep in touch
 ### We are always here to help
 
-**[hello@livingearthhub.org](mailto:livingearth@aber.ac.uk)**  
-**[+42 1 234 5678](tel:+42-1-234-5678)**
+**[rml2@aber.ac.uk(mailto:rml2@aber.ac.uk)**  
 
-PENGLAIS,  
-ABERYSTWYTH,  
-SY23 3FL,  
-GREAT BRITAIN
+DEPARTMENT OF GEOGRAPHY AND EARTH SCIENCES,
+ABERYSTWYTH UNIVERSITY,
+PENGLAIS CAMPUS,
+ABERYSTWYTH,
+SY2323B
+
