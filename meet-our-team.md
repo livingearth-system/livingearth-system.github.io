@@ -5,7 +5,7 @@ Topheader: Meet Our Team
 header: "About us"
 headerTop: "About"
 title: "Meet Our Team"
-subtitle: "Living Earth has developed over many yeara through the work of academic staff, postdoctoral researchers and postgraduate students.  Meet just a few of those involved in the initiative over the years"
+subtitle: "Living Earth has developed over many years through the work of academic staff, postdoctoral researchers and postgraduate students.  Meet just a few of those involved in the initiative"
 background: "#072857"
 image: "/assets/img/meet-our-team-banner.jpg"  
 nobuttons: true
