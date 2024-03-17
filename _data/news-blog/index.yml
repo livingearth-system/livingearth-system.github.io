@@ -42,7 +42,7 @@ date: Mar 16, 2024
   button:
     - class: button-2
       id: button2
-      name: Case study
+      name: Research
  date: Mar 14, 2024
   href: '#'
   id: infor
@@ -51,7 +51,7 @@ date: Mar 16, 2024
   subtitle: >
     The Living Wales Habitat map is produced annually for Wales but requires both Earth observations as well as contextual informaiton.
   title: Living Wales maps Welsh habitats.
-- filter-by: "case-study"
+- filter-by: "research"
   button:
     - class: button-2
       id: button2
