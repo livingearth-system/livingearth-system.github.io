@@ -1,12 +1,8 @@
-- title: "LIVING WALES"
-  image: "/assets/img/wales/livingwales_overview.jpg"
-  subtitle: "National mapping of Wales through Living Earth"
-  content: "Providing operational mapping and monitoring of the national landscape of Wales since 2018 using the Welsh Data Cube, which stores and accumulates all Copernicus Sentinel-1 radar and Sentinel-2 optical observations.  Maps of land cover and habitats are generated on an annual basis and there is capacity to detect subannual changes in extent and condition."
-  tagline: "Funded by the Ser Cymru II program and Welsh Government, Aberystwyth University, UK"
+- title: "Meet the team"
   
 - name:  "Richard Lucas"
-  subtitle:  "Ser Cymru Chair, Aberystwyth University "
-  image:  "/assets/img/meetourteam/1.png "
+  subtitle:  "Ser Cymru Chair, Aberystwyth University"
+  image:  "/assets/img/meetourteam/1.png"
   url:  "# "
   
 - name: "Carole Planque"
