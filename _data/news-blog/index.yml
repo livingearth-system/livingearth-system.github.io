@@ -42,15 +42,16 @@ date: Mar 16, 2024
     - class: button-1
       id: button1
       name: Research
- date: Mar 14, 2024
+  date: Sep 11, 2022
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/living_coasts/intertida.png
+  oldman-img: /assets/img/rocket.png
   subtitle: >
-    The Living Wales Habitat map is produced annually for Wales.
-  title: Living Wales maps Welsh habitats.
-- filter-by: "research"
+    Living Earth is an open resource that allows individuals, groups, organisations
+    and countries/regions to better understand the environment and make informed decisions.
+  title: How AI can improve the speed and accuracy of geological researches
+- filter-by: "case-study"
   button:
     - class: button-2
       id: button2
