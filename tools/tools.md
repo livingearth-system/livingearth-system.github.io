@@ -4,8 +4,8 @@ permalink: /tools/
 
 header: "Tools"
 headerTop: "Tools"
-title: "LivingEarth Tools"
-subtitle: "Lorem ipsum dolor sit amet consectetur. Justo viverra imperdiet adipiscing proin fermentum massa hendrerit ultricies. Ut a magna eget augue. Rhoncus enim blandit amet pellentesque a nisi sit. Amet nibh risus neque in semper ac. Purus vel semper aliquam pharetra."
+title: "Living Earth Tools"
+subtitle: "Living Earth provides national and site specific access to interactive land cover maps (currently for Wales and Australia) and the satellite data and derived environmental descriptors used in their construction.  Ground reference data relating to land cover, habitats and change collected using the Earthtrack mobile application are available.  
 image: "/assets/img/heading/enviromental.png"
 background: "#252C0B"
 nocontact: false
