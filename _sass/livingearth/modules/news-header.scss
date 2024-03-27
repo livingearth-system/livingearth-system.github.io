@@ -68,6 +68,15 @@
                 margin: 0;
             }
         }
+        .header-button-1:active, .header-button-1:focus,
+        .header-button-2:active, .header-button-2:focus,
+        .header-button-3:active, .header-button-3:focus
+        .header-button-4:active, .header-button-4:focus
+        .header-button-5:active, .header-button-5:focus
+        .header-button-6:active, .header-button-6:focus {
+            border: 2px solid black;
+            border-radius: 4.5px;
+        }
 
         .header-button-2 {
             padding: 6px 12px;
@@ -157,6 +166,63 @@
             p {
                 text-wrap: nowrap;
                 color: #683D89;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+        .header-button-7 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #D4EDBC;
+            cursor: pointer;
+            p {
+                text-wrap: nowrap;
+                color: #50734B;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+        .header-button-8 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #FFE5A0;
+            cursor: pointer;
+            p {
+                text-wrap: nowrap;
+                color: #5F382D;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Raleway;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+        .header-button-9 {
+            padding: 6px 12px;
+            border: none;
+            background-color: #E6CFF2;
+            cursor: pointer;
+            p {
+                text-wrap: nowrap;
+                color: #8269A5;
                 font-feature-settings: 'clig' off, 'liga' off;
                 font-family: Raleway;
                 font-size: 16px;

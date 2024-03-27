@@ -12,22 +12,31 @@
   </div>
 
   <div class="news-header-option">
-    <button id="all-button" class="header-button-1" data-filter-by="all">
+    <button id="all-button" class="header-button-1" data-category="all">
       <p>ALL (<span id="all-count">0</span>)</p>
     </button>
-    <button id="research-button" class="header-button-2" data-filter-by="research">
+    <button id="research-button" class="header-button-2" data-category="research">
       <p>RESEARCH (<span id="research-count">0</span>)</p>
     </button>
-    <button id="case-study-button" class="header-button-3" data-filter-by="case-study">
+    <button id="case-study-button" class="header-button-3" data-category="case-study">
       <p>CASE STUDY (<span id="case-study-count">0</span>)</p>
     </button>
-    <button id="news-button" class="header-button-4" data-filter-by="news">
+    <button id="news-button" class="header-button-4" data-category="news">
       <p>NEWS (<span id="news-count">0</span>)</p>
     </button>
-    <button id="events-button" class="header-button-5" data-filter-by="events">
+    <button id="events-button" class="header-button-5" data-category="events">
       <p>EVENTS (<span id="events-count">0</span>)</p>
     </button>
-    <button id="other-button" class="header-button-6" data-filter-by="other">
+    <button id="art-button" class="header-button-7" data-category="art">
+      <p>ART (<span id="art-count">0</span>)</p>
+    </button>
+    <button id="themes-button" class="header-button-8" data-category="themes">
+      <p>THEMES (<span id="themes-count">0</span>)</p>
+    </button>
+    <button id="countries-button" class="header-button-9" data-category="countries">
+      <p>COUNTRIES (<span id="countries-count">0</span>)</p>
+    </button>
+    <button id="other-button" class="header-button-6" data-category="other">
       <p>OTHER (<span id="other-count">0</span>)</p>
     </button>
   </div>
@@ -66,12 +75,12 @@
     <div class="row mb-60">
       {% for infor in site.data['news-blog'].index %}
         <div class="col-xl-4 col-md-6">
-          <div class="item mt-60" data-filter-by="{{ infor['filter-by'] }}">
+          <div class="item mt-60" data-category="{{ infor['category'] }}">
             <div class="stay-up-card">
               <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
               <div>
                 {% for button in infor.button %}
-                  <button class="{{ button.class }}" data-filter-by="{{ infor['filter-by'] }}">
+                  <button class="{{ button.class }}" data-category="{{ infor['category'] }}">
                     <p>{{ button.name }}</p>
                   </button>
                 {% endfor %}
@@ -107,7 +116,36 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.news-header-option button');
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const category = button.dataset.category;
+
+            document.querySelectorAll('.col-xl-4').forEach(function(column) {
+                const itemsInColumn = column.querySelectorAll('.item');
+                let columnShouldBeVisible = false;
+
+                itemsInColumn.forEach(function (item) {
+                    const itemCategory = item.dataset.category;
+                    
+                    if (category === 'all' || category === itemCategory) {
+                        columnShouldBeVisible = true;
+                    }
+                });
+
+                if (columnShouldBeVisible) {
+                    column.style.display = 'block';
+                } else {
+                    column.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
     var totalArticles = {{ site.data['news-blog'].index.size }};
     var currentViewSpan = document.getElementById("current-view");
     var totalArticlesSpan = document.getElementById("total-articles");
@@ -143,17 +181,17 @@
       var totalCount = 0;
 
       data.forEach(function(item) {
-          var filterBy = item['filter-by'];
-          if (counts[filterBy] === undefined) {
-              counts[filterBy] = 0;
+          var category = item['category'];
+          if (counts[category] === undefined) {
+              counts[category] = 0;
           }
-          counts[filterBy]++;
+          counts[category]++;
           totalCount++;
       });
 
-      Object.keys(counts).forEach(function(filterBy) {
-          var count = counts[filterBy];
-          var countSpanId = filterBy + "-count";
+      Object.keys(counts).forEach(function(category) {
+          var count = counts[category];
+          var countSpanId = category + "-count";
           var countSpan = document.getElementById(countSpanId);
           if (countSpan) {
               countSpan.textContent = count;
@@ -165,48 +203,63 @@
           allCountSpan.textContent = totalCount;
       }
   });
-      document.addEventListener("DOMContentLoaded", function() {
-      var data = {{ site.data['news-blog'].index | jsonify }};
-      var counts = {};
-      data.forEach(function(item) {
-          var filterBy = item['filter-by'];
-          if (counts[filterBy] === undefined) {
-              counts[filterBy] = 0;
-          }
-          counts[filterBy]++;
-      });
 
-      Object.keys(counts).forEach(function(filterBy) {
-          var count = counts[filterBy];
-          var buttonId = filterBy + "-button";
-          var countSpanId = filterBy + "-count";
-          var button = document.getElementById(buttonId);
-          var countSpan = document.getElementById(countSpanId);
-          if (button && countSpan) {
-              countSpan.textContent = count;
-          }
-      });
-  });
       document.addEventListener('DOMContentLoaded', function () {
         const buttons = document.querySelectorAll('.news-header-option button');
         const items = document.querySelectorAll('.item');
-        buttons.forEach(function (button) {
-          button.addEventListener('click', function () {
-            const filterBy = button.dataset.filterBy;
+        const totalArticlesSpan = document.getElementById("total-articles");
+        const currentViewSpan = document.getElementById("current-view");
+        const loadMoreBtn = document.querySelector(".load-more-btn");
+    
+        let data = {{ site.data['news-blog'].index | jsonify }};
+        let totalCount = data.length;
+        let articlesPerPage = 8;
+        let currentPage = 1;
+
+    function updateCurrentView(category) {
+        let currentViewCount = 0;
             items.forEach(function (item) {
-              const itemFilterBy = item.dataset.filterBy;
-              console.log('item.dataset.filterBy', item.dataset.filterBy);
-              console.log('filterBy', filterBy);
-              if (filterBy === 'all') {
-                item.style.display = 'block';
-              } else {
-                item.style.display = 'none';
-                if (filterBy === itemFilterBy) {
-                  item.style.display = 'block';
+            const itemCategory = item.dataset.category;
+            if (category === 'all' || category === itemCategory) {
+                if (item.style.display !== 'none') {
+                    currentViewCount++;
                 }
               }
             });
-          });
+        if (currentViewSpan) {
+            currentViewSpan.textContent = currentViewCount;
+        }
+    }
+
+    function updateTotalArticles(category) {
+        let totalArticlesCount = 0;
+        items.forEach(function(item) {
+            const itemCategory = item.dataset.category;
+            if (category === 'all' || category === itemCategory) {
+                totalArticlesCount++;
+            }
         });
-      });
+        if (totalArticlesSpan) {
+            totalArticlesSpan.textContent = totalArticlesCount;
+        }
+    }
+
+    updateCurrentView('all');
+    updateTotalArticles('all');
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const category = button.dataset.category;
+            updateCurrentView(category);
+            updateTotalArticles(category);
+        });
+    });
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", function() {
+            currentPage++;
+            updateCurrentView('all');
+        });
+    }
+});
 </script>
