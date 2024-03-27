@@ -40,7 +40,7 @@ include contribute.liquid
 title="Join Livingearth"
 heading="How to contribute"
 subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
-button="Learn more" url="/contribute/"
+button="Learn more" url="/learning-hub/"
 link_url="/contact/"
 image="/assets/img/contribute.jpg"
 -%}
