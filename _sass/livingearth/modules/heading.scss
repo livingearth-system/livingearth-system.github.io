@@ -52,6 +52,9 @@
   .country_subpage-benner-img {
     height: 610px;
   }
+  .country_subpage-benner-img-contact {
+    height: 610px;
+  }
   .dsc-about-inner {
     margin-top: 10px;
   }
@@ -82,6 +85,10 @@
     max-width: 100%;
     height: 400px;
   }
+  .country_subpage-benner-img-contact {
+    max-width: 100%;
+    height: 400px;
+  }
 }
 
 @media (max-width: 465px) {
@@ -104,6 +111,10 @@
   }
 
   .country_subpage-benner-img {
+    max-width: 100%;
+    height: 450px;
+  }
+  .country_subpage-benner-img-contact {
     max-width: 100%;
     height: 450px;
   }

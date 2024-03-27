@@ -3264,6 +3264,11 @@ letter-spacing: 0.5px;
   height: 100%;
   object-fit: cover;
 }
+.country_subpage-benner-img-contact {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .learn-more-link {
   color: #1d2865 !important;
@@ -3311,6 +3316,9 @@ letter-spacing: 0.5px;
 @media (min-width: 767px) {
   .country_subpage-benner-img {
     height: 580px;
+  }
+  .country_subpage-benner-img-contact {
+    height: 350px;
   }
 }
 
