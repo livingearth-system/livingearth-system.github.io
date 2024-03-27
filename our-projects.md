@@ -1,10 +1,10 @@
 ---
 layout: new-about
-permalink: /about/
+permalink: /our-projects/
 
 header: "About"
 headerTop: "Tools"
-title: "About"
+title: "Our Project"
 subtitle: "Living Earth"
 image: "/assets/img/heading/enviromental.png"
 background: "#252C0B"

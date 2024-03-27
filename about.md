@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /a/
+permalink: /about/
 
 title: "All-In-One Thinking"
 
