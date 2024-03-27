@@ -5,7 +5,7 @@ permalink: /about/organise
 header: "About us"
 headerTop: "About"
 title: "Organisations We working with"
-subtitle: "Lorem ipsum dolor sit amet consectetur. Justo viverra imperdiet adipiscing proin fermentum massa hendrerit ultricies. Ut a magna eget augue. Rhoncus enim blandit amet pellentesque a nisi sit. Amet nibh risus neque in semper ac."
+subtitle: "Coming soon ..."
 background: "#01060D"
 image: "/assets/img/organise-working-with.jpg"  
 nobuttons: true

@@ -2,7 +2,7 @@
 layout: page
 
 title: "Agriculture Changes"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+subtitle: "Coming soon ..."
 image: "/assets/img/heading/wild.jpg"
 ---
 
