@@ -3,7 +3,7 @@ layout: tool_page
 permalink: /tools/analyze-the-data
 
 title: "Contact Us"
-subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+subtitle: "Coming soon ... "
 image: "/assets/img/contactus.png"
 nobuttons: true
 ---
@@ -23,17 +23,8 @@ first-content-bottom="JupyterHub runs in the cloud or on your own hardware, and 
       academic courses, and large-scale infrastructure.​"
 
 second-heading="what is jupyterhub?"
-second-content-top="Dui id ornare arcu odio. Lacus sed viverra tellus in hac habitasse platea dictumst
+second-content-top="Coming soon ..."
 
-      vestibulum. Est ullamcorper eget nulla facilisi etiam. Et pharetra pharetra massa massa ultricies mi quis. Cursus
-      turpis massa tincidunt dui. Neque gravida in fermentum et sollicitudin ac orci. Turpis egestas maecenas pharetra
-      convallis posuere morbi leo urna. Lorem ipsum dolor sit amet consectetur. Lacus luctus accumsan tortor posuere ac.
-      Aliquet bibendum enim facilisis gravida. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Justo nec
-      ultrices dui sapien. Id leo in vitae turpis massa sed elementum tempus egestas. Quam vulputate dignissim
-      suspendisse in est ante. A erat nam at lectus urna duis. Erat nam at lectus urna duis convallis convallis tellus."
-
-second-content-bottom="Dui id ornare arcu odio. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Est ullamcorper
-      eget nulla facilisi etiam. Et pharetra pharetra massa massa ultricies mi quis. Cursus turpis massa tincidunt dui.
-      Neque gravida in fermentum et sollicitudin ac orci."
+second-content-bottom="Coming soon ..."
 
 %}
