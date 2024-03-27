@@ -6,7 +6,7 @@ subtitle: "Novel world-first concept that aims to capture the state and dynamics
 background: "#07073f"
 image: "/assets/img/heading/country.jpg"
 
-button2: "Monmouthshire Pilot"
+button2: "Living Land Management Wales"
 button2_url: "./monmouthshire/"
 ---
 
