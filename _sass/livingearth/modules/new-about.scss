@@ -36,3 +36,19 @@
         font-weight: 500;
     }
 }
+
+.responsive-content {
+    display: block;
+}
+.responsive-content-sm {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .responsive-content {
+        display: none;
+    }
+    .responsive-content-sm {
+        display: block;
+    }
+}
