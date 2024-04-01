@@ -94,7 +94,7 @@
     <path id="Vector_2" d="M10.5859 16.667V9.87842H9.41405V16.667L8.07054 15.3235L7.24194 16.1521L9.99999 18.9102L12.758 16.1521L11.9294 15.3235L10.5859 16.667Z" fill="white"/>
     </g>
     </svg>
-  url: "/tools/get-the-data-information"
+  url: "/tools/get-the-data"
 
 - id: "analyze-the-data"
   title: "analyze the data"
@@ -130,7 +130,7 @@
     <path id="Vector_11" d="M11.7646 12.9414H15.2941V14.1179H11.7646V12.9414Z" fill="white"/>
     </g>
     </svg>
-  url: "/tools/analyze-the-data-information"
+  url: "/tools/analyze-the-data"
 
 - id: "earthtrack-app"
   title: "earthtrack app"
@@ -190,7 +190,7 @@
     </g>
     </g>
     </svg>
-  url: "/tools/earthtrack-app-information"
+  url: "/tools/earthtrack-app"
 
 - id: "organisation-specific-site"
   title: "Organisation specific site"
