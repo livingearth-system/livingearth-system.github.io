@@ -69,7 +69,7 @@
       </g>
     </svg>
 
-  url: "/tools/interactive-map-information"
+  url: "/tools/interactive-map"
 
 - id: "get-the-data"
   title: "Get the data"
