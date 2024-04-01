@@ -10,7 +10,7 @@ nocontact: true
 
 {%-
 include opensource-tools.liquid
-heading="Opensource Tools for earth scientists & policymakers"
+heading="Quick links to Opensource Tools"
 -%}
 
 {%-
