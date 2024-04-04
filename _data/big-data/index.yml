@@ -18,3 +18,24 @@
   button: "Learn More"
   url: "https://planetarycomputer.microsoft.com/"
   newtab: true
+
+  - title: "Digital Earth Australia"
+  subtitle: "Digital Earth Australia (DEA) is an analysis platform providing  access to standardised analysis-ready-data (ARD), analytic capability and tools."
+  image: "/assets/img/wales/remote-sensing.jpg"
+  button: "Learn More"
+  url: "https://planetarycomputer.microsoft.com/"
+  newtab: true
+
+  - title: "Welsh Data Cube"
+  subtitle: "The Welsh Data Cube houses a growing archive of Sentinel-1 radar and Sentinel-2 optical data as well as the products derived from these."
+  image: "/assets/img/wales/remote-sensing.jpg"
+  button: "Learn More"
+  url: "https://planetarycomputer.microsoft.com/"
+  newtab: true
+
+  - title: "Swiss Data Cube"
+  subtitle: "The Swiss Data Cube is a cloud-ciomputing platform providing satellite data processed to an Analysis Ready Data (ARD) format and covering the geographical extent of Swizerland."
+  image: "/assets/img/wales/remote-sensing.jpg"
+  button: "Learn More"
+  url: "https://planetarycomputer.microsoft.com/"
+  newtab: true
