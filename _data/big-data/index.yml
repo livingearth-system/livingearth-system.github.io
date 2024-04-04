@@ -34,7 +34,7 @@
   newtab: true
 
   - title: "Swiss Data Cube"
-  subtitle: "The Swiss Data Cube is a cloud-ciomputing platform providing satellite data processed to an Analysis Ready Data (ARD) format and covering the geographical extent of Swizerland."
+  subtitle: "The Swiss Data Cube is a cloud-computing platform providing satellite data processed to an Analysis Ready Data (ARD) format and covering the geographical extent of Swizerland."
   image: "/assets/img/wales/remote-sensing.jpg"
   button: "Learn More"
   url: "https://planetarycomputer.microsoft.com/"
