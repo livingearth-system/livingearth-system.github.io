@@ -1,0 +1,20 @@
+- title: "Aims"
+  subtitle: "To understand how past and current landscapes and their dynamics, as quantified from Earth observation data, can be used to support co-designed future planning for people and nature. To establish how these same data can be used to monitor progress (or otherwise) towards goals, quantify values (e.g., carbon, biodiversity, water, soils) and assess and respond to risk.
+"
+  image: "/assets/img/wales/environmental-descriptors.jpg"
+  button: "Learn More"
+  url: "#"
+
+- title: "Objectives"
+  subtitle: "Demonstrate the application and transferability of [Living Earth](~/about.md) for generating scalable and consistent thematic classifications and descriptions of coastal zones from a diverse range of environmental descriptors (EDs). These will be  retrieved or classified from Earth observation data within cloud-computing platforms (initial focus on the [Open Data Cube](https://www.opendatacube.org/))
+"
+  image: "/assets/img/wales/ground-measurements.jpg"
+  button: "Learn More"
+  url: "#"
+
+- title: "Strategic Plan"
+  subtitle: "The Strategic Plan for Living Coasts (LINK TO PDF - coming soon?) outlines how Earth observation data can be used within the framework of Living Earth to enhance use of Earth observation data for planning coastal futures to support well-being of nature and people. Key elements are the development of Living Earth to consider both land and water (including intertidal and subtidal) environments, gathering evidence for change impacts and driving pressures and planning future landscapes through co-design.   
+"
+  image: "/assets/img/wales/remote-sensing.jpg"
+  button: "Learn More"
+  url: "#"
