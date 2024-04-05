@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /our-projects
+permalink: /livingcoasts
 
 title: "Living Coasts"
 
@@ -16,16 +16,20 @@ Noheader: true
 
 {%-
 include who-we-are.liquid
-heading="Who we are?"
-subheading="Living Earth is you and everyone. We are all part of this one planet and we need to make sure that our ecosystems function as they should and our environments are clean for ourselves and nature but also support us in the long term. Collectively, we are providing a capacity to achieve our ambitions and one that builds on our knowledge of the past."
-count="2, Countries; 2, Continents; X, Satellites; 20.779 KM2 +, Land Mapped"
+heading="Overview"
+subheading="Living Coasts is adapting existing capacity (developed jointly by Australia and the UK) to allow coastal and influencing inland landscapes to be consistently characterised, mapped and monitored from dense time-series of Earth observations and modelled descriptors of the environment.  
+
+Working within the framework of the Open Data Cube [link to https://livingearthhub.org/europe/wales/big-data/ but move location to https://livingearthhub.org/big-data/], Living Coasts is using environmental descriptors retrieved or classified primarily from satellite sensor data to construct historical and current land cover maps and associated descriptions, with particular focus on "Blue Carbon (Coastal) Ecosystems”, including mangroves, saltmarshes and seagrasses. Comparisons over varying timeframes are then being used to document past changes by extracting evidence for impacts and driving pressures obtained from Earth observations and other sources.
+
+The information gathered will be used in conjunction with existing knowledge to inform decisions relating to planning of future landscapes under a range of economic and/or climate scenarios, quantifying associated benefits and risks, and monitoring progress towards co-designed plans including through Earth observations.   Major emphasis is placed on maintaining, recovering and/or enhancing major components of the coastal zone (natural resources, biodiversity).  Therefore, responses that promote positive pressures, avoid negative pressures or allow mitigation or adaptation of those that cannot be avoided will be promoted, with optimal pathways to achievement based on robust evidence.
+"
 -%}
 
 {%-
 include our-vision.liquid
-heading="Who we are?"
-subheading="Living Earth is you and everyone. We are all part of this one planet and we need to make sure that our ecosystems function as they should and our environments are clean for ourselves and nature but also support us in the long term. Collectively, we are providing a capacity to achieve our ambitions and one that builds on our knowledge of the past."
-subheading2= "Living Earth is a collaboration of scientists, organizations and the public making use of emerging technology to innovate new systems and approaches to how we view and manage the land and ecosystems of our planet.​"
+heading="Aims"
+subheading="To understand how past and current landscapes and their dynamics, as quantified from Earth observation data, can be used to support co-designed future planning for people and nature.
+​"
 image="/assets/img/office.jpg" alt="Office"
 -%}
 
