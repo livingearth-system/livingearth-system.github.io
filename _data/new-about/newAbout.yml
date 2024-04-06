@@ -26,7 +26,7 @@
   image: "/assets/img/projects/LivingWales_LCCS.png"
   subtitle: "Quantitative land cover contents and map generation through Living Earth."
   content: "Developing a fully quantitative approach to retrieving or classifying environmental descriptors and using these to construct land cover maps according to global taxonomies. Demonstration is for countries including Switzerland, Australia, Papua New Guinea and Wales and those in South America and Africa. Approaches to integrating uncertainty estimates are also being developed."
-  tagline: "Funded by the Swiss National Science Foundation (SNSF), University of Geneva, Switerland.
+  tagline: "Funded by the Swiss National Science Foundation (SNSF), University of Geneva, Switerland."
 
 - title: "LIVING WATERSOURCES"
   image: "/assets/img/projects/livingwatersources_a.png"
