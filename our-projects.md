@@ -6,7 +6,7 @@ header: "About"
 headerTop: "Tools"
 title: "Living Earth Projects"
 subtitle: "Living Earth has been developed through a series of local to continental-scale projects, with these contributing to the development of the global approach to land monitoring and/or future planning of landscapes."
-image: "/assets/img/heading/dea_landcover_murray.png"
+image: "/assets/img/heading/dea_landcover_murray_hres.png"
 background: "#252C0B"
 nocontact: true
 nobuttons: true
