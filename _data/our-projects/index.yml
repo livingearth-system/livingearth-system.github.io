@@ -1,7 +1,7 @@
-- title: "LIVING WALES 2222222222"
+- title: "LIVING WALES"
   image: "/assets/img/wales/Living_Wales_2021-23.png"
   subtitle: "National mapping of Wales through Living Earth"
-  content: "2222222222222 Providing operational mapping and monitoring of the national landscape of Wales since 2018 using the Welsh Data Cube, which stores and accumulates all Copernicus Sentinel-1 radar and Sentinel-2 optical observations.  Maps of land cover and habitats are generated on an annual basis and there is capacity to detect subannual changes in both extent and condition."
+  content: "Providing operational mapping and monitoring of the national landscape of Wales since 2018 using the Welsh Data Cube, which stores and accumulates all Copernicus Sentinel-1 radar and Sentinel-2 optical observations.  Maps of land cover and habitats are generated on an annual basis and there is capacity to detect subannual changes in both extent and condition."
   tagline: "Funded by the Ser Cymru II program and Welsh Government, Aberystwyth University, UK"
 
 - title: "DYNAMIC LAND"
@@ -21,7 +21,7 @@
   subtitle: "Mapping, monitoring and future planning of coastal ecosystems."
   content: "Adapting existing capacity to allow coastal and influencing inland landscapes to be consistently characterised, mapped and monitored from dense time-series of Earth observation data. Focusing on Australia, Wales (UK) and selected regions of Southeast Asia, the Pacific Islands and South America, Living Coasts is linking activities, events and processes on land with those occuring in the intertidal and subtidal zones."
   tagline: "Funded by the UKRI EO4AgriClimate, Aberystwyth University, CSIRO and University of Newcastle Australia."
-  url: "../../europe/wales/"
+  url: "./living-coasts/"
 
 - title: "LIVING PNG"
   image: "/assets/img/living_coasts/livingcoasts_png_a.png"
