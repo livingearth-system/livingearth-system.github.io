@@ -31,7 +31,7 @@
     <div class="row ">
       {% for item in data limit: 3 %}
         <div class="new-about-content col-4">
-          <a class="new-about-content-title" href="#">{{ item.title }}</a>
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
           <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
           <p class="new-about-content-para">{{ item.content }}</p>
           <p class="new-about-content-tagline">{{ item.tagline }}</p>
@@ -42,7 +42,7 @@
       {% for item in data offset: 3 limit: 3 %}
         <div class="new-about-content col-4">
           <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
-          <a class="new-about-content-title" href="#">{{ item.title }}</a>
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
           <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
           <p class="new-about-content-para">{{ item.content }}</p>
           <p class="new-about-content-tagline">{{ item.tagline }}</p>
@@ -53,28 +53,13 @@
       {% for item in data offset: 6 %}
         <div class="new-about-content col-4">
           <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
-          <a class="new-about-content-title" href="#">{{ item.title }}</a>
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
           <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
           <p class="new-about-content-para">{{ item.content }}</p>
           <p class="new-about-content-tagline">{{ item.tagline }}</p>
         </div>
       {% endfor %}
     </div>
-  </div>
-  <div class="row responsive-content-sm">
-    {% for item in site.data.new-about.newAbout %}
-      <div class="col-md-12 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="{{ item.image }}" alt="{{ item.title }}">
-          <div class="card-body">
-            <h4 class="card-title">{{ item.title }}</h4>
-            <h5>{{ item.subtitle }}</h5>
-            <p class="card-text">{{ item.content }}</p>
-            <p class="card-text"><small class="text-muted">{{ item.tagline }}</small></p>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
   </div>
 
 </div>
