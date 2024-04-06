@@ -7,7 +7,7 @@ title: "Living Wales"
 headerTop: "Living Wales "
 subtitle: "Living Wales provides full operational implementation of a national land cover mapping and monitoring system for Wales, a devolved nation of the United Kingdom. ; Aims; Objectives; Strategic Plan;" 
 background: "#072857"
-image: "/assets/img/heading/livingcoasts_starckemangroves.png"
+image: "/assets/img/heading/livingwales_banner.png"
 nobuttons: true
 Nosvg: true
 Noheader: true
