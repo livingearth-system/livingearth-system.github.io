@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section>
+
+    {%- include heading.liquid -%}
+
+    <div class="container-fluid mb-100">
+
+        {{ content }}
+
+        {%- if page.nocontact != true -%}
+            {%- include get-in-touch.liquid -%}
+        {% endif %}
+
+    </div>
+
+</section>
