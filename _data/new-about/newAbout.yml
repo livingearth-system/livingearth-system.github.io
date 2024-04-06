@@ -5,7 +5,7 @@
   tagline: "Funded by the Ser Cymru II program and Welsh Government, Aberystwyth University, UK"
 
 - title: "DEA LAND COVER"
-  image: "/assets/img/projects/LivingWales_LCCS.png"
+  image: "/assets/img/projects/livingwales_lccs.png"
   subtitle: "Continental mapping of Australia for 33 years"
   content: "Generating the first national maps of Australia from 1988 to 2020 using Living Earth, with this providing remarkable and insightful history of land cover change for the continental land mass and islands.  The approach utilised environmental descriptors generated entirely from Landsat sensor data, including fractional vegetation cover and annual water hydroperiod, which were combined to generate the classifications of Australia.  The research and development was undertaken in parellel with Living Wales."
   tagline: "Funded by Digital Earth Australia"
@@ -23,7 +23,7 @@
   tagline: "Funded by CSIRO, University of Newcastle Australia, Aberystwyth University and Plymouth Marine Laboratory."
   
 - title: "DYNAMIC LAND"
-  image: "/assets/img/projects/livingcoasts_png_a.png"
+  image: "/assets/img/projects/dynamicland.png"
   subtitle: "Quantitative land cover contents and map generation through Living Earth."
   content: "Developing a fully quantitative approach to retrieving or classifying environmental descriptors and using these to construct land cover maps according to global taxonomies. Demonstration is for countries including Switzerland, Australia, Papua New Guinea and Wales and those in South America and Africa. Approaches to integrating uncertainty estimates are also being developed."
   tagline: "Funded by the Swiss National Science Foundation (SNSF), University of Geneva, Switerland."
