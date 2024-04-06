@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /our-projects
+permalink: /our-projects/
 
 title: "Living Coasts"
 
@@ -16,19 +16,17 @@ Noheader: true
 
 {%-
 include who-we-are.liquid
-heading="Who we are?"
-subheading="Living Earth is you and everyone. We are all part of this one planet and we need to make sure that our ecosystems function as they should and our environments are clean for ourselves and nature but also support us in the long term. Collectively, we are providing a capacity to achieve our ambitions and one that builds on our knowledge of the past."
-count="2, Countries; 2, Continents; X, Satellites; 20.779 KM2 +, Land Mapped"
+heading="Aims"
+subheading="To understand how past and current landscapes and their dynamics, as quantified from Earth observation data, can be used to support co-designed future planning for people and nature."
 -%}
 
 {%-
 include our-vision.liquid
-heading="Who we are?"
+heading="Objectives"
 subheading="Living Earth is you and everyone. We are all part of this one planet and we need to make sure that our ecosystems function as they should and our environments are clean for ourselves and nature but also support us in the long term. Collectively, we are providing a capacity to achieve our ambitions and one that builds on our knowledge of the past."
-subheading2= "Living Earth is a collaboration of scientists, organizations and the public making use of emerging technology to innovate new systems and approaches to how we view and manage the land and ecosystems of our planet.​"
+subheading2= "These will be  retrieved or classified from Earth observation data within cloud-computing platforms (initial focus on the Open Data Cube)​"
 image="/assets/img/office.jpg" alt="Office"
 -%}
-
 
 {%-
 include new-our-event.liquid
