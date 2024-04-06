@@ -2,8 +2,8 @@
 layout: our-projects
 
 header: "About"
-headerTop: "Tools"
-title: "Our Project"
+headerTop: "Our Projects"
+title: "Our Projects"
 subtitle: "Living Earth"
 image: "/assets/img/heading/enviromental.png"
 background: "#252C0B"
