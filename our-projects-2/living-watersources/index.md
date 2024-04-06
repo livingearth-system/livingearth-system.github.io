@@ -5,7 +5,7 @@ title: "Living Watersources"
 
 # NOT INCLUDED: header: "Living Watersources"
 headerTop: "Living Watersources "
-subtitle: "Living Watersources  is developing apacity for characterising, mapping and monitoring catchments in Wales, including the Wye and Severn, which extend into England. ; Aims; Objectives; Strategic Plan;" 
+subtitle: "Living Watersources is developing apacity for characterising, mapping and monitoring catchments in Wales, including the Wye and Severn, which extend into England. ; Aims; Objectives; Future Plans;" 
 background: "#072857"
 image: "/assets/img/heading/livingwatersources_a.png"
 nobuttons: true
