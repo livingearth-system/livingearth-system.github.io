@@ -6,7 +6,7 @@
   url: "#"
 
 - title: "DYNAMIC LAND"
-  image: "/assets/img/projects/dynamic_land_a.png"
+  image: "/assets/img/projects/Dynamic_land_a.png"
   subtitle: "Quantitative land cover contents and map generation through Living Earth."
   content: "Developing a fully quantitative approach to retrieving or classifying environmental descriptors and using these to construct land cover maps according to global taxonomies. Demonstration is for countries including Switzerland, Australia, Papua New Guinea and Wales and those in South America and Africa. Approaches to integrating uncertainty estimates are also being developed."
   tagline: "Funded by the Swiss National Science Foundation (SNSF), University of Geneva, Switerland"
