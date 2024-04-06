@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /our-projects/
+permalink: /projects
 
 title: "Living Coasts"
 
