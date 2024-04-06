@@ -3,7 +3,7 @@
   subtitle: "National mapping of Wales through Living Earth"
   content: "Providing operational mapping and monitoring of the national landscape of Wales since 2018 using the Welsh Data Cube, which stores and accumulates all Copernicus Sentinel-1 radar and Sentinel-2 optical observations.  Maps of land cover and habitats are generated on an annual basis and there is capacity to detect subannual changes in both extent and condition."
   tagline: "Funded by the Ser Cymru II program and Welsh Government, Aberystwyth University, UK"
-  url: "./our-projects-2/living-wales/
+  url: "../../our-projects-2/living-wales/
 
 - title: "DEA LAND COVER"
   image: "/assets/img/projects/livingwales_lccs.png"
