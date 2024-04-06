@@ -7,7 +7,7 @@ title: "Dynamic Land"
 headerTop: "Dynamic Land "
 subtitle: "Dynamic Land will build on the Food and Agriculture Organisation (FAO) of the United Nations’ land cover (LC) definition, its Land Cover Classification System (LCCS) taxonomy, and a derived Earth Observation (EO)-based Living Earth LCCS to describe LC as a flexible cube (i.e., stack) of unit-based, quantitative, biophysical, environmental descriptors, without any pre-defined, a priori LC classes." 
 background: "#072857"
-image: "/assets/img/heading/livingwatersources_a.png"
+image: "/assets/img/heading/dynamicland.png"
 nobuttons: true
 Nosvg: true
 Noheader: true
