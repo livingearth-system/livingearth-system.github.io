@@ -1,5 +1,5 @@
 - title: "LIVING WALES"
-  image: "/assets/img/wales/Living_Wales_2021-23.png"
+  image: "/assets/img/wales/LivingWales_banner.png"
   subtitle: "National mapping of Wales through Living Earth"
   content: "Providing operational mapping and monitoring of the national landscape of Wales since 2018 using the Welsh Data Cube, which stores and accumulates all Copernicus Sentinel-1 radar and Sentinel-2 optical observations.  Maps of land cover and habitats are generated on an annual basis and there is capacity to detect subannual changes in both extent and condition."
   tagline: "Funded by the Ser Cymru II program and Welsh Government, Aberystwyth University, UK"
@@ -34,7 +34,7 @@
   url: "#"
   
 - title: "LIVING WATERSOURCES"
-  image: "/assets/img/livingwatersources/livingwatersources_a.png"
+  image: "/assets/img/projects/livingwatersources_a.png"
   subtitle: "Applying Living Earth to freshwater environments."
   content: "Developing new capacity for characterising, mapping and monitoring catchments in Wales. The project is working alongside Living Wales, with focus on retrieving or classifying environmental descriptors relevant to freshwater systems from Earth observation data and quantifying and mapping change impacts and driving pressures.  The project is also developing new capacity for improving water quality and use through improved catchment management in Welsh river catchments."
   tagline: "Funded by Welsh Water, Aberystwyth University."
