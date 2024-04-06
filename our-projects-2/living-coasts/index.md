@@ -4,7 +4,7 @@ layout: page
 title: "Living Coasts"
 
 header: "Living Coasts"
-headerTop: "An overview of the project"
+headerTop: "Living Coasts is adapting existing capacity (developed jointly by Australia and the UK) to allow coastal and influencing inland landscapes to be consistently characterised, mapped and monitored from dense time-series of Earth observations and modelled descriptors of the environment.  "
 subtitle: "Aims; Objectives; Strategic Plan"
 background: "#072857"
 image: "/assets/img/heading/about-us.jpg"
@@ -15,7 +15,7 @@ Noheader: true
 
 {%-
 include living-coasts.liquid
-header="Living Earth is a novel globally applicable concept and and approach that provides information on landscapes to inform on past changes and can inform direct future actions for our Planet that benefit the well being of nature and people.  Living Earth uses globally consistent taxonomies for classifying past, current and future land cover and change.  The approach is simple in that maps of landscapes (e.g., land cover, habitats) can be constructed from environmental descriptors retrieved or classified primarily from Earth observations and are scalable in space and time because of the use of defined units or categories.   Comparisons of the spatial dataets allow evidence on change impacts to be gathered, which can be combined with information on driving pressures to ascertain causes and consequences. This information, which is open, can inform decisions relating to the planning of future landscapes under a range of economic and/or climate scenarios, assess values of ecosystems, assess the realism of ambitions and ecosystem values, and monitor progress towards co-designed plans."
-title="Living Earth has been developed through a series of local to continental-scale projects, with these contributing to the development of the global approach to land monitoring and/or future planning of landscapes."
+header="Living Coasts is adapting existing capacity (developed jointly by Australia and the UK) to allow coastal and influencing inland landscapes to be consistently characterised, mapped and monitored from dense time-series of Earth observations and modelled descriptors of the environment.  "
+title="The information gathered will be used in conjunction with existing knowledge to inform decisions relating to planning of future landscapes under a range of economic and/or climate scenarios, quantifying associated benefits and risks, and monitoring progress towards co-designed plans including through Earth observations."
 -%}
 
