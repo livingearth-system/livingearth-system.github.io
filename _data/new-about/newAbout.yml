@@ -6,14 +6,14 @@
   url: "#"
 
 - title: "DYNAMIC LAND"
-  image: "/assets/img/projects/Dynamic_land_a.png"
+  image: "/assets/img/projects/LivingWales_LCCS.png"
   subtitle: "Quantitative land cover contents and map generation through Living Earth."
   content: "Developing a fully quantitative approach to retrieving or classifying environmental descriptors and using these to construct land cover maps according to global taxonomies. Demonstration is for countries including Switzerland, Australia, Papua New Guinea and Wales and those in South America and Africa. Approaches to integrating uncertainty estimates are also being developed."
   tagline: "Funded by the Swiss National Science Foundation (SNSF), University of Geneva, Switerland"
   url: "#"
 
 - title: "ECOPOTENTIAL"
-  image: "/assets/img/projects/ecopotential_a.png"
+  image: "/assets/img/projects/LivingWales_LCCS.png"
   subtitle: "Development of EODESM – the forerunner to Living Earth."
   content: "A large European-funded H2020 project that focuses its activities on a targeted set of internationally recognised Protected Areas, blending Earth Observations from remote sensing and field measurements, data analysis and modelling of current and future ecosystem conditions and services. ECOPOTENTIAL considers cross-scale geosphere-biosphere interactions at regional to continental scales, addressing long-term and large-scale environmental and ecological challenges. ECOPOTENTIAL followed BIOSOS and allowed the development of the Earth Observation Data for EcoSystem Monitoring (EODESM) and subsequently Living Earth"
   tagline: "Funded by the European Union H2020, University of New South Wales, Sydney, Australia."
@@ -41,7 +41,7 @@
   url: "#"
 
 - title: "DEA LAND COVER"
-  image: "/assets/img/projects/dea_landcover_murray.png"
+  image: "/assets/img/projects/LivingWales_LCCS.png"
   subtitle: "Continental mapping of Australia for 33 years"
   content: "Generating the first national maps of Australia from 1988 to 2020 using Living Earth, with this providing remarkable and insightful history of land cover change for the continental land mass and islands.  The approach utilised environmental descriptors generated entirely from Landsat sensor data, including fractional vegetation cover and annual water hydroperiod, which were combined to generate the classifications of Australia.  The research and development was undertaken in parellel with Living Wales."
   tagline: "Funded by Digital Earth Australia"
