@@ -1,5 +1,5 @@
 ---
-layout: new-about
+layout: our-projects
 
 header: "About"
 headerTop: "Tools"
