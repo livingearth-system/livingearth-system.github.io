@@ -16,8 +16,8 @@ heading="Quick links to Opensource Tools"
 {%-
 include about-us.liquid
 title="Our vision and mission"
-heading="We are driven by the same purpose"
-subheading="Living Earth is an open resource that supports understanding of how people but also natural events and processes have shaped the landscapes we see today that can help us to protect, recovery and sustainably utilise our resources for the benefits of both people and nature. "
+heading="Our Vision and Mission"
+subheading="The vision of Living Earth is future pathways for ecosystems and environments worldwide are followed that protect, restore and and sustainably utilise our resources for the benefit of nature and people.   Our mission is to ensure that the use of Earth observations and derived data is maximised to inform understanding of how people and/or natural events and processes have shaped the landscapes and how current and future generations can work towards planetary recovery"
 author="Prof. Richard Lucas, Aberystwyth University"
 author_portrait_img="/assets/img/meetourteam/RLucas.jpg"
 image="/assets/img/heading/frenchalps.png"
@@ -37,9 +37,9 @@ url="/news/"
 -%}
 {%-
 include contribute.liquid
-title="Join Livingearth"
-heading="How to contribute"
-subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
+title="Living Earth - an open resource"
+heading="How your can contribute"
+subheading="Living Earth allows individuals, groups, organisations and countries/regions to develop, access and/or use resources associated with Earth observations in land management and policy for economic, societal and environmental benefit. "
 button="Learn more" url="/learning-hub/"
 link_url="/contact/"
 image="/assets/img/contribute.jpg"
