@@ -3,7 +3,7 @@ layout: contact
 permalink: /contact/
 
 title: "Contact Us"
-subtitle: "For more information on Living Earth, please contact Richard Lucas "
+subtitle: "For more information on Living Earth, please email "
 image: "/assets/img/contactus.png"
 nobuttons: true
 ---
