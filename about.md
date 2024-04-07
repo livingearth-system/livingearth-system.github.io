@@ -6,7 +6,7 @@ title: "About Living Earth"
 
 # header: "About Us"
 headerTop: "About"
-subtitle: "Living Earth is the culmination of extensive national and international collaborations between universities, research organisations, governments, space agencies, businesses and the public. ; Who we are; Visions, Aims and Objectives; Organisations involved with Living Earth; Contact Us"
+subtitle: "Living Earth is the culmination of extensive national and international collaborations between universities, research organisations, governments, space agencies, businesses and the public. ; Who we are; Visions, Meet our team; Contributing organisations; Further information"
 background: "#072857"
 image: "/assets/img/heading/dea_landcover_murray_hres.png"
 nobuttons: true
