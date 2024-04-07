@@ -7,7 +7,7 @@ title: "Living PNG"
 headerTop: "Living PNG "
 subtitle: "As a component of the Pacific Blue Carbon Project (PBCP), Living PNG has helped build analytical processing capacity that can assist Papua New Guinea (PNG) map its coastal blue carbon ecosystems using a combination of Earth observations and already-derived products (e.g. for mangroves).; Aims; Objectives; Outcomes" 
 background: "#072857"
-image: "/assets/img/heading/PNG_view.png"
+image: "/assets/img/heading/dea_landcover_murray_hres.png"
 nobuttons: true
 Nosvg: true
 Noheader: true
