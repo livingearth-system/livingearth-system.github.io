@@ -45,27 +45,32 @@
   subtitle: "Farm level mapping and monitoring"
   content: "Exploring and demonstrating how Living Earth can inform land managers of the changing extent and condition of land covers and habitats on farms in Wales, with a view to addressing planning decisions and monitoring progress towards ambitions.  The project, which focused on the county of Monmouthshire, demonstrated the power of accessing the full archive of Copernicus Sentinel satellites through the Welsh Data Cube and extracting information on changes associated with land management activities (e.g., cropping, forest harvesting) and natural events (e.g., flooding and fires)."
   tagline: "Funded by Welsh Government, Aberystwyth University and Monmouthshire County Council."
+  url: "https://livingearthhub.org/europe/wales/monmouthshire/"
 
 - title: "CCI BIOMASS"
   image: "/assets/img/projects/cci_biomass_a.png"
   subtitle: "Generating global maps of forest biomass"
   content: "The European Space Agency’s (ESA) Climate Change Initiative (CCI) Biomass project is exploring how existing global maps of land cover can be deconstructed and rebuilt according to the Food and Agiriculture Organisation (FAO) Land Cover Classification System (LCCS) used by Living Earth and how time-series of these classifications can be with Living Earth’s Global Change Taxonomy and Evidence-Based Change Framework to support assessment of biomass change at national to global levels."
   tagline: "Funded by the European Space Agency"
+  url: "http://cci.esa.int/biomass"
   
 - title: "MAMAFOREST"
   image: "/assets/img/projects/mamaforest_a.png"
   subtitle: "Evaluating sustainable management of the Matang Mangrove Forest Reserve, Peninsular Malaysia"
   content: "Demonstrating new capacity for dynamic land cover change in commercial and protected mangroves from time-series of spaceborne radar and optical imagery. Provided opportunities to retrieve or classify a range of enviromental descriptors relevant to this landscape, including mangrove height, cover and biomass and dominant species. Indicators of change impacts, such as deforestation and regrowth were also mapped through comparisons of the time-series datasets, with this demonstrating capability for sustainable management of the mangroves to benefit local populations and nature."
   tagline: "Funded by the Belgium Science Policy Office (BELSPO), University of New South Wales, Australia." 
-
+  url: "https://eo.belspo.be/en/news/mamaforest-managing-mangrove-forests-sky"
+  
 - title: "ECOPOTENTIAL"
   image: "/assets/img/projects/ecopotential_a.png"
   subtitle: "Development of EODESM – the forerunner to Living Earth."
   content: "A large European-funded H2020 project that focuses its activities on a targeted set of internationally recognised Protected Areas, blending Earth Observations from remote sensing and field measurements, data analysis and modelling of current and future ecosystem conditions and services. ECOPOTENTIAL considers cross-scale geosphere-biosphere interactions at regional to continental scales, addressing long-term and large-scale environmental and ecological challenges. ECOPOTENTIAL followed BIOSOS and allowed the development of the Earth Observation Data for EcoSystem Monitoring (EODESM) and subsequently Living Earth"
   tagline: "Funded by the European Union H2020, University of New South Wales, Sydney, Australia."
+  url: "http://www.ecopotential-project.eu/"
 
 - title: "BIO_SOS"
   image: "/assets/img/projects/biosos_greece_a.png"
   subtitle: "Land cover mapping from spectral data and derived metrics."
   content: "A pilot project to develop effective and timely multi-annual monitoring of European and NATURA 2000 sites and their surrounds in support to management decisions and reporting on the status and trends according to National and EU obligations. Focus was on the mapping of habitats in Europe from very-high resolution satellite sensor data, with focus on sites in the Mediterranean but also in Wales (United Kingdom). BIO_SOS was instrumental in developing the Living Earth approach."
   tagline: "Funded by EU Horizon 2020."
+  url: "https://cordis.europa.eu/project/id/263435"
