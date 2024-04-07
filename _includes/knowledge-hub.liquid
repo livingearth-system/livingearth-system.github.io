@@ -1,40 +1,65 @@
-<div class="container">
-  <div class="row mt-5 knowledge-hub-heading">
-    <div class="col-12">
-      {% if include['header-Italic'] %}
-        <p class="knowledge-hub-heading-content">
-          {% if include.header %}
-            <span class="knowledge-hub-italic">{{ include['header-Italic'] }}</span>
-            {{ include.header }}
-            </p>
+<div class="container-fluid">
+  {% if include.header %}
+    <div class="row">
+      <p class="new-about-title col-12">
+        {{ include.header }}
+      </p>
+    </div>
+  {% endif %}
+  {% if include.title %}
+    <div class="row">
+      <p class="new-about-title col-12">
+        {{ include.title }}
+      </p>
+    </div>
+  {% endif %}
+  {% assign data = site.data['our-projects'].index %}
+  <div class="responsive-content">
+    <div class="row ">
+      {% for item in data limit: 3 %}
+        <div class="col-4 img-container">
+          {% if forloop.index0 == 0 %}
+            <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+          {% elsif forloop.index0 == 1 %}
+            <img src="/assets/img/heading/dea_landcover_murray_hres.png" class="img-fluid" alt="Living Earth logo">
+          {% elsif forloop.index0 == 2 %}
+            <img src="/assets/img/heading/livingcoasts_moreton_a.png" class="img-fluid" alt="Living Earth logo">
           {% endif %}
-      {% endif %}
-    </div>
-  </div>
-  <div class="row mt-5 mb-5 ">
-    <div class="col-12 ">
-      <h3 class="knowledge-hub-title">{{ include.title }}</h3>
-    </div>
-  </div>
-  <div class="row">
-    {% for post in site.data['knowledge-hub'].index %}
-      <div class="col-4">
-        <div>
-          <img src="{{ post.image }}">
         </div>
-        <p class="knowledge-hub-post-title">
-          <span class="knowledge-hub-italic"> {{ post.title }} </span>
-        </p>
-        {% assign content_lines = post.content | newline_to_br | split: '<br />' %}
-        {% for line in content_lines %}
-          <p>{{ line }}</p>
-        {% endfor %}
-        {% if post.link %}
-          {% for link in post.links %}
-            <a href="{{ link.url }}">{{ link.url }}</a>
-          {% endfor %}
-        {% endif %}
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="row ">
+      {% for item in data limit: 3 %}
+        <div class="new-about-content col-4">
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
+          <p class="new-about-content-para">{{ item.content }}</p>
+          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row mt-5 ">
+      {% for item in data offset: 3 limit: 3 %}
+        <div class="new-about-content col-4">
+          <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
+          <p class="new-about-content-para">{{ item.content }}</p>
+          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row mt-5 ">
+      {% for item in data offset: 6 %}
+        <div class="new-about-content col-4">
+          <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
+          <p class="new-about-content-para">{{ item.content }}</p>
+          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
+
 </div>
