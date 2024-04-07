@@ -17,7 +17,7 @@ Noheader: true
 {%-
 include who-we-are.liquid
 heading="Who we are"
-#subheading=""
+subheading="and what we have done"
 count="2, Countries; 1988 to 2024, Annual and sub-annual mapping; 3, Satellites; 7688287, Square kilometres mapped"
 -%}
 
