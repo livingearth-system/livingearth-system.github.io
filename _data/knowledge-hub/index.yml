@@ -1,1 +1,20 @@
+- title: "WALES, UNITED KINGDOM"
+  image: "/assets/img/hubs/knowledge-hub/digitalearthwales.png"
+  subtitle: "National mapping of Wales through Living Earth"
+  content: "Living Wales has established capacity to impart knowledge on land/water characterisation and monitoring through educational undergraduate and postgraduate courses at Aberystwyth University, the Living Wales Exhibition and Training Centre at the Centre for Alternative Technology and outreach. 
+  tagline: "Wales, United Kingdom"
+  url: "#"
 
+- title: "AUSTRALIA"
+  image: "/assets/img/hubs/knowledge-hub/digitalearthaustraliab.png.png"
+  subtitle: "Continental mapping of Australia for 33 years"
+  content: "Digital Earth Australia’s knowledge hub brings together information about Digital Earth Australia’s products and services, allowing you to utilise our free and open-source satellite imagery archive."
+  tagline: "Australia"
+  url: "https://knowledge.dea.ga.gov.au/"
+
+- title: "AFRICA"
+  image: "/assets/img/hubs/knowledge-hub/livingwales_lccs.png"
+  subtitle: "Mapping, monitoring and future planning of coastal ecosystems."
+  content: "Digital Earth Africa has extensive online material on many aspects of land monitoring and dedicated online training material."
+  tagline: "African countries"
+  url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
