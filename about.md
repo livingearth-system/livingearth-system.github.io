@@ -26,7 +26,7 @@ include our-vision.liquid
 heading="Who we are?"
 subheading="Living Earth is the culmination of extensive national and international collaborations between universities, research organisations, governments, space agencies, businesses and the public.    "
 subheading2= "Living Earth continues to evolve through contributions that ensure continued research and development in the use of Earth observations for land characterisation, mapping and monitoring. "
-image="/assets/img/heading/puffin.png" alt="Office"
+image="/assets/img/heading/puffins.png" alt="Office"
 -%}
 
 
