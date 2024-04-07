@@ -1,5 +1,5 @@
 ---
-layout: our-projects
+layout: our-projects-2
 
 header: "About"
 headerTop: "Living Earth"
