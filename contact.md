@@ -8,7 +8,7 @@ image: "/assets/img/contactus.png"
 nobuttons: true
 ---
 
-##### Keep in touch
+##### Please get in touch
 ### We are always here to help
 
 **Email: rml2@aber.ac.uk**  
