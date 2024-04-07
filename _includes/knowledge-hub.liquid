@@ -1,1 +1,40 @@
-
+<div class="container">
+  <div class="row mt-5 knowledge-hub-heading">
+    <div class="col-12">
+      {% if include['header-Italic'] %}
+        <p class="knowledge-hub-heading-content">
+          {% if include.header %}
+            <span class="knowledge-hub-italic">{{ include['header-Italic'] }}</span>
+            {{ include.header }}
+            </p>
+          {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="row mt-5 mb-5 ">
+    <div class="col-12 ">
+      <h3 class="knowledge-hub-title">{{ include.title }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    {% for post in site.data['knowledge-hub'].index %}
+      <div class="col-4">
+        <div>
+          <img src="{{ post.image }}">
+        </div>
+        <p class="knowledge-hub-post-title">
+          <span class="knowledge-hub-italic"> {{ post.title }} </span>
+        </p>
+        {% assign content_lines = post.content | newline_to_br | split: '<br />' %}
+        {% for line in content_lines %}
+          <p>{{ line }}</p>
+        {% endfor %}
+        {% if post.link %}
+          {% for link in post.links %}
+            <a href="{{ link.url }}">{{ link.url }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
