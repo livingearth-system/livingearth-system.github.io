@@ -15,9 +15,9 @@ heading="Quick links to Opensource Tools"
 
 {%-
 include about-us.liquid
-title="Our vision and mission"
-heading="Our Vision and Mission"
-subheading="The vision of Living Earth is future pathways for ecosystems and environments worldwide are followed that protect, restore and and sustainably utilise our resources for the benefit of nature and people.   Our mission is to ensure that the use of Earth observations and derived data is maximised to inform understanding of how people and/or natural events and processes have shaped the landscapes and how current and future generations can work towards planetary recovery"
+title="Living Earth"
+heading="Vision and Mission"
+subheading="The vision of Living Earth is future pathways for ecosystems and environments worldwide are followed that protect, restore and sustainably utilise our resources for the benefit of nature and people.   Our mission is to ensure that the use of Earth observations and derived data is maximised to assist current and future generations work towards planetary recovery, including by informing on how people and/or natural events and processes have shaped our inherited landscapes"
 author="Prof. Richard Lucas, Aberystwyth University"
 author_portrait_img="/assets/img/meetourteam/RLucas.png"
 image="/assets/img/heading/frenchalps_portrait.png"
