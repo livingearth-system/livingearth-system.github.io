@@ -1,64 +1,64 @@
 - name: "Aberystwyth University"
-# subtitle: "Department of Geography and Earth Sciences"
+  subtitle: "Department of Geography and Earth Sciences"
   image: "/assets/img/logos/Aberystwyth University square.png"
   url: "#"
 
 - name: "Geoscience Australia"
-# subtitle: "Digital Earth Australia"
+  subtitle: "Digital Earth Australia"
   image: "/assets/img/logos/DEA.png"
   url: "https://www.ga.gov.au/"
 
 - name: "Plymouth Marine Laboratory"
-# subtitle: " "
+  subtitle: " "
   image: "/assets/img/logos/PML.png"
   url: "https://www.pml.ac.uk/"
 
 - name: "University of Newcastle, Australia"
-# subtitle: "School of Environment and Life Sciences"
+  subtitle: "School of Environment and Life Sciences"
   image: "/assets/img/logos/University of Newcastle Aus.png"
   url: "https://www.newcastle.edu.au/"
 
 - name: "CSIRO, Australia"
-# subtitle: "Land and Water; Oceans and Atmosphere, Tropical Ecosystems Research Centre"
+ subtitle: "Land and Water; Oceans and Atmosphere, Tropical Ecosystems Research Centre"
   image: "/assets/img/logos/CSIROLogoMotifRGB-120.png"
   url: "https://www.csiro.au/en/"
 
 - name: "University of New South Wales, Australia"
-# subtitle: "School of Biological, Earth and Environmental Sciences"
+  subtitle: "School of Biological, Earth and Environmental Sciences"
   image: "/assets/img/logos/unsw_0.png"
   url: "https://www.unsw.edu.au/"
 
 - name: "University of Geneva"
-# subtitle: "Institute for Environmental Sciences"
+  subtitle: "Institute for Environmental Sciences"
   image: "/assets/img/logos/university-of-geneva-logo.png"
   url: "https://www.unige.ch/en/"
 
 - name: "Centre for Altnerative Technology"
-# subtitle: "Including the Living Wales Exhibition and Training Centre.
+  subtitle: "Including the Living Wales Exhibition and Training Centre.
   image: "/assets/img/logos/CAT.png"
   url: "#https://cat.org.uk/"
 
 - name: "Dŵr Cymru Welsh Water"
-# subtitle: " "
+  subtitle: " "
   image: "/assets/img/logos/DCWW.png"
   url: "https://www.dwrcymru.com/en"
 
 - name: "Welsh Government"
-# subtitle: " "
+  subtitle: " "
   image: "/assets/img/logos/Welsh Government2.png"
   url: "https://www.gov.wales/"
 
 - name: "Natural Resources Wales"
-# subtitle: " "
+  subtitle: " "
   image: "/assets/img/logos/NRW_logo.png"
   url: "https://naturalresources.wales/?lang=en"
 
 - name: "Monmouthshire County Council"
-# subtitle: " "
+  subtitle: " "
   image: "/assets/img/logos/MonmouthshireCC.png"
   url: "#"
 
 - name: "European Space Agency"
-# subtitle: " "
+  subtitle: " "
   image: "/assets/img/logos/ESA.png"
   url: "https://www.esa.int/"
