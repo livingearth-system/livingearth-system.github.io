@@ -5,7 +5,7 @@
 
 - name: "Geoscience Australia"
   subtitle: "Digital Earth Australia"
-  image: "/assets/img/logos/DEA.png"
+  image: "/assets/img/logos/Geoscience Australia.png"
   url: "https://www.ga.gov.au/"
 
 - name: "Plymouth Marine Laboratory"
@@ -34,7 +34,7 @@
   url: "https://www.unige.ch/en/"
 
 - name: "Centre for Altnerative Technology"
-  subtitle: "Including the Living Wales Exhibition and Training Centre.
+  subtitle: "Including the Living Wales Exhibition and Training Centre."
   image: "/assets/img/logos/CAT.png"
   url: "#https://cat.org.uk/"
 
