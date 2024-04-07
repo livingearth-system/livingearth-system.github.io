@@ -10,7 +10,7 @@
   subtitle: "Continental mapping of Australia for 33 years"
   content: "Generating the first national maps of Australia from 1988 to 2020 using Living Earth, with this providing remarkable and insightful history of land cover change for the continental land mass and islands.  The approach utilised environmental descriptors generated entirely from Landsat sensor data, including fractional vegetation cover and annual water hydroperiod, which were combined to generate the classifications of Australia.  The research and development was undertaken in parellel with Living Wales."
   tagline: "Funded by Digital Earth Australia"
-  url: "www.dea.ga.gov.au/products/dea-land-cover"
+  url: "http://cci.esa.int/biomass"
 
 - title: "LIVING COASTS"
   image: "/assets/img/projects/livingcoasts_moreton_a.png"
@@ -25,6 +25,7 @@
   content: "Focused on building analytical processing capacity to support assessment of carbon stocks in coastal ecosystems (mangroves, tidal wetlands and seagrasses) of Papua New Guinea by transferring Living Earth into CSIRO's Earth Analytics Science and Innovation (EASI) platform."  
   tagline: "Funded by CSIRO, University of Newcastle Australia, Aberystwyth University and Plymouth Marine Laboratory."
   url: "../../our-projects-2/living-PNG/"
+  
 - title: "DYNAMIC LAND"
   image: "/assets/img/projects/dynamicland.png"
   subtitle: "Quantitative land cover contents and map generation through Living Earth."
