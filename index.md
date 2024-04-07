@@ -19,8 +19,8 @@ title="Our vision and mission"
 heading="We are driven by the same purpose"
 subheading="Living Earth is an open resource that supports understanding of how people but also natural events and processes have shaped the landscapes we see today that can help us to protect, recovery and sustainably utilise our resources for the benefits of both people and nature. "
 author="Prof. Richard Lucas, Aberystwyth University"
-author_portrait_img="/assets/img/heading/frenchalps.png"
-image="/assets/img/meetourteam/RLucas.jpg"
+author_portrait_img="/assets/img/meetourteam/RLucas.jpg"
+image="/assets/img/heading/frenchalps.png"
 -%}
 
 {%-
