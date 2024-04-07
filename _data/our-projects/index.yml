@@ -10,6 +10,7 @@
   subtitle: "Continental mapping of Australia for 33 years"
   content: "Generating the first national maps of Australia from 1988 to 2020 using Living Earth, with this providing remarkable and insightful history of land cover change for the continental land mass and islands.  The approach utilised environmental descriptors generated entirely from Landsat sensor data, including fractional vegetation cover and annual water hydroperiod, which were combined to generate the classifications of Australia.  The research and development was undertaken in parellel with Living Wales."
   tagline: "Funded by Digital Earth Australia"
+  url: "https://www.dea.ga.gov.au/products/dea-land-cover"
 
 - title: "LIVING COASTS"
   image: "/assets/img/projects/livingcoasts_moreton_a.png"
