@@ -24,7 +24,7 @@
   subtitle: "National mapping of Wales through Living Earth"
   content: "To access your country sandbox, and hence the cube of Earth observation data, you need to register first.   Then, you will be able to run notebooks and modify accordingly." 
   tagline: "Accessing data cube processing capability"
-  url: "https://livingearthhub.org/tools/analyze-the-data-information/]"
+  url: "https://livingearthhub.org/tools/analyze-the-data-information/"
 
 - title: "LAND COVER CLASSIFICATION"
   image: "/assets/img/hubs/developer-hub/faolccscode.png"
