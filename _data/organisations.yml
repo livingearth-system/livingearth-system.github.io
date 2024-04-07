@@ -19,7 +19,7 @@
   url: "https://www.newcastle.edu.au/"
 
 - name: "CSIRO, Australia"
- subtitle: "Land and Water; Oceans and Atmosphere, Tropical Ecosystems Research Centre"
+  subtitle: "Land and Water; Oceans and Atmosphere, Tropical Ecosystems Research Centre"
   image: "/assets/img/logos/CSIROLogoMotifRGB-120.png"
   url: "https://www.csiro.au/en/"
 
@@ -36,7 +36,7 @@
 - name: "Centre for Altnerative Technology"
   subtitle: "Including the Living Wales Exhibition and Training Centre."
   image: "/assets/img/logos/CAT.png"
-  url: "#https://cat.org.uk/"
+  url: "https://cat.org.uk/"
 
 - name: "Dŵr Cymru Welsh Water"
   subtitle: " "
