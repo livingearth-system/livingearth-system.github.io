@@ -1,7 +1,7 @@
 - name: "Aberystwyth University"
   subtitle: "Department of Geography and Earth Sciences"
   image: "/assets/img/logos/Aberystwyth University square.png"
-  url: "#"
+  url: "https://www.aber.ac.uk/en/dges/"
 
 - name: "Geoscience Australia"
   subtitle: "Digital Earth Australia"
@@ -16,7 +16,7 @@
 - name: "University of Newcastle, Australia"
   subtitle: "School of Environment and Life Sciences"
   image: "/assets/img/logos/University of Newcastle Aus.png"
-  url: "https://www.newcastle.edu.au/"
+  url: "https://www.newcastle.edu.au/school/environmental-and-life-sciences"
 
 - name: "CSIRO, Australia"
   subtitle: "Land and Water; Oceans and Atmosphere, Tropical Ecosystems Research Centre"
@@ -26,7 +26,7 @@
 - name: "University of New South Wales, Australia"
   subtitle: "School of Biological, Earth and Environmental Sciences"
   image: "/assets/img/logos/unsw_0.png"
-  url: "https://www.unsw.edu.au/"
+  url: "https://www.unsw.edu.au/science/our-schools/bees"
 
 - name: "University of Geneva"
   subtitle: "Institute for Environmental Sciences"
@@ -56,7 +56,7 @@
 - name: "Monmouthshire County Council"
   subtitle: " "
   image: "/assets/img/logos/MonmouthshireCC.png"
-  url: "#"
+  url: "https://www.monmouthshire.gov.uk/"
 
 - name: "European Space Agency"
   subtitle: " "
