@@ -2,8 +2,8 @@
 layout: home
 
 title: "Welcome to Living Earth"
-subtitle: "Open-source resource presenting a unique world-first concept using satellite data to capture detailed spatial information on the state and dynamics of landscapes, from 1985 to today, to inform future land management and policy.​"
-smalltitle: "All-in-one"
+subtitle: "Living Earth provides unique capacity to capture consistent and scalable information on the states and dynamics of past and present landscapes that can inform planning for the future. ​"
+# smalltitle: "All-in-one"
 image: "/assets/img/title-index.jpg"
 nocontact: true
 ---
@@ -15,18 +15,18 @@ heading="Quick links to Opensource Tools"
 
 {%-
 include about-us.liquid
-title="About Us"
+title="Our vision and mission"
 heading="We are driven by the same purpose"
-subheading="From knowledge of the past, we can inform the future. We need tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft combined with big data algorythyms gives us a unique insight. We have worked to develop a series of globally-applicable processing tools that allow us to describe, map and monitor land covers, habitats and ecosystems​"
-author="Prof. richard lucas"
-author_portrait_img="/assets/img/pexels-anne.jpg"
-image="/assets/img/pexels-anne.jpg"
+subheading="Living Earth is an open resource that supports understanding of how people but also natural events and processes have shaped the landscapes we see today that can help us to protect, recovery and sustainably utilise our resources for the benefits of both people and nature. "
+author="Prof. Richard Lucas, Aberystwyth University"
+author_portrait_img="/assets/img/heading/frenchalps.png"
+image="/assets/img/meetourteam/RLucas.jpg"
 -%}
 
 {%-
 include themes.liquid
-heading="Themes. Making sense of what we see"
-all="Read The research"
+heading="Themes relevant to Living Earth"
+all="Learn about our research"
 url="/news/"
 -%}
 {%-
