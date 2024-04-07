@@ -18,7 +18,7 @@ Noheader: true
 include who-we-are.liquid
 heading="Who we are"
 subheading="Living Earth continues to evolve through contributions that ensure continued research and development in the use of Earth observations for land characterisation, mapping and monitoring."
-count="2, Countries; 1988 to 2024, Periods; 2, Satellites; 7,688,287 KM2 +, Land area mapped"
+count="2, Countries; 1988 to 2024, Periods; 3, Satellites; 7,688,287 km^2, Land area mapped"
 -%}
 
 {%-
