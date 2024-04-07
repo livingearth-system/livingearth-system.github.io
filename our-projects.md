@@ -1,6 +1,6 @@
 ---
 layout: new-about
-permalink: /our-projects-2/
+permalink: /our-projects/
 
 header: "About"
 headerTop: "Tools"
