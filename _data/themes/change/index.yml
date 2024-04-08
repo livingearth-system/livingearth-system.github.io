@@ -1,11 +1,27 @@
 - title: "IMPACTS"
   image: "/assets/img/themes/change/impacts.png"
-  content: "Impacts are the consequences of individual or collective changes in statutes relating to, for example, vegetation structure, floristics or biomass, water type and/or quality, or urban configurations.  The full list of 77 impacts and associated definitions is provided in the Global Change Taxonomy and selected examples include increase in water extent and vegetation damage. "
+  content: "Impacts are the consequences of individual or collective changes in states relating to, for example, vegetation structure, floristics or biomass, water type and/or quality, or urban configurations.  The full list of 77 impacts and associated definitions is provided in the Global Change Taxonomy and selected examples include increase in water extent and vegetation damage. "
   url: "#"
 
 - title: "PRESSURES"
   image: "/assets/img/themes/change/pressures.png"
-  content: "Pressures are the reasons for observed changes in the state, as measured by physical, chemical and.or biological characteristics of the environment.  The full list of 144 pressures and associated definitions is provided in the Global Change Taxonomy.  Pressures include flooding and landslides."
+  content: "Pressures are the reasons for observed changes in states, as measured by physical, chemical and.or biological characteristics of the environment.  The full list of 144 pressures and associated definitions is provided in the Global Change Taxonomy.  Pressures include flooding and landslides."
+  url: "#"
+
+- title: "IMPACTS (PRESSURES)"
+  image: "/assets/img/themes/change/impacts_pressures.png"
+  content: "The 248 Impact(Pressure) categories are formed by combining the impacts and relevant driving pressures.   These impacts(pressures) can occur singularly or in combination and simultaneously or sequentially.  In both cases, there may be dependency of one type of change on another.  Examples include vegetation amount (gain) (bushfire recovery) 
+ and water depth increase (flooding). "
+  url: "#"
+
+- title: "IMPACTS"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "Impacts are the consequences of individual or collective changes in states relating to, for example, vegetation structure, floristics or biomass, water type and/or quality, or urban configurations.  The full list of 77 impacts and associated definitions is provided in the Global Change Taxonomy and selected examples include increase in water extent and vegetation damage. "
+  url: "#"
+
+- title: "PRESSURES"
+  image: "/assets/img/themes/change/pressures.png"
+  content: "Pressures are the reasons for observed changes in states, as measured by physical, chemical and.or biological characteristics of the environment.  The full list of 144 pressures and associated definitions is provided in the Global Change Taxonomy.  Pressures include flooding and landslides."
   url: "#"
 
 - title: "IMPACTS (PRESSURES)"
