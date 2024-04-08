@@ -19,7 +19,7 @@
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4695952"
 
 - title: "LAND COVER THROUGH THE SWISS DATA CUBE"
-  image: "/assets/img/themes/landhabcover/swissdatacube_sub_a.png"
+  image: "/assets/img/themes/landhabcover/dynamicland.png"
   content: "Working with the Swiss Data Cube, which has been developed and is hosted by the University of Geneva, maps of land cover have been generated nationally as a proof of concept for a single year.   The ambition is to fully embed the Living Earth system within the Swiss Data Cube in 2024. "
   url: "#"
 
