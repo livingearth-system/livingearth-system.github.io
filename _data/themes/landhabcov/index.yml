@@ -15,19 +15,16 @@
 
 - title: "HABITATS THROUGH THE WELSH DATA CUBE"
   image: "/assets/img/themes/landhabcover/livingwales_dyfiforest.png"
-#  subtitle: "National mapping of Wales through Living Earth"
   content: "For Wales, national maps of habitats have been generated, with these generated through direct translation from selected FAO LCCS land cover classes, more detailed classification of dominant plant communities within vegetated areas mapped as semi-natural and separation into habitat categories (where needed) by referencing contextual information including the Wales Peat Map and the original Phase 1 Habitat Survey’s delineation of coastal environments and degrees of grassland acidity.  The maps have been generated through the newly established Welsh Data Cube and provide capacity for ongoing monitoring of habitats, annually but also subannually."
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4695952"
 
 - title: "AND COVER THROUGH THE SWISS DATA CUBE"
   image: "/assets/img/themes/landhabcover/swissdatacube_sub.png"
-#  subtitle: "Continental mapping of Australia for 33 years"
   content: "Working with the Swiss Data Cube, which has been developed and is hosted by the University of Geneva, maps of land cover have been generated nationally as a proof of concept for a single year.   The ambition is to fully embed the Living Earth system within the Swiss Data Cube in 2024. "
   url: "#"
 
 - title: "GOING GLOBAL"
   image: "/assets/img/themes/landhabcover/cci_biomass_a.png/"
-#  subtitle: "Mapping, monitoring and future planning of coastal ecosystems."
   content: "Through the European Space Agency's Climate Change Initiative (CCI) Biomass project, and partnering with the University of Leicester, ESA CCI Land Cover mapa at 300 m spatial resolution have been deconstructed into environmental descriptors and then reconstructed into a global map using the Living Earth approach.  When reconstructing, a diverse range of other data layers have been used including mangrove extent (from Global Mangrove Watch) and tree canopy density.  Further descriptions of these classes have been obtained using, for example, the CCI Biomass maps from 2010 and annually from 2018 to 2020)."
   url: "#"
 
