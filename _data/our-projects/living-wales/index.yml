@@ -19,14 +19,14 @@
   tagline: "Tagline 3"
   url: "#"
 
-- title: "DESCRIBING AND MAPPING COASTAL ENVIRONMENTS"
+- title: "PROTECTING 30 % by 2020"
   image: "/assets/img/living_wales/dinasheadbracken.png"
   subtitle: "Planning for the future of coasts"
   content: "The Welsh government has committed to the Global Biodiversity Framework’s third target [LINK TO: https://www.cbd.int/gbf/targets/3] , which is to conserve at least 30 % of land, waters and seas by 2030. Living Wales is able to contribute to this ambition by providing up-to-date, repeatable land cover and habitat maps for Wales. The maps generated further allow existing and potentially future connections between landscape elements to be considered when planning and targeting conservation, protection and designation. The provision through the Welsh Data Cube of satellite sensor data facilitates consistent (currently annual) monitoring of non-designated and designated sites (e.g., National Parks, Sites of Special Scientific Interest (SSSIs)), with this supporting assessment of progress towards nature’s recovery."
   tagline: "Tagline 3"
   url: "#"
 
-- title: "CHANGE IMPACTS AND DRIVING PRESSURES"
+- title: "AGRI-ENVIRONMENT MONITORING"
   image: "/assets/img/living_wales/dinas_agrienv.png"
   subtitle: "Planning for the future of coasts"
   content: "Effective monitoring of agri-environment schemes requires consistent, repeated landscape mapping to establish baseline conditions and changes from these.  Living Wales has generated maps nationally and for multiple years and these can provide useful information on change, particularly where  land cover and habitat classes occupy areas larger than the nominal 10 m map resolution.  However, more detailed mapping is often needed, particularly as many schemes are focusing on replanting forests, restoring hedgerows and revitalising wetlands.  Living Wales is able to support this by determining, from very high resolution airborne and spaceborne data and derived products, the area proportions within each 10 m cell and summary metrics (e.g., average height and cover of hedgerows).  Furthermore, the land cover classification can be repeated using environmental descriptors obtained from these higher resolution data or the classes can be translated into others taxonomies.   The mapping can also be used to direct and/or prioritise ground-based evaluations, which can be assisted through use of the 
@@ -34,7 +34,7 @@ Earthtrack mobile application [Link to https://livingearthhub.org/tools/earthtra
   tagline: "Tagline 3"
   url: "#"
 
-- title: "PLANNING FUTURE LANDSCAPES"
+- title: "STATE OF NATURE MONITORING"
   image: "/assets/img/living_wales/nantymochres.png"
   subtitle: "Planning for the future of coasts"
   content: "Living Wales’ consistent approach to land cover and habitat mapping is well-placed for characterising and identifying changes to our natural environments, most of which are influenced by human activities.  The national maps for Wales allow the extent of different land covers and habitats to be estimated, with the environmental descriptors used in their construction providing information on habitat condition.   Furthermore, many of the environmental descriptors can be related directly to the distribution,  abundance and richness of flora and fauna or used to support modelling of these metrics.   The Living Wales maps therefore provide significant opportunities to provide information that can be used to report on the states and dynamics of Wales’ landscapes and support assessments of how biodiversity might be responding to change.  Living Wales can additionally help to make the most effective use of limited field-based resources by identifying priority areas to target ground-based investigations."
