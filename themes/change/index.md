@@ -7,7 +7,7 @@ title: "Change"
 headerTop: "Change"
 subtitle: "Gathering evidence for the causes (driving pressures) and consequences (impacts) of changes in ecosystems and environments using Earth observation and other spatial datasets. " 
 background: "#072857"
-image: "/assets/img/themes/water/md_water.png"
+image: "/assets/img/themes/change/md_change.png"
 nobuttons: true
 Nosvg: true
 Noheader: true
