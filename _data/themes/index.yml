@@ -1,15 +1,14 @@
 - id: "Land cover and Habitats"
   title: "Land cover and Habitats"
-  subtitle: "First, map land cover and habitats through Earth observations, providing further descriptions using contextual information"
+  subtitle: "First, map and describe land cover and habitat classes from Earth observations, providing further differentiation using contextual information"
   image: "/assets/img/themes/land cover and habitats.png"
   url: "#"
 
 - id: "water"
   title: "Water: Fresh, brackish or marine"
-  subtitle: "Then, add in information on water states, surface and volumar properties and substrate types"
+  subtitle: "Include information on water states, surface and volumar properties and substrate types"
   image: "/assets/img/themes/water.png"
   url: "#"
-
 
 - id: "asia"
   title: "Change, Impacts and Pressures"
@@ -31,6 +30,6 @@
 
 - id: "oceania"
   title: "Futures"
-  subtitle: "Plan future landscapes so that we can make the World a better place for nature and people."
+  subtitle: "Generate imagined or predicted future landscapes and then use Living Earth to monitor progress towards goals and ambitions."
   image: "/assets/img/themes/biodiversity.png"
   url: "#"
