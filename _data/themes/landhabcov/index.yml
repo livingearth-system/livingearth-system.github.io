@@ -13,7 +13,7 @@
   content: "Geoscience Australia's Digital Earth Australia has generated 33 years of 30 m resolution land cover maps from the entire archive of Landsat sensor data acquired over the Australian continent and islands.  These maps demonstrate the power of the Living Earth approach as a large diversity of changes associated with bush fires, urban expansion and coastal dynamics are revealed.  To read more on this story, visit:"
   url: "#"
 
-  - title: "HABITATS THROUGH THE WELSH DATA CUBE"
+- title: "HABITATS THROUGH THE WELSH DATA CUBE"
   image: "/assets/img/themes/landhabcover/livingwales_dyfiforest.png"
 #  subtitle: "National mapping of Wales through Living Earth"
   content: "For Wales, national maps of habitats have been generated, with these generated through direct translation from selected FAO LCCS land cover classes, more detailed classification of dominant plant communities within vegetated areas mapped as semi-natural and separation into habitat categories (where needed) by referencing contextual information including the Wales Peat Map and the original Phase 1 Habitat Survey’s delineation of coastal environments and degrees of grassland acidity.  The maps have been generated through the newly established Welsh Data Cube and provide capacity for ongoing monitoring of habitats, annually but also subannually."
