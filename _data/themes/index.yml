@@ -2,7 +2,7 @@
   title: "Land cover and Habitats"
   subtitle: "First, map and describe land cover and habitat classes from Earth observations, providing further differentiation using contextual information"
   image: "/assets/img/themes/land cover and habitats.png"
-  url: "#"
+  url: "./landhabcov/"
 
 - id: "water"
   title: "Water: Fresh, brackish or marine"
