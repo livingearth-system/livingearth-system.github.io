@@ -14,6 +14,6 @@ Nosvg: false
 
 
 {%-
-include our-projects.liquid
+include themes.liquid
 header="Living Earth’s themes go into detail on the main components of the system, which are focusing on land (cover and habitats), water, change impacts and pressures, biodiversity, accounts and futures. "
 -%}
