@@ -8,7 +8,7 @@
   content: "Radio Detection and Ranging (RADAR) sensors provide cloud-free observations and information on the three-dimensional geometry, moisture content, and size of landscape components and surface elevations."
   url: "#"
 
-- title: "LIGHT"
+- title: "LIDAR"
   image: "/assets/img/data/livingwales_gowersar.png"
   content: "Light Detection and Ranging (LIDAR) sensors measure the time and hence distance of light transmission and can measure, with high fidelity, the height of the terrain surface and the vertical and horizontal distribution of plant materials."
   url: "#"
