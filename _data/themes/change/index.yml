@@ -1,14 +1,14 @@
 - title: "INTERTIDAL ELEVATION DATASETS"
   image: "/assets/img/themes/change/impacts.png"
-  content: "Digital Earth Australia (DEA) is developing their Intertidal Elevation maps for Australia's intertidal zone, which is providing substantive information on the dynamics of the coastal environment around Australia. "
+  content: "mpacts are the consequences of individual or collective changes in statutes relating to, for example, vegetation structure, floristics or biomass, water type and/or quality, or urban configurations.  The full list of 77 impacts and associated definitions is provided in the Global Change Taxonomy."
   url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
 
 - title: "MAPPING THE INTERTIDAL AND SUBTIDAL ZONES"
   image: "/assets/img/themes/change/pressures.png"
-  content: "For Australia, first steps have been taken to integrate data from the Allen Coral Atlas into the Living Earth system as part of Living Coasts.  Whilst only for one time-period, the study has demonstrated that what would normally be classified as non-vegetated water in FAO LCCS Version 2.0 can be described in terms of the substrate types and habitats.  Further work is also focusing on bringing in the surface and columnar characteristics and extending the time-series to facilitate mapping of change."
+  content: "Pressures are the reasons for observed changes in the state, as measured by physical, chemical and.or biological characteristics of the environment.  The full list of 144 pressures and associated definitions is provided in the Global Change Taxonomy."
   url: "#"
 
 - title: "CHARACTERISING THE INTERTIDAL ZONES OF WALES"
   image: "/assets/img/themes/change/impacts_pressures.png"
-  content: "Using the Earthtrack mobile application, focus is on recording information on intertidal bare surfaces and vegetation, including macroalgae and seagrasses.  The submitted observations are used to develop and validate algorithms through the Living Wales system to facilitate monitoring of these diverse ecosystems. "
+  content: "The 248 Impact(Pressure) categories are formed by combining the impacts and relevant driving pressures.   These impacts(pressures) can occur singularly or in combination and simultaneously or sequentially.  In both cases, there may be dependency of one type of change on another. "
   url: "#"
