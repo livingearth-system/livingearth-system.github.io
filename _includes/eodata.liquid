@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  {% if include.header %}
+    <div class="row">
+      <p class="new-about-title col-12">
+        {{ include.header }}
+      </p>
+    </div>
+  {% endif %}
+  {% if include.title %}
+    <div class="row">
+      <p class="new-about-title col-12">
+        {{ include.title }}
+      </p>
+    </div>
+  {% endif %}
+  {% assign data = site.data['data']['eodata'].index %}
+  <div class="responsive-content">
+    <div class="row ">
+      {% for item in data limit: 3 %}
+        <div class="col-4 img-container">
+          {% if forloop.index0 == 0 %}
+            <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+          {% elsif forloop.index0 == 1 %}
+            <img src="/assets/img/data/livingwales_gowersar.png" class="img-fluid" alt="Living Earth logo">
+          {% elsif forloop.index0 == 2 %}
+            <img src="/assets/img/data/livingwales_lidar.png" class="img-fluid" alt="Living Earth logo">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row ">
+      {% for item in data limit: 3 %}
+        <div class="new-about-content col-4">
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
+          <p class="new-about-content-para">{{ item.content }}</p>
+          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row mt-5 ">
+      {% for item in data offset: 3 limit: 3 %}
+        <div class="new-about-content col-4">
+          <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
+          <p class="new-about-content-para">{{ item.content }}</p>
+          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row mt-5 ">
+      {% for item in data offset: 6 %}
+        <div class="new-about-content col-4">
+          <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
+          <p class="new-about-content-para">{{ item.content }}</p>
+          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
