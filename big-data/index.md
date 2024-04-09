@@ -14,6 +14,6 @@ Nosvg: false
 ---
 
 {%-
-include boxes.liquid
+include big-data.liquid
 data="big-data.index"
 -%}
