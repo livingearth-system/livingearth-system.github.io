@@ -1,7 +1,7 @@
 ---
 layout: page
 
-title: "eodata"
+title: "Earth observations"
 
 # NOT INCLUDED: header: "Earth observations"
 headerTop: "Earth observations"
