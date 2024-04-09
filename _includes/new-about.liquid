@@ -20,11 +20,11 @@
         <div class="col-12 col-sm-6 col-md-4 grid-item">
           <div class="img-container">
             {% if forloop.index0 == 0 %}
-              <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+              <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
             {% elsif forloop.index0 == 1 %}
-              <img src="/assets/img/tools2.jpg" class="img-fluid" alt="Living Earth logo">
+              <a href="{{ item.url }}"><img src="/assets/img/tools2.jpg" class="img-fluid" alt="Living Earth logo"></a>
             {% elsif forloop.index0 == 2 %}
-              <img src="/assets/img/tools3.jpg" class="img-fluid" alt="Living Earth logo">
+              <a href="{{ item.url }}"><img src="/assets/img/tools3.jpg" class="img-fluid" alt="Living Earth logo"></a>
             {% endif %}
           </div>
           <div class="grid-item-content">
@@ -38,7 +38,7 @@
       {% for item in data offset: 3 limit: 3 %}
         <div class="col-12 col-sm-6 col-md-4 grid-item">
           <div class="img-container">
-            <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
           </div>
           <div class="grid-item-content">
             <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
@@ -51,7 +51,7 @@
       {% for item in data offset: 6 %}
         <div class="col-12 col-sm-6 col-md-4 grid-item">
           <div class="img-container">
-            <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
+            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
           </div>
           <div class="grid-item-content">
             <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
