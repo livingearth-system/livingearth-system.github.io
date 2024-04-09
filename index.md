@@ -1,10 +1,10 @@
 ---
 layout: home
 
-title: "Welcome to Living Earth"
-subtitle: "Living Earth provides unique capacity to capture consistent and scalable information on the states and dynamics of past and present landscapes that can inform planning for the future. ​"
-# smalltitle: "All-in-one"
-image: "/assets/img/title-index.jpg"
+title: "Themes"
+subtitle: "Focus on land (cover and habitats), water, change impacts and pressures, biodiversity, accounts and futures ​"
+smalltitle: "Themes:  Making sense of what we see"
+image: "/assets/img/heading/frenchalps_portrait.png"
 nocontact: true
 ---
 
