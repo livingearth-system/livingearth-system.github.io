@@ -1,0 +1,14 @@
+- title: "OPTICAL SENSORS"
+  image: "/assets/img/data/livingwales_sentinel-2b.png"
+  content: "Include those mounted on drones, record sunlight reflected from surfaces and provide information on the composition, structure and moisture content of surface materials. When captured in stereo, these data can be used to generate three-dimensional surfaces and volumes."
+  url: "#"
+
+- title: "RADIO DETECTION AND RANGING (RADAR)"
+  image: "/assets/img/data/pressures.png"
+  content: "Provides cloud-free observations and information on the three-dimensional geometry, moisture content, and size of landscape components and surface elevations."
+  url: "#"
+
+- title: "LIGHT DETECTION AND RANGING (LIDAR)"
+  image: "/assets/img/data/livingwales_gowersar.png"
+  content: "Measure the time and hence distance of light transmission and can measure, with high fidelity, the height of the terrain surface and the vertical and horizontal distribution of plant materials."
+  url: "#"
