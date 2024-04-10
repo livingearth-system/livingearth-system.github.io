@@ -1,9 +1,7 @@
-<div class="container-fluid">
+<div class="container">
   {% if include.header %}
-    <div class="row">
-      <p class="new-about-title col-12">
-        {{ include.header }}
-      </p>
+    <div class="section-hero-text">
+      <p>{{ include.header }}</p>
     </div>
   {% endif %}
   {% if include.title %}
@@ -14,52 +12,53 @@
     </div>
   {% endif %}
   {% assign data = site.data['developer-hub'].index %}
-  <div class="responsive-content">
-    <div class="row ">
+  <div class="grid-columns grid-columns-px-15">
+    <div class="row">
       {% for item in data limit: 3 %}
-        <div class="col-4 img-container">
-          {% if forloop.index0 == 0 %}
-            <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
-          {% elsif forloop.index0 == 1 %}
-            <img src="/assets/img/hubs/developer-hub/jupyter.png" class="img-fluid" alt="Living Earth logo">
-          {% elsif forloop.index0 == 2 %}
-            <img src="/assets/img/hubs/developer-hub/repository.png" class="img-fluid" alt="Living Earth logo">
-          {% endif %}
+        <div class="col-12 col-sm-6 col-md-4 grid-item">
+          <div class="img-container">
+            {% if forloop.index0 == 0 %}
+              <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
+            {% elsif forloop.index0 == 1 %}
+              <a href="{{ item.url }}"><img src="/assets/img/hubs/developer-hub/jupyter.png" class="img-fluid" alt="Living Earth logo"></a>
+            {% elsif forloop.index0 == 2 %}
+              <a href="{{ item.url }}"><img src="/assets/img/hubs/developer-hub/repository.png" class="img-fluid" alt="Living Earth logo"></a>
+            {% endif %}
+          </div>
+          <div class="grid-item-content">
+            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
+            <p class="grid-item-subtitle">{{ item.subtitle }}</p>
+            <p class="grid-item-desc">{{ item.content }}</p>
+            <p class="grid-item-tagline">{{ item.tagline }}</p>
+          </div>
         </div>
       {% endfor %}
-    </div>
-    <div class="row ">
-      {% for item in data limit: 3 %}
-        <div class="new-about-content col-4">
-          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
-          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
-          <p class="new-about-content-para">{{ item.content }}</p>
-          <p class="new-about-content-tagline">{{ item.tagline }}</p>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="row mt-5 ">
       {% for item in data offset: 3 limit: 3 %}
-        <div class="new-about-content col-4">
-          <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
-          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
-          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
-          <p class="new-about-content-para">{{ item.content }}</p>
-          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        <div class="col-12 col-sm-6 col-md-4 grid-item">
+          <div class="img-container">
+            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
+          </div>
+          <div class="grid-item-content">
+            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
+            <p class="grid-item-subtitle">{{ item.subtitle }}</p>
+            <p class="grid-item-desc">{{ item.content }}</p>
+            <p class="grid-item-tagline">{{ item.tagline }}</p>
+          </div>
         </div>
       {% endfor %}
-    </div>
-    <div class="row mt-5 ">
       {% for item in data offset: 6 %}
-        <div class="new-about-content col-4">
-          <img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo">
-          <a class="new-about-content-title" href="{{ item.url }}">{{ item.title }}</a>
-          <p class="new-about-content-subtitle">{{ item.subtitle }}</p>
-          <p class="new-about-content-para">{{ item.content }}</p>
-          <p class="new-about-content-tagline">{{ item.tagline }}</p>
+        <div class="col-12 col-sm-6 col-md-4 grid-item">
+          <div class="img-container">
+            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
+          </div>
+          <div class="grid-item-content">
+            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
+            <p class="grid-item-subtitle">{{ item.subtitle }}</p>
+            <p class="grid-item-desc">{{ item.content }}</p>
+            <p class="grid-item-tagline">{{ item.tagline }}</p>
+          </div>
         </div>
       {% endfor %}
     </div>
   </div>
-
 </div>
