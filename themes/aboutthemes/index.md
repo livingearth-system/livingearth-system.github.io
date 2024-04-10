@@ -1,5 +1,5 @@
 ---
-layout: themes
+layout: page
 
 title: "About themes"
 
