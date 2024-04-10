@@ -6,7 +6,7 @@ headerTop: "Themes"
 title: "Biodiversity"
 subtitle: "Focus on land (cover and habitats), water, change impacts and pressures, biodiversity, accounts and futures"
 image: "/assets/img/themes/water/md_water.png"
-background: "#252C0B"
+background: "#072857"
 nocontact: true
 nobuttons: true
 Nosvg: true
