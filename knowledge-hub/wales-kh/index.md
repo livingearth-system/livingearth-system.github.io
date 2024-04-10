@@ -1,7 +1,7 @@
 ---
 layout: page
 
-permalink: /knowledge-hub/wales-kh/
+#permalink: /knowledge-hub/wales-kh/
 header: "Wales"
 headerTop: "Knowledge Hub"
 title: "Knowledge Hub"
