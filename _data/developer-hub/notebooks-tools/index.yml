@@ -5,7 +5,7 @@
   tagline: "Australian notebooks"
   url: "https://github.com/GeoscienceAustralia/dea-notebooks"
 
-  - title: "WALES"
+- title: "WALES"
   image: "/assets/img/hubs/developer-hub/jupyter.png"
   subtitle: "Notebooks relevant to Wales"
   content: "These notebooks have been developed through Living Wales"
