@@ -1,0 +1,14 @@
+- title: "ABOUT 1"
+  image: "/assets/img/themes/water/dea_intertidal.png"
+  content: "Digital Earth Australia (DEA) is developing their Intertidal Elevation maps for Australia's intertidal zone, which is providing substantive information on the dynamics of the coastal environment around Australia. "
+  url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
+
+- title: "ABOUT 2"
+  image: "/assets/img/themes/water/hinchinbrook_coastal.png"
+  content: "For Australia, first steps have been taken to integrate data from the Allen Coral Atlas into the Living Earth system as part of Living Coasts.  Whilst only for one time-period, the study has demonstrated that what would normally be classified as non-vegetated water in FAO LCCS Version 2.0 can be described in terms of the substrate types and habitats.  Further work is also focusing on bringing in the surface and columnar characteristics and extending the time-series to facilitate mapping of change."
+  url: "#"
+
+- title: "ABOUT 3"
+  image: "/assets/img/themes/water/wales_intertidal.png"
+  content: "Using the Earthtrack mobile application, focus is on recording information on intertidal bare surfaces and vegetation, including macroalgae and seagrasses.  The submitted observations are used to develop and validate algorithms through the Living Wales system to facilitate monitoring of these diverse ecosystems. "
+  url: "#"
