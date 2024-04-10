@@ -8,18 +8,11 @@
   image: "/assets/img/hubs/knowledge-hub/digitalearthaustraliab.png"
   content: >
       Digital Earth Australia’s knowledge hub brings together information about Digital Earth Australia’s products and services, allowing you to utilise our free and open-source satellite imagery archive.
-  link: "https://knowledge.dea.ga.gov.au/"
+  url: "https://www.dea.ga.gov.au/products/dea-land-cover"
 
-- title: "LIVING EARTH AND PROTECTING OUR PLANET 2023"
+- title: "AFRICA"
   image: "/assets/img/hubs/knowledge-hub//assets/img/digitalearthafricab.png"
   content: >
-      New: Digital Earth Africa has extensive online material on many aspects of land monitoring.
-  links:
-    - url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
-
-- title: "LIVING EARTH AND PROTECTING OUR PLANET 2023"
-  image: "/assets/img/hubs/knowledge-hub//assets/img/digitalearthafricab.png"
-  content: >
-      New: Digital Earth Africa has extensive online material on many aspects of land monitoring.
+      Digital Earth Africa has extensive online material on many aspects of land monitoring.
   links:
     - url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
