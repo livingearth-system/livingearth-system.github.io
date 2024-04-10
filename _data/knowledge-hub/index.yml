@@ -2,7 +2,7 @@
   image: "/assets/img/hubs/knowledge-hub/digitalearthwales.png"
   content: >
     Living Wales has established capacity to impart knowledge on land/water characterisation and monitoring through educational undergraduate and postgraduate courses at Aberystwyth University, the Living Wales Exhibition and Training Centre at the Centre for Alternative Technology and outreach. 
-  url: "./wales-kh/"
+  url: "/wales-kh/"
 
 - title: "AUSTRALIA"
   image: "/assets/img/hubs/knowledge-hub/digitalearthaustraliab.png"
