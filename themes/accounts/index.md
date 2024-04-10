@@ -3,7 +3,7 @@ layout: page
 
 title: "Accounts"
 
-# NOT INCLUDED: header: "Acounts"
+# NOT INCLUDED: header: "Accounts"
 headerTop: "Accounts "
 subtitle: "Valuing nature and people’s contribution through accounting of natural capital and ecosystem services and opportunities for planning future landscapes. " 
 background: "#072857"
@@ -14,7 +14,7 @@ Noheader: true
 ---
 
 {%-
-include theme-accounts.liquid
+include water.liquid
 header="
 Biodiversity accounts are tools and methods for quantifying the diversity of life in an area to evaluate its ecological health and the impacts of human activities. Specifically this usually transposes the valuing ecological systems into values or economical based format in order to protect them, Carbon calculations are an important emerging area of growth in this sector.  Environmental Accounting involves measuring various indicators, such as species richness, ecosystem stability, habitat distribution and dynamics, and genetic variability, to create comprehensive  assessments. This data is used to guide sustainable development, conservation efforts, and policy-making to preserve and restore natural habitats.
 
