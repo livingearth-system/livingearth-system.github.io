@@ -6,23 +6,16 @@
         </div>
     </div>
     <div class="row">
-        {% comment %} <div class="col-md-6 col-lg-3 col-12">
-            <div class="organisations-earth-inner">
-                <div class="organisations-img organisations-content">
-                    {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
-                    {%- if include.all -%}<a href="#">{{ include.all }}</a>{% endif %}
-                </div>
-            </div>
-        </div> {% endcomment %}
-        {% for organisation in site.data.organisations %}
+        {% assign data = site.data['about']['organisations'].index %}
+        {% for item in data %}
             <div class="col-md-6 col-lg-3 col-6 mb-40">
                 <div class="organisations-earth-inner">
                     <div class="organisations-img">
-                        {%- if organisation.image -%}<a href="{{ organisation.url }}"><img src="{{ organisation.image }}" alt="{{ organisation.name }}"></a>{% endif %}
+                        {%- if item.image -%}<a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.name }}"></a>{% endif %}
                     </div>
                     <div class="organisations-dsc">
-                        {%- if organisation.name -%}<h4>{{ organisation.name }}</h4>{% endif %}
-                        {%- if organisation.subtitle -%}<p class="subtitle">{{ organisation.subtitle }}</p>{% endif %}
+                        {%- if item.name -%}<h4>{{ item.name }}</h4>{% endif %}
+                        {%- if item.subtitle -%}<p class="subtitle">{{ item.subtitle }}</p>{% endif %}
                     </div>
                 </div>
             </div>

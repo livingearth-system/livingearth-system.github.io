@@ -1,55 +1,24 @@
 <!-- OUR-BLOG -->
+{% assign data = site.data['about']['our-event'].index %}
 <div class="container-fluid our-event">
   <div class="mt-80 mb-100">
     <div class="row">
       <div class="col-12">
         <div id="owl-stay-up" class="owl-carousel owl-theme owl-img-responsive">
-          <div class="item">
-            {% for infor in site.data.our-event.index %}
-            <div class="stay-up-card">
-              <a href="{{ infor.href-1 }}"><img src="{{ infor.organisations }}" alt=""></a>
-              
-              <p class="title-img">
-                <a href="{{ infor.href-1 }}">{{ infor.title1 }}</a>
-              </p>
-              <span class="body-img"
-                >{{ infor.subtitle }}</span
-              >
+          {% for item in data %}
+            <div class="item">
+              <div class="stay-up-card">
+                <a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.title }}"></a>
+                <p class="title-img">
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </p>
+                <span class="body-img">{{ item.subtitle }}</span>
+              </div>
             </div>
           {% endfor %}
-          </div>
-          <div class="item">
-            {% for infor in site.data.our-event.index %}
-            <div class="stay-up-card">
-              <a href="{{ infor.href-2 }}"><img src="{{ infor.meetourteam }}" alt=""></a>
-              <p class="title-img">
-                <a href="{{ infor.href-2 }}">{{ infor.title2 }}</a>
-              </p>
-              <span class="body-img"
-                >{{ infor.subtitle }}</span
-              >
-            </div>
-          {% endfor %}
-          </div>
-          <div class="item">
-            {% for infor in site.data.our-event.index %}
-            <div class="stay-up-card">
-              <a href="{{ infor.href }}"><img src="{{ infor.subpages }}" alt=""></a>
-              
-              <p class="title-img">
-                <a href="{{ infor.href }}">{{ infor.title3 }}</a>
-              </p>
-              <span class="body-img"
-                >{{ infor.subtitle }}</span
-              >       
-            </div>
-          {% endfor %}
-          </div>
         </div>
       </div>
     </div>
-    
   </div>
 </div>
-
 <!-- /OUR-BLOG -->
