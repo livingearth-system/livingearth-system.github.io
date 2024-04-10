@@ -4,16 +4,22 @@
     Living Wales has established capacity to impart knowledge on land/water characterisation and monitoring through educational undergraduate and postgraduate courses at Aberystwyth University, the Living Wales Exhibition and Training Centre at the Centre for Alternative Technology and outreach. 
   link: "#"
 
-- title: "THE LIVING EARTH EXHIBITION AND TRAINING CENTRE AT THE CENTRE FOR ALTERNATIVE TECHNOLOGY"
-  image: "/assets/img/oldman-fix.png"
+- title: "AUSTRALIA"
+  image: "/assets/img/hubs/knowledge-hub/digitalearthaustraliab.png"
   content: >
-      The Living Earth Exhibition and Training Centre (LINK TO: https://cat.org.uk/living-wales-1/) is open at the Centre for Alternative Technology (www.cat.org) near Machynlleth and can be booked for tours as part of the educational program. (see LINK HERE)
-  link: "https://cat.org.uk/living-wales-1/"
+      Digital Earth Australia’s knowledge hub brings together information about Digital Earth Australia’s products and services, allowing you to utilise our free and open-source satellite imagery archive.
+  link: "https://knowledge.dea.ga.gov.au/"
 
 - title: "LIVING EARTH AND PROTECTING OUR PLANET 2023"
-  image: "/assets/img/oldman-fix.png"
+  image: "/assets/img/hubs/knowledge-hub//assets/img/digitalearthafricab.png"
   content: >
-      New: Living Earth Scientists along with the European Space Agency (ESA), the Centre for Alternative Technology (CAT) and the Eden Project contributed to the STEM event, Protecting Our Planet (POP23). With 262,591, POP23 had made a major contribution to educating our younger generation and teachers on our changing planet and what we can do to help.
+      New: Digital Earth Africa has extensive online material on many aspects of land monitoring.
   links:
-    - url: "https://www.stem.org.uk/enrichment/protecting-our-planet-day"
-    - url: "https://www.stem.org.uk/enrichment/protecting-our-planet-day/pop-sessions/protecting-our-forests-pop23"
+    - url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
+
+- title: "LIVING EARTH AND PROTECTING OUR PLANET 2023"
+  image: "/assets/img/hubs/knowledge-hub//assets/img/digitalearthafricab.png"
+  content: >
+      New: Digital Earth Africa has extensive online material on many aspects of land monitoring.
+  links:
+    - url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
