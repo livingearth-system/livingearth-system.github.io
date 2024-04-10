@@ -5,7 +5,7 @@ title: "Accounts"
 
 # NOT INCLUDED: header: "Accounts"
 headerTop: "Accounts "
-subtitle: "Valuing nature and people’s contribution through accounting of natural capital and ecosystem services and opportunities for planning future landscapes. " 
+subtitle: "Valuing nature and people’s contribution through accounting of natural capital and ecosystem services and opportunities for exploring and planning future landscapes. " 
 background: "#072857"
 image: "/assets/img/themes/water/md_water.png"
 nobuttons: true
