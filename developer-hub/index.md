@@ -1,11 +1,12 @@
 ---
-layout: developer-hub
+layout: page
 
+permalink: /developer-hub/
 header: "Developer hub"
 headerTop: "Developer Hub"
 title: "Developer Hub Entry"
 subtitle: "For programmers and product developers"
-image: "/assets/img/hubs/developer-hub/developer-koala.png"
+image: "/assets/img/hubs/developer-hub/developer_koala.png"
 background: "#252C0B"
 nocontact: true
 nobuttons: true
