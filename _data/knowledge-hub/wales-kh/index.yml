@@ -1,1 +1,35 @@
-test
+- title: "USER GUIDES"
+  image: "/assets/img/hubs/developer-hub/github.png"
+  subtitle: "From using the Welsh Data Cube to using Earthtrack"
+  content: "Find documentation, step-by-step instructions, and other published documentation, step-by-step instructions, and publications on Living Wales and Living Earth" 
+  url: "#"
+
+- title: "NOTEBOOKS AND TOOLS"
+  image: "/assets/img/hubs/developer-hub/jupyter.png"
+  subtitle: "Jupyter notebooks for data processing and analysis"
+  content: "The Jupyter Notebooks and Python tools in this repository are for analysing the archive of satellite data that have been processed to an Analysis Ready Data (ARD) format and the derived products.  Includes are example case studies."
+  url: "#"
+
+- title: "TECH ALERTS AND CHANGE LOGS"
+  image: "/assets/img/hubs/developer-hub/repository.png"
+  subtitle: "Keeping you informed of changes"
+  content: "Find out about the latest updates to Living Wales’ products and services, planned maintenance, and any outages that may occur."
+  url: "#"
+
+- title: "EDUCATION"
+  image: "/assets/img/hubs/developer-hub/sandbox.png"
+  subtitle: "Undergraduate and postgraduate opportunities"
+  content: "Aberystwyth University’s Masters in Remote Sensing and GIS is offering the course “ Living Earth: Past and Future Environmental Monitoring” from September 2024." 
+  url: "#"
+
+- title: "TRAINING"
+  image: "/assets/img/hubs/developer-hub/faolccscode.png"
+  subtitle: "Short courses and training material"
+  content: "Living Wales is delivering short courses and developing training material and course to increase understanding of our changing environment and how Earth observations are making a difference. "
+  url: "#"
+
+- title: "EXHIBITIONS"
+  image: "/assets/img/hubs/developer-hub/gct_ebcf.png"
+  subtitle: "Displaying Living Earth."
+  content: "Living Wales has developed exhibitions material to encourage people to access and use the maps and tools developed through this initiative."
+  url: "#"
