@@ -14,6 +14,6 @@ Noheader: true
 ---
 
 {%-
-include about-themes.liquid
+include aboutthemes.liquid
 header=" An overview of our themes"
 -%}
