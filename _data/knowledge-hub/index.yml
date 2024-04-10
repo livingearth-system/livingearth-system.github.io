@@ -14,5 +14,4 @@
   image: "/assets/img/hubs/knowledge-hub//assets/img/digitalearthafricab.png"
   content: >
       Digital Earth Africa has extensive online material on many aspects of land monitoring.
-  links:
-    - url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
+  url: "https://www.digitalearthafrica.org/platform-resources/training-and-help"
