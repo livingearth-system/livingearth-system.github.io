@@ -4,8 +4,8 @@ permalink: /knowledge-hub/
 
 header: "Knowledge hub"
 headerTop: "Knowledge Hub"
-title: "Knowledge Hub Entry"
-subtitle: "Opportunities to learn about our environment and how it is changing."
+title: "Knowledge Hub"
+subtitle: "Opportunities to learn about environments of countries and continents; included are user guides, notebooks and tools for implementing different aspects of Living Earth, education and training opportunities and exhibitions"
 image: "/assets/img/hubs/knowledge-hub/digitalearthwales.png"
 background: "#252C0B"
 nocontact: true
