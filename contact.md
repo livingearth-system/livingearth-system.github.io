@@ -11,7 +11,7 @@ nobuttons: true
 ##### Please get in touch
 ### We are always here to help
 
-**Email: rml2@aber.ac.uk**  
+**Email: <a href="mailto:rml2@aber.ac.uk">rml2@aber.ac.uk</a>**  
 
 DEPARTMENT OF GEOGRAPHY AND EARTH SCIENCES,
 ABERYSTWYTH UNIVERSITY,
