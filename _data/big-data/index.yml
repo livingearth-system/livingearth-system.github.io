@@ -7,7 +7,7 @@
 
 - title: "Google Earth Engine"
   subtitle: "A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels."
-  image: "/assets/img/big_data/digitalearthaustralia.png"
+  image: "/assets/img/big_data/googleearthengine.png"
   button: "Learn More"
   url: "https://earthengine.google.com/"
   newtab: true
@@ -21,7 +21,7 @@
 
 - title: "Digital Earth Australia"
   subtitle: "Digital Earth Australia (DEA) is an analysis platform providing  access to standardised analysis-ready-data (ARD), analytic capability and tools."
-  image: "/assets/img/big_data/digitalearthaustralia.png"
+  image: "/assets/img/big_data/microsoftplanetarycomputer.png"
   button: "Learn More"
   url: "https://www.dea.ga.gov.au/"
   newtab: true
