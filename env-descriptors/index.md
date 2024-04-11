@@ -14,5 +14,5 @@ Nosvg: false
 
 {%-
 include env-descriptors.liquid
-data="env-descriptors.index"
+header="Describing the environment of your country. "
 -%}
