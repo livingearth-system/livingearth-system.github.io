@@ -14,6 +14,6 @@ Noheader: true
 ---
 
 {%-
-include change.liquid
+include change-impacts.liquid
 header="Examples of impacts"
 -%}
