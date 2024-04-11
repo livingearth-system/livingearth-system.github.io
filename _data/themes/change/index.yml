@@ -1,12 +1,12 @@
 - title: "IMPACTS"
   image: "/assets/img/themes/change/impacts.png"
   content: "Impacts are the consequences of individual or collective changes in statutes relating to, for example, vegetation structure, floristics or biomass, water type and/or quality, or urban configurations.  The full list of 77 impacts and associated definitions is provided in the Global Change Taxonomy."
-  url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
+  url: "./impacts/"
 
 - title: "PRESSURES"
   image: "/assets/img/themes/change/pressures.png"
   content: "Pressures are the reasons for observed changes in the state, as measured by physical, chemical and.or biological characteristics of the environment.  The full list of 144 pressures and associated definitions is provided in the Global Change Taxonomy."
-  url: "#"
+  url: "./pressures/"
 
 - title: "IMPACTS (PRESSURES)"
   image: "/assets/img/themes/change/imp-pressure-cyclone.png"
