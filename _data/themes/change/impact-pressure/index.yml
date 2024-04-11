@@ -1,2 +1,29 @@
-01094: ACCRETION 
-(SEDIMENT TRANSPORT) 
+- title: "01094: ACCRETION (SEDIMENT TRANSPORT)"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "An example from Australia which shows accretion of sand and gravels in the Daintree River, Queensland, Australia because of sediment transport, which increased because of landslides associated with high rainfall from Cyclone Jasper in early 2024 and associated flooding."
+  url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
+
+- title: "02000: ALGAL BLOOM (PRESSURE)"
+  image: "/assets/img/themes/change/pressures.png"
+  content: "Example in preparation"
+  url: "#"
+
+- title: "03000: ALGAL DIEBACK (PRESSURE)"
+  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
+  content: "Example in preparation"
+  url: "#"
+
+- title: "4. BARE SOIL EXPOSURE"
+  image: "/assets/img/themes/change/pressures.png"
+  content: "Example in preparation"
+  url: "#"
+
+- title: "5. BLACKWATER EVENT"
+  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
+  content: "Example in preparation "
+  url: "#"
+
+- title: "6. BROWNING (OF VEGETATION)"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "Example in preparation"
+  url: "#"
