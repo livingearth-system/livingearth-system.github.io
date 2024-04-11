@@ -5,7 +5,7 @@ header: "Wales"
 headerTop: "Knowledge Hub"
 title: "Knowledge Hub"
 subtitle: "Accessing resources associated with Living Wales"
-image: "/assets/img/headers/carn_sian.png"
+image: "/assets/img/heading/carn_sian.png"
 background: "#252C0B"
 nocontact: true
 nobuttons: true
