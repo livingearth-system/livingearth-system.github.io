@@ -1,11 +1,11 @@
 - title: "USER GUIDES"
-  image: "/assets/img/knowledge-hub/laugharne__ET.jpg"
+  image: "/assets/img/hubs/knowledge-hub/laugharne__ET.jpg"
   subtitle: "From using the Welsh Data Cube to using Earthtrack"
   content: "Find documentation, step-by-step instructions, and other published documentation, step-by-step instructions, and publications on Living Wales and Living Earth" 
   url: "#"
 
 - title: "NOTEBOOKS AND TOOLS"
-  image: "/assets/img/hubs/developer-hub/jupyter.png"
+  image: "/assets/img/hubs/developer-hub/jupyter-plain.jpg"
   subtitle: "Jupyter notebooks for data processing and analysis"
   content: "The Jupyter Notebooks and Python tools in this repository are for analysing the archive of satellite data that have been processed to an Analysis Ready Data (ARD) format and the derived products.  Includes are example case studies."
   url: "#"
