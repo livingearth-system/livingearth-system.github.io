@@ -1,7 +1,6 @@
 ---
 layout: page
 
-permalink: ./wales-kh/
 header: "Wales"
 headerTop: "Knowledge Hub"
 title: "Knowledge Hub"
