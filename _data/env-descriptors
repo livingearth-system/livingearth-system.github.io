@@ -1,0 +1,20 @@
+- title: "WALES"
+  subtitle: "Environmental Descriptors relevant to Wales, which supports temperate ecosystems within a primarily maritime climate envelope."
+  image: "/assets/img/env_descriptors/envdes_wales.png"
+  button: "Learn More"
+  url: "/europe/wales/data/environmental-descriptors/"
+  newtab: true
+
+- title: "AUSTRALIA"
+  subtitle: "Environmental descriptors relevant to diverse ecosystems and coastal environments, ranging from the deserts through to alpine mountains and tropical subtropical forests and woodlands."
+  image: "/assets/img/env_descriptors/envdes_australia.png"
+  button: "Learn More"
+  url: "./oceania/australia/data/environmental-descriptors/"
+  newtab: true
+
+- title: "PAPUA NEW GUINEA"
+  subtitle: "Environmental descriptors for this mountainous and primarily vegetated tropical landscape and coastal environments."
+  image: "/assets/img/env_descriptors/envdes_png.png"
+  button: "Learn More"
+  url: "#"
+  newtab: true
