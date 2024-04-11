@@ -1,0 +1,30 @@
+- title: "1_ACCRETION"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "Impacts are the consequences of individual or collective changes in statutes relating to, for example, vegetation structure, floristics or biomass, water type and/or quality, or urban configurations.  The full list of 77 impacts and associated definitions is provided in the Global Change Taxonomy."
+  url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
+
+- title: "2. ALGAL BLOOM"
+  image: "/assets/img/themes/change/pressures.png"
+  content: "A sudden proliferation of algae (microscopic plants) that occurs near the surface of a body of water. Blooms can occur due to natural nutrient cycles, or can be in response to eutrophication or climate variations."
+  url: "#"
+
+- title: "3. ALGAL DIEBACK"
+  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
+  content: "The build-up of sediments to form land or shoaling in coastal waters or waterways. It may be either natural or artificial. Natural accretion is the build-up of land on the beach, dunes, or in the water by natural processes, such as waves, current and wind. Artificial accretion is a similar build-up of land resulting from built structures such as groynes or breakwaters, or activities such as filling and beach nourishment, or also aggradation. "
+  url: "#"
+
+- title: "4. BARE SOIL EXPOSURE"
+  image: "/assets/img/themes/change/pressures.png"
+  content: "A sudden proliferation of algae (microscopic plants) that occurs near the surface of a body of water. Blooms can occur due to natural nutrient cycles, or can be in response to eutrophication or climate variations."
+  url: "#"
+
+- title: "5. BLACKWATER EVENT"
+  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
+  content: "The build-up of sediments to form land or shoaling in coastal waters or waterways. It may be either natural or artificial. Natural accretion is the build-up of land on the beach, dunes, or in the water by natural processes, such as waves, current and wind. Artificial accretion is a similar build-up of land resulting from built structures such as groynes or breakwaters, or activities such as filling and beach nourishment, or also aggradation. "
+  url: "#"
+
+- title: "6. BROWNING (OF VEGETATION)"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "A decrease in the amount or loss of photosynthetically active pigments (primarily chlorophylls) in vegetation.."
+  url: "#"
+
