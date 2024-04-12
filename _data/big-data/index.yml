@@ -1,6 +1,6 @@
 - title: "Open Data Cube"
   subtitle: "Open source geospatial data management and analysis software and capablity for processing and analysing Earth observation data."
-  image: "/assets/img/big_data/digitalearthaustralia.png"
+  image: "/assets/img/big_data/odc.png"
   button: "Learn More"
   url: "https://www.opendatacube.org/"
   newtab: true
