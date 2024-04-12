@@ -14,7 +14,7 @@
 
 - title: "Planetary Computer"
   subtitle: "A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels."
-  image: "/assets/img/big_data/microsoftplanetarycomputer.png"
+  image: "/assets/img/big_data/swissdatacube.png"
   button: "Learn More"
   url: "https://planetarycomputer.microsoft.com/"
   newtab: true
