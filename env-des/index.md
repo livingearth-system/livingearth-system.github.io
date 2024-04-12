@@ -14,4 +14,5 @@ Nosvg: false
 
 {%-
 include env-des.liquid
-header="Describing the environment of your country. "
+header="Environmental descriptors at a country level "
+-%}
