@@ -1,8 +1,8 @@
 ---
 layout: themes
 
-header: "Futures"
-headerTop: "Futures"
+header: "futures"
+headerTop: "futures"
 title: "Future Earth"
 subtitle: "Imagining, harmonizing and valuing future landscapes, realizing futures and assessing risk and monitoring progress towards ambitions."
 image: "/assets/img/heading/dea_landcover_murray_hres.png"
