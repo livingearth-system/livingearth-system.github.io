@@ -1,14 +1,19 @@
 - icon: "/assets/img/landcover.svg"
-  title: "land-cover"
+  title: "land cover"
+  value: "earthtrack"
 
 - icon: "/assets/img/water.svg"
-  title: "water"
+  title: "habitats"
+  value: "habitat_pts"
 
 - icon: "/assets/img/change.svg"
-  title: "change"
+  title: "understorey"
+  value: "understorey"
 
 - icon: "/assets/img/biodiversity.svg"
-  title: "biodiversity"
+  title: "land cover change"
+  value: "change_pts"
 
 - icon: "/assets/img/account.svg"
-  title: "account"
+  title: "fire"
+  value: "fire_pts"

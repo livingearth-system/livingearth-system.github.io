@@ -1,12 +1,23 @@
 <!-- /TOOL-EARTH-TRACK-SIDEBAR -->
+<script src="../assets/function/filter-map.js"></script>
+
 <div class="commom-class-disabled">
   <div id="earth-track-app" class="earth-track-app-display-by-id">
     <div class="tool_side_bar">
       <div class="country_form">
-        <select class="form-select" aria-label="Default select example" class="choose_country" id="choose_country">
-          <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          class="choose_country"
+          id="choose_country">
           {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
-            <option value="{{ country.value }}">{{ country.name }}</option>
+            <option
+              {% if country['value'] == site.data['tool-analyze-the-data-map-sidebar'].index.choose %}
+              selected="selected"
+              {% endif %}
+              value="{{ country['value'] }}">
+              {{ country['name'] }}
+            </option>
           {% endfor %}
         </select>
 
@@ -19,10 +30,12 @@
             <p>{{ site.data.tool-earth-track-sidebar.index.content.right-content.title }}</p>
           </div>
         </div>
-        <div class="banner-button">
+        <div class="banner-button button-filter_earthtrack">
           {% for tool_item in site.data.tool_page.index %}
-            <button type="button" class="tool-button-banner">
-              <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
+            <button
+              data-value="{{ tool_item.value }}"
+              type="button"
+              class="tool-button-banner">
               <p>{{ tool_item.title }}</p>
             </button>
           {% endfor %}
@@ -64,7 +77,7 @@
               </div>
             </div>
           </div>
-          {% endfor %}          
+        {% endfor %}
       </div>
 
       <div class="learning_resource">
@@ -80,19 +93,38 @@
       </div>
     </div>
   </div>
+  <div
+    id="imageModal"
+    class="modal-backdrop"
+    style="display: none">
+    <div class="modal-content">
+      <div class="close-moda-popup" onclick="closeModal()">Close</div>
+      <img
+        id="modalImage"
+        src=""
+        alt="Full Size Image"
+        style="width: 100%;">
+    </div>
+  </div>
 </div>
 
 <script>
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
   function toggleSwitch(button) {
     button.classList.toggle('active');
   }
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
+
+  document.addEventListener('DOMContentLoaded', function() {
     var learningResourceButton = document.getElementById('learningResourceButton');
 
     if (learningResourceButton) {
-      learningResourceButton.addEventListener('click', function () {
+      learningResourceButton.addEventListener('click', function() {
         window.location.href = '/tools/learning-resources';
       });
     }

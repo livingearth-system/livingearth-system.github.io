@@ -1,14 +1,12 @@
 countries:
+  - name: Earth
+    value: Earth
   - name: Wales
     value: Wales
   - name: Australia
     value: Australia
-  - name: Switzerland
-    value: Switzerland
-  - name: Southeast Asia
-    value: Southeast Asia
 
-choose: Country
+choose: Earth
 
 learning_resources:
   button_text1: Go to learning resource
