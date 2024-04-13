@@ -1,15 +1,16 @@
 ---
 layout: page
 
-header: "env-des"
+title: "Environmental Descriptors"
+
+# NOT INCLUDED: header: "Earth observations"
 headerTop: "env-des"
 title: "Environmental descriptors"
-subtitle: "Access to environmental descriptors for Wales (UK), Australia and Papua New Guinea"
-image: "/assets/img/env-descriptors/envdes-png.png"
+subtitle: Access to environmental descriptors for Wales (UK), Australia and Papua New Guinea"
 background: "#234665"
-nocontact: true
+image: "/assets/img/env_descriptors/envdes-png.png"
 nobuttons: true
-Nosvg: false
+Nosvg: true
 ---
 
 {%-
