@@ -10,7 +10,7 @@
   button: "Learn More"
   url: "./ground-measurements"
 
-- title: "Remote Sensing Alhorithms"
+- title: "Remote Sensing Algorithms"
   subtitle: "A range of satellite data based products are available globally and/or regionally. The products provide valuable spatiotemporal information for a range of environmental descriptors."
   image: "/assets/img/wales/remote-sensing.jpg"
   button: "Learn More"
