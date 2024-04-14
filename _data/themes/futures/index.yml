@@ -1,31 +1,29 @@
 - title: "(RE)IMAGINING"
-  image: "/assets/img/themes/water/dea_intertidal.png"
+  image: "/assets/img/themes/futures/reimagining.png"
   content: "What would we like to see?"
   url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
 
 - title: "VALUING"
-  image: "/assets/img/themes/water/hinchinbrook_coastal.png"
+  image: "/assets/img/themes/futures/valuing.png"
   content: "How can we place a value on what we want?"
   url: "#"
 
 - title: "ASSESSING RISK"
-  image: "/assets/img/themes/water/wales_intertidal.png"
+  image: "/assets/img/themes/futures/assessing_risk.png"
   content: "How can we identify threats? "
   url: "#"
 
 - title: "REALISING"
-  image: "/assets/img/themes/water/dea_intertidal.png"
+  image: "/assets/img/themes/futures/realising.png"
   content: "How can we be certain?"
-  url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
+  url: "#"
 
 - title: "HARMONISING"
-  image: "/assets/img/themes/water/hinchinbrook_coastal.png"
+  image: "/assets/img/themes/futures/harmonising.png"
   content: "How can we agree and co-design?"
   url: "#"
 
 - title: "MONITORING"
-  image: "/assets/img/themes/water/wales_intertidal.png"
+  image: "/assets/img/themes/futures/monitoring.png"
   content: "How can we track progress towards our ambitions? "
-  url: "#"
-
   url: "#"
