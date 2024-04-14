@@ -3,13 +3,16 @@ layout: page
 
 title: "Future Earth"
 
-**headerTop: "Future Earth "
-subtitle: "Valuing nature and people’s contribution through accounting of natural capital and ecosystem services and opportunities for exploring and planning future landscapes. " 
+# NOT INCLUDED: header: "Future Earth"
+headerTop: "Future Earth"
+subtitle: "A pathway to the sustainable use, conservation, protection and restoration of global environments and ecosystems" 
 background: "#072857"
-image: "/assets/img/themes/water/md_water.png"
+image: "/assets/img/heading/livingcoasts_starckemangroves.png"
 nobuttons: true
 Nosvg: true
-Noheader: true**
+Noheader: true
+---
+
 
 {%-
 include futures.liquid
