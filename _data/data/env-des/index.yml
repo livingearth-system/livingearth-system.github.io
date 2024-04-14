@@ -1,12 +1,12 @@
 - title: "WALES"
   subtitle: "Environmental descriptors for Wales"
   image: "/assets/img/env_descriptors/envdes_wales.png"
-  url: "../../europe/wales/data/environmental-descriptors/"
+  url: "../europe/wales/data/environmental-descriptors"
 
 - title: "AUSTRALIA"
   subtitle: "Environmental descriptors for Australia."
   image: "/assets/img/env_descriptors/envdes_wales.png"
-  url: "../../oceania/australia/data/environmental-descriptors/"
+  url: "../oceania/australia/data/environmental-descriptors"
 
 - title: "PAPUA NEW GUINEA"
   subtitle: "Environmental descriptors for Papua New Guinea"
