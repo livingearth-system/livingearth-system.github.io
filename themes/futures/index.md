@@ -1,16 +1,15 @@
 ---
-layout: themes
+layout: page
 
-header: "futures"
-headerTop: "futures"
 title: "Future Earth"
-subtitle: "Imagining, harmonizing and valuing future landscapes, realizing futures and assessing risk and monitoring progress towards ambitions."
-image: "/assets/img/heading/dea_landcover_murray_hres.png"
-background: "#252C0B"
-nocontact: true
+
+**headerTop: "Future Earth "
+subtitle: "Valuing nature and people’s contribution through accounting of natural capital and ecosystem services and opportunities for exploring and planning future landscapes. " 
+background: "#072857"
+image: "/assets/img/themes/water/md_water.png"
 nobuttons: true
-Nosvg: false
----
+Nosvg: true
+Noheader: true**
 
 {%-
 include futures.liquid
