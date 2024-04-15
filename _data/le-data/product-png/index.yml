@@ -15,20 +15,20 @@
 
 - title: "MANGROVES"
   subtitle: "Areas of mangrove are mapped through reference to the Global Mangrove Watch"
-#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+#  image: "/assets/img/le_data/png/png-gmw.png"
   url: "https://www.globalmangrovewatch.org/"
 
 - title: "SEA GRASS"
   subtitle: "Areas of sea grass are mapped using time-series of Landsat sensor data, with reliability depending upon the frequency of observations without cloud or periods of turbid water."
-#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+#  image: "/assets/img/le_data/png/png-seagrass.png.png"
   url: "#" 
 
 - title: "CORALS"
   subtitle: "Mapped with reference to the Allen Coral Atlas"
-#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+#  image: "/assets/img/le_data/png/png-allencoral.png"
   url: "https://allencoralatlas.org/" 
 
 - title: "BIOMASS"
   subtitle: "Through the European Space Agency (ESA) Climate Change Initiative (CCI) Biomass global biomass project, above ground biomass of woody vegetation (in Mg/hectare) is estimated from time-series of C- and L-band radar, with 100 m spatial resolution maps subset for Wales being currently available for 2010, 2017, 2018 and 2020. "
-#  image: "/assets/img/le_data/wales/product-wales-agbiomass.png"
+#  image: "/assets/img/le_data/png/png-biomasscci.png"
   url: "https://climate.esa.int/en/projects/biomass/"
