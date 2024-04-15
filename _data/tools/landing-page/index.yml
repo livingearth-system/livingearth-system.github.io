@@ -28,7 +28,7 @@
   subtitle: "Download or stream the data to your computer"
   subtitle2: "All Living Earth data are free to access and use, either through direct download or streaming through to your computer through web-map services. <br>
   
-  You can also access and analyse the data without having to download or stream  by logging into your country's data cube (see ANALYSE THE DATA)"
+  You can also access and analyse the data without having to download or stream  by logging into your country's data cube (see ANALYSE THE DATA)."
   image: "/assets/img/getdata.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/get-the-data; /tools/get-the-data-information; /learning-hub"
@@ -42,7 +42,7 @@
   
   You can import your own spatial datasets and generate summary statistics and reports.  Tutorials and example notebooks are provided and can be adapted for your own purposes. <br>
   
-  As an opensource data provider LIVING EARTH provides all its data, algorithms and process strategies for free. We would like to invite you to join the global effort working towards sustainable land management by using our data to solutions. "
+  As an opensource data provider LIVING EARTH provides all its data, algorithms and process strategies for free. We would like to invite you to join the global effort working towards sustainable land management by using our data to solutions."
   image: "/assets/img/analyzeData.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/analyze-the-data; /tools/analyze-the-data-information; /learning-hub"
@@ -69,7 +69,7 @@
   subtitle: "Helping to support the public and private sector"
   subtitle2: "Living Earth has been developed to provide information to all people that can be used to ensure sustainable use of landscapes and increase their capacity to recover nature so that we all benefit from increased biodiversity and carbon sequestration and improvements in the quality of our land and our well-being. <br>
   
-  This section allows users, groups or organisations to select specific areas of their country, whether these be a farm, nature reserve or proposed sites for restoration, and generate maps and statistics of past and current states and conditions and how these might be enhanced for benefits of people and nature.  "
+  This section allows users, groups or organisations to select specific areas of their country, whether these be a farm, nature reserve or proposed sites for restoration, and generate maps and statistics of past and current states and conditions and how these might be enhanced for benefits of people and nature. "
   image: "/assets/img/organisationSpecificeSite.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/industry-specific-site; /tools/industry-specific-site; /learning-hub"
