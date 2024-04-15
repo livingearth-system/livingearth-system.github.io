@@ -1,0 +1,34 @@
+- title: "LEVEL 3 CATEGORIES"
+  subtitle: "The Level 3 categories for Papua New Guinea currently uses a combination of Landsat-derived fractional cover and water observations from space (Wofs) respectively to map the extent of vegetation and water (natural and artificial).  External layers including Global Mangrove Watch mangrove extent to represent natural aquatic vegetation (from which woody lifeform and tidal water seasonality is inferred) and Open Street Map to capture artificial surfaces. "
+#  image: "/assets/img/le_data/wales/product-wales-lccs3.png"
+  url: "#"
+
+- title: "LIFEFORM"
+  subtitle: "Woody lifeforms are differentiated from those that are herbaceous using thresholds applied to time-series of Sentinel-1 C-band SAR data.  Areas of mangroves are further associated with a woody lifeform."
+  image: "/assets/img/le_data/wales/product-wales-habitat.png"
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4695952"
+  
+- title: "WATER HYDROPERIOD"
+  subtitle: "Defined through temporal thresholding of time-series of Landsat sensor data."
+#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+  url: "#"
+
+- title: "MANGROVES"
+  subtitle: "Areas of mangrove are mapped through reference to the Global Mangrove Watch"
+#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+  url: "https://www.globalmangrovewatch.org/"
+
+- title: "SEA GRASS"
+  subtitle: "Areas of sea grass are mapped using time-series of Landsat sensor data, with reliability depending upon the frequency of observations without cloud or periods of turbid water."
+#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+  url: "#" 
+
+- title: "CORALS"
+  subtitle: "Mapped with reference to the Allen Coral Atlas"
+#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+  url: "https://allencoralatlas.org/" 
+
+- title: "BIOMASS"
+  subtitle: "Through the European Space Agency (ESA) Climate Change Initiative (CCI) Biomass global biomass project, above ground biomass of woody vegetation (in Mg/hectare) is estimated from time-series of C- and L-band radar, with 100 m spatial resolution maps subset for Wales being currently available for 2010, 2017, 2018 and 2020. "
+#  image: "/assets/img/le_data/wales/product-wales-agbiomass.png"
+  url: "https://climate.esa.int/en/projects/biomass/"
