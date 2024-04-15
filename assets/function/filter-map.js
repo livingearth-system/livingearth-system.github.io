@@ -1,85 +1,85 @@
 // Define type earthtrack
 const earthtrack = {
     "Natural and semi natural aquatic vegetation": "#76C76C",
-    "Inland waterbodies snow and ice": "#00BFFF",
+    "Inland waterbodies snow and ice": "#FFFFFF",
     "Natural and semi natural terrestrial vegetation": "#347820",
     "Artificial surfaces and ass. areas": "#FF6347",
     "Cultivated and managed land": "#D4E157",
     "Other": "#808080",
     "Bare areas": "#A52A2A",
     "Artificial waterbodies": "#4682B4",
-    "Cultivated aquatic areas": "#20B2AA"
+    "Cultivated aquatic areas": "#00BFFF"
 }
 
 const earthtrackInverted = {
+    "#D4E157": "Cultivated and managed terrestrial areas",
     "#347820": "Natural and semi natural terrestrial vegetation",
     "#76C76C": "Natural and semi natural aquatic vegetation",
-    "#20B2AA": "Cultivated aquatic areas",
+    "#00BFFF": "Cultivated aquatic areas",
     "#FF6347": "Artificial surfaces and associated areas",
-    "#A52A2A": "Bare areas",
-    "#4682B4": "Artificial waterbodies",
-    "#00BFFF": "Inland waterbodies snow and ice",
-    "#D4E157": "Cultivated and managed land",
-    "#FFFFFF": "Cultivated natural areas",   
-    "#808080": "Other",
+    "#A52A2A": "Natural bare areas",
+    "#4682B4": "Natural or artificial water",
+    "#FFFFFF": "Natural or semi-natural vegetation",
+    "#FFFFF0": "Cultivated natural areas",   
+    "#808080": "Not clasifed",
 };
 
 //Define colors habitat
 const habitatColors = {
-    "heathland": "#8B4513",
+    "heathland": "#c90cad",
     "woodlandScrub": "#228B22",
-    "herbFern": "#98FB98",
-    "grasslandMarsh": "#6B8E23",
-    "exposureArtificial": "#A9A9A9",
+    "herbFern": "#f08922",
+    "grasslandMarsh": "#afb811",
+    "exposureArtificial": "##fafaf7",
     "mire": "#483D8B",
-    "miscellaneous": "#FFD700",
+    "miscellaneous": "#ffffff",
     "coastland": "#4682B4",
-    "swamp": "#006400",
+    "swamp": "#07688f",
     "openWater": "#1E90FF"
 };
 
 const habitatInverted = {
     "#4682B4": "Coastland",
-    "#A9A9A9": "Exposure and Water (Artificial)",
+    "#fafaf7": "Exposure and Water (Artificial)",
     "#808080": "Exposure and Water (Natural)",
-    "#6B8E23": "Grassland and Marsh",
-    "#8B4513": "Heathland",
-    "#98FB98": "Tall Herb and Fern",
+    "#afb811": "Grassland and Marsh",
+    "#c90cad": "Heathland",
+    "#f08922": "Tall Herb and Fern",
     "#483D8B": "Mire",
-    "#FFD700": "Miscellaneous",
+    "#ffffff": "Miscellaneous",
     "#1E90FF": "Open Water",
-    "#006400": "Swamp",
+    "#07688f": "Swamp",
     "#228B22": "Woodl and Scrub",   
 };
 
 // Define type change
 const changeColor = {
-    'vegetation': '#76C76C',
-    'urban': '#FFD700',
+    'vegetation': '#f7fc51',
+    'urban': '#FF6347',
     'waterIceSnow': '#00BFFF',
-    'bareNaturalSurfaces': '#A52A2A',
-    'agriculture': '#FF6347'
+    'bareNaturalSurfaces': '#f5bb47',
+    'agriculture': '#FFD700'
 };
 
 const changeInverted = {
-    '#FF6347': 'Agriculture',
+    '#f7fc51': 'Agriculture',
     '#76C76C': 'Vegetation',
-    '#A52A2A': 'Bare Natural Surfaces',
-    '#FFD700': 'Human-made',
+    '#f5bb47': 'Bare Natural Surfaces',
+    '#FF6347': 'Human-made',
     '#00BFFF': 'Water,Ice and Snow'    
 };
 
 // Define colors fireColors
 const fireColors = {
-    "pre-fire": "#FFA500",  
-    "post-fire": "#FF0000",
-    "active-fire": "#FF4500" 
+    "pre-fire": "#fab937",  
+    "post-fire": "#784e30",
+    "active-fire": "#FFA500" 
 };
 
 const fireInverted = {
-    "#FFA500": "Pre fire",
-    "#FF4500": "Active fire",
-    "#FF0000": "Post fire",
+    "#fab937": "Pre fire",
+    "#FFA500": "Active fire",
+    "#784e30": "Post fire",
 };
 
 const titleClass = [
@@ -139,18 +139,21 @@ class LeafletMap {
     updateLegend() {
         const title = titleClass.find(item => Object.keys(item)[0] === this.currentDataset);
         let infoDetail = ''
+        
         if (this.currentDataset === 'earthtrack') {
             infoDetail = earthtrackInverted
         } else if (this.currentDataset === 'habitat_pts'){
             infoDetail = habitatInverted
-            console.log(infoDetail)
         } if (this.currentDataset === 'change_pts') {
             infoDetail = changeInverted
         } else if (this.currentDataset === 'fire_pts') {
             infoDetail = fireInverted
+        } else if (this.currentDataset === 'understorey') {
+            return;
         }
+
         const legendDiv = document.querySelector('.marker-info');
-        let legendHTML = `<div class="d-flex flex-column" style="padding:10px"><h5>${title[this.currentDataset]}</h5>`;
+        let legendHTML = `<div class="d-flex flex-column"><h5>${title[this.currentDataset]}</h5>`;
 
         // Iterate through each entry in the earthtrackInverted object
         for (const [color, text] of Object.entries(infoDetail)) {
@@ -243,7 +246,6 @@ class LeafletMap {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log(data);
             this.addFeatures(data.features, jsonFileName);
         } catch (error) {
             console.error("Failed to load data:", error);
@@ -252,11 +254,10 @@ class LeafletMap {
     }
 
     addFeatures(features, jsonFileName) {
-        // Xóa các marker hiện tại
         this.markers.forEach(marker => {
             this.map.removeLayer(marker);
         });
-        this.markers = [];  // Xóa mảng các marker
+        this.markers = [];
         
         features.forEach(feature => {
             const { geometry, properties } = feature;
@@ -272,7 +273,7 @@ class LeafletMap {
                 fillColor: legendColor,
                 fillOpacity: 0.1,
                 radius: 8,
-				weight: 1,
+				weight: 0.5,
 				opacity: 1,
 				fillOpacity: 0.8
             }).addTo(this.map);
@@ -281,7 +282,7 @@ class LeafletMap {
             marker.on('popupopen', () => {
                 this.attachImageEventListeners();
             });
-            this.markers.push(marker);  // Lưu marker vào mảng
+            this.markers.push(marker); 
         });
     }
 
@@ -307,30 +308,40 @@ class LeafletMap {
         }
     }
 
+    convertISOToCustomFormat(isoString) {
+        const date = new Date(isoString);
+        return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+    }
+
 	// Function to handle the creation of the popup content
     createPopupContent(feature) {
 		const { images, impact, when, _CREATION_DATE, HabitatTypes, l4classif, persitence_text, waterseasonality_text, fireTime } = feature.properties;
-        let content = '';
-        content += `<div class="d-flex flex-row justify-content-between w-100">`;
-        this.currentDataset === 'earthtrack' ? content += `<p><strong>LCCS point:</strong>
-        ${l4classif ? l4classif : ''} ${persitence_text ? persitence_text : ''} ${waterseasonality_text ? waterseasonality_text : ''}</p>` : '';
-
-		impact? content += `<p><strong>LCCS point:</strong>${impact}</p>` : '';
-        HabitatTypes ? content += `<p><strong>LCCS point:</strong>${HabitatTypes}</p>` : '';
-
-        content += `<p><span>Recorded the</span> ${when ? when : fireTime ? fireTime : _CREATION_DATE}</p>`;
+        let content = '<div class="leaflet-header"><h5>LCCS point</h5>';
+        // Recorded date
+        content += `<div class="date-time">${when ? when : fireTime ? fireTime : this.convertISOToCustomFormat(_CREATION_DATE)}</div></div>`;
+        content += `<div class="leaflet-body"><div class="w-100">`;
+        // Earthtrack
+        if (this.currentDataset === 'earthtrack') {
+            content += `<div><strong>Earthtrack: </strong>
+            ${l4classif ? l4classif : ''} ${persitence_text ? persitence_text : ''} ${waterseasonality_text ? waterseasonality_text : ''}</div>`;
+        } else {
+		    impact? content += `<div><strong>Impact: </strong>${impact}</div>` : '';
+            HabitatTypes ? content += `<div><strong>Habitat: </strong>${HabitatTypes}</div>` : '';
+        }        
         content += `</div>`;
+
         // Handling multiple images
-        content += `<div class="d-flex flex-row flex-wrap justify-content-between w-100">`;
+        content += `<div class="leaflet-body-images d-flex flex-row flex-wrap w-100 mt-2">`;
 		if (images) {
 			Object.keys(images).forEach(key => {
 				const imageUrl = images[key];
-				content +=`<div class="image-container" data-url="${imageUrl}">
-                <span>${key}:</span>
-                <img src="${imageUrl}" alt="${key}" style="max-width:90%;max-height:100px;margin: auto;border: solid 1px black"></div>`;
+				content +=`<div class="image-container d-flex flex-column" data-url="${imageUrl}">
+                <img src="${imageUrl}" alt="${key}">
+                <span class="title-image">${key}</span>
+                </div>`;
 			});
 		}
-        content += `</div>`; // Close the inner flex-row div
+        content += `</div></div>`; // Close the inner flex-row div
 		return content;
     }
 

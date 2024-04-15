@@ -1,7 +1,7 @@
 <!-- /TOOL-EARTH-TRACK-SIDEBAR -->
 <script src="../assets/function/filter-map.js"></script>
 
-<div class="commom-class-disabled">
+<div class="commom-class-disabled map-left">
   <div id="earth-track-app" class="earth-track-app-display-by-id">
     <div class="tool_side_bar">
       <div class="country_form">
@@ -36,6 +36,7 @@
               data-value="{{ tool_item.value }}"
               type="button"
               class="tool-button-banner">
+              <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
               <p>{{ tool_item.title }}</p>
             </button>
           {% endfor %}
@@ -98,7 +99,7 @@
     class="modal-backdrop"
     style="display: none">
     <div class="modal-content">
-      <div class="close-moda-popup" onclick="closeModal()">Close</div>
+      <div class="close-moda-popup" onclick="closeModal()">×</div>
       <img
         id="modalImage"
         src=""

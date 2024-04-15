@@ -28,18 +28,9 @@
   margin-left: 5px;
 }
 .banner-button {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-}
-
-.tool-button-banner p {
-  font-family: Raleway;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  margin: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tool-button-banner {
@@ -52,48 +43,32 @@
   gap: 8px;
   flex-shrink: 0;
   cursor: pointer;
+  min-height: 54px;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background-color: #072857;
+    color: #ffffff;
+    outline: none;
+
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  p {
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0;
+  }
 }
 
-.tool-button-banner:nth-child(1) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(4) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(2) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(5) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(3) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(6) {
-  width: 136px;
-}
-.tool-button-banner:hover {
-  background-color: #072857;
-  color: #ffffff;
-}
-.tool-button-banner:active,
-.tool-button-banner.active {
-  background-color: #072857;
-  color: #ffffff;
-}
-.tool-button-banner:focus{
-  background-color:#072857;
-  color: white;
-}
-.tool-button-banner:hover img {
-  filter: invert(100%);
-}
-.tool-button-banner:active img {
-  filter: invert(100%);
-}
-.tool-button-banner:focus img {
-  filter: invert(100%);
-}
 .select-year {
   margin-top: 24px;
 }
@@ -310,16 +285,21 @@ input[type="checkbox"]:checked + label:before {
 
 // Style for map
 .tool_container {
-  .commom-class-disabled {
-    width: 25%;
+  .commom-class-disabled.map-left {
+    width: 30%;
   }
 
   .map-container {
-    width: 75%;
+    width: 70%;
 
     #map {
       width: 100%;
     }
+  }
+
+  .marker-info {
+    padding: 10px;
+    text-align: left;
   }
 
   .leaflet-control-custom {
@@ -328,6 +308,7 @@ input[type="checkbox"]:checked + label:before {
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: auto;
+    text-align: center;
   }
 
   .legend-base {
@@ -336,12 +317,16 @@ input[type="checkbox"]:checked + label:before {
     padding: 5px 10px;
     text-align: center;
 
+    img {
+      border: 1px solid black;
+    }
+
     span {
       display: block;
     }
-      
+
     &.active img {
-      border: 1px solid black;
+      border: 1px solid red;
     }
   }
 
@@ -352,8 +337,8 @@ input[type="checkbox"]:checked + label:before {
   }
 
   .legend-color {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     border-radius: 10px;
     margin-right: 8px;
     border: 1px solid black;
@@ -361,10 +346,6 @@ input[type="checkbox"]:checked + label:before {
 
   .legend-text {
     flex: 1;
-  }
-
-  .leaflet-popup-content-wrapper {
-    padding: 5px;
   }
 
   .leaflet-popup-content img {
@@ -376,13 +357,29 @@ input[type="checkbox"]:checked + label:before {
 
   .image-container {
     margin-bottom: 10px;
+    margin: 0.25em;
+
+    img {
+      max-width: 100%;
+      max-height: 80px;
+      display: block;
+    }
+
+    .title-image {
+      text-align: center;
+      color: #000;
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
-  .image-container img {
-    max-width: 100%;
-    max-height: 100px;
-    display: block;
-    margin: auto;
+  .leaflet-container a.leaflet-popup-close-button {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 100;
+    top: 4px;
+    right: 4px;
   }
 
   .leaflet-popup-content-wrapper {
@@ -390,6 +387,32 @@ input[type="checkbox"]:checked + label:before {
 
     .leaflet-popup-content {
       width: 100% !important;
+    }
+
+    .leaflet-header {
+      background-color: #072857;
+      padding: 12px;
+      color: #ffffff;
+
+      h5 {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .date-time {
+        font-size: 14px;
+      }
+    }
+    
+
+    .leaflet-body {
+      padding: 12px;
+      color: #000;
+
+      .leaflet-body-images {
+        gap: 4px;
+      }
     }
   }
 
@@ -411,18 +434,59 @@ input[type="checkbox"]:checked + label:before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 0 20px 20px;
     background: white;
     border-radius: 8px;
     max-width: 80%;
     max-height: 80%;
     overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(155, 155, 155, 0.5);
+      border-radius: 20px;
+      border: transparent;
+    }
   }
 
   .close-moda-popup {
     display: block;
     width: max-content;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1600px) {
+  .tool_container {
+    .commom-class-disabled.map-left {
+      width: 40%;
+    }
+  
+    .map-container {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .tool_container {
+    flex-wrap: wrap;
+
+    .commom-class-disabled.map-left {
+      width: 100%;
+    }
+  
+    .map-container {
+      width: 100%;
+    }
   }
 }
