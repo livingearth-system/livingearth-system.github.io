@@ -22,7 +22,7 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/news/earthtrack-tern.png
+  oldman-img: /assets/img/news/earthtrack-ternb.png
   subtitle: >
     The Earthtrack mobile application has been evaluated in Australia.  
   title: Australian evaluation of Earthtrack.
@@ -78,11 +78,10 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/rocket.png
+  oldman-img: /assets/img/news/sanddunes-livingearth.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    Living Coasts is focusing on providing detailed classifications of land cover and change in coastal and marine environments.
+  title: Living Coasts
   
 - category: "case-study"
   button:
@@ -93,7 +92,7 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/eventImage-fix.png
+  oldman-img: /assets/img/news/aus-hydroperiod.png
   subtitle: >
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
@@ -122,7 +121,7 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/forecast-fix.png
+  oldman-img: /assets/img/news/habitats.png
   subtitle: >
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
