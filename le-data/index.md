@@ -1,17 +1,15 @@
 ---
-layout: themes
+layout: page
 
 header: "Living Earth products"
-headerTop: "le-data"
+headerTop: "products"
 title: "Living Earth Products"
 subtitle: "Living Earth products are land cover, habitat and change maps and the environmental descriptors used in their construction and description."
 image: "/assets/img/le_data/australia_wofslccs.png"
 background: "#252C0B"
-nocontact: true
 nobuttons: true
-Nosvg: false
+Nosvg: true
 ---
-
 
 {%-
 include le-data.liquid
