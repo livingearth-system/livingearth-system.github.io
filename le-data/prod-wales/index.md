@@ -5,7 +5,7 @@ header: "Wales products"
 headerTop: "wales-products"
 title: "Wales Products"
 subtitle: "Wales products are generated primarily from Sentinel-1 and 2 radar and optical data acquired between 2028 and 2023"
-image: "/assets/img/le_data/australia_wofslccs.png"
+image: "/assets/img/heading/country.jpg
 background: "#252C0B"
 nobuttons: true
 Nosvg: true
