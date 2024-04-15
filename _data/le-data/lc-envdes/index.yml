@@ -1,1 +1,14 @@
-test
+- title: "WALES"
+  subtitle: "For Wales, land cover maps have been generated from 2018 to 2023 nationally from the Essential Environmental Descriptors of lifeform (woody/herbaceous) and annual water hydroperiod (time) with Additional Environmental descriptors including crop type, above ground biomass and community composition (based on habitats). "
+  image: "/assets/img/le_data/wales-waterhydroperiod.png"
+  url: "#"
+
+- title: "AUSTRALIA"
+  subtitle: "Land cover maps have, to date, been generated from for the Australian continent and islands from 1988 to 2020.  OEDs allowing mapping of vegetation are time-series of fractional cover (of photosynthetic and non-photosynthetic vegetation and bare surfaces), water hydroperiod (time) and culivated and urban areas (classified using machine learning).  EEDs are lifeform (woody and herbaceous), vegetation canopy and bare cover (%), water hydroperiod (time).   "
+  image: "/assets/img/le_data/australia_fractionalcover.png"
+  url: "#"
+
+- title: "PAPUA NEW GUINEA"
+  subtitle: "The coastal areas of Papua New Guinea have been mapped for 2022 initially and according to the FAO LCCS, with EEDs including lifeform (woody and herbaceous) and water seasonality (e.g., tidal, to differentiate mangroves).  Intertidal, supratidal and sub-tidal ecosystems are also being mapped from OEDs, with these including mangroves, sea grasses and corals."
+  image: "/assets/img/le_data/png_coastal.png"
+  url: "#"
