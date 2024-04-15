@@ -151,8 +151,7 @@
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-fnqld.png
-  subtitle: >
-Living Earth Events
+  subtitle: > Living Earth Events
   title: Coming soon
   
 - category: "events"
@@ -165,8 +164,7 @@ Living Earth Events
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-fnqld.png
-  subtitle: >
-Living Earth events
+  subtitle: > Living Earth events
   title: Coming soon
   
 - category: "events"
@@ -179,8 +177,7 @@ Living Earth events
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-fnqld.png
-  subtitle: >
-Living Earth events
+  subtitle: > Living Earth events
   title: Coming soon
   
 - category: "art"
@@ -193,8 +190,7 @@ Living Earth events
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-fnqld.png
-  subtitle: >
-Living Earth art
+  subtitle: > Living Earth art
   title: Coming soon
   
 - category: "countries"
@@ -207,8 +203,7 @@ Living Earth art
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-fnqld.png
-  subtitle: >
-Living Earth countries
+  subtitle: > Living Earth countries
   title: Coming soon
   
 - category: "themes"
@@ -221,6 +216,5 @@ Living Earth countries
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-fnqld.png
-  subtitle: >
-Living Earth themes
+  subtitle: > Living Earth themes
   title: Coming soon
