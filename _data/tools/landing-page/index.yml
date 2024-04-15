@@ -24,7 +24,7 @@
   heading: ""  
   title: "Get The Data"
   subtitle: "Download or stream the data to your computer"
-  subtitle2: "All Living Earth data are free to access and use, either through direct download or streaming through to your computer through web-map services. <br><br><br> You can also access and analyse the data without having to download or stream  by logging into your country's data cube (see ANALYSE THE DATA)"
+  subtitle2: "All Living Earth data are free to access and use, either through direct download or streaming through to your computer through web-map services. <br><br> You can also access and analyse the data without having to download or stream  by logging into your country's data cube (see ANALYSE THE DATA)"
   image: "/assets/img/getdata.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/get-the-data; /tools/get-the-data-information; /learning-hub"
