@@ -12,8 +12,8 @@
   heading: ""  
   title: "Interactive Map"
   subtitle: "Explore the landscapes of your country"
-  subtitle2: "Our Interactive maps allow you to visualise how people and nature have shaped the national landscape and what they might look like in the future under different scenarios of change. <br>
-  You can explore changes in land and water and how these might impact on biodiversity, carbon storage, water quality and other ecosystem services. <br>  
+  subtitle2: "Our Interactive maps allow you to visualise how people and nature have shaped the national landscape and what they might look like in the future under different scenarios of change. <br><br>
+  You can explore changes in land and water and how these might impact on biodiversity, carbon storage, water quality and other ecosystem services. <br><br>  
   These maps also provide an avenue for discussing the impacts of past changes and future outlooks."
   image: "/assets/img/interactiveMap.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
@@ -24,10 +24,7 @@
   heading: ""  
   title: "Get The Data"
   subtitle: "Download or stream the data to your computer"
-  subtitle2: "All Living Earth data are free to access and use, either through direct download or streaming through to your computer through web-map services. 
-
-  
-    You can also access and analyse the data without having to download or stream  by logging into your country's data cube (see ANALYSE THE DATA)"
+  subtitle2: "All Living Earth data are free to access and use, either through direct download or streaming through to your computer through web-map services. <br><br><br> You can also access and analyse the data without having to download or stream  by logging into your country's data cube (see ANALYSE THE DATA)"
   image: "/assets/img/getdata.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/get-the-data; /tools/get-the-data-information; /learning-hub"
@@ -37,13 +34,7 @@
   heading: ""  
   title: "Analyze the data"
   subtitle: "Use Living Earth data and Jupyter notebooks for analyses"
-  subtitle2: "If available for your country, log in to your data cube environment and use Jupyter notebooks to explore and interact with the the full time-series of satellite data and products derived through Living Earth. 
-  
-  
-    You can import your own spatial datasets and generate summary statistics and reports.  Tutorials and example notebooks are provided and can be adapted for your own purposes. 
-
-  
-    As an opensource data provider LIVING EARTH provides all its data, algorithms and process strategies for free. We would like to invite you to join the global effort working towards sustainable land management by using our data to solutions."
+  subtitle2: "If available for your country, log in to your data cube environment and use Jupyter notebooks to explore and interact with the the full time-series of satellite data and products derived through Living Earth. <br><br> You can import your own spatial datasets and generate summary statistics and reports.  Tutorials and example notebooks are provided and can be adapted for your own purposes. <br><br> As an opensource data provider LIVING EARTH provides all its data, algorithms and process strategies for free. We would like to invite you to join the global effort working towards sustainable land management by using our data to solutions."
   image: "/assets/img/analyzeData.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/analyze-the-data; /tools/analyze-the-data-information; /learning-hub"
@@ -53,13 +44,7 @@
   heading: ""  
   title: "EarthTrack app"
   subtitle: "Collecting and accessing field observations"
-  subtitle2: "Earthtrack is a mobile application which allows people to record information on land cover, habitat and change in near real time. 
-
-  
-    All submitted data accumulate historically and are freely available to use (see GET THE DATA) and are collected using globally-consistent terms.  All points submitted contribute to validation of Living Earth products for your country. 
-
-  
-    Earthtrack is free to download from the major app stores but make sure you read the terms and conditions before using and submitting records as all data are publicly accessible and open to use."
+  subtitle2: "Earthtrack is a mobile application which allows people to record information on land cover, habitat and change in near real time. <br><br> All submitted data accumulate historically and are freely available to use (see GET THE DATA) and are collected using globally-consistent terms.  All points submitted contribute to validation of Living Earth products for your country. <br><br> Earthtrack is free to download from the major app stores but make sure you read the terms and conditions before using and submitting records as all data are publicly accessible and open to use."
   image: "/assets/img/earthTrackApp.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   download: "/assets/img/organisations.png; /assets/img/organisations.png"
@@ -70,10 +55,7 @@
   heading: ""  
   title: "Organisation specific site"
   subtitle: "Helping to support the public and private sector"
-  subtitle2: "Living Earth has been developed to provide information to all people that can be used to ensure sustainable use of landscapes and increase their capacity to recover nature so that we all benefit from increased biodiversity and carbon sequestration and improvements in the quality of our land and our well-being. 
-
-
-    This section allows users, groups or organisations to select specific areas of their country, whether these be a farm, nature reserve or proposed sites for restoration, and generate maps and statistics of past and current states and conditions and how these might be enhanced for benefits of people and nature."
+  subtitle2: "Living Earth has been developed to provide information to all people that can be used to ensure sustainable use of landscapes and increase their capacity to recover nature so that we all benefit from increased biodiversity and carbon sequestration and improvements in the quality of our land and our well-being. <br><br> This section allows users, groups or organisations to select specific areas of their country, whether these be a farm, nature reserve or proposed sites for restoration, and generate maps and statistics of past and current states and conditions and how these might be enhanced for benefits of people and nature."
   image: "/assets/img/organisationSpecificeSite.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/industry-specific-site; /tools/industry-specific-site; /learning-hub"
