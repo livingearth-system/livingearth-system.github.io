@@ -12,13 +12,9 @@
   heading: ""  
   title: "Interactive Map"
   subtitle: "Explore the landscapes of your country"
-  subtitle2: "Our Interactive maps allow you to visualise how people and nature have shaped the national landscape and what they might look like in the future under different scenarios of change. 
-
-  
-    You can explore changes in land and water and how these might impact on biodiversity, carbon storage, water quality and other ecosystem services. 
-
-  
-    These maps also provide an avenue for discussing the impacts of past changes and future outlooks."
+  subtitle2: "Our Interactive maps allow you to visualise how people and nature have shaped the national landscape and what they might look like in the future under different scenarios of change. <br>
+  You can explore changes in land and water and how these might impact on biodiversity, carbon storage, water quality and other ecosystem services. <br>  
+  These maps also provide an avenue for discussing the impacts of past changes and future outlooks."
   image: "/assets/img/interactiveMap.png"
   button: "Jump Right In; Learn more about this tool; Tutorials"
   url: "/tools/interactive-map; /tools/interactive-map-information; /learning-hub"
