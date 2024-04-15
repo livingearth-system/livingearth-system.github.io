@@ -10,9 +10,8 @@
   min: 1 min read
   oldman-img: /assets/img/wales/welshdatacube_a.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 images acquired over Wales and is being made available for more general use.
+  title: The Welsh Data Cube
 - category: "research"
   button:
     - class: button-1
