@@ -1,16 +1,16 @@
 - title: "LEVEL 3 CATEGORIES"
   subtitle: "The Level 3 categories for Papua New Guinea currently uses a combination of Landsat-derived fractional cover and water observations from space (Wofs) respectively to map the extent of vegetation and water (natural and artificial).  External layers including Global Mangrove Watch mangrove extent to represent natural aquatic vegetation (from which woody lifeform and tidal water seasonality is inferred) and Open Street Map to capture artificial surfaces. "
-#  image: "/assets/img/le_data/wales/product-wales-lccs3.png"
+  image: "/assets/img/le_data/png/PNG_bluecarbonecosystems.png"
   url: "#"
 
 - title: "LIFEFORM"
   subtitle: "Woody lifeforms are differentiated from those that are herbaceous using thresholds applied to time-series of Sentinel-1 C-band SAR data.  Areas of mangroves are further associated with a woody lifeform."
-#  image: "/assets/img/le_data/wales/product-wales-habitat.png"
+  image: "/assets/img/le_data/png/PNG_mangroves.png"
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4695952"
   
 - title: "WATER HYDROPERIOD"
   subtitle: "Defined through temporal thresholding of time-series of Landsat sensor data."
-#  image: "/assets/img/le_data/wales/product-wales-hydroperiod.png"
+  image: "/assets/img/le_data/png/png-waterhydroperiod.png"
   url: "#"
 
 - title: "MANGROVES"
