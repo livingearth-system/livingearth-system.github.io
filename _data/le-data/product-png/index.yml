@@ -5,7 +5,7 @@
 
 - title: "LIFEFORM"
   subtitle: "Woody lifeforms are differentiated from those that are herbaceous using thresholds applied to time-series of Sentinel-1 C-band SAR data.  Areas of mangroves are further associated with a woody lifeform."
-  image: "/assets/img/le_data/wales/product-wales-habitat.png"
+#  image: "/assets/img/le_data/wales/product-wales-habitat.png"
   url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4695952"
   
 - title: "WATER HYDROPERIOD"
