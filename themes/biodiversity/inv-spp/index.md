@@ -1,8 +1,8 @@
 ---
 layout: page
 
-header: "Themes"
-headerTop: "Biodiversity"
+header: "Biodiversity"
+headerTop: "Themes"
 title: "Invasive Species"
 subtitle: ""
 image: "/assets/img/themes/biodiversity/inv-spp.jpg"
