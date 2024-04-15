@@ -20,7 +20,7 @@
 
 - title: "SEA GRASS"
   subtitle: "Areas of sea grass are mapped using time-series of Landsat sensor data, with reliability depending upon the frequency of observations without cloud or periods of turbid water."
-  image: "/assets/img/le_data/png/png-seagrass.png.png"
+  image: "/assets/img/le_data/png/png-seagrass.png"
   url: "#" 
 
 - title: "CORALS"
