@@ -36,9 +36,8 @@
   min: 1 min read
   oldman-img: /assets/img/living_coasts/landslides_cyclonejasper.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    Following flooding along the Daintree River in Far North Queensland, substantive erosion of the river banks was observed, with damage to the marginal rainforests being particularly noticeable.   
+  title: Erosion along the Daintree River
 - category: "research"
   button:
     - class: button-1
@@ -50,9 +49,8 @@
   min: 1 min read
   oldman-img: /assets/img/living_coasts/intertida.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    When recording information in the intertidal zone, all areas should be associated with water as if it was high tide.
+  title: Earthtrack users - water or bare ground
 - category: "case-study"
   button:
     - class: button-2
