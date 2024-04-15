@@ -17,21 +17,20 @@
     - class: button-1
       id: button1
       name: Research
-  date: Sep 11, 2022
+  date: April 15, 2024
   href: '#'
   id: infor
   min: 5 min read
   oldman-img: /assets/img/oldman-fix.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: This is test for news
+    The Earthtrack mobile application has been evaluated in Australia.  EarthTrack Mangroves component of the app has been developed to support the validation of the global mangrove maps generated through the Global Mangrove Watch and has been supported by TERN, the European Regional Development Fund, Geoscience Australia and many other organisations around the world.
+  title: Australian evaluation of Earthtrack
 - category: "research"
   button:
     - class: button-1
       id: button1
       name: Research
-  date: Sep 11, 2022
+  date: April 15, 2024
   href: '#'
   id: infor
   min: 1 min read
