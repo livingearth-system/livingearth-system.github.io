@@ -12,6 +12,7 @@
   subtitle: >
     The Welsh Data Cube stores the entire archive of Sentinel-1 and Sentinel-2 images acquired over Wales and is being made available for more general use.
   title: The Welsh Data Cube
+  
 - category: "research"
   button:
     - class: button-1
@@ -21,10 +22,11 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/oldman-fix.png
+  oldman-img: /assets/img/news/earthtrack-tern.png
   subtitle: >
-    The Earthtrack mobile application has been evaluated in Australia.  EarthTrack Mangroves component of the app has been developed to support the validation of the global mangrove maps generated through the Global Mangrove Watch and has been supported by TERN, the European Regional Development Fund, Geoscience Australia and many other organisations around the world.
-  title: Australian evaluation of Earthtrack
+    The Earthtrack mobile application has been evaluated in Australia.  
+  title: Australian evaluation of Earthtrack.
+  
 - category: "research"
   button:
     - class: button-1
@@ -38,6 +40,7 @@
   subtitle: >
     Following flooding along the Daintree River in Far North Queensland, substantive erosion of the river banks was observed, with damage to the marginal rainforests being particularly noticeable.   
   title: Erosion along the Daintree River
+  
 - category: "research"
   button:
     - class: button-1
@@ -51,6 +54,7 @@
   subtitle: >
     When recording information in the intertidal zone, all areas should be associated with water as if it was high tide.
   title: Earthtrack users - water or bare ground
+  
 - category: "case-study"
   button:
     - class: button-2
@@ -65,6 +69,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "case-study"
   button:
     - class: button-2
@@ -79,6 +84,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "case-study"
   button:
     - class: button-2
@@ -93,6 +99,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "news"
   button:
     - class: button-3
@@ -107,6 +114,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "news"
   button:
     - class: button-3
@@ -121,6 +129,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "news"
   button:
     - class: button-3
@@ -135,6 +144,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "events"
   button:
     - class: button-4
@@ -149,6 +159,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "events"
   button:
     - class: button-4
@@ -163,6 +174,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "events"
   button:
     - class: button-4
@@ -177,6 +189,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "art"
   button:
     - class: button-7
@@ -191,6 +204,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "countries"
   button:
     - class: button-9
@@ -205,6 +219,7 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: How AI can improve the speed and accuracy of geological researches
+  
 - category: "themes"
   button:
     - class: button-8
