@@ -5,7 +5,7 @@ permalink: /tools/earthtrack-app-information/
 header: "About"
 headerTop: "Tools"
 title: "Earthtrack App"
-subtitle: "Living Earth vision and mission and pathways to achievement."
+subtitle: "The Earthtrack mobile application allows recording of land cover and change impacts and pressures in the field, with the information collected directly supporting the development of thematic products from Earth observations."
 image: "/assets/img/heading/enviromental.png"
 background: "#252C0B"
 nocontact: true
@@ -23,7 +23,7 @@ heading="Opensource Tools for earth scientists & policymakers"
 {%-
 include earthtrack-app.liquid
 heading="Earthtrack App"
-first-paragraph="Earthtrack is a multi-module mobile application that was developed through Living   Earth to routinely,
+first-paragraph="Earthtrack is a multi-module mobile application that was developed through Living Earth to routinely,
         consistently and globally record information on land cover (including vegetation strata) and land cover change
         with additional modules focused on country-specific habitats and fire. Earthtrack has been developed to support
         the validation of thematic maps generated primarily from Earth observation data and using globally applicable
@@ -34,5 +34,5 @@ third-paragraph="Earthtrack has been designed to be used by a wide range of user
         knowledge (e.g., citizen scientists, park rangers or academic researchers). Data submitted can be used directly
         to validate mpas of land cover, habitat and change generated primarily from Earth observation data where these
         use the same land cover and change taxonomies. These are, respectively, the Food and Agriculture Organisation
-        (FAO) Land Cover Classification System (LCCS) and Living Earth’s Global Change Taxonomy."
+        (FAO) Land Cover Classification System (LCCS) and Living Earth’s Global Change Taxonomy. Earthtrack can be downloaded from the Google Play Store (https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en&gl=US) and Apple Store (https://apps.apple.com/us/app/earthtrack/id1610357134)"
 -%}
