@@ -123,8 +123,7 @@
   min: 5 min read
   oldman-img: /assets/img/news/habitats.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
+    A new study from Living Wales is highlighting the importance of using contextual information to support mapping of habitats.
   title: New paper on Living Wales and habitats
   
 - category: "news"
@@ -152,9 +151,8 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    Digital Earth Australia has released maps of the intertidal elevation and other attributes from time-series of Sentinel-2 data. 
+  title: Release of national intertidal datasets for Australia
 - category: "events"
   button:
     - class: button-4
@@ -166,9 +164,8 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    Dr. Nezha Acil is presenting on the use of FAO LCCS and Change Framework for understanding change impacts and driving pressures on woody biomass, as mapped through the ESA CCI Biomass project.
+  title: European General Assembly 2024
 - category: "events"
   button:
     - class: button-4
@@ -180,9 +177,8 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    To be held at the Adelaide Convention Centre from 10-12 September, 2024.
+  title: The Advancing Earth Observation Forum, Australia
 - category: "art"
   button:
     - class: button-7
@@ -194,9 +190,8 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    The Earthtrack mobile app is used to record observations of land cover and change including some spectacular photographs.
+  title: Earthtrack photographs of our planet
 - category: "countries"
   button:
     - class: button-9
@@ -208,9 +203,8 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    Papua New Guinea is one of the countries being studied in Living Coasts, with a view to providing new information on blue carbon ecosystems.
+  title: Living Coasts informing Papua New Guinea
 - category: "themes"
   button:
     - class: button-8
@@ -222,6 +216,5 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Living Earth is an open resource that allows individuals, groups, organisations
-    and countries/regions to better understand the environment and make informed decisions.
-  title: How AI can improve the speed and accuracy of geological researches
+    Our themes section is now populated with information on land and water, change, biodiversity, accounts and futures.
+  title: The Themes section of Living Earth.
