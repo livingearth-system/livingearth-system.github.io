@@ -4,7 +4,7 @@ layout: page
 header: "Biodiversity"
 headerTop: "Themes"
 title: "Invasive Species"
-subtitle: "Although there are almost 2,000 established non-native species in Great Britain, only a small number of these are considered to be threateningly invasive."
+subtitle: "Although there are almost 2,000 established non-native species in Great Britain, only a small number of these are considered to be threateningly invasive "
 image: "/assets/img/themes/biodiversity/inv-spp.jpg"
 background: "#072857"
 nocontact: true
