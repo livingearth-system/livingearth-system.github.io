@@ -4,7 +4,7 @@ layout: page
 header: "Biodiversity"
 headerTop: "Themes"
 title: "Yellowhammer Breeding Survey"
-subtitle: "The song of the Yellowhammer <i>Emberiza citrinella</i>was a familiar sound in the Welsh countryside as recently as the 1980s when, for example, the Pembrokeshire breeding population was estimated to be between 13,000 and 18,000 pairs."
+subtitle: "The song of the Yellowhammer <i>Emberiza citrinella</i> was a familiar sound in the Welsh countryside as recently as the 1980s when, for example, the Pembrokeshire breeding population was estimated to be between 13,000 and 18,000 pairs."
 image: "/assets/img/themes/biodiversity/emberiza.jpg"
 background: "#072857"
 nocontact: true
