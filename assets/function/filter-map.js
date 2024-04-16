@@ -239,6 +239,7 @@ class LeafletMap {
         this.map.setView(new L.LatLng(coords[0], coords[1]), zoom);
     }
 
+    // Load data json by file name
 	async loadData(jsonFileName) {
         try {
             const response = await fetch(`/assets/json/${jsonFileName}.json`);

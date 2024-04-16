@@ -290,6 +290,9 @@ input[type="checkbox"]:checked + label:before {
   }
 
   .map-container {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
     width: 70%;
 
     #map {
