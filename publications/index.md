@@ -15,7 +15,7 @@ Nosvg: true
 
 {%-
 include publications.liquid
-header="GLOBAL <br><ul>Lucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., Richards, A.E., Tetreault‐Campbell, S., Williams, K.J., Mueller, N. and Tissott, B., 2022. A globally relevant change taxonomy and evidence‐based change framework for land monitoring. Global Change Biology, 28(21), pp.6293-6317. DOI: 10.1111/gcb.16346.</ul>
+header="GLOBAL <br><ul>Lucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., Richards, A.E., Tetreault‐Campbell, S., Williams, K.J., Mueller, N. and Tissott, B., 2022. A globally relevant change taxonomy and evidence‐based change framework for land monitoring. Global Change Biology, 28(21), pp.6293-6317.[DOI:](10.1111/gcb.16346).</ul>
 
 <br><ul> UNITED KINGDOM</ul>
 <br><ul> Planque, C., Lucas, R., Punalekar, S., Chognard, S., Hurford, C., Owers, C., Horton, C., Guest, P., King, S., Williams, S., & Bunting, P. (2021). National crop mapping using sentinel-1 time series: A knowledge-based descriptive algorithm. Remote Sensing, 13(5), Article 846. https://doi.org/10.3390/rs13050846. </ul>
