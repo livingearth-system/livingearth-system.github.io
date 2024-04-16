@@ -23,23 +23,22 @@
   content: "Example in preparation "
   url: "#"
 
-- title: "6-04091. Bare soil exposure (burning)"
+- title: "6-04011. Bare soil exposure (burning)"
   image: "/assets/img/themes/change/impacts.png"
   content: "Example in preparation"
   url: "#"
 
-- title: "7-04011. Bare soil exposure (erosion)"
+- title: "7-04035. Bare soil exposure (erosion)"
   image: "/assets/img/themes/change/impacts.png"
   content: "Example in preparation"
   url: "#"
 
- - title: "8-04091. Bare soil exposure (ploughing)"
+- title: "8-04091. Bare soil exposure (ploughing)"
   image: "/assets/img/themes/change/impacts.png"
   content: "Example in preparation"
   url: "#"
 
-- title: "Bare soil exposure (tillage)"
-  subtitle: "9-04126"
+- title: "9-04126. Bare soil exposure (tillage)"
   image: "/assets/img/themes/change/impacts.png"
   content: "Example in preparation"
   url: "#"
