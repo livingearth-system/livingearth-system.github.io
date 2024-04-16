@@ -15,19 +15,19 @@ Nosvg: true
 
 {%-
 include publications.liquid
-header="GLOBAL <br><ul>Lucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., Richards, A.E., Tetreault‐Campbell, S., Williams, K.J., Mueller, N. and Tissott, B., 2022. A globally relevant change taxonomy and evidence‐based change framework for land monitoring. Global Change Biology, 28(21), pp.6293-6317.[DOI:](10.1111/gcb.16346).</ul>
+header="GLOBAL <br><ul>Lucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., Richards, A.E., Tetreault‐Campbell, S., Williams, K.J., Mueller, N. and Tissott, B., 2022. A globally relevant change taxonomy and evidence‐based change framework for land monitoring. [Global Change Biology, 28(21), pp.6293-6317.](https://doi.org/10.1111/gcb.16346).</ul>
 
 <br><ul> UNITED KINGDOM</ul>
-<br><ul> Planque, C., Lucas, R., Punalekar, S., Chognard, S., Hurford, C., Owers, C., Horton, C., Guest, P., King, S., Williams, S., & Bunting, P. (2021). National crop mapping using sentinel-1 time series: A knowledge-based descriptive algorithm. Remote Sensing, 13(5), Article 846. https://doi.org/10.3390/rs13050846. </ul>
+<br><ul> Planque, C., Lucas, R., Punalekar, S., Chognard, S., Hurford, C., Owers, C., Horton, C., Guest, P., King, S., Williams, S., & Bunting, P. (2021). National crop mapping using sentinel-1 time series: A knowledge-based descriptive algorithm. [Remote Sensing, 13(5), Article 846. ](https://doi.org/10.3390/rs13050846.) </ul>
 
 Planque, C., Punalekar, S., Lucas, R., Chognard, S., Owers, C.,J., Clewley, D., Bunting, P., Sykes, H., Horton, C.. (2020). Living Wales: automatic and routine environmental monitoring using multi-source Earth observation data. Proceedings Volume 11534, Earth Resources and Environmental Remote Sensing/GIS Applications XI; 115340C https://doi.org/10.1117/12.2573763.</ul>
 
 <br><ul> AUSTRALIA</ul>
 <br><ul> Christopher J. Owers, Richard M. Lucas, Daniel Clewley, Belle Tissott, Sean M. T. Chua, Gabrielle Hunt, Norman Mueller, Carole Planque, Suvarna M. Punalekar, Pete Bunting, Peter Tan & Graciela Metternicht (2022) Operational continental-scale land cover mapping of Australia using the Open Data Cube, International Journal of Digital Earth, 15:1, 1715-1737, DOI: 10.1080/17538947.2022.2130461.</ul>
 
-Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B., Chua, S. M. T., Bunting, P., Mueller, N., & Metternicht, G. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3), 368-390. https://doi.org/10.1080/20964471.2021.1948179.
+Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B., Chua, S. M. T., Bunting, P., Mueller, N., & Metternicht, G. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3), 368-390. https://doi.org/10.1080/20964471.2021.1948179.</ul>
 
-<br><ul>(see also: https://docs.dea.ga.gov.au/guides/about/publications/)</ul>
+<br><ul>(See also: https://docs.dea.ga.gov.au/guides/about/publications/)</ul>
 
 <br><ul> SWITZERLAND</ul>
 
@@ -63,7 +63,7 @@ Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B.
 
 <br><ul> Giuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD). Big Earth Data 1(1):1-18 https://doi.org/10.1080/20964471.2017.1398903. </ul>
 
-<br><ul> (see also: (see also https://www.swissdatacube.org/index.php/publications/))</ul> 
+<br><ul> (See also: (see also https://www.swissdatacube.org/index.php/publications/))</ul> 
 
 <br><ul> SOUTHEAST ASIA (MALAYSIA, PAPUA NEW GUINEA).</ul>
 <br><ul> Lucas, R.; Otero, V.; Van De Kerchove, R.; Lagomasino, D.; Satyanarayana, B.; Fatoyinbo, T.; Dahdouh-Guebas, F. Monitoring Matang’s Mangroves in Peninsular Malaysia through Earth Observations: A Globally Relevant Approach. Land Degrad. Dev. 2021, 32, 354–373. </ul> 
