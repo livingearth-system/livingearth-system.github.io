@@ -1,14 +1,14 @@
 - title: "WALES"
-  subtitle: "For Wales, land cover maps have been generated from 2018 to 2023 nationally from the Essential Environmental Descriptors of lifeform (woody/herbaceous) and annual water hydroperiod (time) with Additional Environmental descriptors including crop type, above ground biomass and community composition (based on habitats). "
+  subtitle: "For Wales, a wide range of environmental descriptors are needed to classify land covers in this mountainous temperate oceanic country, particularly given the prevalence of human-influenced landscapes. "
   image: "/assets/img/le_data/wales-waterhydroperiod.png"
   url: "../europe/wales/data/environmental-descriptors/"
 
 - title: "AUSTRALIA"
-  subtitle: "Land cover maps have, to date, been generated from for the Australian continent and islands from 1988 to 2020.  OEDs allowing mapping of vegetation are time-series of fractional cover (of photosynthetic and non-photosynthetic vegetation and bare surfaces), water hydroperiod (time) and culivated and urban areas (classified using machine learning).  EEDs are lifeform (woody and herbaceous), vegetation canopy and bare cover (%), water hydroperiod (time).   "
+  subtitle: "Australia is a diverse country with climates ranging from temperate to tropical and wet to arid and variable topography, soils and geologies that collective impact on characteristics of water, vegetation and naturally bare surfaces. "
   image: "/assets/img/le_data/australia_fractionalcover.png"
   url: "../oceania/australia/data/environmental-descriptors/"
 
 - title: "PAPUA NEW GUINEA"
-  subtitle: "The coastal areas of Papua New Guinea have been mapped for 2022 initially and according to the FAO LCCS, with EEDs including lifeform (woody and herbaceous) and water seasonality (e.g., tidal, to differentiate mangroves).  Intertidal, supratidal and sub-tidal ecosystems are also being mapped from OEDs, with these including mangroves, sea grasses and corals."
+  subtitle: "Located in the tropics but with climate varying from the lowlands to the high mountains, Papua New Guinea supports many different land and seascapes.  Many of the environmental descriptors can be accessed through Papua New Guinea's Environmental Portal, which will be summary similar to that provided for Wales and Australia forthcoming soon"
   image: "/assets/img/le_data/png_coastal.png"
   url: "https://png-data.sprep.org/"
