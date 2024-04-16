@@ -1,7 +1,7 @@
 - title: "See on Map"
   subtitle: "Environmental descriptors, land cover, habitats and change"
   image: "/assets/img/tools1.jpg"
-  url: "https://earthtrack.aber.ac.uk/livingwales/maps.html"
+  url: "/tools/earthtrack-app?country=Wales"
   newtab: true
 
 - title: "Get the data"

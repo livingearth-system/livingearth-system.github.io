@@ -80,22 +80,20 @@
     <div class="country-subpage-welcome-living-button d-flex justify-content-xs-center justify-content-md-start mt-3">
       {%- if nobuttons != true -%}
         {%- if button1 != 'none' -%}
-          <button
-            type="button"
-            onclick="location.href='{{ button1_url | default: "/contact/" }}'"
+          <a
+            href="{{ button1_url | default: "/contact/" }}"
             class="country-subpage-search"
           >
             {{ button1 | default: 'Contact Us' }}
-          </button>
+          </a>
         {%- endif %}
         {%- if button2 != 'none' -%}
-          <button
-            type="button"
-            onclick="location.href='{{ button2_url | default: "/contribute/" }}'"
+          <a
+            href="{{ button2_url | default: "/contribute/" }}"
             class="country-subpage-get-in-touch"
           >
             {{ button2 | default: 'Contribute' }}
-          </button>
+          </a>
         {%- endif %}
       {% endif %}
     </div>
