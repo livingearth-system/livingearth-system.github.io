@@ -27,7 +27,7 @@ Planque, C., Punalekar, S., Lucas, R., Chognard, S., Owers, C.,J., Clewley, D., 
 
 Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B., Chua, S. M. T., Bunting, P., Mueller, N., & Metternicht, G. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3), 368-390. https://doi.org/10.1080/20964471.2021.1948179.</ul>
 
-<br><ul>(See also: https://docs.dea.ga.gov.au/guides/about/publications/)</ul>
+<br><br>(See also: https://docs.dea.ga.gov.au/guides/about/publications/)
 
 <br><ul> SWITZERLAND</ul>
 
@@ -63,7 +63,7 @@ Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B.
 
 <br><ul> Giuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD). Big Earth Data 1(1):1-18 https://doi.org/10.1080/20964471.2017.1398903. </ul>
 
-<br><ul> (See also: (see also https://www.swissdatacube.org/index.php/publications/))</ul> 
+<br><br>(See also: (see also https://www.swissdatacube.org/index.php/publications/))
 
 <br><br>SOUTHEAST ASIA (MALAYSIA, PAPUA NEW GUINEA).
 <br><ul> Lucas, R.; Otero, V.; Van De Kerchove, R.; Lagomasino, D.; Satyanarayana, B.; Fatoyinbo, T.; Dahdouh-Guebas, F. Monitoring Matang’s Mangroves in Peninsular Malaysia through Earth Observations: A Globally Relevant Approach. Land Degrad. Dev. 2021, 32, 354–373. </ul> 
