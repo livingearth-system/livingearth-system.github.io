@@ -1,0 +1,14 @@
+<div class="container">
+  {% if include.header %}
+    <div class="section-hero-text">
+      <p>{{ include.header }}</p>
+    </div>
+  {% endif %}
+  {% if include.title %}
+    <div class="row">
+      <p class="new-about-title col-12">
+        {{ include.title }}
+      </p>
+    </div>
+  {% endif %}
+</div>
