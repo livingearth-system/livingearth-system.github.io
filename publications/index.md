@@ -25,11 +25,11 @@ Planque, C., Punalekar, S., Lucas, R., Chognard, S., Owers, C.,J., Clewley, D., 
 <br><br>AUSTRALIA
 <br><ul> Christopher J. Owers, Richard M. Lucas, Daniel Clewley, Belle Tissott, Sean M. T. Chua, Gabrielle Hunt, Norman Mueller, Carole Planque, Suvarna M. Punalekar, Pete Bunting, Peter Tan & Graciela Metternicht (2022) Operational continental-scale land cover mapping of Australia using the Open Data Cube, International Journal of Digital Earth, 15:1, 1715-1737, DOI: 10.1080/17538947.2022.2130461.</ul>
 
-Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B., Chua, S. M. T., Bunting, P., Mueller, N., & Metternicht, G. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3), 368-390. https://doi.org/10.1080/20964471.2021.1948179.</ul>
+Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B., Chua, S. M. T., Bunting, P., Mueller, N., & Metternicht, G. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3), 368-390. https://doi.org/10.1080/20964471.2021.1948179.
 
 <br><br>(See also: https://docs.dea.ga.gov.au/guides/about/publications/)
 
-<br><ul> SWITZERLAND</ul>
+<br><br>SWITZERLAND
 
 <br><ul> Annoni, A., Nativi, S., Çöltekin, A., Desha, C., Eremchenko, E., Gevaert, C.M., Giuliani, G., Chen, M., Perez-Mora, L., Strobl, J. and Tumampos, S., 2023. Digital earth: yesterday, today, and tomorrow. International Journal of Digital Earth, 16(1), pp.1022-1072. https://doi.org/10.1080/17538947.2023.2187467. </ul> 
 
@@ -49,7 +49,7 @@ Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B.
 
 <br><ul> Giuliani G., Rodila D., Külling N., Maggini R., Lehmann A. (2022) Downscaling Switzerland Land Use/Land Cover data using nearest neighbors and an expert system, Land 11(5):615 https://doi.org/10.3390/land11050615.</ul> 
 
-<br><ul> Lehmann A., Mazzetti P., Santoro M., Masó J., Serral I., Spengler D., Niamir A., Lacroix P., Ambrosone M., McCallum I., Kussul N., Patias P., Rodila D., Ray N., Giuliani G. (2022) Essential Variables from Earth Observation for environmental multi-scale indicators and policies. Environmental Science and Policy 131:105-117 https://doi.org/10.1016/j.envsci.2021.12.024 ></ul>
+<br><ul> Lehmann A., Mazzetti P., Santoro M., Masó J., Serral I., Spengler D., Niamir A., Lacroix P., Ambrosone M., McCallum I., Kussul N., Patias P., Rodila D., Ray N., Giuliani G. (2022) Essential Variables from Earth Observation for environmental multi-scale indicators and policies. Environmental Science and Policy 131:105-117 https://doi.org/10.1016/j.envsci.2021.12.024. </ul>
 
 <br><ul> Chatenoux B., Richard J.-P. Small D., Roeoesli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021) The Swiss Data Cube: Analysis Ready Data archive using Earth Observations of Switzerland, Nature Scientific Data. 8:295 https://doi.org/10.1038/s41597-021-01076-6. </ul>
 
@@ -63,9 +63,10 @@ Owers, C. J., Lucas, R. M., Clewley, D., Planque, C., Punalekar, S., Tissott, B.
 
 <br><ul> Giuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD). Big Earth Data 1(1):1-18 https://doi.org/10.1080/20964471.2017.1398903. </ul>
 
-<br><br>(See also: (see also https://www.swissdatacube.org/index.php/publications/))
+<br>See also https://www.swissdatacube.org/index.php/publications/))
 
 <br><br>SOUTHEAST ASIA (MALAYSIA, PAPUA NEW GUINEA).
+
 <br><ul> Lucas, R.; Otero, V.; Van De Kerchove, R.; Lagomasino, D.; Satyanarayana, B.; Fatoyinbo, T.; Dahdouh-Guebas, F. Monitoring Matang’s Mangroves in Peninsular Malaysia through Earth Observations: A Globally Relevant Approach. Land Degrad. Dev. 2021, 32, 354–373. </ul> 
 
 <br><ul> Lucas, R., Van De Kerchove, R., Otero, V., Lagomasino, D., Fatoyinbo, L., Omar, H., Satyanarayana, B. and Dahdouh-Guebas, F. (2020).  Structural characterisation of mangrove forests achieved through combining multiple sources of remote sensing data. Remote Sensing of Environment. 237, 111543.</ul>
