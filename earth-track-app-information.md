@@ -34,6 +34,5 @@ third-paragraph="Earthtrack has been designed to be used by a wide range of user
         knowledge (e.g., citizen scientists, park rangers or academic researchers). Data submitted can be used directly
         to validate mpas of land cover, habitat and change generated primarily from Earth observation data where these
         use the same land cover and change taxonomies. These are, respectively, the Food and Agriculture Organisation
-        (FAO) Land Cover Classification System (LCCS) and Living Earth’s Global Change Taxonomy. 
-fourth-paragraph="Earthtrack can be downloaded from the Google Play Store (https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en&gl=US) and Apple Store (https://apps.apple.com/us/app/earthtrack/id1610357134)"
+        (FAO) Land Cover Classification System (LCCS) and Living Earth’s Global Change Taxonomy. Earthtrack can be downloaded from the Google Play Store (https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en&gl=US) and Apple Store (https://apps.apple.com/us/app/earthtrack/id1610357134)"
 -%}
