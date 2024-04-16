@@ -1,15 +1,13 @@
 - title: "Exploring Living Earth products"
-  subtitle: "Our Interactive map of the country provides a platform for visualizing how people and nature have shaped the landscapes we see today. These maps have been obtained primarily from historical satellite data and are updated through near daily observations.
-
+  subtitle: "Using the Living Earth approach, maps of land cover have been generated for Wales, Australia and, more recently, the coastal zones of Papua New Guinea. The map interface for Wales is being upgraded to provide a new interactive map and whils this is being developed, please select 'Countries > Wales > TOOLS: See it on a Map' to access the products from 2018-2023.  Those for Australia are available by selecting 'Countries > Australia > TOOLS: See it on a Map'.  
   
+  These maps provide a platform for visualizing how people and nature have shaped the landscapes we see today. These maps have been obtained primarily from historical satellite data and are updated through near daily observations.
+
   Initially, select the broad land cover as the base map, and then add layers that represent different categorical (e.g., crop type) or continuous (e.g., water persistence, above ground biomass) environmental descriptors to give more detail. See the video for a
 
-  
   View maps of habitat extent (for Wales only), with these generated through direct translation of some classes (e.g., broadleaved forest) from the land cover map or by splitting mapped classes using contextual information (e.g., the extent of peatlands or coastal environments).
 
-
   Compare maps of land cover or habitats for any two dates to highlight areas of significant change and explore the evidence for change impacts and driving pressures.
-
   
   See the video for a step-by-step guide to displaying the environmental descriptors and maps of land cover, habitats and change."
   subtitle-link: "A full list of layers is available here and can be downloaded from"
