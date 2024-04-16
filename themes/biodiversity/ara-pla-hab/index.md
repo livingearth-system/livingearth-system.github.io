@@ -5,7 +5,7 @@ header: "Biodiversity"
 headerTop: "Themes"
 title: "Arable Plant Habitats"
 subtitle: "Cultivated habitats have been a widespread component of the British landscape for some 8000 years and a whole ecosystem of plants, birds, mammals and invertebrates has adapted to live in these habitats "
-image: "/assets/img/themes/biodiversity/inv-spp.jpg"
+image: "/assets/img/themes/biodiversity/ara-pla-hab.jpg"
 background: "#072857"
 nocontact: true
 nobuttons: true
