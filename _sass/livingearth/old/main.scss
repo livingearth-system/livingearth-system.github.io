@@ -3286,10 +3286,14 @@ letter-spacing: 0.5px;
   outline: none;
 }
 
-.country-subpage-get-in-touch:hover,
 .country-subpage-search:hover {
   text-decoration: none;
   color: #000;
+}
+
+.country-subpage-get-in-touch:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .country-subpage-search {
