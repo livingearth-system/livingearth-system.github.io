@@ -3286,6 +3286,12 @@ letter-spacing: 0.5px;
   outline: none;
 }
 
+.country-subpage-get-in-touch:hover,
+.country-subpage-search:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 .country-subpage-search {
   width: 182px;
   font-size: 15px;
@@ -3295,6 +3301,12 @@ letter-spacing: 0.5px;
   text-transform: capitalize;
   outline: none;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  text-align: center;
 
   &+.country-subpage-get-in-touch {
     margin-left: 10px;
@@ -3309,6 +3321,10 @@ letter-spacing: 0.5px;
   background: #0000;
   height: 48px;
   margin-left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 
