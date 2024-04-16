@@ -1,6 +1,6 @@
 - title: "See on Map"
   image: "/assets/img/tools1.jpg"
-  url: "https://maps.dea.ga.gov.au/story/DEALandCover"
+  url: "/tools/earthtrack-app?country=Australia"
   newtab: true
 
 - title: "Get the data"
