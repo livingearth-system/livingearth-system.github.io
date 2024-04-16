@@ -15,5 +15,5 @@ Noheader: true
 
 {%-
 include impact-pressure.liquid
-header="Impacts and pressures"
+header="Impact and pressure examples"
 -%}
