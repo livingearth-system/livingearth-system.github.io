@@ -21,7 +21,7 @@ Nosvg: false
 ---
 {%-
 include opensource-tools.liquid
-heading="Opensource Tools for earth scientists & policymakers"
+heading="Opensource Tools for Earth scientists, land managers & policymakers"
 -%}
 
 {%-
