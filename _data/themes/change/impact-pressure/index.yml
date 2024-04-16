@@ -1,29 +1,47 @@
-- title: "01094: ACCRETION (SEDIMENT TRANSPORT)"
+- title: "1-01111: Accretion (sediment transport)"
   image: "/assets/img/themes/change/impacts.png"
   content: "An example from Australia which shows accretion of sand and gravels in the Daintree River, Queensland, Australia because of sediment transport, which increased because of landslides associated with high rainfall from Cyclone Jasper in early 2024 and associated flooding."
   url: "https://www.dea.ga.gov.au/products/dea-intertidal-elevation"
 
-- title: "02000: ALGAL BLOOM (PRESSURE)"
+- title: "2-02036: Algal bloom (eutrophication)"
   image: "/assets/img/themes/change/pressures.png"
   content: "Example in preparation"
   url: "#"
 
-- title: "03000: ALGAL DIEBACK (PRESSURE)"
+- title: "3-02057: Algal bloom (high inland water temperatures)"
   image: "/assets/img/themes/change/imp-pressure-cyclone.png"
   content: "Example in preparation"
   url: "#"
 
-- title: "4. BARE SOIL EXPOSURE"
+- title: "4-02026. Algal bloom (increased temperature)"
   image: "/assets/img/themes/change/pressures.png"
   content: "Example in preparation"
   url: "#"
 
-- title: "5. BLACKWATER EVENT"
+- title: "5-03026. Algal dieback (decreased temperature)"
   image: "/assets/img/themes/change/imp-pressure-cyclone.png"
   content: "Example in preparation "
   url: "#"
 
-- title: "6. BROWNING (OF VEGETATION)"
+- title: "6-04091. Bare soil exposure (burning)"
   image: "/assets/img/themes/change/impacts.png"
   content: "Example in preparation"
   url: "#"
+
+- title: "7-04011. Bare soil exposure (erosion)"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "Example in preparation"
+  url: "#"
+
+ - title: "8-04091. Bare soil exposure (ploughing)"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "Example in preparation"
+  url: "#"
+
+- title: "Bare soil exposure (tillage)"
+  subtitle: "9-04126"
+  image: "/assets/img/themes/change/impacts.png"
+  content: "Example in preparation"
+  url: "#"
+
+
