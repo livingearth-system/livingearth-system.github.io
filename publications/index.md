@@ -5,8 +5,8 @@ title: "Publications"
 
 # NOT INCLUDED: header: "Publications"
 headerTop: "publications"
-title: "Taxomonies"
-subtitle: "Lists"
+title: "Publications"
+subtitle: "Living Earth is a science-based initiative and every effort is made to publish our approaches and outcomes in peer-reviewed journals and books.  Articles may be globally-relevant or specific to countries (e.g., Australia, Wales) or regions (Southeast Asia) and include those relating to methods/algorithms, land cover, habitat and change frameworks and map products."
 background: "#234665"
 image: "/assets/img/env_descriptors/envdes-png.png"
 nobuttons: true
