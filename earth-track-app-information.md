@@ -35,7 +35,5 @@ first-paragraph="Earthtrack has been designed to be used by a wide range of user
         
 second-paragraph="Earthtrack can be downloaded from the [Google Play Store](https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en&gl=US)."
 
-third-paragraph="For the [Apple Store](https://apps.apple.com/us/app/earthtrack/id1610357134)"
-
-To access data from Earthtrack or stream to your GIS, go to Get the Data.
+third-paragraph="For the [Apple Store](https://apps.apple.com/us/app/earthtrack/id1610357134). To access data from Earthtrack or stream to your GIS, go to Get the Data."
 -%}
