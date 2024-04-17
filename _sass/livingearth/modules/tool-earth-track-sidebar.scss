@@ -8,7 +8,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .image-item:first-child {
+    margin-right: 20px;
+  }
+
+  .image-item {
+    width: 50%
+  }
 }
+
+.image-item img {
+  width: 100%
+}
+
 .separated-item-img span {
   color: #535353;
   font-variant-numeric: lining-nums proportional-nums;
@@ -33,10 +46,10 @@
   text-transform: uppercase;
   padding-right: 10px;
 }
-.item-two,
-.item-four {
-  padding-right: 30px;
-}
+// .item-two,
+// .item-four {
+//   padding-right: 30px;
+// }
 .repeated {
   color: #1d1b24;
   text-align: center;

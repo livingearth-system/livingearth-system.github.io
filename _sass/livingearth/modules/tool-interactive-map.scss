@@ -28,18 +28,9 @@
   margin-left: 5px;
 }
 .banner-button {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-}
-
-.tool-button-banner p {
-  font-family: Raleway;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  margin: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tool-button-banner {
@@ -48,50 +39,36 @@
   display: flex;
   padding: 10px;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   flex-shrink: 0;
   cursor: pointer;
+  min-height: 54px;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background-color: #072857;
+    color: #ffffff;
+    outline: none;
+
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  p {
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0;
+  }
 }
 
-.tool-button-banner:nth-child(1) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(4) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(2) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(5) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(3) {
-  width: 136px;
-}
-.tool-button-banner:nth-child(6) {
-  width: 136px;
-}
-.tool-button-banner:hover {
-  background-color: #072857;
-  color: #ffffff;
-}
-.tool-button-banner:active {
-  background-color: #072857;
-  color: #ffffff;
-}
-.tool-button-banner:focus{
-  background-color:#072857;
-  color: white;
-}
-.tool-button-banner:hover img {
-  filter: invert(100%);
-}
-.tool-button-banner:active img {
-  filter: invert(100%);
-}
-.tool-button-banner:focus img {
-  filter: invert(100%);
-}
 .select-year {
   margin-top: 24px;
 }
@@ -304,4 +281,215 @@ input[type="checkbox"]:checked + label:before {
   pointer-events: none;
   cursor: not-allowed !important;
   opacity: 0.5;
+}
+
+// Style for map
+.tool_container {
+  .commom-class-disabled.map-left {
+    width: 30%;
+  }
+
+  .map-container {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    width: 70%;
+
+    #map {
+      width: 100%;
+    }
+  }
+
+  .marker-info {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .leaflet-control-custom {
+    padding: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .legend-base {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-align: center;
+
+    img {
+      border: 1px solid black;
+    }
+
+    span {
+      display: block;
+    }
+
+    &.active img {
+      border: 1px solid red;
+    }
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    margin-right: 8px;
+    border: 1px solid black;
+  }
+
+  .legend-text {
+    flex: 1;
+  }
+
+  .leaflet-popup-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px 0;
+  }
+
+  .image-container {
+    margin-bottom: 10px;
+    margin: 0.25em;
+
+    img {
+      max-width: 100%;
+      max-height: 80px;
+      display: block;
+    }
+
+    .title-image {
+      text-align: center;
+      color: #000;
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .leaflet-container a.leaflet-popup-close-button {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 100;
+    top: 4px;
+    right: 4px;
+  }
+
+  .leaflet-popup-content-wrapper {
+    min-width: 500px;
+
+    .leaflet-popup-content {
+      width: 100% !important;
+    }
+
+    .leaflet-header {
+      background-color: #072857;
+      padding: 12px;
+      color: #ffffff;
+
+      h5 {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .date-time {
+        font-size: 14px;
+      }
+    }
+    
+
+    .leaflet-body {
+      padding: 12px;
+      color: #000;
+
+      .leaflet-body-images {
+        gap: 4px;
+      }
+    }
+  }
+
+  /* Style for backdrop and modal container */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+  }
+
+  /* Style for the modal content */
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px 20px;
+    background: white;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(155, 155, 155, 0.5);
+      border-radius: 20px;
+      border: transparent;
+    }
+  }
+
+  .close-moda-popup {
+    display: block;
+    width: max-content;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1600px) {
+  .tool_container {
+    .commom-class-disabled.map-left {
+      width: 40%;
+    }
+  
+    .map-container {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .tool_container {
+    flex-wrap: wrap;
+
+    .commom-class-disabled.map-left {
+      width: 100%;
+    }
+  
+    .map-container {
+      width: 100%;
+    }
+  }
 }

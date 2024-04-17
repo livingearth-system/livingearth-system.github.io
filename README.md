@@ -180,3 +180,9 @@ Page heading settings are set in General settings at the top of page.
 
 - **Contacts** in left coulmn data could be added and customized simply using markdown markup.  
 - **Contact form** source code is in `_includes/contact-us.liquid`
+
+## Earthtrack.app
+
+- This page uses `tool-earth-track-sidebar.liquid`
+- I have a folder named `json` containing various JSON files intended for data storage. Each JSON file will be the data for each corresponding tab. It will contain information about the list of `Feature` such as coordinates, images, and legend.It will be processed logically and displayed on the screen using the `filter-map.js` file.
+- In this `filter-map.js` file, there are two parts. The first part defines the color codes for each `Feature` in the data. The second part performs functions on the page with Leaflet library.
