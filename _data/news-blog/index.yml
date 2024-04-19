@@ -107,19 +107,17 @@
   href: '#'
   id: infor
   min: 5 min read
-  oldman-img: /assets/img/news/earsel-manchester.png
+  oldman-img: /assets/img/news/sanddunes-livingearth.png
   subtitle: >
     Aberystwyth University's Masters in GIS and Sensing has a new module on Living Earth, starting September 2024.
   title: NEW: Living Earth Masters Level Aberystwyth University.
-  url: "https://courses.aber.ac.uk/postgraduate/gis-remote-sensing-masters/#modules-september-start--"
-
 
 - category: "news"
   button:
     - class: button-3
       id: button3
       name: News
-  date: Sep 11, 2022
+  date: April 15 2024
   href: '#'
   id: infor
   min: 5 min read
