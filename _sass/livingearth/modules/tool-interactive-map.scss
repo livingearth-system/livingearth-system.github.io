@@ -4,29 +4,36 @@
   padding: 15px 0 15px 0;
   margin-top: 25px;
 }
+
 .under-select-year {
   margin-top: 20px;
 }
+
 .side-bar-interactive-map {
   margin-bottom: 250px;
 }
+
 .living-earth {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 40px 0;
 }
+
 .world {
   max-width: 1084px;
   height: 676px;
 }
+
 .right-content {
   display: flex;
 }
+
 .right-content p {
   margin-bottom: 0;
   margin-left: 5px;
 }
+
 .banner-button {
   display: grid;
   flex-wrap: wrap;
@@ -72,6 +79,7 @@
 .select-year {
   margin-top: 24px;
 }
+
 .select-year-title {
   font-weight: bold;
   text-transform: uppercase;
@@ -81,16 +89,101 @@
 .additional-layer {
   margin-top: 20px;
 }
+
+.option_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  & label {
+    margin-bottom: 0px;
+    margin-left: 10px;
+  }
+}
+
+.info {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3 ease-in;
+}
+
+.info.open {
+  height: max-content;
+  transition: all 0.3 ease-in;
+}
+
+.popup_more-info {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 9999;
+  border-radius: 5px;
+  padding: 0 24px;
+  height: 80vh;
+  overflow: auto;
+}
+
+.over-lay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.25;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_more-info.open+.over-lay {
+  display: block;
+}
+
+.popup_more-info.open {
+  display: block;
+
+  .close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+}
+
+.item-info {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid black;
+  margin-top: 16px;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  
+  .title {
+    min-width: 25%;
+  }
+
+  .content {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
+
 .select-base-map,
 .select-additional-layer {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .option-year,
 .option-layer {
   color: #9f9f9f;
   margin-top: -15px;
 }
+
 .no-basemap,
 .base-land,
 .vegetation,
@@ -105,6 +198,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .no-basemap span,
 .base-land span,
 .vegetation span,
@@ -117,15 +211,18 @@
 .above-ground span {
   padding-left: 10px;
 }
+
 .icon-atfer-selected-year {
   display: flex;
 }
+
 .after-selected-line {
   height: 1px;
   background-color: #9f9f9f;
   margin-top: -10px;
   margin-bottom: 5px;
 }
+
 input[type="checkbox"] {
   display: none;
 }
@@ -151,7 +248,7 @@ label[for="checkbox2"]:before {
   border-radius: 50%;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked+label:before {
   background-color: #072857;
 }
 
@@ -204,13 +301,13 @@ label[for="landcheckbox5"]:before {
   background-color: #fff;
 }
 
-input[type="checkbox"]:checked + label[for="checkbox3"]:before,
-input[type="checkbox"]:checked + label[for="checkbox4"]:before,
-input[type="checkbox"]:checked + label[for="landcheckbox1"]:before,
-input[type="checkbox"]:checked + label[for="landcheckbox2"]:before,
-input[type="checkbox"]:checked + label[for="landcheckbox3"]:before,
-input[type="checkbox"]:checked + label[for="landcheckbox4"]:before,
-input[type="checkbox"]:checked + label[for="landcheckbox5"]:before {
+input[type="checkbox"]:checked+label[for="checkbox3"]:before,
+input[type="checkbox"]:checked+label[for="checkbox4"]:before,
+input[type="checkbox"]:checked+label[for="landcheckbox1"]:before,
+input[type="checkbox"]:checked+label[for="landcheckbox2"]:before,
+input[type="checkbox"]:checked+label[for="landcheckbox3"]:before,
+input[type="checkbox"]:checked+label[for="landcheckbox4"]:before,
+input[type="checkbox"]:checked+label[for="landcheckbox5"]:before {
   background-color: #072857;
 }
 
@@ -249,14 +346,14 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"]+label {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
   display: inline-block;
 }
 
-input[type="checkbox"] + label:before {
+input[type="checkbox"]+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -268,7 +365,7 @@ input[type="checkbox"] + label:before {
   border-radius: 4px;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked+label:before {
   background-color: #072857;
   content: "\2713";
   color: #fff;
@@ -277,7 +374,8 @@ input[type="checkbox"]:checked + label:before {
   line-height: 20px;
 }
 
-.tools-interactivemap--select---year----disabled, .tools-interactivemap--button---disabled {
+.tools-interactivemap--select---year----disabled,
+.tools-interactivemap--button---disabled {
   pointer-events: none;
   cursor: not-allowed !important;
   opacity: 0.5;
@@ -312,6 +410,16 @@ input[type="checkbox"]:checked + label:before {
     border-radius: 4px;
     overflow: auto;
     text-align: center;
+  }
+
+  .button-layer_map {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    &:not(.active) .leaflet-control-custom {
+      display: none;
+    }
   }
 
   .legend-base {
@@ -407,7 +515,7 @@ input[type="checkbox"]:checked + label:before {
         font-size: 14px;
       }
     }
-    
+
 
     .leaflet-body {
       padding: 12px;
@@ -473,7 +581,7 @@ input[type="checkbox"]:checked + label:before {
     .commom-class-disabled.map-left {
       width: 40%;
     }
-  
+
     .map-container {
       width: 60%;
     }
@@ -487,7 +595,7 @@ input[type="checkbox"]:checked + label:before {
     .commom-class-disabled.map-left {
       width: 100%;
     }
-  
+
     .map-container {
       width: 100%;
     }

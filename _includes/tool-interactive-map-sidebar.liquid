@@ -1,146 +1,20 @@
-<script>
-    let mymap
-    let disableCountries = ['Australia', 'Switzerland', 'Southeast Asia']
-    let locationCoordination = {
-        'Wales': [ 51.8370798, -3.3925456999999994],
-        'Australia': [40.737, -73.923],
-        'Switzerland': [46.8182, 8.2275],
-        'Southeast Asia': [1.3521, 103.8198]
-    }
-    function toggleDropdown2() {
-        var selectedYear = document.getElementById('yearDropdown2').value;
 
-        if (!isNaN(selectedYear)) {
-            document.querySelector('.before').style.display = 'none';
-            document.querySelector('.after').style.display = 'block';
-        }
-        var afterSelect = document.querySelector('.after #yearDropdown2');
-        afterSelect.value = selectedYear;
-
-        document.querySelector('.after .select-base-map').textContent = 'select a base map for ' + selectedYear;
-        document.querySelector('.after .option-year').textContent = 'Select a year to see options for ' + selectedYear;
-    }
-
-    function disableBySelected() {
-        disableYearSelect()
-        disableButton()
-    }
-
-    function disableYearSelect() {
-        const selectElement = document.getElementById('choose_country');
-        const selectedValue = selectElement.value;
-        const yearSelectElement = document.getElementById('yearDropdown2');
-        if(disableCountries.includes(selectedValue)){
-            yearSelectElement.classList.add('tools-interactivemap--select---year----disabled')
-        } else {
-            yearSelectElement.classList.remove('tools-interactivemap--select---year----disabled')
-        }
-    }
-    function disableButton() {
-        const selectElement = document.getElementById('choose_country');
-        const selectedValue = selectElement.value;
-        const interactiveMapButtons = document.getElementsByClassName('tool-button-banner');
-        const interactiveMapButtonsArray = Array.from(interactiveMapButtons);
-        interactiveMapButtonsArray.forEach((button) => {
-            const pElement = button.querySelector('p');
-            if(disableCountries.includes(selectedValue)){
-                if (pElement.textContent === 'water' || pElement.textContent === 'change' || pElement.textContent === 'biodiversity' || pElement.textContent === 'accounts' || pElement.textContent === 'feature') {
-                    button.classList.add('tools-interactivemap--button---disabled');
-                }
-            } else {
-                button.classList.remove('tools-interactivemap--button---disabled');
-            }
-        });
-    }
-    function setViewforMap() {
-        let selectElement = document.getElementById('choose_country');
-        let selectedValue = selectElement.value;
-        if(selectedValue !== 'Country') {
-            mymap.panTo(locationCoordination[selectedValue], 13)
-        }
-    }
-    async function setupPoint(mymap){
-        const json = await fetch('/assets/json/habitat_pts.json').then(res => res.json());
-        L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            minZoom: 10,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-          }).addTo(mymap);
-          json.features.forEach(item => {
-            L.marker(item.geometry.coordinates.reverse()).addTo(mymap).bindPopup(`
-                <div>
-                  <div class="leaflet-point-title-wrapper"
-                  >
-                    <p class="leaflet-point-title">${ item.properties.legend }</p>
-                    <p class="leaflet-point-date">${ new Date(item.properties._CREATION_DATE).getFullYear() }-${ new Date(item.properties._CREATION_DATE).getMonth() + 1 }-${ new Date(item.properties._CREATION_DATE).getDate() - 1 } </p>
-                  </div>
-                  <div class="leaflet-point-content-wrapper">
-                    <p class="leaflet-point-content-desc"><span>Habitat</span> : Open (40 to 60-70%) > 14m Needle-leaved Evergreen Trees</p>
-                    <div class="leaflet-point-content-imgages-wrapper">
-                      <div class="leaflet-point-content-image">
-                        <img src="${item.properties.images.photoAhead}" alt="" />
-                        <span>Site Picture</span>
-                      </div>
-                      <div class="leaflet-point-content-image">
-                        <img src="${item.properties.images.photoGround}" alt="" />
-                        <span>Down picture</span>
-                      </div>
-                      <div class="leaflet-point-content-image">
-                        <img src="${item.properties.images.photoSky}" alt="" />
-                        <span>Up picture</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>`);
-          
-          })
-    }
-
-    function handleToolsInteractiveMapFunction (button_name) {
-        switch(button_name) {
-            case 'land-cover':
-                setViewforMap()
-                break
-            case 'water':
-                setViewforMap()
-            break;
-            case 'change':
-                setViewforMap()
-            break;
-            case 'biodiversity':
-                setViewforMap()
-            break;
-            case 'account':
-                {% comment %} window.location.href = '/tools/account'; {% endcomment %}
-            break;
-            default:
-                break;
-        }   
-    }
-
-    document.addEventListener('DOMContentLoaded',  function () {
-        let selectElement = document.getElementById('choose_country');
-        let selectedValue = selectElement.value;
-        mymap = L.map('map').setView([ 51.8370798, -3.3925456999999994], 13);
-        setupPoint(mymap)
-    
-
-        disableBySelected()
-        selectElement.addEventListener('change', function () {
-            disableBySelected()
-        });
-    });
-</script>
+<script src="../assets/function/interactive-map.js"></script>
 
 <!-- TOOL-HEADING -->
-<div class="commom-class-disabled">
+<div class="commom-class-disabled map-left">
   <div id="interactive-map" class="interactiveMap-display-by-id">
     <div class="tool_side_bar">
       <div class="country_form">
         <select class="form-select" aria-label="Default select example" class="choose_country" id="choose_country">
-          <option selected>{{ site.data['tool-analyze-the-data-map-sidebar'].index.choose }}</option>
           {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
-            <option value="{{ country.value }}">{{ country.name }}</option>
+            <option
+              {% if country['value'] == site.data['tool-analyze-the-data-map-sidebar'].index.choose %}
+              selected="selected"
+              {% endif %}
+              value="{{ country['value'] }}">
+              {{ country['name'] }}
+            </option>
           {% endfor %}
         </select>
 
@@ -170,11 +44,10 @@
           <div class="select-year">
             <div class="select-year-title">{{ site.data.tool-interactive-map-sidebar.index.select_year }}</div>
             <select
-              id="yearDropdown2"
+              id="select-a-year"
               class="form-select"
               aria-label="Select a year"
               size="1"
-              onclick="toggleDropdown2()"
             >
               <option class="label-dropdown" disabled selected>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</option>
               {% for year_item in site.data.year.index %}
@@ -185,127 +58,18 @@
           <div class="base-map">
             <p class="select-base-map">{{ site.data.tool-interactive-map-sidebar.index.basemap.select_map }}</p>
             <p class="option-year">{{ site.data.tool-interactive-map-sidebar.index.basemap.option_year }}</p>
+            {% comment %} <div class="option_item">
+              <input type="radio" id="none" name="basemaps" value="none">
+              <label for="none">No basemap</label>
+            </div> {% endcomment %}
+            <div class="basemap-listoption"></div>
           </div>
           <div class="additional-layer">
             <p class="select-additional-layer">{{ site.data.tool-interactive-map-sidebar.index.additional_layer.select }}</p>
             <p class="option-layer">{{ site.data.tool-interactive-map-sidebar.index.additional_layer.option_layer }}</p>
+            <div class="additionallayer-listoption"></div>
           </div>
         </div>
-        <!-- /INTERACTIVE-MAP-BEFORE -->
-
-        <!-- INTERACTIVE-MAP-AFTER -->
-        <div class="after" style="display: none;">
-          <div class="living-earth">
-            <div class="left-content">
-              <img src="{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}">
-            </div>
-            <div class="right-content">
-              <img src="{{ site.data.tool-earth-track-sidebar.index.content.right-content.src }}">
-              <p>{{ site.data['tool-earth-track-sidebar'].index.content['right-content'].title }}</p>
-            </div>
-          </div>
-          <div class="banner-button">
-            {% for tool_item in site.data.tools.sidebar['interactive-map'] %}
-              <button type="button" class="tool-button-banner">
-                <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
-                <p>{{ tool_item.title }}</p>
-              </button>
-            {% endfor %}
-          </div>
-          <div class="select-year">
-            <div class="select-year-title">{{ site.data.tool-interactive-map-sidebar.index.select_year }}</div>
-            <select
-              id="yearDropdown2"
-              class="form-select"
-              aria-label="Select a year"
-              size="1"
-              onclick="toggleDropdown2()"
-            >
-              <option class="label-dropdown" disabled selected>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</option>
-              {% for year_item in site.data.year.index %}
-                <option value="{{ year_item.year }}">{{ year_item.year }}</option>
-              {% endfor %}
-            </select>
-          </div>
-          <div class="under-select-year"></div>
-          <div class="after-selected-year">
-            <p class="select-base-map">{{ site.data.tool-interactive-map-sidebar.index.basemap.select_map }}</p>
-            {% for item in site.data.tool-interactive-map-sidebar.index.base_land %}
-                <div class="base-land">
-                  <input type="checkbox" id="{{ item.id }}" name="{{ item.name }}" value="{{ item.name }}">
-                  <label for="{{ item.id }}">
-                    <p>{{ item.label }}</p>
-                  </label>
-                  <p class="icon-atfer-selected-year">
-                    <span><img src="/assets/icon/download.svg"></span>
-                    <span><img src="/assets/icon/questionmark.svg"></span>
-                  </p>
-                </div>
-                {% endfor %}
-                
-                {% for item in site.data.tool-interactive-map-sidebar.index.no_basemap %}
-                <div class="no-basemap">
-                  <input type="checkbox" id="{{ item.id }}" name="{{ item.name }}" value="{{ item.name }}">
-                  <label for="{{ item.id }}">
-                    <p>{{ item.label }}</p>
-                  </label>
-                  <p class="icon-atfer-selected-year">
-                    <span><img src="/assets/icon/download.svg"></span>
-                    <span><img src="/assets/icon/questionmark.svg"></span>
-                  </p>
-                </div>
-                {% endfor %}
-                
-                <p class="select-base-map">{{site.data.tool-interactive-map-sidebar.index.basemap.land}} </p>
-                <div class="after-selected-line"></div>
-                
-                {% for item in site.data.tool-interactive-map-sidebar.index.land %}
-                <div class="land-checkbox">
-                  <div class="Canopy">
-                    <input type="checkbox" id="{{ item.id }}" name="{{ item.name }}" value="{{ item.name }}">
-                    <label for="{{ item.id }}">{{ item.label }}</label>
-                    <p class="icon-atfer-selected-year">
-                      <span><img src="/assets/icon/download.svg"></span>
-                      <span><img src="/assets/icon/questionmark.svg"></span>
-                    </p>
-                  </div>
-                </div>
-                {% endfor %}
-                
-                <p class="select-base-map">{{site.data.tool-interactive-map-sidebar.index.basemap.water}} </p>
-                <div class="after-selected-line"></div>
-                
-                {% for item in site.data.tool-interactive-map-sidebar.index.water %}
-                <div class="water-checkbox">
-                  <div class="vegetation">
-                    <input type="checkbox" id="{{ item.id }}" name="{{ item.name }}" value="{{ item.name }}">
-                    <label for="{{ item.id }}">{{ item.label }}</label>
-                    <p class="icon-atfer-selected-year">
-                      <span><img src="/assets/icon/download.svg"></span>
-                      <span><img src="/assets/icon/questionmark.svg"></span>
-                    </p>
-                  </div>
-                </div>
-                {% endfor %}
-                
-                <p class="select-base-map">{{site.data.tool-interactive-map-sidebar.index.basemap.land}} </p>
-                <div class="after-selected-line"></div>
-                
-                {% for item in site.data.tool-interactive-map-sidebar.index.second_land %}
-                <div class="second-land">
-                  <div class="above-ground">
-                    <input type="checkbox" id="{{ item.id }}" name="{{ item.name }}" value="{{ item.name }}">
-                    <label for="{{ item.id }}">{{ item.label }}</label>
-                    <p class="icon-atfer-selected-year">
-                      <span><img src="/assets/icon/download.svg"></span>
-                      <span><img src="/assets/icon/questionmark.svg"></span>
-                    </p>
-                  </div>
-                </div>
-                {% endfor %}                
-          </div>
-        </div>
-        <!-- /INTERACTIVE-MAP-AFTER -->
       </div>
       <div class="learning_resource">
         <div class="button-tool">
@@ -320,15 +84,7 @@
       </div>
     </div>
   </div>
+  <div class="popup_more-info">
+  </div>
+  <div class="over-lay"></div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var learningResourceButton = document.getElementById('learningResourceButton');
-
-    if (learningResourceButton) {
-      learningResourceButton.addEventListener('click', function () {
-        window.location.href = '/tools/learning-resources';
-      });
-    }
-  });
-</script>

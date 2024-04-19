@@ -1,0 +1,10 @@
+{
+	"2023": "https://earthtrack.aber.ac.uk/services/wms/2023",
+	"2022": "https://earthtrack.aber.ac.uk/services/wms/2022",
+	"2021": "https://earthtrack.aber.ac.uk/services/wms/2021",
+	"2020": "https://earthtrack.aber.ac.uk/services/wms/2020",
+	"2019": "https://earthtrack.aber.ac.uk/services/wms/2019",
+	"2018": "https://earthtrack.aber.ac.uk/services/wms/2018",
+	"2017": "https://earthtrack.aber.ac.uk/services/wms/2017",
+	"change": "https://earthtrack.aber.ac.uk/services/wms/change"
+}

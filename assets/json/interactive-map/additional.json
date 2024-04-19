@@ -1,0 +1,232 @@
+{
+    "2018": [
+        {
+            "title": "Lifeform 2018",
+            "layer": "lw_lifeform_2018",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Leaftype / phenology 2018",
+            "layer": "lw_leafpheno_2018",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Crop 2018",
+            "layer": "lw_crop_2018",
+            "type": "additional",
+            "download": false,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Water/moisture - persistence/seasonality semi-natural vegetation 2018",
+            "layer": "lw_waterP_2018",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Above ground biomass 2018",
+            "layer": "cci_biom_2018",
+            "type": "additional",
+            "download": false,
+            "attribution": "listAttribution['biom']"
+        }
+    ],
+    "2019": [
+        {
+            "title": "Lifeform 2019",
+            "layer": "lw_lifeform_2019",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Leaftype / phenology 2019",
+            "layer": "lw_leafpheno_2019",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Water/moisture - persistence/seasonality semi-natural vegetation 2019",
+            "layer": "lw_waterP_2019",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Above ground biomass 2019",
+            "layer": "cci_biom_2019",
+            "type": "additional",
+            "download": false,
+            "attribution": "listAttribution['biom']"
+        }
+    ],
+    "2020": [
+        {
+            "title": "Lifeform 2020",
+            "layer": "lw_lifeform_2020",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Leaftype / phenology 2020",
+            "layer": "lw_leafpheno_2020",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (detailed) 2020",
+            "layer": "lw_habd_2020",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (broad) 2020",
+            "layer": "lw_habb_2020",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Water/moisture - persistence/seasonality semi-natural vegetation 2020",
+            "layer": "lw_waterP_2020",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Above ground biomass 2020",
+            "layer": "cci_biom_2020",
+            "type": "additional",
+            "download": false,
+            "attribution": "listAttribution['biom']"
+        }
+    ],
+    "2021": [
+        {
+            "title": "Lifeform 2021",
+            "layer": "lw_lifeform_2021",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Leaftype / phenology 2021",
+            "layer": "lw_leafpheno_2021",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (detailed) 2021",
+            "layer": "lw_habd_2021",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (broad) 2021",
+            "layer": "lw_habb_2021",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Water/moisture - persistence/seasonality semi-natural vegetation 2021",
+            "layer": "lw_waterP_2021",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2022": [
+        {
+            "title": "Lifeform 2022",
+            "layer": "lw_lifeform_2022",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Leaftype / phenology 2022",
+            "layer": "lw_leafpheno_2022",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (detailed) 2022",
+            "layer": "lw_habd_2022",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (broad) 2022",
+            "layer": "lw_habb_2022",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Water/moisture - persistence/seasonality semi-natural vegetation 2022",
+            "layer": "lw_waterP_2022",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2023": [
+        {
+            "title": "Lifeform 2023",
+            "layer": "lw_lifeform_2023",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Leaftype / phenology 2023",
+            "layer": "lw_leafpheno_2023",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (detailed) 2023",
+            "layer": "lw_habd_2023",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Habitat (broad) 2023",
+            "layer": "lw_habb_2023",
+            "type": "additional",
+            "download": true,
+            "palette": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Water/moisture - persistence/seasonality semi-natural vegetation 2023",
+            "layer": "lw_waterP_2023",
+            "type": "additional",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ]
+}
