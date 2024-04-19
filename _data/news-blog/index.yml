@@ -153,6 +153,7 @@
   subtitle: >
     Digital Earth Australia has released maps of the intertidal elevation and other attributes from time-series of Sentinel-2 data. 
   title: Release of national intertidal datasets for Australia
+  
 - category: "events"
   button:
     - class: button-4
@@ -166,6 +167,7 @@
   subtitle: >
     Dr. Nezha Acil is presenting on the use of FAO LCCS and Change Framework for understanding change impacts and driving pressures on woody biomass, as mapped through the ESA CCI Biomass project.
   title: European General Assembly 2024
+  
 - category: "events"
   button:
     - class: button-4
@@ -179,6 +181,7 @@
   subtitle: >
     To be held at the Adelaide Convention Centre from 10-12 September, 2024.
   title: The Advancing Earth Observation Forum, Australia
+  
 - category: "art"
   button:
     - class: button-7
@@ -192,6 +195,7 @@
   subtitle: >
     The Earthtrack mobile app is used to record observations of land cover and change including some spectacular photographs.
   title: Earthtrack photographs of our planet
+  
 - category: "countries"
   button:
     - class: button-9
@@ -205,6 +209,7 @@
   subtitle: >
     Papua New Guinea is one of the countries being studied in Living Coasts, with a view to providing new information on blue carbon ecosystems.
   title: Living Coasts informing Papua New Guinea
+  
 - category: "themes"
   button:
     - class: button-8
@@ -218,3 +223,18 @@
   subtitle: >
     Our themes section is now populated with information on land and water, change, biodiversity, accounts and futures.
   title: The Themes section of Living Earth.
+
+    
+- category: "news"
+  button:
+    - class: button-3
+      id: button3
+      name: News
+  date: Apr 19 2024
+  href: '#'
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/news/sanddunes-livingearth.png
+  subtitle: >
+    Aberystwyth University's Masters in GIS and Sensing has a new module on Living Earth, starting September 2024.
+  title: NEW: Living Earth Masters Level Aberystwyth University.
