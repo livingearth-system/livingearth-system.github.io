@@ -224,17 +224,4 @@
     Our themes section is now populated with information on land and water, change, biodiversity, accounts and futures.
   title: The Themes section of Living Earth.
 
-    
-- category: "news"
-  button:
-    - class: button-3
-      id: button3
-      name: News
-  date: Apr 19 2024
-  href: '#'
-  id: infor
-  min: 5 min read
-  oldman-img: /assets/img/news/sanddunes-livingearth.png
-  subtitle: >
-    Aberystwyth University's Masters in GIS and Sensing has a new module on Living Earth, starting September 2024.
-  title: NEW: Living Earth Masters Level Aberystwyth University.
+  
