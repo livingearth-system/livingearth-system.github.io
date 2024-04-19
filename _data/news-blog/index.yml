@@ -97,20 +97,6 @@
     Living Earth is an open resource that allows individuals, groups, organisations
     and countries/regions to better understand the environment and make informed decisions.
   title: Living Earth
-  
-- category: "news"
-  button:
-    - class: button-3
-      id: button3
-      name: News
-  date: Apr 19 2024
-  href: '#'
-  id: infor
-  min: 5 min read
-  oldman-img: /assets/img/news/sanddunes-livingearth.png
-  subtitle: >
-    Aberystwyth University's Masters in GIS and Sensing has a new module on Living Earth, starting September 2024.
-  title: NEW: Living Earth Masters Level Aberystwyth University.
 
 - category: "news"
   button:
