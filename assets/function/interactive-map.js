@@ -1,14 +1,3 @@
-let wmsOptions = {
-	crs: L.CRS.EPSG4326,
-	layers: "",
-	format: "image/png",
-	transparent: "true",
-	version: "1.3.0",
-	attribution: ""
-};
-
-let basemapOnMap = "none";
-
 class LeafletMap {
 	constructor() {
 		// .setView([52.1307, -3.7837], 8)
@@ -135,8 +124,14 @@ class LeafletMap {
 		inputs.forEach(input => {
 			input.addEventListener('change', (event) => {
 				if (input.checked && !this.checkContainLayer(event.target.value)) {
-					wmsOptions.layers = event.target.value
-					L.tileLayer.wms(this.currentUrl, wmsOptions).addTo(this.map);
+					L.tileLayer.wms(this.currentUrl, {
+						crs: L.CRS.EPSG4326,
+						layers: event.target.value,
+						format: "image/png",
+						transparent: "true",
+						version: "1.3.0",
+						attribution: ""
+					}).addTo(this.map);
 				}
 				else if (!input.checked) {
 					this.removelayerCheckbox(event.target.value);
