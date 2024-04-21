@@ -44,7 +44,7 @@
         interactiveMapButtonsArray.forEach((button) => {
             const pElement = button.querySelector('p');
             if(disableCountries.includes(selectedValue)){
-                if (pElement.textContent === 'water' || pElement.textContent === 'change' || pElement.textContent === 'biodiversity' || pElement.textContent === 'accounts' || pElement.textContent === 'feature') {
+                if (pElement.textContent === 'water' || pElement.textContent === 'change' || pElement.textContent === 'biodiversity' || pElement.textContent === 'accounts' || pElement.textContent === 'futures') {
                     button.classList.add('tools-interactivemap--button---disabled');
                 }
             } else {
