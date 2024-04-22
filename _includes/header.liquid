@@ -17,21 +17,22 @@
             </button>
             <a class="navbar-brand" href="/"><img src="/assets/img/LivingEarth{% if page.layout != 'home' %}-black{%- endif -%}.png" alt=""></a>
           </div>
-          <div class="group-button_map">
-            <span class="button-action open-select-country">
-              <img
-                src="../assets/img/flag.png"
-                alt=""
-                srcset="">
-            </span>
-            <span class="button-action open-add-layer">
-              <img
-                src="../assets/img/addLayer.png"
-                alt=""
-                srcset="">
-            </span>
-          </div>
-
+          {% if page.url == '/tools/interactive-map' %}
+            <div class="group-button_map">
+              <span class="button-action open-select-country">
+                <img
+                  src="../assets/img/flag.png"
+                  alt=""
+                  srcset="">
+              </span>
+              <span class="button-action open-add-layer">
+                <img
+                  src="../assets/img/addLayer.png"
+                  alt=""
+                  srcset="">
+              </span>
+            </div>
+          {%- endif -%}
           <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent">
             <ul class="navbar-nav py-4 py-md-0 align-items-center navbar-mobile-view">
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active dropdown-mobile">
