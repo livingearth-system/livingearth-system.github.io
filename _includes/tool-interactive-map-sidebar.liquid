@@ -1,4 +1,3 @@
-
 <script src="../assets/function/interactive-map.js"></script>
 
 <!-- TOOL-HEADING -->
@@ -6,17 +5,29 @@
   <div id="interactive-map" class="interactiveMap-display-by-id">
     <div class="tool_side_bar">
       <div class="country_form">
-        <select class="form-select" aria-label="Default select example" class="choose_country" id="choose_country">
-          {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
-            <option
-              {% if country['value'] == site.data['tool-analyze-the-data-map-sidebar'].index.choose %}
-              selected="selected"
-              {% endif %}
-              value="{{ country['value'] }}">
-              {{ country['name'] }}
-            </option>
-          {% endfor %}
-        </select>
+        <div class="popup_select-country">
+          <span>{{ 'select your country' | upcase }}</span>
+          <div class="content">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              class="choose_country"
+              id="choose_country">
+              {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
+                <option
+                  {% if country['value'] == site.data['tool-analyze-the-data-map-sidebar'].index.choose %}
+                  selected="selected"
+                  {% endif %}
+                  value="{{ country['value'] }}">
+                  {{ country['name'] }}
+                </option>
+              {% endfor %}
+            </select>
+            <div class="left-content">
+              <img src="{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}">
+            </div>
+          </div>
+        </div>
 
         <!-- INTERACTIVE-MAP-BEFORE -->
         <div class="before">
@@ -31,43 +42,47 @@
           </div>
           <div class="banner-button">
             {% for tool_item in site.data.tools.sidebar['interactive-map'] %}
-              <button
+              <span
                 type="button"
-                class="tool-button-banner"
-                onclick="handleToolsInteractiveMapFunction(`{{tool_item.title}}`)"
-              >
+                class="tool-button-banner interactive-button_layer {% if tool_item.disable == false %}active{% endif %}"
+                data-color="{{tool_item.color}}"
+                style="background-color:{{tool_item.color}}"
+                {% if tool_item.disable == true %}
+                  disabled
+                {% endif %}
+                >
                 <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
                 <p>{{ tool_item.title }}</p>
-              </button>
+              </span>
             {% endfor %}
           </div>
-          <div class="select-year">
-            <div class="select-year-title">{{ site.data.tool-interactive-map-sidebar.index.select_year }}</div>
-            <select
-              id="select-a-year"
-              class="form-select"
-              aria-label="Select a year"
-              size="1"
-            >
-              <option class="label-dropdown" disabled selected>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</option>
-              {% for year_item in site.data.year.index %}
-                <option value="{{ year_item.year }}">{{ year_item.year }}</option>
-              {% endfor %}
-            </select>
-          </div>
-          <div class="base-map">
-            <p class="select-base-map">{{ site.data.tool-interactive-map-sidebar.index.basemap.select_map }}</p>
-            <p class="option-year">{{ site.data.tool-interactive-map-sidebar.index.basemap.option_year }}</p>
-            {% comment %} <div class="option_item">
-              <input type="radio" id="none" name="basemaps" value="none">
-              <label for="none">No basemap</label>
-            </div> {% endcomment %}
-            <div class="basemap-listoption"></div>
-          </div>
-          <div class="additional-layer">
-            <p class="select-additional-layer">{{ site.data.tool-interactive-map-sidebar.index.additional_layer.select }}</p>
-            <p class="option-layer">{{ site.data.tool-interactive-map-sidebar.index.additional_layer.option_layer }}</p>
-            <div class="additionallayer-listoption"></div>
+          <div class="group-layer">
+            <div class="select-year">
+              <div class="select-year-title">{{ site.data.tool-interactive-map-sidebar.index.select_year }}</div>
+              <select
+                id="select-a-year"
+                class="form-select"
+                aria-label="Select a year"
+                size="1">
+                <option
+                  class="label-dropdown"
+                  disabled
+                  selected>{{ site.data.tool-interactive-map-sidebar.index.select_year }}</option>
+                {% for year_item in site.data.year.index %}
+                  <option value="{{ year_item.year }}">{{ year_item.year }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="base-map">
+              <p class="select-base-map">{{ site.data.tool-interactive-map-sidebar.index.basemap.select_map }}</p>
+              <p class="option-year">{{ site.data.tool-interactive-map-sidebar.index.basemap.option_year }}</p>
+              <div class="basemap-listoption"></div>
+            </div>
+            <div class="additional-layer">
+              <p class="select-additional-layer">{{ site.data.tool-interactive-map-sidebar.index.additional_layer.select }}</p>
+              <p class="option-layer">{{ site.data.tool-interactive-map-sidebar.index.additional_layer.option_layer }}</p>
+              <div class="additionallayer-listoption"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +99,11 @@
       </div>
     </div>
   </div>
-  <div class="popup_more-info">
+  <div>
+    <div class="popup_more-info">
+      <button class="close">×</button>
+      <div class="content-container"></div>
+    </div>
+    <div class="over-lay" style="display:none"></div>
   </div>
-  <div class="over-lay"></div>
 </div>

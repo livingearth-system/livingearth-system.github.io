@@ -6,19 +6,25 @@ class LeafletMap {
 		this.initLayers();
 		this.initControls();
 		this.onchangeSelectAYear();
+		this.getButtonClose();
+		this.buttonAction()
 	}
 
 	async initData() {
-        try {
-            this.listUrlData = await this.loadData('listUrl');
-            this.baseMapData = await this.loadData('basemap');
-            this.additionalData = await this.loadData('additional');
-            this.defineColorLegend = await this.loadData('legend_define-color');
-            this.moreInfo = await this.loadData('more-info');
-        } catch (error) {
-            console.error("Error loading data: ", error);
-        }
-    }
+		try {
+			this.listUrlData = await this.loadData('listUrl');
+			this.baseMapData = await this.loadData('basemap');
+			this.additionalData = await this.loadData('additional');
+			this.defineColorLegend = await this.loadData('legend_define-color');
+			this.moreInfo = await this.loadData('more-info');
+		} catch (error) {
+			console.error("Error loading data: ", error);
+		}
+	}
+
+	getColorButtonLayer(){
+		return document.querySelector('.interactive-button_layer.active').getAttribute('data-color')
+	}
 
 	initLayers() {
 		this.osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -43,6 +49,32 @@ class LeafletMap {
 		const legend = L.control({ position: 'topright' });
 		legend.onAdd = this.createLegend.bind(this);
 		legend.addTo(this.map);
+	}
+
+	buttonAction(){
+		const openSelectCountry = document.querySelector('.button-action.open-select-country')
+		const openAddLayer = document.querySelector('.button-action.open-add-layer')
+		const popupAddlayer = document.querySelector('.group-layer')
+		const popupSelectCountry = document.querySelector('.popup_select-country')
+		this.openPopupMobile(openAddLayer, popupAddlayer)
+		this.openPopupMobile(openSelectCountry, popupSelectCountry)
+	}
+
+	openPopupMobile(button, popup){
+		const overlay = document.querySelector('.over-lay')
+		button.addEventListener('click',()=>{
+			popup.classList.toggle('open')
+			document.body.classList.toggle('over-hidden')
+			overlay.style.display = 'block'
+			this.remove(overlay, popup)
+		})
+	}
+
+	remove(overlay, popup){
+		overlay.addEventListener('click',()=>{
+			popup.classList.remove('open')
+			overlay.style.display = 'none'
+		})
 	}
 
 	onchangeSelectAYear() {
@@ -73,7 +105,7 @@ class LeafletMap {
 		parentNode.innerHTML = '';
 		const list = []
 		data.forEach((item, index) => {
-			let content = `<div class="option_item">
+			let content = `<div class="option_item" style="background-color:${this.getColorButtonLayer()}">
 				<div>
 					<input id="${item.layer}" value="${item.layer}" type="${type}" name="${item.type === 'checkbox' ? 'checkbox' : 'basemaps'}"/>
 					<label for="${item.layer}">${item.title}</label>
@@ -81,7 +113,7 @@ class LeafletMap {
 				<p class="icon-atfer-selected-year">
 					${item.download ? `<a target="_blank" href="https://earthtrack.aber.ac.uk/download/map/${this.year}/${this.getUrlFile(item.layer)}"><img src="/assets/icon/download.svg"></a>` : ''}
 					<span class="openpopup-${type}" data-title="${item.title}" data-layer="${item.layer}"><img src="/assets/icon/questionmark.svg"></span>
-					<span class="dropdown-${type}" data-index="${type + index}" style="width:15px"> <img width="100%" src="/assets/img/downarrow.svg"></span>
+					<span class="dropdown-${type}" data-index="${type + index}"> <img width="100%" src="/assets/img/downarrow.svg"></span>
 			  	</p>
 			</div>
 			<div class="info" data-index="${type + index}">
@@ -89,8 +121,20 @@ class LeafletMap {
 			</div>`
 			list.push(content);
 		})
+		if (type === 'radio') {
+			list.push(this.addNoBaseMap(type))
+		}
 		parentNode.innerHTML = list.join('')
 		this.attachClickHandlers(type)
+	}
+
+	addNoBaseMap(type) {
+		return `<div class="option_item" style="background-color:${this.getColorButtonLayer()}">
+		<div>
+			<input id="nobasemap" value="nobasemap" type="${type}" name="${type === 'checkbox' ? 'checkbox' : 'basemaps'}"/>
+			<label for="nobasemap">No basemap</label>
+		</div>
+	</div>`
 	}
 
 	getUrlFile(layer) {
@@ -123,7 +167,10 @@ class LeafletMap {
 		const inputs = document.querySelectorAll(`input[type=${type}]`);
 		inputs.forEach(input => {
 			input.addEventListener('change', (event) => {
-				if (input.checked && !this.checkContainLayer(event.target.value)) {
+				if (input.checked && !this.checkContainLayer(event.target.value) && event.target.value !== 'nobasemap') {
+					if (type === 'radio') {
+						this.removeAlllayerRaido(inputs)
+					}
 					L.tileLayer.wms(this.currentUrl, {
 						crs: L.CRS.EPSG4326,
 						layers: event.target.value,
@@ -133,10 +180,19 @@ class LeafletMap {
 						attribution: ""
 					}).addTo(this.map);
 				}
-				else if (!input.checked) {
+				else if (!input.checked && input.type === 'checkbox') {
 					this.removelayerCheckbox(event.target.value);
 				}
+				else if (input.checked && event.target.value === 'nobasemap') {
+					this.removeAlllayerRaido(inputs)
+				}
 			})
+		})
+	}
+
+	removeAlllayerRaido(inputs) {
+		inputs.forEach(input => {
+			this.removelayerCheckbox(input.value)
 		})
 	}
 
@@ -144,7 +200,6 @@ class LeafletMap {
 		this.map.eachLayer((layer) => {
 			if (layer.options && layer.options.layers === layers) {
 				layer.remove()
-				return
 			}
 		});
 	}
@@ -158,31 +213,34 @@ class LeafletMap {
 		});
 		return found;
 	}
-	
+
 	openPopup(type) {
 		const button = document.querySelectorAll(`.openpopup-${type}`);
 		const popup = document.querySelector('.popup_more-info')
+		const contentContainer = popup.querySelector('.content-container')
 		button.forEach(toggle => {
 			toggle.addEventListener('click', () => {
 				const layer = toggle.getAttribute('data-layer');
 				const title = toggle.getAttribute('data-title');
 				popup.classList.toggle('open')
-				popup.innerHTML = `<div style="text-align:center">${title}</div> <button class="close">X</button>` + this.addInfoHtml(this.getInfo(layer, this.moreInfo), layer)
+				document.body.classList.toggle('over-hidden')
+				contentContainer.innerHTML = `<div class="title-popup" style="text-align:center">${title}</div>` + this.addInfoHtml(this.getInfo(layer, this.moreInfo), layer)
 			});
 		});
-		this.getButtonClose(popup)
 	}
 
-	getButtonClose(popup) {
+	getButtonClose() {
+		const popup = document.querySelector('.popup_more-info')
 		const overlay = document.querySelector('.over-lay')
-		// const close = document.querySelector('.close')
+		const close = document.querySelector('.close')
 		this.closePopup(popup, overlay)
-		// this.closePopup(popup, close)
+		this.closePopup(popup, close)
 	}
 
 	closePopup(popup, el) {
 		el.addEventListener('click', () => {
 			popup.classList.remove('open')
+			document.body.classList.remove('over-hidden')
 		})
 	}
 
@@ -269,8 +327,8 @@ class LeafletMap {
 	addOnButton(el) {
 		el.classList.add('leaflet-control-custom');
 		this.buttons = [];
-		this.createButton(el, this.osmLayer, 'OpenStreetMap', 'https://earthtrack.aber.ac.uk/img/basemaps/osm.png', true);
-		this.createButton(el, this.googleSatLayer, 'Google Map Sat', 'https://earthtrack.aber.ac.uk/img/basemaps/gmSat.png');
+		this.createButton(el, this.osmLayer, 'OpenStreetMap', 'https://earthtrack.aber.ac.uk/img/basemaps/osm.png');
+		this.createButton(el, this.googleSatLayer, 'Google Map Sat', 'https://earthtrack.aber.ac.uk/img/basemaps/gmSat.png', true);
 	}
 
 	createButton(div, layer, name, imageUrl, active = false) {

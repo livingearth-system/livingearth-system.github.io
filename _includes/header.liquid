@@ -4,20 +4,34 @@
       <div class="col-12">
         <h1 class="d-none">LivingEarth</h1>
         <nav class="navbar navbar-expand-md navbar-light">
-          <a class="navbar-brand" href="/"
-            ><img src="/assets/img/LivingEarth{% if page.layout != 'home' %}-black{%- endif -%}.png" alt=""
-          ></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="logo-action">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="/assets/img/LivingEarth{% if page.layout != 'home' %}-black{%- endif -%}.png" alt=""></a>
+          </div>
+          <div class="group-button_map">
+            <span class="button-action open-select-country">
+              <img
+                src="../assets/img/flag.png"
+                alt=""
+                srcset="">
+            </span>
+            <span class="button-action open-add-layer">
+              <img
+                src="../assets/img/addLayer.png"
+                alt=""
+                srcset="">
+            </span>
+          </div>
+
           <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent">
             <ul class="navbar-nav py-4 py-md-0 align-items-center navbar-mobile-view">
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active dropdown-mobile">
@@ -27,9 +41,7 @@
                   href="#"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                  >About</a
-                >
+                  aria-expanded="false">About</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/about">Who we are</a>
                   <a class="dropdown-item" href="/our-projects">Our Projects</a>
@@ -45,9 +57,7 @@
                   href="#"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                  >Tools</a
-                >
+                  aria-expanded="false">Tools</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/tools/">Overview</a>
                   <a class="dropdown-item" href="/tools/interactive-map-information">Interactive map</a>
@@ -64,9 +74,7 @@
                   href="#"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                  >Resources</a
-                >
+                  aria-expanded="false">Resources</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/knowledge-hub">Knowledge Hub</a>
                   <a class="dropdown-item" href="/developer-hub">Developer Hub</a>
@@ -79,9 +87,7 @@
                   href="#"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                  >Data</a
-                >
+                  aria-expanded="false">Data</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/data/eodata/">Earth Observation</a>
                   <a class="dropdown-item" href="/big-data/">Big Data and Data Cubes</a>
@@ -98,9 +104,7 @@
                   href="#"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                  >Countries</a
-                >
+                  aria-expanded="false">Countries</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/europe/wales/">Wales</a>
                   <a class="dropdown-item" href="/oceania/australia/">Australia</a>
@@ -113,9 +117,7 @@
                   href="#"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                  >Themes</a
-                >
+                  aria-expanded="false">Themes</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/themes/aboutthemes/">About themes</a>
                   <a class="dropdown-item" href="/themes/landhabcover/">Land cover and habitats</a>
@@ -131,15 +133,32 @@
           <div class="form-control-search">
             <div class="has-search">
               <div class="form-control-feedback">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 29 28" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5244 18.0608C22.2064 14.8556 22.0441 10.0708 19.0378 7.05671C15.859 3.86977 10.7047 3.86977 7.52595 7.05671C4.34812 10.2427 4.34812 15.4072 7.52595 18.5932C10.5499 21.6242 15.3614 21.7719 18.5595 19.0363L22.6371 23.1308C22.9045 23.3993 23.3388 23.4002 23.6073 23.1328C23.8758 22.8654 23.8767 22.4311 23.6093 22.1626L19.5244 18.0608ZM18.0663 8.02566C15.4237 5.3762 11.1401 5.3762 8.49738 8.02566C5.85373 10.6761 5.85373 14.9738 8.49733 17.6242C11.14 20.2731 15.4237 20.2731 18.0663 17.6243C20.71 14.9738 20.71 10.6761 18.0663 8.02566Z" fill="#9F9F9F"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 29 28"
+                  fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.5244 18.0608C22.2064 14.8556 22.0441 10.0708 19.0378 7.05671C15.859 3.86977 10.7047 3.86977 7.52595 7.05671C4.34812 10.2427 4.34812 15.4072 7.52595 18.5932C10.5499 21.6242 15.3614 21.7719 18.5595 19.0363L22.6371 23.1308C22.9045 23.3993 23.3388 23.4002 23.6073 23.1328C23.8758 22.8654 23.8767 22.4311 23.6093 22.1626L19.5244 18.0608ZM18.0663 8.02566C15.4237 5.3762 11.1401 5.3762 8.49738 8.02566C5.85373 10.6761 5.85373 14.9738 8.49733 17.6242C11.14 20.2731 15.4237 20.2731 18.0663 17.6243C20.71 14.9738 20.71 10.6761 18.0663 8.02566Z"
+                    fill="#9F9F9F" />
                 </svg>
               </div>
-              <input type="text" class="form-control" placeholder="Search by area, date, tools">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search by area, date, tools">
             </div>
             <button class="commit-search">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-                <path d="M17.8172 10.442L12.1922 16.067C12.0749 16.1843 11.9159 16.2502 11.75 16.2502C11.5841 16.2502 11.4251 16.1843 11.3078 16.067C11.1905 15.9498 11.1247 15.7907 11.1247 15.6249C11.1247 15.459 11.1905 15.2999 11.3078 15.1827L15.8664 10.6249H3.625C3.45924 10.6249 3.30027 10.559 3.18306 10.4418C3.06585 10.3246 3 10.1656 3 9.99986C3 9.8341 3.06585 9.67513 3.18306 9.55792C3.30027 9.44071 3.45924 9.37486 3.625 9.37486H15.8664L11.3078 4.81705C11.1905 4.69977 11.1247 4.54071 11.1247 4.37486C11.1247 4.20901 11.1905 4.04995 11.3078 3.93267C11.4251 3.8154 11.5841 3.74951 11.75 3.74951C11.9159 3.74951 12.0749 3.8154 12.1922 3.93267L17.8172 9.55767C17.8753 9.61572 17.9214 9.68465 17.9529 9.76052C17.9843 9.8364 18.0005 9.91772 18.0005 9.99986C18.0005 10.082 17.9843 10.1633 17.9529 10.2392C17.9214 10.3151 17.8753 10.384 17.8172 10.442Z" fill="black"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none">
+                <path d="M17.8172 10.442L12.1922 16.067C12.0749 16.1843 11.9159 16.2502 11.75 16.2502C11.5841 16.2502 11.4251 16.1843 11.3078 16.067C11.1905 15.9498 11.1247 15.7907 11.1247 15.6249C11.1247 15.459 11.1905 15.2999 11.3078 15.1827L15.8664 10.6249H3.625C3.45924 10.6249 3.30027 10.559 3.18306 10.4418C3.06585 10.3246 3 10.1656 3 9.99986C3 9.8341 3.06585 9.67513 3.18306 9.55792C3.30027 9.44071 3.45924 9.37486 3.625 9.37486H15.8664L11.3078 4.81705C11.1905 4.69977 11.1247 4.54071 11.1247 4.37486C11.1247 4.20901 11.1905 4.04995 11.3078 3.93267C11.4251 3.8154 11.5841 3.74951 11.75 3.74951C11.9159 3.74951 12.0749 3.8154 12.1922 3.93267L17.8172 9.55767C17.8753 9.61572 17.9214 9.68465 17.9529 9.76052C17.9843 9.8364 18.0005 9.91772 18.0005 9.99986C18.0005 10.082 17.9843 10.1633 17.9529 10.2392C17.9214 10.3151 17.8753 10.384 17.8172 10.442Z" fill="black" />
               </svg>
             </button>
           </div>
