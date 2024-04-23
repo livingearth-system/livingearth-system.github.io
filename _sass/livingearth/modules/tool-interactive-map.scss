@@ -96,12 +96,22 @@
   margin-top: 20px;
 }
 
+.basemap-listoption .option_item {
+  label {
+    color: #212529;
+  }
+}
+
 .option_item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
   padding: 12px;
+
+  &.water-layer {
+    background-color: blue !important;
+  }
 
   & div {
     display: flex;
@@ -648,8 +658,6 @@ input[type="checkbox"]+label {
 }
 
 .popup_select-country {
-  display: none;
-
   span {
     display: none;
     text-align: center;

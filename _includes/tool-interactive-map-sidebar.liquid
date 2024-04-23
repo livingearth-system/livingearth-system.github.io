@@ -48,9 +48,8 @@
                 data-color="{{tool_item.color}}"
                 style="background-color:{{tool_item.color}}"
                 {% if tool_item.disable == true %}
-                  disabled
-                {% endif %}
-                >
+                disabled
+                {% endif %}>
                 <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
                 <p>{{ tool_item.title }}</p>
               </span>

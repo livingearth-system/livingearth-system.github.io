@@ -95,25 +95,32 @@ class LeafletMap {
 	}
 
 	filterValueOfTheYear(year) {
-		this.createListOption('.basemap-listoption', this.baseMapData[year], 'radio')
-		this.createListOption('.additionallayer-listoption', this.additionalData[year], 'checkbox')
+		this.createListOption('.basemap-listoption', this.baseMapData[year], 'radio', false)
+		this.createListOption('.additionallayer-listoption', this.additionalData[year], 'checkbox', true)
 		this.currentUrl = this.listUrlData[year]
 	}
 
-	createListOption(parentNodeClass, data, type) {
+	createListOption(parentNodeClass, data, type, ifLayer) {
 		const parentNode = document.querySelector(parentNodeClass)
 		parentNode.innerHTML = '';
 		const list = []
 		data.forEach((item, index) => {
-			let content = `<div class="option_item" style="background-color:${this.getColorButtonLayer()}">
+			let content = `<div class="option_item ${item.layer.includes('water') ? 'water-layer' : ''}" ${ifLayer ? `style="background-color:${this.getColorButtonLayer()}"` : ''}>
 				<div>
 					<input id="${item.layer}" value="${item.layer}" type="${type}" name="${item.type === 'checkbox' ? 'checkbox' : 'basemaps'}"/>
 					<label for="${item.layer}">${item.title}</label>
 				</div>
 				<p class="icon-atfer-selected-year">
-					${item.download ? `<a target="_blank" href="https://earthtrack.aber.ac.uk/download/map/${this.year}/${this.getUrlFile(item.layer)}"><img src="/assets/icon/download.svg"></a>` : ''}
-					<span class="openpopup-${type}" data-title="${item.title}" data-layer="${item.layer}"><img src="/assets/icon/questionmark.svg"></span>
-					<span class="dropdown-${type}" data-index="${type + index}"> <img width="100%" src="/assets/img/downarrow.svg"></span>
+					${item.download ? 
+						`<a target="_blank" href="https://earthtrack.aber.ac.uk/download/map/${this.year}/${this.getUrlFile(item.layer)}">
+							<img src="${ifLayer ? '/assets/icon/download.svg' : '/assets/icon/black-download.svg'}">
+						</a>` : ''}
+					<span class="openpopup-${type}" data-title="${item.title}" data-layer="${item.layer}">
+						<img src="${ifLayer ? '/assets/icon/questionmark.svg' : '/assets/icon/black-questionmark.svg'}">
+					</span>
+					<span class="dropdown-${type}" data-index="${type + index}"> 
+						<img width="100%" src="${ifLayer ? '/assets/icon/downarrow.svg' : '/assets/icon/black-downarrow.svg'}">
+					</span>
 			  	</p>
 			</div>
 			<div class="info" data-index="${type + index}">
@@ -129,7 +136,7 @@ class LeafletMap {
 	}
 
 	addNoBaseMap(type) {
-		return `<div class="option_item" style="background-color:${this.getColorButtonLayer()}">
+		return `<div class="option_item">
 		<div>
 			<input id="nobasemap" value="nobasemap" type="${type}" name="${type === 'checkbox' ? 'checkbox' : 'basemaps'}"/>
 			<label for="nobasemap">No basemap</label>
