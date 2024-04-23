@@ -3,7 +3,7 @@
   subtitle: "Allows the development of code through a web-based interface."
   content: "All Living Earth software, including this website, is on github" 
   tagline: "Collaborating on code"
-  url: "#"
+  url: "https://www.github.com"
 
 - title: "JUPYTER NOTEBOOKS"
   image: "/assets/img/hubs/developer-hub/jupyter.png"
