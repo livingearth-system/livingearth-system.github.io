@@ -66,18 +66,18 @@
     color: #ffffff;
   }
 
-  // &:hover,
-  // &:active,
-  // &:focus,
-  // &.active {
-  //   background-color: #072857;
-  //   color: #ffffff;
-  //   outline: none;
+  &.earthtrack:hover,
+  &.earthtrack:active,
+  &.earthtrack:focus,
+  &.earthtrack.active {
+    background-color: #072857;
+    color: #ffffff;
+    outline: none;
 
-  //   img {
-  //     filter: invert(100%);
-  //   }
-  // }
+    img {
+      filter: invert(100%);
+    }
+  }
 
   p {
     font-family: Raleway;
