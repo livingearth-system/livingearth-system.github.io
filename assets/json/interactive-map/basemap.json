@@ -1,0 +1,98 @@
+{
+    "2018": [
+        {
+            "title": "Base Land cover map 2018",
+            "layer": "lw_l3_2018",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Base Land cover map plus 2018",
+            "layer": "lw_l3Plus_2018",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2019": [
+        {
+            "title": "Base Land cover map 2019",
+            "layer": "lw_l3_2019",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Base Land cover map plus 2019",
+            "layer": "lw_l3Plus_2019",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2020": [
+        {
+            "title": "Base Land cover map 2020",
+            "layer": "lw_l3_2020",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Base Land cover map plus 2020",
+            "layer": "lw_l3Plus_2020",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2021": [
+        {
+            "title": "Base Land cover map 2021",
+            "layer": "lw_l3_2021",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Base Land cover map plus 2021",
+            "layer": "lw_l3Plus_2021",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2022": [
+        {
+            "title": "Base Land cover map 2022",
+            "layer": "lw_l3_2022",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Base Land cover map plus 2022",
+            "layer": "lw_l3Plus_2022",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ],
+    "2023": [
+        {
+            "title": "Base Land cover map 2023",
+            "layer": "lw_l3_2023",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        },
+        {
+            "title": "Base Land cover map plus 2023",
+            "layer": "lw_l3Plus_2023",
+            "type": "basemap",
+            "download": true,
+            "attribution": "listAttribution['lw']"
+        }
+    ]
+}

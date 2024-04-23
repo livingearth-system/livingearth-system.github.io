@@ -7,11 +7,11 @@
   }
 
   .tool_side_bar {
-    padding: 27px 16px 27px 40px;
+    padding: 27px 16px 27px 16px;
     display: flex;
+    height: 100%;
     flex-direction: column;
     background-color: #fff;
-    min-height: 80vh;
 
     .country_form {
       display: flex;

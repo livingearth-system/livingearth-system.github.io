@@ -1,17 +1,29 @@
 - icon: "/assets/img/landcover.svg"
-  title: "land-cover"
+  title: "land cover"
+  color: "green"
+  disable: false
 
-- icon: "/assets/img/water.svg"
+- icon: "/assets/img/change.svg"
   title: "water"
+  color: "blue"
+  disable: true
 
 - icon: "/assets/img/change.svg"
   title: "change"
+  color: "red"
+  disable: true
 
-- icon: "/assets/img/biodiversity.svg"
+- icon: "/assets/img/change.svg"
   title: "biodiversity"
+  color: "#FFC470"
+  disable: true
 
 - icon: "/assets/img/account.svg"
   title: "accounts"
+  color: "grey"
+  disable: true
 
 - icon: "/assets/img/change.svg"
   title: "feature"
+  color: "purple"
+  disable: true
