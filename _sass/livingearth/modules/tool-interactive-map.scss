@@ -58,6 +58,10 @@
   cursor: pointer;
   min-height: 54px;
 
+  p {
+    min-width: fit-content;
+  }
+
   &.interactive-button_layer {
     color: #ffffff;
   }
