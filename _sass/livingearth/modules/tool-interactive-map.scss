@@ -45,6 +45,7 @@
   opacity: 0.5;
 }
 
+
 .tool-button-banner {
   background-color: transparent;
   // border: 1px solid gray;
@@ -56,7 +57,10 @@
   flex-shrink: 0;
   cursor: pointer;
   min-height: 54px;
-  color: #ffffff;
+
+  &.interactive-button_layer {
+    color: #ffffff;
+  }
 
   // &:hover,
   // &:active,

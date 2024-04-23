@@ -1,4 +1,4 @@
-- icon: "/assets/img/landcover.svg"
+- icon: "/assets/icon/landcover.svg"
   title: "land cover"
   value: "earthtrack"
 
@@ -6,7 +6,7 @@
   title: "habitats"
   value: "habitat_pts"
 
-- icon: "/assets/img/change.svg"
+- icon: "/assets/img/biodiversity.svg"
   title: "understorey"
   value: "understorey"
 
@@ -14,6 +14,6 @@
   title: "land cover change"
   value: "change_pts"
 
-- icon: "/assets/img/account.svg"
+- icon: "/assets/icon/account.svg"
   title: "fire"
   value: "fire_pts"
