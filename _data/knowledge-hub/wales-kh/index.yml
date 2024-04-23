@@ -5,7 +5,7 @@
   url: "#"
 
 - title: "NOTEBOOKS AND TOOLS"
-  image: "/assets/img/hubs/developer-hub/jupyter-plain.jpg"
+  image: "/assets/img/hubs/developer-hub/jupyter.png"
   subtitle: "Jupyter notebooks for data processing and analysis"
   content: "The Jupyter Notebooks and Python tools in this repository are for analysing the archive of satellite data that have been processed to an Analysis Ready Data (ARD) format and the derived products.  Includes are example case studies."
   url: "#"
