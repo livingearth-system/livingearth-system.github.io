@@ -16,6 +16,6 @@ Noheader: true
 {%-
 include living-watersources.liquid
 header="Developing new capacity for characterising, mapping and monitoring catchments in Wales. The project is working alongside Living Wales, with focus on retrieving or classifying environmental descriptors relevant to freshwater systems from Earth observation data and quantifying and mapping change impacts and driving pressures.  The project is also developing approaches for improving water quality and use through improved catchment management in Welsh river catchments."
- "
+
 title="See below for more information"
 -%}
