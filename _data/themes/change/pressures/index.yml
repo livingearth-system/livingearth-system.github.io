@@ -84,7 +84,7 @@
   url: "#"
 
 - title: "COPPICING"
-  image: "/assets/img/heading/vegheader.pngg"
+  image: "/assets/img/heading/vegheader.png"
   content: "Area of closely planted trees that are cut back regularly to provide wood."
   url: "#"
 
@@ -194,7 +194,7 @@
   url: "#"
 
 - title: "FALLOWING"
-  =image: "/assets/img/heading/vegheader.png"
+  image: "/assets/img/heading/vegheader.png"
   content: "A farming technique whereby a field is left unoccupied by crops during an entire growing period or part of it to raise soil fertility, accumulate moisture in the soil, increase the yield of all crops in a rotation and improve the quality of agricultural products."
   url: "#"
 
@@ -219,7 +219,7 @@
   url: "#"
 
 - title: "FRACKING"
-  image: "/assets/img/heading/bareheader.png"
+  image: "/assets/img/heading/bareheader1.png"
   content: "Fracking is the process of drilling down into the earth before a high-pressure water mixture is directed at the rock to release the gas inside."
   url: "#"
 
@@ -339,7 +339,7 @@
   url: "#"
 
 - title: "INUNDATION FOLLOWING EXTENDED DROUGHT"
-  image: "/assets/img/heading/waterheader.png"
+  image: "/assets/img/heading/waterheader1.png"
   content: "Progressive submergence of land or structures through flooding and following an extended period of drought."
   url: "#"
 
@@ -709,6 +709,6 @@
   url: "#"
 
 - title: "WETLAND RESTORATION AND/OR CONSTRUCTION"
-  # image: "/assets/img/heading/waterheader1.png"
+  image: "/assets/img/heading/waterheader1.png"
   content: "The process of assisting the recovery of wetlands that has been degraded, damaged or destroyed."
   url: "#"
