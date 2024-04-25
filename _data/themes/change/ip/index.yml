@@ -1,17 +1,17 @@
 - title: "GLOBAL"
   image: "/assets/img/heading/waterheader2.png"
   content: " "
-  url: "#"
+  url: "./global/"
 
 - title: "AUSTRALIA"
   image: "/assets/img/heading/vegheader.png"
   content: " "
-  url: "#"
+  url: "./australia/"
 
 - title: "WALES"
   image: "/assets/img/heading/cropheader2.png"
   content: " "
-  url: "#"
+  url: "./wales/"
 
 - title: "SWITZERLAND"
   image: "/assets/img/heading/cropheader2.png"
