@@ -273,10 +273,10 @@
   content: "A sinkhole is a closed natural depression in the ground surface caused by removal of material below the ground and either collapse or gradual subsidence of the surface into the resulting void."
   url: "#"
 
-
   - title: "SNOW ACCUMULATION"
 #  image: "/assets/img/themes/change/pressures.png"
-  content: "Gradual gathering of snow over an area already
+  content: "Gradual gathering of snow over an area already covered in snow."
+  url: "#"
 
 - title: "SNOW MELT"
 #  image: "/assets/img/themes/change/pressures.png"
