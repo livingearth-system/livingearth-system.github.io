@@ -4,27 +4,388 @@
   url: "#"
 
 - title: "2. AFFORESTATION"
-  image: "/assets/img/themes/change/pressures.png"
+#  image: "/assets/img/themes/change/pressures.png"
   content: "Establishment of forest through planting and/or deliberate seeding on land that, until then, was under a different land use. Implies a transformation of land use from non-forest to forest."
   url: "#"
 
 - title: "3. AGRICULTURAL EXPANSION"
-  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
+#  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
   content: "Increase in area of arable lands and pasture used for food production."
   url: "#"
 
 - title: "4. AGRICULTURAL LOSS"
-  image: "/assets/img/themes/change/pressures.png"
+#  image: "/assets/img/themes/change/pressures.png"
   content: "A sudden proliferation of algae (microscopic plants) that occurs near the surface of a body of water. Blooms can occur due to natural nutrient cycles, or can be in response to eutrophication or climate variations."
   url: "#"
 
 - title: "5. AMENITY DEVELOPMENT"
-  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
+#  image: "/assets/img/themes/change/imp-pressure-cyclone.png"
   content: "Introduction of a positive element or elements that contribute to the overall character or enjoyment of an area. For example, open land, trees, historic buildings and the inter-relationship between them, or less tangible factors such as tranquillity. "
   url: "#"
 
 - title: "6. ANCHORING"
-  image: "/assets/img/themes/change/impacts.png"
+#  image: "/assets/img/themes/change/impacts.png"
   content: "Securing a boat firmly to the seabed using an anchor."
   url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "Input"
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+  
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+- title: "INPUT"
+#  image: "/assets/img/themes/change/impacts.png"
+  content: "A change in the type of animal(s) obtaining food from an area."
+  url: "#"
+
+
+
+  
+
+
 
