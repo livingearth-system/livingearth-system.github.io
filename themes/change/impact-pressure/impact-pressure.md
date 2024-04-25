@@ -14,6 +14,6 @@ Noheader: true
 ---
 
 {%-
-include change-impactpressure.liquid
+include change-impact-pressure.liquid
 header="Impact and pressure examples"
 -%}
