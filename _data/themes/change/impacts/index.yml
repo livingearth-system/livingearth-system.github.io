@@ -10,17 +10,17 @@
 
 - title: "ALGAL DIEBACK"
   image: "/assets/img/heading/vegheader.png"
-  content: "The build-up of sediments to form land or shoaling in coastal waters or waterways. It may be either natural or artificial. Natural accretion is the build-up of land on the beach, dunes, or in the water by natural processes, such as waves, current and wind. Artificial accretion is a similar build-up of land resulting from built structures such as groynes or breakwaters, or activities such as filling and beach nourishment, or also aggradation. "
+  content: "Loss of algae (microscopic plants) that occurs near the surface of a body of water. "
   url: "#"
 
 - title: "BARE SOIL EXPOSURE"
   image: "/assets/img/heading/bareheader1.png"
-  content: "A sudden proliferation of algae (microscopic plants) that occurs near the surface of a body of water. Blooms can occur due to natural nutrient cycles, or can be in response to eutrophication or climate variations."
+  content: "Appearance of underlying soil following human or natural disturbance, such as removal of top soil prior to urban construction or grazing of natural vegetation."
   url: "#"
 
 - title: "BLACKWATER EVENT"
   image: "/assets/img/heading/waterheader2.png"
-  content: "The build-up of sediments to form land or shoaling in coastal waters or waterways. It may be either natural or artificial. Natural accretion is the build-up of land on the beach, dunes, or in the water by natural processes, such as waves, current and wind. Artificial accretion is a similar build-up of land resulting from built structures such as groynes or breakwaters, or activities such as filling and beach nourishment, or also aggradation. "
+  content: "When organic material is inundated or washed into waterways and consumed by bacteria, leading to a sudden depletion of dissolved oxygen in the water. "
   url: "#"
 
 - title: "BROWNING (OF VEGETATION)"
@@ -40,7 +40,7 @@
 
 - title: "CORAL BLEACHING"
   image: "/assets/img/heading/waterheader2.png"
-  content: "A sudden proliferation of algae (microscopic plants) that occurs near the surface of a body of water. Blooms can occur due to natural nutrient cycles, or can be in response to eutrophication or climate variations."
+  content: "When the coral host expels its zooxanthellae (marine algae living in symbiosis with the coral) in response to increased water temperatures, often resulting in the death of the coral."
   url: "#"
 
 - title: "CORAL DAMAGE"
