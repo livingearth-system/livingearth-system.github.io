@@ -14,6 +14,6 @@ Noheader: true
 ---
 
 {%-
-include ip-vegamt-encr/ip-vegamt-encr.liquid
+include ip-vegamt-encr.liquid
 header="Impact and pressure examples"
 -%}
