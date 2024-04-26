@@ -17,7 +17,7 @@ Nosvg: true
 include ip-vga-encr.liquid
 header="<strong>EVIDENCE FOR IMPACTS</strong>.
 
-<br/><br/><strong>From the data cube, time-series of the following environmental descriptors can be used to evidence a gain in vegetation amount </strong>
+<br/><strong>From the data cube, time-series of the following environmental descriptors can be used to evidence a gain in vegetation amount </strong>
 <br><br/>*    Land cover (Level 3).
 <br/>*    Lifeform (categories of woody and herbaceous)
 <br/>*    Canopy cover (%) 
@@ -31,14 +31,14 @@ header="<strong>EVIDENCE FOR IMPACTS</strong>.
 <br/>* Period of active land use.  
 <br/>* Proximity to forest edge (m, based on pixel resolution)
 
-<br><br><strong>CASE STUDY</strong>
+<br><strong>CASE STUDY</strong>
 <br><br>The case study is the Amazon Basin where pastures used actively for extended periods but then abandonmed are encroached upon from refugia of plant communities (e.g., Vismia species).  The net change in cover from herbaceous to woody in the lifform layer with a corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope).
 
 <br><br><strong>TRENDS AND UNCERTAINTIES</strong>
-<br><br>The corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope).
+<br>The corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope).
 
 <br><br><strong>JUPYTER NOTEBOOK</strong>
-<br><br>The notebook identifies the environmental descriptors required to estabhlish whether there has been a gain in the amount of vegetation, with this representing a modificaiton of the land cover.  Each of these required layers is loaded in from the data cube and displayed.  The Evidence-Based Change Framework is then implemented.
+<br>The notebook identifies the environmental descriptors required to estabhlish whether there has been a gain in the amount of vegetation, with this representing a modificaiton of the land cover.  Each of these required layers is loaded in from the data cube and displayed.  The Evidence-Based Change Framework is then implemented.
 
 "
 -%}
