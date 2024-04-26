@@ -17,16 +17,20 @@ Nosvg: true
 include ip-vga-encr.liquid
 header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, the evidence requirements are:.
 
+<br/><strong>From the data cube </strong>
 <br/>* Land cover (Level 3)
 <br/>* Canopy cover 
 <br/>* Canopy height
 <br/>* Woody above ground biomass
 <br/>* Green (photosynthetic) fraction
 
-<br><strong>PRESSURE DATASETS</strong>
-<br><ul> The Pressure datasets needed are accessible via Living Earth:</ul>
+<br><br><strong>PRESSURE DATASETS</strong>
+<br><ul> The Pressure datasets needed are:</ul>
 
-Datasets include precipitation.</ul>
+<br/>* Age of forest clearance
+<br/>* Period of active land use
+<br/>* Proximity to forest edge
+
 
 <br><br><strong>CASE STUDY</strong>
 <br><ul> The case study is the Amazon Basin where pastures used actively for extended periods but then abandonmed are encroached upon from refugia of plant communities (e.g., Vismia species).  The net change in cover from herbaceous to woody in the lifform layer with a corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope) </ul>
