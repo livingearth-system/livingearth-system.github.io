@@ -14,7 +14,7 @@ Nosvg: true
 ---
 
 {%-
-include publications.liquid
+include ip-vga-encr.liquid
 header="EVIDENCE FOR IMPACTS <br>  In the case of this impact, the evidence requirements are:.
 
 <br><ul> Canopy cover </ul> 
