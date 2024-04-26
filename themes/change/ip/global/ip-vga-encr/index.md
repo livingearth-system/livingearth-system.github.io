@@ -17,7 +17,7 @@ Nosvg: true
 include ip-vga-encr.liquid
 header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, sources of evidence for a gain in vegetation amount are:.
 
-<br/><strong>From the data cube, time-series of the following environmental descriptors can be used to evidence a gain in vegetation amount </strong>
+<br/><br/><strong>From the data cube, time-series of the following environmental descriptors can be used to evidence a gain in vegetation amount </strong>
 <br/>*    Land cover (Level 3).
 <br/>*    Lifeform (categories of woody and herbaceous)
 <br/>*    Canopy cover (%) 
@@ -33,12 +33,12 @@ header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, 
 <br/>* Proximity to forest edge (m, based on pixel resolution)
 
 
-<br><br><strong>CASE STUDY</strong>
-<br><ul> The case study is the Amazon Basin where pastures used actively for extended periods but then abandonmed are encroached upon from refugia of plant communities (e.g., Vismia species).  The net change in cover from herbaceous to woody in the lifform layer with a corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope) </ul>
+<br><strong>CASE STUDY</strong>
+<br>The case study is the Amazon Basin where pastures used actively for extended periods but then abandonmed are encroached upon from refugia of plant communities (e.g., Vismia species).  The net change in cover from herbaceous to woody in the lifform layer with a corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope).
 
 <br><strong>JUPYTER NOTEBOOK</strong>
 
-<br><ul> The notebook identifies the environmental descriptors required to estabhlish whether there has been a gain in the amount of vegetation, with this representing a modificaiton of the land cover.  Each of these required layers is loaded in from the data cube and displayed.  The Evidence-Based Change Framework is then implemented  </ul> 
+<br>The notebook identifies the environmental descriptors required to estabhlish whether there has been a gain in the amount of vegetation, with this representing a modificaiton of the land cover.  Each of these required layers is loaded in from the data cube and displayed.  The Evidence-Based Change Framework is then implemented.
 
 "
 -%}
