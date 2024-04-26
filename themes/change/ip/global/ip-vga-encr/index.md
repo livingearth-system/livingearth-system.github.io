@@ -17,11 +17,11 @@ Nosvg: true
 include ip-vga-encr.liquid
 header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, the evidence requirements are:.
 
-* Land cover (Level 3)
-* Canopy cover 
-* Canopy height
-* Woody above ground biomass
-* Green (photosynthetic) fraction
+<br/>* Land cover (Level 3)
+<br/>* Canopy cover 
+<br/>* Canopy height
+<br/>* Woody above ground biomass
+<br/>* Green (photosynthetic) fraction
 
 <br><strong>PRESSURE DATASETS</strong>
 <br><ul> The Pressure datasets needed are accessible via Living Earth:</ul>
