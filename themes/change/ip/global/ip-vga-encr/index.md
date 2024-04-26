@@ -34,10 +34,10 @@ header="<strong>EVIDENCE FOR IMPACTS</strong>.
 <br/>* Proximity to forest edge (m( based on pixel resolution and generated through proximity analyses.
 
 <br><br><strong>CASE STUDY</strong>
-<br><br>The case study is the Amazon Basin where pastures used actively for extended periods but then abandoned are encroached upon from refugia of plant communities (e.g., Vismia species along the margins of cattle pastures).  A net change in cover from herbaceous to woody in the lifeform layer with a corresponding increase in above ground biomnass is indicated.
+<br>The case study is the Amazon Basin where pastures used actively for extended periods but then abandoned are encroached upon from refugia of plant communities (e.g., Vismia species along the margins of cattle pastures).  A net change in cover from herbaceous to woody in the lifeform layer with a corresponding increase in above ground biomnass is indicated.
 
 <br><br><strong>TRENDS AND UNCERTAINTIES</strong>
-<br>The corresponding increase in above ground biomnass is considered significant (based on the Mann-Kendall and Senn slope statistics).
+<br>The corresponding increase in above ground biomass is considered significant (based on the Mann-Kendall and Senn slope statistics).
 
 <br><br><strong>COMPARISONS WITH DECONSTRUCTED LAND COVER DATA </strong>
 <br>For the same area, the equivalent evidence-based change mapping was applied to land cover maps deconstructed from the ESA CCI 300 m Land Cover product and the Copernicus 100 m Land Cover product and reconstructed according to the FAO LCCS (to Level 3 and with lifeform). 
