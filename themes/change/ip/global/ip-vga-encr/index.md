@@ -15,7 +15,7 @@ Nosvg: true
 
 {%-
 include ip-vga-encr.liquid
-header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, sources of evidence for a gain in vegetation amount are:.
+header="<strong>EVIDENCE FOR IMPACTS</strong>.
 
 <br/><br/><strong>From the data cube, time-series of the following environmental descriptors can be used to evidence a gain in vegetation amount </strong>
 <br/>*    Land cover (Level 3).
