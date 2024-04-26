@@ -17,20 +17,21 @@ Nosvg: true
 include ip-vga-encr.liquid
 header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, the evidence requirements are:.
 
-<br><ul> Canopy cover </ul> 
-<br><ul> Canopy height  </ul>
-<br><ul> Woody above ground biomass.</ul>
-<br><ul> Green (photosynthetic) fraction </ul>
+* Land cover (Level 3)
+* Canopy cover 
+* Canopy height
+* Woody above ground biomass
+* Green (photosynthetic) fraction
 
-<br>**PRESSURE DATASETS**
+<br><strong>PRESSURE DATASETS</strong>
 <br><ul> The Pressure datasets needed are accessible via Living Earth:</ul>
 
 Datasets include precipitation.</ul>
 
-<br><br>**CASE STUDY**
+<br><br><strong>CASE STUDY</strong>
 <br><ul> The case study is the Amazon Basin where pastures used actively for extended periods but then abandonmed are encroached upon from refugia of plant communities (e.g., Vismia species).  The net change in cover from herbaceous to woody in the lifform layer with a corresponding increase in above ground biomnass that is considered significnat (based on the Mann-Kendall and Senn slope) </ul>
 
-<br>**JUPYTER NOTEBOOK**
+<br><strong>JUPYTER NOTEBOOK</strong>
 
 <br><ul> The notebook identifies the environmental descriptors required to estabhlish whether there has been a gain in the amount of vegetation, with this representing a modificaiton of the land cover.  Each of these required layers is loaded in from the data cube and displayed.  The Evidence-Based Change Framework is then implemented  </ul> 
 
