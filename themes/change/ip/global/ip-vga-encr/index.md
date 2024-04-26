@@ -15,21 +15,22 @@ Nosvg: true
 
 {%-
 include ip-vga-encr.liquid
-header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, the evidence requirements are:.
+header="<strong>EVIDENCE FOR IMPACTS</strong> <br>  In the case of this impact, sources of evidence for a gain in vegetation amount are:.
 
-<br/><strong>From the data cube </strong>
-<br/>* Land cover (Level 3)
-<br/>* Canopy cover 
-<br/>* Canopy height
-<br/>* Woody above ground biomass
-<br/>* Green (photosynthetic) fraction
+<br/><strong>From the data cube, time-series of the following environmental descriptors can be used to evidence a gain in vegetation amount </strong>
+<br/>*    Land cover (Level 3).
+<br/>*    Lifeform (categories of woody and herbaceous)
+<br/>*    Canopy cover (%) 
+<br/>*    Canopy height (m)
+<br/>*    Woody above ground biomass (Mg ha-1)
+<br/>*    Green (photosynthetic) fraction (%)
 
 <br><br><strong>PRESSURE DATASETS</strong>
-<br><ul> The Pressure datasets needed are:</ul>
+<br> Datasets that might be used to indicate the pressure are:
 
 <br/>* Age of forest clearance
-<br/>* Period of active land use
-<br/>* Proximity to forest edge
+<br/>* Period of active land use.  
+<br/>* Proximity to forest edge (m, based on pixel resolution)
 
 
 <br><br><strong>CASE STUDY</strong>
