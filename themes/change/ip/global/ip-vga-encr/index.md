@@ -23,15 +23,15 @@ header="<strong>EVIDENCE FOR IMPACTS</strong>.
 <br/>*    Canopy cover (%); 
 <br/>*    Green (photosynthetic) fraction (%)
 
-<br/><br/><strong>Other environmental descriptors were obtained from external layers</strong>.
+<br/><br/><strong>Other environmental descriptors obtained from external layers</strong>.
 <br/>*    Canopy height (m)
 <br/>*    Woody above ground biomass (Mg ha-1); ESA CCI Biomass
 
 <br><br><strong>EVIDENCE FOR PRESSURES</strong>
 <br> <strong>Datasets that might be used to indicate the pressure are:</strong>
-<br><br/>* Age of forest clearance, generated from time-series comparison of land cover maps (data cube)
-<br/>* Period of active land useg, generated from time-series comparison of land cover maps (data cube).  
-<br/>* Proximity to forest edge (m( based on pixel resolution and generated through proximity analyses.
+<br/>* Age of forest clearance, generated from time-series comparison of land cover maps (data cube)
+<br/>* Period of active land use, generated from time-series comparison of land cover maps (data cube).  
+<br/>* Proximity to forest edge (m) depending upon the pixel resolution and generated through proximity analyses.
 
 <br><br><strong>CASE STUDY</strong>
 <br>The case study is the Amazon Basin where pastures used actively for extended periods but then abandoned are encroached upon from refugia of plant communities (e.g., Vismia species along the margins of cattle pastures).  A net change in cover from herbaceous to woody in the lifeform layer with a corresponding increase in above ground biomnass is indicated.
