@@ -36,6 +36,8 @@ header="<strong>EVIDENCE FOR IMPACTS</strong>.
 <br><br><strong>CASE STUDY</strong>
 <br>The case study is the Amazon Basin where pastures used actively for extended periods but then abandoned are encroached upon from refugia of plant communities (e.g., Vismia species along the margins of cattle pastures).  A net change in cover from herbaceous to woody in the lifeform layer with a corresponding increase in above ground biomnass is indicated.
 
+![alt text](/assets/img/env_descriptors/envdes-png.png)
+
 <br><br><strong>TRENDS AND UNCERTAINTIES</strong>
 <br>The corresponding increase in above ground biomass is considered significant (based on the Mann-Kendall and Senn slope statistics).
 
