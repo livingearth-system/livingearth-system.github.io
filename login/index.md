@@ -8,7 +8,7 @@ image: "/assets/img/heading/monmouthshire.jpg"
 nocontact: true
 button1: "none"
 button2: "Land Owner Login"
-button2_url: "/tools/industry-specific-site"
+button2_url: "./login/"
 
 ### Pre-Login
 pre-login:

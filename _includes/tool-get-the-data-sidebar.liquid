@@ -14,7 +14,7 @@
           <div class="title-sub">
             <p class="title">
               {{ item.title }}
-              <button
+              {% comment %} <button
                 type="button"
                 class="btn"
                 data-toggle="tooltip"
@@ -22,7 +22,7 @@
                 title="{{ item.tooltip }}"
               >
                 <img src="{{ item.link }}">
-              </button>
+              </button> {% endcomment %}
             </p>
             <p class="subtitle">{{ item.subtitle }}</p>
           </div>

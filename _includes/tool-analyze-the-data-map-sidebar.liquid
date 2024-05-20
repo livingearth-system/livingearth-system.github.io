@@ -1,20 +1,29 @@
 <div class="tool_side_bar">
   <div class="country_form">
     <select class="form-select" aria-label="Default select example" class="choose_country">
-      <option selected>{{ site.data.tool-analyze-the-data-map-sidebar.index.choose }}</option>
       {% for country in site.data['tool-analyze-the-data-map-sidebar'].index.countries %}
         <option value="{{ country.value }}">{{ country.name }}</option>
       {% endfor %}
     </select>
 
-    <button class="sign_in_github">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text2 }}</button>
+    <button
+      class="sign_in_github"
+      onclick="window.location.href='https://github.com/livingearth-system/livingearth-system.github.io'"
+    >
+      {{ site.data['tool-analyze-the-data-map-sidebar'].index.learning_resources.button_text2 }}
+    </button>
   </div>
 
   <div class="learning_resource">
     <a href="{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_url }}">
       <div class="button-tool">
-        <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
-        <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
+        <button class="button_tool_tilte" id="learningResourceButton">
+          {{ site.data['tool-analyze-the-data-map-sidebar'].index.learning_resources.button_text1 }}
+        </button>
+        <img
+          src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}"
+          alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}"
+        >
       </div>
     </a>
     <div class="brand_logo">
@@ -34,5 +43,13 @@
         window.location.href = '/tools/learning-resources';
       });
     }
+
+    const option = document.querySelector('.country_form select');
+    option.addEventListener('change', () => {
+      if (option.value.toUpperCase() === 'WALES') {
+        window.location.href = 'https://hub.livingwales.space/hub/spaw';
+      } else if (option.value.toUpperCase() === 'AUSTRALIA')
+        window.location.href = 'https://app.sandbox.dea.ga.gov.au/hub/login?next=%2Fhub%2F';
+    });
   });
 </script>

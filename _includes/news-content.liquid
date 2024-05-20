@@ -1,12 +1,12 @@
 <div class="news-header-container">
   <div class="news-header-search">
     <input
-      class="search-box "
+      class="search-box"
       type="text"
       placeholder="Search by key word"
     >
 
-    <button class="a-to-z ">
+    <button class="a-to-z">
       <img src="/assets/icon/icon-a-to-z.svg">
     </button>
   </div>
@@ -74,7 +74,7 @@
   <div class="mb-60">
     <div class="row mb-60">
       {% for infor in site.data['news-blog'].index %}
-        <div class="col-xl-4 col-md-6">
+        <div class="col-xl-4 col-md-6 blog_item">
           <div class="item mt-60" data-category="{{ infor['category'] }}">
             <div class="stay-up-card">
               <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
@@ -116,150 +116,172 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.news-header-option button');
 
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            const category = button.dataset.category;
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.news-header-option button');
 
-            document.querySelectorAll('.col-xl-4').forEach(function(column) {
-                const itemsInColumn = column.querySelectorAll('.item');
-                let columnShouldBeVisible = false;
+      buttons.forEach(function (button) {
+          button.addEventListener('click', function () {
+              const category = button.dataset.category;
 
-                itemsInColumn.forEach(function (item) {
-                    const itemCategory = item.dataset.category;
-                    
-                    if (category === 'all' || category === itemCategory) {
-                        columnShouldBeVisible = true;
-                    }
-                });
+              document.querySelectorAll('.col-xl-4').forEach(function(column) {
+                  const itemsInColumn = column.querySelectorAll('.item');
+                  let columnShouldBeVisible = false;
 
-                if (columnShouldBeVisible) {
-                    column.style.display = 'block';
-                } else {
-                    column.style.display = 'none';
-                }
-            });
-        });
-    });
-});
+                  itemsInColumn.forEach(function (item) {
+                      const itemCategory = item.dataset.category;
 
-document.addEventListener("DOMContentLoaded", function() {
-    var totalArticles = {{ site.data['news-blog'].index.size }};
-    var currentViewSpan = document.getElementById("current-view");
-    var totalArticlesSpan = document.getElementById("total-articles");
+                      if (category === 'all' || category === itemCategory) {
+                          columnShouldBeVisible = true;
+                      }
+                  });
 
-    var loadMoreBtn = document.querySelector(".load-more-btn");
-    var articlesPerPage = 8;
-    var currentPage = 1;
-
-    if (totalArticlesSpan) {
-        totalArticlesSpan.textContent = totalArticles;
-    }
-
-    function updateCurrentView() {
-        var currentViewCount = Math.min(currentPage * articlesPerPage, totalArticles);
-        if (currentViewSpan) {
-            currentViewSpan.textContent = currentViewCount;
-        }
-    }
-
-    updateCurrentView();
-
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener("click", function() {
-            currentPage++;
-            updateCurrentView();
-        });
-    }
-});
-
-    document.addEventListener("DOMContentLoaded", function() {
-      var data = {{ site.data['news-blog'].index | jsonify }};
-      var counts = {};
-      var totalCount = 0;
-
-      data.forEach(function(item) {
-          var category = item['category'];
-          if (counts[category] === undefined) {
-              counts[category] = 0;
-          }
-          counts[category]++;
-          totalCount++;
+                  if (columnShouldBeVisible) {
+                      column.style.display = 'block';
+                  } else {
+                      column.style.display = 'none';
+                  }
+              });
+          });
       });
+  });
 
-      Object.keys(counts).forEach(function(category) {
-          var count = counts[category];
-          var countSpanId = category + "-count";
-          var countSpan = document.getElementById(countSpanId);
-          if (countSpan) {
-              countSpan.textContent = count;
+  document.addEventListener("DOMContentLoaded", function() {
+      var totalArticles = {{ site.data['news-blog'].index.size }};
+      var currentViewSpan = document.getElementById("current-view");
+      var totalArticlesSpan = document.getElementById("total-articles");
+
+      var loadMoreBtn = document.querySelector(".load-more-btn");
+      var articlesPerPage = 8;
+      var currentPage = 1;
+
+      if (totalArticlesSpan) {
+          totalArticlesSpan.textContent = totalArticles;
+      }
+
+      function updateCurrentView() {
+          var currentViewCount = Math.min(currentPage * articlesPerPage, totalArticles);
+          if (currentViewSpan) {
+              currentViewSpan.textContent = currentViewCount;
           }
-      });
+      }
 
-      var allCountSpan = document.getElementById("all-count");
-      if (allCountSpan) {
-          allCountSpan.textContent = totalCount;
+      updateCurrentView();
+
+      if (loadMoreBtn) {
+          loadMoreBtn.addEventListener("click", function() {
+              currentPage++;
+              updateCurrentView();
+          });
       }
   });
 
-      document.addEventListener('DOMContentLoaded', function () {
-        const buttons = document.querySelectorAll('.news-header-option button');
-        const items = document.querySelectorAll('.item');
-        const totalArticlesSpan = document.getElementById("total-articles");
-        const currentViewSpan = document.getElementById("current-view");
-        const loadMoreBtn = document.querySelector(".load-more-btn");
-    
-        let data = {{ site.data['news-blog'].index | jsonify }};
-        let totalCount = data.length;
-        let articlesPerPage = 8;
-        let currentPage = 1;
+      document.addEventListener("DOMContentLoaded", function() {
+        var data = {{ site.data['news-blog'].index | jsonify }};
+        var counts = {};
+        var totalCount = 0;
 
-    function updateCurrentView(category) {
-        let currentViewCount = 0;
-            items.forEach(function (item) {
-            const itemCategory = item.dataset.category;
-            if (category === 'all' || category === itemCategory) {
-                if (item.style.display !== 'none') {
-                    currentViewCount++;
-                }
-              }
-            });
-        if (currentViewSpan) {
-            currentViewSpan.textContent = currentViewCount;
-        }
-    }
+        data.forEach(function(item) {
+            var category = item['category'];
+            if (counts[category] === undefined) {
+                counts[category] = 0;
+            }
+            counts[category]++;
+            totalCount++;
+        });
 
-    function updateTotalArticles(category) {
-        let totalArticlesCount = 0;
-        items.forEach(function(item) {
-            const itemCategory = item.dataset.category;
-            if (category === 'all' || category === itemCategory) {
-                totalArticlesCount++;
+        Object.keys(counts).forEach(function(category) {
+            var count = counts[category];
+            var countSpanId = category + "-count";
+            var countSpan = document.getElementById(countSpanId);
+            if (countSpan) {
+                countSpan.textContent = count;
             }
         });
-        if (totalArticlesSpan) {
-            totalArticlesSpan.textContent = totalArticlesCount;
+
+        var allCountSpan = document.getElementById("all-count");
+        if (allCountSpan) {
+            allCountSpan.textContent = totalCount;
         }
-    }
-
-    updateCurrentView('all');
-    updateTotalArticles('all');
-
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            const category = button.dataset.category;
-            updateCurrentView(category);
-            updateTotalArticles(category);
-        });
     });
 
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener("click", function() {
-            currentPage++;
-            updateCurrentView('all');
-        });
-    }
-});
+        document.addEventListener('DOMContentLoaded', function () {
+          const buttons = document.querySelectorAll('.news-header-option button');
+          const items = document.querySelectorAll('.item');
+          const totalArticlesSpan = document.getElementById("total-articles");
+          const currentViewSpan = document.getElementById("current-view");
+          const loadMoreBtn = document.querySelector(".load-more-btn");
+
+          let data = {{ site.data['news-blog'].index | jsonify }};
+          let totalCount = data.length;
+          let articlesPerPage = 8;
+          let currentPage = 1;
+
+      function updateCurrentView(category) {
+          let currentViewCount = 0;
+              items.forEach(function (item) {
+              const itemCategory = item.dataset.category;
+              if (category === 'all' || category === itemCategory) {
+                  if (item.style.display !== 'none') {
+                      currentViewCount++;
+                  }
+                }
+              });
+          if (currentViewSpan) {
+              currentViewSpan.textContent = currentViewCount;
+          }
+      }
+
+      function updateTotalArticles(category) {
+          let totalArticlesCount = 0;
+          items.forEach(function(item) {
+              const itemCategory = item.dataset.category;
+              if (category === 'all' || category === itemCategory) {
+                  totalArticlesCount++;
+              }
+          });
+          if (totalArticlesSpan) {
+              totalArticlesSpan.textContent = totalArticlesCount;
+          }
+      }
+
+      updateCurrentView('all');
+      updateTotalArticles('all');
+
+      buttons.forEach(function (button) {
+          button.addEventListener('click', function () {
+              const category = button.dataset.category;
+              updateCurrentView(category);
+              updateTotalArticles(category);
+          });
+      });
+
+      if (loadMoreBtn) {
+          loadMoreBtn.addEventListener("click", function() {
+              currentPage++;
+              updateCurrentView('all');
+          });
+      }
+  });
+
+      // search function
+      document.addEventListener('DOMContentLoaded', ()=>{
+        const buttonSearch = document.querySelector('.a-to-z')
+        const inputSearch = document.querySelector('.search-box')
+        buttonSearch.addEventListener('click', ()=>{
+          searchFunction(inputSearch.value)
+        })
+
+        const searchFunction = (searchText) => {
+            const blogs = document.querySelectorAll('.blog_item')
+            blogs.forEach(blog => {
+              const title = blog.querySelector('.title-img>a')
+              if(!title.textContent.toUpperCase().includes(searchText.toUpperCase())) {
+                blog.style.display = 'none'
+              } else {
+                blog.style.display = 'block'
+              }
+            })
+        }
+      })
 </script>

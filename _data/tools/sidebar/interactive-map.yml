@@ -24,6 +24,6 @@
   disable: true
 
 - icon: "/assets/img/change.svg"
-  title: "feature"
+  title: "futures"
   color: "purple"
   disable: true
