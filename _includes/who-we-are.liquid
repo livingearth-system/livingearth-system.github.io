@@ -1,35 +1,44 @@
 <!-- WHO-WE-ARE -->
+{% assign array = include.count | split: ';' %}
 {%- assign condition = false -%}
+<style>
+  @media screen and (min-width: 768px) {
+    .count-items {
+      flex-direction: row;
+    }
 
+    .counted {
+      width: calc(100% / {{array.size}});
+      margin-right: 10px;
+      text-align: center
+    }
+
+    .counted:last-child {
+      margin-right: 0px;
+    }
+  }
+</style>
 <section class="pt-80 pb-80 who-we-are" style="background-color: #F8F8FD;">
-    <div class="full-bleed">
-        <div class="row">
-            <div class="who-we-count" style="width: 100%;">
-                <div class="row count-items">
-                    {%- if include.count -%}
-                    {% assign array = include.count | split: ';' %}
-                    {% for entry in array %}
-                    <div class="counted">
-                        {% assign e = entry | split: ',' %}
-                        {% assign h3_content = e[0] | strip %}
-                        {% if h3_content contains "KM2" %}
-                        {% assign h3_content = h3_content | replace: "KM2", "KM<sup>2</sup>" %}
-                        {% endif %}
-                        <h3>{{ h3_content | safe }}</h3>
-                        <p>{{ e[1] | strip }}</p>
-                    </div>
-                    {% endfor %}
-                    {% endif %}
-                </div>
-            </div>
-            <div class="col-md-6 col-12 who-we-content">
-                {%- if condition -%}
-                {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
-                {%- if include.subheading -%}<p class="mb-4">{{ include.subheading }}</p>{% endif %}
-                {%- endif %}
-            </div>
+  <div class="full-bleed">
+    <div class="row">
+      <div class="who-we-count" style="width: 100%;">
+        <div class="count-items">
+          {%- if include.count -%}
+            {% for entry in array %}
+              <div class="counted">
+                {% assign e = entry | split: ',' %}
+                {% assign h3_content = e[0] | strip %}
+                {% if h3_content contains 'KM2' %}
+                  {% assign h3_content = h3_content | replace: 'KM2', 'KM<sup>2</sup>' %}
+                {% endif %}
+                <h3>{{ h3_content | safe }}</h3>
+                <p>{{ e[1] | strip }}</p>
+              </div>
+            {% endfor %}
+          {% endif %}
         </div>
+      </div>
     </div>
-
+  </div>
 </section>
 <!-- WHO-WE-ARE -->

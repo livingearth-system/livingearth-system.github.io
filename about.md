@@ -35,10 +35,6 @@ subheading="and what we stand for"
 count="Vision, We aspire to provide high-level, complex environmental dynamics datasets in an easy to use and understand format to everyone. To inspire, support and improve the way we plan landscape-scale change for biodiversity and resilience; Aims, Our long-term strategy is to provide ongoing, open-source datasets for any and all who want to use them from schools to scientists. Our vision is that providing complex landscape scale dynamics in accessible format will improve awareness of our changing environment while supporting decision-making for successful ecosystem conservation, restoration, and future planning for a better, more biodiverse world.; Values, We stand for free open-source collaboration of environmental dynamics across continents, disciplines and audiences. We seek better resources for land planners to be better prepared to face the challenges ahead from climate change, anthropogenic factors and natural disasters. Believe that collaborative responses to environmental change is our path to improving the environment.; Mission statement, Our mission is to provide the platform for landscape-scale environmental variable analysis, through time, to everyone for free. We take satellite data and process them to provide both analysis-ready data for developers and algorithm-based habitat dynamics map products. We are engineering a solution to visualising large-scale environmental changes, impacts and pressures to save our planet."
 -%}
 
-subheading2= "Living Earth continues to evolve through national and international contributions that ensure continued research and development in the use of Earth observations for land characterisation, mapping and monitoring. "
-image="/assets/img/heading/fieldwales.png" alt="Office"
--%}
-
 {%-
 include new-our-event.liquid
 -%}
