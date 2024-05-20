@@ -32,15 +32,8 @@
   margin-bottom: 0;
   font-size: 14px;
   white-space: nowrap;
-  overflow: hidden;
   color: #535353;
-  text-overflow: ellipsis;
-  margin-bottom: 0;
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  color: #535353;
-  text-overflow: ellipsis;
+  text-wrap: balance;
 }
 
 @media (max-width: 991px) {

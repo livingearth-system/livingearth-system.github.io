@@ -1,30 +1,34 @@
 <!-- CONTACT-US -->
 <form class="contactus-dsc-form-main">
-    <div class="input-group">
-        <input class="input--style-1" type="text" placeholder="FULL NAME" name="fullname" required>
-    </div>
-    <div class="input-group">
-        <input class="input--style-1" type="email" placeholder="E-MAIL" name="email" required>
-    </div>
-    <div class="input-group">
-        <input class="input--style-1" type="number" placeholder="PHONE NUMBER" name="phone" required>
-    </div>
-    <div class="input-group" style="display:none">
-        <div class="rs-select2 js-select-simple select--no-search">
-            <select name="CHOOSE YOUR ENQUIRY" required>
-                <option disabled="disabled" selected="selected">CHOOSE YOUR ENQUIRY</option>
-                <option>ENQUIRY-ONE</option>
-                <option>ENQUIRY-TWO</option>
-                <option>ENQUIRY-THREE</option>
-            </select>
-            <div class="select-dropdown"></div>
-        </div>
-    </div>
-    <div class="input-group">
-        <input class="input--style-1" type="text" placeholder="YOUR MESSAGE" name="message">
-    </div>
-    <div class="mt-60">
-        <button class="contact-form-submit" type="submit">Submit</button>
-    </div>
+  <div class="input-group">
+    <input class="input--style-1" type="text" placeholder="FULL NAME" name="fullname" required>
+  </div>
+  <div class="input-group">
+    <input class="input--style-1" type="email" placeholder="E-MAIL" name="email" required>
+  </div>
+  <div class="input-group">
+    <input class="input--style-1" type="number" placeholder="PHONE NUMBER" name="phone" required>
+  </div>
+  <div class="input-group">
+    <input class="input--style-1" type="text" placeholder="YOUR MESSAGE" name="message">
+  </div>
+  <div class="mt-60">
+    <button class="contact-form-submit" type="submit">Submit</button>
+  </div>
 </form>
 <!-- /CONTACT-US -->
+
+<script>
+  const form = document.querySelector('.contactus-dsc-form-main');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const fullname = form.querySelector('input[name="fullname"]').value,
+      email = form.querySelector('input[name="email"]').value,
+      phone = form.querySelector('input[name="phone"]').value,
+      message = form.querySelector('input[name="message"]').value,
+      mailtoLink = `mailto:rml2@aber.ac.uk?subject=${encodeURIComponent(
+        'Email contact form living earth'
+      )}&body=${encodeURIComponent(`Name: ${fullname}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`)}`;
+    window.location.href = mailtoLink;
+  });
+</script>

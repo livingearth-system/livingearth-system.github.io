@@ -14,9 +14,9 @@
   status: ""
   title: "earthtrack.app"
 
-- icon: "/assets/icon/icon-industry.svg"
-  status: ""
-  title: "organisation specific site"
+# - icon: "/assets/icon/icon-industry.svg"
+#   status: ""
+#   title: "organisation specific site"
 
 - icon: "/assets/icon/icon-pastandpresent.svg"
   status: "disabled"
