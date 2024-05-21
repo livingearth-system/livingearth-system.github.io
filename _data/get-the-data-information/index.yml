@@ -78,11 +78,11 @@ bottom-box:
   description_2: "Instructional videos for both QGIS and ARCGIS Pro are available at [LINK: VIDEO – QGIS, LINK: VIDEO – ARCGIS PRO."
   url: "https://earthtrack.aber.ac.uk/services/wfs"
 
-video: 
-  title: "Your browser does not support HTML video."
-  video_1:
-    src: "mov_bbb.mp4"
-    type: "video/mp4"
-  video_2:
-    src: "mov_bbb.ogg"
-    type: "video/ogg"
+#video: 
+#  title: "Your browser does not support HTML video."
+#  video_1:
+#    src: "mov_bbb.mp4"
+#    type: "video/mp4"
+#  video_2:
+#    src: "mov_bbb.ogg"
+#    type: "video/ogg"
