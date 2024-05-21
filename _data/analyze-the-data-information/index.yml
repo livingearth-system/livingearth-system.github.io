@@ -6,7 +6,7 @@ available-link-data:
       - country_region: "Australia"
         access_link: "https://app.sandbox.dea.ga.gov.au/"
       - country_region: "Wales"
-        access_link: "https://livingwales.aber.ac.uk/jhub"
+        access_link: "https://hub.livingwales.space/"
       - country_region: "Switzerland"
         access_link: "https://www.swissdatacube.org/index.php/platform/"
       - country_region: "Southeast Asia"
