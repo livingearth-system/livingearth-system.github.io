@@ -22,9 +22,4 @@ first-content-bottom="JupyterHub runs in the cloud or on your own hardware, and 
       environment to any user in the world. It is customizable and scalable, and is suitable for small and large teams,
       academic courses, and large-scale infrastructure.​"
 
-second-heading="what is jupyterhub?"
-second-content-top="Coming soon ..."
-
-second-content-bottom="Coming soon ..."
-
 %}
