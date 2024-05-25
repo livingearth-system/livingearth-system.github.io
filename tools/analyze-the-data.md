@@ -9,7 +9,7 @@ nobuttons: true
 ---
 {% include tool-content.liquid
 title="analyze the data with jupyter notebooks"
-permal="Home / Tools / Analyze the Data/ Openly Available Optical and Radar"
+permal="Home / Tools / Analyze the Data"
 first-heading="Accessing data cubes through Jupyter Hub"
 first-content-top="Here, you can currently access the data cubes of satellite sensor data and derived products from Wales and Austraila​, where the Living Earth system is implemented.  "
 
