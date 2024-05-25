@@ -13,7 +13,7 @@ permal="Home / Tools / Analyze the Data/ Openly Available Optical and Radar"
 first-heading="Accessing data cubes through Jupyter Hub"
 first-content-top="Here, you can currently access the data cubes of satellite sensor data and derived products from Wales and Austraila​, where the Living Earth system is implemented.  "
 
-first-content-bottom="​Select the country from the drop down menu and then sign in, where you can upload and run Living Earth notebooks from either country. You will need to create (for Australia) or request (for Wales; email livingwales@aber.ac.uk) an account prior to signing in. When you are in, explore also the notebooks available for data processing and analysis and use these to build or modifiy your own notebooks.   "
+first-content-bottom="​Select the country from the drop down menu and then sign in.  For Digital Earth Australia, you will need to first create an account at the link if you have not already done so.   For the Welsh Data Cube, you can request access by emailiing livingwales@aber.ac.uk.    When you sign in, you will have access to a historical but accumulating archive of satellite data and derived products, including environmental descriptors and the annual land cover maps constructed from these using the Living Earth system.   You can interrogate, process and analyses these within the data cubes without having to download any data to your own computer.   A wide range of Jupyter notebooks are avialabel which you can explore and use to build or modify your own.   "
 
 second-heading="More on JupyterHub"
 second-content-top="JupyterHub brings the power of notebooks to groups of users. It gives users      access to
