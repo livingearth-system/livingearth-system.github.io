@@ -9,15 +9,15 @@
     <button
     class="sign_in_github"
     >
-      {{ site.data['tool-analyze-the-data-map-sidebar'].index.learning_resources.button_text2 }}
+      {{ site.data['tool-analyze-the-data-map-sidebar'].index.knowledge_hub.button_text2 }}
     </button>
   </div>
 
   <div class="learning_resource">
-    <a href="{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_url }}">
+    <a href="{{ site.data.tool-analyze-the-data-map-sidebar.index.knowledge_hub.button_url }}">
       <div class="button-tool">
-        <button class="button_tool_tilte" id="learningResourceButton">
-          {{ site.data['tool-analyze-the-data-map-sidebar'].index.learning_resources.button_text1 }}
+        <button class="button_tool_tilte" id="knowledge_hubButton">
+          {{ site.data['tool-analyze-the-data-map-sidebar'].index.knowledge_hub.button_text1 }}
         </button>
         <img
           src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}"
@@ -35,11 +35,11 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var learningResourceButton = document.getElementById('learningResourceButton');
+    var learningResourceButton = document.getElementById('knowledge_hubButton');
 
-    if (learningResourceButton) {
-      learningResourceButton.addEventListener('click', function () {
-        window.location.href = '/tools/learning-resources';
+    if (knowledge_hubButton) {
+      knowledge_hubButton.addEventListener('click', function () {
+        window.location.href = '/tools/knowledge_hub';
       });
     }
 
