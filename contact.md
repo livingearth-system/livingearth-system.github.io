@@ -8,8 +8,8 @@ image: "/assets/img/contactus.png"
 nobuttons: true
 ---
 
-##### Please get in touch
-### We are always here to help
+##### To get in touch
+### Please use the e-mail below
 
 **Email: <a href="mailto:rml2@aber.ac.uk">rml2@aber.ac.uk</a>**  
 
