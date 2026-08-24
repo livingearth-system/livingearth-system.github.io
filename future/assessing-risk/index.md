@@ -2,7 +2,7 @@
 layout: page
 
 title: "Assessing Risk"
-subtitle: "How can we protect our assets?"
+subtitle: "How do we protect our assets?"
 image: "/assets/img/Future6.jpg"
 nocontact: true
 ---
