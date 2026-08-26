@@ -13,14 +13,12 @@ include opensource-tools.liquid
 heading="Quick Links to Open Source Tools"
 -%}
 
-{% comment %}
 {%-
 include themes.liquid
 heading="Themes"
 all="Learn about our research"
 url="/news/"
 -%}
-{% endcomment %}
 
 {%-
 include news.liquid
