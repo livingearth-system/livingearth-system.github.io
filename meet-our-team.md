@@ -13,6 +13,7 @@ image: "/assets/img/meet-our-team-banner.jpg"
 nobuttons: true
 Nosvg: false
 Noheader: true
+published: false
 ---
 
 {%-
