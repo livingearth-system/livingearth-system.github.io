@@ -5,6 +5,9 @@ into a grid of descriptor cards (image, title, unit, definition) instead of
 a link list.
 
 Data lives in _data/env-des-descriptors.yml (id, title, image, descriptors[]).
+Each descriptor takes: title, image, and OPTIONALLY unit + description,
+plus OPTIONALLY links — a list of { label, url, newtab } rendered as
+"→ View {label}" buttons on the card.
 
 Click a category to expand it inline (accordion style — only one open at a
 time). Deep-linking via URL hash works, e.g. /env-des/#vegetation auto-expands
@@ -12,71 +15,78 @@ Vegetation and scrolls to it.
 {%- endcomment -%}
 
 <div class="env-des-accordion" id="env-des-categories">
-  {% for cat in site.data['env-des-descriptors'] %}
-    <div class="env-des-accordion-item" data-cat="{{ cat.id }}">
-      <button type="button" class="env-des-accordion-header" data-target="{{ cat.id }}">
-        {% if cat.image %}<img src="{{ cat.image }}" alt="" class="env-des-accordion-icon">{% endif %}
-        <span class="env-des-accordion-title">{{ cat.title }}</span>
-        <span class="env-des-accordion-count">{{ cat.descriptors | size }}</span>
-        <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
-      </button>
-      <div class="env-des-accordion-panel" id="{{ cat.id }}">
-        <div class="env-des-accordion-panel-inner">
-          <div class="env-des-descriptor-grid">
-            {% for d in cat.descriptors %}
-              <div class="env-des-descriptor-card">
-                {% if d.image %}<img src="{{ d.image }}" alt="{{ d.title }}" class="env-des-descriptor-image">{% endif %}
-                <div class="env-des-descriptor-title">
-                  {{ d.title }}{% if d.unit %} <span class="env-des-descriptor-unit">({{ d.unit }})</span>{% endif %}
-                </div>
-                <p class="env-des-descriptor-description">{{ d.description }}</p>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
+{% for cat in site.data['env-des-descriptors'] %}
+<div class="env-des-accordion-item" data-cat="{{ cat.id }}">
+<button type="button" class="env-des-accordion-header" data-target="{{ cat.id }}">
+{% if cat.image %}<img src="{{ cat.image }}" alt="" class="env-des-accordion-icon">{% endif %}
+<span class="env-des-accordion-title">{{ cat.title }}</span>
+<span class="env-des-accordion-count">{{ cat.descriptors | size }}</span>
+<svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+</button>
+<div class="env-des-accordion-panel" id="{{ cat.id }}">
+<div class="env-des-accordion-panel-inner">
+<div class="env-des-descriptor-grid">
+{% for d in cat.descriptors %}
+<div class="env-des-descriptor-card">
+{% if d.image %}<img src="{{ d.image }}" alt="{{ d.title }}" class="env-des-descriptor-image">{% endif %}
+<div class="env-des-descriptor-title">
+{{ d.title }}{% if d.unit %} <span class="env-des-descriptor-unit">({{ d.unit }})</span>{% endif %}
+</div>
+<p class="env-des-descriptor-description">{{ d.description }}</p>
+{% if d.links %}
+<div class="env-des-descriptor-links">
+{% for link in d.links %}
+<a class="env-des-descriptor-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
 </div>
 
 <script>
 (function () {
-  var items = document.querySelectorAll('.env-des-accordion-item');
+var items = document.querySelectorAll('.env-des-accordion-item');
 
-  function openItem(id) {
-    items.forEach(function (item) {
-      item.classList.toggle('open', item.getAttribute('data-cat') === id);
-    });
-  }
+function openItem(id) {
+items.forEach(function (item) {
+item.classList.toggle('open', item.getAttribute('data-cat') === id);
+});
+}
 
-  items.forEach(function (item) {
-    var header = item.querySelector('.env-des-accordion-header');
-    header.addEventListener('click', function () {
-      var id = item.getAttribute('data-cat');
-      var alreadyOpen = item.classList.contains('open');
-      items.forEach(function (i) { i.classList.remove('open'); });
-      if (!alreadyOpen) {
-        item.classList.add('open');
-        history.replaceState(null, '', '#' + id);
-      } else {
-        history.replaceState(null, '', '#env-des-categories');
-      }
-    });
-  });
+items.forEach(function (item) {
+var header = item.querySelector('.env-des-accordion-header');
+header.addEventListener('click', function () {
+var id = item.getAttribute('data-cat');
+var alreadyOpen = item.classList.contains('open');
+items.forEach(function (i) { i.classList.remove('open'); });
+if (!alreadyOpen) {
+item.classList.add('open');
+history.replaceState(null, '', '#' + id);
+} else {
+history.replaceState(null, '', '#env-des-categories');
+}
+});
+});
 
-  var hash = window.location.hash.replace('#', '');
-  var validIds = Array.prototype.map.call(items, function (i) {
-    return i.getAttribute('data-cat');
-  });
+var hash = window.location.hash.replace('#', '');
+var validIds = Array.prototype.map.call(items, function (i) {
+return i.getAttribute('data-cat');
+});
 
-  if (hash && validIds.indexOf(hash) !== -1) {
-    openItem(hash);
-    var target = document.querySelector('.env-des-accordion-item[data-cat="' + hash + '"]');
-    if (target) {
-      setTimeout(function () {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-  }
+if (hash && validIds.indexOf(hash) !== -1) {
+openItem(hash);
+var target = document.querySelector('.env-des-accordion-item[data-cat="' + hash + '"]');
+if (target) {
+setTimeout(function () {
+target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}, 100);
+}
+}
 })();
 </script>

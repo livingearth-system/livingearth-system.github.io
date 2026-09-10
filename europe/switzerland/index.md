@@ -31,6 +31,7 @@ pipeline:
     subtitle: "Derived indices and variables ready for classification."
     icon: ic-leaf
     url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products"
+    newtab: true
   - title: "Classification of Land Cover & Habitats"
     subtitle: "Historical and near real-time classification of the landscape."
     icon: ic-map

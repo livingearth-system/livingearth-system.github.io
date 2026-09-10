@@ -10,74 +10,74 @@ auto-expands Wales and scrolls to it.
 {% assign country_icons = site.data.countries %}
 
 <div class="data-accordion" id="browse-by-country">
-  {% for c in site.data['data-by-country'] %}
-    {% assign icon = nil %}
-    {% for ci in country_icons %}
-      {% if ci.title == c.title %}
-        {% assign icon = ci.image %}
-      {% endif %}
-    {% endfor %}
-    <div class="data-accordion-item" data-country="{{ c.id }}">
-      <button type="button" class="data-accordion-header" data-target="{{ c.id }}">
-        {% if icon %}<img src="{{ icon }}" alt="" class="data-accordion-icon">{% endif %}
-        <span class="data-accordion-title">{{ c.title }}</span>
-        <svg class="data-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
-      </button>
-      <div class="data-accordion-panel" id="{{ c.id }}">
-        <div class="data-accordion-panel-inner">
-          {% if c.intro %}<p class="data-country-intro">{{ c.intro }}</p>{% endif %}
-          <ul class="data-country-links">
-            {% for link in c.links %}
-              <li><a href="{{ link.url }}" class="data-country-link">{{ link.label }}</a></li>
-            {% endfor %}
-          </ul>
-          {% if c.analyze_url %}
-            <a href="{{ c.analyze_url }}" class="data-country-analyze">Analyse this data &rarr;</a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
+{% for c in site.data['data-by-country'] %}
+{% assign icon = nil %}
+{% for ci in country_icons %}
+{% if ci.title == c.title %}
+{% assign icon = ci.image %}
+{% endif %}
+{% endfor %}
+<div class="data-accordion-item" data-country="{{ c.id }}">
+<button type="button" class="data-accordion-header" data-target="{{ c.id }}">
+{% if icon %}<img src="{{ icon }}" alt="" class="data-accordion-icon">{% endif %}
+<span class="data-accordion-title">{{ c.title }}</span>
+<svg class="data-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+</button>
+<div class="data-accordion-panel" id="{{ c.id }}">
+<div class="data-accordion-panel-inner">
+{% if c.intro %}<p class="data-country-intro">{{ c.intro }}</p>{% endif %}
+<ul class="data-country-links">
+{% for link in c.links %}
+<li><a href="{{ link.url }}" class="data-country-link" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+{% endfor %}
+</ul>
+{% if c.analyze_url %}
+<a href="{{ c.analyze_url }}" class="data-country-analyze">Analyse this data &rarr;</a>
+{% endif %}
+</div>
+</div>
+</div>
+{% endfor %}
 </div>
 
 <script>
 (function () {
-  var items = document.querySelectorAll('.data-accordion-item');
+var items = document.querySelectorAll('.data-accordion-item');
 
-  function openItem(id) {
-    items.forEach(function (item) {
-      item.classList.toggle('open', item.getAttribute('data-country') === id);
-    });
-  }
+function openItem(id) {
+items.forEach(function (item) {
+item.classList.toggle('open', item.getAttribute('data-country') === id);
+});
+}
 
-  items.forEach(function (item) {
-    var header = item.querySelector('.data-accordion-header');
-    header.addEventListener('click', function () {
-      var id = item.getAttribute('data-country');
-      var alreadyOpen = item.classList.contains('open');
-      items.forEach(function (i) { i.classList.remove('open'); });
-      if (!alreadyOpen) {
-        item.classList.add('open');
-        history.replaceState(null, '', '#' + id);
-      } else {
-        history.replaceState(null, '', '#browse-by-country');
-      }
-    });
-  });
+items.forEach(function (item) {
+var header = item.querySelector('.data-accordion-header');
+header.addEventListener('click', function () {
+var id = item.getAttribute('data-country');
+var alreadyOpen = item.classList.contains('open');
+items.forEach(function (i) { i.classList.remove('open'); });
+if (!alreadyOpen) {
+item.classList.add('open');
+history.replaceState(null, '', '#' + id);
+} else {
+history.replaceState(null, '', '#browse-by-country');
+}
+});
+});
 
-  var hash = window.location.hash.replace('#', '');
-  var validIds = Array.prototype.map.call(items, function (i) {
-    return i.getAttribute('data-country');
-  });
+var hash = window.location.hash.replace('#', '');
+var validIds = Array.prototype.map.call(items, function (i) {
+return i.getAttribute('data-country');
+});
 
-  if (hash && validIds.indexOf(hash) !== -1) {
-    openItem(hash);
-    var target = document.querySelector('.data-accordion-item[data-country="' + hash + '"]');
-    if (target) {
-      setTimeout(function () {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-  }
+if (hash && validIds.indexOf(hash) !== -1) {
+openItem(hash);
+var target = document.querySelector('.data-accordion-item[data-country="' + hash + '"]');
+if (target) {
+setTimeout(function () {
+target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}, 100);
+}
+}
 })();
 </script>

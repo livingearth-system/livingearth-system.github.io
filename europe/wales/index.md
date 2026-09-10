@@ -20,12 +20,22 @@ pipeline:
     sub_items:
       - title: "Optical and Radar"
         image: "/assets/img/Future1.jpg"
-        url: "https://app.livingwales.space/" 
+        url: "https://app.livingwales.space/"
         newtab: true
       - title: "Lidar"
         image: "/assets/img/Future2.jpg"
         url: "https://datamap.gov.wales/maps/lidar-viewer"
         newtab: true
+
+  # To add a link to any descriptor below, just add this block under it,
+  # indented to match its siblings (image:, description:) — you can add
+  # more than one label/url pair under "links:" if a descriptor needs
+  # multiple resources:
+  #   links:
+  #     - label: "Resource Name"
+  #       url: "https://example.com"
+  #       newtab: true
+
   - title: "Environmental Descriptors"
     subtitle: "Derived indices and variables ready for classification."
     icon: ic-leaf
@@ -192,16 +202,19 @@ pipeline:
           - title: "Climate Variables"
             image: "/assets/img/wales/variants.jpg"
             description: "Placeholder needs a real one line definition"
+
   - title: "Classification of Land Cover & Habitats"
     subtitle: "Historical and near real-time classification of the landscape."
     icon: ic-map
     url: "https://livingearthhub.org/tools/interactive-map"
     newtab: true
+
   - title: "Evidence-Based Change"
     subtitle: "Tracking change over time to support decision-making."
     icon: ic-change
     url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
     newtab: true
+
   - title: "Future Landscapes"
     subtitle: "Modelling scenarios for policy and land management."
     icon: ic-future
@@ -230,25 +243,28 @@ pipeline:
         subtitle: "How can we protect our assets?"
         image: "/assets/img/Future6.jpg"
         url: "#"
+
   - title: "Explore and Delivery"
     subtitle: "Policy, economy, environment and society."
     icon: ic-deliver
     links:
       - label: "View Insights"
         url: "https://insights.livingwales.space/"
+        newtab: true
       - label: "Earthtrack App"
         url: "https://livingearthhub.org/tools/earthtrack-app?country=Wales"
         newtab: true
       - label: "Analyse the Data"
         url: "https://hub.livingwales.space/hub/spawn"
+        newtab: true
       - label: "Stream the Data"
         url: "/tools/for-developers/"
+
 tools_blocks:
   - title: "See on Map"
     description: "Environmental descriptors, land cover, habitats and change"
     image: "/assets/img/tools1.jpg"
     url: "/tools/earthtrack-app?country=Wales"
-    newtab: true
   - title: "Get the data"
     description: "Download or stream the data to your computer"
     image: "/assets/img/tools2.jpg"

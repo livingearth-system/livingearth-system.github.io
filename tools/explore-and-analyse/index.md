@@ -43,7 +43,7 @@ breadcrumb:
   </div>
 </div>
 
-<div class="container"
+<div class="container">
   <div class="row align-items-start">
     <div class="col-lg-7 tool_content">
       <h2 class="title">Earthtrack App</h2>

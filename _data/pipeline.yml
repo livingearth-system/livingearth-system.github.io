@@ -2,11 +2,13 @@
   label: "Earth Observation Data"
   detail: "Acquisition and processing to an analysis-ready format."
   url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-surface-reflectance"
+  newtab: true
 
 - icon: ic-leaf
   label: "Environmental Descriptors"
   detail: "Derived indices and variables ready for classification."
   url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products"
+  newtab: true
   url2: "/env-des/"
   url2_label: "Browse Environmental Descriptors"
 
@@ -16,18 +18,46 @@
   url: /themes/landhabcover/
   url2: "/tools/interactive-map/"
   url2_label: "Explore the Interactive Map"
+  hide_countries: true
 
 - icon: ic-change
   label: "Evidence-Based Change"
   detail: "Tracking change over time to support decision-making."
   url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
+  newtab: true
+  hide_countries: true
 
 - icon: ic-future
   label: "Future Landscapes"
   detail: "Modelling scenarios for policy and land management."
-  url:
+  hide_countries: true
+  sub_items:
+    - title: "Reimagining"
+      subtitle: "What would we like to see?"
+      image: "/assets/img/Future2.jpg"
+      url: "#"
+    - title: "Harmonising"
+      subtitle: "How can we agree?"
+      image: "/assets/img/Future2.jpg"
+      url: "#"
+    - title: "Realising"
+      subtitle: "How can we be certain?"
+      image: "/assets/img/Future3.jpg"
+      url: "#"
+    - title: "Facilitating"
+      subtitle: "How can we track progress?"
+      image: "/assets/img/Future4.jpg"
+      url: "#"
+    - title: "Valuing"
+      subtitle: "How can we value our futures?"
+      image: "/assets/img/Future5.jpg"
+      url: "#"
+    - title: "Assessing Risk"
+      subtitle: "How can we protect our assets?"
+      image: "/assets/img/Future6.jpg"
+      url: "#"
 
 - icon: ic-deliver
-  label: "Delivery"
+  label: "Explore and Delivery"
   detail: "Policy, economy, environment and society."
   url:

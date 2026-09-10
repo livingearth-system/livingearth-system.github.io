@@ -1,201 +1,561 @@
-/* ==========================================================================
-   ENVIRONMENTAL DESCRIPTORS BROWSER
-   Three-level click-to-expand accordion: category -> subcategory (optional)
-   -> individual descriptor. Descriptors are informational by default, but
-   become clickable links when a real url is set.
-   Colours: Card BG #EAF6FB · Ocean Blue #00577E · Chalk White #FCF8F5
-   ========================================================================== */
+/* for-developers-start */
 
-.env-desc {
-  padding: 48px 0;
+/* Intent cards */
+.fd-intents {
+  margin: 32px 0 56px;
 }
 
-/* --- Level 1: top categories --------------------------------------------- */
+.fd-intents-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #23567b;
+  text-align: center;
+  margin-bottom: 24px;
+}
 
-.env-desc-row {
+.fd-intents-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.env-desc-cat {
+.fd-intent-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: #EAF6FB;
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  font-family: 'Inter', system-ui, sans-serif;
-  padding: 0;
+  align-items: flex-start;
+  gap: 8px;
+  background: #c6e5f4;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.env-desc-cat:hover {
-  transform: translateY(-3px);
+.fd-intent-card:hover {
+  background: #4294c3;
+  transform: translateY(-2px);
 }
 
-.env-desc-cat.is-active {
-  background: #00577E;
+.fd-intent-card:hover .fd-intent-title,
+.fd-intent-card:hover .fd-intent-description {
+  color: #fbf8f5;
 }
 
-.env-desc-cat.is-active .env-desc-cat-title {
-  color: #FCF8F5;
+.fd-intent-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #23567b;
 }
 
-.env-desc-cat-img {
-  width: 100%;
-  height: 90px;
-  object-fit: cover;
-  display: block;
+.fd-intent-card:hover .fd-intent-icon svg {
+  color: #fbf8f5;
 }
 
-.env-desc-cat-title {
+.fd-intent-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.fd-intent-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #3a5a6c;
+}
+
+.fd-section-heading {
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 14px;
-  color: #00577E;
-  padding: 12px 10px;
-}
-
-/* --- Panel wrapper (holds either subcategories or descriptors) ----------- */
-
-.env-desc-panel {
-  margin-top: 20px;
-  background: #FCF8F5;
-  border: 1px solid #E3ECEF;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-/* --- Level 2: subcategories (only shown when a category has them) ------- */
-
-.env-desc-subrow {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
+  font-size: 26px;
+  color: #23567b;
   margin-bottom: 20px;
 }
 
-.env-desc-sub {
+@media (max-width: 991px) {
+  .fd-intents-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .fd-intents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Browse by Country accordion */
+.data-accordion {
+  margin-bottom: 56px;
+}
+
+.data-accordion-item {
+  border: 1px solid #c6e5f4;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.data-accordion-header {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  background: #FFFFFF;
-  border: 1px solid #D9E7ED;
-  border-radius: 8px;
-  overflow: hidden;
+  gap: 12px;
+  background: #fbf8f5;
+  border: none;
+  padding: 16px 20px;
   cursor: pointer;
-  font-family: 'Inter', system-ui, sans-serif;
+  text-align: left;
+}
+
+.data-accordion-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%;
+  flex: none;
+}
+
+.data-accordion-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.data-accordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: #23567b;
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.data-accordion-item.open .data-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.data-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.data-accordion-item.open .data-accordion-panel {
+  max-height: 600px;
+}
+
+.data-accordion-panel-inner {
+  padding: 4px 20px 20px;
+}
+
+.data-country-intro {
+  color: #535353;
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+
+.data-country-links {
+  list-style: none;
   padding: 0;
-  transition: transform 0.15s ease, background 0.15s ease;
+  margin: 0 0 16px;
 }
 
-.env-desc-sub:hover {
-  transform: translateY(-2px);
+.data-country-links li {
+  margin-bottom: 10px;
 }
 
-.env-desc-sub.is-active {
-  background: #00577E;
-  border-color: #00577E;
-}
-
-.env-desc-sub.is-active .env-desc-sub-title {
-  color: #FCF8F5;
-}
-
-.env-desc-sub-img {
-  width: 100%;
-  height: 64px;
-  object-fit: cover;
-  display: block;
-}
-
-.env-desc-sub-title {
-  font-weight: 700;
-  font-size: 12px;
-  color: #00577E;
-  padding: 8px 6px;
-}
-
-/* --- Level 3: individual descriptor cards --------------------------------- */
-
-.env-desc-items-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-}
-
-.env-desc-item {
-  display: flex;
-  flex-direction: column;
-  background: #EAF6FB;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-a.env-desc-item {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.15s ease;
-}
-
-a.env-desc-item:hover {
-  transform: translateY(-2px);
-}
-
-.env-desc-item-img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  display: block;
-}
-
-.env-desc-item-title {
-  font-weight: 700;
-  font-size: 12px;
-  color: #00577E;
-  padding: 8px 10px 2px;
-}
-
-.env-desc-item-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 4px 10px 12px;
-}
-
-.env-desc-item-link {
-  display: block;
-  font-weight: 700;
-  font-size: 11px;
-  color: #00577E;
-  text-decoration: none;
-  line-height: 1.4;
-}
-
-.env-desc-item-link:hover {
+.data-country-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #4294c3;
   text-decoration: underline;
 }
 
-.env-desc-item-desc {
-  font-size: 11px;
-  color: #3A5A68;
-  line-height: 1.4;
-  padding: 0 10px 10px;
+.data-country-link:hover {
+  color: #23567b;
 }
 
-/* --- Mobile ---------------------------------------------------------------- */
+.data-country-analyze {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #3d7f58;
+}
 
-@media (max-width: 600px) {
-  .env-desc-row {
-    grid-template-columns: 1fr 1fr;
-  }
+/* Tools & Developer sections — headings */
+.tool_img {
+  margin-bottom: 64px;
+}
 
-  .env-desc-subrow {
-    grid-template-columns: 1fr 1fr;
+.tool_img .tool_content .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #23567b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#tools-platforms > .tool_content .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #23567b;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+/* Tools & Developer sections — body copy readability */
+.tool_content {
+  max-width: 100%;
+}
+
+.tool_content .article_heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #23567b;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding-top: 24px;
+  border-top: 1px solid #e3ecf1;
+}
+
+.tool_content .article_description {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3a4750;
+  margin-bottom: 14px;
+  max-width: 100%;
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  max-width: 680px;
+  border-collapse: collapse;
+  margin: 12px 0 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.data-table-th {
+  text-align: left;
+  background: #23567b;
+  color: #fbf8f5;
+  font-weight: 700;
+  padding: 10px 14px;
+}
+
+.data-table-td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e3ecf1;
+  color: #3a4750;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #f3f8fb;
+}
+
+.data-table-link {
+  color: #4294c3;
+  font-weight: 600;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.data-table-link:hover {
+  color: #23567b;
+}
+
+/* Tools & Platforms cards — smaller, images actually fill their box */
+#tools-platforms .grid-columns .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+#tools-platforms .grid-item {
+  padding: 8px;
+}
+
+#tools-platforms .grid-item > .img-container,
+#tools-platforms .grid-item > .grid-item-content {
+  background: #c6e5f4;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+#tools-platforms .grid-item {
+  background: #c6e5f4;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.15s ease;
+}
+
+#tools-platforms .grid-item:hover {
+  transform: translateY(-2px);
+}
+
+#tools-platforms .img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #fbf8f5;
+  display: block;
+  height: 90px;
+}
+
+#tools-platforms .img-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#tools-platforms .img-container img.img-fluid {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+#tools-platforms .grid-item-title {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #23567b;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+#tools-platforms .grid-item-title:hover {
+  color: #4294c3;
+}
+
+#tools-platforms .grid-item-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3a5a6c;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .tool_img {
+    margin-bottom: 40px;
   }
+  .tool_img .tool_content .title,
+  #tools-platforms > .tool_content .title {
+    font-size: 22px;
+  }
+  .tool_content .article_heading {
+    font-size: 17px;
+    margin-top: 32px;
+  }
+  .tool_content .article_description {
+    font-size: 14px;
+  }
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .data-accordion-title {
+    font-size: 14px;
+  }
+  #tools-platforms .img-container {
+    height: 80px;
+  }
+}
+/* for-developers-end */
+/* Environmental Descriptors accordion */
+.env-des-accordion {
+  margin-bottom: 56px;
+}
+
+.env-des-accordion-item {
+  border: 1px solid #c6e5f4;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.env-des-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fbf8f5;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.env-des-accordion-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: none;
+}
+
+.env-des-accordion-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.env-des-accordion-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #4294c3;
+  background: #c6e5f4;
+  border-radius: 20px;
+  padding: 3px 10px;
+  flex: none;
+}
+
+.env-des-accordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: #23567b;
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.env-des-accordion-item.open .env-des-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+/* Show/hide rather than max-height transition — categories like Vegetation
+   have 13+ cards and a fixed max-height would clip them. */
+.env-des-accordion-panel {
+  display: none;
+}
+
+.env-des-accordion-item.open .env-des-accordion-panel {
+  display: block;
+}
+
+.env-des-accordion-panel-inner {
+  padding: 20px 20px 24px;
+}
+
+.env-des-descriptor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.env-des-descriptor-card {
+  background: #fbf8f5;
+  border: 1px solid #e3ecf1;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.env-des-descriptor-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  background: #c6e5f4;
+}
+
+.env-des-descriptor-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #23567b;
+  padding: 12px 14px 4px;
+}
+
+.env-des-descriptor-unit {
+  font-weight: 500;
+  color: #4294c3;
+  font-size: 12px;
+}
+
+.env-des-descriptor-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #3a4750;
+  padding: 0 14px 14px;
+  margin: 0;
+}
+
+.env-des-descriptor-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 14px 14px;
+  margin-top: -6px;
+}
+
+.env-des-descriptor-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #23567b;
+  text-decoration: none;
+}
+
+.env-des-descriptor-link:hover {
+  color: #4294c3;
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .env-des-descriptor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .env-des-descriptor-grid {
+    grid-template-columns: 1fr;
+  }
+  .env-des-accordion-title {
+    font-size: 14px;
+  }
+}
+/* Env Des — Browse by Country cards (reuses .fd-intent-card, small icon variant) */
+.env-des-country-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.env-des-country-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .env-des-country-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Simple link cards (Taxonomies, Handbook) — logo-style image instead of icon */
+.simple-card-icon img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fbf8f5;
+  padding: 4px;
+  display: block;
 }

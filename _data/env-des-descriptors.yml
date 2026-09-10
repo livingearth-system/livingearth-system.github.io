@@ -1,3 +1,12 @@
+# To add a link (or several) to any descriptor below, paste this block
+# directly under its "description:" line, indented to match its siblings
+# (unit:, image:, description:) — add as many label/url pairs under
+# "links:" as that descriptor needs:
+#   links:
+#     - label: "Resource Name"
+#       url: "https://example.com"
+#       newtab: true
+
 - id: vegetation
   title: "Vegetation"
   image: "/assets/img/wales/vegetation.jpg"
@@ -34,6 +43,10 @@
       unit: "Mg/ha"
       image: "/assets/img/wales/big/woody-biomass.jpg"
       description: "The total mass of living plant material per woody area. Can consider both above- and below-ground components."
+      links:
+        - label: "ESA Biomass"
+          url: "https://climate.esa.int/en/projects/biomass/"
+          newtab: true
     - title: "Herbaceous Biomass"
       unit: "Mg/ha"
       image: "/assets/img/wales/big/herbaceous-biomass.jpg"
