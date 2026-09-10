@@ -7,17 +7,18 @@ the rest of this country page.
 Usage: {% include country-pipeline.liquid list=page.pipeline %}
 
 Each stage needs: title, subtitle, icon, and OPTIONALLY one of:
-  url          — plain link
-  links        — list of { label, url, newtab } for multiple buttons
-  sub_items    — flat list of { title, subtitle, image, url, newtab }
-  categories   — nested browser: category -> optional subcategory ->
-                 individual items. Each category needs title, image, and
-                 EITHER descriptors (flat list) OR subcategories (list of
-                 { title, image, descriptors: [...] }).
-                 Each individual descriptor item takes: title, image,
-                 and OPTIONALLY url + newtab — if url is set (and isn't
-                 "#"), the whole card becomes a link; otherwise it's a
-                 plain informational card.
+  url — plain link
+  links — list of { label, url, newtab } for multiple buttons
+  sub_items — flat list of { title, subtitle, image, url, newtab }
+  categories — nested browser: category -> optional subcategory ->
+    individual items. Each category needs title, image, and
+    EITHER descriptors (flat list) OR subcategories (list of
+    { title, image, descriptors: [...] }).
+    Each individual descriptor item takes: title, image,
+    and OPTIONALLY url + newtab (single link, whole card is
+    the link) OR links (list of { label, url, newtab } for
+    multiple "View {label} →" buttons on the card) — otherwise
+    it's a plain informational card.
 
 page.pipeline_validation_url — link for the "Calibration and Validation" footer box.
 page.pipeline_outreach_url — link for the "Engagement and Outreach" footer box
@@ -30,127 +31,161 @@ scrolls to it on load.
 {% assign stages = include.list %}
 {%- if stages -%}
 <section class="country-pipeline-section">
-  <div class="container">
-    <div class="country-pipeline-card">
+<div class="container">
+<div class="country-pipeline-card">
 
-      <a class="country-pipeline-infra" href="https://www.opendatacube.org/" target="_blank" rel="noopener">Digital infrastructure (based on the Open Data Cube)</a>
+<a class="country-pipeline-infra" href="https://www.opendatacube.org/" target="_blank" rel="noopener">Digital infrastructure (based on the Open Data Cube)</a>
 
-      <div class="country-pipeline-flow">
-        {% for stage in stages %}
-          {% assign stage_index = forloop.index0 %}
-          <button class="country-pipeline-stage" type="button" data-stage="{{ stage_index }}"
-                  data-stage-slug="{{ stage.title | slugify }}"
-                  data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
-            <span class="country-pipeline-stage-inner">
-              <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
-              <span class="country-pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
-              <span class="country-pipeline-label">{{ stage.title }}</span>
-            </span>
-          </button>
-        {% endfor %}
-      </div>
+<div class="country-pipeline-flow">
+{% for stage in stages %}
+{% assign stage_index = forloop.index0 %}
+<button class="country-pipeline-stage" type="button" data-stage="{{ stage_index }}"
+  data-stage-slug="{{ stage.title | slugify }}"
+  data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
+  <span class="country-pipeline-stage-inner">
+    <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
+    <span class="country-pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
+    <span class="country-pipeline-label">{{ stage.title }}</span>
+  </span>
+</button>
+{% endfor %}
+</div>
 
-      {% for stage in stages %}
-        {% if stage.sub_items %}
-          <div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
-            <div class="country-pipeline-panel-grid">
-              {% for item in stage.sub_items %}
-                {% if item.url and item.url != "#" %}
-                  <a class="country-pipeline-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
-                {% else %}
-                  <div class="country-pipeline-item country-pipeline-item-static">
-                {% endif %}
-                  {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" class="country-pipeline-item-img">{% endif %}
-                  <span class="country-pipeline-item-title">{{ item.title }}</span>
-                  <span class="country-pipeline-item-sub">{{ item.subtitle }}</span>
-                {% if item.url and item.url != "#" %}
-                  </a>
-                {% else %}
-                  </div>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-
-        {% elsif stage.categories %}
-          <div class="country-pipeline-panel env-desc-panel-outer" data-panel="{{ forloop.index0 }}" hidden>
-            <div class="env-desc-row">
-              {% for cat in stage.categories %}
-                <button class="env-desc-cat" type="button" data-envcat="{{ forloop.index0 }}" aria-expanded="false">
-                  <img src="{{ cat.image | relative_url }}" alt="" class="env-desc-cat-img">
-                  <span class="env-desc-cat-title">{{ cat.title }}</span>
-                </button>
-              {% endfor %}
-            </div>
-
-            {% for cat in stage.categories %}
-              <div class="env-desc-panel" data-envcat-panel="{{ forloop.index0 }}" hidden>
-                {% if cat.subcategories %}
-                  <div class="env-desc-subrow">
-                    {% for sub in cat.subcategories %}
-                      <button class="env-desc-sub" type="button" data-envsub="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" aria-expanded="false">
-                        <img src="{{ sub.image | relative_url }}" alt="" class="env-desc-sub-img">
-                        <span class="env-desc-sub-title">{{ sub.title }}</span>
-                      </button>
-                    {% endfor %}
-                  </div>
-                  {% for sub in cat.subcategories %}
-                    <div class="env-desc-items-grid" data-envsub-panel="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" hidden>
-                      {% for item in sub.descriptors %}
-                        {% if item.url and item.url != "#" %}<a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>{% else %}<div class="env-desc-item">{% endif %}
-                          <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
-                          <span class="env-desc-item-title">{{ item.title }}</span>
-                        {% if item.url and item.url != "#" %}</a>{% else %}</div>{% endif %}
-                      {% endfor %}
-                    </div>
-                  {% endfor %}
-                {% elsif cat.descriptors %}
-                  <div class="env-desc-items-grid">
-                    {% for item in cat.descriptors %}
-                      {% if item.url and item.url != "#" %}<a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>{% else %}<div class="env-desc-item">{% endif %}
-                        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
-                        <span class="env-desc-item-title">{{ item.title }}</span>
-                      {% if item.url and item.url != "#" %}</a>{% else %}</div>{% endif %}
-                    {% endfor %}
-                  </div>
-                {% endif %}
-              </div>
-            {% endfor %}
-          </div>
-
-        {% else %}
-          <div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
-            <p class="pipeline-panel-detail">{{ stage.subtitle }}</p>
-            {% if stage.links %}
-              <div class="pipeline-panel-links">
-                {% for link in stage.links %}
-                  <a class="pipeline-panel-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }} &rarr;</a>
-                {% endfor %}
-              </div>
-            {% elsif stage.url and stage.url != "#" %}
-              <a class="pipeline-panel-link" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endfor %}
-
-      <div class="pipeline-footer-boxes">
-        <a class="pipeline-footer-box" href="{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}">
-          Calibration and Validation
-        </a>
-        {% if page.pipeline_outreach_url %}
-          <a class="pipeline-footer-box" href="{{ page.pipeline_outreach_url }}" target="_blank" rel="noopener">
-            Engagement and Outreach
-          </a>
-        {% else %}
-          <div class="pipeline-footer-box pipeline-footer-box-static">
-            Engagement and Outreach
-          </div>
-        {% endif %}
-      </div>
-
+{% for stage in stages %}
+{% if stage.sub_items %}
+<div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+  <div class="country-pipeline-panel-grid">
+    {% for item in stage.sub_items %}
+    {% if item.url and item.url != "#" %}
+    <a class="country-pipeline-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+    {% else %}
+    <div class="country-pipeline-item country-pipeline-item-static">
+    {% endif %}
+      {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" class="country-pipeline-item-img">{% endif %}
+      <span class="country-pipeline-item-title">{{ item.title }}</span>
+      <span class="country-pipeline-item-sub">{{ item.subtitle }}</span>
+    {% if item.url and item.url != "#" %}
+    </a>
+    {% else %}
     </div>
+    {% endif %}
+    {% endfor %}
   </div>
+</div>
+
+{% elsif stage.categories %}
+<div class="country-pipeline-panel env-desc-panel-outer" data-panel="{{ forloop.index0 }}" hidden>
+  <div class="env-desc-row">
+    {% for cat in stage.categories %}
+    <button class="env-desc-cat" type="button" data-envcat="{{ forloop.index0 }}" aria-expanded="false">
+      <img src="{{ cat.image | relative_url }}" alt="" class="env-desc-cat-img">
+      <span class="env-desc-cat-title">{{ cat.title }}</span>
+    </button>
+    {% endfor %}
+  </div>
+
+  {% for cat in stage.categories %}
+  <div class="env-desc-panel" data-envcat-panel="{{ forloop.index0 }}" hidden>
+    {% if cat.subcategories %}
+    <div class="env-desc-subrow">
+      {% for sub in cat.subcategories %}
+      <button class="env-desc-sub" type="button" data-envsub="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" aria-expanded="false">
+        <img src="{{ sub.image | relative_url }}" alt="" class="env-desc-sub-img">
+        <span class="env-desc-sub-title">{{ sub.title }}</span>
+      </button>
+      {% endfor %}
+    </div>
+    {% for sub in cat.subcategories %}
+    <div class="env-desc-items-grid" data-envsub-panel="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" hidden>
+      {% for item in sub.descriptors %}
+      {% if item.links %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+        <div class="env-desc-item-links">
+          {% for link in item.links %}
+          <a class="env-desc-item-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% elsif item.url and item.url != "#" %}
+      <a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+      </a>
+      {% else %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {% elsif cat.descriptors %}
+    <div class="env-desc-items-grid">
+      {% for item in cat.descriptors %}
+      {% if item.links %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+        <div class="env-desc-item-links">
+          {% for link in item.links %}
+          <a class="env-desc-item-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% elsif item.url and item.url != "#" %}
+      <a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+      </a>
+      {% else %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+{% else %}
+<div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+  <p class="pipeline-panel-detail">{{ stage.subtitle }}</p>
+  {% if stage.links %}
+  <div class="pipeline-panel-links">
+    {% for link in stage.links %}
+    <a class="pipeline-panel-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }} &rarr;</a>
+    {% endfor %}
+  </div>
+  {% elsif stage.url and stage.url != "#" %}
+  <a class="pipeline-panel-link" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
+  {% endif %}
+</div>
+{% endif %}
+{% endfor %}
+
+<div class="pipeline-footer-boxes">
+  <a class="pipeline-footer-box" href="{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}">
+    Calibration and Validation
+  </a>
+  {% if page.pipeline_outreach_url %}
+  <a class="pipeline-footer-box" href="{{ page.pipeline_outreach_url }}" target="_blank" rel="noopener">
+    Engagement and Outreach
+  </a>
+  {% else %}
+  <div class="pipeline-footer-box pipeline-footer-box-static">
+    Engagement and Outreach
+  </div>
+  {% endif %}
+</div>
+
+</div>
+</div>
 </section>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">

@@ -39,15 +39,34 @@ pipeline:
               - title: "Lifeform"
                 image: "/assets/img/australia/lifeform.jpg"
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
+                links:
+                  - label: "DEA Mangrove Canopy Cover"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-mangrove-canopy-cover"
+                    newtab: true
               - title: "Leaf type"
                 image: "/assets/img/australia/leaf-type.jpg"
+                links:
+                  - label: "DEA Mangrove Canopy Cover"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-mangrove-canopy-cover"
+                    newtab: true
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
               - title: "Phenology"
                 image: "/assets/img/australia/phenology.jpg"
+                links:
+                  - label: "DEA Mangrove Canopy Cover"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-mangrove-canopy-cover"
+                    newtab: true
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
               - title: "Canopy Cover"
                 image: "/assets/img/australia/canopy-cover.jpg"
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
+                links:
+                  - label: "DEA Mangrove Canopy Cover"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-mangrove-canopy-cover"
+                    newtab: true
+                  - label: "DEA Fractional Cover"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-fractional-cover"
+                    newtab: true
               - title: "Canopy Height"
                 image: "/assets/img/australia/canopy-height.jpg"
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
@@ -102,15 +121,25 @@ pipeline:
               - title: "Water Extent"
                 image: "/assets/img/australia/water-extent.jpg"
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
-              - title: "Water Depth"
-                image: "/assets/img/australia/water-depth.jpg"
-                description: "Duplicated from Wales — needs Australia-specific confirmation"
+             # - title: "Water Depth"
+             #   image: "/assets/img/australia/water-depth.jpg"
+             #   description: "Duplicated from Wales — needs Australia-specific confirmation"
               - title: "Water Turbidity"
                 image: "/assets/img/australia/water-turbidity.jpg"
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Water Persistence"
+                image: "/assets/img/australia/water-depth.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+                links:
+                  - label: "DEA Water Observation"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-water-observations"
+                    newtab: true
               - title: "Water Seasonality"
                 image: "/assets/img/australia/water-seasonality.jpg"
-                description: "Duplicated from Wales — needs Australia-specific confirmation"
+                links:
+                  - label: "DEA Intertidal"
+                    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-intertidal"
+                    newtab: true
               - title: "Cyanobacteria"
                 image: "/assets/img/australia/cyanobacteria.jpg"
                 description: "Duplicated from Wales — needs Australia-specific confirmation"
@@ -245,6 +274,7 @@ pipeline:
         newtab: true
       - label: "Stream the Data"
         url: "https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=access"
+        #https://earthtrack.aber.ac.uk/services/wfs
         newtab: true
 ---
 

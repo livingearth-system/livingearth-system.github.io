@@ -161,6 +161,26 @@ a.env-desc-item:hover {
   padding: 8px 10px 2px;
 }
 
+.env-desc-item-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 10px 12px;
+}
+
+.env-desc-item-link {
+  display: block;
+  font-weight: 700;
+  font-size: 11px;
+  color: #00577E;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.env-desc-item-link:hover {
+  text-decoration: underline;
+}
+
 .env-desc-item-desc {
   font-size: 11px;
   color: #3A5A68;
