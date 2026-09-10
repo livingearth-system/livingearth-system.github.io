@@ -1,5 +1,5 @@
 - title: Countries
-  url: /#countires/
+  url: /#countries
   icon: globe
 - title: About
   url: /about/
@@ -7,9 +7,9 @@
 - title: Tools
   url: /tools/
   icon: tools
-- title: Themes
-  url: /themes/aboutthemes/
-  icon: leaf
-- title: News and Events
-  url: /news/
-  icon: news
+- title: Contact
+  url: /contact/
+  icon: mail
+- title: Data
+  url: /tools/for-developers/#download-data
+  icon: database

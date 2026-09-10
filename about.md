@@ -19,6 +19,16 @@ jump_nav:
     url: "#meet-the-team"
   - label: "Contributing Organisations"
     url: "#organisations"
+quicklinks:
+  - title: Countries
+    url: /#countries
+    icon: globe
+  - title: Tools
+    url: /tools/
+    icon: tools
+  - title: Contact
+    url: /contact/
+    icon: mail
 team_blocks:
   - title: "Richard Lucas"
     description: "Ser Cymru Chair, Aberystwyth University"
