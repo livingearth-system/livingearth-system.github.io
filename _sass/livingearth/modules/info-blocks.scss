@@ -260,3 +260,24 @@ a.info-blocks-card-horizontal {
     grid-template-columns: 1fr;
   }
 }
+/* Horizontal info-block cards with multiple links (e.g. Change taxonomy) */
+.info-blocks-h-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-blocks-h-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #00577E;
+  text-decoration: none;
+}
+
+.info-blocks-h-link:hover {
+  text-decoration: underline;
+}

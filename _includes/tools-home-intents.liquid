@@ -1,0 +1,49 @@
+{%- comment -%}
+TOOLS HOMEPAGE INTENT GRID — "What do you want to do?"
+Header cards: _data/tools-home-intents.yml (title, key, description, url)
+Tiles below each column: _data/tools-home-tiles.yml, keyed by the header's `key`
+{%- endcomment -%}
+<div class="th-intents">
+  <h2 class="th-intents-heading">What do you want to do?</h2>
+  <div class="th-intents-grid">
+    {% for item in site.data['tools-home-intents'] %}
+      <div class="th-column" data-key="{{ item.key }}">
+        <a class="th-header-card" href="{{ item.url }}">
+          <span class="th-header-title">{{ item.title }}</span>
+          <span class="th-header-description">{{ item.description }}</span>
+          <span class="th-header-jump">&rarr; Jump straight to page</span>
+        </a>
+
+        <div class="th-tile-list">
+          {% assign tiles = site.data['tools-home-tiles'][item.key] %}
+          {% for tile in tiles %}
+            <a class="th-tile" href="{{ tile.url }}">
+              <span class="th-tile-icon">
+                {% if tile.icon == 'map' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 4v14M15 6v14"/></svg>
+                {% elsif tile.icon == 'phone' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+                {% elsif tile.icon == 'tag' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.169.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/></svg>
+                {% elsif tile.icon == 'leaf' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" stroke-linejoin="round"/></svg>
+                {% elsif tile.icon == 'download' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                {% elsif tile.icon == 'analyse' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"/></svg>
+                {% elsif tile.icon == 'cloud' %}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"/></svg>
+                {% endif %}
+              </span>
+              <span class="th-tile-body">
+                <span class="th-tile-title">{{ tile.title }}</span>
+                <span class="th-tile-desc">{{ tile.description }}</span>
+                <span class="th-tile-link">&rarr; View Resource</span>
+              </span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

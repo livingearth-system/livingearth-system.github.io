@@ -1,0 +1,30 @@
+{%- comment -%}
+ENVIRONMENTAL DESCRIPTORS — Browse by Country.
+Small circular country icons (same as _data/countries.yml, used elsewhere
+on the site) in the same card style as the "What do you want to do?" intent
+cards. Each card links straight to that country's page with a #pipeline-...
+hash, which auto-opens and scrolls to the Environmental Descriptors stage
+of the pipeline (see _includes/country-pipeline.liquid).
+
+Data lives in _data/env-des/index.yml (title, subtitle, url).
+{%- endcomment -%}
+{% assign country_icons = site.data.countries %}
+<div class="fd-intents-grid env-des-country-grid">
+  {% for c in site.data['env-des'].index %}
+    {% assign icon = nil %}
+    {% for ci in country_icons %}
+      {% assign ci_title_upcase = ci.title | upcase %}
+      {% assign c_title_upcase = c.title | upcase %}
+      {% if ci_title_upcase == c_title_upcase %}
+        {% assign icon = ci.image %}
+      {% endif %}
+    {% endfor %}
+    <a class="fd-intent-card" href="{{ c.url }}">
+      {% if icon %}
+        <span class="fd-intent-icon env-des-country-icon"><img src="{{ icon | relative_url }}" alt=""></span>
+      {% endif %}
+      <span class="fd-intent-title">{{ c.title | capitalize }}</span>
+      <span class="fd-intent-description">{{ c.subtitle }}</span>
+    </a>
+  {% endfor %}
+</div>

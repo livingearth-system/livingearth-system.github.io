@@ -11,7 +11,8 @@ breadcrumb:
     url: "/"
   - label: "Australia"
     url: "/oceania/australia/"
-pipeline_validation_url: "https://livingearthhub.org/tools/earthtrack-app?country=Australia"
+pipeline_validation_url: "https://livingearthhub.org/tools/earthtrack-app?country=world"
+pipeline_outreach_url: "https://knowledge.dea.ga.gov.au/"
 pipeline:
   - title: "Earth Observation Data"
     subtitle: "Acquisition and processing to an analysis-ready format."
@@ -23,28 +24,8 @@ pipeline:
           - title: "DEA Surface Reflectance"
             description: "Baseline data from Landsat and Sentinel-2 satellites, validated, calibrated and adjusted for Australian conditions"
             image: "/assets/img/australia/dea-surface-reflectance.jpg"
-            url: "https://www.dea.ga.gov.au/products/dea-surface-reflectance"
+            url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-surface-reflectance"
             newtab: true
-          - title: "DEA Open Web Services (OWS)"
-            description: "DEA Open Web Services provide access to visualisations and data exports via WMS, WMTS and WCS"
-            image: "/assets/img/australia/dea-open-web-services.jpg"
-            url: "https://docs.dea.ga.gov.au/setup/gis/web_services.html"
-            newtab: true
-          - title: "DEA via Amazon Web Services"
-            description: "We store a range of our satellite data products on Amazon Web Services (AWS) S3 buckets."
-            image: "/assets/img/australia/dea-via-amazon-web-services.jpg"
-            url: "https://data.dea.ga.gov.au/"
-            newtab: true
-      - title: "Land and vegetation"
-        image: "/assets/img/australia/land-and-vegetation.jpg"
-      - title: "Inland water"
-        image: "/assets/img/australia/inland-water.jpg"
-      - title: "Sea, ocean and coast"
-        image: "/assets/img/australia/sea-ocean-coast.jpg"
-      - title: "Hazards"
-        image: "/assets/img/australia/hazards.jpg"
-      - title: "Interactive maps and tools"
-        image: "/assets/img/australia/interactive-map-tools.jpg"
   - title: "Environmental Descriptors"
     subtitle: "Derived indices and variables ready for classification."
     icon: ic-leaf
@@ -214,11 +195,13 @@ pipeline:
   - title: "Classification of Land Cover & Habitats"
     subtitle: "Historical and near real-time classification of the landscape."
     icon: ic-map
-    url: "https://livingearth-lccs.readthedocs.io/en/latest/index.html"
+    url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-land-cover"
     newtab: true
   - title: "Evidence-Based Change"
     subtitle: "Tracking change over time to support decision-making."
     icon: ic-change
+    url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
+    newtab: true
   - title: "Future Landscapes"
     subtitle: "Modelling scenarios for policy and land management."
     icon: ic-future
@@ -247,50 +230,22 @@ pipeline:
         subtitle: "How can we protect our assets?"
         image: "/assets/img/Future6.jpg"
         url: "#"
-  - title: "Delivery"
+  - title: "Explore and Delivery"
     subtitle: "Policy, economy, environment and society."
     icon: ic-deliver
-tools_blocks:
-  - title: "See on Map"
-    description: ""
-    image: "/assets/img/tools1.jpg"
-    url: "/tools/earthtrack-app?country=Australia"
-    newtab: true
-  - title: "Get the data"
-    description: ""
-    image: "/assets/img/tools2.jpg"
-    url: "https://cmi.ga.gov.au/data-products/dea/607/dea-land-cover-landsat#access"
-    newtab: true
-  - title: "Analyze your options"
-    description: ""
-    image: "/assets/img/tools3.jpg"
-    url: "https://docs.dea.ga.gov.au/notebooks/DEA_datasets/DEA_Land_Cover.html"
-    newtab: true
-future_blocks:
-  - title: "Reimagining"
-    description: "What would we like to see?"
-    image: "/assets/img/Future2.jpg"
-    url:
-  - title: "Harmonising"
-    description: "How can we agree?"
-    image: "/assets/img/Future2.jpg"
-    url:
-  - title: "Realising"
-    description: "How can we be certain?"
-    image: "/assets/img/Future3.jpg"
-    url:
-  - title: "Facilitating"
-    description: "How can we track progress?"
-    image: "/assets/img/Future4.jpg"
-    url:
-  - title: "Valuing"
-    description: "How can we value our futures?"
-    image: "/assets/img/Future5.jpg"
-    url:
-  - title: "Assessing Risk"
-    description: "How can we protect our assets?"
-    image: "/assets/img/Future6.jpg"
-    url:
+    links:
+      - label: "View Maps"
+        url: "https://maps.dea.ga.gov.au/story/DEALandCover"
+        newtab: true
+      - label: "Earthtrack App"
+        url: "https://livingearthhub.org/tools/earthtrack-app?country=Australia"
+        newtab: true
+      - label: "Analyse the Data"
+        url: "https://app.sandbox.dea.ga.gov.au/hub/login?next=%2Fhub%2F"
+        newtab: true
+      - label: "Stream the Data"
+        url: "https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/?tab=access"
+        newtab: true
 ---
 
 ## Past & Present Landscapes
@@ -298,7 +253,3 @@ future_blocks:
 From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the Australian landscape of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.
 
 {% include country-pipeline.liquid list=page.pipeline %}
-
-{% include info-blocks.liquid list=page.tools_blocks heading="Tools" id="tools" %}
-
-{% include info-blocks.liquid list=page.future_blocks heading="Future Landscapes" id="future-landscapes" %}

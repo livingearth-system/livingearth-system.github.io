@@ -27,7 +27,7 @@ available-link-data:
         access_link: "https://explorer.swissdatacube.org/"
 
   - title: "How can I download the Living Earth products, such as land cover, habitat and change maps and the environmental descriptors?"
-    description: "The products generated through Living Earth can be downloaded directly from the interactive map [LINK to INTERACTIVE MAP]."
+    description: "The products generated through Living Earth can be downloaded directly from the <a href=\"/tools/interactive-map\">interactive map</a>."
     country/region-header: ""
     link-header: ""
     data_table:
@@ -39,7 +39,7 @@ available-link-data:
         access_link: ""
 
   - title: "Can I access the data through your Countries data cube?"
-    description: "If you do not want to download the data but instead use within the Open Date Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be u;loaded and integrated into your workflows. See [LINK TO: EDUCATION]"
+    description: "If you do not want to download the data but instead use within the Open Data Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be uploaded and integrated into your workflows. See [LINK TO: EDUCATION]"
     country/region-header: "Country/Region"
     link-header: "Access to Jupyter notebooks"
     data_table:
@@ -51,10 +51,10 @@ available-link-data:
         access_link: "https://www.swissdatacube.org/index.php/platform/"
 
   - title: "How do I get access to the ground observation records submitted to Earthtrack?"
-    description: "Earthtrack data are available for viewing on the Earthtrack mobile application MAP page (LINK TO: EARTHTRACK] immediately following submission.
+    description: "Earthtrack data are available for viewing on the Earthtrack mobile application <a href=\"/tools/earthtrack-app\">MAP page</a> immediately following submission.
 
     
-    Submitted data are also transferred immediately to Natural Apptitude’s Coreo database, whereupon they are reviewed internally for record and image quality and content, and released within a day of submission to the Earthtrack Geoportal where they are available for download.
+    Submitted data are also transferred immediately to Natural Apptitude's Coreo database, whereupon they are reviewed internally for record and image quality and content, and released within a day of submission to the Earthtrack Geoportal where they are available for download.
     
     
     All points can be downloaded from the Geoportal, but subsets can be selected by defining or drawing a region of interest. The direct access links are below:"
@@ -73,7 +73,6 @@ available-link-data:
 bottom-box:
   title: "Can the Earthtrack data be accessed via a web-service?"
   description_1: "All Earthtrack points can be accessed by connecting to the Web Feature Service on your software through the URL"
-  description_2: "Instructional videos for both QGIS and ARCGIS Pro are available at [LINK: VIDEO – QGIS, LINK: VIDEO – ARCGIS PRO."
   url: "https://earthtrack.aber.ac.uk/services/wfs"
 
 #video: 

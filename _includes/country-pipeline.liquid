@@ -8,6 +8,7 @@ Usage: {% include country-pipeline.liquid list=page.pipeline %}
 
 Each stage needs: title, subtitle, icon, and OPTIONALLY one of:
   url          — plain link
+  links        — list of { label, url, newtab } for multiple buttons
   sub_items    — flat list of { title, subtitle, image, url, newtab }
   categories   — nested browser: category -> optional subcategory ->
                  individual items. Each category needs title, image, and
@@ -18,8 +19,13 @@ Each stage needs: title, subtitle, icon, and OPTIONALLY one of:
                  "#"), the whole card becomes a link; otherwise it's a
                  plain informational card.
 
-page.pipeline_extra can hold a single badge row below (e.g. Calibration
-and Validation) with { title, url, newtab }.
+page.pipeline_validation_url — link for the "Calibration and Validation" footer box.
+page.pipeline_outreach_url — link for the "Engagement and Outreach" footer box
+  (opens in a new tab). If not set, that box stays a plain non-clickable label.
+
+Deep-linking: visiting this page with #pipeline-<slug-of-stage-title>
+(e.g. #pipeline-environmental-descriptors) auto-opens that stage and
+scrolls to it on load.
 {%- endcomment -%}
 {% assign stages = include.list %}
 {%- if stages -%}
@@ -27,12 +33,13 @@ and Validation) with { title, url, newtab }.
   <div class="container">
     <div class="country-pipeline-card">
 
-      <div class="country-pipeline-infra">Digital infrastructure (based on the Open Data Cube)</div>
+      <a class="country-pipeline-infra" href="https://www.opendatacube.org/" target="_blank" rel="noopener">Digital infrastructure (based on the Open Data Cube)</a>
 
       <div class="country-pipeline-flow">
         {% for stage in stages %}
           {% assign stage_index = forloop.index0 %}
           <button class="country-pipeline-stage" type="button" data-stage="{{ stage_index }}"
+                  data-stage-slug="{{ stage.title | slugify }}"
                   data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
             <span class="country-pipeline-stage-inner">
               <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
@@ -114,7 +121,13 @@ and Validation) with { title, url, newtab }.
         {% else %}
           <div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
             <p class="pipeline-panel-detail">{{ stage.subtitle }}</p>
-            {% if stage.url and stage.url != "#" %}
+            {% if stage.links %}
+              <div class="pipeline-panel-links">
+                {% for link in stage.links %}
+                  <a class="pipeline-panel-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }} &rarr;</a>
+                {% endfor %}
+              </div>
+            {% elsif stage.url and stage.url != "#" %}
               <a class="pipeline-panel-link" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
             {% endif %}
           </div>
@@ -125,9 +138,15 @@ and Validation) with { title, url, newtab }.
         <a class="pipeline-footer-box" href="{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}">
           Calibration and Validation
         </a>
-        <div class="pipeline-footer-box pipeline-footer-box-static">
-          Engagement and Outreach
-        </div>
+        {% if page.pipeline_outreach_url %}
+          <a class="pipeline-footer-box" href="{{ page.pipeline_outreach_url }}" target="_blank" rel="noopener">
+            Engagement and Outreach
+          </a>
+        {% else %}
+          <div class="pipeline-footer-box pipeline-footer-box-static">
+            Engagement and Outreach
+          </div>
+        {% endif %}
       </div>
 
     </div>
@@ -200,6 +219,19 @@ and Validation) with { title, url, newtab }.
       }
     });
   });
+
+  // Deep-link support: /europe/wales/#pipeline-environmental-descriptors
+  // auto-opens the matching stage and scrolls to it.
+  var hash = window.location.hash.replace('#pipeline-', '');
+  if (hash) {
+    var targetBtn = document.querySelector('.country-pipeline-stage[data-stage-slug="' + hash + '"]');
+    if (targetBtn) {
+      targetBtn.click();
+      setTimeout(function () {
+        targetBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
 })();
 </script>
 {%- endif -%}

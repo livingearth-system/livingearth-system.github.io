@@ -11,14 +11,21 @@ Parameters:
   heading  — optional heading shown above the grid
   id       — optional id, for anchor-linking from jump-nav
   variant  — "default" (vertical card, image/logo/icon on top) — used by Our Projects
-             "horizontal" (icon/logo on the left, no circle, whole card is a
-               link when url is set) — organisations
+             "horizontal" (icon/logo on the left, no circle) — organisations
              "team" (big photo, dark caption with name/role/social link) — people
 
 Each entry needs: title, description, and optionally link_text + url.
-default/horizontal cards also take: image, logo, or icon (map/globe/book/person)
+default/horizontal cards also take: image, logo, or icon (map/globe/book/leaf/change/person)
 team cards take: image OR icon (person) as a placeholder, plus optional
   social_url + social_label (e.g. LinkedIn)
+
+HORIZONTAL VARIANT — two link styles:
+  - Single link: set block.url (+ optional newtab). The whole card becomes
+    a link.
+  - Multiple links: set block.links, a list of { label, url, newtab }. The
+    card is not itself a link; each entry renders as a small text link in
+    the card body instead. Use this when a card needs 2+ destinations
+    (e.g. a paper AND a code repository).
 {%- endcomment -%}
 {% assign blocks = include.list | default: page.info_blocks %}
 {% assign variant = include.variant | default: "default" %}
@@ -30,7 +37,13 @@ team cards take: image OR icon (person) as a placeholder, plus optional
       {% for block in blocks %}
 
         {% if variant == "horizontal" %}
-          {% if block.url %}<a class="info-blocks-card info-blocks-card-horizontal" href="{{ block.url }}">{% else %}<div class="info-blocks-card info-blocks-card-horizontal">{% endif %}
+          {% if block.links %}
+            <div class="info-blocks-card info-blocks-card-horizontal">
+          {% elsif block.url %}
+            <a class="info-blocks-card info-blocks-card-horizontal" href="{{ block.url }}"{% if block.newtab %} target="_blank" rel="noopener"{% endif %}>
+          {% else %}
+            <div class="info-blocks-card info-blocks-card-horizontal">
+          {% endif %}
             <div class="info-blocks-h-media">
               {% if block.logo %}
                 <img class="info-blocks-h-logo" src="{{ block.logo | relative_url }}" alt="" loading="lazy">
@@ -43,6 +56,12 @@ team cards take: image OR icon (person) as a placeholder, plus optional
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.5"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="currentColor" stroke-width="1.5"/></svg>
                     {% when "book" %}
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 5.5c-1.6-1-4-1.5-6.5-1.5v14c2.5 0 4.9.5 6.5 1.5m0-14c1.6-1 4-1.5 6.5-1.5v14c-2.5 0-4.9.5-6.5 1.5m0-14v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "leaf" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "change" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5M20 4v4h-4M20 12a8 8 0 0 1-14 5M4 20v-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    {% when "person" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 19c1.2-3.5 4-5.5 7-5.5s5.8 2 7 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     {% else %}
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
                   {% endcase %}
@@ -52,8 +71,18 @@ team cards take: image OR icon (person) as a placeholder, plus optional
             <div class="info-blocks-body">
               <h3 class="info-blocks-title">{{ block.title }}</h3>
               <p class="info-blocks-desc">{{ block.description }}</p>
+              {% if block.links %}
+                <div class="info-blocks-h-links">
+                  {% for link in block.links %}
+                    <a class="info-blocks-h-link" href="{{ link.url }}"{% if link.newtab %} target="_blank" rel="noopener"{% endif %}>
+                      <svg class="info-blocks-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      {{ link.label }}
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
-          {% if block.url %}</a>{% else %}</div>{% endif %}
+          {% if block.links %}</div>{% elsif block.url %}</a>{% else %}</div>{% endif %}
 
         {% elsif variant == "team" %}
           <div class="info-blocks-card info-blocks-card-team">
@@ -109,6 +138,10 @@ team cards take: image OR icon (person) as a placeholder, plus optional
                       <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.5"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="currentColor" stroke-width="1.5"/></svg>
                     {% when "book" %}
                       <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 5.5c-1.6-1-4-1.5-6.5-1.5v14c2.5 0 4.9.5 6.5 1.5m0-14c1.6-1 4-1.5 6.5-1.5v14c-2.5 0-4.9.5-6.5 1.5m0-14v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "leaf" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "change" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5M20 4v4h-4M20 12a8 8 0 0 1-14 5M4 20v-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     {% when "person" %}
                       <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 19c1.2-3.5 4-5.5 7-5.5s5.8 2 7 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     {% else %}

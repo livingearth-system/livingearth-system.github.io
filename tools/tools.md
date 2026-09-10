@@ -13,8 +13,4 @@ breadcrumb:
     url: "/tools/"
 ---
 
-{% include info-blocks.liquid list=site.data.tools-explore heading="Explore and Analyse" id="explore-and-analyse" %}
-
-{% include info-blocks.liquid list=site.data.tools-learn heading="Learn" id="learn" %}
-
-{% include info-blocks.liquid list=site.data.tools-developers heading="For Developers" id="for-developers" %}
+{%- include tools-home-intents.liquid -%}

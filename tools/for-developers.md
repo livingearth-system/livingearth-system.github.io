@@ -34,7 +34,7 @@ description="Our access portal provides Living Earth regional products as well a
 <section id="analyse-the-data">
 {%-
 include tool-content.liquid
-title="Analyze the Data with Jupyter Notebooks"
+title="Analyse the Data with Jupyter Notebooks"
 first-heading="Accessing data cubes through Jupyter Hub"
 first-content-top="Here, you can currently access the data cubes of satellite sensor data and derived products from Wales and Australia, where the Living Earth system is implemented."
 first-content-bottom="Select the country from the drop down menu and then sign in. For Digital Earth Australia, you will need to first create an account at the link if you have not already done so. For the Welsh Data Cube, you can request access by emailing livingwales@aber.ac.uk. When you sign in, you will have access to a historical but accumulating archive of satellite data and derived products, including environmental descriptors and the annual land cover maps constructed from these using the Living Earth system. You can interrogate, process and analyse these within the data cubes without having to download any data to your own computer. A wide range of Jupyter notebooks are available which you can explore and use to build or modify your own."

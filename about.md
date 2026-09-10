@@ -106,6 +106,10 @@ org_blocks:
 
     <div class="about-vision-grid">
       <div class="about-vision-card">
+        <h3 class="about-vision-card-heading">Mission statement</h3>
+        <p class="about-vision-card-text">Our mission is to provide the platform for landscape-scale environmental variable analysis, through time, to everyone for free. We take satellite data and process them to provide both analysis-ready data for developers and algorithm-based habitat dynamics map products. We are engineering a solution to visualising large-scale environmental changes, impacts and pressures to save our planet.</p>
+      </div>
+      <div class="about-vision-card">
         <h3 class="about-vision-card-heading">Vision</h3>
         <p class="about-vision-card-text">We aspire to provide high-level, complex environmental dynamics datasets in an easy to use and understand format to everyone. To inspire, support and improve the way we plan landscape-scale change for biodiversity and resilience.</p>
       </div>
@@ -116,10 +120,6 @@ org_blocks:
       <div class="about-vision-card">
         <h3 class="about-vision-card-heading">Values</h3>
         <p class="about-vision-card-text">We stand for free open-source collaboration of environmental dynamics across continents, disciplines and audiences. We seek better resources for land planners to be better prepared to face the challenges ahead from climate change, anthropogenic factors and natural disasters. Believe that collaborative responses to environmental change is our path to improving the environment.</p>
-      </div>
-      <div class="about-vision-card">
-        <h3 class="about-vision-card-heading">Mission statement</h3>
-        <p class="about-vision-card-text">Our mission is to provide the platform for landscape-scale environmental variable analysis, through time, to everyone for free. We take satellite data and process them to provide both analysis-ready data for developers and algorithm-based habitat dynamics map products. We are engineering a solution to visualising large-scale environmental changes, impacts and pressures to save our planet.</p>
       </div>
     </div>
   </div>

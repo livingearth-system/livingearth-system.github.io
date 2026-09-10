@@ -9,9 +9,6 @@ Data lives in _data/pipeline.yml (icon, label, detail, url per stage).
   <div class="container">
 
     <div class="pipeline-header-row">
-      <div class="pipeline-logo">
-        <img src="/assets/img/logos/living-earth-logo.svg" alt="Living Earth" class="pipeline-logo-img">
-      </div>
       <div class="pipeline-header-text">
         <span class="pipeline-eyebrow">How It Works</span>
         <h2 class="pipeline-title">Taking Earth Observation to Users</h2>
@@ -37,11 +34,22 @@ Data lives in _data/pipeline.yml (icon, label, detail, url per stage).
       {% for stage in site.data.pipeline %}
         <div class="pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
           <p class="pipeline-panel-detail">{{ stage.detail }}</p>
-          {% if stage.url %}
-            <a class="pipeline-panel-link" href="{{ stage.url }}">Explore {{ stage.label }} &rarr;</a>
+            {% if stage.url %}
+              <a class="pipeline-panel-link" href="{{ stage.url }}">Explore {{ stage.label }} &rarr;</a>
+            {% endif %}
+            {% if stage.url2 %}
+              <a class="pipeline-panel-link" href="{{ stage.url2 }}">{{ stage.url2_label | default: "Explore" }} &rarr;</a>
           {% endif %}
           <div class="pipeline-panel-countries">
             <span class="pipeline-panel-countries-label">See country specifics:</span>
+            {% if stage.url or stage.url2 %}
+              <a class="pipeline-panel-country pipeline-panel-country-global" href="{{ stage.url | default: stage.url2 }}">
+                <span class="pipeline-panel-country-globe-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9Z"/></svg>
+                </span>
+                <span class="pipeline-panel-country-label">Global</span>
+              </a>
+            {% endif %}
             {% for country in site.data.countries %}
               {% unless country.title == "Global" %}
                 <a class="pipeline-panel-country" href="{{ country.url }}">
