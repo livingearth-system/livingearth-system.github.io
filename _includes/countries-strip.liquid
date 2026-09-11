@@ -15,7 +15,7 @@ id="countries" added so this section can be jumped to directly
         <a class="countries-strip-item" href="{{ c.url }}">
           <span class="countries-strip-icon-wrap">
             {% if c.image %}
-              <img src="{{ c.image }}" alt="{{ c.title }}" class="countries-strip-image">
+              <img src="{{ c.image | relative_url }}" alt="{{ c.title }}" class="countries-strip-image">
             {% else %}
               <span class="countries-strip-placeholder">{{ c.title | slice: 0, 1 }}</span>
             {% endif %}
