@@ -27,8 +27,8 @@
       {% endif %}
       {% if id == 5 %}
       <div class="img-row-5">
-        <img src="/assets/img/appstore.png" alt="Image 1">
-        <img src="/assets/img/CHplay.png" alt="Image 2">
+        <img src="{{ '/assets/img/appstore.png' | relative_url }}" alt="Image 1">
+        <img src="{{ '/assets/img/CHplay.png' | relative_url }}" alt="Image 2">
       </div>
       {% endif %}
       {% assign buttons = item.button | split: '; ' %}
@@ -38,7 +38,7 @@
       <div class="button-tool">
         <button class="">
           <a href="{{ url }}" class="custom-button">{{ button }}</a>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
         </button>
       </div>
       {% endfor %}
@@ -62,8 +62,8 @@
       {% endfor %}
       {% endif %}
       <div class="img-row-5">
-        <img src="/assets/img/appstore.png" alt="Image 1">
-        <img src="/assets/img//CHplay.png" alt="Image 2">
+        <img src="{{ '/assets/img/appstore.png' | relative_url }}" alt="Image 1">
+        <img src="{{ '/assets/img//CHplay.png' | relative_url }}" alt="Image 2">
       </div>
       {% assign urls = item | where: "contains", "url_" %}
       {% assign buttons = item.button | split: '; ' %}
@@ -75,7 +75,7 @@
       <div class="button-tool">
         <button class="">
           <a href="{{ url }}" class="custom-button">{{ button }}</a>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
         </button>
       </div>
       {% endfor %}
@@ -109,7 +109,7 @@
       <div class="button-tool">
         <button class="">
           <a href="{{ url }}" class="custom-button">{{ button }}</a>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
         </button>
       </div>
       {% endfor %}
@@ -146,8 +146,8 @@
           {% endif %}
           {% if id == 5 %}
             <div class="img-row-5">
-              <img class="img-responsive" src="/assets/img/appstore.png" alt="Image 1">
-              <img class="img-responsive" src="/assets/img//CHplay.png" alt="Image 2">
+              <img class="img-responsive" src="{{ '/assets/img/appstore.png' | relative_url }}" alt="Image 1">
+              <img class="img-responsive" src="{{ '/assets/img//CHplay.png' | relative_url }}" alt="Image 2">
             </div>
           {% endif %}
           {% assign buttons = item.button | split: '; ' %}
@@ -156,7 +156,7 @@
             <div class="button-tool">
               <button class="">
                 {{ button | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN HERE</button>' }}
-                <img src="/assets/img/Arrow.png" alt="Arrow Image">
+                <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
               </button>
             </div>
           {% endfor %}

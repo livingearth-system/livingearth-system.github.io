@@ -9,11 +9,11 @@
                     <a href="{{ include.all }}">View all</a>
                 {% endif %}
                 {%- if include.heading == 'Tools' -%}
-                    <a href="/tools/">Go to {{ include.heading }}</a>
+                    <a href="{{ '/tools/' | relative_url }}">Go to {{ include.heading }}</a>
                 {% endif %}
             </h2>
         {% endif %}
-        {% comment %} {%- if include.heading == 'Tools' -%}<h2 class="common-title"><a href="/tools/">{{ include.heading }}</a></h2>{% endif %} {% endcomment %}
+        {% comment %} {%- if include.heading == 'Tools' -%}<h2 class="common-title"><a href="{{ '/tools/' | relative_url }}">{{ include.heading }}</a></h2>{% endif %} {% endcomment %}
           {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
       </div>
   </div>

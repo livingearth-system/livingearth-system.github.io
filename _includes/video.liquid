@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-12 mt-40 abouts-video-section">
             {%- if include.preview -%}<img src="{{ include.preview }}" alt="">{% endif %}
-            <button type="button"><img src="/assets/img/play.png" alt="Play"></button>
+            <button type="button"><img src="{{ '/assets/img/play.png' | relative_url }}" alt="Play"></button>
         </div>
     </div>
 </section>

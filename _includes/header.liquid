@@ -15,8 +15,8 @@
               aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="/">
-              <img src="/assets/img/logos/living-earth-logo.svg" alt="Living Earth">
+            <a class="navbar-brand" href="{{ '/' | relative_url }}">
+              <img src="{{ '/assets/img/logos/living-earth-logo.svg' | relative_url }}" alt="Living Earth">
             </a>
           </div>
 
@@ -38,9 +38,9 @@
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active dropdown-mobile">
                 <a class="nav-link dropdown-toggle dropdown-mobile" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/about">About Living Earth</a>
-                  <a class="dropdown-item" href="/our-projects">Our Projects</a>
-                  <a class="dropdown-item" href="/contact">Contact Us</a>
+                  <a class="dropdown-item" href="{{ '/about' | relative_url }}">About Living Earth</a>
+                  <a class="dropdown-item" href="{{ '/our-projects' | relative_url }}">Our Projects</a>
+                  <a class="dropdown-item" href="{{ '/contact' | relative_url }}">Contact Us</a>
                 </div>
               </li>
 
@@ -48,9 +48,9 @@
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active dropdown-mobile">
                 <a class="nav-link dropdown-toggle dropdown-mobile" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Countries</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/europe/wales/">Wales</a>
-                  <a class="dropdown-item" href="/europe/switzerland/">Switzerland</a>
-                  <a class="dropdown-item" href="/oceania/australia/">Australia</a>
+                  <a class="dropdown-item" href="{{ '/europe/wales/' | relative_url }}">Wales</a>
+                  <a class="dropdown-item" href="{{ '/europe/switzerland/' | relative_url }}">Switzerland</a>
+                  <a class="dropdown-item" href="{{ '/oceania/australia/' | relative_url }}">Australia</a>
                 </div>
               </li>
 
@@ -58,10 +58,10 @@
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active dropdown-mobile">
                 <a class="nav-link dropdown-toggle dropdown-mobile" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tools</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/tools/">About Tools</a>
-                  <a class="dropdown-item" href="/tools/explore-and-analyse">Explore and Analyse</a>
-                  <a class="dropdown-item" href="/tools/learn">Learn</a>
-                  <a class="dropdown-item" href="/tools/for-developers">For Developers</a>
+                  <a class="dropdown-item" href="{{ '/tools/' | relative_url }}">About Tools</a>
+                  <a class="dropdown-item" href="{{ '/tools/explore-and-analyse' | relative_url }}">Explore and Analyse</a>
+                  <a class="dropdown-item" href="{{ '/tools/learn' | relative_url }}">Learn</a>
+                  <a class="dropdown-item" href="{{ '/tools/for-developers' | relative_url }}">For Developers</a>
                 </div>
               </li>
 
@@ -69,18 +69,18 @@
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active dropdown-mobile">
                 <a class="nav-link dropdown-toggle dropdown-mobile" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Themes</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/themes/landhabcover/">Land Cover and Habitats</a>
-                  <a class="dropdown-item" href="/themes/water/">Water</a>
-                  <a class="dropdown-item" href="/themes/change/">Change, Impacts and Pressures</a>
-                  <a class="dropdown-item" href="/themes/biodiversity/">Biodiversity</a>
-                  <a class="dropdown-item" href="/themes/accounts/">Accounts</a>
-                  <a class="dropdown-item" href="/themes/futures/">Future Earth</a>
+                  <a class="dropdown-item" href="{{ '/themes/landhabcover/' | relative_url }}">Land Cover and Habitats</a>
+                  <a class="dropdown-item" href="{{ '/themes/water/' | relative_url }}">Water</a>
+                  <a class="dropdown-item" href="{{ '/themes/change/' | relative_url }}">Change, Impacts and Pressures</a>
+                  <a class="dropdown-item" href="{{ '/themes/biodiversity/' | relative_url }}">Biodiversity</a>
+                  <a class="dropdown-item" href="{{ '/themes/accounts/' | relative_url }}">Accounts</a>
+                  <a class="dropdown-item" href="{{ '/themes/futures/' | relative_url }}">Future Earth</a>
                 </div>
               </li>
 
               <!-- NEWS AND EVENTS -->
               <li class="nav-item pl-4 pl-md-0 ml-0 ml-lg-5 active">
-                <a class="nav-link" href="/news">News and Events</a>
+                <a class="nav-link" href="{{ '/news' | relative_url }}">News and Events</a>
               </li>
 
             </ul>

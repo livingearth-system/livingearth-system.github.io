@@ -54,7 +54,7 @@
                                 <p>{{ site.data.tool-industry-sidebar.index.base_land }}</p>
                             </label>
                             <p class="icon-atfer-selected-year">
-                                <span><img src="/assets/icon/download.svg"></span>
+                                <span><img src="{{ '/assets/icon/download.svg' | relative_url }}"></span>
                                 <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
                             </p>
                         </div>
@@ -64,7 +64,7 @@
                                 <p> {{ site.data.tool-industry-sidebar.index.no_base_map }}</p>
                             </label>
                             <p class="icon-atfer-selected-year">
-                                <span><img src="/assets/icon/download.svg"></span>
+                                <span><img src="{{ '/assets/icon/download.svg' | relative_url }}"></span>
                                 <span><img src="{{ site.data.tool-industry-sidebar.index.question_mark_src }}"></span>
                             </p>
                         </div>
@@ -75,8 +75,8 @@
                                 <input type="checkbox" id="{{ item.id }}" name="{{ item.id }}" value="{{ item.value }}">
                                 <label for="{{ item.id }}">{{ item.label }}</label>
                                 <p class="icon-atfer-selected-year">
-                                    <span><img src="/assets/icon/download.svg"></span>
-                                    <span><img src="/assets/icon/questionmark.svg"></span>
+                                    <span><img src="{{ '/assets/icon/download.svg' | relative_url }}"></span>
+                                    <span><img src="{{ '/assets/icon/questionmark.svg' | relative_url }}"></span>
                                 </p>
                                 </div>
                             {% endfor %}
