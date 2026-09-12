@@ -22,7 +22,7 @@ To hide this section entirely on a specific page, set `nohero: true`.
       {% if forloop.last %}
         <span class="page-breadcrumb-current">{{ crumb.label }}</span>
       {% else %}
-        <a class="page-breadcrumb-link" href="{{ crumb.url }}">{{ crumb.label }}</a>
+        <a class="page-breadcrumb-link" href="{% if crumb.url contains 'http' %}{{ crumb.url }}{% else %}{{ crumb.url | relative_url }}{% endif %}">{{ crumb.label }}</a>
       {% endif %}
     {% endfor %}
   </div>
@@ -37,7 +37,7 @@ To hide this section entirely on a specific page, set `nohero: true`.
       <h1 class="page-hero-title">{{ page.title }}</h1>
       {%- if page.subtitle -%}<p class="page-hero-subtitle">{{ page.subtitle }}</p>{%- endif -%}
       {%- if page.cta_text and page.cta_url -%}
-        <a class="page-hero-cta" href="{{ page.cta_url }}">{{ page.cta_text }}</a>
+        <a class="page-hero-cta" href="{% if page.cta_url contains 'http' %}{{ page.cta_url }}{% else %}{{ page.cta_url | relative_url }}{% endif %}">{{ page.cta_text }}</a>
       {%- endif -%}
     </div>
   </div>
@@ -50,7 +50,7 @@ To hide this section entirely on a specific page, set `nohero: true`.
       <h1 class="page-hero-title">{{ page.title }}</h1>
       {%- if page.subtitle -%}<p class="page-hero-subtitle">{{ page.subtitle }}</p>{%- endif -%}
       {%- if page.cta_text and page.cta_url -%}
-        <a class="page-hero-cta" href="{{ page.cta_url }}">{{ page.cta_text }}</a>
+        <a class="page-hero-cta" href="{% if page.cta_url contains 'http' %}{{ page.cta_url }}{% else %}{{ page.cta_url | relative_url }}{% endif %}">{{ page.cta_text }}</a>
       {%- endif -%}
     </div>
     <div class="page-hero-art" aria-hidden="true">

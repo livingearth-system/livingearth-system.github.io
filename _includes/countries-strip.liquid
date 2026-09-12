@@ -12,7 +12,7 @@ id="countries" added so this section can be jumped to directly
     <h2 class="countries-strip-heading">Where is Living Earth?</h2>
     <div class="countries-strip-row">
       {% for c in site.data.countries %}
-        <a class="countries-strip-item" href="{{ c.url }}">
+        <a class="countries-strip-item" href="{% if c.url contains 'http' %}{{ c.url }}{% else %}{{ c.url | relative_url }}{% endif %}">
           <span class="countries-strip-icon-wrap">
             {% if c.image %}
               <img src="{{ c.image | relative_url }}" alt="{{ c.title }}" class="countries-strip-image">

@@ -89,8 +89,8 @@
     <div class="row continent-data-section">
         {% for box in data %}
             <section class="col-6 col-md-4 col-lg-3 hover-zoomin">
-                <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
-                <h3><a href="{{ box.url }}">{{ box.title }}</a></h3>
+                <a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}"><img src="{% if box.image contains 'http' %}{{ box.image }}{% else %}{{ box.image | relative_url }}{% endif %}" alt="{{ box.title }}"></a>
+                <h3><a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}">{{ box.title }}</a></h3>
             </section>
         {% endfor %}
     </div>

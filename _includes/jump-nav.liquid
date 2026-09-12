@@ -13,7 +13,7 @@ down (e.g. the `id` parameter on an info-blocks include).
 <nav class="jump-nav" aria-label="On this page">
   <div class="container jump-nav-row">
     {% for item in page.jump_nav %}
-      <a class="jump-nav-link" href="{{ item.url }}">{{ item.label }}</a>
+      <a class="jump-nav-link" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.label }}</a>
     {% endfor %}
   </div>
 </nav>

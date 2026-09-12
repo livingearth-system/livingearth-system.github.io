@@ -5,7 +5,7 @@
         <div class="col-md-8 col-12">
             <div class="row user-details-content">
                 <div class="col-md-2 col-3">
-                    {%- if include.avatar -%}<img src="{{ include.avatar }}" alt="{{ include.name }}">{% endif %}
+                    {%- if include.avatar -%}<img src="{% if include.avatar contains 'http' %}{{ include.avatar }}{% else %}{{ include.avatar | relative_url }}{% endif %}" alt="{{ include.name }}">{% endif %}
                 </div>
                 <div class="col-md-10 col-9 user-details-content-dsc">
                     {%- if include.name -%}<p>{{ include.name }}</p>{% endif %}
@@ -16,7 +16,7 @@
     </div>
     <div class="row">
         <div class="col-12 mt-40 abouts-video-section">
-            {%- if include.preview -%}<img src="{{ include.preview }}" alt="">{% endif %}
+            {%- if include.preview -%}<img src="{% if include.preview contains 'http' %}{{ include.preview }}{% else %}{{ include.preview | relative_url }}{% endif %}" alt="">{% endif %}
             <button type="button"><img src="{{ '/assets/img/play.png' | relative_url }}" alt="Play"></button>
         </div>
     </div>

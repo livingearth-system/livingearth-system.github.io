@@ -19,7 +19,7 @@ auto-expands Wales and scrolls to it.
 {% endfor %}
 <div class="data-accordion-item" data-country="{{ c.id }}">
 <button type="button" class="data-accordion-header" data-target="{{ c.id }}">
-{% if icon %}<img src="{{ icon }}" alt="" class="data-accordion-icon">{% endif %}
+{% if icon %}<img src="{% if icon contains 'http' %}{{ icon }}{% else %}{{ icon | relative_url }}{% endif %}" alt="" class="data-accordion-icon">{% endif %}
 <span class="data-accordion-title">{{ c.title }}</span>
 <svg class="data-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
 </button>
@@ -28,11 +28,11 @@ auto-expands Wales and scrolls to it.
 {% if c.intro %}<p class="data-country-intro">{{ c.intro }}</p>{% endif %}
 <ul class="data-country-links">
 {% for link in c.links %}
-<li><a href="{{ link.url }}" class="data-country-link" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+<li><a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" class="data-country-link" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
 {% endfor %}
 </ul>
 {% if c.analyze_url %}
-<a href="{{ c.analyze_url }}" class="data-country-analyze">Analyse this data &rarr;</a>
+<a href="{% if c.analyze_url contains 'http' %}{{ c.analyze_url }}{% else %}{{ c.analyze_url | relative_url }}{% endif %}" class="data-country-analyze">Analyse this data &rarr;</a>
 {% endif %}
 </div>
 </div>

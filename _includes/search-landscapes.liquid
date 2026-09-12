@@ -15,7 +15,7 @@
     <div class="row justify-content-center">
         {% for box in site.data.continents %}
             <div class="col-6 col-md-3 col-lg-2 landscapes-catogories">
-                <a href="{{ box.url }}"><img src="{{ box.icon }}" alt="{{ box.title }}"><span>{{ box.title }}</span></a>
+                <a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}"><img src="{% if box.icon contains 'http' %}{{ box.icon }}{% else %}{{ box.icon | relative_url }}{% endif %}" alt="{{ box.title }}"><span>{{ box.title }}</span></a>
             </div>
         {% endfor %}
     </div>

@@ -2,7 +2,7 @@
 <section class="mt-100 mb-100 contribute-main">
   <div class="row">
     <div class="col-12 col-md-6 contribute-left-img">
-      {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.heading }}">{%- endif -%}
+      {%- if include.image -%}<img src="{% if include.image contains 'http' %}{{ include.image }}{% else %}{{ include.image | relative_url }}{% endif %}" alt="{{ include.heading }}">{%- endif -%}
     </div>
     <div class="col-md-1"></div>
     <div class="col-12 col-md-5 contribute-right">
@@ -24,7 +24,7 @@
 
         {%- if include.link_url -%}
           <div class="learn-more">
-            <a href="{{ include.url }}"
+            <a href="{% if include.url contains 'http' %}{{ include.url }}{% else %}{{ include.url | relative_url }}{% endif %}"
               >Learn More
 
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">

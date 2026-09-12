@@ -30,12 +30,12 @@
     <div class="country_subpage-img-layer" style="background: {{ background }} {{ background }}"></div>
     {% if page.url == '/contact/' %}
       {%- if image -%}
-        <img class="country_subpage-benner-img-contact" src="{{ image }}" alt="{{ alt | default: title }}">
+        <img class="country_subpage-benner-img-contact" src="{% if image contains 'http' %}{{ image }}{% else %}{{ image | relative_url }}{% endif %}" alt="{{ alt | default: title }}">
       {%- endif %}
     {% endif %}
     {% if page.url != '/contact/' %}
       {%- if image -%}
-        <img class="country_subpage-benner-img" src="{{ image }}" alt="{{ alt | default: title }}">
+        <img class="country_subpage-benner-img" src="{% if image contains 'http' %}{{ image }}{% else %}{{ image | relative_url }}{% endif %}" alt="{{ alt | default: title }}">
       {%- endif %}
     {% endif %}
   </div>
@@ -76,7 +76,7 @@
       {%- if nobuttons != true -%}
         {%- if button1 != 'none' -%}
           <a
-            href="{{ button1_url | default: "/contact/" }}"
+            href="{% if button1_url | default: "/contact/" contains 'http' %}{{ button1_url | default: "/contact/" }}{% else %}{{ button1_url | default: "/contact/" | relative_url }}{% endif %}"
             class="country-subpage-search"
           >
             {{ button1 | default: 'Contact Us' }}
@@ -84,7 +84,7 @@
         {%- endif %}
         {%- if button2 != 'none' -%}
           <a
-            href="{{ button2_url | default: "/contribute/" }}"
+            href="{% if button2_url | default: "/contribute/" contains 'http' %}{{ button2_url | default: "/contribute/" }}{% else %}{{ button2_url | default: "/contribute/" | relative_url }}{% endif %}"
             class="country-subpage-get-in-touch"
           >
             {{ button2 | default: 'Contribute' }}

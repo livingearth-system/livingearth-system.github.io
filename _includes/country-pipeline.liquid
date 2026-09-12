@@ -57,7 +57,7 @@ scrolls to it on load.
   <div class="country-pipeline-panel-grid">
     {% for item in stage.sub_items %}
     {% if item.url and item.url != "#" %}
-    <a class="country-pipeline-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+    <a class="country-pipeline-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
     {% else %}
     <div class="country-pipeline-item country-pipeline-item-static">
     {% endif %}
@@ -104,12 +104,12 @@ scrolls to it on load.
         <span class="env-desc-item-title">{{ item.title }}</span>
         <div class="env-desc-item-links">
           {% for link in item.links %}
-          <a class="env-desc-item-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+          <a class="env-desc-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
           {% endfor %}
         </div>
       </div>
       {% elsif item.url and item.url != "#" %}
-      <a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+      <a class="env-desc-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
         <span class="env-desc-item-title">{{ item.title }}</span>
       </a>
@@ -131,12 +131,12 @@ scrolls to it on load.
         <span class="env-desc-item-title">{{ item.title }}</span>
         <div class="env-desc-item-links">
           {% for link in item.links %}
-          <a class="env-desc-item-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
+          <a class="env-desc-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
           {% endfor %}
         </div>
       </div>
       {% elsif item.url and item.url != "#" %}
-      <a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+      <a class="env-desc-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
         <span class="env-desc-item-title">{{ item.title }}</span>
       </a>
@@ -159,22 +159,22 @@ scrolls to it on load.
   {% if stage.links %}
   <div class="pipeline-panel-links">
     {% for link in stage.links %}
-    <a class="pipeline-panel-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }} &rarr;</a>
+    <a class="pipeline-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }} &rarr;</a>
     {% endfor %}
   </div>
   {% elsif stage.url and stage.url != "#" %}
-  <a class="pipeline-panel-link" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
+  <a class="pipeline-panel-link" href="{% if stage.url contains 'http' %}{{ stage.url }}{% else %}{{ stage.url | relative_url }}{% endif %}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
   {% endif %}
 </div>
 {% endif %}
 {% endfor %}
 
 <div class="pipeline-footer-boxes">
-  <a class="pipeline-footer-box" href="{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}">
+  <a class="pipeline-footer-box" href="{% if page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' contains 'http' %}{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}{% else %}{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' | relative_url }}{% endif %}">
     Calibration and Validation
   </a>
   {% if page.pipeline_outreach_url %}
-  <a class="pipeline-footer-box" href="{{ page.pipeline_outreach_url }}" target="_blank" rel="noopener">
+  <a class="pipeline-footer-box" href="{% if page.pipeline_outreach_url contains 'http' %}{{ page.pipeline_outreach_url }}{% else %}{{ page.pipeline_outreach_url | relative_url }}{% endif %}" target="_blank" rel="noopener">
     Engagement and Outreach
   </a>
   {% else %}

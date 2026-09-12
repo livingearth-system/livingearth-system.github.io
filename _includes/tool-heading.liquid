@@ -103,7 +103,7 @@
     <div class="toolpage">
       {% for item in site.data.tool-heading.index %}
         <button class="tool-button{% if item.status == 'disabled' %} tool-button-disable{% endif %}" {% if item.status == 'disabled' %}disabled{% endif %}>
-          <img class="svg-icon" src="{{ item.icon }}">
+          <img class="svg-icon" src="{% if item.icon contains 'http' %}{{ item.icon }}{% else %}{{ item.icon | relative_url }}{% endif %}">
           <p>{{ item.title }}</p>
         </button>
       {% endfor %}

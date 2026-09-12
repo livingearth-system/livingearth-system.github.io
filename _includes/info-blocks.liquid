@@ -40,7 +40,7 @@ HORIZONTAL VARIANT — two link styles:
           {% if block.links %}
             <div class="info-blocks-card info-blocks-card-horizontal">
           {% elsif block.url %}
-            <a class="info-blocks-card info-blocks-card-horizontal" href="{{ block.url }}"{% if block.newtab %} target="_blank" rel="noopener"{% endif %}>
+            <a class="info-blocks-card info-blocks-card-horizontal" href="{% if block.url contains 'http' %}{{ block.url }}{% else %}{{ block.url | relative_url }}{% endif %}"{% if block.newtab %} target="_blank" rel="noopener"{% endif %}>
           {% else %}
             <div class="info-blocks-card info-blocks-card-horizontal">
           {% endif %}
@@ -74,7 +74,7 @@ HORIZONTAL VARIANT — two link styles:
               {% if block.links %}
                 <div class="info-blocks-h-links">
                   {% for link in block.links %}
-                    <a class="info-blocks-h-link" href="{{ link.url }}"{% if link.newtab %} target="_blank" rel="noopener"{% endif %}>
+                    <a class="info-blocks-h-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if link.newtab %} target="_blank" rel="noopener"{% endif %}>
                       <svg class="info-blocks-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                       {{ link.label }}
                     </a>
@@ -104,7 +104,7 @@ HORIZONTAL VARIANT — two link styles:
               <h3 class="info-blocks-team-name">{{ block.title }}</h3>
               <p class="info-blocks-team-role">{{ block.description }}</p>
               {% if block.social_url %}
-                <a class="info-blocks-team-social" href="{{ block.social_url }}" target="_blank" rel="noopener">
+                <a class="info-blocks-team-social" href="{% if block.social_url contains 'http' %}{{ block.social_url }}{% else %}{{ block.social_url | relative_url }}{% endif %}" target="_blank" rel="noopener">
                   <svg class="info-blocks-team-social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/>
                     <circle cx="7.5" cy="8" r="1.3" fill="currentColor"/>
@@ -154,7 +154,7 @@ HORIZONTAL VARIANT — two link styles:
               <h3 class="info-blocks-title">{{ block.title }}</h3>
               <p class="info-blocks-desc">{{ block.description }}</p>
               {% if block.url %}
-                <a class="info-blocks-link" href="{{ block.url }}">
+                <a class="info-blocks-link" href="{% if block.url contains 'http' %}{{ block.url }}{% else %}{{ block.url | relative_url }}{% endif %}">
                   <svg class="info-blocks-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   {{ block.link_text | default: "View Resource" }}
                 </a>

@@ -22,7 +22,7 @@
             <p class="data-table-heading">{{ item['link-header'] }}</p>
             {% for row in item.data_table %}
               {% if row.access_link != '' %}
-                <a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a>
+                <a class="data-table-link" href="{% if row.access_link contains 'http' %}{{ row.access_link }}{% else %}{{ row.access_link | relative_url }}{% endif %}">{{ row.access_link }}</a>
                 <br>
               {% endif %}
             {% endfor %}

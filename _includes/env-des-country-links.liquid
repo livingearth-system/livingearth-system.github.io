@@ -19,7 +19,7 @@ Data lives in _data/env-des/index.yml (title, subtitle, url).
         {% assign icon = ci.image %}
       {% endif %}
     {% endfor %}
-    <a class="fd-intent-card" href="{{ c.url }}">
+    <a class="fd-intent-card" href="{% if c.url contains 'http' %}{{ c.url }}{% else %}{{ c.url | relative_url }}{% endif %}">
       {% if icon %}
         <span class="fd-intent-icon env-des-country-icon"><img src="{{ icon | relative_url }}" alt=""></span>
       {% endif %}

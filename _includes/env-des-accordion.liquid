@@ -18,7 +18,7 @@ Vegetation and scrolls to it.
 {% for cat in site.data['env-des-descriptors'] %}
 <div class="env-des-accordion-item" data-cat="{{ cat.id }}">
 <button type="button" class="env-des-accordion-header" data-target="{{ cat.id }}">
-{% if cat.image %}<img src="{{ cat.image }}" alt="" class="env-des-accordion-icon">{% endif %}
+{% if cat.image %}<img src="{% if cat.image contains 'http' %}{{ cat.image }}{% else %}{{ cat.image | relative_url }}{% endif %}" alt="" class="env-des-accordion-icon">{% endif %}
 <span class="env-des-accordion-title">{{ cat.title }}</span>
 <span class="env-des-accordion-count">{{ cat.descriptors | size }}</span>
 <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
@@ -28,7 +28,7 @@ Vegetation and scrolls to it.
 <div class="env-des-descriptor-grid">
 {% for d in cat.descriptors %}
 <div class="env-des-descriptor-card">
-{% if d.image %}<img src="{{ d.image }}" alt="{{ d.title }}" class="env-des-descriptor-image">{% endif %}
+{% if d.image %}<img src="{% if d.image contains 'http' %}{{ d.image }}{% else %}{{ d.image | relative_url }}{% endif %}" alt="{{ d.title }}" class="env-des-descriptor-image">{% endif %}
 <div class="env-des-descriptor-title">
 {{ d.title }}{% if d.unit %} <span class="env-des-descriptor-unit">({{ d.unit }})</span>{% endif %}
 </div>
@@ -36,7 +36,7 @@ Vegetation and scrolls to it.
 {% if d.links %}
 <div class="env-des-descriptor-links">
 {% for link in d.links %}
-<a class="env-des-descriptor-link" href="{{ link.url }}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+<a class="env-des-descriptor-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
 {% endfor %}
 </div>
 {% endif %}

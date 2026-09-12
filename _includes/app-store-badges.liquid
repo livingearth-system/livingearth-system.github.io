@@ -3,7 +3,7 @@ APP STORE BADGES — real Apple/Google badge artwork, wrapped in real links.
 Usage: {% include app-store-badges.liquid apple_url="..." google_url="..." %}
 {%- endcomment -%}
 <div class="app-store-badges">
-  <a href="{{ include.apple_url }}" target="_blank" rel="noopener" aria-label="Download on the App Store">
+  <a href="{% if include.apple_url contains 'http' %}{{ include.apple_url }}{% else %}{{ include.apple_url | relative_url }}{% endif %}" target="_blank" rel="noopener" aria-label="Download on the App Store">
     <button class="download-app-button">
       <svg width="90" height="25" viewBox="0 0 90 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Group">
@@ -46,7 +46,7 @@ Usage: {% include app-store-badges.liquid apple_url="..." google_url="..." %}
       </svg>
     </button>
   </a>
-  <a href="{{ include.google_url }}" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+  <a href="{% if include.google_url contains 'http' %}{{ include.google_url }}{% else %}{{ include.google_url | relative_url }}{% endif %}" target="_blank" rel="noopener" aria-label="Get it on Google Play">
     <button class="download-app-button">
       <svg width="90" height="26" viewBox="0 0 90 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Group">

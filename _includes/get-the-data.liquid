@@ -30,7 +30,7 @@
               {% if row.country_region != "" %}
               <tr>
                 <td class="data-table-td">{{ row.country_region }}</td>
-                <td class="data-table-td"><a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a></td>
+                <td class="data-table-td"><a class="data-table-link" href="{% if row.access_link contains 'http' %}{{ row.access_link }}{% else %}{{ row.access_link | relative_url }}{% endif %}">{{ row.access_link }}</a></td>
               </tr>
               {% endif %}
             {% endfor %}
@@ -42,7 +42,7 @@
       <h3 class="article_heading">{{ site.data.get-the-data-information.index.bottom-box.title }}</h3>
       <p class="article_description">
         {{ site.data.get-the-data-information.index.bottom-box.description_1 }}
-        <a href="{{ site.data.get-the-data-information.index.bottom-box.url }}">{{ site.data.get-the-data-information.index.bottom-box.url }}</a>.
+        <a href="{% if site.data.get-the-data-information.index.bottom-box.url contains 'http' %}{{ site.data.get-the-data-information.index.bottom-box.url }}{% else %}{{ site.data.get-the-data-information.index.bottom-box.url | relative_url }}{% endif %}">{{ site.data.get-the-data-information.index.bottom-box.url }}</a>.
         {{ site.data.get-the-data-information.index.bottom-box.description_2 }}
       </p>
     </div>
@@ -50,8 +50,8 @@
     {% if site.data.get-the-data-information.index.video %}
     <div class="col-12 col-lg-4 mt-5">
       <video width="auto" controls>
-        <source src="{{ site.data.get-the-data-information.index.video.video_1.src }}" type="{{ site.data.get-the-data-information.index.video.video_1.type }}">
-        <source src="{{ site.data.get-the-data-information.index.video.video_2.src }}" type="{{ site.data.get-the-data-information.index.video.video_2.type }}">
+        <source src="{% if site.data.get-the-data-information.index.video.video_1.src contains 'http' %}{{ site.data.get-the-data-information.index.video.video_1.src }}{% else %}{{ site.data.get-the-data-information.index.video.video_1.src | relative_url }}{% endif %}" type="{{ site.data.get-the-data-information.index.video.video_1.type }}">
+        <source src="{% if site.data.get-the-data-information.index.video.video_2.src contains 'http' %}{{ site.data.get-the-data-information.index.video.video_2.src }}{% else %}{{ site.data.get-the-data-information.index.video.video_2.src | relative_url }}{% endif %}" type="{{ site.data.get-the-data-information.index.video.video_2.type }}">
         {{ site.data.get-the-data-information.index.video.title }}
       </video>
     </div>

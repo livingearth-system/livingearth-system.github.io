@@ -8,9 +8,9 @@
           {% for item in data %}
             <div class="item">
               <div class="stay-up-card">
-                <a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.title }}"></a>
+                <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="{{ item.title }}"></a>
                 <p class="title-img">
-                  <a href="{{ item.url }}">{{ item.title }}</a>
+                  <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a>
                 </p>
                 <span class="body-img">{{ item.subtitle }}</span>
               </div>

@@ -11,7 +11,7 @@ is decided — the layout already handles 2 or 3 columns gracefully.
         <div class="contact-band-col">
           <h3 class="contact-band-heading">{{ col.heading }}</h3>
           <p class="contact-band-text">{{ col.text }}</p>
-          <a class="contact-band-link" href="{{ col.url }}">
+          <a class="contact-band-link" href="{% if col.url contains 'http' %}{{ col.url }}{% else %}{{ col.url | relative_url }}{% endif %}">
             <svg class="contact-band-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>

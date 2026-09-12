@@ -8,7 +8,7 @@ Tiles below each column: _data/tools-home-tiles.yml, keyed by the header's `key`
   <div class="th-intents-grid">
     {% for item in site.data['tools-home-intents'] %}
       <div class="th-column" data-key="{{ item.key }}">
-        <a class="th-header-card" href="{{ item.url }}">
+        <a class="th-header-card" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">
           <span class="th-header-title">{{ item.title }}</span>
           <span class="th-header-description">{{ item.description }}</span>
           <span class="th-header-jump">&rarr; Jump straight to page</span>
@@ -17,7 +17,7 @@ Tiles below each column: _data/tools-home-tiles.yml, keyed by the header's `key`
         <div class="th-tile-list">
           {% assign tiles = site.data['tools-home-tiles'][item.key] %}
           {% for tile in tiles %}
-            <a class="th-tile" href="{{ tile.url }}">
+            <a class="th-tile" href="{% if tile.url contains 'http' %}{{ tile.url }}{% else %}{{ tile.url | relative_url }}{% endif %}">
               <span class="th-tile-icon">
                 {% if tile.icon == 'map' %}
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 4v14M15 6v14"/></svg>

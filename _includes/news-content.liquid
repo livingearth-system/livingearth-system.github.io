@@ -55,7 +55,7 @@
         </p>
         <div class="user-profile">
           <div class="user-profile-img">
-            <img src="{{include.avatar}}" alt="user">
+            <img src="{% if include.avatar contains 'http' %}{{ include.avatar }}{% else %}{{ include.avatar | relative_url }}{% endif %}" alt="user">
           </div>
           <div>
             <h2 class="user-name">{{ include.username }}</h2>
@@ -77,7 +77,7 @@
         <div class="col-xl-4 col-md-6 blog_item">
           <div class="item mt-60" data-category="{{ infor['category'] }}">
             <div class="stay-up-card">
-              <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
+              <a href="{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}"><img src="{% if infor.oldman-img contains 'http' %}{{ infor.oldman-img }}{% else %}{{ infor.oldman-img | relative_url }}{% endif %}" alt=""></a>
               <div>
                 {% for button in infor.button %}
                   <button class="{{ button.class }}" data-category="{{ infor['category'] }}">
@@ -86,7 +86,7 @@
                 {% endfor %}
               </div>
               <p class="title-img">
-                <a href="{{ infor.href }}">{{ infor.title }}</a>
+                <a href="{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}">{{ infor.title }}</a>
               </p>
               <span class="body-img">{{ infor.subtitle }}</span>
               <div class="line-card"></div>

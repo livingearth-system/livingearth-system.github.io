@@ -11,7 +11,7 @@
     {% for item in site.data.getting-started.infor.items %}
     <div class="getting-started-middle">
       <div class="getting-started-icon">
-        <img src="{{ item.icon }}">
+        <img src="{% if item.icon contains 'http' %}{{ item.icon }}{% else %}{{ item.icon | relative_url }}{% endif %}">
       </div>
       <div class="getting-started-content">
         <p>{{ item.text }}</p>
@@ -20,7 +20,7 @@
     {% endfor %}
     <div class="getting-started-link">
       <div>
-        <a href="{{ site.data.getting-started.infor.link.href }}">{{ site.data.getting-started.infor.link.text }}</a>
+        <a href="{% if site.data.getting-started.infor.link.href contains 'http' %}{{ site.data.getting-started.infor.link.href }}{% else %}{{ site.data.getting-started.infor.link.href | relative_url }}{% endif %}">{{ site.data.getting-started.infor.link.text }}</a>
         <img src="{{ '/assets/icon/arrowright.svg' | relative_url }}">
       </div>
       <p>{{ site.data.getting-started.infor.link.tooltip }}</p>
@@ -32,7 +32,7 @@
   {% for item in site.data.getting-started.index %}
     <div class="getting-started-learning-items">
       <div class="img">
-        <img src="{{ item.link }}">
+        <img src="{% if item.link contains 'http' %}{{ item.link }}{% else %}{{ item.link | relative_url }}{% endif %}">
       </div>
       <p>{{ item.title }}</p>
     </div>

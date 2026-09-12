@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6 aboutus-right-img">
-            {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.heading | escape }}">{%- endif -%}
+            {%- if include.image -%}<img src="{% if include.image contains 'http' %}{{ include.image }}{% else %}{{ include.image | relative_url }}{% endif %}" alt="{{ include.heading | escape }}">{%- endif -%}
         </div>
     </div>
 </section>

@@ -10,7 +10,7 @@
           <h3>{{ include.heading }}</h3>
         {% endif %}
         {%- if include.all -%}
-          <a href="{{ include.url }}">
+          <a href="{% if include.url contains 'http' %}{{ include.url }}{% else %}{{ include.url | relative_url }}{% endif %}">
             {{ include.all }}
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
               <g id="ArrowRight">
@@ -26,14 +26,14 @@
         <div class="col-xl-4 col-lg-6">
           <div class="item">
             <div class="stay-up-card">
-              <a href="{{ infor.href }}"><img src="{{ infor.oldman-img }}" alt=""></a>
+              <a href="{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}"><img src="{% if infor.oldman-img contains 'http' %}{{ infor.oldman-img }}{% else %}{{ infor.oldman-img | relative_url }}{% endif %}" alt=""></a>
               <div>
                 {% for button in infor.button %}
                   <button class="{{ button.class }}">{{ button.name }}</button>
                 {% endfor %}
               </div>
               <p class="title-img">
-                <a href="{{ infor.href }}">{{ infor.title }}</a>
+                <a href="{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}">{{ infor.title }}</a>
               </p>
               <span class="body-img">{{ infor.subtitle }}</span>
               <div class="line-card"></div>

@@ -11,7 +11,7 @@
     <div class="d-flex themes_wrapper">
         {% for box in site.data.themes.index %}
         <div class="theme_wrapper">
-            <a href="#"><img src="{{ box.image }}" alt=""></a>
+            <a href="#"><img src="{% if box.image contains 'http' %}{{ box.image }}{% else %}{{ box.image | relative_url }}{% endif %}" alt=""></a>
             <div class="themes_title_wrapper">
                 <p class="themes_title">
                     {{ box.title }}

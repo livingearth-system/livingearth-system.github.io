@@ -40,7 +40,7 @@ newtab, url2_newtab, hide_countries, sub_items per stage).
   <div class="pipeline-item-grid">
     {% for item in stage.sub_items %}
     {% if item.url and item.url != "#" %}
-    <a class="pipeline-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+    <a class="pipeline-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
     {% else %}
     <div class="pipeline-item pipeline-item-static">
     {% endif %}
@@ -57,24 +57,24 @@ newtab, url2_newtab, hide_countries, sub_items per stage).
   {% endif %}
 
   {% if stage.url %}
-  <a class="pipeline-panel-link" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.label }} &rarr;</a>
+  <a class="pipeline-panel-link" href="{% if stage.url contains 'http' %}{{ stage.url }}{% else %}{{ stage.url | relative_url }}{% endif %}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.label }} &rarr;</a>
   {% endif %}
   {% if stage.url2 %}
-  <a class="pipeline-panel-link" href="{{ stage.url2 }}" {% if stage.url2_newtab %}target="_blank" rel="noopener"{% endif %}>{{ stage.url2_label | default: "Explore" }} &rarr;</a>
+  <a class="pipeline-panel-link" href="{% if stage.url2 contains 'http' %}{{ stage.url2 }}{% else %}{{ stage.url2 | relative_url }}{% endif %}" {% if stage.url2_newtab %}target="_blank" rel="noopener"{% endif %}>{{ stage.url2_label | default: "Explore" }} &rarr;</a>
   {% endif %}
 
   {% unless stage.hide_countries %}
   <div class="pipeline-panel-countries">
     <span class="pipeline-panel-countries-label">See country specifics:</span>
 {% if stage.url or stage.url2 %}
-<a class="pipeline-panel-country pipeline-panel-country-global" href="{{ stage.url | default: stage.url2 }}">
+<a class="pipeline-panel-country pipeline-panel-country-global" href="{% if stage.url | default: stage.url2 contains 'http' %}{{ stage.url | default: stage.url2 }}{% else %}{{ stage.url | default: stage.url2 | relative_url }}{% endif %}">
   <img src="{{ '/assets/img/countries/global.png' | relative_url }}" alt="Global" class="pipeline-panel-country-img">
   <span class="pipeline-panel-country-label">Global</span>
 </a>
 {% endif %}
     {% for country in site.data.countries %}
     {% unless country.title == "Global" %}
-    <a class="pipeline-panel-country" href="{{ country.url }}">
+    <a class="pipeline-panel-country" href="{% if country.url contains 'http' %}{{ country.url }}{% else %}{{ country.url | relative_url }}{% endif %}">
       <img src="{{ country.image | relative_url }}" alt="{{ country.title }}" class="pipeline-panel-country-img">
       <span class="pipeline-panel-country-label">{{ country.title }}</span>
     </a>

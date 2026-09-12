@@ -13,7 +13,7 @@ Each item needs: title, image, description, url. Optional: newtab.
 {% endfor %}
 <div class="fd-intents-grid simple-card-grid">
   {% for item in data %}
-    <a class="fd-intent-card" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+    <a class="fd-intent-card" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
       {% if item.image %}
         <span class="fd-intent-icon simple-card-icon"><img src="{{ item.image | relative_url }}" alt=""></span>
       {% endif %}

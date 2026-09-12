@@ -1,15 +1,15 @@
 <!-- CONTINENTS -->
 <section class="mt-100 mb-100">
     <div class="col-12">
-        {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.more -%}<a href="{{ include.more }}">View all</a>{% endif %}</h2>{% endif %}
+        {%- if include.heading -%}<h2 class="common-title">{{ include.heading }}{%- if include.more -%}<a href="{% if include.more contains 'http' %}{{ include.more }}{% else %}{{ include.more | relative_url }}{% endif %}">View all</a>{% endif %}</h2>{% endif %}
         {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
     </div>
     <div class="row continent-data-section">
         {% for box in site.data[include.data] %}
             {% if box.id != include.exclude %}
                 <section class="col-6 col-md-4 col-lg-3">
-                    <a href="{{ box.url }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
-                    <h3><a href="{{ box.url }}">{{ box.title }}</a></h3>
+                    <a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}"><img src="{% if box.image contains 'http' %}{{ box.image }}{% else %}{{ box.image | relative_url }}{% endif %}" alt="{{ box.title }}"></a>
+                    <h3><a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}">{{ box.title }}</a></h3>
                 </section>
             {% endif %}
         {% endfor %}
