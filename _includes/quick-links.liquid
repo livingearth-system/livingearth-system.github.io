@@ -23,7 +23,7 @@ no image files needed, styled via currentColor.
   <div class="container">
     <div class="quick-links-row">
       {% for link in qlinks %}
-        <a class="quick-links-item" href="{{ link.url }}">
+        <a class="quick-links-item" href="{{ link.url | relative_url }}">
           <svg class="quick-links-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ql-{{ link.icon }}"/></svg>
           <span class="quick-links-label">{{ link.title }}</span>
         </a>
