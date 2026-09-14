@@ -10,6 +10,10 @@ to the page's own title):
   image:      path to a full-width photo. If set, this becomes the hero's
               full-bleed background (with a dark overlay behind the text)
               instead of the default illustrated sky/hills panel.
+  no_hero_art: true — when no image is set, suppresses the default
+              illustrated sky/hills panel instead of showing it, leaving
+              just the title/eyebrow/subtitle/CTA content. Has no effect
+              if `image` is set (the photo hero has no art panel anyway).
 To hide this section entirely on a specific page, set `nohero: true`.
 {%- endcomment -%}
 {%- unless page.nohero -%}
@@ -44,7 +48,7 @@ To hide this section entirely on a specific page, set `nohero: true`.
 </section>
 {%- else -%}
 <section class="page-hero">
-  <div class="container page-hero-inner">
+  <div class="container page-hero-inner{% if page.no_hero_art %} page-hero-inner-full{% endif %}">
     <div class="page-hero-content">
       {%- if page.eyebrow -%}<p class="page-hero-eyebrow">{{ page.eyebrow }}</p>{%- endif -%}
       <h1 class="page-hero-title">{{ page.title }}</h1>
@@ -53,6 +57,7 @@ To hide this section entirely on a specific page, set `nohero: true`.
         <a class="page-hero-cta" href="{% if page.cta_url contains 'http' %}{{ page.cta_url }}{% else %}{{ page.cta_url | relative_url }}{% endif %}">{{ page.cta_text }}</a>
       {%- endif -%}
     </div>
+    {%- unless page.no_hero_art -%}
     <div class="page-hero-art" aria-hidden="true">
       <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -77,6 +82,7 @@ To hide this section entirely on a specific page, set `nohero: true`.
         <path d="M0,480 C180,430 320,510 500,460 C650,420 720,470 800,450 L800,600 L0,600 Z" fill="#1A8155"/>
       </svg>
     </div>
+    {%- endunless -%}
   </div>
 </section>
 {%- endif -%}

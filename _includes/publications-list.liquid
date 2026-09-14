@@ -2,8 +2,10 @@
 PUBLICATIONS LIST — filterable by country, displayed as a card grid.
 Data lives in _data/publications.yml (title, authors, date [year string],
 link, newtab, country). Country filter pills are generated from whatever
-values appear in the data. Entries with no link (link: "") render as
-plain text rather than a dead link.
+values appear in the data, and matched against _data/countries.yml for
+the silhouette icon (same assets as the home page countries strip).
+Countries with no matching entry (e.g. "Global") fall back to a letter
+badge, same pattern as countries-strip.liquid.
 
 Usage: {% include publications-list.liquid %}
 {%- endcomment -%}
@@ -17,7 +19,17 @@ Usage: {% include publications-list.liquid %}
     <div class="pub-filter-row" data-filter-type="country">
       <button class="pub-filter-pill is-active" type="button" data-filter-value="all">All</button>
       {% for c in countries %}
-      <button class="pub-filter-pill" type="button" data-filter-value="{{ c }}">{{ c }}</button>
+        {% assign country_data = site.data.countries | where: "title", c | first %}
+        <button class="pub-filter-pill" type="button" data-filter-value="{{ c }}">
+          <span class="pub-filter-pill-icon-wrap">
+            {% if country_data.image %}
+              <img src="{{ country_data.image | relative_url }}" alt="" class="pub-filter-pill-icon">
+            {% else %}
+              <span class="pub-filter-pill-placeholder">{{ c | slice: 0, 1 }}</span>
+            {% endif %}
+          </span>
+          {{ c }}
+        </button>
       {% endfor %}
     </div>
   </div>
