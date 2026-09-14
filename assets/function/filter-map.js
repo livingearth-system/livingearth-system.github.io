@@ -24,30 +24,30 @@ const earthtrack = {
     "W": "#4d9fdd"
 }
 
-const earthtrackInverted = {
-    "#D4E157": "Cultivated and managed terrestrial areas",
-    "#347820": "Natural and semi natural terrestrial vegetation",
-    "#76C76C": "Natural and semi natural aquatic vegetation",
-    "#00BFFF": "Cultivated aquatic areas",
-    "#FF6347": "Artificial surfaces and associated areas",
-    "#A52A2A": "Natural bare areas",
-    "#4682B4": "Natural or artificial water",
-    "#FFFFFF": "Natural or semi-natural vegetation",
-    "#FFFFF0": "Cultivated natural areas",   
-    "#808080": "Not clasifed",
-};
+// const earthtrackInverted = {
+//     "#D4E157": "Cultivated and managed terrestrial areas",
+//     "#347820": "Natural and semi natural terrestrial vegetation",
+//     "#76C76C": "Natural and semi natural aquatic vegetation",
+//     "#00BFFF": "Cultivated aquatic areas",
+//     "#FF6347": "Artificial surfaces and associated areas",
+//     "#A52A2A": "Natural bare areas",
+//     "#4682B4": "Natural or artificial water",
+//     "#FFFFFF": "Natural or semi-natural vegetation",
+//     "#FFFFF0": "Cultivated natural areas",   
+//     "#808080": "Not clasifed",
+// };
 const earthtrackInverted = {
     "#57bd7d":"NAV",
     "#FFFFFF":"NAV | NTV",
-    "CAV | CTV": "#FFFFcc",
-    "NTV": "#347820",
-    "AS": "#cb646b",
-    "CTV": "#d4e157",
-    "CAV": "7febe7",
-    "Other": "#808080",
-    "BS": "#e8ae74",
+    "#FFFFcc":"CAV | CTV",
+    "#347820":"NTV",
+    "#cb646b":"AS",
+    "#d4e157":"CTV",
+    "7febe7":"CAV",
+    "#808080":"Other",
+    "#e8ae74":"BS",
     //"Artificial waterbodies": "#4682B4",
-    "W": "#4d9fdd"
+    "#4d9fdd":"W"
 }
 //Define colors habitat
 const habitatColors = {
@@ -76,6 +76,7 @@ const habitatInverted = {
     "#07688f": "Swamp",
     "#228B22": "Woodl and Scrub",   
 };
+
 
 // Define type change
 const changeColor = {
@@ -288,7 +289,7 @@ class LeafletMap {
         features.forEach(feature => {
             const { geometry, properties } = feature;
             const { coordinates } = geometry;
-            const { legend, l3classif } = properties;
+            const { legend, l3classifcode } = properties;
 
             // Assuming legendColor maps directly from the 'legend' property
             const getHandle = jsonFileName !== 'earthtrack' ? legend : l3classif
