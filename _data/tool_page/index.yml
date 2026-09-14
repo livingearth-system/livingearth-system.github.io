@@ -11,7 +11,7 @@
   value: "understorey"
 
 - icon: "/assets/img/biodiversity.svg"
-  title: "land cover change"
+  title: "change"
   value: "change_pts"
 
 - icon: "/assets/icon/account.svg"
