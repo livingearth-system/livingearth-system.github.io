@@ -17,3 +17,7 @@
 - icon: "/assets/icon/account.svg"
   title: "fire"
   value: "fire_pts"
+
+  - icon: "/assets/icon/account.svg"
+  title: "futures"
+  value: "future_pts"
