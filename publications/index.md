@@ -1,6 +1,7 @@
 ---
 no_hero_art: true
 layout: directory
+# Richard to commit
 permalink: /publications/
 
 title: "Publications"
