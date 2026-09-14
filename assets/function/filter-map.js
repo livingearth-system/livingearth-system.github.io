@@ -1,14 +1,27 @@
 // Define type earthtrack
+// const earthtrack = {
+//     "Natural and semi natural aquatic vegetation": "#76C76C",
+//     "Inland waterbodies snow and ice": "#FFFFFF",
+//     "Natural and semi natural terrestrial vegetation": "#347820",
+//     "Artificial surfaces and ass. areas": "#FF6347",
+//     "Cultivated and managed land": "#D4E157",
+//     "Other": "#808080",
+//     "Bare areas": "#A52A2A",
+//     "Artificial waterbodies": "#4682B4",
+//     "Cultivated aquatic areas": "#00BFFF"
+// }
 const earthtrack = {
-    "Natural and semi natural aquatic vegetation": "#76C76C",
-    "Inland waterbodies snow and ice": "#FFFFFF",
-    "Natural and semi natural terrestrial vegetation": "#347820",
-    "Artificial surfaces and ass. areas": "#FF6347",
-    "Cultivated and managed land": "#D4E157",
+    "NAV": "#57bd7d",
+    "NAV | NTV": "#FFFFFF",
+    "CAV | CTV": "#FFFFcc",
+    "NTV": "#347820",
+    "AS": "#cb646b",
+    "CTV": "#d4e157",
+    "CAV": "7febe7",
     "Other": "#808080",
-    "Bare areas": "#A52A2A",
-    "Artificial waterbodies": "#4682B4",
-    "Cultivated aquatic areas": "#00BFFF"
+    "BS": "#e8ae74",
+    //"Artificial waterbodies": "#4682B4",
+    "W": "#4d9fdd"
 }
 
 const earthtrackInverted = {
@@ -23,7 +36,19 @@ const earthtrackInverted = {
     "#FFFFF0": "Cultivated natural areas",   
     "#808080": "Not clasifed",
 };
-
+const earthtrackInverted = {
+    "#57bd7d":"NAV",
+    "#FFFFFF":"NAV | NTV",
+    "CAV | CTV": "#FFFFcc",
+    "NTV": "#347820",
+    "AS": "#cb646b",
+    "CTV": "#d4e157",
+    "CAV": "7febe7",
+    "Other": "#808080",
+    "BS": "#e8ae74",
+    //"Artificial waterbodies": "#4682B4",
+    "W": "#4d9fdd"
+}
 //Define colors habitat
 const habitatColors = {
     "heathland": "#c90cad",
