@@ -1,28 +1,54 @@
 // Define type earthtrack
+// const earthtrack = {
+//     "Natural and semi natural aquatic vegetation": "#76C76C",
+//     "Inland waterbodies snow and ice": "#FFFFFF",
+//     "Natural and semi natural terrestrial vegetation": "#347820",
+//     "Artificial surfaces and ass. areas": "#FF6347",
+//     "Cultivated and managed land": "#D4E157",
+//     "Other": "#808080",
+//     "Bare areas": "#A52A2A",
+//     "Artificial waterbodies": "#4682B4",
+//     "Cultivated aquatic areas": "#00BFFF"
+// }
 const earthtrack = {
-    "Natural and semi natural aquatic vegetation": "#76C76C",
-    "Inland waterbodies snow and ice": "#FFFFFF",
-    "Natural and semi natural terrestrial vegetation": "#347820",
-    "Artificial surfaces and ass. areas": "#FF6347",
-    "Cultivated and managed land": "#D4E157",
+    "NAV": "#57bd7d",
+    "NAV | NTV": "#FFFFFF",
+    "CAV | CTV": "#FFFFcc",
+    "NTV": "#347820",
+    "AS": "#cb646b",
+    "CTV": "#d4e157",
+    "CAV": "7febe7",
     "Other": "#808080",
-    "Bare areas": "#A52A2A",
-    "Artificial waterbodies": "#4682B4",
-    "Cultivated aquatic areas": "#00BFFF"
+    "BS": "#e8ae74",
+    //"Artificial waterbodies": "#4682B4",
+    "W": "#4d9fdd"
 }
 
+// const earthtrackInverted = {
+//     "#D4E157": "Cultivated and managed terrestrial areas",
+//     "#347820": "Natural and semi natural terrestrial vegetation",
+//     "#76C76C": "Natural and semi natural aquatic vegetation",
+//     "#00BFFF": "Cultivated aquatic areas",
+//     "#FF6347": "Artificial surfaces and associated areas",
+//     "#A52A2A": "Natural bare areas",
+//     "#4682B4": "Natural or artificial water",
+//     "#FFFFFF": "Natural or semi-natural vegetation",
+//     "#FFFFF0": "Cultivated natural areas",   
+//     "#808080": "Not clasifed",
+// };
 const earthtrackInverted = {
-    "#D4E157": "Cultivated and managed terrestrial areas",
-    "#347820": "Natural and semi natural terrestrial vegetation",
-    "#76C76C": "Natural and semi natural aquatic vegetation",
-    "#00BFFF": "Cultivated aquatic areas",
-    "#FF6347": "Artificial surfaces and associated areas",
-    "#A52A2A": "Natural bare areas",
-    "#4682B4": "Natural or artificial water",
-    "#FFFFFF": "Natural or semi-natural vegetation",
-    "#FFFFF0": "Cultivated natural areas",   
-    "#808080": "Not clasifed",
-};
+    "#57bd7d":"NAV",
+    "#FFFFFF":"NAV | NTV",
+    "#FFFFcc":"CAV | CTV",
+    "#347820":"NTV",
+    "#cb646b":"AS",
+    "#d4e157":"CTV",
+    "7febe7":"CAV",
+    "#808080":"Other",
+    "#e8ae74":"BS",
+    //"Artificial waterbodies": "#4682B4",
+    "#4d9fdd":"W"
+}
 
 //Define colors habitat
 const habitatColors = {
@@ -263,10 +289,10 @@ class LeafletMap {
         features.forEach(feature => {
             const { geometry, properties } = feature;
             const { coordinates } = geometry;
-            const { legend, l3classif } = properties;
+            const { legend, l3classifcode } = properties;
 
             // Assuming legendColor maps directly from the 'legend' property
-            const getHandle = jsonFileName !== 'earthtrack' ? legend : l3classif
+            const getHandle = jsonFileName !== 'earthtrack' ? legend : l3classifcode
             const legendColor = this.getLegendColor(getHandle, jsonFileName);
 
             const marker = L.circleMarker([coordinates[1], coordinates[0]], {
