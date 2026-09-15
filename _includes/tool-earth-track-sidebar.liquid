@@ -21,10 +21,7 @@
           {% endfor %}
         </select>
 
-        <div class="living-earth">
-          <div class="left-content">
-            <img src="{% if site.data.tool-earth-track-sidebar.index.content.left-content.src contains 'http' %}{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}{% else %}{{ site.data.tool-earth-track-sidebar.index.content.left-content.src | relative_url }}{% endif %}">
-          </div>
+             <div class="living-earth">
           <div class="right-content">
             <img src="{% if site.data.tool-earth-track-sidebar.index.content.right-content.src contains 'http' %}{{ site.data.tool-earth-track-sidebar.index.content.right-content.src }}{% else %}{{ site.data.tool-earth-track-sidebar.index.content.right-content.src | relative_url }}{% endif %}">
             <p>{{ site.data.tool-earth-track-sidebar.index.content.right-content.title }}</p>
