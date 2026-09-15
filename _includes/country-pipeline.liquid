@@ -78,7 +78,6 @@ scrolls to it on load.
   <div class="env-desc-row">
     {% for cat in stage.categories %}
     <button class="env-desc-cat" type="button" data-envcat="{{ forloop.index0 }}" aria-expanded="false">
-      <img src="{{ cat.image | relative_url }}" alt="" class="env-desc-cat-img">
       <span class="env-desc-cat-title">{{ cat.title }}</span>
     </button>
     {% endfor %}
@@ -90,7 +89,6 @@ scrolls to it on load.
     <div class="env-desc-subrow">
       {% for sub in cat.subcategories %}
       <button class="env-desc-sub" type="button" data-envsub="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" aria-expanded="false">
-        <img src="{{ sub.image | relative_url }}" alt="" class="env-desc-sub-img">
         <span class="env-desc-sub-title">{{ sub.title }}</span>
       </button>
       {% endfor %}
@@ -101,7 +99,13 @@ scrolls to it on load.
       {% if item.links %}
       <div class="env-desc-item">
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
-        <span class="env-desc-item-title">{{ item.title }}</span>
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
         <div class="env-desc-item-links">
           {% for link in item.links %}
           <a class="env-desc-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
@@ -116,7 +120,13 @@ scrolls to it on load.
       {% else %}
       <div class="env-desc-item">
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
-        <span class="env-desc-item-title">{{ item.title }}</span>
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
       </div>
       {% endif %}
       {% endfor %}
@@ -128,7 +138,13 @@ scrolls to it on load.
       {% if item.links %}
       <div class="env-desc-item">
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
-        <span class="env-desc-item-title">{{ item.title }}</span>
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
         <div class="env-desc-item-links">
           {% for link in item.links %}
           <a class="env-desc-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
@@ -143,7 +159,13 @@ scrolls to it on load.
       {% else %}
       <div class="env-desc-item">
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
-        <span class="env-desc-item-title">{{ item.title }}</span>
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
       </div>
       {% endif %}
       {% endfor %}
@@ -254,6 +276,73 @@ scrolls to it on load.
       }
     });
   });
+
+  var infoButtons = document.querySelectorAll('.env-desc-item-info');
+
+  function closeTooltip(t) {
+    t.classList.remove('is-open');
+    if (t._homeParent) {
+      t._homeParent.insertBefore(t, t._homeNext);
+    }
+    t.style.position = '';
+    t.style.top = '';
+    t.style.left = '';
+    t.style.right = '';
+    t.style.width = '';
+    t.style.margin = '';
+  }
+
+  infoButtons.forEach(function (btn) {
+    var tooltip = btn.nextElementSibling;
+    tooltip._homeParent = tooltip.parentNode;
+    tooltip._homeNext = tooltip.nextSibling;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var wasOpen = tooltip.classList.contains('is-open');
+
+      document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+
+      if (!wasOpen) {
+        var btnRect = btn.getBoundingClientRect();
+
+        tooltip.classList.add('measuring');
+        var tooltipWidth = tooltip.offsetWidth;
+        var tooltipHeight = tooltip.offsetHeight;
+        tooltip.classList.remove('measuring');
+
+        document.body.appendChild(tooltip);
+
+        var top = btnRect.bottom + 6;
+        if (top + tooltipHeight > window.innerHeight - 8) {
+          top = btnRect.top - tooltipHeight - 6;
+        }
+        if (top < 8) { top = 8; }
+
+        var left = btnRect.left;
+        if (left + tooltipWidth > window.innerWidth - 8) {
+          left = window.innerWidth - tooltipWidth - 8;
+        }
+        if (left < 8) { left = 8; }
+
+        tooltip.style.position = 'fixed';
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+        tooltip.style.right = 'auto';
+        tooltip.style.width = tooltipWidth + 'px';
+        tooltip.style.margin = '0';
+        tooltip.classList.add('is-open');
+      }
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+  });
+  window.addEventListener('scroll', function () {
+    document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+  }, { passive: true });
 
   // Deep-link support: /europe/wales/#pipeline-environmental-descriptors
   // auto-opens the matching stage and scrolls to it.

@@ -145,3 +145,17 @@
   newtab: true
   country: "Switzerland"
 
+- title: "Hierarchical-modular framework for habitat mapping through systematic and informed integration of remote sensing data with contextual information"
+  authors: "Punalekar, S.M., Hurford, C., Lucas, R.M., Planque, C., Chognard, S."
+  date: "2024"
+  link: "https://doi.org/10.1016/j.ecoinf.2024.102714"
+  newtab: true
+  country: "Wales"
+
+- title: "National scale mapping of larch plantations for Wales using the Sentinel-2 data archive"
+  authors: "Punalekar, S.M., Planque, C., Lucas, R.M., Evans, D., Correia, V., Owers, C.J., Poslajko, P., Bunting, P., Chognard, S."
+  date: "2021"
+  link: "https://doi.org/10.1016/j.foreco.2021.119679"
+  newtab: true
+  country: "Wales"
+

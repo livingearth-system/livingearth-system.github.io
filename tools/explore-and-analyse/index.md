@@ -33,7 +33,7 @@ breadcrumb:
     </div>
     <div class="col-lg-5">
       <div class="tool-embed-frame">
-        <iframe src="/tools/interactive-map" title="Living Earth interactive map preview" loading="lazy"></iframe>
+        <iframe src="{{ '/tools/interactive-map' | relative_url }}" title="Living Earth interactive map preview" loading="lazy"></iframe>
       </div>
       <a class="tool-embed-expand" href="{{ '/tools/interactive-map' | relative_url }}">
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13 3h4v4M17 3l-6 6M7 17H3v-4M3 17l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -48,23 +48,19 @@ breadcrumb:
     <div class="col-lg-7 tool_content">
       <h2 class="title">Earthtrack App</h2>
       <p class="article_description">Earthtrack has been designed to be used by a wide range of users with varying levels of expertise and background knowledge — citizen scientists, park rangers or academic researchers. Data submitted can be used directly to validate maps of land cover, habitat and change generated primarily from Earth observation data, using the same taxonomies: the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS) and Living Earth's Global Change Taxonomy.</p>
-      <p class="article_description">Earthtrack can be downloaded from the <a href="https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en_GB" target="_blank" rel="noopener">Google Play Store</a> or the <a href="https://apps.apple.com/us/app/earthtrack/id1610357134" target="_blank" rel="noopener">Apple App Store</a>. To access data from Earthtrack or stream it to your GIS, see <a href="/tools/for-developers/#get-the-data">Get the Data</a>.</p>
+      <p class="article_description">Earthtrack can be downloaded from the <a href="https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en_GB" target="_blank" rel="noopener">Google Play Store</a> or the <a href="https://apps.apple.com/us/app/earthtrack/id1610357134" target="_blank" rel="noopener">Apple App Store</a>. To access data from Earthtrack or stream it to your GIS, see <a href="{{ '/tools/for-developers/#get-the-data' | relative_url }}">Get the Data</a>.</p>
 
       <div class="earthtrack-actions">
         {%- include app-store-badges.liquid apple_url="https://apps.apple.com/us/app/earthtrack/id1610357134" google_url="https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en_GB" -%}
-        <p class="article_description">Earthtrack can be downloaded from the <a href="https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en_GB" target="_blank" rel="noopener">Google Play Store</a> or the <a href="https://apps.apple.com/us/app/earthtrack/id1610357134" target="_blank" rel="noopener">Apple App Store</a>. To access data from Earthtrack or stream it to your GIS, see <a href="{{ '/tools/for-developers/#get-the-data' | relative_url }}">Get the Data</a>.</p>
-
-<div class="earthtrack-actions">
-  {%- include app-store-badges.liquid apple_url="https://apps.apple.com/us/app/earthtrack/id1610357134" google_url="https://play.google.com/store/apps/details?id=com.natural_apptitude.earthtrack&hl=en_GB" -%}
-  <a class="tracking-points-button" href="{{ '/tools/earthtrack-app' | relative_url }}">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
-    View Earthtrack Tracking Points
-  </a>
-</div>
+        <a class="tracking-points-button" href="{{ '/tools/earthtrack-app' | relative_url }}">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
+          View Earthtrack Tracking Points
+        </a>
+      </div>
     </div>
     <div class="col-lg-5">
       <div class="tool-embed-frame">
-        <iframe src="{{ '/tools/earthtrack-app' | relative_url }}" title="Earthtrack tracking points preview">
+        <iframe src="{{ '/tools/earthtrack-app' | relative_url }}" title="Earthtrack tracking points preview"></iframe>
       </div>
       <a class="tool-embed-expand" href="{{ '/tools/earthtrack-app' | relative_url }}">
         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13 3h4v4M17 3l-6 6M7 17H3v-4M3 17l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>

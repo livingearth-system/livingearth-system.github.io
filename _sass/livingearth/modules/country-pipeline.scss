@@ -311,21 +311,12 @@
   padding: 10px 16px;
   cursor: pointer;
   font-family: 'Inter', system-ui, sans-serif;
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease;
+  outline: none;
 }
 
 .env-desc-cat:hover {
   transform: translateY(-2px);
-}
-
-.env-desc-cat.is-active,
-.env-desc-cat[aria-expanded="true"] {
-  background: #4294c3;
-}
-
-.env-desc-cat.is-active .env-desc-cat-title,
-.env-desc-cat[aria-expanded="true"] .env-desc-cat-title {
-  color: #fbf8f5;
 }
 
 .env-desc-cat-img {
@@ -363,12 +354,7 @@
   padding: 8px 14px;
   cursor: pointer;
   font-family: 'Inter', system-ui, sans-serif;
-  transition: background 0.15s ease;
-}
-
-.env-desc-sub.is-active,
-.env-desc-sub[aria-expanded="true"] {
-  background: #c6e5f4;
+  outline: none;
 }
 
 .env-desc-sub-img {
@@ -397,7 +383,6 @@
   background: #fff;
   border: 1px solid #e3ecf1;
   border-radius: 12px;
-  overflow: hidden;
   text-decoration: none;
   color: inherit;
 }
@@ -408,6 +393,7 @@
   object-fit: cover;
   display: block;
   background: #c6e5f4;
+  border-radius: 12px 12px 0 0;
 }
 
 .env-desc-item-title {
@@ -416,6 +402,68 @@
   font-size: 13px;
   color: #23567b;
   padding: 12px 14px 8px;
+}
+
+.env-desc-item-title-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px 8px;
+}
+
+.env-desc-item-title-row .env-desc-item-title {
+  padding: 0;
+}
+
+.env-desc-item-info {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #4294c3;
+  background: #fff;
+  color: #4294c3;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.env-desc-item-info:hover {
+  background: #4294c3;
+  color: #fff;
+}
+
+.env-desc-item-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  left: 14px;
+  right: 14px;
+  margin-top: 6px;
+  background: #23567b;
+  color: #fbf8f5;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px -8px rgba(15, 35, 55, 0.5);
+}
+
+.env-desc-item-tooltip.measuring {
+  display: block;
+  visibility: hidden;
+}
+
+.env-desc-item-tooltip.is-open {
+  display: block;
 }
 
 .env-desc-item-links {
