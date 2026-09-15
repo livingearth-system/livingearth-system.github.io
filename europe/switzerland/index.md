@@ -141,6 +141,11 @@ pipeline:
               - title: "Snow Cover Fraction"
                 image: "/assets/img/wales/snow-cover-fraction.jpg"
                 description: "The fraction of land area covered by snow. Snow has a very high albedo, which cools the Earth's surface, so snow cover directly affects the Earth's energy balance."
+                links:
+                  - label: "Improved Landsat-based snow cover mapping (Poussin et al. 2023)"
+                    url: "https://doi.org/10.1016/j.srs.2023.100078"
+                    newtab: true
+                    type: publication
               - title: "Snow Water Equivalent"
                 image: "/assets/img/wales/snow-water-equivalent.jpg"
                 description: "The amount of water contained within the snowpack — the depth of water that would theoretically result from instantaneous snowpack melting. Correlates with snowpack depth and density."

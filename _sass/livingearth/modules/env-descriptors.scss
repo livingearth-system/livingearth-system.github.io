@@ -511,9 +511,12 @@
   text-decoration: none;
 }
 
-.env-des-descriptor-link:hover {
-  color: #4294c3;
-  text-decoration: underline;
+.env-des-descriptor-link-pub {
+  color: #3d7f58;
+}
+
+.env-des-descriptor-link-pub:hover {
+  color: #92c983;
 }
 
 @media (max-width: 991px) {

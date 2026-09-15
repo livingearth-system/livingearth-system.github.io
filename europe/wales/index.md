@@ -94,6 +94,11 @@ pipeline:
               - title: "Crop Type"
                 image: "/assets/img/wales/crop-type.jpg"
                 description: "The type of plants cultivated in the fields during the main growing season, for example maize, potatoes, wheat or strawberries."
+                links:
+                  - label: "National crop mapping using Sentinel-1 (Planque et al. 2021)"
+                    url: "https://doi.org/10.3390/rs13050846"
+                    newtab: true
+                    type: publication
               - title: "Plant Species"
                 image: "/assets/img/wales/plant-species.jpg"
                 description: "Categories of plants which show common attributes and are called by a common name. Important for maintaining genetic diversity and wildlife habitats, and often used as indicators of environmental change."

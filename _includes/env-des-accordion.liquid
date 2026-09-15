@@ -36,7 +36,7 @@ Vegetation and scrolls to it.
 {% if d.links %}
 <div class="env-des-descriptor-links">
 {% for link in d.links %}
-<a class="env-des-descriptor-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+<a class="env-des-descriptor-link{% if link.type == 'publication' %} env-des-descriptor-link-pub{% endif %}" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
 {% endfor %}
 </div>
 {% endif %}

@@ -35,6 +35,11 @@
       unit: "class"
       image: "/assets/img/wales/big/crop-type.jpg"
       description: "The type of plants cultivated in the fields during the main growing season, for example maize, potatoes, wheat or strawberries."
+      links:
+        - label: "National crop mapping using Sentinel-1 (Planque et al. 2021)"
+          url: "https://doi.org/10.3390/rs13050846"
+          newtab: true
+          type: publication
     - title: "Plant Species"
       unit: "Presence/Absence or Probability"
       image: "/assets/img/wales/big/plant-species.jpg"
@@ -88,6 +93,11 @@
       unit: "gC/m²/day"
       image: "/assets/img/wales/net-primary-production.jpg"
       description: "The net amount of carbon uptake of the ocean through photosynthesis by algae and phytoplankton. NPP measures the productivity of marine vegetation."
+      links:
+        - label: "SDG 15.3.1 and Water Use Efficiency/NPP monitoring (Markos, Sims & Giuliani 2022)"
+          url: "https://doi.org/10.1080/20964471.2022.2076375"
+          newtab: true
+          type: publication
     - title: "pH"
       unit: "range 0 to 14"
       image: "/assets/img/wales/ph.jpg"
@@ -117,6 +127,11 @@
       unit: "Fraction or percentage"
       image: "/assets/img/wales/big/snow-cover-fraction.jpg"
       description: "The fraction of land area covered by snow. Snow has a very high albedo, which cools the Earth's surface, so snow cover directly affects the Earth's energy balance."
+      links:
+        - label: "Improved Landsat-based snow cover mapping (Poussin et al. 2023)"
+          url: "https://doi.org/10.1016/j.srs.2023.100078"
+          newtab: true
+          type: publication
     - title: "Snow Water Equivalent"
       unit: "mm"
       image: "/assets/img/wales/big/snow-water-equivalent.jpg"

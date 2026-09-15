@@ -487,6 +487,14 @@
   text-decoration: underline;
 }
 
+.env-desc-item-link-pub {
+  color: #3d7f58;
+}
+
+.env-desc-item-link-pub:hover {
+  color: #92c983;
+}
+
 @media (max-width: 991px) {
   .env-desc-items-grid {
     grid-template-columns: repeat(2, 1fr);

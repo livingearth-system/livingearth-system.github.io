@@ -108,7 +108,7 @@ scrolls to it on load.
         </div>
         <div class="env-desc-item-links">
           {% for link in item.links %}
-          <a class="env-desc-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+          <a class="env-desc-item-link{% if link.type == 'publication' %} env-desc-item-link-pub{% endif %}" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
           {% endfor %}
         </div>
       </div>
@@ -147,7 +147,7 @@ scrolls to it on load.
         </div>
         <div class="env-desc-item-links">
           {% for link in item.links %}
-          <a class="env-desc-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
+          <a class="env-desc-item-link{% if link.type == 'publication' %} env-desc-item-link-pub{% endif %}" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
           {% endfor %}
         </div>
       </div>
