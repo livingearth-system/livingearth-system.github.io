@@ -49,14 +49,14 @@ pipeline:
                   - label: "DEA Mangrove Canopy Cover"
                     url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-mangrove-canopy-cover"
                     newtab: true
-                description: "Distinguishes broad-leaf (primarily flowering plants, including trees), needle-leaf (needle-shaped leaves) and aphyllous (thorns, scales, green stems, branches or twigs)."
+                description: "Distinguishes broad-leaf (primarily flowering plants, including trees), needle-leaf (needle-shaped leaves) and aphyllous (thorns, scales, greenstems, branches or twigs)."
               - title: "Phenology"
                 image: "/assets/img/australia/phenology.jpg"
                 links:
                   - label: "DEA Mangrove Canopy Cover"
                     url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-mangrove-canopy-cover"
                     newtab: true
-                description: "The study of the timing of vegetation life-cycle events, such as budburst, flowering, leaf colouring and leaf fall. Most plants are evergreen, deciduous, mixed deciduous/evergreen, or semi-evergreen/semi-deciduous, whichever is dominant."
+                description: "The study of the timing of vegetation life-cycle events,such as budburst, flowering, leaf colouring and leaf fall. Most plants are evergreen, deciduous, mixed deciduous/evergreen, or semi-evergreen/semi-deciduous, whichever is dominant."
               - title: "Canopy Cover"
                 image: "/assets/img/australia/canopy-cover.jpg"
                 description: "The percentage of the ground covered by a vertical projection of the outermost perimeter of the natural spread of plant foliage. Strongly influences water, energy and matter fluxes of land surfaces, particularly hydrological processes."
@@ -121,9 +121,6 @@ pipeline:
               - title: "Water Extent"
                 image: "/assets/img/australia/water-extent.jpg"
                 description: "The location of the boundary between a water body and the adjoining land surface, or a surface covered by water. Note that water can exist as snow or ice."
-             # - title: "Water Depth"
-             #   image: "/assets/img/australia/water-depth.jpg"
-             description: "The location of the boundary between a water body and the adjoining land surface, or a surface covered by water. Note that water can exist as snow or ice."
               - title: "Water Turbidity"
                 image: "/assets/img/australia/water-turbidity.jpg"
                 description: "The measure of water transparency, used to assess water quality. Drinking water should have a turbidity of less than 4 NTU (WHO). Also affects photosynthetic activity and oxygen concentration in water ecosystems."
@@ -142,13 +139,13 @@ pipeline:
                     newtab: true
               - title: "Cyanobacteria"
                 image: "/assets/img/australia/cyanobacteria.jpg"
-                description: "Free-living photosynthetic bacteria, more commonly known as blue-green algae. Single-celled and photosynthetic, living freely in the water column or as mats attached to sediment, rocks and plants — an important component of freshwater ecosystems."
+                description: "Free-living photosynthetic bacteria, more commonly knownas blue-green algae. Single-celled and photosynthetic, living freely in the water column or as mats attached to sediment, rocks and plants — an important component of freshwater ecosystems."
               - title: "Algae Biomass"
                 image: "/assets/img/australia/algae-biomass.jpg"
                 description: "Chlorophyll a is ubiquitous in phytoplankton and higher plants and a proxy for phytoplankton biomass. Cyanobacteria are also considered phytoplankton as they contain chlorophyll a, but they are not algae."
               - title: "Macroalgae"
                 image: "/assets/img/australia/macroalgae.jpg"
-                description: "Large, multicellular marine algae (seaweed). See the Big Seaweed Search project for citizen-science recording: bigseaweedsearch.org/explore"
+                description: "Large, multicellular marine algae (seaweed). See the BigSeaweed Search project for citizen-science recording: bigseaweedsearch.org/explore"
           - title: "Soil"
             image: "/assets/img/australia/soil.jpg"
             descriptors:
@@ -166,7 +163,7 @@ pipeline:
             descriptors:
               - title: "Albedo"
                 image: "/assets/img/australia/albedo.jpg"
-                description: "The ratio of total upwelling to total downwelling solar radiation at the surface, representing the energy balance at the soil-vegetation-atmosphere interface. Ranges from 0 to 1 — a surface with an albedo of 1 (e.g. snow) reflects back all downwelling radiation."
+                description: "The ratio of total upwelling to total downwelling solar radiation at the surface, representing the energy balance at the soil-vegetation-atmosphere interface. Ranges from 0 to 1 — a surface with an albedo of 1 (e.g. snow) reflectsback all downwelling radiation."
               - title: "Land Surface Temperature"
                 image: "/assets/img/australia/land-surface-temperature.jpg"
                 description: "The radiative skin temperature of the land — a mixture of vegetation and soil temperatures. Plays an important role in the physics of land surfaces, impacting energy and water exchange with the atmosphere."
@@ -175,7 +172,7 @@ pipeline:
             descriptors:
               - title: "DEM"
                 image: "/assets/img/australia/dem.jpg"
-                description: "Digital Terrain Models (DTMs) represent the elevation of bare terrain, whilst Digital Surface Models (DSMs) represent the upper height of all objects on the land surface."
+                description: "Digital Terrain Models (DTMs) represent the elevation ofbare terrain, whilst Digital Surface Models (DSMs) represent the upper height of all objects on the land surface."
               - title: "Slope"
                 image: "/assets/img/australia/slope.jpg"
                 description: "The steepness or degree of inclination of the terrain relative to the plane surface. Influences wind speed and direction, and hydrological flows."
@@ -217,7 +214,7 @@ pipeline:
         descriptors:
           - title: "Air Pollutants"
             image: "/assets/img/australia/air-pollutants.jpg"
-            description: "Air pollutants include gases such as nitrous oxide, ammonia, sulfur dioxide and particulate matter. Their concentrations inform about air quality, which influences plant and animal health."
+            description: "Air pollutants include gases such as nitrous oxide, ammonia,sulfur dioxide and particulate matter. Their concentrations inform about air quality, which influences plant and animal health."
           - title: "Climate Variables"
             image: "/assets/img/australia/climate-variables.jpg"
             description: "Climate variables include solar radiation, rainfall, air temperature and humidity, pressure, and wind speed and direction. Long-term trends of these variables indicate past climatic conditions."
@@ -267,7 +264,7 @@ pipeline:
         url: "https://maps.dea.ga.gov.au/story/DEALandCover"
         newtab: true
       - label: "Earthtrack App"
-        url: "https://livingearthhub.org/tools/earthtrack-app?country=Australia"
+        url: "/tools/earthtrack-app?country=Australia"
         newtab: true
       - label: "Analyse the Data"
         url: "https://app.sandbox.dea.ga.gov.au/hub/login?next=%2Fhub%2F"
