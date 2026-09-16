@@ -119,7 +119,7 @@ pipeline:
                 image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
                 description: "Vegetation cover that does not take part in photosynthesis — dormant, senescent or dead vegetation, plus the woody parts of plants. Impacts carbon, water and nutrient fluxes, fire frequency, erosion and habitat quality."
               - title: "Leaf Area Index"
-                image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+                image: "/assets/img/wales/big/leaf-area-index.jpg"
                 description: "The total area of one-sided leaves per ground surface area. A fundamental property of the plant canopy, playing a key role in solar radiation absorption through photosynthesis and vegetation growth."
                 links:
                   - label: "Leaf Area Index (dataset 1)"
