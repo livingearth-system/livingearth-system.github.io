@@ -7,10 +7,8 @@
 - icon: ic-leaf
   label: "Environmental Descriptors"
   detail: "Derived indices and variables ready for classification."
-  url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products"
-  newtab: true
   url2: "/env-des/"
-  url2_label: "Browse Environmental Descriptors"
+  url2_label: "Define Environmental Descriptors"
 
 - icon: ic-map
   label: "Classification of Land Cover & Habitats"

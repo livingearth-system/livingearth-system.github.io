@@ -506,3 +506,97 @@
     grid-template-columns: 1fr;
   }
 }
+/* --- Environmental Descriptors: publication/data icon toggle -------------
+   Matches the env-desc-icon-btn / env-desc-panel-block markup rendered
+   by country-pipeline.liquid. Publications = green (matches
+   .env-desc-item-link-pub / .pipeline-footer-box); Data sources = navy
+   (matches the default .env-desc-item-link color). ------------------------ */
+
+.env-desc-item-icons {
+  display: flex;
+  gap: 6px;
+  padding: 0 14px 14px;
+  margin-top: -4px;
+}
+
+.env-desc-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #f0f4f6;
+  color: #9aa8b2;
+  transition: transform 0.15s ease;
+}
+
+.env-desc-icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.env-desc-icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.env-desc-icon-btn.is-empty {
+  cursor: default;
+}
+
+.env-desc-icon-btn.is-empty:hover {
+  transform: none;
+}
+
+.env-desc-icon-data:not(.is-empty) {
+  background: #dcefff;
+  color: #23567b;
+}
+
+.env-desc-icon-pub:not(.is-empty) {
+  background: #e3f0da;
+  color: #3d7f58;
+}
+
+.env-desc-panel-block {
+  margin: 0 14px 14px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.env-desc-panel-data {
+  background: #23567b;
+  color: #dcefff;
+}
+
+.env-desc-panel-pub {
+  background: #3d7f58;
+  color: #e3f0da;
+}
+
+.env-desc-panel-label {
+  font-weight: 700;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.env-desc-panel-link {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.env-desc-panel-link:hover {
+  text-decoration: underline;
+}

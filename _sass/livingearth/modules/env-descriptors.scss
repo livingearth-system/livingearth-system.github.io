@@ -562,3 +562,90 @@
   padding: 4px;
   display: block;
 }
+.env-des-descriptor-icons {
+  display: flex;
+  gap: 6px;
+  padding: 0 14px 14px;
+}
+
+.env-des-descriptor-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #f0f4f6;
+  color: #9aa8b2;
+  transition: transform 0.15s ease;
+}
+
+.env-des-descriptor-icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.env-des-descriptor-icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.env-des-descriptor-icon-btn.is-empty {
+  cursor: default;
+}
+
+.env-des-descriptor-icon-btn.is-empty:hover {
+  transform: none;
+}
+
+.env-des-descriptor-icon-data:not(.is-empty) {
+  background: #dcefff;
+  color: #23567b;
+}
+
+.env-des-descriptor-icon-pub:not(.is-empty) {
+  background: #e3f0da;
+  color: #3d7f58;
+}
+
+.env-des-descriptor-panel-block {
+  margin: 0 14px 14px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.env-des-descriptor-panel-data {
+  background: #23567b;
+  color: #dcefff;
+}
+
+.env-des-descriptor-panel-pub {
+  background: #3d7f58;
+  color: #e3f0da;
+}
+
+.env-des-descriptor-panel-label {
+  font-weight: 700;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.env-des-descriptor-panel-link {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.env-des-descriptor-panel-link:hover {
+  text-decoration: underline;
+}

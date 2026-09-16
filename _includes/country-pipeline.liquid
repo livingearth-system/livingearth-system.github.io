@@ -16,9 +16,10 @@ Each stage needs: title, subtitle, icon, and OPTIONALLY one of:
     { title, image, descriptors: [...] }).
     Each individual descriptor item takes: title, image,
     and OPTIONALLY url + newtab (single link, whole card is
-    the link) OR links (list of { label, url, newtab } for
-    multiple "View {label} →" buttons on the card) — otherwise
-    it's a plain informational card.
+    the link) OR links (list of { label, url, newtab, type } —
+    links with type: publication render under a "Publications"
+    icon/panel, everything else renders under a "Data sources"
+    icon/panel) — otherwise it's a plain informational card.
 
 page.pipeline_validation_url — link for the "Calibration and Validation" footer box.
 page.pipeline_outreach_url — link for the "Engagement and Outreach" footer box
@@ -97,6 +98,8 @@ scrolls to it on load.
     <div class="env-desc-items-grid" data-envsub-panel="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" hidden>
       {% for item in sub.descriptors %}
       {% if item.links %}
+      {% assign pubs = item.links | where: "type", "publication" %}
+      {% assign datas = item.links | where_exp: "l", "l.type != 'publication'" %}
       <div class="env-desc-item">
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
         <div class="env-desc-item-title-row">
@@ -106,11 +109,30 @@ scrolls to it on load.
           <span class="env-desc-item-tooltip">{{ item.description }}</span>
           {% endif %}
         </div>
-        <div class="env-desc-item-links">
-          {% for link in item.links %}
-          <a class="env-desc-item-link{% if link.type == 'publication' %} env-desc-item-link-pub{% endif %}" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; View {{ link.label }}</a>
+        <div class="env-desc-item-icons">
+          <button type="button" class="env-desc-icon-btn env-desc-icon-pub{% unless pubs.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Publications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>
+          </button>
+          <button type="button" class="env-desc-icon-btn env-desc-icon-data{% unless datas.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Data sources">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          </button>
+        </div>
+        {% if pubs.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-pub" hidden>
+          <div class="env-desc-panel-label">Publications</div>
+          {% for link in pubs %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
           {% endfor %}
         </div>
+        {% endif %}
+        {% if datas.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-data" hidden>
+          <div class="env-desc-panel-label">Data sources</div>
+          {% for link in datas %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
       {% elsif item.url and item.url != "#" %}
       <a class="env-desc-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
@@ -136,6 +158,8 @@ scrolls to it on load.
     <div class="env-desc-items-grid">
       {% for item in cat.descriptors %}
       {% if item.links %}
+      {% assign pubs = item.links | where: "type", "publication" %}
+      {% assign datas = item.links | where_exp: "l", "l.type != 'publication'" %}
       <div class="env-desc-item">
         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
         <div class="env-desc-item-title-row">
@@ -145,11 +169,30 @@ scrolls to it on load.
           <span class="env-desc-item-tooltip">{{ item.description }}</span>
           {% endif %}
         </div>
-        <div class="env-desc-item-links">
-          {% for link in item.links %}
-          <a class="env-desc-item-link{% if link.type == 'publication' %} env-desc-item-link-pub{% endif %}" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>View {{ link.label }} &rarr;</a>
+        <div class="env-desc-item-icons">
+          <button type="button" class="env-desc-icon-btn env-desc-icon-pub{% unless pubs.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Publications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>
+          </button>
+          <button type="button" class="env-desc-icon-btn env-desc-icon-data{% unless datas.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Data sources">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          </button>
+        </div>
+        {% if pubs.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-pub" hidden>
+          <div class="env-desc-panel-label">Publications</div>
+          {% for link in pubs %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
           {% endfor %}
         </div>
+        {% endif %}
+        {% if datas.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-data" hidden>
+          <div class="env-desc-panel-label">Data sources</div>
+          {% for link in datas %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
       {% elsif item.url and item.url != "#" %}
       <a class="env-desc-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
@@ -343,6 +386,27 @@ scrolls to it on load.
   window.addEventListener('scroll', function () {
     document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
   }, { passive: true });
+
+  // Publication / data icon toggle on descriptor cards.
+  // Clicking a non-empty icon opens its panel (Publications or Data
+  // sources) inline on that card; clicking the open one again, or the
+  // other icon, closes/switches it. Empty icons (is-empty) do nothing.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.env-desc-icon-btn');
+    if (!btn || btn.classList.contains('is-empty')) { return; }
+    var card = btn.closest('.env-desc-item');
+    if (!card) { return; }
+    var isPub = btn.classList.contains('env-desc-icon-pub');
+    var panel = card.querySelector(isPub ? '.env-desc-panel-pub' : '.env-desc-panel-data');
+    if (!panel) { return; }
+    var wasOpen = !panel.hidden;
+    card.querySelectorAll('.env-desc-panel-block').forEach(function (p) { p.hidden = true; });
+    card.querySelectorAll('.env-desc-icon-btn').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+    if (!wasOpen) {
+      panel.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
 
   // Deep-link support: /europe/wales/#pipeline-environmental-descriptors
   // auto-opens the matching stage and scrolls to it.
