@@ -73,14 +73,14 @@ pipeline:
                     url: "https://land.copernicus.eu/en/products/high-resolution-layer-forests-and-tree-cover?tab=dominant_leaf_type"
                     newtab: true
               - title: "Phenology"
-                image: "/assets/img/wales/phenology.jpg"
+                image: "/assets/img/switzerland/phenology.jpg"
                 description: "The study of the timing of vegetation life-cycle events, such as budburst, flowering, leaf colouring and leaf fall. Most plants are evergreen, deciduous, mixed deciduous/evergreen, or semi-evergreen/semi-deciduous, whichever is dominant."
                 links:
                   - label: "Mixture Proportion"
                     url: "https://www.lfi.ch/en/maps/mixture-proportion"
                     newtab: true
               - title: "Canopy Cover"
-                image: "/assets/img/wales/canopy-cover.jpg"
+                image: "/assets/img/switzerland/canopy-cover.jpg"
                 description: "The percentage of the ground covered by a vertical projection of the outermost perimeter of the natural spread of plant foliage. Strongly influences water, energy and matter fluxes of land surfaces, particularly hydrological processes."
                 links:
                   - label: "Tree Cover Density"
@@ -101,10 +101,10 @@ pipeline:
                     url: "https://www.envidat.ch/dataset/cropland-and-grassland-map-of-switzerland-based-on-sentinel-2-data"
                     newtab: true
               - title: "Plant Species"
-                image: "/assets/img/wales/plant-species.jpg"
+                image: "/assets/img/switzerland/plant-species.jpg"
                 description: "Categories of plants which show common attributes and are called by a common name. Important for maintaining genetic diversity and wildlife habitats, and often used as indicators of environmental change."
               - title: "Woody Biomass"
-                image: "/assets/img/wales/woody-biomass.jpg"
+                image: "/assets/img/switzerland/woody-biomass.jpg"
                 description: "The total mass of living plant material per woody area. Can consider both above- and below-ground components."
               - title: "Herbaceous Biomass"
                 image: "/assets/img/wales/herbaceous-biomass.jpg"
@@ -116,7 +116,7 @@ pipeline:
                 image: "/assets/img/wales/canopy-layers.jpg"
                 description: "Vegetated areas are composed of a top canopy layer, but also have a vertical structure with different understory layers/strata — tree, shrub, field and/or ground layers."
               - title: "Non Photosynthetic Vegetation"
-                image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+                image: "/assets/img/switzerland/non-photosynthetic-vegetation.jpg"
                 description: "Vegetation cover that does not take part in photosynthesis — dormant, senescent or dead vegetation, plus the woody parts of plants. Impacts carbon, water and nutrient fluxes, fire frequency, erosion and habitat quality."
               - title: "Leaf Area Index"
                 image: "/assets/img/wales/big/leaf-area-index.jpg"
@@ -139,7 +139,7 @@ pipeline:
                     url: "https://geonetwork.swissdatacube.org/geonetwork/srv/eng/catalog.search#/metadata/d98b8938-22fb-450e-ae1d-af078b6307c8"
                     newtab: true
               - title: "Snow Cover Fraction"
-                image: "/assets/img/wales/snow-cover-fraction.jpg"
+                image: "/assets/img/switzerland/snow-cover-fraction.jpg"
                 description: "The fraction of land area covered by snow. Snow has a very high albedo, which cools the Earth's surface, so snow cover directly affects the Earth's energy balance."
                 links:
                   - label: "Improved Landsat-based snow cover mapping (Poussin et al. 2023)"
@@ -156,10 +156,10 @@ pipeline:
             image: "/assets/img/switzerland/urban.jpg"
             descriptors:
               - title: "Artificial Materials"
-                image: "/assets/img/wales/artificial-materials.jpg"
+                image: "/assets/img/switzerland/artificial-materials.jpg"
                 description: "Urban areas are characterised by the substitution of natural covers with artificial, mostly impervious, covers. These affect the water cycle, carbon cycle, energy balance and biodiversity — for example, bitumen surfaces block water infiltration and groundwater recharge."
               - title: "Urban Vegetation"
-                image: "/assets/img/wales/urban-vegetation.jpg"
+                image: "/assets/img/switzerland/urban-vegetation.jpg"
                 description: "Vegetation in cities, classified separately from other vegetation as it is surrounded by impervious surfaces that impact water, energy and material fluxes. Provides ecosystem services such as pollutant and fine-particulate filtering."
           - title: "Water"
             image: "/assets/img/switzerland/water.jpg"
@@ -193,14 +193,14 @@ pipeline:
             image: "/assets/img/switzerland/soil.jpg"
             descriptors:
               - title: "Soil Moisture"
-                image: "/assets/img/wales/soil-moisture.jpg"
+                image: "/assets/img/switzerland/soil-moisture.jpg"
                 description: "The volume of water contained within soils. Soil moisture can influence levels of vegetation water stress and flood risk."
                 links:
                   - label: "Soil Moisture (Swiss Data Cube)"
                     url: "https://geonetwork.swissdatacube.org/geonetwork/srv/eng/catalog.search#/metadata/6040f1ec-e4b8-4080-811c-a1e4590540ee"
                     newtab: true
               - title: "Soil Acidity"
-                image: "/assets/img/wales/soil-acidity.jpg"
+                image: "/assets/img/switzerland/soil-acidity.jpg"
                 description: "Soil acidity is expressed using the pH scale. Values lower than 7 indicate acidic soils and values higher than 7 indicate alkaline soils. Influences species abundance, distribution and productivity."
               - title: "Soil Texture"
                 image: "/assets/img/wales/soil-texture.jpg"
@@ -209,7 +209,7 @@ pipeline:
             image: "/assets/img/switzerland/energy.jpg"
             descriptors:
               - title: "Albedo"
-                image: "/assets/img/wales/albedo.jpg"
+                image: "/assets/img/switzerland/albedo.jpg"
                 description: "The ratio of total upwelling to total downwelling solar radiation at the surface, representing the energy balance at the soil-vegetation-atmosphere interface. Ranges from 0 to 1 — a surface with an albedo of 1 (e.g. snow) reflects back all downwelling radiation."
               - title: "Land Surface Temperature"
                 image: "/assets/img/wales/land-surface-temperature.jpg"
@@ -218,7 +218,7 @@ pipeline:
             image: "/assets/img/switzerland/terrain.jpg"
             descriptors:
               - title: "DEM"
-                image: "/assets/img/wales/dem.jpg"
+                image: "/assets/img/switzerland/dem.jpg"
                 description: "Digital Terrain Models (DTMs) represent the elevation of bare terrain, whilst Digital Surface Models (DSMs) represent the upper height of all objects on the land surface."
                 links:
                   - label: "SwissALTI3D"
@@ -228,7 +228,7 @@ pipeline:
                     url: "https://www.swisstopo.admin.ch/en/height-model-dhm25"
                     newtab: true
               - title: "Slope"
-                image: "/assets/img/wales/slope.jpg"
+                image: "/assets/img/switzerland/slope.jpg"
                 description: "The steepness or degree of inclination of the terrain relative to the plane surface. Influences wind speed and direction, and hydrological flows."
               - title: "Aspect"
                 image: "/assets/img/wales/aspect.jpg"
@@ -237,7 +237,7 @@ pipeline:
         image: "/assets/img/switzerland/atmosphere.jpg"
         descriptors:
           - title: "Air Pollutants"
-            image: "/assets/img/wales/air-polutants.jpg"
+            image: "/assets/img/switzerland/air-pollutants.jpg"
             description: "Air pollutants include gases such as nitrous oxide, ammonia, sulfur dioxide and particulate matter. Their concentrations inform about air quality, which influences plant and animal health."
           - title: "Climate Variables"
             image: "/assets/img/wales/variants.jpg"
