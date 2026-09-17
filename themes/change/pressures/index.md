@@ -1,19 +1,16 @@
 ---
-layout: page
-
-title: "Pressures"
-
-# NOT INCLUDED: header: "Pressures"
-headerTop: "Pressures"
-subtitle: "Examples of driving pressures from around the World, the evidence required for their detection and description based on the types, amounts and extents of materials.  Pressures are numbered 1-144." 
-background: "#072857"
-image: "/assets/img/themes/change/md_change.png"
-nobuttons: true
-Nosvg: true
-Noheader: true
+layout: null
+permalink: /themes/change/pressures/
 ---
-
-{%-
-include change-pressures.liquid
-header="Examples of impacts"
--%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ '/themes/change/#pressures' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/themes/change/#pressures' | relative_url }}">
+</head>
+<body>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/themes/change/#pressures' | relative_url }}">Themes &rsaquo; Change</a>.</p>
+</body>
+</html>

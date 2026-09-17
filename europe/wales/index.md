@@ -5,7 +5,7 @@ permalink: /europe/wales/
 title: "Wales"
 eyebrow: "Countries"
 subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales's landscape"
-image: "/assets/img/heading/country.jpg"
+image: "/assets/img/heading/wales.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

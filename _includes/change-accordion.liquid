@@ -1,0 +1,201 @@
+{%- comment -%}
+CHANGE — IMPACTS / PRESSURES / IMPACT x PRESSURE — inline accordion.
+
+Same shell and interaction pattern as _includes/env-des-accordion.liquid:
+one panel open at a time, deep-linking via URL hash
+(e.g. /themes/change/#pressures auto-expands Pressures and scrolls to it).
+
+Impacts and Pressures panels reuse the env-des descriptor-card grid
+markup and read straight from the existing flat data files — no data
+restructuring needed:
+  _data/themes/change/impacts/index.yml   (77 items: title, image, content)
+  _data/themes/change/pressures/index.yml (144 items: title, image, content)
+
+The Impact x Pressure panel reuses the Publications page's
+country-filter-pill pattern (_includes/publications.liquid). It loops
+over the existing per-country data files and tags each card with its
+country in-template, so none of that data needs merging either:
+  _data/themes/change/ip/global/index.yml
+  _data/themes/change/ip/wales/index.yml
+  _data/themes/change/ip/australia/index.yml
+
+Switzerland and Papua New Guinea don't have case-study data yet (both
+still "#" placeholders in _data/themes/change/ip/index.yml) — add
+"switzerland|Switzerland" / "png|Papua New Guinea" to ip_countries
+below once real _data/themes/change/ip/<country>/index.yml files exist
+for them.
+
+Usage: {% include change-accordion.liquid %}
+{%- endcomment -%}
+
+<div class="env-des-accordion" id="change-accordion">
+
+  <!-- IMPACTS -->
+  {% assign impacts = site.data['themes']['change']['impacts'].index %}
+  <div class="env-des-accordion-item" data-cat="impacts">
+    <button type="button" class="env-des-accordion-header" data-target="impacts">
+      <span class="env-des-accordion-title">Impacts</span>
+      <span class="env-des-accordion-count">{{ impacts | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="impacts">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-descriptor-grid">
+          {% for item in impacts %}
+          {% unless item.title == blank %}
+          <div class="env-des-descriptor-card">
+            {% if item.image %}<img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="{{ item.title }}" class="env-des-descriptor-image">{% endif %}
+            <div class="env-des-descriptor-title">{{ item.title }}</div>
+            <p class="env-des-descriptor-description">{{ item.content }}</p>
+          </div>
+          {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRESSURES -->
+  {% assign pressures = site.data['themes']['change']['pressures'].index %}
+  <div class="env-des-accordion-item" data-cat="pressures">
+    <button type="button" class="env-des-accordion-header" data-target="pressures">
+      <span class="env-des-accordion-title">Pressures</span>
+      <span class="env-des-accordion-count">{{ pressures | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="pressures">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-descriptor-grid">
+          {% for item in pressures %}
+          {% unless item.title == blank %}
+          <div class="env-des-descriptor-card">
+            {% if item.image %}<img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="{{ item.title }}" class="env-des-descriptor-image">{% endif %}
+            <div class="env-des-descriptor-title">{{ item.title }}</div>
+            <p class="env-des-descriptor-description">{{ item.content }}</p>
+          </div>
+          {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPACT x PRESSURE EXAMPLES -->
+  {% assign ip_countries = "global|Global,wales|Wales,australia|Australia" | split: "," %}
+  <div class="env-des-accordion-item" data-cat="impact-pressure">
+    <button type="button" class="env-des-accordion-header" data-target="impact-pressure">
+      <span class="env-des-accordion-title">Impact &times; Pressure Examples</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="impact-pressure">
+      <div class="env-des-accordion-panel-inner">
+
+        <div class="pub-filters">
+          <div class="pub-filter-group">
+            <span class="pub-filter-label">Country</span>
+            <div class="pub-filter-row" data-filter-type="country">
+              <button class="pub-filter-pill is-active" type="button" data-filter-value="all">All</button>
+              {% for src in ip_countries %}
+                {% assign parts = src | split: "|" %}
+                <button class="pub-filter-pill" type="button" data-filter-value="{{ parts[1] }}">{{ parts[1] }}</button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-empty" hidden>No examples match this filter.</div>
+
+        <div class="pub-grid">
+          {% for src in ip_countries %}
+            {% assign parts = src | split: "|" %}
+            {% assign key = parts[0] %}
+            {% assign label = parts[1] %}
+            {% assign country_items = site.data['themes']['change']['ip'][key].index %}
+            {% for item in country_items %}
+              {% unless item.title == blank %}
+              <div class="pub-card" data-country="{{ label }}">
+                <span class="pub-card-badge">{{ label }}</span>
+                {% if item.url and item.url != "#" %}
+                <a class="pub-card-title" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a>
+                {% else %}
+                <span class="pub-card-title pub-card-title-nolink">{{ item.title }}</span>
+                {% endif %}
+                <div class="pub-card-authors">{{ item.content }}</div>
+              </div>
+              {% endunless %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('change-accordion');
+  if (!root) { return; }
+  var items = root.querySelectorAll('.env-des-accordion-item');
+
+  function openItem(id) {
+    items.forEach(function (item) {
+      item.classList.toggle('open', item.getAttribute('data-cat') === id);
+    });
+  }
+
+  items.forEach(function (item) {
+    var header = item.querySelector('.env-des-accordion-header');
+    header.addEventListener('click', function () {
+      var id = item.getAttribute('data-cat');
+      var alreadyOpen = item.classList.contains('open');
+      items.forEach(function (i) { i.classList.remove('open'); });
+      if (!alreadyOpen) {
+        item.classList.add('open');
+        history.replaceState(null, '', '#' + id);
+        requestAnimationFrame(function () {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      } else {
+        history.replaceState(null, '', '#change-accordion');
+      }
+    });
+  });
+
+  var hash = window.location.hash.replace('#', '');
+  var validIds = Array.prototype.map.call(items, function (i) { return i.getAttribute('data-cat'); });
+  if (hash && validIds.indexOf(hash) !== -1) {
+    openItem(hash);
+    var target = root.querySelector('.env-des-accordion-item[data-cat="' + hash + '"]');
+    if (target) {
+      setTimeout(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    }
+  }
+
+  // Country filter pills (Impact x Pressure panel only)
+  var pubCards = root.querySelectorAll('.pub-card');
+  var pubEmpty = root.querySelector('.pub-empty');
+  var pubRow = root.querySelector('.pub-filter-row[data-filter-type="country"]');
+  if (pubRow) {
+    var active = 'all';
+    function applyFilter() {
+      var visibleCount = 0;
+      pubCards.forEach(function (card) {
+        var show = active === 'all' || card.getAttribute('data-country') === active;
+        card.hidden = !show;
+        if (show) { visibleCount++; }
+      });
+      pubEmpty.hidden = visibleCount !== 0;
+    }
+    pubRow.querySelectorAll('.pub-filter-pill').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        pubRow.querySelectorAll('.pub-filter-pill').forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        active = btn.getAttribute('data-filter-value');
+        applyFilter();
+      });
+    });
+  }
+})();
+</script>
