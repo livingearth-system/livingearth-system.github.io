@@ -6,7 +6,7 @@ title: "About Living Earth"
 eyebrow: "About"
 subtitle: "Living Earth is the culmination of extensive national and international collaborations between universities, research organisations, governments, space agencies, businesses and the public."
 nocontact: true
-image: "/assets/img/heading/dea_landcover_murray_hres.png"
+image: "/assets/img/heading/about-floodwater.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

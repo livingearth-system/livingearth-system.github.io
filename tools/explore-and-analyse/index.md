@@ -5,7 +5,7 @@ permalink: /tools/explore-and-analyse/
 title: "Explore and Analyse"
 eyebrow: "Tools"
 subtitle: "See Living Earth's maps and data in action — explore the interactive map, or collect and validate your own observations with the Earthtrack app."
-image: "/assets/img/heading/enviromental.png"
+image: "/assets/img/heading/tools-explore-glacier.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

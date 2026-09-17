@@ -7,7 +7,7 @@ title: "Living Watersources"
 headerTop: "Living Watersources "
 subtitle: "Water is a component of the land cover but its description is more complex because of its dynamic nature and differing properties of the surface, volume and substate. " 
 background: "#072857"
-image: "/assets/img/heading/livingwatersources_a.png"
+image: "/assets/img/heading/livingwatersources-algae.jpg"
 nobuttons: true
 Nosvg: true
 Noheader: true

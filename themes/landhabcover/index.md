@@ -5,7 +5,7 @@ permalink: /themes/landhabcover/
 title: "Land Cover and Habitats"
 eyebrow: "Themes"
 subtitle: "Our land cover maps are all based on the globally-relevant Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS) taxonomy (Version 2.0)."
-image: "/assets/img/heading/livingcoasts_starckemangroves.png"
+image: "/assets/img/heading/landcover-city-aerial.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

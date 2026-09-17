@@ -7,7 +7,7 @@ title: "Living Coasts"
 headerTop: "Living Coasts "
 subtitle: "Living Coasts is adapting existing capacity (developed jointly by Australia and the United Kingdom) to allow coastal and influencing inland landscapes to be consistently characterised, mapped and monitored from dense time-series of Earth observations and modelled descriptors of the environment.; Aims; Objectives; Strategic Plan;" 
 background: "#072857"
-image: "/assets/img/heading/livingcoasts_starckemangroves.png"
+image: "/assets/img/heading/livingcoasts-floodplain.jpg"
 nobuttons: true
 Nosvg: true
 Noheader: true

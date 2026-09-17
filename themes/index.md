@@ -5,7 +5,7 @@ permalink: /themes/
 title: "Themes"
 eyebrow: "Themes"
 subtitle: "An overview of our themes — land cover and habitats, water, change, biodiversity, accounts and futures."
-image: "/assets/img/heading/dea_landcover_murray_hres.png"
+image: "/assets/img/heading/themes-zurich-park.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

@@ -7,7 +7,7 @@ eyebrow: "Contact"
 subtitle: "For more information on Living Earth, please get in touch."
 nocontact: true
 noquicklinks: true
-image: "/assets/img/contactus.png"
+image: "/assets/img/heading/contact-waterhole.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

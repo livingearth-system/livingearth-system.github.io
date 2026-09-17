@@ -5,7 +5,7 @@ permalink: /themes/change/
 title: "Change, Impacts and Pressures"
 eyebrow: "Themes"
 subtitle: "Gathering evidence for the causes (driving pressures) and consequences (impacts) of changes in ecosystems and environments using Earth observation and other spatial datasets."
-image: "/assets/img/themes/change/md_change.png"
+image: "/assets/img/heading/change-riverbed.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

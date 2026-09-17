@@ -3,7 +3,7 @@ layout: directory
 permalink: /our-projects/
 
 header: "About"
-image: "/assets/img/heading/dea_landcover_murray_hres.png"
+image: "/assets/img/heading/ourprojects-city-park.jpg"
 headerTop: "About"
 header: "About"
 headerTop: "About"

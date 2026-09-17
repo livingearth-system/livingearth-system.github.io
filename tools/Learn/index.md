@@ -5,7 +5,7 @@ permalink: /tools/learn/
 title: "Learn"
 eyebrow: "Tools"
 subtitle: "Background reading, reference material and classification schemes to help you understand and work with Living Earth data."
-image: "/assets/img/heading/enviromental.png"
+image: "/assets/img/heading/tools-learn-ski.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"
