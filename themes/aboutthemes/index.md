@@ -1,19 +1,16 @@
 ---
-layout: page
-
-title: "About themes"
-
-# NOT INCLUDED: header: "About themes"
-headerTop: "About themes "
-subtitle: "An overview of our themes - land cover and habitats, water, change, biodiversity, accounts and futures " 
-background: "#072857"
-image: "/assets/img/themes/water/md_water.png"
-nobuttons: true
-Nosvg: true
-Noheader: true
+layout: null
+permalink: /themes/aboutthemes/
 ---
-
-{%-
-include aboutthemes.liquid
-header=" An overview of our themes"
--%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ '/themes/' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/themes/' | relative_url }}">
+</head>
+<body>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/themes/' | relative_url }}">Themes</a>.</p>
+</body>
+</html>

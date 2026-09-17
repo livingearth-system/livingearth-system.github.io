@@ -70,6 +70,7 @@
   font-weight: 800;
   font-size: 26px;
   color: #23567b;
+  margin-top: 32px;
   margin-bottom: 20px;
 }
 
@@ -493,6 +494,18 @@
   color: #3a4750;
   padding: 0 14px 14px;
   margin: 0;
+}
+
+.env-des-descriptor-description ul {
+  font: inherit;
+  color: inherit;
+  margin: 8px 0;
+  padding-left: 18px;
+}
+
+.env-des-descriptor-description li {
+  font: inherit;
+  color: inherit;
 }
 
 .env-des-descriptor-links {
