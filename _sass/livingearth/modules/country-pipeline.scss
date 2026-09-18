@@ -600,3 +600,198 @@
 .env-desc-panel-link:hover {
   text-decoration: underline;
 }
+/* Impact -> pressures reveal (click an impact's title in the list to
+   see a chip list of the pressures that can cause it). */
+.env-desc-impact-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  flex: 1;
+  font: inherit;
+  color: inherit;
+}
+
+.env-desc-pressures-panel {
+  padding: 0 4px 16px;
+}
+
+.env-desc-pressures-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7f8c;
+  margin-bottom: 8px;
+}
+
+.env-desc-pressure-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.env-desc-pressure-chip {
+  background: #fbf8f5;
+  border: 1px solid #dcefff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23567b;
+  cursor: pointer;
+}
+
+.env-desc-pressure-chip.is-selected {
+  background: #4294c3;
+  border-color: #4294c3;
+  color: #fff;
+}
+/* Nested category accordion (Impacts / Pressures panels) — five
+   categories styled like the top-level accordion header (icon badge,
+   title, count, chevron) but one level deeper. Distinct class names
+   (env-des-subaccordion-*) so they don't collide with the top-level
+   .env-des-accordion-item selectors in change-accordion.liquid's script. */
+.env-des-subaccordion {
+  margin-top: 4px;
+}
+
+.env-des-subaccordion-item {
+  border: 1px solid #c6e5f4;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.env-des-subaccordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fbf8f5;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.env-des-subaccordion-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #eef6fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4294c3;
+  flex: none;
+}
+
+.env-des-subaccordion-icon-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.env-des-subaccordion-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.env-des-subaccordion-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #4294c3;
+  background: #c6e5f4;
+  border-radius: 20px;
+  padding: 3px 10px;
+  flex: none;
+}
+
+.env-des-subaccordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: #23567b;
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.env-des-subaccordion-item.open .env-des-subaccordion-chevron {
+  transform: rotate(180deg);
+}
+
+.env-des-subaccordion-panel {
+  display: none;
+}
+
+.env-des-subaccordion-item.open .env-des-subaccordion-panel {
+  display: block;
+}
+
+.env-des-subaccordion-panel-inner {
+  padding: 4px 20px 20px;
+}
+
+/* Card grid (replaces the old plain-list rows inside each category):
+   title + (i) per card, laid out in a grid. */
+.env-desc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 991px) {
+  .env-desc-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .env-desc-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.env-desc-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #dcefff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.env-desc-card .env-desc-item-title {
+  padding: 0;
+  flex: 1;
+}
+
+.env-desc-item-tooltip-media {
+  right: auto;
+  width: 280px;
+  max-width: calc(100vw - 32px);
+}
+
+.env-desc-item-tooltip-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+  background: #c6e5f4;
+}
+
+/* When an impact's pressures panel drops in, it should span the
+   whole grid row rather than being squeezed into one card's column. */
+.env-desc-pressures-panel-grid {
+  grid-column: 1 / -1;
+}
+
