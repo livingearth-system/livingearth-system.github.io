@@ -28,11 +28,11 @@ auto-expands Wales and scrolls to it.
           {% if c.intro %}<p class="data-country-intro">{{ c.intro }}</p>{% endif %}
           <ul class="data-country-links">
             {% for link in c.links %}
-              <li><a href="{{ link.url }}" class="data-country-link">{{ link.label }}</a></li>
+              <li><a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" class="data-country-link">{{ link.label }}</a></li>
             {% endfor %}
           </ul>
           {% if c.analyze_url %}
-            <a href="{{ c.analyze_url }}" class="data-country-analyze">Analyse this data &rarr;</a>
+            <a href="{% if c.analyze_url contains 'http' %}{{ c.analyze_url }}{% else %}{{ c.analyze_url | relative_url }}{% endif %}" class="data-country-analyze">Analyse this data &rarr;</a>
           {% endif %}
         </div>
       </div>

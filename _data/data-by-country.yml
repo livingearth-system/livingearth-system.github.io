@@ -12,7 +12,7 @@
       url: "https://earthtrack.aber.ac.uk/campaign/fire_world.html"
     - label: "Web Feature Service (WFS)"
       url: "https://earthtrack.aber.ac.uk/services/wfs"
-  analyze_url: "/tools/for-developers/#analyze-the-data"
+  analyze_url: "/tools/for-developers/#analyse-the-data"
 
 - id: wales
   title: "Wales"
@@ -22,7 +22,7 @@
       url: "http://livingearthhub.org/europe/wales/analysis-ready-data/"
     - label: "Welsh Data Cube (JupyterHub login)"
       url: "https://livingwales.aber.ac.uk/jhub"
-  analyze_url: "/tools/for-developers/#analyze-the-data"
+  analyze_url: "/tools/for-developers/#analyse-the-data"
 
 - id: switzerland
   title: "Switzerland"
@@ -32,7 +32,7 @@
       url: "https://explorer.swissdatacube.org/"
     - label: "Swiss Data Cube platform login"
       url: "https://www.swissdatacube.org/index.php/platform/"
-  analyze_url: "/tools/for-developers/#analyze-the-data"
+  analyze_url: "/tools/for-developers/#analyse-the-data"
 
 - id: australia
   title: "Australia"
@@ -42,4 +42,4 @@
       url: "http://livingearthhub.org/oceania/australia/analysis-ready-data/#"
     - label: "Digital Earth Australia (DEA) sandbox login"
       url: "https://app.sandbox.dea.ga.gov.au/"
-  analyze_url: "/tools/for-developers/#analyze-the-data"
+  analyze_url: "/tools/for-developers/#analyse-the-data"

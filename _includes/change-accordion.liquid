@@ -10,11 +10,11 @@ change categories — Agriculture, Vegetation, Bare Natural Surfaces,
 Human-Made, Water, Ice & Snow, matching the EarthTrack app's change
 taxonomy (assets/function/filter-map.js, changeInverted) — styled
 like the top-level Impacts/Pressures/Impact x Pressure headers
-(icon badge, title, count, chevron) but one level deeper, under the
+(photo icon, title, count, chevron) but one level deeper, under the
 env-des-subaccordion-* classes so they don't collide with the
 top-level .env-des-accordion-item selectors in the script below. Each
-category opens into a card grid (env-desc-card-grid / env-desc-card):
-title + an (i) button per card, the (i) popping a fixed-position
+category opens into a plain two-column A-Z list (env-desc-list / env-desc-row):
+title + an (i) button per row, the (i) popping a fixed-position
 tooltip with the item's image and description
 (_includes/country-pipeline.liquid uses the same popover pattern).
 No data restructuring needed for category membership: every item's
@@ -30,10 +30,9 @@ change_categories below.
   _data/themes/change/impacts/index.yml   (title, image, content)
   _data/themes/change/pressures/index.yml (title, image, content)
 
-Impacts additionally look up their related pressures — click an
-impact's title to reveal a chip list of the pressures that can cause
-it (chips toggle a visual "selected" state only; nothing is submitted
-anywhere). The mapping is:
+Impacts additionally look up their related pressures — press the
+"Pressures" button next to an impact's (i) to reveal a chip list of the pressures that can cause
+it (click a chip to show that pressure's definition). The mapping is:
   _data/themes/change/impact-pressure-links.yml (impact title -> [pressure titles])
 built from the Global Change Taxonomy's supporting-information dataset
 (Lucas et al. 2022, Global Change Biology, DOI 10.1111/gcb.16346;
@@ -68,10 +67,11 @@ Usage: {% include change-accordion.liquid %}
 <div class="env-des-accordion" id="change-accordion">
 
   <!-- Shared category taxonomy for Impacts and Pressures:
-       id|Label|image-substring-to-match  (Water also separately matches "snow") -->
-  {% assign change_categories = "agriculture|Agriculture|crop;vegetation|Vegetation|veg;bare|Bare Natural Surfaces|bare;human-made|Human-Made|urban;water|Water, Ice & Snow|water" | split: ";" %}
+       id|Label|image-substring-to-match|icon-image  (Water also separately matches "snow") -->
+  {% assign change_categories = "agriculture|Agriculture|crop|/assets/img/wales/crop-type.jpg;vegetation|Vegetation|veg|/assets/img/wales/vegetation.jpg;bare|Bare Natural Surfaces|bare|/assets/img/wales/dem.jpg;human-made|Human-Made|urban|/assets/img/wales/artificial-materials.jpg;water|Water, Ice & Snow|water|/assets/img/wales/water.jpg" | split: ";" %}
 
   <!-- IMPACTS -->
+  {% assign all_pressures = site.data['themes']['change']['pressures'].index %}
   {% assign impacts = site.data['themes']['change']['impacts'].index %}
   <div class="env-des-accordion-item" data-cat="impacts">
     <button type="button" class="env-des-accordion-header" data-target="impacts">
@@ -87,6 +87,7 @@ Usage: {% include change-accordion.liquid %}
           {% assign cat_key = parts[0] %}
           {% assign cat_label = parts[1] %}
           {% assign cat_match = parts[2] %}
+          {% assign cat_image = parts[3] %}
           {% assign cat_count = 0 %}
           {% for item in impacts %}
             {% unless item.title == blank %}
@@ -98,52 +99,64 @@ Usage: {% include change-accordion.liquid %}
           {% endfor %}
           <div class="env-des-subaccordion-item" data-subcat="impacts-{{ cat_key }}">
             <button type="button" class="env-des-subaccordion-header" data-subtarget="impacts-{{ cat_key }}">
-              <span class="env-des-subaccordion-icon-badge">
-                {% case cat_key %}
-                {% when "agriculture" %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 21V9M8 9l-2-2M8 9l2-2M8 12l-2-2M8 12l2-2M8 15l-2-2M8 15l2-2M16 21V9M16 9l-2-2M16 9l2-2M16 12l-2-2M16 12l2-2M16 15l-2-2M16 15l2-2"/></svg>
-                {% when "vegetation" %}<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z"/></svg>
-                {% when "bare" %}<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.38293 0 0 5.38293 0 12C0 18.6171 5.38293 24 12 24C18.6171 24 24 18.6171 24 12C24 5.38293 18.6171 0 12 0ZM12 18.9999C11.4479 18.9999 11.0001 18.5521 11.0001 18C11.0001 17.4479 11.4479 17.0001 12 17.0001C12.5521 17.0001 12.9999 17.4479 12.9999 18C12.9999 18.5521 12.5521 18.9999 12 18.9999ZM13.5829 12.642C13.229 12.8049 12.9999 13.162 12.9999 13.5511V14.0001C12.9999 14.5519 12.553 15 12 15C11.447 15 11.0001 14.5519 11.0001 14.0001V13.5511C11.0001 12.384 11.686 11.3141 12.7451 10.825C13.764 10.3561 14.4999 9.11096 14.4999 8.49994C14.4999 7.12207 13.379 6 12 6C10.621 6 9.50006 7.12207 9.50006 8.49994C9.50006 9.052 9.05292 9.50006 8.49994 9.50006C7.94696 9.50006 7.5 9.052 7.5 8.49994C7.5 6.01904 9.51892 3.99994 12 3.99994C14.4811 3.99994 16.5 6.01904 16.5 8.49994C16.5 9.85107 15.3279 11.837 13.5829 12.642Z"/></svg>
-                {% when "human-made" %}<svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1" fill="currentColor"/><rect x="9" y="6" width="2" height="2" fill="#fff"/><rect x="13" y="6" width="2" height="2" fill="#fff"/><rect x="9" y="10" width="2" height="2" fill="#fff"/><rect x="13" y="10" width="2" height="2" fill="#fff"/><rect x="9" y="14" width="2" height="2" fill="#fff"/><rect x="13" y="14" width="2" height="2" fill="#fff"/></svg>
-                {% when "water" %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
-                {% endcase %}
-              </span>
+              <img src="{{ cat_image | relative_url }}" alt="" class="env-des-subaccordion-icon">
               <span class="env-des-subaccordion-title">{{ cat_label }}</span>
               <span class="env-des-subaccordion-count">{{ cat_count }}</span>
               <svg class="env-des-subaccordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
             </button>
             <div class="env-des-subaccordion-panel" id="impacts-{{ cat_key }}">
               <div class="env-des-subaccordion-panel-inner">
-                <div class="env-desc-card-grid">
-                  {% for item in impacts %}
+                {%- comment -%} Two-column alphabetical list: sorted A-Z, first half goes in column 1, second half in column 2 (reads down, then across). {%- endcomment -%}
+                {% assign list_items = impacts | sort_natural: "title" %}
+                {% assign half = cat_count | divided_by: 2.0 | ceil %}
+                {% assign idx = 0 %}
+                <div class="env-desc-list">
+                  <div class="env-desc-list-col">
+                  {% for item in list_items %}
                   {% unless item.title == blank %}
                   {% assign is_match = false %}
                   {% if item.image contains cat_match %}{% assign is_match = true %}{% endif %}
                   {% if cat_key == "water" and item.image contains "snow" %}{% assign is_match = true %}{% endif %}
                   {% if is_match %}
+                  {% if idx == half %}</div><div class="env-desc-list-col">{% endif %}
+                  {% assign idx = idx | plus: 1 %}
+                  {% assign display_title = item.title | strip | downcase | capitalize %}
                   {% assign related_pressures = site.data['themes']['change']['impact-pressure-links'][item.title] %}
                   {% assign impact_slug = item.title | slugify %}
-                  <div class="env-desc-card{% if related_pressures %} env-desc-impact-row{% endif %}"{% if related_pressures %} data-impact="{{ impact_slug }}"{% endif %}>
-                    {% if related_pressures %}
-                    <button type="button" class="env-desc-impact-toggle">
-                      <span class="env-desc-item-title">{{ item.title }}</span>
-                    </button>
-                    {% else %}
-                    <span class="env-desc-item-title">{{ item.title }}</span>
-                    {% endif %}
+                  <div class="env-desc-row{% if related_pressures %} env-desc-impact-row{% endif %}"{% if related_pressures %} data-impact="{{ impact_slug }}"{% endif %}>
+                    <span class="env-desc-item-title">{{ display_title }}</span>
                     {% if item.content %}
-                    <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+                    <button type="button" class="env-desc-item-info" aria-label="What is {{ display_title }}?">i</button>
                     <span class="env-desc-item-tooltip env-desc-item-tooltip-media">
                       {% if item.image %}<img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="" class="env-desc-item-tooltip-img">{% endif %}
                       <span class="env-desc-item-tooltip-text">{{ item.content }}</span>
                     </span>
                     {% endif %}
+                    {% if related_pressures %}
+                    <button type="button" class="env-desc-pressures-btn" aria-expanded="false">Pressures ({{ related_pressures | size }})<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg></button>
+                    {% endif %}
                   </div>
                   {% if related_pressures %}
                   <div class="env-desc-pressures-panel env-desc-pressures-panel-grid" data-impact-panel="{{ impact_slug }}" hidden>
-                    <div class="env-desc-pressures-label">Pressures that can cause this (select any that apply):</div>
+                    <div class="env-desc-pressures-label">Pressures that can cause this (click one for its definition):</div>
                     <div class="env-desc-pressure-chips">
                       {% for pr in related_pressures %}
-                      <button type="button" class="env-desc-pressure-chip">{{ pr }}</button>
+                      {% assign pr_def = all_pressures | where: "title", pr | first %}
+                      {% if pr_def.content %}
+                      <button type="button" class="env-desc-pressure-chip" data-pressure="{{ pr | slugify }}" aria-expanded="false">{{ pr | strip | downcase | capitalize }}</button>
+                      {% else %}
+                      <span class="env-desc-pressure-chip is-static">{{ pr | strip | downcase | capitalize }}</span>
+                      {% endif %}
+                      {% endfor %}
+                    </div>
+                    <div class="env-desc-pressure-defs">
+                      {% for pr in related_pressures %}
+                      {% assign pr_def = all_pressures | where: "title", pr | first %}
+                      {% if pr_def.content %}
+                      <div class="env-desc-pressure-def" data-pressure-def="{{ pr | slugify }}" hidden>
+                        <strong>{{ pr | strip | downcase | capitalize }}</strong> &mdash; {{ pr_def.content }}
+                      </div>
+                      {% endif %}
                       {% endfor %}
                     </div>
                   </div>
@@ -151,6 +164,7 @@ Usage: {% include change-accordion.liquid %}
                   {% endif %}
                   {% endunless %}
                   {% endfor %}
+                  </div>
                 </div>
               </div>
             </div>
@@ -177,6 +191,7 @@ Usage: {% include change-accordion.liquid %}
           {% assign cat_key = parts[0] %}
           {% assign cat_label = parts[1] %}
           {% assign cat_match = parts[2] %}
+          {% assign cat_image = parts[3] %}
           {% assign cat_count = 0 %}
           {% for item in pressures %}
             {% unless item.title == blank %}
@@ -188,32 +203,31 @@ Usage: {% include change-accordion.liquid %}
           {% endfor %}
           <div class="env-des-subaccordion-item" data-subcat="pressures-{{ cat_key }}">
             <button type="button" class="env-des-subaccordion-header" data-subtarget="pressures-{{ cat_key }}">
-              <span class="env-des-subaccordion-icon-badge">
-                {% case cat_key %}
-                {% when "agriculture" %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 21V9M8 9l-2-2M8 9l2-2M8 12l-2-2M8 12l2-2M8 15l-2-2M8 15l2-2M16 21V9M16 9l-2-2M16 9l2-2M16 12l-2-2M16 12l2-2M16 15l-2-2M16 15l2-2"/></svg>
-                {% when "vegetation" %}<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z"/></svg>
-                {% when "bare" %}<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.38293 0 0 5.38293 0 12C0 18.6171 5.38293 24 12 24C18.6171 24 24 18.6171 24 12C24 5.38293 18.6171 0 12 0ZM12 18.9999C11.4479 18.9999 11.0001 18.5521 11.0001 18C11.0001 17.4479 11.4479 17.0001 12 17.0001C12.5521 17.0001 12.9999 17.4479 12.9999 18C12.9999 18.5521 12.5521 18.9999 12 18.9999ZM13.5829 12.642C13.229 12.8049 12.9999 13.162 12.9999 13.5511V14.0001C12.9999 14.5519 12.553 15 12 15C11.447 15 11.0001 14.5519 11.0001 14.0001V13.5511C11.0001 12.384 11.686 11.3141 12.7451 10.825C13.764 10.3561 14.4999 9.11096 14.4999 8.49994C14.4999 7.12207 13.379 6 12 6C10.621 6 9.50006 7.12207 9.50006 8.49994C9.50006 9.052 9.05292 9.50006 8.49994 9.50006C7.94696 9.50006 7.5 9.052 7.5 8.49994C7.5 6.01904 9.51892 3.99994 12 3.99994C14.4811 3.99994 16.5 6.01904 16.5 8.49994C16.5 9.85107 15.3279 11.837 13.5829 12.642Z"/></svg>
-                {% when "human-made" %}<svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1" fill="currentColor"/><rect x="9" y="6" width="2" height="2" fill="#fff"/><rect x="13" y="6" width="2" height="2" fill="#fff"/><rect x="9" y="10" width="2" height="2" fill="#fff"/><rect x="13" y="10" width="2" height="2" fill="#fff"/><rect x="9" y="14" width="2" height="2" fill="#fff"/><rect x="13" y="14" width="2" height="2" fill="#fff"/></svg>
-                {% when "water" %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
-                {% endcase %}
-              </span>
+              <img src="{{ cat_image | relative_url }}" alt="" class="env-des-subaccordion-icon">
               <span class="env-des-subaccordion-title">{{ cat_label }}</span>
               <span class="env-des-subaccordion-count">{{ cat_count }}</span>
               <svg class="env-des-subaccordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
             </button>
             <div class="env-des-subaccordion-panel" id="pressures-{{ cat_key }}">
               <div class="env-des-subaccordion-panel-inner">
-                <div class="env-desc-card-grid">
-                  {% for item in pressures %}
+                {% assign list_items = pressures | sort_natural: "title" %}
+                {% assign half = cat_count | divided_by: 2.0 | ceil %}
+                {% assign idx = 0 %}
+                <div class="env-desc-list">
+                  <div class="env-desc-list-col">
+                  {% for item in list_items %}
                   {% unless item.title == blank %}
                   {% assign is_match = false %}
                   {% if item.image contains cat_match %}{% assign is_match = true %}{% endif %}
                   {% if cat_key == "water" and item.image contains "snow" %}{% assign is_match = true %}{% endif %}
                   {% if is_match %}
-                  <div class="env-desc-card">
-                    <span class="env-desc-item-title">{{ item.title }}</span>
+                  {% if idx == half %}</div><div class="env-desc-list-col">{% endif %}
+                  {% assign idx = idx | plus: 1 %}
+                  {% assign display_title = item.title | strip | downcase | capitalize %}
+                  <div class="env-desc-row">
+                    <span class="env-desc-item-title">{{ display_title }}</span>
                     {% if item.content %}
-                    <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+                    <button type="button" class="env-desc-item-info" aria-label="What is {{ display_title }}?">i</button>
                     <span class="env-desc-item-tooltip env-desc-item-tooltip-media">
                       {% if item.image %}<img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="" class="env-desc-item-tooltip-img">{% endif %}
                       <span class="env-desc-item-tooltip-text">{{ item.content }}</span>
@@ -223,6 +237,7 @@ Usage: {% include change-accordion.liquid %}
                   {% endif %}
                   {% endunless %}
                   {% endfor %}
+                  </div>
                 </div>
               </div>
             </div>
@@ -413,24 +428,34 @@ Usage: {% include change-accordion.liquid %}
   }, { passive: true });
 
   // Impact -> pressures reveal (Impacts panel only). Clicking an
-  // impact's title toggles a chip list of the pressures that can
+  // impact's "Pressures" button (next to its (i)) toggles a chip list of the pressures that can
   // cause it, sourced from _data/themes/change/impact-pressure-links.yml.
-  // Chips toggle a visual "selected" state only — nothing is submitted
-  // or stored anywhere; this mirrors the app's multi-select step for
-  // browsing purposes.
-  var impactToggles = root.querySelectorAll('.env-desc-impact-toggle');
-  impactToggles.forEach(function (btn) {
+  var pressureBtns = root.querySelectorAll('.env-desc-pressures-btn');
+  pressureBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var row = btn.closest('.env-desc-impact-row');
       var slug = row.getAttribute('data-impact');
       var panel = row.parentNode.querySelector('.env-desc-pressures-panel[data-impact-panel="' + slug + '"]');
-      if (panel) { panel.hidden = !panel.hidden; }
+      if (panel) {
+        panel.hidden = !panel.hidden;
+        btn.classList.toggle('is-open', !panel.hidden);
+        btn.setAttribute('aria-expanded', panel.hidden ? 'false' : 'true');
+      }
     });
   });
 
+  // Pressure chips: clicking a chip shows/hides that pressure's
+  // definition (from _data/themes/change/pressures/index.yml) under the
+  // chip row. Several can be open at once. Chips with no matching
+  // definition render as static <span>s and are ignored here.
   root.addEventListener('click', function (e) {
-    var chip = e.target.closest('.env-desc-pressure-chip');
-    if (chip) { chip.classList.toggle('is-selected'); }
+    var chip = e.target.closest('button.env-desc-pressure-chip');
+    if (!chip) { return; }
+    var panel = chip.closest('.env-desc-pressures-panel');
+    var def = panel.querySelector('.env-desc-pressure-def[data-pressure-def="' + chip.getAttribute('data-pressure') + '"]');
+    var open = chip.classList.toggle('is-selected');
+    chip.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (def) { def.hidden = !open; }
   });
 
   // Country filter pills (Impact x Pressure panel only)

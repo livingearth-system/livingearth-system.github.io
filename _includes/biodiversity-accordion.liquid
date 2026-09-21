@@ -4,9 +4,8 @@ BIODIVERSITY — inline accordion for the 8 Wales case studies, grouped into
 change-accordion.liquid: one panel open at a time, deep-linking via hash
 (e.g. /themes/biodiversity/#habitats).
 
-Each panel's case studies render via info-blocks.liquid (horizontal
-variant), reusing the existing card component so the rich HTML body text
-(sub-lists, italics, line breaks) renders properly with no new CSS needed.
+Each panel's case studies render via biodiversity-card.liquid (photo card,
+linked to the full page when the block has a `url` in the page front matter).
 
 Usage: {% include biodiversity-accordion.liquid %}
 Expects page.birds_blocks / page.habitats_blocks / page.species_blocks.
@@ -22,13 +21,9 @@ Expects page.birds_blocks / page.habitats_blocks / page.species_blocks.
     </button>
     <div class="env-des-accordion-panel" id="birds">
       <div class="env-des-accordion-panel-inner">
-        <div class="env-des-descriptor-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="env-des-descriptor-grid env-des-descriptor-grid-3">
           {% for item in page.birds_blocks %}
-          <div class="env-des-descriptor-card">
-            <img src="{{ item.logo | relative_url }}" alt="{{ item.title }}" class="env-des-descriptor-image">
-            <div class="env-des-descriptor-title">{{ item.title }}</div>
-            <div class="env-des-descriptor-description">{{ item.description }}</div>
-          </div>
+          {% include biodiversity-card.liquid item=item %}
           {% endfor %}
         </div>
       </div>
@@ -43,13 +38,9 @@ Expects page.birds_blocks / page.habitats_blocks / page.species_blocks.
     </button>
     <div class="env-des-accordion-panel" id="habitats">
       <div class="env-des-accordion-panel-inner">
-        <div class="env-des-descriptor-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="env-des-descriptor-grid env-des-descriptor-grid-3">
           {% for item in page.habitats_blocks %}
-          <div class="env-des-descriptor-card">
-            <img src="{{ item.logo | relative_url }}" alt="{{ item.title }}" class="env-des-descriptor-image">
-            <div class="env-des-descriptor-title">{{ item.title }}</div>
-            <div class="env-des-descriptor-description">{{ item.description }}</div>
-          </div>
+          {% include biodiversity-card.liquid item=item %}
           {% endfor %}
         </div>
       </div>
@@ -64,13 +55,9 @@ Expects page.birds_blocks / page.habitats_blocks / page.species_blocks.
     </button>
     <div class="env-des-accordion-panel" id="species">
       <div class="env-des-accordion-panel-inner">
-        <div class="env-des-descriptor-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="env-des-descriptor-grid env-des-descriptor-grid-2">
           {% for item in page.species_blocks %}
-          <div class="env-des-descriptor-card">
-            <img src="{{ item.logo | relative_url }}" alt="{{ item.title }}" class="env-des-descriptor-image">
-            <div class="env-des-descriptor-title">{{ item.title }}</div>
-            <div class="env-des-descriptor-description">{{ item.description }}</div>
-          </div>
+          {% include biodiversity-card.liquid item=item %}
           {% endfor %}
         </div>
       </div>

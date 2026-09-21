@@ -1,0 +1,85 @@
+{%- comment -%}
+WELSH REFERENCE ECOSYSTEMS AND MODIFIED STATES — intro text + a dropdown per
+habitat group (Agricultural / Semi-natural / Non-natural). Each dropdown opens
+to the habitats in that group, each with its text and photo cards for the
+reference / modified states.
+
+Content lives in _data/welsh-states.yml (intro + groups). Only habitats and
+states that have text in that file are shown.
+
+Used in two places (one source of content):
+  - themes/biodiversity/index.md  (via biodiversity-accordion.liquid)
+  - europe/wales/themes/welsh-reference-ecosystems-and-modified-states/index.md
+
+Uses the env-des-subaccordion-* dropdown styles so it can sit inside another
+accordion without clashing with that accordion's script.
+
+Usage: {% include welsh-states.liquid %}
+{%- endcomment -%}
+{% assign ws = site.data['welsh-states'] %}
+<div class="welsh-states" id="welsh-states">
+
+  {% for para in ws.intro %}
+  <p class="welsh-states-text">{{ para }}</p>
+  {% endfor %}
+
+  <div class="env-des-subaccordion">
+    {% for g in ws.groups %}
+    <div class="env-des-subaccordion-item" data-subcat="{{ g.id }}">
+      <button type="button" class="env-des-subaccordion-header" data-subtarget="{{ g.id }}">
+        {% if g.image %}<img src="{{ g.image | relative_url }}" alt="" class="env-des-subaccordion-icon">{% endif %}
+        <span class="env-des-subaccordion-title">{{ g.title }}</span>
+        <span class="env-des-subaccordion-count">{{ g.habitats | size }}</span>
+        <svg class="env-des-subaccordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+      </button>
+      <div class="env-des-subaccordion-panel" id="{{ g.id }}">
+        <div class="env-des-subaccordion-panel-inner">
+          {% if g.intro %}<p class="welsh-states-text">{{ g.intro }}</p>{% endif %}
+          {% for h in g.habitats %}
+          <div class="welsh-states-habitat">
+            <h3 class="welsh-states-habitat-title">{{ h.title }}</h3>
+            {% if h.text %}<p class="welsh-states-text">{{ h.text | newline_to_br }}</p>{% endif %}
+            {% if h.states %}
+            <div class="env-des-descriptor-grid env-des-descriptor-grid-3">
+              {% for s in h.states %}
+              <div class="env-des-descriptor-card">
+                <img src="{{ s.image | relative_url }}" alt="{{ s.title }}" class="env-des-descriptor-image" loading="lazy">
+                <div class="env-des-descriptor-title">{{ s.title }}</div>
+                {% if s.tag %}<div class="welsh-state-tag-row"><span class="welsh-state-tag{% if s.tag contains 'Modified' %} is-modified{% endif %}">{{ s.tag }}</span></div>{% endif %}
+                <div class="env-des-descriptor-description">{{ s.text | newline_to_br }}</div>
+              </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('welsh-states');
+  if (!root) { return; }
+  var items = root.querySelectorAll('.env-des-subaccordion-item');
+  items.forEach(function (item) {
+    var header = item.querySelector('.env-des-subaccordion-header');
+    header.addEventListener('click', function () {
+      var alreadyOpen = item.classList.contains('open');
+      items.forEach(function (i) { i.classList.remove('open'); });
+      if (!alreadyOpen) { item.classList.add('open'); }
+    });
+  });
+  // Deep link on the standalone page, e.g. #semi-natural opens that group.
+  var hash = window.location.hash.replace('#', '');
+  items.forEach(function (item) {
+    if (item.getAttribute('data-subcat') === hash) {
+      item.classList.add('open');
+      setTimeout(function () { item.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    }
+  });
+})();
+</script>
