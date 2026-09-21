@@ -456,15 +456,39 @@ Usage: {% include change-accordion.liquid %}
   }, { passive: true });
 
   // "Pressures (n)" button in the table: show / hide that impact's pressures.
+  // Only one impact can have its pressures open at a time: opening one closes
+  // any other that is open (in any category).
+  function closeReveal(reveal) {
+    reveal.hidden = true;
+    var cell = reveal.closest('.change-pressure-cell');
+    var btn = cell && cell.querySelector('.env-desc-pressures-btn');
+    if (btn) {
+      btn.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    // start clean next time: collapse any definitions that were open
+    reveal.querySelectorAll('.env-desc-pressure-chip.is-selected').forEach(function (chip) {
+      chip.classList.remove('is-selected');
+      chip.setAttribute('aria-expanded', 'false');
+    });
+    reveal.querySelectorAll('.env-desc-pressure-def').forEach(function (d) { d.hidden = true; });
+  }
+
   root.addEventListener('click', function (e) {
     var btn = e.target.closest('.env-desc-pressures-btn');
     if (!btn) { return; }
     var cell = btn.closest('.change-pressure-cell');
     var reveal = cell && cell.querySelector('.change-pressure-reveal');
     if (!reveal) { return; }
-    reveal.hidden = !reveal.hidden;
-    btn.classList.toggle('is-open', !reveal.hidden);
-    btn.setAttribute('aria-expanded', reveal.hidden ? 'false' : 'true');
+    var willOpen = reveal.hidden;
+    root.querySelectorAll('.change-pressure-reveal').forEach(function (r) {
+      if (!r.hidden) { closeReveal(r); }
+    });
+    if (willOpen) {
+      reveal.hidden = false;
+      btn.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
 
   // Pressure chips: clicking a chip shows/hides that pressure's
