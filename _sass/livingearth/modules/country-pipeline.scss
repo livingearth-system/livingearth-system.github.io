@@ -754,6 +754,129 @@
   padding: 4px 20px 20px;
 }
 
+/* Impacts-only view of the Change page: the "Impacts" accordion is open and its
+   own header is hidden. Remove the change-impacts-only class (see
+   change-accordion.liquid) to get the normal accordion back. */
+.change-impacts-only .env-des-accordion-header {
+  display: none;
+}
+
+.change-impacts-only .env-des-accordion-item {
+  border: 0;
+  margin-bottom: 0;
+  overflow: visible;
+}
+
+.change-impacts-only .env-des-accordion-panel-inner {
+  padding: 0;
+}
+
+/* Impact | Pressures table, one per category. */
+.change-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 0;
+}
+
+.change-table thead th {
+  padding: 8px 14px;
+  border-bottom: 2px solid #c6e5f4;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #6b7f8c;
+}
+
+.change-table .change-table-hint {
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #8a9aa5;
+}
+
+.change-table tbody th,
+.change-table tbody td {
+  padding: 12px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #e3ecf1;
+}
+
+.change-table tbody tr:hover {
+  background: #fbf8f5;
+}
+
+.change-table tbody th.change-table-impact {
+  width: 34%;
+  text-align: left;
+  font-weight: 400;
+}
+
+.change-table-impact-inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.change-table .env-desc-item-title {
+  font-size: 14px;
+  line-height: 1.35;
+  padding: 0;
+}
+
+.change-table .env-desc-item-info {
+  margin-top: 2px;
+}
+
+.change-table-none {
+  color: #9aa9b3;
+}
+
+.change-table .env-desc-pressure-defs {
+  margin-top: 10px;
+}
+
+.change-pressure-cell .env-desc-pressures-btn {
+  margin-left: 0;
+}
+
+.change-pressure-reveal {
+  margin-top: 10px;
+}
+
+.change-pressure-reveal[hidden] {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .change-table,
+  .change-table tbody,
+  .change-table tr,
+  .change-table tbody th,
+  .change-table tbody td {
+    display: block;
+    width: 100%;
+  }
+  .change-table thead {
+    display: none;
+  }
+  .change-table tbody tr {
+    padding: 10px 0;
+    border-bottom: 1px solid #e3ecf1;
+  }
+  .change-table tbody th,
+  .change-table tbody td {
+    padding: 4px 6px;
+    border-bottom: 0;
+  }
+  .change-table tbody th.change-table-impact {
+    width: 100%;
+  }
+}
+
 /* Two-column A-Z list inside each category (Impacts / Pressures).
    No boxes: bold navy title + (i) button per row, same type style as the
    Environmental Descriptors titles. Liquid splits the sorted items into

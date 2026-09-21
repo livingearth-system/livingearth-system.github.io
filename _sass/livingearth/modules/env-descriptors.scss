@@ -703,6 +703,31 @@ button.env-des-descriptor-more {
   }
 }
 
+/* Change page: three link cards (change-links.liquid). Two-class selector so it
+   beats the older .fd-intents-grid rules in data-by-country.scss. */
+.fd-intents-grid.fd-intents-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fd-intent-meta {
+  margin-top: auto;
+  padding-top: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23567b;
+}
+
+.fd-intent-card:hover .fd-intent-meta {
+  color: #fbf8f5;
+}
+
+@media (max-width: 767px) {
+  .fd-intents-grid.fd-intents-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Linked photo cards (biodiversity page): image + title + "Read more". */
 .env-des-descriptor-image-link {
   display: block;
