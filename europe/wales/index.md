@@ -217,8 +217,13 @@ pipeline:
   - title: "Evidence-Based Change"
     subtitle: "Tracking change over time to support decision-making."
     icon: ic-change
-    url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
-    newtab: true
+    links:
+      - label: "Explore Evidence-Based Change Paper"
+        url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
+        newtab: true
+      - label: "See Change, Impacts-Pressures"
+        url: "/themes/change/"
+        newtab: true
 
   - title: "Future Landscapes"
     subtitle: "Modelling scenarios for policy and land management."
@@ -230,7 +235,7 @@ pipeline:
         url: "#"
       - title: "Harmonising"
         subtitle: "How can we agree?"
-        image: "/assets/img/Future2.jpg"
+        image: "/assets/img/Future1.jpg"
         url: "#"
       - title: "Realising"
         subtitle: "How can we be certain?"

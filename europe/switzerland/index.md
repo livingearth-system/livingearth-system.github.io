@@ -265,7 +265,7 @@ pipeline:
         url: "#"
       - title: "Harmonising"
         subtitle: "How can we agree?"
-        image: "/assets/img/Future2.jpg"
+        image: "/assets/img/Future1.jpg"
         url: "#"
       - title: "Realising"
         subtitle: "How can we be certain?"
