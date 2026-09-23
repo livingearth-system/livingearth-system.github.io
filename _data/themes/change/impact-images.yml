@@ -1,69 +1,69 @@
 # Picture shown in each impact's (i) pop-up on /themes/change/.
 # Keyed by the impact's exact title in _data/themes/change/impacts/index.yml.
-# To add a picture: put the image in assets/img/ and paste its path between the empty quotes.
+# To add a picture: put the image in assets/img/impacts/ and paste its full path between the quotes.
 # Empty entries fall back to the impact's generic category image until filled in.
 
-# ---------- NEEDS PICTURE (24) ----------
-"ALGAL DIEBACK": ""   # NEEDS PICTURE
-"BLACKWATER EVENT": ""   # NEEDS PICTURE
-"BUILDING OR INFRASTRUCTURE ABANDONMENT ": ""   # NEEDS PICTURE
-"CORAL BLEACHING": ""   # NEEDS PICTURE
-"CORAL DAMAGE": ""   # NEEDS PICTURE
-"CORAL RECOVERY": ""   # NEEDS PICTURE
-"CROP DAMAGE": ""   # NEEDS PICTURE
-"DEGLACIATION": ""   # NEEDS PICTURE
-"DESALINISATION": ""   # NEEDS PICTURE
-"GLACIATION": ""   # NEEDS PICTURE
-"LAVA FLOW": ""   # NEEDS PICTURE
-"MINE ABANDONMENT": ""   # NEEDS PICTURE
-"MINE CONSTRUCTION": ""   # NEEDS PICTURE
-"MINE EXPANSION": ""   # NEEDS PICTURE
-"NATURAL SURFACE LOSS": ""   # NEEDS PICTURE
-"RAILWAY OR ROAD ABANDONMENT": ""   # NEEDS PICTURE
-"RAILWAY OR ROAD CONSTRUCTION": ""   # NEEDS PICTURE
-"SEA ICE DECREASE": ""   # NEEDS PICTURE
-"SEA ICE INCREASE": ""   # NEEDS PICTURE
-"SEA LEVEL FALL": ""   # NEEDS PICTURE
-"SINKHOLE": ""   # NEEDS PICTURE
-"URBAN DAMAGE": ""   # NEEDS PICTURE
-"URBAN DECAY": ""   # NEEDS PICTURE
-"URBAN LOSS (EXTENT)": ""   # NEEDS PICTURE
+# ---------- NEEDS PICTURE (0) ----------
 
-# ---------- DONE (53) ----------
+# ---------- DONE (77) ----------
 "ACCRETION": "/assets/img/wales/big/albedo.jpg"
 "ALGAL BLOOM": "/assets/img/wales/big/algae-biomass.jpg"
+"ALGAL DIEBACK": "/assets/img/impacts/algal-dieback.jpg"
 "BARE SOIL EXPOSURE": "/assets/img/wales/big/soil.jpg"
+"BLACKWATER EVENT": "/assets/img/impacts/blackwater-event.jpg"
 "BROWNING (OF VEGETATION)": "/assets/img/wales/big/non-photosynthetic-vegetation.jpg"
+"BUILDING OR INFRASTRUCTURE ABANDONMENT ": "/assets/img/impacts/infrastructure-abandonment.jpg"
 "COMPACTION": "/assets/img/switzerland/soil-moisture.jpg"
+"CORAL BLEACHING": "/assets/img/impacts/coral-bleaching.jpg"
+"CORAL DAMAGE": "/assets/img/impacts/coral-damage.jpg"
+"CORAL RECOVERY": "/assets/img/impacts/coral-recovery.jpg"
 "CROP CHANGE IN CULTIVATED LANDS": "/assets/img/wales/big/crop-type.jpg"
+"CROP DAMAGE": "/assets/img/impacts/crop-damage.jpg"
 "CROP ESTABLISHMENT": "/assets/img/australia/crop-type.jpg"
 "CROPLAND GAIN": "/assets/img/wales/big/soil-texture.jpg"
 "CROPLAND LOSS": "/assets/img/switzerland/non-photosynthetic-vegetation.jpg"
+"DEGLACIATION": "/assets/img/impacts/deglaciation.jpg"
+"DESALINISATION": "/assets/img/impacts/desalination.jpg"
 "DESERTIFICATION": "/assets/img/australia/land.jpg"
 "ELEVATION CHANGE": "/assets/img/wales/big/dem.jpg"
 "EROSION": "/assets/img/wales/big/slope.jpg"
 "FLOODING": "/assets/img/australia/water-extent.jpg"
 "GEOMORPHOLOGICAL CHANGE": "/assets/img/switzerland/dem.jpg"
+"GLACIATION": "/assets/img/impacts/glaciation.jpg"
 "GREENING": "/assets/img/wales/big/leaf-area-index.jpg"
 "INCREASED SEDIMENT LOAD": "/assets/img/wales/big/cdom.jpg"
 "INUNDATION": "/assets/img/australia/water-turbidity.jpg"
 "INVASIVE OR EXOTIC SPECIES": "/assets/img/wales/big/bracken-and-scrub.jpg"
+"LAVA FLOW": "/assets/img/impacts/lava-flow.jpg"
 "LEAF SCORCH": "/assets/img/wales/big/foliar-chemistry.jpg"
+"MINE ABANDONMENT": "/assets/img/impacts/mine-abandonment.jpg"
+"MINE CONSTRUCTION": "/assets/img/impacts/mine-construction.jpg"
+"MINE EXPANSION": "/assets/img/impacts/mine-expansion.jpg"
 "NATURAL SURFACE GAIN": "/assets/img/australia/climate-variables.jpg"
+"NATURAL SURFACE LOSS": "/assets/img/impacts/natural-surface-loss.jpg"
 "NET SNOW GAIN (EXTENT)": "/assets/img/switzerland/snow-extent.jpg"
 "NET SNOW GAIN (HYDROPERIOD)": "/assets/img/wales/big/snow-depth.jpg"
 "NET SNOW LOSS (EXTENT)": "/assets/img/wales/big/snow-cover-fraction.jpg"
 "NET SNOW LOSS (HYDROPERIOD)": "/assets/img/switzerland/snow-cover-fraction.jpg"
 "PHENOLOGICAL CHANGE": "/assets/img/wales/big/phenology.jpg"
+"RAILWAY OR ROAD ABANDONMENT": "/assets/img/impacts/railway-abandonment.jpg"
+"RAILWAY OR ROAD CONSTRUCTION": "/assets/img/impacts/road-construction.jpg"
 "RECEDING FLOOD": "/assets/img/wales/big/water-seasonality.jpg"
 "SALINISATION": "/assets/img/wales/big/sea-surface-salinity.jpg"
+"SEA ICE DECREASE": "/assets/img/impacts/sea-ice-decrease.jpg"
+"SEA ICE INCREASE": "/assets/img/impacts/sea-ice-increase.jpg"
+"SEA LEVEL FALL": "/assets/img/impacts/sea-level-fall.jpg"
 "SEA LEVEL RISE": "/assets/img/wales/big/water.jpg"
 "SEDIMENTATION": "/assets/img/wales/big/water-turbidity.jpg"
+"SINKHOLE": "/assets/img/impacts/sinkhole.jpg"
 "SNOW ACCUMULATION": "/assets/img/wales/big/snow.jpg"
 "SNOW MELT": "/assets/img/wales/big/snow-water-equivalent.jpg"
+"URBAN DAMAGE": "/assets/img/impacts/urban-damage.jpg"
+"URBAN DECAY": "/assets/img/impacts/urban-decay.jpg"
 "URBAN DENSIFICATION": "/assets/img/wales/big/urban.jpg"
 "URBAN DEVELOPMENT": "/assets/img/wales/big/artificial-materials.jpg"
 "URBAN GROWTH": "/assets/img/australia/urban.jpg"
+"URBAN LOSS (EXTENT)": "/assets/img/impacts/urban-loss-extent.jpg"
 "URBAN RENEWAL": "/assets/img/wales/big/urban-vegetation.jpg"
 "URBAN SPRAWL": "/assets/img/australia/artificial-materials.jpg"
 "VEGETATION DAMAGE": "/assets/img/australia/air-pollutants.jpg"
