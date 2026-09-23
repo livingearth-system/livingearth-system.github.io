@@ -268,7 +268,7 @@ class LeafletMap {
     // Load data json by file name
 	async loadData(jsonFileName) {
         try {
-            const response = await fetch(`/assets/json/${jsonFileName}.json`);
+            const response = await fetch(`${window.SITE_BASEURL || ""}/assets/json/${jsonFileName}.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
