@@ -57,7 +57,10 @@ scrolls to it on load.
 <div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
   <div class="country-pipeline-panel-grid">
     {% for item in stage.sub_items %}
-    {% if item.url and item.url != "#" %}
+    {% assign desc = item.description %}{% unless desc %}{% assign gstage = site.data.pipeline | where: "label", stage.title | first %}{% if gstage.sub_items %}{% assign gitem = gstage.sub_items | where: "title", item.title | first %}{% if gitem %}{% assign desc = gitem.description %}{% endif %}{% endif %}{% endunless %}
+    {% if desc %}
+    <button type="button" class="country-pipeline-item country-pipeline-item-toggle" data-desc="{{ forloop.index0 }}" aria-expanded="false">
+    {% elsif item.url and item.url != "#" %}
     <a class="country-pipeline-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
     {% else %}
     <div class="country-pipeline-item country-pipeline-item-static">
@@ -65,13 +68,24 @@ scrolls to it on load.
       {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" class="country-pipeline-item-img">{% endif %}
       <span class="country-pipeline-item-title">{{ item.title }}</span>
       <span class="country-pipeline-item-sub">{{ item.subtitle }}</span>
-    {% if item.url and item.url != "#" %}
+    {% if desc %}
+    </button>
+    {% elsif item.url and item.url != "#" %}
     </a>
     {% else %}
     </div>
     {% endif %}
     {% endfor %}
   </div>
+  {% for item in stage.sub_items %}
+  {% assign desc = item.description %}{% unless desc %}{% assign gstage = site.data.pipeline | where: "label", stage.title | first %}{% if gstage.sub_items %}{% assign gitem = gstage.sub_items | where: "title", item.title | first %}{% if gitem %}{% assign desc = gitem.description %}{% endif %}{% endif %}{% endunless %}
+  {% if desc %}
+  <div class="country-pipeline-item-desc" data-desc-panel="{{ forloop.index0 }}" hidden>
+    <h3 class="country-pipeline-item-desc-title">{{ item.title }}</h3>
+    <p>{{ desc }}</p>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 
 {% elsif stage.categories %}
@@ -406,6 +420,25 @@ scrolls to it on load.
       panel.hidden = false;
       btn.setAttribute('aria-expanded', 'true');
     }
+  });
+
+  // Sub-item cards with a description: click to show it below the grid.
+  document.querySelectorAll('.country-pipeline-item-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.closest('.country-pipeline-panel');
+      var id = btn.getAttribute('data-desc');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      panel.querySelectorAll('.country-pipeline-item-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      panel.querySelectorAll('.country-pipeline-item-desc').forEach(function (d) { d.hidden = true; });
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        var desc = panel.querySelector('.country-pipeline-item-desc[data-desc-panel="' + id + '"]');
+        if (desc) { desc.hidden = false; }
+      }
+    });
   });
 
   // Deep-link support: /europe/wales/#pipeline-environmental-descriptors
