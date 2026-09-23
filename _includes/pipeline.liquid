@@ -39,7 +39,9 @@ newtab, url2_newtab, hide_countries, sub_items per stage).
   {% if stage.sub_items %}
   <div class="pipeline-item-grid">
     {% for item in stage.sub_items %}
-    {% if item.url and item.url != "#" %}
+    {% if item.description %}
+    <button type="button" class="pipeline-item pipeline-item-toggle" data-desc="{{ forloop.index0 }}" aria-expanded="false">
+    {% elsif item.url and item.url != "#" %}
     <a class="pipeline-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
     {% else %}
     <div class="pipeline-item pipeline-item-static">
@@ -47,13 +49,21 @@ newtab, url2_newtab, hide_countries, sub_items per stage).
       {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" class="pipeline-item-img">{% endif %}
       <span class="pipeline-item-title">{{ item.title }}</span>
       <span class="pipeline-item-sub">{{ item.subtitle }}</span>
-    {% if item.url and item.url != "#" %}
+    {% if item.description %}
+    </button>
+    {% elsif item.url and item.url != "#" %}
     </a>
     {% else %}
     </div>
     {% endif %}
     {% endfor %}
   </div>
+  {% for item in stage.sub_items %}{% if item.description %}
+  <div class="pipeline-item-desc" data-desc-panel="{{ forloop.index0 }}" hidden>
+    <h3 class="pipeline-item-desc-title">{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+  </div>
+  {% endif %}{% endfor %}
   {% endif %}
 
   {% if stage.url %}
@@ -127,6 +137,25 @@ newtab, url2_newtab, hide_countries, sub_items per stage).
         btn.setAttribute('aria-expanded', 'true');
         btn.classList.add('is-active');
         if (panel) { panel.hidden = false; }
+      }
+    });
+  });
+
+  // Sub-item cards with a description: click to show it below the grid.
+  document.querySelectorAll('.pipeline-item-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.closest('.pipeline-panel');
+      var id = btn.getAttribute('data-desc');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      panel.querySelectorAll('.pipeline-item-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      panel.querySelectorAll('.pipeline-item-desc').forEach(function (d) { d.hidden = true; });
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        var desc = panel.querySelector('.pipeline-item-desc[data-desc-panel="' + id + '"]');
+        if (desc) { desc.hidden = false; }
       }
     });
   });
