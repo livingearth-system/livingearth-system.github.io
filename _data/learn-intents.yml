@@ -8,7 +8,7 @@
   icon: "tag"
   url: "#taxonomies"
 
-- title: "Handbook"
-  description: "Technical reference material and developer resources for working with Living Earth data."
+- title: "Code & Repositories"
+  description: "Classification code, notebooks and repositories for working with Living Earth data."
   icon: "academic-cap"
-  url: "#handbook"
+  url: "/tools/for-developers/#code"

@@ -7,7 +7,7 @@ Same card pattern as _includes/for-developers-intents.liquid.
   <h2 class="fd-intents-heading">What do you want to do?</h2>
   <div class="fd-intents-grid">
     {% for item in site.data['learn-intents'] %}
-      <a class="fd-intent-card" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">
+      <a class="fd-intent-card" href="{% assign first_char = item.url | slice: 0 %}{% if item.url contains 'http' or first_char == '#' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">
         <span class="fd-intent-icon">
           {% if item.icon == 'book' %}
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>

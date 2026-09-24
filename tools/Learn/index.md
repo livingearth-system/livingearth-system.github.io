@@ -34,30 +34,9 @@ taxonomies_blocks:
       - label: "View the code on GitHub"
         url: "https://github.com/livingearth-system/Globalchangeframework"
         newtab: true
-handbook_blocks:
-  - title: "GitHub"
-    logo: "/assets/img/hubs/developer-hub/github.png"
-    description: "All Living Earth software, including this website, is hosted and developed collaboratively on GitHub."
-    url: "https://www.github.com"
-    newtab: true
-  - title: "Jupyter Notebooks"
-    logo: "/assets/img/hubs/developer-hub/jupyter.png"
-    description: "Standardised notebooks for exploring and analysing satellite data in your personalised country workspace — use as-is or modify and share."
-    url: "https://knowledge.dea.ga.gov.au/"
-    newtab: true
-  - title: "Notebook Repositories"
-    logo: "/assets/img/hubs/developer-hub/repository.png"
-    description: "Country-specific algorithm repositories for retrieving and classifying environmental descriptors, enabling consistent validation across countries."
-    url: "#"
-  - title: "Land Cover Classification"
-    logo: "/assets/img/hubs/developer-hub/faolccscode.png"
-    description: "Code for classifying land cover according to the FAO Land Cover Classification System (LCCS)."
-    url: "https://livingearth-lccs.readthedocs.io/en/latest/index.html"
-    newtab: true
 ---
 
 {%- include learn-intents.liquid -%}
 
 {% include info-blocks.liquid list=page.taxonomies_blocks heading="Taxonomies" id="taxonomies" variant="horizontal" %}
 
-{% include info-blocks.liquid list=page.handbook_blocks heading="Handbook" id="handbook" variant="horizontal" %}

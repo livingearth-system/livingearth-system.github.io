@@ -1,20 +1,16 @@
 ---
-layout: page
-
+layout: null
 permalink: /developer-hub/
-header: "Developer hub"
-headerTop: "Developer Hub"
-title: "Developer Hub Entry"
-subtitle: "For programmers and product developers"
-image: "/assets/img/hubs/developer-hub/developer_koala.png"
-background: "#252C0B"
-nocontact: false
-nobuttons: true
-Nosvg: false
 ---
-
-{%-
-include developer-hub.liquid
-header="Living Earth has been developed within the framework of the Open Data Cube and is programmed largely in python.  There are numerous opportunities to advance the code for retrieving or classifying the environmental descriptors and/or advancing the classification of land covers and habitats and change."
--%}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ '/tools/for-developers/#code' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/tools/for-developers/#code' | relative_url }}">
+</head>
+<body>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/tools/for-developers/#code' | relative_url }}">For Developers</a>.</p>
+</body>
+</html>
