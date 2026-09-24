@@ -17,10 +17,10 @@ learn:
     icon: "leaf"
     description: "Browse the ~40 environmental descriptors used to build Living Earth's maps, grouped by category."
     url: "/env-des/"
-  - title: "Handbooks"
+  - title: "Code & Repositories"
     icon: "book"
-    description: "Reference guides and repositories for working with Living Earth's software and data."
-    url: "/tools/learn/#handbook"
+    description: "Classification code, notebooks and repositories for working with Living Earth's software and data."
+    url: "/tools/for-developers/#code"
 
 for-developers:
   - title: "Download Data"

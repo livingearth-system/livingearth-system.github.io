@@ -249,7 +249,7 @@ scrolls to it on load.
 {% endfor %}
 
 <div class="pipeline-footer-boxes">
-  <a class="pipeline-footer-box" href="{% if page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' contains 'http' %}{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}{% else %}{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' | relative_url }}{% endif %}">
+  <a class="pipeline-footer-box" href="{% if page.pipeline_validation_url | default: '/tools/earthtrack-app' contains 'http' %}{{ page.pipeline_validation_url | default: '/tools/earthtrack-app' }}{% else %}{{ page.pipeline_validation_url | default: '/tools/earthtrack-app' | relative_url }}{% endif %}">
     Calibration and Validation
   </a>
   {% if page.pipeline_outreach_url %}

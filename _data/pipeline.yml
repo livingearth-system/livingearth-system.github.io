@@ -14,7 +14,7 @@
   label: "Classification of Land Cover & Habitats"
   detail: "Historical and near real-time classification of the landscape."
   url: /themes/landhabcover/
-  url2: "/tools/interactive-map/"
+  url2: "/tools/interactive-map"
   url2_label: "Explore the Interactive Map"
   hide_countries: true
 

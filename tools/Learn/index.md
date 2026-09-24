@@ -22,7 +22,7 @@ taxonomies_blocks:
   - title: "Habitats"
     icon: "leaf"
     description: "Country- and region-specific habitat classification, built on FAO LCCS land cover classes combined with local ecological context. Currently generated for Wales."
-    url: "https://data.jncc.gov.uk/data/9578d07b-e018-4c66-9c1b-47110f14df2a/Handbook-Phase1-HabitatSurvey-Revised-2016.pdf"
+    url: "https://jncc.gov.uk/resources/9578d07b-e018-4c66-9c1b-47110f14df2a"
     newtab: true
   - title: "Change"
     icon: "change"

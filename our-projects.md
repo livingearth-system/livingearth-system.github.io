@@ -23,7 +23,7 @@ quicklinks:
     url: /about/
     icon: about.png
   - title: "Meet the Team"
-    url: /meet-our-team/
+    url: /about/#meet-the-team
     icon: team.png
   - title: "Case Study"
     url: /case-study/

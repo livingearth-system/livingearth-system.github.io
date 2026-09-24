@@ -11,7 +11,7 @@ breadcrumb:
     url: "/"
   - label: "Australia"
     url: "/oceania/australia/"
-pipeline_validation_url: "https://livingearthhub.org/tools/earthtrack-app?country=world"
+pipeline_validation_url: "/tools/earthtrack-app?country=Australia"
 pipeline_outreach_url: "https://knowledge.dea.ga.gov.au/"
 pipeline:
   - title: "Earth Observation Data"

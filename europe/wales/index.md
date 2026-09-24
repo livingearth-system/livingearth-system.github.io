@@ -11,7 +11,7 @@ breadcrumb:
     url: "/"
   - label: "Wales"
     url: "/europe/wales/"
-pipeline_validation_url: "https://livingearthhub.org/tools/earthtrack-app?country=Wales"
+pipeline_validation_url: "/tools/earthtrack-app?country=Wales"
 pipeline_outreach_url: "https://www.aber.ac.uk/en/modules/2027-2028/modules/module/?module=EAM0020-AB1"
 pipeline:
   - title: "Earth Observation Data"
@@ -211,8 +211,7 @@ pipeline:
   - title: "Classification of Land Cover & Habitats"
     subtitle: "Historical and near real-time classification of the landscape."
     icon: ic-map
-    url: "https://livingearthhub.org/tools/interactive-map"
-    newtab: true
+    url: "/tools/interactive-map"
 
   - title: "Evidence-Based Change"
     subtitle: "Tracking change over time to support decision-making."
@@ -262,8 +261,7 @@ pipeline:
         url: "https://insights.livingwales.space/"
         newtab: true
       - label: "Earthtrack App"
-        url: "https://livingearthhub.org/tools/earthtrack-app?country=Wales"
-        newtab: true
+        url: "/tools/earthtrack-app?country=Wales"
       - label: "Analyse the Data"
         url: "https://hub.livingwales.space/hub/spawn"
         newtab: true
