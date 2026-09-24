@@ -37,7 +37,7 @@ quicklinks:
 info_blocks:
   - title: "Living Wales"
     description: "National mapping of Wales through Living Earth"
-    url: "http://livingearthhub.org/our-projects/living-wales/"
+    url: "/our-projects/living-wales/"
     image: "/assets/img/projects/livingwales_lccs.png"
 
   - title: "DEA Land Cover"
@@ -47,7 +47,7 @@ info_blocks:
 
   - title: "Living Coasts"
     description: "Mapping, monitoring and future planning of coastal ecosystems."
-    url: "http://livingearthhub.org/our-projects/living-coasts/"
+    url: "/our-projects/living-coasts/"
     image: "/assets/img/heading/livingcoasts_moreton_a.png"
 
   - title: "Living Switzerland"
@@ -57,17 +57,17 @@ info_blocks:
 
   - title: "Living PNG"
     description: "Living Earth for Papua New Guinea"
-    url: "http://livingearthhub.org/our-projects/living-PNG/"
+    url: "/our-projects/living-PNG/"
     image: "/assets/img/projects/livingcoasts_png_a.png"
 
   - title: "Dynamic Land"
     description: "Quantitative land cover contents and map generation through Living Earth."
-    url: "http://livingearthhub.org/our-projects/dynamic-land/"
+    url: "/our-projects/dynamic-land/"
     image: "/assets/img/projects/dynamicland.png"
 
   - title: "Living Watersources"
     description: "Applying Living Earth to freshwater environments."
-    url: "http://livingearthhub.org/our-projects/living-watersources/"
+    url: "/our-projects/living-watersources/"
     image: "/assets/img/projects/livingwatersources_a.png"
 
   - title: "Living Land Management"

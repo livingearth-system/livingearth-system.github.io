@@ -1,0 +1,20 @@
+/* PROJECT SECTIONS — Our Projects detail pages. Alternating image / text rows.
+   Colours match info-blocks: Card BG #EAF6FB · Ocean Blue #00577E · Body #3A5A68 */
+.project-intro { font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.65; color: #3A5A68; max-width: 860px; margin: 0 0 56px; }
+.project-intro p { margin: 0 0 16px; }
+.project-sections { display: flex; flex-direction: column; gap: 56px; }
+.project-section { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; align-items: start; }
+.project-section--flip .project-section-media { order: 2; }
+.project-section-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
+.project-section-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #00577E; margin: 0 0 12px; }
+.project-section-text { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.65; color: #3A5A68; }
+.project-section-text p { margin: 0 0 12px; }
+.project-section-text a { color: #00577E; text-decoration: underline; }
+.project-section-link { display: inline-block; margin-top: 8px; padding: 10px 18px; background: #EAF6FB; border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 14px; color: #00577E; text-decoration: none; }
+.project-section-link:hover { background: #d6eef8; text-decoration: none; color: #00577E; }
+@media (max-width: 767px) {
+  .project-sections { gap: 40px; }
+  .project-section { grid-template-columns: 1fr; gap: 16px; }
+  .project-section--flip .project-section-media { order: 0; }
+  .project-intro { font-size: 16px; margin-bottom: 40px; }
+}

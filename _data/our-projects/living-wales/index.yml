@@ -13,7 +13,7 @@
   url: "#"
 
 - title: "STRATEGIC PLAN"
-  image: "/assets/img/living_wales/llivingwales_farmland.png"
+  image: "/assets/img/living_wales/livingwales_farmland.png"
   subtitle: "Planning for the future of coasts"
   content: "The Strategic Plan for Living Wales (2018-2023) [LINK TO PDF on livingearthhub.org - LivingWalesStrategicPlan_2018-2023.pdf] outlined the requirement to promote and build national capability in Earth observation to benefit the prosperity  of Wales, whilst ensuring long-term sustainability of the environment and resources and resilience to climate and economic change.   "
   tagline: "Tagline 3"
@@ -30,7 +30,7 @@
   image: "/assets/img/living_wales/dinas_agrienv.png"
   subtitle: "Planning for the future of coasts"
   content: "Effective monitoring of agri-environment schemes requires consistent, repeated landscape mapping to establish baseline conditions and changes from these.  Living Wales has generated maps nationally and for multiple years and these can provide useful information on change, particularly where  land cover and habitat classes occupy areas larger than the nominal 10 m map resolution.  However, more detailed mapping is often needed, particularly as many schemes are focusing on replanting forests, restoring hedgerows and revitalising wetlands.  Living Wales is able to support this by determining, from very high resolution airborne and spaceborne data and derived products, the area proportions within each 10 m cell and summary metrics (e.g., average height and cover of hedgerows).  Furthermore, the land cover classification can be repeated using environmental descriptors obtained from these higher resolution data or the classes can be translated into others taxonomies.   The mapping can also be used to direct and/or prioritise ground-based evaluations, which can be assisted through use of the 
-Earthtrack mobile application [Link to https://livingearthhub.org/tools/earthtrack-app-information/], which allows on-site recording of land cover, habitats and change."
+[Earthtrack mobile application](/tools/earthtrack-app), which allows on-site recording of land cover, habitats and change."
   tagline: "Tagline 3"
   url: "#"
 
