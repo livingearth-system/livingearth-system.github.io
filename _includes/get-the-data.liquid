@@ -12,12 +12,13 @@
       </p>
       {% for item in site.data['get-the-data-information'].index['available-link-data'] %}
         <h3 class="article_heading">{{ item.title }}</h3>
-        {% assign descriptions = item.description | newline_to_br | split: '<br>' %}
+        {% assign base_href = 'href="' | append: site.baseurl | append: '/' %}
+        {% assign descriptions = item.description | replace: 'href="/', base_href | newline_to_br | split: '<br>' %}
         {% for description in descriptions %}
           <p class="article_description">{{ description }}</p>
         {% endfor %}
 
-        {% if item['country/region-header'] != "" %}
+        {% if item['country/region-header'] and item['country/region-header'] != "" %}
         <table class="data-table">
           <thead>
             <tr>

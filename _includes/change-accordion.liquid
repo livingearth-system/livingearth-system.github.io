@@ -138,7 +138,8 @@ Usage: {% include change-accordion.liquid %}
                         {% if item.content %}
                         <button type="button" class="env-desc-item-info" aria-label="What is {{ display_title }}?">i</button>
                         <span class="env-desc-item-tooltip env-desc-item-tooltip-media">
-                          {% if item.image %}<img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="" class="env-desc-item-tooltip-img">{% endif %}
+                          {% assign pop_img = site.data['themes']['change']['impact-images'][item.title] | default: item.image %}
+                          {% if pop_img %}<img src="{% if pop_img contains 'http' %}{{ pop_img }}{% else %}{{ pop_img | relative_url }}{% endif %}" alt="" class="env-desc-item-tooltip-img" loading="lazy">{% endif %}
                           <span class="env-desc-item-tooltip-text">{{ item.content }}</span>
                         </span>
                         {% endif %}

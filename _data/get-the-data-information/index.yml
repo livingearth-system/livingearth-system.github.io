@@ -14,39 +14,13 @@ available-link-data:
       - country_region: ""
         access_link: ""
 
-  - title: "How can I download satellite data to an analysis ready data (ARD) format?"
-    description: "You can download the ARD data directly from for each country or region at:"
-    country/region-header: "Country/Region"
-    link-header: "Access to Jupyter notebooks"
-    data_table:
-      - country_region: "Australia"
-        access_link: "http://livingearthhub.org/oceania/australia/analysis-ready-data/#"
-        newtab: true
-      - country_region: "Wales"
-        access_link: "http://livingearthhub.org/europe/wales/analysis-ready-data/"
-        newtab: true
-      - country_region: "Switzerland"
-        access_link: "https://explorer.swissdatacube.org/"
-        newtab: true
-
+  - title: "How can I download satellite data in an analysis ready data (ARD) format?"
+    description: "Direct links to the ARD for each country or region are listed under <a href=\"/tools/for-developers/#browse-by-country\">Browse by Country</a> above."
   - title: "How can I download the Living Earth products, such as land cover, habitat and change maps and the environmental descriptors?"
     description: "The products generated through Living Earth can be downloaded directly from the <a href=\"/tools/interactive-map\">interactive map</a>."
 
-  - title: "Can I access the data through your Countries data cube?"
-    description: "If you do not want to download the data but instead use within the Open Data Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be uploaded and integrated into your workflows."
-    country/region-header: "Country/Region"
-    link-header: "Access to Jupyter notebooks"
-    data_table:
-      - country_region: "Australia"
-        access_link: "https://app.sandbox.dea.ga.gov.au/"
-        newtab: true
-      - country_region: "Wales"
-        access_link: "https://livingwales.aber.ac.uk/jhub"
-        newtab: true
-      - country_region: "Switzerland"
-        access_link: "https://www.swissdatacube.org/index.php/platform/"
-        newtab: true
-
+  - title: "Can I access the data through your country's data cube?"
+    description: "If you do not want to download the data but instead use within the Open Data Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be uploaded and integrated into your workflows. Login links for each country are listed under <a href=\"/tools/for-developers/#browse-by-country\">Browse by Country</a> above."
   - title: "How do I get access to the ground observation records submitted to Earthtrack?"
     description: "Earthtrack data are available for viewing on the Earthtrack mobile application immediately following submission.
 
@@ -58,9 +32,6 @@ available-link-data:
     country/region-header: "Dataset"
     link-header: "Direct link"
     data_table:
-      - country_region: "Land cover"
-        access_link: "https://earthtrack.aber.ac.uk/lccs/lccs_world.html"
-        newtab: true
       - country_region: "Habitat"
         access_link: "https://earthtrack.aber.ac.uk/campaign/habitat_world.html"
         newtab: true
