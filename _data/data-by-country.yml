@@ -9,7 +9,7 @@
     - label: "Fire (Earthtrack)"
       url: "https://earthtrack.aber.ac.uk/campaign/fire_world.html"
     - label: "Web Feature Service (WFS)"
-      url: "https://earthtrack.aber.ac.uk/services/wfs"
+      url: "https://earthtrack.aber.ac.uk/services/wfs?service=WFS&request=GetCapabilities"
 
 - id: wales
   title: "Wales"
