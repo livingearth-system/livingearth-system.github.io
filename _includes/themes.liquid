@@ -5,13 +5,13 @@
         <div class="common-blog-title">
             {%- if include.heading -%}<h3>{{ include.heading }}</h3>{% endif %}
             {%- if include.all -%}<button type="button" onclick="location.href='{{ include.url }}'">{{ include.all }}
-                <img src="/assets/icon/arrowright.svg" alt=""></button>{% endif %}
+                <img src="{{ '/assets/icon/arrowright.svg' | relative_url }}" alt=""></button>{% endif %}
         </div>
     </div>
     <div class="d-flex themes_wrapper">
         {% for box in site.data.themes.index %}
         <div class="theme_wrapper">
-            <a href="#"><img src="{{ box.image }}" alt=""></a>
+            <a href="#"><img src="{% if box.image contains 'http' %}{{ box.image }}{% else %}{{ box.image | relative_url }}{% endif %}" alt=""></a>
             <div class="themes_title_wrapper">
                 <p class="themes_title">
                     {{ box.title }}

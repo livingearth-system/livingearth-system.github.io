@@ -1,0 +1,88 @@
+# WELSH REFERENCE ECOSYSTEMS AND MODIFIED STATES
+# Content for /europe/wales/themes/welsh-reference-ecosystems-and-modified-states/
+# Rendered by _includes/welsh-states.liquid, used on both the Biodiversity page
+# (as a dropdown group) and the Welsh reference ecosystems page itself:
+#   group (dropdown)  ->  habitat (heading + text)  ->  state cards (photo + text)
+#
+# To add a habitat or state, copy an existing block. Only things that have text
+# are shown; anything not listed here does not appear on the page.
+#   state fields: title, image, tag (optional: e.g. "Reference state"), text
+#   text may use <i>...</i> for Latin names; a blank line starts a new paragraph.
+
+intro:
+  - "Ecosystems are generally complex and difficult to define and, more often than not, comprise a wide range of habitats; typically combining semi-natural, agricultural and non-natural components. This part of the website describes the main habitat groups in Wales, and the more recognisable seral phases of those habitats, some of which are now confined to small fragments and located in areas unsuitable for human land-use. The more common reference states (arising through natural processes) and modified states (arising as consequence of anthropogenic impacts) are described. These illustrate how different pressures have impacted on Wales' ecosystems over varying time frames and led to the habitats that we see today. The main management pressures on each habitat are identified."
+  - "Knowledge of reference states (e.g., in terms of vegetation structure and floristic composition) is important to define (on the ground and also through Earth observations and other spatial assessments) as this informs and can promote strategic restoration programmes that take into account the likely impact on biodiversity associated with each habitat. In Wales, most habitats do not exist in the reference states largely because of human activities but also climate change. Hence, a better term to use is benchmark states, which can be described either from expert knowledge or direct measurement."
+
+groups:
+- id: "agricultural"
+  title: "Agricultural and man-made habitats"
+  image: "/assets/img/agricultural-habitats.jpg"
+  intro: "According to the latest agricultural statistics, the area of agricultural habitats in Wales is 1,677,072 ha, which represents c.80% of the land area, which increases to 88% when common land is included. These habitats comprise a mix of arable habitats, permanent grassland, rough grazings, woodland, scrub and hedgerows. Hay meadows and pastures, which are also considered in the section on semi-natural habitat components, have been included here because they are essentially agricultural habitats and would not exist without the appropriate management regimes."
+  habitats:
+    - id: "arable"
+      title: "Arable habitats"
+      image: "/assets/img/wales/benchmark/Tilled land.jpg"
+      states:
+        - title: "Tilled land"
+          image: "/assets/img/wales/benchmark/Tilled land.jpg"
+          text: "Tilled land tends to be visible for relatively short periods but becomes a striking feature of the landscape in the period from ploughing to seed germination and crop development. It can attract large groups of invertebrate feeding birds, e.g., crows and gulls, and seed-eating pigeons and finches. For research purposes, from the increasingly regular availability of high resolution satellite images we can detect both the approximate timing of ploughing and crop harvesting, which is important land use information."
+        - title: "Cultivated crops"
+          image: "/assets/img/wales/benchmark/Maize.jpg"
+          text: "The most commonly grown cultivated crops in Wales are fodder crops, e.g. maize and oilseed rape, which account for about 30% of the total area. Barley (25%) and wheat (24%) are the most popular cereals, with c.4% of cultivated land supporting potato crops. A combination of less commonly grown crops, e.g. field beans and flax, accounts for the remaining area. The intensity of the cultivation management regime will determine the biodiversity associated with it. The highest biodiversity will be found in crops, or crop margins, that are not fertilised with nitrogen and/or phosphorus based products, or sprayed with herbicides or insecticides.\n\nSadly, the vast majority of cultivated crops in Wales are planted right up to the field boundaries, heavily fertilised and sprayed with both herbicides and insecticides, leaving the crop virtually devoid of biodiversity value. This is a relative trend in Wales at least and the situation could still be recovered to some degree through the availability of appropriate incentives in the agri-environment scheme and through modifying the qualification guidelines for the selection of arable Sites of Special Scientific Interest so that it is possible for sites in Wales to be designated. In the absence of these changes the outlook for the threatened fauna and flora associated with arable land in Wales is bleak, and fields of poppies (<i>Papaver rhoeas</i>) and the song of yellowhammers (<i>Emberiza citrinella</i>) will be consigned to the past."
+        - title: "Untreated fallow land and crops"
+          image: "/assets/img/wales/benchmark/Untreated_fallow.jpg"
+          text: "Untreated crops, i.e., crops that have not been treated with fertilisers, herbicides and insecticides, are rare in the Welsh countryside now and any that do exist will almost certainly be owned and/or managed for biodiversity reasons. The last example of a ‘poppy field’ in West Wales has been ‘under grass’ and not been cultivated for more than a decade at the time of writing, due largely to pressure from neighbouring landowners not wanting seeds contaminating their crops. The arable flora on this farm was nationally important at the time and also supported flocks of larks, pipits, finches and buntings during the winter months.\n\nIn the current climate, the plants, insects and birds associated with arable habitats in Wales are under serious threat of disappearing from the landscape. It is a failing of nature conservation that, despite covering about 10% of the land area, there is only one protected site in Wales that was designated for the protection of arable plant habitats."
+    - id: "grasslands"
+      title: "Agricultural grasslands"
+      image: "/assets/img/wales/benchmark/Reseeded_Lolium_and_clover_ley.jpg"
+      text: "The vast majority of grassland habitats in Wales are agriculturally-improved and support little of biodiversity interest for either the fauna or flora. The loss of species-rich hay meadows from the Welsh landscape is well documented, with more than 95% being lost, primarily through conversion to silage and permanent pasture, since the 1950s. Of those that remain, many are degrading in quality, either through eutrophication (from neighboring fields and/or nitrogen depositions), or from neglect. Vast tracts of grassland in Wales are now virtually barren of biodiversity interest and it is now possible to drive around the Welsh countryside for hours in winter and not see a flock of thrushes, finches, larks or buntings such is the damage caused by decades of overgrazing, ploughing, reseeding, fertiliser treatments and pesticide applications."
+      states:
+        - title: "Silage"
+          image: "/assets/img/wales/benchmark/Silage.jpg"
+          text: "Silage has largely replaced hay as the main winter feed for animals in the UK, at a huge cost to the biodiversity of farmland in Wales. Silage seed mixes can be one-year to five-year leys, are typically dominated by highly productive grass cultivars and/or legumes and can produce sufficient biomass to allow three or more silage cuts annually – starting in early-mid May. From a farming perspective, silage is largely favoured over hay because a) it preserves more nutrients per ha as there is less field loss, b) it is less affected by weather damage because the cut biomass does not need to lie in the field drying before storage, c) it is less labour intensive than haymaking and d) because silage is better as an ingredient in mixed rations for livestock. Conversely, a) there can be substantial losses in storage if the silage is mismanaged or b) the silage is not fed-out quickly enough, c) the cost of investing in storage equipment that is not multi-purpose can be high and d) silage is heavy and difficult to move.\n\nSilage fields are becoming increasingly common in the Welsh landscape, replacing not only hay meadows but also areas previously dedicated to producing other fodder crops. This ongoing process of conversion to silage is one of the major threats to biodiversity in the wider countryside of Wales."
+    - id: "hedgerows"
+      title: "Hedgerows and hedgebanks"
+      image: "/assets/img/agricultural-habitats.jpg"
+      text: "It is estimated that some 50% of hedgerows in the UK have been removed since the early 1950s, primarily to maximise food production in the aftermath of World War II. The main hedgerow components in Wales are blackthorn (<i>Prunus spinosa</i>), hawthorn (<i>Crataegus monogyna</i>) and European gorse (<i>Ulex europaeus</i>), though a wide variety of other trees and shrubs also commonly contribute. Hedgerows play an important connectivity role in the UK countryside, providing links between ever-more fragmented patches of semi-natural habitat. They also provide an important early source of pollen and nectar for pollinators, important breeding and sheltering sites for birds and mammals, and an important source of autumn berries, particularly for migrating winter thrushes.\n\nFor these reasons, the timing of any hedgerow management is critical. If trimming occurs in early spring or summer it will not only disturb nesting birds, it will also impact on the availability of spring flowers for pollinators and consequently the availability of autumn berries. In the not too distant past, this was considered the optimum time for hedgerow trimming. Currently, the favoured time for thrashing and trimming is in late summer/early autumn, removing the vast majority of fruits before the migrating winter thrushes arrive."
+
+- id: "semi-natural"
+  title: "Semi-natural ecosystems"
+  image: "/assets/img/semi-natural-ecosystem-components.jpg"
+  intro: "Wales has a diverse range of semi-natural ecosystems that exist primarily in a modified state, with these including forests, woodlands, scrub and bracken, grasslands, heaths and mires, fens and swamps, as well as standing water and water courses. Around the coast, the main habitats are coastal dunes, cliffs, boulder fields and screes and those associated with intertidal areas. Recognising the value of these habitats and providing a benchmark to inform and target restoration is essential, particularly as significant knowledge has been lost over generations because many reference states no longer exist."
+  habitats:
+    - id: "forest-woodland"
+      title: "Forest, woodland and scrub"
+      image: "/assets/img/wales/benchmark/Mature Atlantic Sessile oak woods.jpg"
+      states:
+        - title: "Ravine woodlands"
+          image: "/assets/img/wales/benchmark/Ravine woodlands.jpg"
+          tag: "Sessile oak · Reference state"
+          text: "The most ‘natural’ reference state for sessile oakwoods in Wales are ravine woodlands in the most ‘oceanic’ west of the country. The best, and perhaps only, example is found at Devil’s Bridge in Ceredigion. Here, the wood experiences high levels of humidity as a consequence of a waterfall running through the valley and remains unmanaged in terms of felling largely because of the steep nature of the valley sites. However, the steep-sided valley also prevents removal of unwanted species such as <i>Rhododendron ponticum</i>. This wood is therefore an example of how the habitat would develop in the absence of an active management programme or as a consequence of ‘rewilding’."
+        - title: "Mature Atlantic sessile oak woods"
+          image: "/assets/img/wales/benchmark/Mature Atlantic Sessile oak woods.jpg"
+          tag: "Sessile oak · Reference state"
+          text: "This is defined by mature stands of sessile oak woodland in an oceanic ‘high humidity’ location. It comprises trees with a mixed-age structure, i.e. not felled in the 20th century, and has successful regeneration of oak saplings in the field layer under canopy gaps. This is achieved by ‘pulse grazing’, where animals are allowed into the wood one year in every five or six to maintain an open field layer. This allows tree saplings to persist and grow beyond the reach of grazers in the years between grazing events. The best example of this in Wales is at Coed Cymerau.\n\nMost sessile oakwoods in Wales are single-aged and intensively sheep-grazed with little, if any, successful regeneration (see modified states)."
+        - title: "Sheep-grazed Atlantic sessile oak woods"
+          image: "/assets/img/wales/benchmark/Sheep-grazed Atlantic sessile oak woods.jpg"
+          tag: "Sessile oak · Modified state"
+          text: "These are grazed by sheep leading to a loss of understorey vegetation and new growth."
+        - title: "Sessile oak bluebell woods"
+          image: "/assets/img/wales/benchmark/Sessile oak bluebell woods.jpg"
+          tag: "Sessile oak · Modified state"
+          text: "These aesthetically pleasing sessile oak woods tend to occur in less oceanic locations with lower levels of humidity. Many of the woods are single-aged as a result of clear-felling for timber during the last century and they are typically sheep-grazed with low levels of regeneration. The spring groundflora is often dominated by bluebells (<i>Hyacinthoides non-scripta</i>) and very pleasing on the eye. This is often overgrown by bracken (<i>Pteridium aquilinum</i>) as the bluebells die back.\n\nThe bryophyte and lichen interest in these woods tends to be lower than in more oceanic examples of the habitat, but there can be a dense population of woodland birds, with the bracken providing cover for the ground nesting Wood Warblers (<i>Phylloscopus sibilatrix</i>) and tree pipits (<i>Anthus trivialis</i>). These young woods are also favoured by birdwatchers and tend to be populated by large numbers of nest boxes, primarily to attract Pied Flycatchers (<i>Ficedula hypoleuca</i>) and Redstarts (<i>Phoenicurus phoenicurus</i>) that will struggle to find ‘natural’ nest sites in young trees."
+        - title: "Beech woods"
+          image: "/assets/img/wales/benchmark/Beech woods.jpg"
+          text: "Native beech (<i>Fagus sylvatica</i>) woods occur on neutral to acidic soils and reach their western UK limit at Castell Coch – on the western boundary of Cardiff. The reference state for beech woodland is defined by a mixed age structure and the presence of successful regeneration under canopy gaps. However, as a consequence of intensive deer grazing, the classic image of a UK beech wood shows mature single-aged stands lacking an understorey, regeneration and field layer. The beechwoods in south-east Wales are less intensively deer-grazed than those in England, and some stands of beech on south-facing slopes in the Castell Coch area of Cardiff are good examples of the reference state. Beech is considered likely to benefit from climate change, with a predicted spread to the north and west."
+        - title: "Lime, ash and sycamore woodland"
+          image: "/assets/img/wales/benchmark/Lime-Ash-Oak woodland.jpg"
+          text: "This is a scarce woodland type in Wales and is restricted to relatively small fragmented stands in the limestone areas. These woods equate to the Natura 2000 ‘Tilio-Acerion forests of slopes, screes and ravines’ habitat (9180), with the best, and most extensive, examples in the UK found in the Wye Valley. The Welsh stands of the habitat tend to have a lot of ash (<i>Fraxinus excelsior</i>), small-leaved lime (<i>Tilia cordata</i>), sycamore (<i>Acer pseudoplatanus</i>) and wych elm (<i>Ulmus glabra</i>) in the canopy, though ash is likely to decline through Chalara infections, with sycamore the most likely beneficiary. Although not considered native in the UK, sycamore is well-represented in many Welsh stands, as it is in the continental examples of this woodland community."
+
+- id: "non-natural"
+  title: "Non-natural ecosystems"
+  image: "/assets/img/wales/artificial-materials.jpg"
+  intro: "Some of our non-natural ecosystem components have important roles to play."
+  habitats:
+    - id: "urban"
+      title: "Urban terrestrial habitats"
+      image: "/assets/img/wales/artificial-materials.jpg"
+      text: "Urban terrestrial habitats are undervalued, both for their current natural history importance and as a teaching resource. There is no more powerful illustration of habitat succession than the image of nature reclaiming a former industrial site. In fact, brownfield sites and abandoned industrial areas are important both as reference points for our cultural history and as snapshots of how abandoned land will develop in the future.\n\nThe so-called ‘alien’ flora of Cardiff docks, which was documented in the late 1800s in the first Cardiff Flora, still persists at one or two locations as a historical reminder of more illustrious times for the docks. Sadly, these historically important areas can be extremely difficult to access and are now in danger of being lost to development, instead of being used an invaluable resource for bringing local history to life and stimulating an interest in the unique flora and fauna of the area."

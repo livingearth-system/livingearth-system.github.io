@@ -18,15 +18,15 @@
         <div class="col-12 col-sm-6 col-md-4 grid-item">
           <div class="img-container">
             {% if forloop.index0 == 0 %}
-              <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
+              <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" class="img-fluid" alt="Living Earth logo"></a>
             {% elsif forloop.index0 == 1 %}
-              <a href="{{ item.url }}"><img src="/assets/img/hubs/knowledge-hub/digitalearthaustraliab.png" class="img-fluid" alt="Living Earth logo"></a>
+              <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{{ '/assets/img/hubs/knowledge-hub/digitalearthaustraliab.png' | relative_url }}" class="img-fluid" alt="Living Earth logo"></a>
             {% elsif forloop.index0 == 2 %}
-              <a href="{{ item.url }}"><img src="/assets/img/hubs/knowledge-hub/digitalearthafricab.png" class="img-fluid" alt="Living Earth logo"></a>
+              <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{{ '/assets/img/hubs/knowledge-hub/digitalearthafricab.png' | relative_url }}" class="img-fluid" alt="Living Earth logo"></a>
             {% endif %}
           </div>
           <div class="grid-item-content">
-            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
+            <a class="grid-item-title" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a>
             <p class="grid-item-subtitle">{{ item.subtitle }}</p>
             <p class="grid-item-desc">{{ item.content }}</p>
             <p class="grid-item-tagline">{{ item.tagline }}</p>
@@ -36,10 +36,10 @@
       {% for item in data offset: 3 limit: 3 %}
         <div class="col-12 col-sm-6 col-md-4 grid-item">
           <div class="img-container">
-            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
+            <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" class="img-fluid" alt="Living Earth logo"></a>
           </div>
           <div class="grid-item-content">
-            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
+            <a class="grid-item-title" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a>
             <p class="grid-item-subtitle">{{ item.subtitle }}</p>
             <p class="grid-item-desc">{{ item.content }}</p>
             <p class="grid-item-tagline">{{ item.tagline }}</p>
@@ -49,10 +49,10 @@
       {% for item in data offset: 6 %}
         <div class="col-12 col-sm-6 col-md-4 grid-item">
           <div class="img-container">
-            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
+            <a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" class="img-fluid" alt="Living Earth logo"></a>
           </div>
           <div class="grid-item-content">
-            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
+            <a class="grid-item-title" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a>
             <p class="grid-item-subtitle">{{ item.subtitle }}</p>
             <p class="grid-item-desc">{{ item.content }}</p>
             <p class="grid-item-tagline">{{ item.tagline }}</p>

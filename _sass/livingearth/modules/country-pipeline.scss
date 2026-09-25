@@ -1,0 +1,1020 @@
+/* ==========================================================================
+   COUNTRY PIPELINE (chevron style)
+   Visually matches the home page's "How it Works" pipeline (same colours,
+   same chevron shapes, same fan-hover), but stages expand inline instead
+   of navigating away. Scoped under country-pipeline-* class names so it
+   can't collide with pipeline.scss's .pipeline-section rules once both
+   are compiled into the same global stylesheet.
+   ========================================================================== */
+
+.country-pipeline-section {
+  --cp-navy: #23567b;
+  --cp-blue: #4294c3;
+  --cp-blue-dark: #2f6f95;
+  --cp-sky: #edfaff;
+  --cp-text-soft: #5c7285;
+  padding: 40px 0;
+}
+
+.country-pipeline-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -24px rgba(15, 35, 55, 0.35);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.country-pipeline-infra {
+  margin: 30px 36px 0;
+  padding: 9px 16px;
+  background: var(--cp-sky);
+  border: 1px solid #dcefff;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cp-navy);
+  text-transform: uppercase;
+}
+
+.country-pipeline-flow {
+  display: flex;
+  padding: 26px 36px 6px;
+  gap: 0;
+}
+
+.country-pipeline-stage {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  clip-path: polygon(0 0, 91% 0, 100% 50%, 91% 100%, 0 100%, 9% 50%);
+  margin-left: -30px;
+  transition: flex-grow 0.35s ease;
+}
+
+.country-pipeline-stage:first-child {
+  margin-left: 0;
+  clip-path: polygon(0 0, 91% 0, 100% 50%, 91% 100%, 0 100%);
+}
+
+.country-pipeline-flow:hover .country-pipeline-stage {
+  flex-grow: 0.7;
+}
+
+.country-pipeline-flow:hover .country-pipeline-stage:hover {
+  flex-grow: 1.0;
+}
+
+.country-pipeline-stage-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px 0 16px;
+  transition: transform 0.2s;
+}
+
+.country-pipeline-stage:hover .country-pipeline-stage-inner {
+  transform: scale(1.04);
+}
+
+.country-pipeline-num {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.06em;
+}
+
+.country-pipeline-label {
+  width: 100%;
+  max-width: 100%;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.country-pipeline-icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.country-pipeline-stage:nth-child(1) { background: #bfe0f2; }
+.country-pipeline-stage:nth-child(2) { background: #9ecfe8; }
+.country-pipeline-stage:nth-child(3) { background: #7abfe0; }
+.country-pipeline-stage:nth-child(4) { background: var(--cp-blue); }
+.country-pipeline-stage:nth-child(5) { background: var(--cp-blue-dark); }
+.country-pipeline-stage:nth-child(6) { background: var(--cp-navy); }
+
+.country-pipeline-stage:nth-child(1) .country-pipeline-label,
+.country-pipeline-stage:nth-child(2) .country-pipeline-label,
+.country-pipeline-stage:nth-child(3) .country-pipeline-label {
+  color: var(--cp-navy);
+}
+
+.country-pipeline-stage:nth-child(1) .country-pipeline-num,
+.country-pipeline-stage:nth-child(2) .country-pipeline-num,
+.country-pipeline-stage:nth-child(3) .country-pipeline-num {
+  color: rgba(35, 86, 123, 0.7);
+}
+
+.country-pipeline-detail {
+  margin: 4px 36px 0;
+  padding: 14px 18px;
+  background: var(--cp-sky);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--cp-navy);
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country-pipeline-detail.placeholder {
+  color: var(--cp-text-soft);
+  font-style: italic;
+}
+
+.country-pipeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cp-blue);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* --- Expand panels (sub_items grid, reused from the rounded-card version) - */
+
+.country-pipeline-panel {
+  margin: 20px 36px 30px;
+  background: var(--cp-sky);
+  border: 1px solid #E3ECEF;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.country-pipeline-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.country-pipeline-item {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.country-pipeline-item-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.country-pipeline-item-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--cp-navy);
+  padding: 10px 12px 2px;
+}
+
+.country-pipeline-item-toggle {
+  border: 2px solid transparent;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.country-pipeline-item-toggle:hover { transform: translateY(-2px); }
+
+.country-pipeline-item-toggle.is-active,
+.country-pipeline-item-toggle:focus-visible {
+  border-color: var(--cp-navy);
+  outline: none;
+}
+
+.country-pipeline-item-desc {
+  background: #fff;
+  border-left: 4px solid var(--cp-navy);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.country-pipeline-item-desc-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cp-navy);
+  margin: 0 0 6px;
+}
+
+.country-pipeline-item-desc p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.country-pipeline-item-sub {
+  font-size: 12px;
+  color: var(--cp-text-soft);
+  line-height: 1.4;
+  padding: 0 12px 12px;
+}
+
+/* --- Environmental Descriptors nested browser lives in the same panel
+   slot, styled by env-descriptors.scss's .env-desc-* classes already ---- */
+
+.country-pipeline-panel.env-desc-panel-outer {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 20px 36px 30px;
+}
+
+/* --- Bottom badge row (e.g. Calibration and Validation) ------------------ */
+
+.country-pipeline-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 36px 30px;
+}
+
+.country-pipeline-badge {
+  display: inline-block;
+  background: #8ea231;
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.country-pipeline-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Mobile ---------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .country-pipeline-flow {
+    flex-direction: column;
+    padding: 22px 20px 6px;
+    gap: 10px;
+  }
+
+  .country-pipeline-stage {
+    clip-path: none !important;
+    margin-left: 0 !important;
+    height: auto;
+    border-radius: 12px;
+    flex-grow: 1 !important;
+  }
+
+  .country-pipeline-stage-inner {
+    flex-direction: row;
+    padding: 14px 16px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .country-pipeline-label {
+    text-align: left;
+  }
+
+  .country-pipeline-infra,
+  .country-pipeline-detail,
+  .country-pipeline-panel,
+  .country-pipeline-panel.env-desc-panel-outer,
+  .country-pipeline-extra {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .country-pipeline-infra {
+    margin-top: 20px;
+  }
+}
+/* --- Environmental Descriptors: category drill-down (matches the
+   env-desc-cat / env-desc-panel / env-desc-items-grid markup rendered
+   by country-pipeline.liquid) ------------------------------------------- */
+
+.env-desc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.env-desc-cat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #dcefff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: transform 0.15s ease;
+  outline: none;
+}
+
+.env-desc-cat:hover {
+  transform: translateY(-2px);
+}
+
+.env-desc-cat-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
+.env-desc-cat-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #23567b;
+}
+
+.env-desc-panel {
+  margin-top: 16px;
+}
+
+.env-desc-subrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.env-desc-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fbf8f5;
+  border: 1px solid #e3ecf1;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  outline: none;
+}
+
+.env-desc-sub-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
+.env-desc-sub-title {
+  font-weight: 600;
+  font-size: 12.5px;
+  color: #23567b;
+}
+
+.env-desc-items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.env-desc-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e3ecf1;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.env-desc-item-img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  background: #c6e5f4;
+  border-radius: 12px 12px 0 0;
+}
+
+.env-desc-item-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #23567b;
+  padding: 12px 14px 8px;
+}
+
+.env-desc-item-title-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px 8px;
+}
+
+.env-desc-item-title-row .env-desc-item-title {
+  padding: 0;
+}
+
+.env-desc-item-info {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #4294c3;
+  background: #fff;
+  color: #4294c3;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.env-desc-item-info:hover {
+  background: #4294c3;
+  color: #fff;
+}
+
+.env-desc-item-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  left: 14px;
+  right: 14px;
+  margin-top: 6px;
+  background: #23567b;
+  color: #fbf8f5;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px -8px rgba(15, 35, 55, 0.5);
+}
+
+.env-desc-item-tooltip.measuring {
+  display: block;
+  visibility: hidden;
+}
+
+.env-desc-item-tooltip.is-open {
+  display: block;
+}
+
+.env-desc-item-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 14px 14px;
+  margin-top: -4px;
+}
+
+.env-desc-item-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #23567b;
+  text-decoration: none;
+}
+
+.env-desc-item-link:hover {
+  color: #4294c3;
+  text-decoration: underline;
+}
+
+.env-desc-item-link-pub {
+  color: #3d7f58;
+}
+
+.env-desc-item-link-pub:hover {
+  color: #92c983;
+}
+
+@media (max-width: 991px) {
+  .env-desc-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .env-desc-items-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* --- Environmental Descriptors: publication/data icon toggle -------------
+   Matches the env-desc-icon-btn / env-desc-panel-block markup rendered
+   by country-pipeline.liquid. Publications = green (matches
+   .env-desc-item-link-pub / .pipeline-footer-box); Data sources = navy
+   (matches the default .env-desc-item-link color). ------------------------ */
+
+.env-desc-item-icons {
+  display: flex;
+  gap: 6px;
+  padding: 0 14px 14px;
+  margin-top: -4px;
+}
+
+.env-desc-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #f0f4f6;
+  color: #9aa8b2;
+  transition: transform 0.15s ease;
+}
+
+.env-desc-icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.env-desc-icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.env-desc-icon-btn.is-empty {
+  cursor: default;
+}
+
+.env-desc-icon-btn.is-empty:hover {
+  transform: none;
+}
+
+.env-desc-icon-data:not(.is-empty) {
+  background: #dcefff;
+  color: #23567b;
+}
+
+.env-desc-icon-pub:not(.is-empty) {
+  background: #e3f0da;
+  color: #3d7f58;
+}
+
+.env-desc-panel-block {
+  margin: 0 14px 14px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.env-desc-panel-data {
+  background: #23567b;
+  color: #dcefff;
+}
+
+.env-desc-panel-pub {
+  background: #3d7f58;
+  color: #e3f0da;
+}
+
+.env-desc-panel-label {
+  font-weight: 700;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.env-desc-panel-link {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.env-desc-panel-link:hover {
+  text-decoration: underline;
+}
+/* Impact -> pressures reveal (click an impact's title in the list to
+   see a chip list of the pressures that can cause it). */
+.env-desc-pressures-panel {
+  padding: 0 4px 16px;
+}
+
+.env-desc-pressures-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7f8c;
+  margin-bottom: 8px;
+}
+
+.env-desc-pressure-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.env-desc-pressure-chip {
+  background: #fbf8f5;
+  border: 1px solid #dcefff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23567b;
+  cursor: pointer;
+}
+
+.env-desc-pressure-chip.is-selected {
+  background: #4294c3;
+  border-color: #4294c3;
+  color: #fff;
+}
+
+/* Chips with no matching definition are plain labels, not buttons. */
+.env-desc-pressure-chip.is-static {
+  cursor: default;
+}
+
+/* Definitions revealed by clicking a pressure chip. */
+.env-desc-pressure-defs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.env-desc-pressure-defs:empty {
+  display: none;
+}
+
+.env-desc-pressure-def {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #23567b;
+  background: #fbf8f5;
+  border-left: 3px solid #4294c3;
+  border-radius: 0 8px 8px 0;
+  padding: 8px 12px;
+}
+
+.env-desc-pressure-def[hidden] {
+  display: none;
+}
+
+.env-desc-pressure-def strong {
+  font-weight: 700;
+}
+/* Nested category accordion (Impacts / Pressures panels) — five
+   categories styled like the top-level accordion header (icon badge,
+   title, count, chevron) but one level deeper. Distinct class names
+   (env-des-subaccordion-*) so they don't collide with the top-level
+   .env-des-accordion-item selectors in change-accordion.liquid's script. */
+.env-des-subaccordion {
+  margin-top: 4px;
+}
+
+.env-des-subaccordion-item {
+  border: 1px solid #c6e5f4;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.env-des-subaccordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fbf8f5;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Round photo icon (same treatment as .env-des-accordion-icon on the
+   Environmental Descriptors accordion). */
+.env-des-subaccordion-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: none;
+}
+
+.env-des-subaccordion-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.env-des-subaccordion-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #4294c3;
+  background: #c6e5f4;
+  border-radius: 20px;
+  padding: 3px 10px;
+  flex: none;
+}
+
+.env-des-subaccordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: #23567b;
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.env-des-subaccordion-item.open .env-des-subaccordion-chevron {
+  transform: rotate(180deg);
+}
+
+.env-des-subaccordion-panel {
+  display: none;
+}
+
+.env-des-subaccordion-item.open .env-des-subaccordion-panel {
+  display: block;
+}
+
+.env-des-subaccordion-panel-inner {
+  padding: 4px 20px 20px;
+}
+
+/* Impacts-only view of the Change page: the "Impacts" accordion is open and its
+   own header is hidden. Remove the change-impacts-only class (see
+   change-accordion.liquid) to get the normal accordion back. */
+.change-impacts-only .env-des-accordion-header {
+  display: none;
+}
+
+.change-impacts-only .env-des-accordion-item {
+  border: 0;
+  margin-bottom: 0;
+  overflow: visible;
+}
+
+.change-impacts-only .env-des-accordion-panel-inner {
+  padding: 0;
+}
+
+/* Impact | Pressures table, one per category. */
+.change-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 0;
+}
+
+.change-table thead th {
+  padding: 8px 14px;
+  border-bottom: 2px solid #c6e5f4;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #6b7f8c;
+}
+
+.change-table .change-table-hint {
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #8a9aa5;
+}
+
+.change-table tbody th,
+.change-table tbody td {
+  padding: 12px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #e3ecf1;
+}
+
+.change-table tbody tr:hover {
+  background: #fbf8f5;
+}
+
+.change-table tbody th.change-table-impact {
+  width: 34%;
+  text-align: left;
+  font-weight: 400;
+}
+
+.change-table-impact-inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.change-table .env-desc-item-title {
+  font-size: 14px;
+  line-height: 1.35;
+  padding: 0;
+}
+
+.change-table .env-desc-item-info {
+  margin-top: 2px;
+}
+
+.change-table-none {
+  color: #9aa9b3;
+}
+
+.change-table .env-desc-pressure-defs {
+  margin-top: 10px;
+}
+
+.change-pressure-cell .env-desc-pressures-btn {
+  margin-left: 0;
+}
+
+.change-pressure-reveal {
+  margin-top: 10px;
+}
+
+.change-pressure-reveal[hidden] {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .change-table,
+  .change-table tbody,
+  .change-table tr,
+  .change-table tbody th,
+  .change-table tbody td {
+    display: block;
+    width: 100%;
+  }
+  .change-table thead {
+    display: none;
+  }
+  .change-table tbody tr {
+    padding: 10px 0;
+    border-bottom: 1px solid #e3ecf1;
+  }
+  .change-table tbody th,
+  .change-table tbody td {
+    padding: 4px 6px;
+    border-bottom: 0;
+  }
+  .change-table tbody th.change-table-impact {
+    width: 100%;
+  }
+}
+
+/* Two-column A-Z list inside each category (Impacts / Pressures).
+   No boxes: bold navy title + (i) button per row, same type style as the
+   Environmental Descriptors titles. Liquid splits the sorted items into
+   two .env-desc-list-col wrappers, so the order reads down column 1 then
+   down column 2, and opening an impact's pressures panel only pushes
+   items down within its own column. */
+.env-desc-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 767px) {
+  .env-desc-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.env-desc-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 0;
+}
+
+.env-desc-row .env-desc-item-title {
+  font-size: 14px;
+  line-height: 1.35;
+  padding: 0;
+}
+
+.env-desc-row .env-desc-item-info {
+  margin-top: 2px;
+}
+
+/* "Pressures (n)" button next to an impact's (i) — opens the chip list. */
+.env-desc-pressures-btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+  padding: 2px 8px 2px 10px;
+  background: #fff;
+  border: 1px solid #c6e5f4;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #4294c3;
+  cursor: pointer;
+}
+
+.env-desc-pressures-btn svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.15s ease;
+}
+
+.env-desc-pressures-btn:hover,
+.env-desc-pressures-btn.is-open {
+  background: #eef6fb;
+  border-color: #4294c3;
+}
+
+.env-desc-pressures-btn.is-open svg {
+  transform: rotate(180deg);
+}
+
+.env-desc-item-tooltip-media {
+  right: auto;
+  width: 280px;
+  max-width: calc(100vw - 32px);
+}
+
+.env-desc-item-tooltip-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+  background: #c6e5f4;
+}
+
+/* An impact's pressures panel drops in directly under its row, inside
+   the same column. */
+.env-desc-pressures-panel-grid {
+  padding: 2px 0 14px;
+}
+
+/* MOBILE: pipeline cards — two per row so the grid and its description fit on screen */
+@media (max-width: 600px) {
+  .country-pipeline-panel { margin: 16px 12px 24px; padding: 14px; }
+  .country-pipeline-panel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .country-pipeline-item-img { height: 70px; }
+  .country-pipeline-item-title { font-size: 12px; padding: 8px 8px 2px; }
+  .country-pipeline-item-sub { font-size: 11px; padding: 0 8px 10px; }
+}

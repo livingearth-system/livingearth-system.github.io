@@ -1,0 +1,163 @@
+{%- comment -%}
+PIPELINE — "HOW IT WORKS" / "Taking Earth Observation to Users" (Global page).
+Simple version: hover a stage for a quick line of detail text, click for the
+same text plus an optional Explore link. No nested drill-down here — that
+lives on the country pages instead.
+Data lives in _data/pipeline.yml (icon, label, detail, url, url2, url2_label,
+newtab, url2_newtab, hide_countries, sub_items per stage).
+{%- endcomment -%}
+<section class="pipeline-section">
+<div class="container">
+
+<div class="pipeline-header-row">
+  <div class="pipeline-header-text">
+    <span class="pipeline-eyebrow">How It Works</span>
+    <h2 class="pipeline-title">Taking Earth Observation to Users</h2>
+  </div>
+</div>
+
+<div class="pipeline-card">
+<div class="pipeline-infra">Digital infrastructure (based on the Open Data Cube)</div>
+
+<div class="pipeline-flow">
+{% for stage in site.data.pipeline %}
+<button class="pipeline-stage" type="button" data-stage="{{ forloop.index0 }}"
+  data-label="{{ stage.label | escape }}" data-detail="{{ stage.detail | escape }}">
+  <span class="pipeline-stage-inner">
+    <svg class="pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
+    <span class="pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
+    <span class="pipeline-label">{{ stage.label }}</span>
+  </span>
+</button>
+{% endfor %}
+</div>
+
+{% for stage in site.data.pipeline %}
+<div class="pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+  <p class="pipeline-panel-detail">{{ stage.detail }}</p>
+
+  {% if stage.sub_items %}
+  <div class="pipeline-item-grid">
+    {% for item in stage.sub_items %}
+    {% if item.description %}
+    <button type="button" class="pipeline-item pipeline-item-toggle" data-desc="{{ forloop.index0 }}" aria-expanded="false">
+    {% elsif item.url and item.url != "#" %}
+    <a class="pipeline-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+    {% else %}
+    <div class="pipeline-item pipeline-item-static">
+    {% endif %}
+      {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" class="pipeline-item-img">{% endif %}
+      <span class="pipeline-item-title">{{ item.title }}</span>
+      <span class="pipeline-item-sub">{{ item.subtitle }}</span>
+    {% if item.description %}
+    </button>
+    {% elsif item.url and item.url != "#" %}
+    </a>
+    {% else %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% for item in stage.sub_items %}{% if item.description %}
+  <div class="pipeline-item-desc" data-desc-panel="{{ forloop.index0 }}" hidden>
+    <h3 class="pipeline-item-desc-title">{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+  </div>
+  {% endif %}{% endfor %}
+  {% endif %}
+
+  {% if stage.url %}
+  <a class="pipeline-panel-link" href="{% if stage.url contains 'http' %}{{ stage.url }}{% else %}{{ stage.url | relative_url }}{% endif %}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.label }} &rarr;</a>
+  {% endif %}
+  {% if stage.url2 %}
+  <a class="pipeline-panel-link" href="{% if stage.url2 contains 'http' %}{{ stage.url2 }}{% else %}{{ stage.url2 | relative_url }}{% endif %}" {% if stage.url2_newtab %}target="_blank" rel="noopener"{% endif %}>{{ stage.url2_label | default: "Explore" }} &rarr;</a>
+  {% endif %}
+
+  {% unless stage.hide_countries %}
+  <div class="pipeline-panel-countries">
+    <span class="pipeline-panel-countries-label">See country specifics:</span>
+{% if stage.url or stage.url2 %}
+<a class="pipeline-panel-country pipeline-panel-country-global" href="{% if stage.url | default: stage.url2 contains 'http' %}{{ stage.url | default: stage.url2 }}{% else %}{{ stage.url | default: stage.url2 | relative_url }}{% endif %}">
+  <img src="{{ '/assets/img/countries/global.png' | relative_url }}" alt="Global" class="pipeline-panel-country-img">
+  <span class="pipeline-panel-country-label">Global</span>
+</a>
+{% endif %}
+    {% for country in site.data.countries %}
+    {% unless country.title == "Global" %}
+    <a class="pipeline-panel-country" href="{% if country.url contains 'http' %}{{ country.url }}{% else %}{{ country.url | relative_url }}{% endif %}">
+      <img src="{{ country.image | relative_url }}" alt="{{ country.title }}" class="pipeline-panel-country-img">
+      <span class="pipeline-panel-country-label">{{ country.title }}</span>
+    </a>
+    {% endunless %}
+    {% endfor %}
+  </div>
+  {% endunless %}
+</div>
+{% endfor %}
+
+<div class="pipeline-footer-boxes">
+  <a class="pipeline-footer-box" href="{{ '/tools/earthtrack-app' | relative_url }}">
+    Calibration and Validation
+  </a>
+  <div class="pipeline-footer-box pipeline-footer-box-static">
+    Engagement and Outreach
+  </div>
+</div>
+</div>
+
+</div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="ic-data"><circle cx="12" cy="12" r="9" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="1.6" fill="none"/></g>
+    <g id="ic-leaf"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-map"><path d="M4 6l6-2 6 2 4-2v14l-4 2-6-2-6 2V6Z" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-change"><path d="M4 12a8 8 0 0 1 14-5M20 4v4h-4M20 12a8 8 0 0 1-14 5M4 20v-4h4" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-future"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-deliver"><path d="M3 12l8-8 8 8-8 8-8-8Z" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+  </defs>
+</svg>
+
+<script>
+(function () {
+  var stages = document.querySelectorAll('.pipeline-stage');
+  var panels = document.querySelectorAll('.pipeline-panel');
+
+  stages.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-stage');
+      var panel = document.querySelector('.pipeline-panel[data-panel="' + id + '"]');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      stages.forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      panels.forEach(function (p) { p.hidden = true; });
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        if (panel) { panel.hidden = false; }
+      }
+    });
+  });
+
+  // Sub-item cards with a description: click to show it below the grid.
+  document.querySelectorAll('.pipeline-item-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.closest('.pipeline-panel');
+      var id = btn.getAttribute('data-desc');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      panel.querySelectorAll('.pipeline-item-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      panel.querySelectorAll('.pipeline-item-desc').forEach(function (d) { d.hidden = true; });
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        var desc = panel.querySelector('.pipeline-item-desc[data-desc-panel="' + id + '"]');
+        if (desc) { desc.hidden = false; desc.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+      }
+    });
+  });
+})();
+</script>

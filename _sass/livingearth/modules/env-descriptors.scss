@@ -1,0 +1,965 @@
+/* for-developers-start */
+
+/* Intent cards */
+.fd-intents {
+  margin: 32px 0 56px;
+}
+
+.fd-intents-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #23567b;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.fd-intents-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.fd-intent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  background: #c6e5f4;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.fd-intent-card:hover {
+  background: #4294c3;
+  transform: translateY(-2px);
+}
+
+.fd-intent-card:hover .fd-intent-title,
+.fd-intent-card:hover .fd-intent-description {
+  color: #fbf8f5;
+}
+
+.fd-intent-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #23567b;
+}
+
+.fd-intent-card:hover .fd-intent-icon svg {
+  color: #fbf8f5;
+}
+
+.fd-intent-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.fd-intent-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #3a5a6c;
+}
+
+.fd-section-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #23567b;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  .fd-intents-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .fd-intents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Browse by Country accordion */
+.data-accordion {
+  margin-bottom: 56px;
+}
+
+.data-accordion-item {
+  border: 1px solid #c6e5f4;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.data-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fbf8f5;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.data-accordion-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%;
+  flex: none;
+}
+
+.data-accordion-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.data-accordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: #23567b;
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.data-accordion-item.open .data-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.data-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.data-accordion-item.open .data-accordion-panel {
+  max-height: 600px;
+}
+
+.data-accordion-panel-inner {
+  padding: 4px 20px 20px;
+}
+
+.data-country-intro {
+  color: #535353;
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+
+.data-country-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.data-country-links li {
+  margin-bottom: 10px;
+}
+
+.data-country-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #4294c3;
+  text-decoration: underline;
+}
+
+.data-country-link:hover {
+  color: #23567b;
+}
+
+.data-country-analyze {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #3d7f58;
+}
+
+/* Tools & Developer sections — headings */
+.tool_img {
+  margin-bottom: 64px;
+}
+
+.tool_img .tool_content .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #23567b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#tools-platforms > .tool_content .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #23567b;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+/* Tools & Developer sections — body copy readability */
+.tool_content {
+  max-width: 100%;
+}
+
+.tool_content .article_heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #23567b;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding-top: 24px;
+  border-top: 1px solid #e3ecf1;
+}
+
+.tool_content .article_description {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3a4750;
+  margin-bottom: 14px;
+  max-width: 100%;
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  max-width: 680px;
+  border-collapse: collapse;
+  margin: 12px 0 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.data-table-th {
+  text-align: left;
+  background: #23567b;
+  color: #fbf8f5;
+  font-weight: 700;
+  padding: 10px 14px;
+}
+
+.data-table-td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e3ecf1;
+  color: #3a4750;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #f3f8fb;
+}
+
+.data-table-link {
+  color: #4294c3;
+  font-weight: 600;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.data-table-link:hover {
+  color: #23567b;
+}
+
+/* Tools & Platforms cards — smaller, images actually fill their box */
+#tools-platforms .grid-columns .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+#tools-platforms .grid-item {
+  padding: 8px;
+}
+
+#tools-platforms .grid-item > .img-container,
+#tools-platforms .grid-item > .grid-item-content {
+  background: #c6e5f4;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+#tools-platforms .grid-item {
+  background: #c6e5f4;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.15s ease;
+}
+
+#tools-platforms .grid-item:hover {
+  transform: translateY(-2px);
+}
+
+#tools-platforms .img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #fbf8f5;
+  display: block;
+  height: 90px;
+}
+
+#tools-platforms .img-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#tools-platforms .img-container img.img-fluid {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+#tools-platforms .grid-item-title {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #23567b;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+#tools-platforms .grid-item-title:hover {
+  color: #4294c3;
+}
+
+#tools-platforms .grid-item-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3a5a6c;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .tool_img {
+    margin-bottom: 40px;
+  }
+  .tool_img .tool_content .title,
+  #tools-platforms > .tool_content .title {
+    font-size: 22px;
+  }
+  .tool_content .article_heading {
+    font-size: 17px;
+    margin-top: 32px;
+  }
+  .tool_content .article_description {
+    font-size: 14px;
+  }
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .data-accordion-title {
+    font-size: 14px;
+  }
+  #tools-platforms .img-container {
+    height: 80px;
+  }
+}
+/* for-developers-end */
+/* Environmental Descriptors accordion */
+.env-des-accordion {
+  margin-bottom: 56px;
+}
+
+.env-des-accordion-item {
+  border: 1px solid #c6e5f4;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.env-des-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fbf8f5;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.env-des-accordion-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: none;
+}
+
+.env-des-accordion-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #23567b;
+}
+
+.env-des-accordion-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #4294c3;
+  background: #c6e5f4;
+  border-radius: 20px;
+  padding: 3px 10px;
+  flex: none;
+}
+
+.env-des-accordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: #23567b;
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.env-des-accordion-item.open .env-des-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+/* Show/hide rather than max-height transition — categories like Vegetation
+   have 13+ cards and a fixed max-height would clip them. */
+.env-des-accordion-panel {
+  display: none;
+}
+
+.env-des-accordion-item.open .env-des-accordion-panel {
+  display: block;
+}
+
+.env-des-accordion-panel-inner {
+  padding: 20px 20px 24px;
+}
+
+.env-des-descriptor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Three- and two-column variants. Written as .grid.grid-3 (two classes) so they
+   beat the older single-class .env-des-descriptor-grid rules in
+   data-by-country.scss, which loads later and would otherwise force 4 columns. */
+.env-des-descriptor-grid.env-des-descriptor-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.env-des-descriptor-grid.env-des-descriptor-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 991px) {
+  .env-des-descriptor-grid.env-des-descriptor-grid-3,
+  .env-des-descriptor-grid.env-des-descriptor-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .env-des-descriptor-grid.env-des-descriptor-grid-3,
+  .env-des-descriptor-grid.env-des-descriptor-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.env-des-descriptor-card {
+  background: #fbf8f5;
+  border: 1px solid #e3ecf1;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.env-des-descriptor-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  background: #c6e5f4;
+}
+
+.env-des-descriptor-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #23567b;
+  padding: 12px 14px 4px;
+}
+
+.env-des-descriptor-unit {
+  font-weight: 500;
+  color: #4294c3;
+  font-size: 12px;
+}
+
+.env-des-descriptor-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #3a4750;
+  padding: 0 14px 14px;
+  margin: 0;
+}
+
+.env-des-descriptor-description ul {
+  font: inherit;
+  color: inherit;
+  margin: 8px 0;
+  padding-left: 18px;
+}
+
+.env-des-descriptor-description li {
+  font: inherit;
+  color: inherit;
+}
+
+/* Biodiversity page: the "Welsh Reference Ecosystems" box opens a panel
+   under the boxes; the "Biodiversity in Wales" block heads the case studies. */
+button.env-des-descriptor-more {
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.biodiv-toggle-card {
+  cursor: pointer;
+}
+
+.biodiv-toggle-card.is-open {
+  border-color: #4294c3;
+}
+
+.biodiv-drop {
+  margin: 24px 0 8px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e3ecf1;
+  border-radius: 12px;
+}
+
+.biodiv-drop[hidden] {
+  display: none;
+}
+
+.biodiv-drop .env-des-descriptor-more {
+  display: block;
+  margin-top: 8px;
+  padding: 0;
+}
+
+/* SAME PHOTO SIZE for the Welsh reference box and the Biodiversity in Wales
+   cube: change the width / height here and both change together. */
+.biodiv-toggle-card,
+.biodiv-wales-head {
+  min-height: 220px;
+}
+
+.biodiv-toggle-card .env-des-descriptor-image,
+.biodiv-wales-head .env-des-descriptor-image {
+  width: 30%;
+  height: 220px;
+  min-height: 0;
+  flex: none;
+  object-fit: cover;
+}
+
+/* Top row: the Welsh reference box runs the full width (photo left, text
+   right). */
+.biodiv-top-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.biodiv-top-grid .biodiv-toggle-card {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+
+.biodiv-toggle-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.biodiv-toggle-body .env-des-descriptor-title {
+  font-size: 20px;
+  padding: 20px 22px 8px;
+}
+
+.biodiv-toggle-body .env-des-descriptor-description {
+  font-size: 14px;
+  padding: 0 22px 16px;
+}
+
+.biodiv-toggle-body .env-des-descriptor-more {
+  align-self: flex-start;
+  padding: 0 22px 20px;
+  font-size: 13.5px;
+}
+
+.biodiv-toggle-card .env-des-descriptor-more:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* "Biodiversity in Wales": one big cube. Header (photo + text) on top, the
+   Birds / Habitats / Species dropdowns inside it underneath. */
+.biodiv-wales-cube {
+  margin: 40px 0 24px;
+}
+
+.biodiv-wales-head {
+  display: flex;
+}
+
+
+.biodiv-wales-head-text {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.biodiv-wales-head-text .env-des-descriptor-title {
+  font-size: 22px;
+  padding: 18px 22px 6px;
+}
+
+.biodiv-wales-head-text .env-des-descriptor-description {
+  font-size: 14px;
+  padding: 0 22px 18px;
+}
+
+.biodiv-wales-body {
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #e3ecf1;
+}
+
+.biodiv-wales-body .env-des-accordion {
+  margin-bottom: 0;
+}
+
+.biodiv-wales-body .env-des-accordion-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .biodiv-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .biodiv-top-grid .biodiv-toggle-card {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .biodiv-toggle-card {
+    flex-direction: column;
+  }
+  .biodiv-toggle-card .env-des-descriptor-image {
+    width: 100%;
+    height: 170px;
+    min-height: 0;
+  }
+  .biodiv-wales-head {
+    flex-direction: column;
+  }
+  .biodiv-wales-head .env-des-descriptor-image {
+    width: 100%;
+    height: 150px;
+    min-height: 0;
+  }
+  .biodiv-wales-body {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .biodiv-drop {
+    padding: 16px;
+  }
+}
+
+/* Change page: three link cards (change-links.liquid). Two-class selector so it
+   beats the older .fd-intents-grid rules in data-by-country.scss. */
+.fd-intents-grid.fd-intents-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fd-intent-meta {
+  margin-top: auto;
+  padding-top: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23567b;
+}
+
+.fd-intent-card:hover .fd-intent-meta {
+  color: #fbf8f5;
+}
+
+@media (max-width: 767px) {
+  .fd-intents-grid.fd-intents-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Linked photo cards (biodiversity page): image + title + "Read more". */
+.env-des-descriptor-image-link {
+  display: block;
+}
+
+.env-des-descriptor-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.env-des-descriptor-title a:hover,
+.env-des-descriptor-title a:focus {
+  color: #4294c3;
+  text-decoration: underline;
+}
+
+.env-des-descriptor-more {
+  margin-top: auto;
+  padding: 0 14px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #4294c3;
+  text-decoration: none;
+}
+
+.env-des-descriptor-more:hover,
+.env-des-descriptor-more:focus {
+  color: #23567b;
+  text-decoration: underline;
+}
+
+/* Welsh reference ecosystems and modified states (welsh-states.liquid) */
+.welsh-states-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #3a4750;
+  margin: 0 0 16px;
+}
+
+.welsh-states > .welsh-states-text:last-of-type {
+  margin-bottom: 8px;
+}
+
+.welsh-states-habitat {
+  margin: 8px 0 28px;
+}
+
+.welsh-states-habitat-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #23567b;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e3ecf1;
+}
+
+.welsh-state-tag-row {
+  padding: 0 14px 8px;
+}
+
+.welsh-state-tag {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #c6e5f4;
+  color: #23567b;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.welsh-state-tag.is-modified {
+  background: #fbf8f5;
+  border: 1px solid #4294c3;
+  color: #4294c3;
+}
+
+.env-des-descriptor-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 14px 14px;
+  margin-top: -6px;
+}
+
+.env-des-descriptor-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #23567b;
+  text-decoration: none;
+}
+
+.env-des-descriptor-link-pub {
+  color: #3d7f58;
+}
+
+.env-des-descriptor-link-pub:hover {
+  color: #92c983;
+}
+
+@media (max-width: 991px) {
+  .env-des-descriptor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .env-des-descriptor-grid {
+    grid-template-columns: 1fr;
+  }
+  .env-des-accordion-title {
+    font-size: 14px;
+  }
+}
+/* Env Des — Browse by Country cards (reuses .fd-intent-card, small icon variant) */
+.env-des-country-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.env-des-country-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .env-des-country-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Simple link cards (Taxonomies, Handbook) — logo-style image instead of icon */
+.simple-card-icon img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fbf8f5;
+  padding: 4px;
+  display: block;
+}
+.env-des-descriptor-icons {
+  display: flex;
+  gap: 6px;
+  padding: 0 14px 14px;
+}
+
+.env-des-descriptor-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #f0f4f6;
+  color: #9aa8b2;
+  transition: transform 0.15s ease;
+}
+
+.env-des-descriptor-icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.env-des-descriptor-icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.env-des-descriptor-icon-btn.is-empty {
+  cursor: default;
+}
+
+.env-des-descriptor-icon-btn.is-empty:hover {
+  transform: none;
+}
+
+.env-des-descriptor-icon-data:not(.is-empty) {
+  background: #dcefff;
+  color: #23567b;
+}
+
+.env-des-descriptor-icon-pub:not(.is-empty) {
+  background: #e3f0da;
+  color: #3d7f58;
+}
+
+.env-des-descriptor-panel-block {
+  margin: 0 14px 14px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.env-des-descriptor-panel-data {
+  background: #23567b;
+  color: #dcefff;
+}
+
+.env-des-descriptor-panel-pub {
+  background: #3d7f58;
+  color: #e3f0da;
+}
+
+.env-des-descriptor-panel-label {
+  font-weight: 700;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.env-des-descriptor-panel-link {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.env-des-descriptor-panel-link:hover {
+  text-decoration: underline;
+}

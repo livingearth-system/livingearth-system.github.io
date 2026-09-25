@@ -1,0 +1,65 @@
+/* ==========================================================================
+   QUICK LINKS
+   Appears on every page via _layouts/default.html.
+   Colours: Light Blue #BFE6F6 · Ocean Blue #00577E · Chalk White #FCF8F5
+   ========================================================================== */
+
+.quick-links {
+  background: #BFE6F6;
+  padding: 48px 0;
+}
+
+.quick-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 40px;
+}
+
+.quick-links-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 140px;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.quick-links-item:hover {
+  transform: translateY(-3px);
+}
+
+.quick-links-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  color: #00577E;
+}
+
+.quick-links-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #00577E;
+}
+
+@media (max-width: 767px) {
+  .quick-links {
+    padding: 36px 0;
+  }
+  .quick-links-row {
+    gap: 24px 24px;
+  }
+  .quick-links-item {
+    width: 100px;
+  }
+  .quick-links-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .quick-links-label {
+    font-size: 12px;
+  }
+}

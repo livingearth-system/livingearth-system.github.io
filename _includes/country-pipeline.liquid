@@ -1,0 +1,458 @@
+{%- comment -%}
+COUNTRY PIPELINE (chevron style) — matches the home page's "How it Works"
+visual design (chevron stages, fan-hover, detail box), but stages expand
+inline on click instead of navigating away, reusing the same mechanism as
+the rest of this country page.
+
+Usage: {% include country-pipeline.liquid list=page.pipeline %}
+
+Each stage needs: title, subtitle, icon, and OPTIONALLY one of:
+  url — plain link
+  links — list of { label, url, newtab } for multiple buttons
+  sub_items — flat list of { title, subtitle, image, url, newtab }
+  categories — nested browser: category -> optional subcategory ->
+    individual items. Each category needs title, image, and
+    EITHER descriptors (flat list) OR subcategories (list of
+    { title, image, descriptors: [...] }).
+    Each individual descriptor item takes: title, image,
+    and OPTIONALLY url + newtab (single link, whole card is
+    the link) OR links (list of { label, url, newtab, type } —
+    links with type: publication render under a "Publications"
+    icon/panel, everything else renders under a "Data sources"
+    icon/panel) — otherwise it's a plain informational card.
+
+page.pipeline_validation_url — link for the "Calibration and Validation" footer box.
+page.pipeline_outreach_url — link for the "Engagement and Outreach" footer box
+  (opens in a new tab). If not set, that box stays a plain non-clickable label.
+
+Deep-linking: visiting this page with #pipeline-<slug-of-stage-title>
+(e.g. #pipeline-environmental-descriptors) auto-opens that stage and
+scrolls to it on load.
+{%- endcomment -%}
+{% assign stages = include.list %}
+{%- if stages -%}
+<section class="country-pipeline-section">
+<div class="container">
+<div class="country-pipeline-card">
+
+<a class="country-pipeline-infra" href="https://www.opendatacube.org/" target="_blank" rel="noopener">Digital infrastructure (based on the Open Data Cube)</a>
+
+<div class="country-pipeline-flow">
+{% for stage in stages %}
+{% assign stage_index = forloop.index0 %}
+<button class="country-pipeline-stage" type="button" data-stage="{{ stage_index }}"
+  data-stage-slug="{{ stage.title | slugify }}"
+  data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
+  <span class="country-pipeline-stage-inner">
+    <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
+    <span class="country-pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
+    <span class="country-pipeline-label">{{ stage.title }}</span>
+  </span>
+</button>
+{% endfor %}
+</div>
+
+{% for stage in stages %}
+{% if stage.sub_items %}
+<div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+  <div class="country-pipeline-panel-grid">
+    {% for item in stage.sub_items %}
+    {% assign desc = item.description %}{% unless desc %}{% assign gstage = site.data.pipeline | where: "label", stage.title | first %}{% if gstage.sub_items %}{% assign gitem = gstage.sub_items | where: "title", item.title | first %}{% if gitem %}{% assign desc = gitem.description %}{% endif %}{% endif %}{% endunless %}
+    {% if desc %}
+    <button type="button" class="country-pipeline-item country-pipeline-item-toggle" data-desc="{{ forloop.index0 }}" aria-expanded="false">
+    {% elsif item.url and item.url != "#" %}
+    <a class="country-pipeline-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+    {% else %}
+    <div class="country-pipeline-item country-pipeline-item-static">
+    {% endif %}
+      {% if item.image %}<img src="{{ item.image | relative_url }}" alt="" class="country-pipeline-item-img">{% endif %}
+      <span class="country-pipeline-item-title">{{ item.title }}</span>
+      <span class="country-pipeline-item-sub">{{ item.subtitle }}</span>
+    {% if desc %}
+    </button>
+    {% elsif item.url and item.url != "#" %}
+    </a>
+    {% else %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% for item in stage.sub_items %}
+  {% assign desc = item.description %}{% unless desc %}{% assign gstage = site.data.pipeline | where: "label", stage.title | first %}{% if gstage.sub_items %}{% assign gitem = gstage.sub_items | where: "title", item.title | first %}{% if gitem %}{% assign desc = gitem.description %}{% endif %}{% endif %}{% endunless %}
+  {% if desc %}
+  <div class="country-pipeline-item-desc" data-desc-panel="{{ forloop.index0 }}" hidden>
+    <h3 class="country-pipeline-item-desc-title">{{ item.title }}</h3>
+    <p>{{ desc }}</p>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+{% elsif stage.categories %}
+<div class="country-pipeline-panel env-desc-panel-outer" data-panel="{{ forloop.index0 }}" hidden>
+  <div class="env-desc-row">
+    {% for cat in stage.categories %}
+    <button class="env-desc-cat" type="button" data-envcat="{{ forloop.index0 }}" aria-expanded="false">
+      <span class="env-desc-cat-title">{{ cat.title }}</span>
+    </button>
+    {% endfor %}
+  </div>
+
+  {% for cat in stage.categories %}
+  <div class="env-desc-panel" data-envcat-panel="{{ forloop.index0 }}" hidden>
+    {% if cat.subcategories %}
+    <div class="env-desc-subrow">
+      {% for sub in cat.subcategories %}
+      <button class="env-desc-sub" type="button" data-envsub="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" aria-expanded="false">
+        <span class="env-desc-sub-title">{{ sub.title }}</span>
+      </button>
+      {% endfor %}
+    </div>
+    {% for sub in cat.subcategories %}
+    <div class="env-desc-items-grid" data-envsub-panel="{{ forloop.parentloop.index0 }}-{{ forloop.index0 }}" hidden>
+      {% for item in sub.descriptors %}
+      {% if item.links %}
+      {% assign pubs = item.links | where: "type", "publication" %}
+      {% assign datas = item.links | where_exp: "l", "l.type != 'publication'" %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
+        <div class="env-desc-item-icons">
+          <button type="button" class="env-desc-icon-btn env-desc-icon-pub{% unless pubs.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Publications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>
+          </button>
+          <button type="button" class="env-desc-icon-btn env-desc-icon-data{% unless datas.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Data sources">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          </button>
+        </div>
+        {% if pubs.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-pub" hidden>
+          <div class="env-desc-panel-label">Publications</div>
+          {% for link in pubs %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if datas.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-data" hidden>
+          <div class="env-desc-panel-label">Data sources</div>
+          {% for link in datas %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% elsif item.url and item.url != "#" %}
+      <a class="env-desc-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+      </a>
+      {% else %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {% elsif cat.descriptors %}
+    <div class="env-desc-items-grid">
+      {% for item in cat.descriptors %}
+      {% if item.links %}
+      {% assign pubs = item.links | where: "type", "publication" %}
+      {% assign datas = item.links | where_exp: "l", "l.type != 'publication'" %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
+        <div class="env-desc-item-icons">
+          <button type="button" class="env-desc-icon-btn env-desc-icon-pub{% unless pubs.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Publications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>
+          </button>
+          <button type="button" class="env-desc-icon-btn env-desc-icon-data{% unless datas.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Data sources">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          </button>
+        </div>
+        {% if pubs.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-pub" hidden>
+          <div class="env-desc-panel-label">Publications</div>
+          {% for link in pubs %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if datas.size > 0 %}
+        <div class="env-desc-panel-block env-desc-panel-data" hidden>
+          <div class="env-desc-panel-label">Data sources</div>
+          {% for link in datas %}
+          <a class="env-desc-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% elsif item.url and item.url != "#" %}
+      <a class="env-desc-item" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <span class="env-desc-item-title">{{ item.title }}</span>
+      </a>
+      {% else %}
+      <div class="env-desc-item">
+        <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
+        <div class="env-desc-item-title-row">
+          <span class="env-desc-item-title">{{ item.title }}</span>
+          {% if item.description %}
+          <button type="button" class="env-desc-item-info" aria-label="What is {{ item.title }}?">i</button>
+          <span class="env-desc-item-tooltip">{{ item.description }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+{% else %}
+<div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+  <p class="pipeline-panel-detail">{{ stage.subtitle }}</p>
+  {% if stage.links %}
+  <div class="pipeline-panel-links">
+    {% for link in stage.links %}
+    <a class="pipeline-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>{{ link.label }} &rarr;</a>
+    {% endfor %}
+  </div>
+  {% elsif stage.url and stage.url != "#" %}
+  <a class="pipeline-panel-link" href="{% if stage.url contains 'http' %}{{ stage.url }}{% else %}{{ stage.url | relative_url }}{% endif %}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
+  {% endif %}
+</div>
+{% endif %}
+{% endfor %}
+
+<div class="pipeline-footer-boxes">
+  <a class="pipeline-footer-box" href="{% if page.pipeline_validation_url | default: '/tools/earthtrack-app' contains 'http' %}{{ page.pipeline_validation_url | default: '/tools/earthtrack-app' }}{% else %}{{ page.pipeline_validation_url | default: '/tools/earthtrack-app' | relative_url }}{% endif %}">
+    Calibration and Validation
+  </a>
+  {% if page.pipeline_outreach_url %}
+  <a class="pipeline-footer-box" href="{% if page.pipeline_outreach_url contains 'http' %}{{ page.pipeline_outreach_url }}{% else %}{{ page.pipeline_outreach_url | relative_url }}{% endif %}" target="_blank" rel="noopener">
+    Engagement and Outreach
+  </a>
+  {% else %}
+  <div class="pipeline-footer-box pipeline-footer-box-static">
+    Engagement and Outreach
+  </div>
+  {% endif %}
+</div>
+
+</div>
+</div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="ic-data"><circle cx="12" cy="12" r="9" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="1.6" fill="none"/></g>
+    <g id="ic-leaf"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-map"><path d="M4 6l6-2 6 2 4-2v14l-4 2-6-2-6 2V6Z" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-change"><path d="M4 12a8 8 0 0 1 14-5M20 4v4h-4M20 12a8 8 0 0 1-14 5M4 20v-4h4" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-future"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+    <g id="ic-deliver"><path d="M3 12l8-8 8 8-8 8-8-8Z" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+  </defs>
+</svg>
+
+<script>
+(function () {
+  var stages = document.querySelectorAll('.country-pipeline-stage[data-stage]');
+  var panels = document.querySelectorAll('.country-pipeline-panel[data-panel]');
+
+  stages.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-stage');
+      var panel = document.querySelector('.country-pipeline-panel[data-panel="' + id + '"]');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      stages.forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      panels.forEach(function (p) { p.hidden = true; });
+
+      if (panel && !isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        panel.hidden = false;
+      }
+    });
+  });
+
+  var catButtons = document.querySelectorAll('.env-desc-cat[data-envcat]');
+  catButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-envcat');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      var wrapper = btn.closest('.env-desc-panel-outer');
+      wrapper.querySelectorAll('.env-desc-cat').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      wrapper.querySelectorAll('.env-desc-panel[data-envcat-panel]').forEach(function (p) { p.hidden = true; });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        var panel = wrapper.querySelector('.env-desc-panel[data-envcat-panel="' + id + '"]');
+        if (panel) { panel.hidden = false; }
+      }
+    });
+  });
+
+  var subButtons = document.querySelectorAll('.env-desc-sub[data-envsub]');
+  subButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-envsub');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      var parentPanel = btn.closest('.env-desc-panel');
+      parentPanel.querySelectorAll('.env-desc-sub').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      parentPanel.querySelectorAll('.env-desc-items-grid[data-envsub-panel]').forEach(function (p) { p.hidden = true; });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        var grid = parentPanel.querySelector('.env-desc-items-grid[data-envsub-panel="' + id + '"]');
+        if (grid) { grid.hidden = false; }
+      }
+    });
+  });
+
+  var infoButtons = document.querySelectorAll('.env-desc-item-info');
+
+  function closeTooltip(t) {
+    t.classList.remove('is-open');
+    if (t._homeParent) {
+      t._homeParent.insertBefore(t, t._homeNext);
+    }
+    t.style.position = '';
+    t.style.top = '';
+    t.style.left = '';
+    t.style.right = '';
+    t.style.width = '';
+    t.style.margin = '';
+  }
+
+  infoButtons.forEach(function (btn) {
+    var tooltip = btn.nextElementSibling;
+    tooltip._homeParent = tooltip.parentNode;
+    tooltip._homeNext = tooltip.nextSibling;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var wasOpen = tooltip.classList.contains('is-open');
+
+      document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+
+      if (!wasOpen) {
+        var btnRect = btn.getBoundingClientRect();
+
+        tooltip.classList.add('measuring');
+        var tooltipWidth = tooltip.offsetWidth;
+        var tooltipHeight = tooltip.offsetHeight;
+        tooltip.classList.remove('measuring');
+
+        document.body.appendChild(tooltip);
+
+        var top = btnRect.bottom + 6;
+        if (top + tooltipHeight > window.innerHeight - 8) {
+          top = btnRect.top - tooltipHeight - 6;
+        }
+        if (top < 8) { top = 8; }
+
+        var left = btnRect.left;
+        if (left + tooltipWidth > window.innerWidth - 8) {
+          left = window.innerWidth - tooltipWidth - 8;
+        }
+        if (left < 8) { left = 8; }
+
+        tooltip.style.position = 'fixed';
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+        tooltip.style.right = 'auto';
+        tooltip.style.width = tooltipWidth + 'px';
+        tooltip.style.margin = '0';
+        tooltip.classList.add('is-open');
+      }
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+  });
+  window.addEventListener('scroll', function () {
+    document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+  }, { passive: true });
+
+  // Publication / data icon toggle on descriptor cards.
+  // Clicking a non-empty icon opens its panel (Publications or Data
+  // sources) inline on that card; clicking the open one again, or the
+  // other icon, closes/switches it. Empty icons (is-empty) do nothing.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.env-desc-icon-btn');
+    if (!btn || btn.classList.contains('is-empty')) { return; }
+    var card = btn.closest('.env-desc-item');
+    if (!card) { return; }
+    var isPub = btn.classList.contains('env-desc-icon-pub');
+    var panel = card.querySelector(isPub ? '.env-desc-panel-pub' : '.env-desc-panel-data');
+    if (!panel) { return; }
+    var wasOpen = !panel.hidden;
+    card.querySelectorAll('.env-desc-panel-block').forEach(function (p) { p.hidden = true; });
+    card.querySelectorAll('.env-desc-icon-btn').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+    if (!wasOpen) {
+      panel.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Sub-item cards with a description: click to show it below the grid.
+  document.querySelectorAll('.country-pipeline-item-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.closest('.country-pipeline-panel');
+      var id = btn.getAttribute('data-desc');
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      panel.querySelectorAll('.country-pipeline-item-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+      panel.querySelectorAll('.country-pipeline-item-desc').forEach(function (d) { d.hidden = true; });
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        var desc = panel.querySelector('.country-pipeline-item-desc[data-desc-panel="' + id + '"]');
+        if (desc) { desc.hidden = false; desc.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+      }
+    });
+  });
+
+  // Deep-link support: /europe/wales/#pipeline-environmental-descriptors
+  // auto-opens the matching stage and scrolls to it.
+  var hash = window.location.hash.replace('#pipeline-', '');
+  if (hash) {
+    var targetBtn = document.querySelector('.country-pipeline-stage[data-stage-slug="' + hash + '"]');
+    if (targetBtn) {
+      targetBtn.click();
+      setTimeout(function () {
+        targetBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+})();
+</script>
+{%- endif -%}

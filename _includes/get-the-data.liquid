@@ -1,17 +1,24 @@
+<div class="container">
 <div class="tool_img">
   <div class="row">
-    <div class="tool_content col-12 col-lg-8">
+    {% assign content_col = "col-12" %}
+    {% if site.data.get-the-data-information.index.video %}
+      {% assign content_col = "col-12 col-lg-8" %}
+    {% endif %}
+    <div class="tool_content {{ content_col }}">
       <h2 class="title">{{ include.title }}</h2>
       <p class="article_description">
         {{ include.description }}
       </p>
       {% for item in site.data['get-the-data-information'].index['available-link-data'] %}
         <h3 class="article_heading">{{ item.title }}</h3>
-        {% assign descriptions = item.description | newline_to_br | split: '<br>' %}
+        {% assign base_href = 'href="' | append: site.baseurl | append: '/' %}
+        {% assign descriptions = item.description | replace: 'href="/', base_href | newline_to_br | split: '<br>' %}
         {% for description in descriptions %}
           <p class="article_description">{{ description }}</p>
         {% endfor %}
-        
+
+        {% if item['country/region-header'] and item['country/region-header'] != "" %}
         <table class="data-table">
           <thead>
             <tr>
@@ -21,29 +28,35 @@
           </thead>
           <tbody>
             {% for row in item.data_table %}
+              {% if row.country_region != "" %}
               <tr>
                 <td class="data-table-td">{{ row.country_region }}</td>
-                <td class="data-table-td"><a class="data-table-link" href="{{ row.access_link }}">{{ row.access_link }}</a></td>
+                <td class="data-table-td"><a class="data-table-link" href="{% if row.access_link contains 'http' %}{{ row.access_link }}{% else %}{{ row.access_link | relative_url }}{% endif %}"{% if row.newtab %} target="_blank" rel="noopener"{% endif %}>Open {{ row.country_region | downcase }} map &#8599;</a></td>
               </tr>
+              {% endif %}
             {% endfor %}
           </tbody>
         </table>
+        {% endif %}
       {% endfor %}
-      
+
       <h3 class="article_heading">{{ site.data.get-the-data-information.index.bottom-box.title }}</h3>
       <p class="article_description">
         {{ site.data.get-the-data-information.index.bottom-box.description_1 }}
-        <a href="{{ site.data.get-the-data-information.index.bottom-box.url }}">{{ site.data.get-the-data-information.index.bottom-box.url }}</a>.
+        <a href="{% if site.data.get-the-data-information.index.bottom-box.url contains 'http' %}{{ site.data.get-the-data-information.index.bottom-box.url }}{% else %}{{ site.data.get-the-data-information.index.bottom-box.url | relative_url }}{% endif %}">{{ site.data.get-the-data-information.index.bottom-box.url }}</a>.
         {{ site.data.get-the-data-information.index.bottom-box.description_2 }}
       </p>
     </div>
 
+    {% if site.data.get-the-data-information.index.video %}
     <div class="col-12 col-lg-4 mt-5">
       <video width="auto" controls>
-        <source src="{{ site.data.get-the-data-information.index.video.video_1.src }}" type="{{ site.data.get-the-data-information.index.video.video_1.type }}">
-        <source src="{{ site.data.get-the-data-information.index.video.video_2.src }}" type="{{ site.data.get-the-data-information.index.video.video_2.type }}">
+        <source src="{% if site.data.get-the-data-information.index.video.video_1.src contains 'http' %}{{ site.data.get-the-data-information.index.video.video_1.src }}{% else %}{{ site.data.get-the-data-information.index.video.video_1.src | relative_url }}{% endif %}" type="{{ site.data.get-the-data-information.index.video.video_1.type }}">
+        <source src="{% if site.data.get-the-data-information.index.video.video_2.src contains 'http' %}{{ site.data.get-the-data-information.index.video.video_2.src }}{% else %}{{ site.data.get-the-data-information.index.video.video_2.src | relative_url }}{% endif %}" type="{{ site.data.get-the-data-information.index.video.video_2.type }}">
         {{ site.data.get-the-data-information.index.video.title }}
       </video>
     </div>
+    {% endif %}
   </div>
+</div>
 </div>

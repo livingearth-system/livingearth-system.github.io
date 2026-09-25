@@ -1,0 +1,16 @@
+# Link cards at the top of the Change page (themes/change/index.md).
+# Each opens the matching file in the Global Change Framework GitHub repo in a new tab.
+- title: "Change Impacts"
+  description: "The full list of change impact classes in the Global Change Taxonomy."
+  icon: "sparkles"
+  url: "https://github.com/livingearth-system/Globalchangeframework/blob/main/Change-Impacts.md"
+
+- title: "Pressures"
+  description: "The full list of pressure classes in the Global Change Taxonomy."
+  icon: "tag"
+  url: "https://github.com/livingearth-system/Globalchangeframework/blob/main/Pressures.md"
+
+- title: "Impacts (Pressures)"
+  description: "Each impact paired with the pressures that can cause it."
+  icon: "table"
+  url: "https://github.com/livingearth-system/Globalchangeframework/blob/main/Impacts-(pressures).md"

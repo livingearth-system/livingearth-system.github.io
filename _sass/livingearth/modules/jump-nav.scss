@@ -1,0 +1,39 @@
+/* ==========================================================================
+   JUMP NAV
+   A row of anchor links to sections further down the same page.
+   Colours: BG Chalk White #FCF8F5 · Ocean Blue #00577E
+   ========================================================================== */
+
+.jump-nav {
+  background: #FCF8F5;
+  border-bottom: 1px solid #E3ECEF;
+  padding: 14px 0;
+}
+
+.jump-nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.jump-nav-link {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #00577E;
+  text-decoration: none;
+}
+
+.jump-nav-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .jump-nav-row {
+    gap: 8px 16px;
+  }
+
+  .jump-nav-link {
+    font-size: 13px;
+  }
+}

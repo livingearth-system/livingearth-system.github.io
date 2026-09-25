@@ -1,4 +1,6 @@
 ---
+published: true
+
 layout: page
 permalink: /projects
 

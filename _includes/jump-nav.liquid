@@ -1,0 +1,20 @@
+{%- comment -%}
+JUMP NAV — a row of anchor links to sections further down the same page.
+Add a list called `jump_nav` to a page's front matter:
+  jump_nav:
+    - label: "Vision & Mission"
+      url: "#vision-mission"
+    - label: "Meet the Team"
+      url: "#meet-the-team"
+Each url should be a #anchor matching an `id` you set on a section further
+down (e.g. the `id` parameter on an info-blocks include).
+{%- endcomment -%}
+{%- if page.jump_nav -%}
+<nav class="jump-nav" aria-label="On this page">
+  <div class="container jump-nav-row">
+    {% for item in page.jump_nav %}
+      <a class="jump-nav-link" href="{% assign first_char = item.url | slice: 0 %}{% if item.url contains 'http' or first_char == '#' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.label }}</a>
+    {% endfor %}
+  </div>
+</nav>
+{%- endif -%}

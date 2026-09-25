@@ -1,0 +1,15 @@
+- title: Countries
+  url: /#countries
+  icon: globe
+- title: About
+  url: /about/
+  icon: info
+- title: Tools
+  url: /tools/
+  icon: tools
+- title: Contact
+  url: /contact/
+  icon: mail
+- title: Data
+  url: /tools/for-developers/#download-data
+  icon: database

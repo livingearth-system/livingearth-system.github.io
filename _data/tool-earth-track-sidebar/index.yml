@@ -10,23 +10,20 @@ sponsor_logos:
 
 visualization_items:
   - title: Repeated measurement visualization
-    image_one_src: "/assets/img/earthTrack/analyze-forest.png"
-    image_one_date: "2021/4/21"
-    image_two_src: "/assets/img/earthTrack/analyze-bridge.png"
-    image_two_date: "2021/4/21"
-    image_three_src: "/assets/img/earthTrack/analyze-leaf.png"
-    image_three_date: "2021/4/21"
-    image_four_src: "/assets/img/earthTrack/analyze-nation.png"
-    image_four_date: "2021/4/21"
+    image_one_src: "/assets/img/earthTrack/analyze-snow.jpeg"
+    image_one_date: ""
+    image_two_src: "/assets/img/earthTrack/analyze-tree.jpeg"
+    image_two_date: ""
+    image_three_src: "/assets/img/earthTrack/analyze-beach.jpeg"
+    image_three_date: ""
+    image_four_src: "/assets/img/earthTrack/analyse-bluebells.jpeg"
+    image_four_date: ""
 
 dot-infor:
-  title: Separated by color of dot
+  title: Separated by colour of dot
   src: /assets/icon/questionmark.svg
 
 content:
-  left-content:
-    src: /assets/img/living_wales.png
-    title: ""
   right-content:
     src: /assets/img/list.svg
-    title: LEGEND 
+    title: LEGEND

@@ -1,12 +1,16 @@
 ---
-layout: page
-
-title: "Analysis Ready Data"
-subtitle: "View the wide range of essential descriptors encompassing the land, marine and atmosphere at multiple spatial and temporal scales for Australia, many of which have been provided through Earth observations."
-image: "/assets/img/heading/australia.jpg"
+layout: null
+permalink: /oceania/australia/analysis-ready-data/
 ---
-
-{%-
-include boxes.liquid
-data="oceania.australia.analysis-ready-data"
--%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ '/tools/for-developers/#australia' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/tools/for-developers/#australia' | relative_url }}">
+</head>
+<body>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/tools/for-developers/#australia' | relative_url }}">For Developers</a>.</p>
+</body>
+</html>

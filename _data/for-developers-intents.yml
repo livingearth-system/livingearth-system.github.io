@@ -1,0 +1,20 @@
+- title: "Browse by Country"
+  description: "Access data and tools for Wales, Switzerland, Australia and more."
+  icon: globe
+  url: "#browse-by-country"
+- title: "Download Data"
+  description: "Get analysis-ready satellite data and Living Earth products."
+  icon: download
+  url: "#download-data"
+- title: "Analyse Data"
+  description: "Explore and process data using Jupyter notebooks in the cloud."
+  icon: analyse
+  url: "#analyse-the-data"
+- title: "Explore the Code"
+  description: "Classification code, notebooks and repositories on GitHub."
+  icon: code
+  url: "#code"
+- title: "Explore Platforms"
+  description: "Work with large datasets using cloud-based platforms and data cubes."
+  icon: cloud
+  url: "#tools-platforms"

@@ -1,10 +1,10 @@
 <!-- BREADCRUMBS -->
 <ul class="breadcrumbs" >
     {% assign crumbs = page.url | remove: '/index.html'  %}
-    <li><a href="/">Home</a></li>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
     {% for crumb in crumbs offset: 1 %}
         {% if forloop.last %}
-            <li><a href="/">{{ page.headerTop }}</a></li>
+            <li><a href="{{ '/' | relative_url }}">{{ page.headerTop }}</a></li>
         {% else %}
             <li>
                 <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace: 'without-plugin/', 'without-plugins/' }}{% endfor %}">

@@ -6,13 +6,17 @@ home: true
 
     {%- include index.liquid -%}
 
+    {%- include quick-links.liquid -%}
+
+    {%- include pipeline.liquid -%}
+
+    {%- include stats-band.liquid -%}
+
+    {%- include countries-strip.liquid -%}
+
     <div class="container mt-100 mb-100">
 
         {{ content }}
-
-        {%- if page.nocontact != true -%}
-            {%- include get-in-touch.liquid -%}
-        {% endif %}
 
     </div>
 

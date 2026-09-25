@@ -1,0 +1,12 @@
+- title: Knowledge Hub
+  subtitle: Guides and background on Living Earth
+  url: /knowledge-hub
+- title: Handbook
+  subtitle: Reference documentation
+  url: /developer-hub
+- title: Taxonomies
+  subtitle: Classification systems used across the data
+  url: /taxonomies/
+- title: Environmental Descriptors
+  subtitle: Terms and definitions for environmental data
+  url: /env-des/

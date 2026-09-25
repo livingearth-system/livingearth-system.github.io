@@ -1,0 +1,94 @@
+/* ==========================================================================
+   ABOUT PAGE — Vision & Mission section
+   Stat band (Ocean Blue) + 2x2 card grid with top accent bar.
+   Colours: Ocean Blue #00577E · Card BG #EAF6FB · body text #3A5A68
+   ========================================================================== */
+
+.about-section-heading {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  color: #00577E;
+  margin-bottom: 16px;
+}
+
+.about-intro {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3A5A68;
+  margin: 0 0 28px;
+}
+
+.about-stats-band {
+  display: flex;
+  flex-wrap: wrap;
+  background: #00577E;
+  border-radius: 10px;
+  padding: 24px;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.about-stat {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.about-stat-number {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #FCF8F5;
+  display: block;
+}
+
+.about-stat-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #BFE6F6;
+}
+
+.about-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.about-vision-card {
+  background: #EAF6FB;
+  border-top: 3px solid #00577E;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 22px 24px;
+}
+
+.about-vision-card-heading {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #00577E;
+  margin: 0 0 8px;
+}
+
+.about-vision-card-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  color: #3A5A68;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .about-stats-band {
+    padding: 20px;
+  }
+
+  .about-stat-number {
+    font-size: 20px;
+  }
+
+  .about-vision-grid {
+    grid-template-columns: 1fr;
+  }
+}

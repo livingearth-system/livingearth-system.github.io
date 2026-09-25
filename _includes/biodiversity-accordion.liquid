@@ -1,0 +1,109 @@
+{%- comment -%}
+BIODIVERSITY — inline accordion for the 8 Wales case studies, grouped into
+3 categories (Birds, Habitats, Species). Same shell/interaction pattern as
+change-accordion.liquid: one panel open at a time, deep-linking via hash
+(e.g. /themes/biodiversity/#habitats).
+
+Each panel's case studies render via biodiversity-card.liquid (photo card,
+linked to the full page when the block has a `url` in the page front matter).
+
+Usage: {% include biodiversity-accordion.liquid %}
+Expects page.birds_blocks / page.habitats_blocks / page.species_blocks.
+{%- endcomment -%}
+
+<div class="env-des-accordion" id="biodiversity-accordion">
+
+  <div class="env-des-accordion-item" data-cat="birds">
+    <button type="button" class="env-des-accordion-header" data-target="birds">
+      <span class="env-des-accordion-title">Birds</span>
+      <span class="env-des-accordion-count">{{ page.birds_blocks | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="birds">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-descriptor-grid env-des-descriptor-grid-3">
+          {% for item in page.birds_blocks %}
+          {% include biodiversity-card.liquid item=item %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="env-des-accordion-item" data-cat="habitats">
+    <button type="button" class="env-des-accordion-header" data-target="habitats">
+      <span class="env-des-accordion-title">Habitats</span>
+      <span class="env-des-accordion-count">{{ page.habitats_blocks | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="habitats">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-descriptor-grid env-des-descriptor-grid-3">
+          {% for item in page.habitats_blocks %}
+          {% include biodiversity-card.liquid item=item %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="env-des-accordion-item" data-cat="species">
+    <button type="button" class="env-des-accordion-header" data-target="species">
+      <span class="env-des-accordion-title">Species</span>
+      <span class="env-des-accordion-count">{{ page.species_blocks | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="species">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-descriptor-grid env-des-descriptor-grid-2">
+          {% for item in page.species_blocks %}
+          {% include biodiversity-card.liquid item=item %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('biodiversity-accordion');
+  if (!root) { return; }
+  var items = root.querySelectorAll('.env-des-accordion-item');
+
+  function openItem(id) {
+    items.forEach(function (item) {
+      item.classList.toggle('open', item.getAttribute('data-cat') === id);
+    });
+  }
+
+  items.forEach(function (item) {
+    var header = item.querySelector('.env-des-accordion-header');
+    header.addEventListener('click', function () {
+      var id = item.getAttribute('data-cat');
+      var alreadyOpen = item.classList.contains('open');
+      items.forEach(function (i) { i.classList.remove('open'); });
+      if (!alreadyOpen) {
+        item.classList.add('open');
+        history.replaceState(null, '', '#' + id);
+        requestAnimationFrame(function () {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      } else {
+        history.replaceState(null, '', '#biodiversity-accordion');
+      }
+    });
+  });
+
+  var hash = window.location.hash.replace('#', '');
+  var validIds = Array.prototype.map.call(items, function (i) { return i.getAttribute('data-cat'); });
+  if (hash && validIds.indexOf(hash) !== -1) {
+    openItem(hash);
+    var target = root.querySelector('.env-des-accordion-item[data-cat="' + hash + '"]');
+    if (target) {
+      setTimeout(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    }
+  }
+})();
+</script>

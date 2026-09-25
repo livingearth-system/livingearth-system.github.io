@@ -1,19 +1,24 @@
 ---
-layout: page
+layout: directory
+permalink: /env-des/
 
 title: "Environmental Descriptors"
-
-# NOT INCLUDED: header: "Earth observations"
-headerTop: "env-des"
-title: "Environmental descriptors"
-subtitle: Access to environmental descriptors for Wales (UK), Australia and Papua New Guinea"
-background: "#234665"
+eyebrow: "Learn"
+subtitle: "View the wide range of environmental descriptors describing the land, marine and atmosphere at multiple spatial and temporal scales, many of which have been provided through Earth observations."
 image: "/assets/img/env_descriptors/envdes-png.png"
-nobuttons: true
-Nosvg: true
+breadcrumb:
+  - label: "Living Earth"
+    url: "/"
+  - label: "Environmental Descriptors"
+    url: "/env-des/"
 ---
 
-{%-
-include env-des.liquid
-header="Test "
--%}
+<section>
+  <h2 class="fd-section-heading">Browse by Category</h2>
+  {%- include env-des-accordion.liquid -%}
+</section>
+
+<section>
+  <h2 class="fd-section-heading">Browse by Country</h2>
+  {%- include env-des-country-links.liquid -%}
+</section>

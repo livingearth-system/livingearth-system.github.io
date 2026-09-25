@@ -1,0 +1,14 @@
+- title: "Environmental Descriptors"
+  description: "Browse the full set of environmental descriptors by category, or jump straight to a country's data."
+  icon: "leaf"
+  url: "/env-des/"
+
+- title: "Taxonomies"
+  description: "Reference classification schemes used for land cover, habitats and change."
+  icon: "tag"
+  url: "#taxonomies"
+
+- title: "Code & Repositories"
+  description: "Classification code, notebooks and repositories for working with Living Earth data."
+  icon: "academic-cap"
+  url: "/tools/for-developers/#code"

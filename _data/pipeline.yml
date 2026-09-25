@@ -1,0 +1,67 @@
+- icon: ic-data
+  label: "Earth Observation Data"
+  detail: "Acquisition and processing to an analysis-ready format."
+  url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-surface-reflectance"
+  newtab: true
+
+- icon: ic-leaf
+  label: "Environmental Descriptors"
+  detail: "Derived indices and variables ready for classification."
+  url2: "/env-des/"
+  url2_label: "Define Environmental Descriptors"
+
+- icon: ic-map
+  label: "Classification of Land Cover & Habitats"
+  detail: "Historical and near real-time classification of the landscape."
+  url: /themes/landhabcover/
+  url2: "/tools/interactive-map"
+  url2_label: "Explore the Interactive Map"
+  hide_countries: true
+
+- icon: ic-change
+  label: "Evidence-Based Change"
+  detail: "Tracking change over time to support decision-making."
+  url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
+  newtab: true
+  hide_countries: true
+
+- icon: ic-future
+  label: "Future Landscapes"
+  detail: "Modelling scenarios for policy and land management."
+  hide_countries: true
+  sub_items:
+    - title: "Reimagining"
+      subtitle: "What would we like to see?"
+      description: "Many of us imagine landscapes based on what we value, including natural aesthetics or economics. Often, we have to change our views when landscapes are affected by natural events or processes or human activities."
+      image: "/assets/img/Future2.jpg"
+      url: "#"
+    - title: "Harmonising"
+      subtitle: "How can we agree?"
+      description: "Many of us have our own views of future landscapes and, more often than not, these will differ from others. Mechanisms are available to help us to co-design and agree."
+      image: "/assets/img/Future1.jpg"
+      url: "#"
+    - title: "Realising"
+      subtitle: "How can we be certain?"
+      description: "In order to establish whether our proposed or planned landscapes are realistic, we need to consider what has happened in the past but also use predictive capacity in the forms of models including those that deal with ecosystem processes and distributions of flora and fauna."
+      image: "/assets/img/Future3.jpg"
+      url: "#"
+    - title: "Facilitating"
+      subtitle: "How can we track progress?"
+      description: "In order to facilitate the improvement or creation of a landscape, we need tools that allow monitoring of progress towards ambitions. Living Earth provides such capability through its capacity to routinely generate land cover, habitat and change maps using Earth observation data."
+      image: "/assets/img/Future4.jpg"
+      url: "#"
+    - title: "Valuing"
+      subtitle: "How can we value our futures?"
+      description: "In most cases, the design and co-design of future landscapes is based on their anticipated or perceived values, which can be based on economics or the contribution of nature."
+      image: "/assets/img/Future5.jpg"
+      url: "#"
+    - title: "Assessing Risk"
+      subtitle: "How can we protect our assets?"
+      description: "Our assets can be vulnerable to a range of pressures, whether natural events or processes or human activities, that can lead to adverse impacts. Each will operate across a different time frame (e.g., hours to decades) and can lead to partial or full loss of the asset. The likelihood of these pressures occurring and of the associated impact can be informed by their past occurrence, which can be discerned from Earth observation data, or through predictive models. Common risks to assets are based on the impacts and pressures listed in the Global Change Taxonomy."
+      image: "/assets/img/Future6.jpg"
+      url: "#"
+
+- icon: ic-deliver
+  label: "Explore and Delivery"
+  detail: "Policy, economy, environment and society."
+  url:

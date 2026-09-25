@@ -1,0 +1,17 @@
+{%- comment -%}
+BIODIVERSITY — one photo card (image, title, description).
+If the item has a `url`, the image, title and a "Read more" link all point to
+it; with no url it renders as a plain (non-clickable) card.
+
+Usage: {% include biodiversity-card.liquid item=item %}
+{%- endcomment -%}
+{% assign has_link = false %}
+{% if include.item.url and include.item.url != "" %}{% assign has_link = true %}{% endif %}
+<div class="env-des-descriptor-card">
+  {% if has_link %}<a class="env-des-descriptor-image-link" href="{{ include.item.url | relative_url }}" tabindex="-1" aria-hidden="true">{% endif %}
+  <img src="{{ include.item.logo | relative_url }}" alt="{{ include.item.title }}" class="env-des-descriptor-image">
+  {% if has_link %}</a>{% endif %}
+  <div class="env-des-descriptor-title">{% if has_link %}<a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a>{% else %}{{ include.item.title }}{% endif %}</div>
+  <div class="env-des-descriptor-description">{{ include.item.description }}</div>
+  {% if has_link %}<a class="env-des-descriptor-more" href="{{ include.item.url | relative_url }}">Read more &rarr;</a>{% endif %}
+</div>

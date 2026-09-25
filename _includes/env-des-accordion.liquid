@@ -1,0 +1,135 @@
+{%- comment -%}
+ENVIRONMENTAL DESCRIPTORS — inline accordion, same interaction pattern as
+Browse by Country (_includes/data-by-country.liquid), but each panel opens
+into a grid of descriptor cards (image, title, unit, definition) instead of
+a link list.
+
+Data lives in _data/env-des-descriptors.yml (id, title, image, descriptors[]).
+Each descriptor takes: title, image, and OPTIONALLY unit + description,
+plus OPTIONALLY links — a list of { label, url, newtab, type }. Links
+with type: publication render under a "Publications" icon/panel on the
+card; everything else renders under a "Data sources" icon/panel.
+
+Click a category to expand it inline (accordion style — only one open at a
+time). Deep-linking via URL hash works, e.g. /env-des/#vegetation auto-expands
+Vegetation and scrolls to it.
+{%- endcomment -%}
+
+<div class="env-des-accordion" id="env-des-categories">
+{% for cat in site.data['env-des-descriptors'] %}
+<div class="env-des-accordion-item" data-cat="{{ cat.id }}">
+<button type="button" class="env-des-accordion-header" data-target="{{ cat.id }}">
+{% if cat.image %}<img src="{% if cat.image contains 'http' %}{{ cat.image }}{% else %}{{ cat.image | relative_url }}{% endif %}" alt="" class="env-des-accordion-icon">{% endif %}
+<span class="env-des-accordion-title">{{ cat.title }}</span>
+<span class="env-des-accordion-count">{{ cat.descriptors | size }}</span>
+<svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+</button>
+<div class="env-des-accordion-panel" id="{{ cat.id }}">
+<div class="env-des-accordion-panel-inner">
+<div class="env-des-descriptor-grid">
+{% for d in cat.descriptors %}
+<div class="env-des-descriptor-card">
+{% if d.image %}<img src="{% if d.image contains 'http' %}{{ d.image }}{% else %}{{ d.image | relative_url }}{% endif %}" alt="{{ d.title }}" class="env-des-descriptor-image">{% endif %}
+<div class="env-des-descriptor-title">
+{{ d.title }}{% if d.unit %} <span class="env-des-descriptor-unit">({{ d.unit }})</span>{% endif %}
+</div>
+<p class="env-des-descriptor-description">{{ d.description }}</p>
+{% if d.links %}
+{% assign pubs = d.links | where: "type", "publication" %}
+{% assign datas = d.links | where_exp: "l", "l.type != 'publication'" %}
+<div class="env-des-descriptor-icons">
+  <button type="button" class="env-des-descriptor-icon-btn env-des-descriptor-icon-pub{% unless pubs.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Publications">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>
+  </button>
+  <button type="button" class="env-des-descriptor-icon-btn env-des-descriptor-icon-data{% unless datas.size > 0 %} is-empty{% endunless %}" aria-expanded="false" aria-label="Data sources">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+  </button>
+</div>
+{% if pubs.size > 0 %}
+<div class="env-des-descriptor-panel-block env-des-descriptor-panel-pub" hidden>
+  <div class="env-des-descriptor-panel-label">Publications</div>
+  {% for link in pubs %}
+  <a class="env-des-descriptor-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+{% if datas.size > 0 %}
+<div class="env-des-descriptor-panel-block env-des-descriptor-panel-data" hidden>
+  <div class="env-des-descriptor-panel-label">Data sources</div>
+  {% for link in datas %}
+  <a class="env-des-descriptor-panel-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" {% if link.newtab %}target="_blank" rel="noopener"{% endif %}>&rarr; {{ link.label }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+{% endif %}
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+<script>
+(function () {
+var items = document.querySelectorAll('.env-des-accordion-item');
+
+function openItem(id) {
+items.forEach(function (item) {
+item.classList.toggle('open', item.getAttribute('data-cat') === id);
+});
+}
+
+items.forEach(function (item) {
+var header = item.querySelector('.env-des-accordion-header');
+header.addEventListener('click', function () {
+var id = item.getAttribute('data-cat');
+var alreadyOpen = item.classList.contains('open');
+items.forEach(function (i) { i.classList.remove('open'); });
+if (!alreadyOpen) {
+item.classList.add('open');
+history.replaceState(null, '', '#' + id);
+} else {
+history.replaceState(null, '', '#env-des-categories');
+}
+});
+});
+
+var hash = window.location.hash.replace('#', '');
+var validIds = Array.prototype.map.call(items, function (i) {
+return i.getAttribute('data-cat');
+});
+
+if (hash && validIds.indexOf(hash) !== -1) {
+openItem(hash);
+var target = document.querySelector('.env-des-accordion-item[data-cat="' + hash + '"]');
+if (target) {
+setTimeout(function () {
+target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}, 100);
+}
+}
+
+// Publication / data icon toggle on descriptor cards.
+// Clicking a non-empty icon opens its panel (Publications or Data
+// sources) inline on that card; clicking the open one again, or the
+// other icon, closes/switches it. Empty icons (is-empty) do nothing.
+document.addEventListener('click', function (e) {
+var btn = e.target.closest('.env-des-descriptor-icon-btn');
+if (!btn || btn.classList.contains('is-empty')) { return; }
+var card = btn.closest('.env-des-descriptor-card');
+if (!card) { return; }
+var isPub = btn.classList.contains('env-des-descriptor-icon-pub');
+var panel = card.querySelector(isPub ? '.env-des-descriptor-panel-pub' : '.env-des-descriptor-panel-data');
+if (!panel) { return; }
+var wasOpen = !panel.hidden;
+card.querySelectorAll('.env-des-descriptor-panel-block').forEach(function (p) { p.hidden = true; });
+card.querySelectorAll('.env-des-descriptor-icon-btn').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+if (!wasOpen) {
+panel.hidden = false;
+btn.setAttribute('aria-expanded', 'true');
+}
+});
+})();
+</script>

@@ -1,5 +1,5 @@
 - title: "Open Data Cube"
-  subtitle: "Open source geospatial data management and analysis software and capablity for processing and analysing Earth observation data."
+  subtitle: "Open source geospatial data management and analysis software and capability for processing and analysing Earth observation data."
   image: "/assets/img/big_data/odc.png"
   button: "Learn More"
   url: "https://www.opendatacube.org/"
@@ -13,14 +13,14 @@
   newtab: true
 
 - title: "Planetary Computer"
-  subtitle: "A catalogue of global satellite imagery and geospatial datasets with capability for analysis at planetary levels."
-  image: "/assets/img/big_data/swissdatacube.png"
+  subtitle: "Microsoft's catalogue of global environmental and satellite datasets, with APIs for searching and accessing the data at scale."
+  image: "/assets/img/big_data/microsoftplanetarycomputer.png"
   button: "Learn More"
   url: "https://planetarycomputer.microsoft.com/"
   newtab: true
 
 - title: "Digital Earth Australia"
-  subtitle: "Digital Earth Australia (DEA) is an analysis platform providing  access to standardised analysis-ready-data (ARD), analytic capability and tools."
+  subtitle: "Digital Earth Australia (DEA) is an analysis platform providing access to standardised analysis-ready-data (ARD), analytic capability and tools."
   image: "/assets/img/big_data/digitalearthaustralia.png"
   button: "Learn More"
   url: "https://www.dea.ga.gov.au/"
@@ -30,12 +30,11 @@
   subtitle: "The Welsh Data Cube houses a growing archive of Sentinel-1 radar and Sentinel-2 optical data as well as the products derived from these."
   image: "/assets/img/big_data/welshdatacube.png"
   button: "Learn More"
-  url: "#"
-  newtab: true
+  url: "/tools/for-developers/#wales"
 
 - title: "Swiss Data Cube"
-  subtitle: "The Swiss Data Cube is a cloud-computing platform providing satellite data processed to an Analysis Ready Data (ARD) format and covering the geographical extent of Swizerland."
+  subtitle: "The Swiss Data Cube is a cloud-computing platform providing satellite data processed to an Analysis Ready Data (ARD) format and covering the geographical extent of Switzerland."
   image: "/assets/img/big_data/swissdatacube.png"
   button: "Learn More"
-  url: "//www.swissdatacube.org/"
+  url: "https://www.swissdatacube.org/"
   newtab: true

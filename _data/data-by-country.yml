@@ -1,0 +1,43 @@
+- id: global
+  title: "Global"
+  intro: "Ground observation data collected worldwide through Earthtrack, plus web-service access to the full archive."
+  links:
+    - label: "Habitat (Earthtrack)"
+      url: "https://earthtrack.aber.ac.uk/campaign/habitat_world.html"
+    - label: "Change (Earthtrack)"
+      url: "https://earthtrack.aber.ac.uk/campaign/change_world.html"
+    - label: "Fire (Earthtrack)"
+      url: "https://earthtrack.aber.ac.uk/campaign/fire_world.html"
+    - label: "Web Feature Service (WFS)"
+      url: "https://earthtrack.aber.ac.uk/services/wfs?service=WFS&request=GetCapabilities"
+
+- id: wales
+  title: "Wales"
+  intro: "Analysis-ready satellite data and Open Data Cube access for Wales."
+  links:
+    - label: "Living Wales portal (Sentinel-1, Sentinel-2 and Landsat)"
+      url: "https://livingwales.aber.ac.uk/"
+    - label: "Request Welsh Data Cube access (email livingwales@aber.ac.uk)"
+      url: "mailto:livingwales@aber.ac.uk"
+
+- id: switzerland
+  title: "Switzerland"
+  intro: "Analysis-ready satellite data and Open Data Cube access for Switzerland."
+  links:
+    - label: "Download ARD data (Swiss Data Cube Explorer)"
+      url: "https://explorer.swissdatacube.org/"
+    - label: "Swiss Data Cube platform login"
+      url: "https://www.swissdatacube.org/index.php/platform/"
+
+- id: australia
+  title: "Australia"
+  intro: "Analysis-ready satellite data and Open Data Cube access for Australia."
+  links:
+    - label: "DEA Surface Reflectance (Landsat and Sentinel-2 ARD)"
+      url: "https://www.dea.ga.gov.au/products/dea-surface-reflectance"
+    - label: "DEA Open Web Services (WMS, WMTS, WCS)"
+      url: "https://docs.dea.ga.gov.au/setup/gis/web_services.html"
+    - label: "DEA data on Amazon Web Services"
+      url: "https://data.dea.ga.gov.au/"
+    - label: "Digital Earth Australia (DEA) sandbox login"
+      url: "https://app.sandbox.dea.ga.gov.au/"

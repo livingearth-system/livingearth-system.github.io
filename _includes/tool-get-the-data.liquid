@@ -1,5 +1,5 @@
 <div class="tool_img">
-  <img src="{{include.img}}">
+  <img src="{% if include.img contains 'http' %}{{ include.img }}{% else %}{{ include.img | relative_url }}{% endif %}">
   <div class="tool_content">
     <span class="page_link">{{include.permal}}</span>
     <h2 class="title">{{include.title}}</h2>

@@ -2,7 +2,7 @@
 <section class="mt-100 mb-100 future-landscapes-main">
     <div class="row">
         <div class="col-12 mb-40">
-            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }} {%- if include.more -%}<a href="{{ include.more }}">View all</a>{% endif %}</h2>{% endif %}
+            {%- if include.heading -%}<h2 class="common-title">{{ include.heading }} {%- if include.more -%}<a href="{% if include.more contains 'http' %}{{ include.more }}{% else %}{{ include.more | relative_url }}{% endif %}">View all</a>{% endif %}</h2>{% endif %}
             {%- if include.subheading -%}<p>{{ include.subheading }}</p>{% endif %}
         </div>
     </div>
@@ -61,9 +61,9 @@
                             {% assign target = "_blank" %}
                         {% endif %}
                         {% if include.local == "true" %}
-                            <img src="{{ box.image }}" alt="{{ box.title }}">
+                            <img src="{% if box.image contains 'http' %}{{ box.image }}{% else %}{{ box.image | relative_url }}{% endif %}" alt="{{ box.title }}">
                         {% else %}
-                            <a href="{{ box.url }}" target="{{ target }}"><img src="{{ box.image }}" alt="{{ box.title }}"></a>
+                            <a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}" target="{{ target }}"><img src="{% if box.image contains 'http' %}{{ box.image }}{% else %}{{ box.image | relative_url }}{% endif %}" alt="{{ box.title }}"></a>
                         {% endif %}
                         <div class="future-dsc">
                             {% if include.local == "true" %}
@@ -72,17 +72,17 @@
                                 {%- if box.button -%}
                                     <div class="future-dsc-title">{{ box.title }}</div>
                                 {% else %}
-                                    <a href="{{ box.url }}" target="{{ target }}">
+                                    <a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}" target="{{ target }}">
                                         <div class="future-dsc-title">{{ box.title }}</div>
                                     </a>
                                 {% endif %}
                             {% endif %}
                             {%- if box.subtitle -%}<p>{{ box.subtitle }}</p>{% endif %}
                             {%- if box.button -%}
-                                <p class="pt-2"><a href="{{ box.url }}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
+                                <p class="pt-2"><a href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}" target="{{ target }}" class="learn-more-link">{{ box.button }}</a></p>
                             {% endif %}
                             {%- if box.external -%}
-                                <p style="white-space:normal;"><a class="future-dsc-external" href="{{ box.url }}" target="{{ target }}">{{ box.external }}</a></p>
+                                <p style="white-space:normal;"><a class="future-dsc-external" href="{% if box.url contains 'http' %}{{ box.url }}{% else %}{{ box.url | relative_url }}{% endif %}" target="{{ target }}">{{ box.external }}</a></p>
                             {% endif %}
                         </div>
                     </div>

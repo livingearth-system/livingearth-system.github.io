@@ -1,0 +1,529 @@
+/* ==========================================================================
+   PIPELINE — "How it works" section
+   Keeps its own distinct palette (scoped under .pipeline-section so it can't
+   leak into or clash with anything else on the site).
+   ========================================================================== */
+
+.pipeline-section {
+  --navy: #23567b;
+  --blue: #4294c3;
+  --blue-dark: #2f6f95;
+  --blue-light: #8ecbe8;
+  --sky: #edfaff;
+  --green: #8ea231;
+  --text-soft: #5c7285;
+  padding: 60px 0;
+  background: #FCF8F5;
+}
+
+.pipeline-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -24px rgba(15, 35, 55, 0.35);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.pipeline-head {
+  padding: 34px 36px 8px;
+}
+
+.pipeline-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.pipeline-title {
+  margin: 6px 0 4px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+
+.pipeline-intro {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--text-soft);
+  max-width: 560px;
+}
+
+.pipeline-infra {
+  margin: 22px 36px 0;
+  padding: 9px 16px;
+  background: var(--sky);
+  border: 1px solid #dcefff;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.pipeline-flow {
+  display: flex;
+  padding: 26px 36px 6px;
+  gap: 0;
+}
+
+.pipeline-stage {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(0 0, 91% 0, 100% 50%, 91% 100%, 0 100%, 9% 50%);
+  margin-left: -30px;
+  transition: flex-grow 0.35s ease;
+}
+
+.pipeline-stage:hover {
+  text-decoration: none;
+}
+
+.pipeline-stage:first-child {
+  margin-left: 0;
+  clip-path: polygon(0 0, 91% 0, 100% 50%, 91% 100%, 0 100%);
+}
+
+/* Fan effect: hovering the flow shrinks every stage slightly, then the
+   specific stage under the cursor grows well past its neighbours. */
+.pipeline-flow:hover .pipeline-stage {
+  flex-grow: 0.7;
+}
+
+.pipeline-flow:hover .pipeline-stage:hover {
+  flex-grow: 1.0;
+}
+
+.pipeline-stage-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px 0 16px;
+  transition: transform 0.2s;
+}
+
+.pipeline-stage:hover .pipeline-stage-inner {
+  transform: scale(1.04);
+}
+
+.pipeline-num {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.06em;
+}
+
+.pipeline-label {
+  width: 100%;
+  max-width: 100%;     
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.pipeline-icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.pipeline-stage:nth-child(1) { background: #bfe0f2; }
+.pipeline-stage:nth-child(2) { background: #9ecfe8; }
+.pipeline-stage:nth-child(3) { background: #7abfe0; }
+.pipeline-stage:nth-child(4) { background: var(--blue); }
+.pipeline-stage:nth-child(5) { background: var(--blue-dark); }
+.pipeline-stage:nth-child(6) { background: var(--navy); }
+
+/* The first three stages have light backgrounds — dark text reads
+   much better on them than the white used for the darker stages. */
+.pipeline-stage:nth-child(1) .pipeline-label,
+.pipeline-stage:nth-child(2) .pipeline-label,
+.pipeline-stage:nth-child(3) .pipeline-label {
+  color: var(--navy);
+}
+
+.pipeline-stage:nth-child(1) .pipeline-num,
+.pipeline-stage:nth-child(2) .pipeline-num,
+.pipeline-stage:nth-child(3) .pipeline-num {
+  color: rgba(35, 86, 123, 0.7);
+}
+
+.pipeline-detail {
+  margin: 4px 36px 0;
+  padding: 14px 18px;
+  background: var(--sky);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--navy);
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.15s;
+
+}
+.pipeline-panel {
+  margin: 4px 36px 0;
+  padding: 18px 20px;
+  background: var(--sky);
+  border-radius: 10px;
+}
+
+.pipeline-panel-detail {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.pipeline-panel-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  background: var(--blue);
+  padding: 9px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.pipeline-panel-link:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.pipeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.pipeline-detail.placeholder {
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+.pipeline-calib {
+  margin: 22px 36px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px dashed #cfd9e2;
+  border-radius: 10px;
+}
+
+.pipeline-calib-strip {
+  display: flex;
+  gap: 4px;
+}
+
+.pipeline-calib-strip span {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--green);
+  opacity: 0.55;
+}
+
+.pipeline-calib-strip span:nth-child(2) { opacity: 0.7; }
+.pipeline-calib-strip span:nth-child(3) { opacity: 0.85; }
+.pipeline-calib-strip span:nth-child(4) { opacity: 1; }
+
+.pipeline-calib-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.pipeline-engage {
+  margin: 28px 0 0;
+  padding: 16px 36px;
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pipeline-engage span {
+  opacity: 0.75;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+@media (max-width: 1100px) {
+  .pipeline-flow {
+    flex-direction: column;
+    padding: 22px 20px 6px;
+    gap: 10px;
+  }
+
+  .pipeline-stage {
+    clip-path: none !important;
+    margin-left: 0 !important;
+    height: auto;
+    border-radius: 12px;
+    flex-grow: 1 !important;
+  }
+
+  .pipeline-stage-inner {
+    flex-direction: row;
+    padding: 14px 16px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .pipeline-label {
+    text-align: left;
+  }
+
+  .pipeline-head,
+  .pipeline-infra,
+  .pipeline-detail,
+  .pipeline-calib,
+  .pipeline-engage {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .pipeline-infra {
+    margin-top: 18px;
+  }
+}
+
+.pipeline-section {
+  background: #e3ecd9;
+  padding: 48px 0;
+}
+
+.pipeline-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pipeline-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pipeline-logo-img {
+  height: 44px !important;
+  width: auto !important;
+  max-height: 44px;
+  display: block;
+}
+
+.pipeline-header-text .pipeline-eyebrow {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #23567b;
+  font-size: 13px;
+}
+.pipeline-header-text .pipeline-title {
+  margin: 2px 0 0;
+  color: #23567b;
+}
+
+.pipeline-footer-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+.pipeline-footer-box {
+  background: #3d7f58;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+}
+a.pipeline-footer-box:hover { background: #336b49; }
+.pipeline-footer-box-static { cursor: default; }
+
+@media (max-width: 600px) {
+  .pipeline-footer-boxes { grid-template-columns: 1fr; }
+}
+
+.pipeline-panel-countries {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #dde5ea;
+}
+
+.pipeline-item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.pipeline-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pipeline-item-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.pipeline-item-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--navy);
+  padding: 10px 12px 2px;
+}
+
+.pipeline-item-toggle {
+  border: 2px solid transparent;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.pipeline-item-toggle:hover { transform: translateY(-2px); }
+
+.pipeline-item-toggle.is-active,
+.pipeline-item-toggle:focus-visible {
+  border-color: var(--navy);
+  outline: none;
+}
+
+.pipeline-item-desc {
+  background: #fff;
+  border-left: 4px solid var(--navy);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.pipeline-item-desc-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.pipeline-item-desc p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pipeline-item-sub {
+  font-size: 12px;
+  color: var(--text-soft);
+  line-height: 1.4;
+  padding: 0 12px 12px;
+}
+
+.pipeline-panel-countries-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #5f6b76;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-right: 4px;
+}
+
+.pipeline-panel-country {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #cfe0ea;
+  border-radius: 999px;
+  padding: 8px 16px 8px 10px;
+  box-shadow: 0 2px 6px -3px rgba(15, 35, 55, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.pipeline-panel-country:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -6px rgba(15, 35, 55, 0.3);
+  background: #f3f9fc;
+  text-decoration: none;
+}
+
+.pipeline-panel-country-img {
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px;
+  max-height: 26px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.pipeline-panel-country-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #23567b;
+  white-space: nowrap;
+}
+
+/* MOBILE: pipeline cards — two per row so the grid and its description fit on screen */
+@media (max-width: 600px) {
+  .pipeline-item-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pipeline-item-img { height: 70px; }
+  .pipeline-item-title { font-size: 12px; padding: 8px 8px 2px; }
+  .pipeline-item-sub { font-size: 11px; padding: 0 8px 10px; }
+}

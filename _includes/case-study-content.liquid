@@ -17,7 +17,7 @@
   <div class="row {% if id == 4 or id == 6 %}special-row{% endif %}" style="display: flex; margin-top: 70px;">
     {% if isEven == 0 %}
     <div class="col-md-6 col-left" style="width: 50%;">
-      <img class="img-responsive" src="{{ item.image }}" alt="Image">
+      <img class="img-responsive" src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="Image">
     </div>
     <div class="col-md-6 col-right" style="width: 50%;">
       {% if item.heading %}
@@ -38,8 +38,8 @@
       {% endif %}
       {% if id == 5 %}
       <div class="img-row-5">
-        <img src="/assets/img/appstore.png" alt="Image 1">
-        <img src="/assets/img/CHplay.png" alt="Image 2">
+        <img src="{{ '/assets/img/appstore.png' | relative_url }}" alt="Image 1">
+        <img src="{{ '/assets/img/CHplay.png' | relative_url }}" alt="Image 2">
       </div>
       {% endif %}
       {% assign buttons = item.button | split: '; ' %}
@@ -48,8 +48,8 @@
       {% assign url = urls[forloop.index0] %}
       <div class="button-tool">
         <button class="">
-          <a href="{{ url }}" class="custom-button">{{ button }}</a>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <a href="{% if url contains 'http' %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}" class="custom-button">{{ button }}</a>
+          <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
         </button>
       </div>
       {% endfor %}
@@ -73,8 +73,8 @@
       {% endfor %}
       {% endif %}
       <div class="img-row-5">
-        <img src="/assets/img/appstore.png" alt="Image 1">
-        <img src="/assets/img//CHplay.png" alt="Image 2">
+        <img src="{{ '/assets/img/appstore.png' | relative_url }}" alt="Image 1">
+        <img src="{{ '/assets/img//CHplay.png' | relative_url }}" alt="Image 2">
       </div>
       {% assign urls = item | where: "contains", "url_" %}
       {% assign buttons = item.button | split: '; ' %}
@@ -85,14 +85,14 @@
       {% assign url = urls[forloop.index0] %}
       <div class="button-tool">
         <button class="">
-          <a href="{{ url }}" class="custom-button">{{ button }}</a>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <a href="{% if url contains 'http' %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}" class="custom-button">{{ button }}</a>
+          <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
         </button>
       </div>
       {% endfor %}
     </div>
     <div class="col-md-6 col-right" style="width: 50%;">
-      <img class="img-responsive" src="{{ item.image }}" alt="Image">
+      <img class="img-responsive" src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="Image">
     </div>
     {% else %}
     <div class="col-md-6 col-left" style="width: 50%;">
@@ -119,14 +119,14 @@
       {% assign url = urls[forloop.index0] %}
       <div class="button-tool">
         <button class="">
-          <a href="{{ url }}" class="custom-button">{{ button }}</a>
-          <img src="/assets/img/Arrow.png" alt="Arrow Image">
+          <a href="{% if url contains 'http' %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}" class="custom-button">{{ button }}</a>
+          <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
         </button>
       </div>
       {% endfor %}
     </div>
     <div class="col-md-6 col-right" style="width: 50%;">
-      <img class="img-responsive" src="{{ item.image }}" alt="Image">
+      <img class="img-responsive" src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="Image">
     </div>
     {% endif %}
   </div>
@@ -142,7 +142,7 @@
     <div class="row {% if id == 4 or id == 6 %}special-row{% endif %}">
       <div class="content-container">
         <div class="content">
-          <img class="img-responsive" src="{{ item.image }}" alt="Image">
+          <img class="img-responsive" src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="Image">
           {% if item.heading %}
             <h2>{{ item.heading }}</h2>
           {% endif %}
@@ -159,8 +159,8 @@
           {% endif %}
           {% if id == 5 %}
             <div class="img-row-5">
-              <img class="img-responsive" src="/assets/img/appstore.png" alt="Image 1">
-              <img class="img-responsive" src="/assets/img//CHplay.png" alt="Image 2">
+              <img class="img-responsive" src="{{ '/assets/img/appstore.png' | relative_url }}" alt="Image 1">
+              <img class="img-responsive" src="{{ '/assets/img//CHplay.png' | relative_url }}" alt="Image 2">
             </div>
           {% endif %}
           {% assign buttons = item.button | split: '; ' %}
@@ -169,7 +169,7 @@
             <div class="button-tool">
               <button class="">
                 {{ button | replace: 'FILL IN HERE', '<button class="custom-button">FILL IN HERE</button>' }}
-                <img src="/assets/img/Arrow.png" alt="Arrow Image">
+                <img src="{{ '/assets/img/Arrow.png' | relative_url }}" alt="Arrow Image">
               </button>
             </div>
           {% endfor %}

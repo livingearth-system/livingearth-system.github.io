@@ -11,7 +11,7 @@
             <div class="col-md-6 col-lg-3 col-6 mb-40">
                 <div class="organisations-earth-inner">
                     <div class="organisations-img">
-                        {%- if item.image -%}<a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.name }}"></a>{% endif %}
+                        {%- if item.image -%}<a href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"><img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="{{ item.name }}"></a>{% endif %}
                     </div>
                     <div class="organisations-dsc">
                         {%- if item.name -%}<h4>{{ item.name }}</h4>{% endif %}
