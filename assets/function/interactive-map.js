@@ -357,7 +357,7 @@ class LeafletMap {
 
 	async loadData(jsonFileName) {
 		try {
-			const response = await fetch(`${window.SITE_BASEURL || ""}/assets/json/interactive-map/${jsonFileName}.json`);
+			const response = await fetch(`/assets/json/interactive-map/${jsonFileName}.json`);
 			if (!response.ok) {
 				throw new Error(`HTTP error! status: ${response.status}`);
 			}

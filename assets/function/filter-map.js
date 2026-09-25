@@ -49,6 +49,7 @@ const earthtrackInverted = {
     //"Artificial waterbodies": "#4682B4",
     "#4d9fdd":"W"
 }
+
 //Define colors habitat
 const habitatColors = {
     "heathland": "#c90cad",
@@ -76,7 +77,6 @@ const habitatInverted = {
     "#07688f": "Swamp",
     "#228B22": "Woodl and Scrub",   
 };
-
 
 // Define type change
 const changeColor = {
@@ -268,7 +268,7 @@ class LeafletMap {
     // Load data json by file name
 	async loadData(jsonFileName) {
         try {
-            const response = await fetch(`${window.SITE_BASEURL || ""}/assets/json/${jsonFileName}.json`);
+            const response = await fetch(`/assets/json/${jsonFileName}.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -292,7 +292,7 @@ class LeafletMap {
             const { legend, l3classifcode } = properties;
 
             // Assuming legendColor maps directly from the 'legend' property
-            const getHandle = jsonFileName !== 'earthtrack' ? legend : l3classif
+            const getHandle = jsonFileName !== 'earthtrack' ? legend : l3classifcode
             const legendColor = this.getLegendColor(getHandle, jsonFileName);
 
             const marker = L.circleMarker([coordinates[1], coordinates[0]], {

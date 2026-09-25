@@ -1,4 +1,3 @@
-<script>window.SITE_BASEURL = "{{ site.baseurl }}";</script>
 <script src="../assets/function/interactive-map.js"></script>
 
 <!-- TOOL-HEADING -->
@@ -25,7 +24,7 @@
               {% endfor %}
             </select>
             <div class="left-content">
-              <img src="{% if site.data.tool-earth-track-sidebar.index.content.left-content.src contains 'http' %}{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}{% else %}{{ site.data.tool-earth-track-sidebar.index.content.left-content.src | relative_url }}{% endif %}">
+              <img src="{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}">
             </div>
           </div>
         </div>
@@ -34,10 +33,10 @@
         <div class="before">
           <div class="living-earth">
             <div class="left-content">
-              <img src="{% if site.data.tool-earth-track-sidebar.index.content.left-content.src contains 'http' %}{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}{% else %}{{ site.data.tool-earth-track-sidebar.index.content.left-content.src | relative_url }}{% endif %}">
+              <img src="{{ site.data.tool-earth-track-sidebar.index.content.left-content.src }}">
             </div>
             <div class="right-content">
-              <img src="{% if site.data.tool-earth-track-sidebar.index.content.right-content.src contains 'http' %}{{ site.data.tool-earth-track-sidebar.index.content.right-content.src }}{% else %}{{ site.data.tool-earth-track-sidebar.index.content.right-content.src | relative_url }}{% endif %}">
+              <img src="{{ site.data.tool-earth-track-sidebar.index.content.right-content.src }}">
               <p>{{ site.data.tool-earth-track-sidebar.index.content.right-content.title }}</p>
             </div>
           </div>
@@ -51,7 +50,7 @@
                 {% if tool_item.disable == true %}
                 disabled
                 {% endif %}>
-                <img src="{% if tool_item.icon contains 'http' %}{{ tool_item.icon }}{% else %}{{ tool_item.icon | relative_url }}{% endif %}" alt="{{ tool_item.title }}">
+                <img src="{{ tool_item.icon }}" alt="{{ tool_item.title }}">
                 <p>{{ tool_item.title }}</p>
               </span>
             {% endfor %}
@@ -89,11 +88,11 @@
       <div class="learning_resource">
         <div class="button-tool">
           <button class="button_tool_tilte" id="learningResourceButton">{{ site.data.tool-analyze-the-data-map-sidebar.index.learning_resources.button_text1 }}</button>
-          <img src="{% if site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src contains 'http' %}{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}{% else %}{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src | relative_url }}{% endif %}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
+          <img src="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.src }}" alt="{{ site.data.tool-analyze-the-data-map-sidebar.index.arrow_img.alt }}">
         </div>
         <div class="brand_logo">
           {% for logo in site.data['tool-analyze-the-data-map-sidebar'].index.sponsor_logos %}
-            <img src="{% if logo.src contains 'http' %}{{ logo.src }}{% else %}{{ logo.src | relative_url }}{% endif %}" alt="{{ logo.name }}">
+            <img src="{{ logo.src }}" alt="{{ logo.name }}">
           {% endfor %}
         </div>
       </div>
