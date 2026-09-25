@@ -8,6 +8,35 @@ image: "/assets/img/heading/monmouthshire.jpg"
 cta_text: "Land Owner Login"
 cta_url: "/europe/wales/monmouthshire/login/"
 nocontact: true
+partner_blocks:
+  - title: "Monmouthshire County Council"
+    description: ""
+    logo: "/assets/img/logos/MonmouthshireCC.png"
+    url: "https://www.monmouthshire.gov.uk/"
+    newtab: true
+  - title: "European Agricultural Fund for Rural Development"
+    description: ""
+    logo: "/assets/img/wales/logos/eu.png"
+  - title: "Welsh Government"
+    description: ""
+    logo: "/assets/img/logos/Welsh Government2.png"
+    url: "https://www.gov.wales/"
+    newtab: true
+  - title: "Dŵr Cymru Welsh Water"
+    description: ""
+    logo: "/assets/img/logos/DCWW.png"
+    url: "https://www.dwrcymru.com/en"
+    newtab: true
+  - title: "Natural Resources Wales"
+    description: ""
+    logo: "/assets/img/logos/NRW_logo.png"
+    url: "https://naturalresources.wales/?lang=en"
+    newtab: true
+  - title: "Aberystwyth University"
+    description: "Department of Geography and Earth Sciences"
+    logo: "/assets/img/logos/Aberystwyth University square.png"
+    url: "https://www.aber.ac.uk/en/dges/about/"
+    newtab: true
 breadcrumb:
   - label: "Living Earth"
     url: "/"
@@ -46,16 +75,10 @@ breadcrumb:
 </div>
 
 <div class="project-partners">
-  <h2 class="project-section-title">Project partners</h2>
+  <h2 class="info-blocks-heading">Project partners</h2>
   <div class="project-section-text">
 <p>Living Land Management Wales is a collaborative partnership project delivered by Aberystwyth University, Dwr Cymru Welsh Water, Monmouthshire County Council, and Natural Resources Wales.</p>
   </div>
-  <div class="project-logos">
-    <img src="{{ '/assets/img/wales/logos/monmouthsire-county-council.png' | relative_url }}" alt="Monmouthshire County Council" loading="lazy">
-    <img src="{{ '/assets/img/wales/logos/eu.png' | relative_url }}" alt="EU" loading="lazy">
-    <img src="{{ '/assets/img/wales/logos/welsh-government.png' | relative_url }}" alt="Welsh Government" loading="lazy">
-    <img src="{{ '/assets/img/wales/logos/welsh-water.png' | relative_url }}" alt="Welsh Water" loading="lazy">
-    <img src="{{ '/assets/img/wales/logos/natural-resources-wales.png' | relative_url }}" alt="Natural Resources Wales" loading="lazy">
-    <img src="{{ '/assets/img/wales/logos/aberystwyth-university.png' | relative_url }}" alt="Aberystwyth University" loading="lazy">
-  </div>
 </div>
+
+{% include info-blocks.liquid list=page.partner_blocks variant="horizontal" %}
