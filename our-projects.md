@@ -72,7 +72,7 @@ info_blocks:
 
   - title: "Living Land Management"
     description: "Farm level mapping and monitoring"
-    url: "https://livingearthhub.org/europe/wales/monmouthshire/"
+    url: "/europe/wales/monmouthshire/"
     image: "/assets/img/projects/livinglandmanagement_a.png"
 
   - title: "CCI Biomass"

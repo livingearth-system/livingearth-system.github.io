@@ -11,7 +11,7 @@ choose: Earth
 learning_resources:
   button_text1: Go to learning resource
   button_text2: Sign in with GitHub
-  button_url: /tools/learning-resources
+  button_url: /tools/learn/
 
 sponsor_logos:
   - name: aberystwyth_university

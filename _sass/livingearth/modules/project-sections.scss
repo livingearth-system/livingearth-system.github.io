@@ -6,7 +6,7 @@
 .project-section { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; align-items: start; }
 .project-section--flip .project-section-media { order: 2; }
 .project-section-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
-.project-section-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #00577E; margin: 0 0 12px; }
+.project-section-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #00577E; margin: 0 0 12px; text-transform: none; letter-spacing: normal; }
 .project-section-text { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.65; color: #3A5A68; }
 .project-section-text p { margin: 0 0 12px; }
 .project-section-text a { color: #00577E; text-decoration: underline; }
