@@ -1,0 +1,8 @@
+- heading: "Get in Touch"
+  text: "Have a question about Living Earth or need help using our data? Email us at rml@livingearth.org."
+  button: "Get in Touch"
+  url: /contact
+- heading: "News & Events"
+  text: "Find out the latest news, public talks and events and what's happening with Living Earth."
+  button: "See News & Events"
+  url: /news

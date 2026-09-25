@@ -4,6 +4,6 @@ items:
   - icon: /assets/icon/download.svg
     text: Press this icon to download datasets
 link:
-  href: /tools/learning-resources
+  href: /tools/learn/
   text: Go to learning resource
   tooltip: At any point you can go to our learning page from the toolbar

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   TOOLS HOMEPAGE — three-column intent grid with resource tiles
+   ========================================================================== */
+
+.th-intents {
+  margin: 32px 0 56px;
+}
+
+.th-intents-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #23567b;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.th-intents-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.th-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.th-header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.th-header-card:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.th-header-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.th-header-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.th-header-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.th-header-jump {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.th-tile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.th-tile {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 12px;
+  padding: 16px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.th-tile:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.th-tile-icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  color: #23567b;
+}
+
+.th-tile-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.th-tile-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.th-tile-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #23567b;
+  margin-bottom: 4px;
+}
+
+.th-tile-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3a5a6c;
+  margin-bottom: 6px;
+}
+
+.th-tile-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #23567b;
+}
+
+.th-column[data-key="explore-and-analyse"] .th-header-card {
+  background: #4294c3;
+  color: #fbf8f5;
+}
+.th-column[data-key="explore-and-analyse"] .th-header-icon svg {
+  color: #fbf8f5;
+}
+.th-column[data-key="explore-and-analyse"] .th-tile {
+  background: #c6e5f4;
+}
+
+.th-column[data-key="learn"] .th-header-card {
+  background: #3d7f58;
+  color: #fbf8f5;
+}
+.th-column[data-key="learn"] .th-header-icon svg {
+  color: #fbf8f5;
+}
+.th-column[data-key="learn"] .th-tile {
+  background: #e3efd9;
+}
+
+.th-column[data-key="for-developers"] .th-header-card {
+  background: #bfe6f6;
+  color: #23567b;
+}
+.th-column[data-key="for-developers"] .th-header-icon svg {
+  color: #23567b;
+}
+.th-column[data-key="for-developers"] .th-tile {
+  background: #eaf6fc;
+}
+
+@media (max-width: 767px) {
+  .th-intents-grid {
+    grid-template-columns: 1fr;
+  }
+}

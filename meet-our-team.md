@@ -1,5 +1,7 @@
 ---
 layout: page
+published: True
+
 permalink: /about/meet-our-team
 Topheader: Meet Our Team
 header: "About us"

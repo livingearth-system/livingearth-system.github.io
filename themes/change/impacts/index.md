@@ -1,19 +1,16 @@
 ---
-layout: page
-
-title: "Impacts"
-
-# NOT INCLUDED: header: "Impacts"
-headerTop: "Impacts"
-subtitle: "Examples of change impacts from around the World, the evidence required for their detection and description based on the types, amounts and extents of materials.  Impacts are numbered 1 to 77. " 
-background: "#072857"
-image: "/assets/img/themes/change/md_change.png"
-nobuttons: true
-Nosvg: true
-Noheader: true
+layout: null
+permalink: /themes/change/impacts/
 ---
-
-{%-
-include change-impacts.liquid
-header="Examples of impacts"
--%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ '/themes/change/#impacts' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/themes/change/#impacts' | relative_url }}">
+</head>
+<body>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/themes/change/#impacts' | relative_url }}">Themes &rsaquo; Change</a>.</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{%- comment -%}
+CHANGE LINKS — three link cards at the top of the Change page, same card look as
+the "What do you want to do?" cards (fd-intent-card). Each opens a file from the
+Global Change Framework GitHub repo in a new tab.
+Data lives in _data/change-links.yml (title, description, icon, url).
+Icons available: sparkles, table, tag.
+
+Usage: {% include change-links.liquid %}
+{%- endcomment -%}
+<div class="fd-intents change-links">
+  <h2 class="fd-intents-heading">Explore the Global Change Framework</h2>
+  <div class="fd-intents-grid fd-intents-grid-3">
+    {% for item in site.data['change-links'] %}
+      <a class="fd-intent-card" href="{{ item.url }}" target="_blank" rel="noopener">
+        <span class="fd-intent-icon">
+          {% if item.icon == 'sparkles' %}
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
+          {% elsif item.icon == 'table' %}
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor"><rect x="3" y="4.5" width="18" height="15" rx="2" stroke-linecap="round" stroke-linejoin="round"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M9.5 10v9.5"/></svg>
+          {% elsif item.icon == 'tag' %}
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/></svg>
+          {% endif %}
+        </span>
+        <span class="fd-intent-title">{{ item.title }}</span>
+        <span class="fd-intent-description">{{ item.description }}</span>
+        <span class="fd-intent-meta">View on GitHub &nearr;</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>

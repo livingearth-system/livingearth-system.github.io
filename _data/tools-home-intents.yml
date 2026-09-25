@@ -1,0 +1,17 @@
+- title: "Explore and Analyse"
+  key: "explore-and-analyse"
+  description: "See Living Earth's maps in action, or collect and validate your own observations with the Earthtrack app."
+  icon: "map"
+  url: "/tools/explore-and-analyse/"
+
+- title: "Learn"
+  key: "learn"
+  description: "Background reading, reference material and classification schemes for working with Living Earth data."
+  icon: "book"
+  url: "/tools/learn/"
+
+- title: "For Developers"
+  key: "for-developers"
+  description: "Access, analyse, and work with Living Earth's underlying data — from raw satellite archives to analysis-ready products."
+  icon: "download"
+  url: "/tools/for-developers/"

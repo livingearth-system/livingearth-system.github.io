@@ -39,7 +39,7 @@
                 <div class="row">
                     {% for logo in data.logos %}
                         <div class="col col-6 col-md-4 col-xl-2 mb-4 md-md-3 mb-xl-5">
-                            <figure><img class="img-fluid" src="{{ logo.image }}" alt="{{ logo.title }}"></figure>
+                            <figure><img class="img-fluid" src="{% if logo.image contains 'http' %}{{ logo.image }}{% else %}{{ logo.image | relative_url }}{% endif %}" alt="{{ logo.title }}"></figure>
                         </div>
                     {% endfor %}
                 </div>
@@ -54,7 +54,7 @@
                 {% endif %}
                 {%- if data.buttons -%}
                     {% for button in data.buttons %}
-                        <div class="text-center"><a href="{{ button.url }}" class="btn btn-primary mt-5 {{ button.class }}">{{ button.title }}</a></div>
+                        <div class="text-center"><a href="{% if button.url contains 'http' %}{{ button.url }}{% else %}{{ button.url | relative_url }}{% endif %}" class="btn btn-primary mt-5 {{ button.class }}">{{ button.title }}</a></div>
                     {% endfor %}
                 {% endif %}
             </div>

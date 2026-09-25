@@ -1,0 +1,50 @@
+/* ==========================================================================
+   CONTACT PAGE
+   Brings the contact details and form in line with the rest of the site's
+   typography (Inter) and colour palette (Ocean Blue / muted teal).
+   ========================================================================== */
+
+.contactus-dsc-content h5 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #00577E;
+  margin: 0 0 8px;
+}
+
+.contactus-dsc-content h3 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #00577E;
+  margin: 0 0 16px;
+}
+
+.contactus-dsc-content p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #3A5A68;
+}
+
+.contactus-dsc-content a {
+  color: #00577E;
+}
+
+.contactus-dsc-form-main .input--style-1 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  color: #1a2b36;
+}
+
+.contactus-dsc-form-main .input--style-1::placeholder {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #7d8f97;
+}
+
+.contact-form-submit {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+}

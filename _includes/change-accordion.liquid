@@ -1,0 +1,535 @@
+{%- comment -%}
+CHANGE — IMPACTS / PRESSURES / IMPACT x PRESSURE — inline accordion.
+
+Same shell and interaction pattern as _includes/env-des-accordion.liquid:
+one panel open at a time, deep-linking via URL hash
+(e.g. /themes/change/#pressures auto-expands Pressures and scrolls to it).
+
+Impacts and Pressures panels use a nested accordion for the five
+change categories — Agriculture, Vegetation, Bare Natural Surfaces,
+Human-Made, Water, Ice & Snow, matching the EarthTrack app's change
+taxonomy (assets/function/filter-map.js, changeInverted) — styled
+like the top-level Impacts/Pressures/Impact x Pressure headers
+(photo icon, title, count, chevron) but one level deeper, under the
+env-des-subaccordion-* classes so they don't collide with the
+top-level .env-des-accordion-item selectors in the script below. Each
+category opens into a plain two-column A-Z list (env-desc-list / env-desc-row):
+title + an (i) button per row, the (i) popping a fixed-position
+tooltip with the item's image and description
+(_includes/country-pipeline.liquid uses the same popover pattern).
+No data restructuring needed for category membership: every item's
+existing `image` field (a heading image like vegheader.png,
+cropheader2.png, urbanheader.png, bareheader1.png, waterheader1/2.png,
+snowheader.png) already encodes which of the five categories it
+belongs to, so membership is derived in-template via `contains`
+rather than stored on the item. All 220 items (77 impacts + 143
+pressures) matched one of the five when checked — if a future item's
+image doesn't match any, it silently won't appear under any category,
+so keep new entries on the existing filenames or extend
+change_categories below.
+  _data/themes/change/impacts/index.yml   (title, image, content)
+  _data/themes/change/pressures/index.yml (title, image, content)
+
+Impacts additionally look up their related pressures — press the
+"Pressures" button next to an impact's (i) to reveal a chip list of the pressures that can cause
+it (click a chip to show that pressure's definition). The mapping is:
+  _data/themes/change/impact-pressure-links.yml (impact title -> [pressure titles])
+built from the Global Change Taxonomy's supporting-information dataset
+(Lucas et al. 2022, Global Change Biology, DOI 10.1111/gcb.16346;
+data: github.com/livingearth-system/Globalchangeframework,
+Impacts-(pressures).md), reconciled against this site's own impact and
+pressure titles (a handful of spelling variants — e.g. "understory"
+vs. this site's "understorey", "fertiliser" vs. "fertilizer" — were
+matched by hand; see the mapping-generation notes kept outside this
+repo). It covers 73 of the 77 impacts (236 links total); the 4
+uncovered impacts (INVASIVE OR EXOTIC SPECIES, MINE CONSTRUCTION,
+WATER MOVEMENT CHANGE, WAVE ACTION) aren't listed as an "impact
+(pressure)" pair anywhere in the source table, so they render as
+plain non-interactive rows with no chip panel.
+
+The Impact x Pressure panel reuses the Publications page's
+country-filter-pill pattern (_includes/publications.liquid). It loops
+over the existing per-country data files and tags each card with its
+country in-template, so none of that data needs merging either:
+  _data/themes/change/ip/global/index.yml
+  _data/themes/change/ip/wales/index.yml
+  _data/themes/change/ip/australia/index.yml
+
+Switzerland and Papua New Guinea don't have case-study data yet (both
+still "#" placeholders in _data/themes/change/ip/index.yml) — add
+"switzerland|Switzerland" / "png|Papua New Guinea" to ip_countries
+below once real _data/themes/change/ip/<country>/index.yml files exist
+for them.
+
+Usage: {% include change-accordion.liquid %}
+{%- endcomment -%}
+
+<div class="env-des-accordion change-impacts-only" id="change-accordion">
+  {%- comment -%}
+  IMPACTS ONLY (for now): the Impacts panel is open by default and its "Impacts"
+  header is hidden by the change-impacts-only class. To bring Pressures and
+  Impact x Pressure Examples back: delete change-impacts-only from the div above,
+  delete the word "open" from the Impacts item, and remove the comment tags
+  around the two hidden blocks further down (search for "HIDDEN FOR NOW").
+  {%- endcomment -%}
+
+  <!-- Shared category taxonomy for Impacts and Pressures:
+       id|Label|image-substring-to-match|icon-image  (Water also separately matches "snow") -->
+  {% assign change_categories = "agriculture|Agriculture|crop|/assets/img/wales/crop-type.jpg;vegetation|Vegetation|veg|/assets/img/wales/vegetation.jpg;bare|Bare Natural Surfaces|bare|/assets/img/wales/dem.jpg;human-made|Human-Made|urban|/assets/img/wales/artificial-materials.jpg;water|Water, Ice & Snow|water|/assets/img/wales/water.jpg" | split: ";" %}
+
+  <!-- IMPACTS -->
+  {% assign all_pressures = site.data['themes']['change']['pressures'].index %}
+  {% assign impacts = site.data['themes']['change']['impacts'].index %}
+  <div class="env-des-accordion-item open" data-cat="impacts">
+    <button type="button" class="env-des-accordion-header" data-target="impacts">
+      <span class="env-des-accordion-title">Impacts</span>
+      <span class="env-des-accordion-count">{{ impacts | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="impacts">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-subaccordion">
+          {% for cat in change_categories %}
+          {% assign parts = cat | split: "|" %}
+          {% assign cat_key = parts[0] %}
+          {% assign cat_label = parts[1] %}
+          {% assign cat_match = parts[2] %}
+          {% assign cat_image = parts[3] %}
+          {% assign cat_count = 0 %}
+          {% for item in impacts %}
+            {% unless item.title == blank %}
+            {% assign m = false %}
+            {% if item.image contains cat_match %}{% assign m = true %}{% endif %}
+            {% if cat_key == "water" and item.image contains "snow" %}{% assign m = true %}{% endif %}
+            {% if m %}{% assign cat_count = cat_count | plus: 1 %}{% endif %}
+            {% endunless %}
+          {% endfor %}
+          <div class="env-des-subaccordion-item" data-subcat="impacts-{{ cat_key }}">
+            <button type="button" class="env-des-subaccordion-header" data-subtarget="impacts-{{ cat_key }}">
+              <img src="{{ cat_image | relative_url }}" alt="" class="env-des-subaccordion-icon">
+              <span class="env-des-subaccordion-title">{{ cat_label }}</span>
+              <span class="env-des-subaccordion-count">{{ cat_count }}</span>
+              <svg class="env-des-subaccordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="env-des-subaccordion-panel" id="impacts-{{ cat_key }}">
+              <div class="env-des-subaccordion-panel-inner">
+                {%- comment -%} One A-Z table per category: impact (+ info icon) on the left, all the pressures that can cause it on the right. {%- endcomment -%}
+                {% assign list_items = impacts | sort_natural: "title" %}
+                <table class="change-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Impact</th>
+                      <th scope="col">Pressures that can cause it <span class="change-table-hint">(click to show)</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for item in list_items %}
+                  {% unless item.title == blank %}
+                  {% assign is_match = false %}
+                  {% if item.image contains cat_match %}{% assign is_match = true %}{% endif %}
+                  {% if cat_key == "water" and item.image contains "snow" %}{% assign is_match = true %}{% endif %}
+                  {% if is_match %}
+                  {% assign display_title = item.title | strip | downcase | capitalize %}
+                  {% assign related_pressures = site.data['themes']['change']['impact-pressure-links'][item.title] %}
+                  <tr>
+                    <th scope="row" class="change-table-impact">
+                      <div class="change-table-impact-inner">
+                        <span class="env-desc-item-title">{{ display_title }}</span>
+                        {% if item.content %}
+                        <button type="button" class="env-desc-item-info" aria-label="What is {{ display_title }}?">i</button>
+                        <span class="env-desc-item-tooltip env-desc-item-tooltip-media">
+                          {% assign pop_img = site.data['themes']['change']['impact-images'][item.title] | default: item.image %}
+                          {% if pop_img %}<img src="{% if pop_img contains 'http' %}{{ pop_img }}{% else %}{{ pop_img | relative_url }}{% endif %}" alt="" class="env-desc-item-tooltip-img" loading="lazy">{% endif %}
+                          <span class="env-desc-item-tooltip-text">{{ item.content }}</span>
+                        </span>
+                        {% endif %}
+                      </div>
+                    </th>
+                    <td class="change-table-pressures change-pressure-cell">
+                      {% if related_pressures %}
+                      <button type="button" class="env-desc-pressures-btn" aria-expanded="false">Pressures ({{ related_pressures | size }})<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg></button>
+                      <div class="change-pressure-reveal" hidden>
+                        <div class="env-desc-pressure-chips">
+                          {% for pr in related_pressures %}
+                          {% assign pr_def = all_pressures | where: "title", pr | first %}
+                          {% if pr_def.content %}
+                          <button type="button" class="env-desc-pressure-chip" data-pressure="{{ pr | slugify }}" aria-expanded="false">{{ pr | strip | downcase | capitalize }}</button>
+                          {% else %}
+                          <span class="env-desc-pressure-chip is-static">{{ pr | strip | downcase | capitalize }}</span>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                        <div class="env-desc-pressure-defs">
+                          {% for pr in related_pressures %}
+                          {% assign pr_def = all_pressures | where: "title", pr | first %}
+                          {% if pr_def.content %}
+                          <div class="env-desc-pressure-def" data-pressure-def="{{ pr | slugify }}" hidden>
+                            <strong>{{ pr | strip | downcase | capitalize }}</strong> &mdash; {{ pr_def.content }}
+                          </div>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                      {% else %}
+                      <span class="change-table-none">&mdash;</span>
+                      {% endif %}
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% endunless %}
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%}
+  HIDDEN FOR NOW: Pressures and Impact x Pressure Examples. See the note at the top of this div.
+
+  <!-- PRESSURES -->
+  {% assign pressures = site.data['themes']['change']['pressures'].index %}
+  <div class="env-des-accordion-item" data-cat="pressures">
+    <button type="button" class="env-des-accordion-header" data-target="pressures">
+      <span class="env-des-accordion-title">Pressures</span>
+      <span class="env-des-accordion-count">{{ pressures | size }}</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="pressures">
+      <div class="env-des-accordion-panel-inner">
+        <div class="env-des-subaccordion">
+          {% for cat in change_categories %}
+          {% assign parts = cat | split: "|" %}
+          {% assign cat_key = parts[0] %}
+          {% assign cat_label = parts[1] %}
+          {% assign cat_match = parts[2] %}
+          {% assign cat_image = parts[3] %}
+          {% assign cat_count = 0 %}
+          {% for item in pressures %}
+            {% unless item.title == blank %}
+            {% assign m = false %}
+            {% if item.image contains cat_match %}{% assign m = true %}{% endif %}
+            {% if cat_key == "water" and item.image contains "snow" %}{% assign m = true %}{% endif %}
+            {% if m %}{% assign cat_count = cat_count | plus: 1 %}{% endif %}
+            {% endunless %}
+          {% endfor %}
+          <div class="env-des-subaccordion-item" data-subcat="pressures-{{ cat_key }}">
+            <button type="button" class="env-des-subaccordion-header" data-subtarget="pressures-{{ cat_key }}">
+              <img src="{{ cat_image | relative_url }}" alt="" class="env-des-subaccordion-icon">
+              <span class="env-des-subaccordion-title">{{ cat_label }}</span>
+              <span class="env-des-subaccordion-count">{{ cat_count }}</span>
+              <svg class="env-des-subaccordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="env-des-subaccordion-panel" id="pressures-{{ cat_key }}">
+              <div class="env-des-subaccordion-panel-inner">
+                {% assign list_items = pressures | sort_natural: "title" %}
+                {% assign half = cat_count | divided_by: 2.0 | ceil %}
+                {% assign idx = 0 %}
+                <div class="env-desc-list">
+                  <div class="env-desc-list-col">
+                  {% for item in list_items %}
+                  {% unless item.title == blank %}
+                  {% assign is_match = false %}
+                  {% if item.image contains cat_match %}{% assign is_match = true %}{% endif %}
+                  {% if cat_key == "water" and item.image contains "snow" %}{% assign is_match = true %}{% endif %}
+                  {% if is_match %}
+                  {% if idx == half %}</div><div class="env-desc-list-col">{% endif %}
+                  {% assign idx = idx | plus: 1 %}
+                  {% assign display_title = item.title | strip | downcase | capitalize %}
+                  <div class="env-desc-row">
+                    <span class="env-desc-item-title">{{ display_title }}</span>
+                    {% if item.content %}
+                    <button type="button" class="env-desc-item-info" aria-label="What is {{ display_title }}?">i</button>
+                    <span class="env-desc-item-tooltip env-desc-item-tooltip-media">
+                      {% if item.image %}<img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="" class="env-desc-item-tooltip-img">{% endif %}
+                      <span class="env-desc-item-tooltip-text">{{ item.content }}</span>
+                    </span>
+                    {% endif %}
+                  </div>
+                  {% endif %}
+                  {% endunless %}
+                  {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPACT x PRESSURE EXAMPLES -->
+  {% assign ip_countries = "global|Global,wales|Wales,australia|Australia" | split: "," %}
+  <div class="env-des-accordion-item" data-cat="impact-pressure">
+    <button type="button" class="env-des-accordion-header" data-target="impact-pressure">
+      <span class="env-des-accordion-title">Impact &times; Pressure Examples</span>
+      <svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+    </button>
+    <div class="env-des-accordion-panel" id="impact-pressure">
+      <div class="env-des-accordion-panel-inner">
+
+        <div class="pub-filters">
+          <div class="pub-filter-group">
+            <span class="pub-filter-label">Country</span>
+            <div class="pub-filter-row" data-filter-type="country">
+              <button class="pub-filter-pill is-active" type="button" data-filter-value="all">All</button>
+              {% for src in ip_countries %}
+                {% assign parts = src | split: "|" %}
+                <button class="pub-filter-pill" type="button" data-filter-value="{{ parts[1] }}">{{ parts[1] }}</button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-empty" hidden>No examples match this filter.</div>
+
+        <div class="pub-grid">
+          {% for src in ip_countries %}
+            {% assign parts = src | split: "|" %}
+            {% assign key = parts[0] %}
+            {% assign label = parts[1] %}
+            {% assign country_items = site.data['themes']['change']['ip'][key].index %}
+            {% for item in country_items %}
+              {% unless item.title == blank %}
+              <div class="pub-card" data-country="{{ label }}">
+                <span class="pub-card-badge">{{ label }}</span>
+                {% if item.url and item.url != "#" %}
+                <a class="pub-card-title" href="{% if item.url contains 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a>
+                {% else %}
+                <span class="pub-card-title pub-card-title-nolink">{{ item.title }}</span>
+                {% endif %}
+                <div class="pub-card-authors">{{ item.content }}</div>
+              </div>
+              {% endunless %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {%- endcomment -%}
+
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('change-accordion');
+  if (!root) { return; }
+  var items = root.querySelectorAll('.env-des-accordion-item');
+
+  function openItem(id) {
+    items.forEach(function (item) {
+      item.classList.toggle('open', item.getAttribute('data-cat') === id);
+    });
+  }
+
+  items.forEach(function (item) {
+    var header = item.querySelector('.env-des-accordion-header');
+    header.addEventListener('click', function () {
+      var id = item.getAttribute('data-cat');
+      var alreadyOpen = item.classList.contains('open');
+      items.forEach(function (i) { i.classList.remove('open'); });
+      if (!alreadyOpen) {
+        item.classList.add('open');
+        history.replaceState(null, '', '#' + id);
+        requestAnimationFrame(function () {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      } else {
+        history.replaceState(null, '', '#change-accordion');
+      }
+    });
+  });
+
+  var hash = window.location.hash.replace('#', '');
+  var validIds = Array.prototype.map.call(items, function (i) { return i.getAttribute('data-cat'); });
+  if (hash && validIds.indexOf(hash) !== -1) {
+    openItem(hash);
+    var target = root.querySelector('.env-des-accordion-item[data-cat="' + hash + '"]');
+    if (target) {
+      setTimeout(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    }
+  }
+
+  // Nested category accordions (Impacts / Pressures panels) — same
+  // open/close pattern as the top-level accordion above, one level
+  // deeper, scoped to each panel's own .env-des-subaccordion wrapper
+  // so Impacts and Pressures don't affect each other.
+  var subaccordions = root.querySelectorAll('.env-des-subaccordion');
+  subaccordions.forEach(function (wrap) {
+    var subItems = wrap.querySelectorAll('.env-des-subaccordion-item');
+    subItems.forEach(function (subItem) {
+      var subHeader = subItem.querySelector('.env-des-subaccordion-header');
+      subHeader.addEventListener('click', function () {
+        var alreadyOpen = subItem.classList.contains('open');
+        subItems.forEach(function (i) { i.classList.remove('open'); });
+        if (!alreadyOpen) { subItem.classList.add('open'); }
+      });
+    });
+  });
+
+  // Deep link to one category, e.g. /themes/change/#impacts-vegetation
+  var catHash = window.location.hash.replace('#', '');
+  subaccordions.forEach(function (wrap) {
+    wrap.querySelectorAll('.env-des-subaccordion-item').forEach(function (subItem) {
+      if (subItem.getAttribute('data-subcat') === catHash) {
+        subItem.classList.add('open');
+        setTimeout(function () { subItem.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+      }
+    });
+  });
+
+  // Info-icon tooltips (Impacts / Pressures cards) — same fixed-position
+  // popover behaviour as _includes/country-pipeline.liquid.
+  var infoButtons = root.querySelectorAll('.env-desc-item-info');
+
+  function closeTooltip(t) {
+    t.classList.remove('is-open');
+    if (t._homeParent) {
+      t._homeParent.insertBefore(t, t._homeNext);
+    }
+    t.style.position = '';
+    t.style.top = '';
+    t.style.left = '';
+    t.style.right = '';
+    t.style.width = '';
+    t.style.margin = '';
+  }
+
+  infoButtons.forEach(function (btn) {
+    var tooltip = btn.nextElementSibling;
+    tooltip._homeParent = tooltip.parentNode;
+    tooltip._homeNext = tooltip.nextSibling;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var wasOpen = tooltip.classList.contains('is-open');
+
+      document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+
+      if (!wasOpen) {
+        var btnRect = btn.getBoundingClientRect();
+
+        tooltip.classList.add('measuring');
+        var tooltipWidth = tooltip.offsetWidth;
+        var tooltipHeight = tooltip.offsetHeight;
+        tooltip.classList.remove('measuring');
+
+        document.body.appendChild(tooltip);
+
+        var top = btnRect.bottom + 6;
+        if (top + tooltipHeight > window.innerHeight - 8) {
+          top = btnRect.top - tooltipHeight - 6;
+        }
+        if (top < 8) { top = 8; }
+
+        var left = btnRect.left;
+        if (left + tooltipWidth > window.innerWidth - 8) {
+          left = window.innerWidth - tooltipWidth - 8;
+        }
+        if (left < 8) { left = 8; }
+
+        tooltip.style.position = 'fixed';
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+        tooltip.style.right = 'auto';
+        tooltip.style.width = tooltipWidth + 'px';
+        tooltip.style.margin = '0';
+        tooltip.classList.add('is-open');
+      }
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+  });
+  window.addEventListener('scroll', function () {
+    document.querySelectorAll('.env-desc-item-tooltip.is-open').forEach(closeTooltip);
+  }, { passive: true });
+
+  // "Pressures (n)" button in the table: show / hide that impact's pressures.
+  // Only one impact can have its pressures open at a time: opening one closes
+  // any other that is open (in any category).
+  function closeReveal(reveal) {
+    reveal.hidden = true;
+    var cell = reveal.closest('.change-pressure-cell');
+    var btn = cell && cell.querySelector('.env-desc-pressures-btn');
+    if (btn) {
+      btn.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    // start clean next time: collapse any definitions that were open
+    reveal.querySelectorAll('.env-desc-pressure-chip.is-selected').forEach(function (chip) {
+      chip.classList.remove('is-selected');
+      chip.setAttribute('aria-expanded', 'false');
+    });
+    reveal.querySelectorAll('.env-desc-pressure-def').forEach(function (d) { d.hidden = true; });
+  }
+
+  root.addEventListener('click', function (e) {
+    var btn = e.target.closest('.env-desc-pressures-btn');
+    if (!btn) { return; }
+    var cell = btn.closest('.change-pressure-cell');
+    var reveal = cell && cell.querySelector('.change-pressure-reveal');
+    if (!reveal) { return; }
+    var willOpen = reveal.hidden;
+    root.querySelectorAll('.change-pressure-reveal').forEach(function (r) {
+      if (!r.hidden) { closeReveal(r); }
+    });
+    if (willOpen) {
+      reveal.hidden = false;
+      btn.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Pressure chips: clicking a chip shows/hides that pressure's
+  // definition (from _data/themes/change/pressures/index.yml) under the
+  // chips in the same table cell. Several can be open at once. Chips with no matching
+  // definition render as static <span>s and are ignored here.
+  root.addEventListener('click', function (e) {
+    var chip = e.target.closest('button.env-desc-pressure-chip');
+    if (!chip) { return; }
+    var cell = chip.closest('.change-pressure-cell');
+    if (!cell) { return; }
+    var def = cell.querySelector('.env-desc-pressure-def[data-pressure-def="' + chip.getAttribute('data-pressure') + '"]');
+    var open = chip.classList.toggle('is-selected');
+    chip.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (def) { def.hidden = !open; }
+  });
+
+  // Country filter pills (Impact x Pressure panel only)
+  var pubCards = root.querySelectorAll('.pub-card');
+  var pubEmpty = root.querySelector('.pub-empty');
+  var pubRow = root.querySelector('.pub-filter-row[data-filter-type="country"]');
+  if (pubRow) {
+    var active = 'all';
+    function applyFilter() {
+      var visibleCount = 0;
+      pubCards.forEach(function (card) {
+        var show = active === 'all' || card.getAttribute('data-country') === active;
+        card.hidden = !show;
+        if (show) { visibleCount++; }
+      });
+      pubEmpty.hidden = visibleCount !== 0;
+    }
+    pubRow.querySelectorAll('.pub-filter-pill').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        pubRow.querySelectorAll('.pub-filter-pill').forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        active = btn.getAttribute('data-filter-value');
+        applyFilter();
+      });
+    });
+  }
+})();
+</script>

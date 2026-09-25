@@ -1,0 +1,81 @@
+{%- comment -%}
+PUBLICATIONS LIST — filterable by country, displayed as a card grid.
+Data lives in _data/publications.yml (title, authors, date [year string],
+link, newtab, country). Country filter pills are generated from whatever
+values appear in the data, and matched against _data/countries.yml for
+the silhouette icon (same assets as the home page countries strip).
+Countries with no matching entry (e.g. "Global") fall back to a letter
+badge, same pattern as countries-strip.liquid.
+
+Usage: {% include publications-list.liquid %}
+{%- endcomment -%}
+
+{% assign pubs = site.data.publications | sort: 'date' | reverse %}
+{% assign countries = pubs | map: 'country' | uniq | sort %}
+
+<div class="pub-filters">
+  <div class="pub-filter-group">
+    <span class="pub-filter-label">Country</span>
+    <div class="pub-filter-row" data-filter-type="country">
+      <button class="pub-filter-pill is-active" type="button" data-filter-value="all">All</button>
+      {% for c in countries %}
+        {% assign country_data = site.data.countries | where: "title", c | first %}
+        <button class="pub-filter-pill" type="button" data-filter-value="{{ c }}">
+          <span class="pub-filter-pill-icon-wrap">
+            {% if country_data.image %}
+              <img src="{{ country_data.image | relative_url }}" alt="" class="pub-filter-pill-icon">
+            {% else %}
+              <span class="pub-filter-pill-placeholder">{{ c | slice: 0, 1 }}</span>
+            {% endif %}
+          </span>
+          {{ c }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="pub-empty" hidden>No publications match this filter.</div>
+
+<div class="pub-grid">
+  {% for pub in pubs %}
+  <div class="pub-card" data-country="{{ pub.country }}">
+    <span class="pub-card-badge">{{ pub.country }}</span>
+    {% if pub.link and pub.link != "" %}
+    <a class="pub-card-title" href="{% if pub.link contains 'http' %}{{ pub.link }}{% else %}{{ pub.link | relative_url }}{% endif %}" {% if pub.newtab %}target="_blank" rel="noopener"{% endif %}>{{ pub.title }}</a>
+    {% else %}
+    <span class="pub-card-title pub-card-title-nolink">{{ pub.title }}</span>
+    {% endif %}
+    <div class="pub-card-authors">{{ pub.authors }}</div>
+    <div class="pub-card-date">{{ pub.date }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var active = 'all';
+  var cards = document.querySelectorAll('.pub-card');
+  var emptyMsg = document.querySelector('.pub-empty');
+  var row = document.querySelector('.pub-filter-row[data-filter-type="country"]');
+
+  function applyFilter() {
+    var visibleCount = 0;
+    cards.forEach(function (card) {
+      var show = active === 'all' || card.getAttribute('data-country') === active;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    emptyMsg.hidden = visibleCount !== 0;
+  }
+
+  row.querySelectorAll('.pub-filter-pill').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      row.querySelectorAll('.pub-filter-pill').forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      active = btn.getAttribute('data-filter-value');
+      applyFilter();
+    });
+  });
+})();
+</script>

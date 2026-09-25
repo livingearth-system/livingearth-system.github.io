@@ -1,0 +1,308 @@
+/* ==========================================================================
+   NEWS AND EVENTS
+   Restyles the existing news.md structure to match the rest of the site.
+   No markup or JS changes — this only targets classes already in use.
+   Colours: Ocean Blue #00577E · Light Blue #BFE6F6 · Card BG #EAF6FB
+            Chalk White #FCF8F5 · body text #3A5A68
+   ========================================================================== */
+
+/* --- Breadcrumbs (this page's own ul.breadcrumbs, separate from the
+   directory-page breadcrumb system used on Our Projects/About/Contact) --- */
+
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 16px 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+  margin: 0 8px;
+  color: #A9BEC7;
+}
+
+.breadcrumbs a {
+  color: #00577E;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* --- Search + category filter row ---------------------------------------- */
+
+.news-header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #E3ECEF;
+  margin-bottom: 32px;
+}
+
+.news-header-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-header-search .search-box {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  border: 1px solid #BFE6F6;
+  border-radius: 6px;
+  padding: 9px 14px;
+  color: #1a2b36;
+  min-width: 220px;
+}
+
+.news-header-search .search-box::placeholder {
+  color: #7d8f97;
+}
+
+.news-header-search .a-to-z {
+  background: #00577E;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-header-search .a-to-z img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.news-header-option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.news-header-option button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  background: #EAF6FB;
+  color: #00577E;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.news-header-option button p {
+  margin: 0;
+}
+
+.news-header-option button:hover {
+  background: #00577E;
+  color: #FCF8F5;
+}
+
+/* --- Featured post (blog-main) -------------------------------------------- */
+
+.blog-main-left-img img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.blog-main-right-dsc button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  background: #00577E;
+  color: #FCF8F5;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin-bottom: 14px;
+}
+
+.blog-main-right-dsc h5 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #00577E;
+  margin: 0 0 12px;
+}
+
+.blog-main-right-dsc > p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #3A5A68;
+  margin-bottom: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-profile-img img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.user-name {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #00577E;
+  margin: 0;
+}
+
+.user-status {
+  display: flex;
+  gap: 10px;
+}
+
+.user-status p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #7d8f97;
+  margin: 0;
+}
+
+/* --- Card grid (stay-up-card) --------------------------------------------- */
+
+.news-blog .stay-up-card {
+  background: #EAF6FB;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  padding-bottom: 18px;
+}
+
+.news-blog .stay-up-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-blog .stay-up-card button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  background: #FCF8F5;
+  color: #00577E;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin: 14px 0 0 20px;
+}
+
+.news-blog .title-img a {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #00577E;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px 4px;
+}
+
+.news-blog .body-img {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  color: #3A5A68;
+  line-height: 1.5;
+  display: block;
+  padding: 0 20px;
+}
+
+.news-blog .line-card {
+  height: 1px;
+  background: #BFE6F6;
+  margin: 14px 20px;
+}
+
+.news-blog .date-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #7d8f97;
+}
+
+.news-blog .dot-card {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #7d8f97;
+}
+
+/* --- Load more footer ------------------------------------------------------ */
+
+.total-view {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  color: #3A5A68;
+  margin-bottom: 12px;
+}
+
+.load-more-btn {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background: #00577E;
+  color: #FCF8F5;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.load-more-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Mobile ---------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .news-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-header-search .search-box {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .blog-main-right-dsc h5 {
+    font-size: 20px;
+  }
+}

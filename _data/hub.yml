@@ -1,0 +1,20 @@
+- title: Countries
+  subtitle: Global, Wales, Australia and Switzerland
+  url: /Countries/
+  image: /assets/img/themes/change impacts and pressure.png
+- title: About
+  subtitle: Who we are, our projects, and how to reach us
+  url: /about/
+  image: /assets/img/themes/accounts.png
+- title: Tools
+  subtitle: Explore, analyse, and build with our tools
+  url: /tools/
+  image: /assets/img/themes/water.png
+- title: Themes
+  subtitle: Land cover, biodiversity, change, and more
+  url: /themes/
+  image: /assets/img/themes/biodiversity.png
+- title: News and Events
+  subtitle: Research, case studies, and updates
+  url: /news/
+  image: /assets/img/themes/change impacts and pressure.png

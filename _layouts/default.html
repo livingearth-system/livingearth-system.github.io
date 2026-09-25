@@ -11,6 +11,10 @@
         {{ content }}
     </main>
 
+    {%- unless page.nocontact -%}
+        {%- include get-in-touch.liquid -%}
+    {%- endunless -%}
+
     {%- include footer.liquid -%}
 
 </body>

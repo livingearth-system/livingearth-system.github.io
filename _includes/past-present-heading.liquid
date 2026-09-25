@@ -29,7 +29,7 @@
     <div class="col-md-7 position-relative m-0 p-0">
       <div class="second-country_subpage-img-layer" style="background: {{ background }} {{ background }}"></div>
       {%- if image -%}
-        <img class="country_subpage-benner-img" src="{{ image }}" alt="{{ alt | default: title }}">
+        <img class="country_subpage-benner-img" src="{% if image contains 'http' %}{{ image }}{% else %}{{ image | relative_url }}{% endif %}" alt="{{ alt | default: title }}">
       {%- endif %}
     </div>
     <div class="dsc-about-page container-fluid">

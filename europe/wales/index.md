@@ -1,64 +1,295 @@
 ---
-layout: page
+layout: directory
+permalink: /europe/wales/
 
-title: Wales
-subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales’s landscape"
-background: "#07073f"
-image: "/assets/img/heading/country.jpg"
+title: "Wales"
+eyebrow: "Countries"
+subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales's landscape"
+image: "/assets/img/heading/wales.jpg"
+breadcrumb:
+  - label: "Living Earth"
+    url: "/"
+  - label: "Wales"
+    url: "/europe/wales/"
+pipeline_validation_url: "/tools/earthtrack-app?country=Wales"
+pipeline_outreach_url: "https://www.aber.ac.uk/en/modules/2027-2028/modules/module/?module=EAM0020-AB1"
+pipeline:
+  - title: "Earth Observation Data"
+    subtitle: "Acquisition and processing to an analysis-ready format."
+    icon: ic-data
+    sub_items:
+      - title: "Optical and Radar"
+        image: "/assets/img/Future1.jpg"
+        url: "https://app.livingwales.space/"
+        newtab: true
+      - title: "Lidar"
+        image: "/assets/img/Future2.jpg"
+        url: "https://datamap.gov.wales/maps/lidar-viewer"
+        newtab: true
 
-button2: "Living Land Management Wales"
-button2_url: "./monmouthshire/"
+  # To add a link to any descriptor below, just add this block under it,
+  # indented to match its siblings (image:, description:) — you can add
+  # more than one label/url pair under "links:" if a descriptor needs
+  # multiple resources:
+  #   links:
+  #     - label: "Resource Name"
+  #       url: "https://example.com"
+  #       newtab: true
+
+  - title: "Environmental Descriptors"
+    subtitle: "Derived indices and variables ready for classification."
+    icon: ic-leaf
+    categories:
+      - title: "Marine"
+        image: "/assets/img/wales/marine.jpg"
+        descriptors:
+          - title: "Bathymetry"
+            image: "/assets/img/wales/bathymetry.jpg"
+            description: "Depth of the floor of water bodies and a measure of underwater relief."
+          - title: "Sea Surface Temperature"
+            image: "/assets/img/wales/sea-surface-temperature.jpg"
+            description: "The temperature of the uppermost (exposed) index layer of the ocean. SST is a key variable affecting various biological and hydrological processes."
+          - title: "Sea Surface Salinity"
+            image: "/assets/img/wales/sea-surface-salinity.jpg"
+            description: "The salt concentration in seawater and an indicator of biological diversity and freshwater inputs."
+          - title: "Net Primary Production"
+            image: "/assets/img/wales/net-primary-production.jpg"
+            description: "The net amount of carbon uptake of the ocean through photosynthesis by algae and phytoplankton. NPP measures the productivity of marine vegetation."
+          - title: "pH"
+            image: "/assets/img/wales/ph.jpg"
+            description: "A measure of the acidity of oceans, with pH values <7 representing high acidity and those >7 identifying alkaline waters."
+          - title: "Chemistry"
+            image: "/assets/img/wales/chemistry.jpg"
+            description: "The concentration of elements (e.g. oxygen, carbon and phosphate) in the marine water."
+          - title: "Chlorophyll"
+            image: "/assets/img/wales/chlorophyll.jpg"
+            description: "The amount of chlorophyll contained within phytoplankton in marine waters. An indicator of marine plant productivity."
+          - title: "CDOM"
+            image: "/assets/img/wales/cdom.jpg"
+            description: "The absorption coefficient of various organic materials in the sea water. Higher CDOM reduces light penetration in the water."
+          - title: "Total Suspended Matter"
+            image: "/assets/img/wales/total-suspended-matter.jpg"
+            description: "A measure of water turbidity. TSM includes both mineral and organic particles and affects light conditions in the water and the distribution of flora and fauna."
+      - title: "Land and Water"
+        image: "/assets/img/wales/land-and-water.jpg"
+        subcategories:
+          - title: "Vegetation"
+            image: "/assets/img/wales/vegetation.jpg"
+            descriptors:
+              - title: "Lifeform"
+                image: "/assets/img/wales/lifeform.jpg"
+                description: "Vegetation life-form (growth form) classes are defined based on structural similarities of plants. Three main life-forms are encountered in nature: woody (trees and shrubs), herbaceous (grasses and forbs) and lichens/mosses."
+              - title: "Leaf type"
+                image: "/assets/img/wales/leaf-type.jpg"
+                description: "Distinguishes broad-leaf (primarily flowering plants, including trees), needle-leaf (needle-shaped leaves) and aphyllous (thorns, scales, green stems, branches or twigs)."
+              - title: "Phenology"
+                image: "/assets/img/wales/phenology.jpg"
+                description: "The study of the timing of vegetation life-cycle events, such as budburst, flowering, leaf colouring and leaf fall. Most plants are evergreen, deciduous, mixed deciduous/evergreen, or semi-evergreen/semi-deciduous, whichever is dominant."
+              - title: "Canopy Cover"
+                image: "/assets/img/wales/canopy-cover.jpg"
+                description: "The percentage of the ground covered by a vertical projection of the outermost perimeter of the natural spread of plant foliage. Strongly influences water, energy and matter fluxes of land surfaces, particularly hydrological processes."
+              - title: "Canopy Height"
+                image: "/assets/img/wales/canopy-height.jpg"
+                description: "The height of a vegetation layer measured from the ground to the average top of the dominant strata (trees, shrubs, forbs, grasses, mosses or lichens)."
+              - title: "Crop Type"
+                image: "/assets/img/wales/crop-type.jpg"
+                description: "The type of plants cultivated in the fields during the main growing season, for example maize, potatoes, wheat or strawberries."
+                links:
+                  - label: "National crop mapping using Sentinel-1 (Planque et al. 2021)"
+                    url: "https://doi.org/10.3390/rs13050846"
+                    newtab: true
+                    type: publication
+              - title: "Plant Species"
+                image: "/assets/img/wales/plant-species.jpg"
+                description: "Categories of plants which show common attributes and are called by a common name. Important for maintaining genetic diversity and wildlife habitats, and often used as indicators of environmental change."
+              - title: "Woody Biomass"
+                image: "/assets/img/wales/woody-biomass.jpg"
+                description: "The total mass of living plant material per woody area. Can consider both above- and below-ground components."
+              - title: "Herbaceous Biomass"
+                image: "/assets/img/wales/herbaceous-biomass.jpg"
+                description: "The total mass of living plants that have a non-woody stem, per area."
+              - title: "Foliar Chemistry"
+                image: "/assets/img/wales/foliar-chemistry.jpg"
+                description: "The chemical content within the leaves of the canopy — examples are chlorophyll (a and b), carotenoids and nitrogen. Changes occur in response to seasons and plant health."
+              - title: "Canopy Layers"
+                image: "/assets/img/wales/canopy-layers.jpg"
+                description: "Vegetated areas are composed of a top canopy layer, but also have a vertical structure with different understory layers/strata — tree, shrub, field and/or ground layers."
+              - title: "Non Photosynthetic Vegetation"
+                image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+                description: "Vegetation cover that does not take part in photosynthesis — dormant, senescent or dead vegetation, plus the woody parts of plants. Impacts carbon, water and nutrient fluxes, fire frequency, erosion and habitat quality."
+              - title: "Leaf Area Index"
+                image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+                description: "The total area of one-sided leaves per ground surface area. A fundamental property of the plant canopy, playing a key role in solar radiation absorption through photosynthesis and vegetation growth."
+          - title: "Snow"
+            image: "/assets/img/wales/snow.jpg"
+            descriptors:
+              - title: "Snow Cover Fraction"
+                image: "/assets/img/wales/snow-cover-fraction.jpg"
+                description: "The fraction of land area covered by snow. Snow has a very high albedo, which cools the Earth's surface, so snow cover directly affects the Earth's energy balance."
+              - title: "Snow Water Equivalent"
+                image: "/assets/img/wales/snow-water-equivalent.jpg"
+                description: "The amount of water contained within the snowpack — the depth of water that would theoretically result from instantaneous snowpack melting. Correlates with snowpack depth and density."
+              - title: "Snow Depth"
+                image: "/assets/img/wales/snow-depth.jpg"
+                description: "The total depth of the snowpack, used to estimate the amount of snow covering the ground. Linked with snow water equivalent for water stock monitoring and flood forecasting."
+          - title: "Urban"
+            image: "/assets/img/wales/urban.jpg"
+            descriptors:
+              - title: "Artificial Materials"
+                image: "/assets/img/wales/artificial-materials.jpg"
+                description: "Urban areas are characterised by the substitution of natural covers with artificial, mostly impervious, covers. These affect the water cycle, carbon cycle, energy balance and biodiversity — for example, bitumen surfaces block water infiltration and groundwater recharge."
+              - title: "Urban Vegetation"
+                image: "/assets/img/wales/urban-vegetation.jpg"
+                description: "Vegetation in cities, classified separately from other vegetation as it is surrounded by impervious surfaces that impact water, energy and material fluxes. Provides ecosystem services such as pollutant and fine-particulate filtering."
+          - title: "Water"
+            image: "/assets/img/wales/water.jpg"
+            descriptors:
+              - title: "Water Extent"
+                image: "/assets/img/wales/water-extent.jpg"
+                description: "The location of the boundary between a water body and the adjoining land surface, or a surface covered by water. Note that water can exist as snow or ice."
+              - title: "Water Depth"
+                image: "/assets/img/wales/water-depth.jpg"
+                description: "The underwater depth of the floor of water bodies such as lakes and rivers. Affects the amount of sunlight reaching the floor, which in turn affects plant and fauna life."
+              - title: "Water Turbidity"
+                image: "/assets/img/wales/water-turbidity.jpg"
+                description: "The measure of water transparency, used to assess water quality. Drinking water should have a turbidity of less than 4 NTU (WHO). Also affects photosynthetic activity and oxygen concentration in water ecosystems."
+              - title: "Water Seasonality"
+                image: "/assets/img/wales/water-seasonality.jpg"
+                description: "The persistence of water at the surface, which depends on precipitation rates, soil permeability and geological formations. Important for agriculture, water supply and biodiversity."
+              - title: "Cyanobacteria"
+                image: "/assets/img/wales/cyanobacteria.jpg"
+                description: "Free-living photosynthetic bacteria, more commonly known as blue-green algae. Single-celled and photosynthetic, living freely in the water column or as mats attached to sediment, rocks and plants — an important component of freshwater ecosystems."
+              - title: "Algae Biomass"
+                image: "/assets/img/wales/algae-biomass.jpg"
+                description: "Chlorophyll a is ubiquitous in phytoplankton and higher plants and a proxy for phytoplankton biomass. Cyanobacteria are also considered phytoplankton as they contain chlorophyll a, but they are not algae."
+              - title: "Macroalgae"
+                image: "/assets/img/wales/macroalgae.jpg"
+                description: "Large, multicellular marine algae (seaweed). See the Big Seaweed Search project for citizen-science recording: bigseaweedsearch.org/explore"
+          - title: "Soil"
+            image: "/assets/img/wales/soil.jpg"
+            descriptors:
+              - title: "Soil Moisture"
+                image: "/assets/img/wales/soil-moisture.jpg"
+                description: "The volume of water contained within soils. Soil moisture can influence levels of vegetation water stress and flood risk."
+              - title: "Soil Acidity"
+                image: "/assets/img/wales/soil-acidity.jpg"
+                description: "Soil acidity is expressed using the pH scale. Values lower than 7 indicate acidic soils and values higher than 7 indicate alkaline soils. Influences species abundance, distribution and productivity."
+              - title: "Soil Texture"
+                image: "/assets/img/wales/soil-texture.jpg"
+                description: "Soil can be classified into textural classes including loams, clays and sands. Textural composition influences water-holding capacity and vegetation stress levels."
+          - title: "Energy"
+            image: "/assets/img/wales/energy.jpg"
+            descriptors:
+              - title: "Albedo"
+                image: "/assets/img/wales/albedo.jpg"
+                description: "The ratio of total upwelling to total downwelling solar radiation at the surface, representing the energy balance at the soil-vegetation-atmosphere interface. Ranges from 0 to 1 — a surface with an albedo of 1 (e.g. snow) reflects back all downwelling radiation."
+              - title: "Land Surface Temperature"
+                image: "/assets/img/wales/land-surface-temperature.jpg"
+                description: "The radiative skin temperature of the land — a mixture of vegetation and soil temperatures. Plays an important role in the physics of land surfaces, impacting energy and water exchange with the atmosphere."
+          - title: "Terrain"
+            image: "/assets/img/wales/terrain.jpg"
+            descriptors:
+              - title: "DEM"
+                image: "/assets/img/wales/dem.jpg"
+                description: "Digital Terrain Models (DTMs) represent the elevation of bare terrain, whilst Digital Surface Models (DSMs) represent the upper height of all objects on the land surface."
+              - title: "Slope"
+                image: "/assets/img/wales/slope.jpg"
+                description: "The steepness or degree of inclination of the terrain relative to the plane surface. Influences wind speed and direction, and hydrological flows."
+              - title: "Aspect"
+                image: "/assets/img/wales/aspect.jpg"
+                description: "The orientation of a slope, measured clockwise from north. Along with slope, aspect regulates land surface processes including plant productivity, climate and hydrology."
+      - title: "Atmosphere"
+        image: "/assets/img/wales/atmosphere.jpg"
+        descriptors:
+          - title: "Air Pollutants"
+            image: "/assets/img/wales/air-polutants.jpg"
+            description: "Air pollutants include gases such as nitrous oxide, ammonia, sulfur dioxide and particulate matter. Their concentrations inform about air quality, which influences plant and animal health."
+          - title: "Climate Variables"
+            image: "/assets/img/wales/variants.jpg"
+            description: "Climate variables include solar radiation, rainfall, air temperature and humidity, pressure, and wind speed and direction. Long-term trends of these variables indicate past climatic conditions."
+
+  - title: "Classification of Land Cover & Habitats"
+    subtitle: "Historical and near real-time classification of the landscape."
+    icon: ic-map
+    url: "/tools/interactive-map"
+
+  - title: "Evidence-Based Change"
+    subtitle: "Tracking change over time to support decision-making."
+    icon: ic-change
+    links:
+      - label: "Explore Evidence-Based Change Paper"
+        url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
+        newtab: true
+      - label: "See Change, Impacts-Pressures"
+        url: "/themes/change/"
+        newtab: true
+
+  - title: "Future Landscapes"
+    subtitle: "Modelling scenarios for policy and land management."
+    icon: ic-future
+    sub_items:
+      - title: "Reimagining"
+        subtitle: "What would we like to see?"
+        image: "/assets/img/Future2.jpg"
+        url: "#"
+      - title: "Harmonising"
+        subtitle: "How can we agree?"
+        image: "/assets/img/Future1.jpg"
+        url: "#"
+      - title: "Realising"
+        subtitle: "How can we be certain?"
+        image: "/assets/img/Future3.jpg"
+        url: "#"
+      - title: "Facilitating"
+        subtitle: "How can we track progress?"
+        image: "/assets/img/Future4.jpg"
+        url: "#"
+      - title: "Valuing"
+        subtitle: "How can we value our futures?"
+        image: "/assets/img/Future5.jpg"
+        url: "#"
+      - title: "Assessing Risk"
+        subtitle: "How can we protect our assets?"
+        image: "/assets/img/Future6.jpg"
+        url: "#"
+
+  - title: "Explore and Delivery"
+    subtitle: "Policy, economy, environment and society."
+    icon: ic-deliver
+    links:
+      - label: "View Insights"
+        url: "https://insights.livingwales.space/"
+        newtab: true
+      - label: "Earthtrack App"
+        url: "/tools/earthtrack-app?country=Wales"
+      - label: "Analyse the Data"
+        url: "https://hub.livingwales.space/hub/spawn"
+        newtab: true
+      - label: "Stream the Data"
+        url: "/tools/for-developers/"
+
+tools_blocks:
+  - title: "See on Map"
+    description: "Environmental descriptors, land cover, habitats and change"
+    image: "/assets/img/tools1.jpg"
+    url: "/tools/earthtrack-app?country=Wales"
+  - title: "Get the data"
+    description: "Download or stream the data to your computer"
+    image: "/assets/img/tools2.jpg"
+    url: "/europe/wales/data/"
+  - title: "Analyse the data"
+    description: "Access the Welsh Data Cube"
+    image: "/assets/img/tools3.jpg"
+    url: "https://livingwales.aber.ac.uk/jhub/"
+    newtab: true
+  - title: "Big Data"
+    description: "Background to systems that process large datasets"
+    image: "/assets/img/tools5.jpg"
+    url: "/europe/wales/big-data/"
 ---
 
-{%-
-include tools.liquid
-heading="Past & Present Landscapes"
-subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
-all="./past-present-landscapes/"
-data="europe.wales.past-present-landscapes"
--%}
+## Past & Present Landscapes
 
-{%-
-include tools.liquid
-heading="Tools"
-data="europe.wales.tools"
-cols="4"
--%}
+From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.
 
-{%-
-include contribute.liquid
-title="Monmouthshire Pilot"
-heading="Living Land Management Wales"
-subheading="Living Land Management Wales is a Monmouthshire-based project that is using satellite mapping, socio-economic and environmental data, and computer modelling to address the fundamental question ‘How should we use our land now and into the future?’."
-button="Find Out More" url="./monmouthshire/"
-image="/assets/img/monmouthshire-login.jpg"
--%}
-
-{%-
-include boxes.liquid
-heading="Future Landscapes"
-data="future.wales"
--%}
-
-{%-
-include boxes.liquid
-heading="Themes"
-data="europe.wales.themes.all"
-only="welsh,ecosystem,biodiversity"
-more="./themes/"
--%}
-
-{%-
-include boxes.liquid
-heading="Learning and Art"
-data="europe.wales.learning-and-art"
--%}
-
-{%-
-include contribute.liquid
-title="Join Livingearth"
-heading="How to contribute"
-subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
-button="Learn more" url="/contribute/"
-image="/assets/img/contribute.jpg"
--%}
+{% include country-pipeline.liquid list=page.pipeline %}

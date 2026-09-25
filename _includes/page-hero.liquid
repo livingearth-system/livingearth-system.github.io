@@ -1,0 +1,90 @@
+{%- comment -%}
+PAGE HERO — directory-page-style title band, used by _layouts/directory.html.
+Set these in a page's front matter (all optional except title falls back
+to the page's own title):
+  breadcrumb: a list of { label, url } — last item shows as plain text (current page)
+  eyebrow:    small label above the title, e.g. "Tools"
+  subtitle:   short line under the title
+  cta_text:   button label — button only renders if cta_text AND cta_url are set
+  cta_url:    where the button links to
+  image:      path to a full-width photo. If set, this becomes the hero's
+              full-bleed background (with a dark overlay behind the text)
+              instead of the default illustrated sky/hills panel.
+  no_hero_art: true — when no image is set, suppresses the default
+              illustrated sky/hills panel instead of showing it, leaving
+              just the title/eyebrow/subtitle/CTA content. Has no effect
+              if `image` is set (the photo hero has no art panel anyway).
+To hide this section entirely on a specific page, set `nohero: true`.
+{%- endcomment -%}
+{%- unless page.nohero -%}
+
+{%- if page.breadcrumb -%}
+<nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    {% for crumb in page.breadcrumb %}
+      {% unless forloop.first %}<span class="page-breadcrumb-sep">/</span>{% endunless %}
+      {% if forloop.last %}
+        <span class="page-breadcrumb-current">{{ crumb.label }}</span>
+      {% else %}
+        <a class="page-breadcrumb-link" href="{% if crumb.url contains 'http' %}{{ crumb.url }}{% else %}{{ crumb.url | relative_url }}{% endif %}">{{ crumb.label }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
+{%- endif -%}
+
+{%- if page.image -%}
+<section class="page-hero page-hero-photo" style="background-image: url('{{ page.image | relative_url }}');">
+  <div class="container page-hero-inner page-hero-inner-full">
+    <div class="page-hero-content">
+      {%- if page.eyebrow -%}<p class="page-hero-eyebrow">{{ page.eyebrow }}</p>{%- endif -%}
+      <h1 class="page-hero-title">{{ page.title }}</h1>
+      {%- if page.subtitle -%}<p class="page-hero-subtitle">{{ page.subtitle }}</p>{%- endif -%}
+      {%- if page.cta_text and page.cta_url -%}
+        <a class="page-hero-cta" href="{% if page.cta_url contains 'http' %}{{ page.cta_url }}{% else %}{{ page.cta_url | relative_url }}{% endif %}">{{ page.cta_text }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{%- else -%}
+<section class="page-hero">
+  <div class="container page-hero-inner{% if page.no_hero_art %} page-hero-inner-full{% endif %}">
+    <div class="page-hero-content">
+      {%- if page.eyebrow -%}<p class="page-hero-eyebrow">{{ page.eyebrow }}</p>{%- endif -%}
+      <h1 class="page-hero-title">{{ page.title }}</h1>
+      {%- if page.subtitle -%}<p class="page-hero-subtitle">{{ page.subtitle }}</p>{%- endif -%}
+      {%- if page.cta_text and page.cta_url -%}
+        <a class="page-hero-cta" href="{% if page.cta_url contains 'http' %}{{ page.cta_url }}{% else %}{{ page.cta_url | relative_url }}{% endif %}">{{ page.cta_text }}</a>
+      {%- endif -%}
+    </div>
+    {%- unless page.no_hero_art -%}
+    <div class="page-hero-art" aria-hidden="true">
+      <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pageHeroSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#BFE6F6"/>
+            <stop offset="100%" stop-color="#FCF8F5"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="600" fill="url(#pageHeroSky)"/>
+        <g fill="#FFFFFF">
+          <ellipse cx="150" cy="120" rx="42" ry="24"/>
+          <ellipse cx="120" cy="130" rx="28" ry="18"/>
+          <ellipse cx="180" cy="130" rx="30" ry="18"/>
+        </g>
+        <g fill="#FFFFFF">
+          <ellipse cx="560" cy="90" rx="70" ry="38"/>
+          <ellipse cx="500" cy="105" rx="45" ry="26"/>
+          <ellipse cx="620" cy="105" rx="50" ry="28"/>
+          <ellipse cx="560" cy="60" rx="42" ry="30"/>
+        </g>
+        <path d="M0,420 C150,370 300,450 450,410 C600,370 700,430 800,400 L800,600 L0,600 Z" fill="#81CB7A"/>
+        <path d="M0,480 C180,430 320,510 500,460 C650,420 720,470 800,450 L800,600 L0,600 Z" fill="#1A8155"/>
+      </svg>
+    </div>
+    {%- endunless -%}
+  </div>
+</section>
+{%- endif -%}
+
+{%- endunless -%}

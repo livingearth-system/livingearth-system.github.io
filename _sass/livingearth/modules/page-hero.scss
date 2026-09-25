@@ -1,0 +1,203 @@
+/* ==========================================================================
+   PAGE HERO
+   Directory-page-style title band. Used via _layouts/directory.html.
+   Colours: Ocean Blue #00577E · Light Blue #BFE6F6 · Chalk White #FCF8F5
+            Bold Green #1A8155 · Everleigh #81CB7A
+   ========================================================================== */
+
+/* --- Breadcrumb -------------------------------------------------------- */
+
+.page-breadcrumb {
+  background: #00415C;
+  padding: 10px 0;
+}
+
+.page-breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-breadcrumb-link,
+.page-breadcrumb-current {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+}
+
+.page-breadcrumb-link {
+  color: #BFE6F6;
+  text-decoration: none;
+}
+
+.page-breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.page-breadcrumb-current {
+  color: #FCF8F5;
+  font-weight: 600;
+}
+
+.page-breadcrumb-sep {
+  color: #6FA8C2;
+  font-size: 13px;
+}
+
+/* --- Hero (default illustrated split-panel mode) ------------------------ */
+
+.page-hero {
+  background: #00577E;
+}
+
+.page-hero-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 360px;
+}
+
+.page-hero-content {
+  flex: 0 0 40%;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 24px;
+  color: #FCF8F5;
+}
+
+.page-hero-eyebrow {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #BFE6F6;
+  margin: 0 0 8px;
+}
+
+.page-hero-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+  color: #FCF8F5;
+}
+
+.page-hero-subtitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #E7F3F8;
+  margin: 0 0 24px;
+  max-width: 40ch;
+}
+
+.page-hero-cta {
+  display: inline-block;
+  background: #FCF8F5;
+  color: #00577E;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  width: fit-content;
+  transition: transform 0.15s ease;
+}
+
+.page-hero-cta:hover {
+  transform: translateY(-2px);
+}
+
+.page-hero-art {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- Hero (full-width photo mode, when a page sets `image:`) ----------- */
+
+.page-hero-photo {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page-hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Darkest behind the text on the left, fading out toward the photo on the right */
+  background: linear-gradient(
+    90deg,
+    rgba(4, 18, 32, 0.8) 0%,
+    rgba(4, 18, 32, 0.62) 35%,
+    rgba(4, 18, 32, 0.25) 65%,
+    rgba(4, 18, 32, 0) 90%
+  );
+}
+
+.page-hero-photo .page-hero-title,
+.page-hero-photo .page-hero-subtitle {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.page-hero-inner-full {
+  position: relative;
+  z-index: 1;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.page-hero-inner-full .page-hero-content {
+  flex: none;
+  max-width: 600px;
+  padding: 56px 24px;
+}
+
+/* --- Mobile -------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .page-hero-inner {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .page-hero-content {
+    flex: none;
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+
+  .page-hero-title {
+    font-size: 30px;
+  }
+
+  .page-hero-art {
+    height: 200px;
+  }
+
+  .page-hero-inner-full {
+    min-height: unset;
+    padding: 40px 0;
+  }
+
+  .page-hero-inner-full .page-hero-content {
+    max-width: 100%;
+  }
+
+  .page-hero-photo::before {
+    /* On narrow screens the text spans full width, so darken more evenly */
+    background: rgba(4, 18, 32, 0.65);
+  }
+}

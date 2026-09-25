@@ -1,0 +1,18 @@
+{%- comment -%}
+STATS BAND — quick scale/credibility numbers.
+Data lives in _data/stats.yml (number, label).
+Currently used on the home page (between pipeline and countries strip)
+and can be reused anywhere by adding {% include stats-band.liquid %}.
+{%- endcomment -%}
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-band-row">
+      {% for s in site.data.stats %}
+        <div class="stats-band-item">
+          <span class="stats-band-number">{{ s.number }}</span>
+          <span class="stats-band-label">{{ s.label }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

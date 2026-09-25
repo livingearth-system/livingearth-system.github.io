@@ -1,0 +1,47 @@
+/* stats-band-start */
+.stats-band {
+  background-color: #23567b; /* navy */
+  padding: 48px 0;
+}
+
+.stats-band-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.stats-band-item {
+  flex: 1 1 200px;
+  text-align: center;
+  color: #fbf8f5; /* off-white */
+}
+
+.stats-band-number {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #fbf8f5; /* off-white */
+  margin-bottom: 6px;
+}
+
+.stats-band-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #c6e5f4; /* light blue */
+}
+
+@media (max-width: 767px) {
+  .stats-band {
+    padding: 32px 0;
+  }
+  .stats-band-number {
+    font-size: 28px;
+  }
+  .stats-band-row {
+    justify-content: center;
+  }
+}
+/* stats-band-end */

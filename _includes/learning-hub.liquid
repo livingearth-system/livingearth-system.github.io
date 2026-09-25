@@ -20,7 +20,7 @@
     {% for post in site.data['learning-hub'].index %}
       <div class="col-4">
         <div>
-          <img src="{{ post.image }}">
+          <img src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}">
         </div>
         <p class="learning-hub-post-title">
           <span class="learning-hub-italic"> {{ post.title }} </span>
@@ -31,7 +31,7 @@
         {% endfor %}
         {% if post.link %}
           {% for link in post.links %}
-            <a href="{{ link.url }}">{{ link.url }}</a>
+            <a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.url }}</a>
           {% endfor %}
         {% endif %}
       </div>

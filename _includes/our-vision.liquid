@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-12 col-md-6 flex-column d-flex">
-            {%- if include.image -%}<img src="{{ include.image }}" alt="{{ include.alt }}">{% endif %}
+            {%- if include.image -%}<img src="{% if include.image contains 'http' %}{{ include.image }}{% else %}{{ include.image | relative_url }}{% endif %}" alt="{{ include.alt }}">{% endif %}
         </div>
     </div>
 </section>

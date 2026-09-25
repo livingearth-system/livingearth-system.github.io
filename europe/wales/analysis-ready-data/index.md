@@ -1,14 +1,16 @@
 ---
-layout: page
-
-title: "Analysis Ready Data"
-subtitle: "Download and pre-process satellite data to an analysis ready format."
-background: "#07073f"
-image: "/assets/img/heading/country.jpg"
+layout: null
+permalink: /europe/wales/analysis-ready-data/
 ---
-
-{%-
-include boxes.liquid
-subheading="For decades, airborne and spaceborne sensors have been acquring data across all or part of Wales in varying modes and across a range of spatial resoutions and temporal freqencies.  These sections provide information on and access to a range of data, much of which is in an analysis ready data (ARD) format.  These include freely accessible radar and optical data acquired by the Sentinel-1 and 2 respectively, which are provided in both near real time and as historical archives and can be downloaded at no cost."
-data="europe.wales.analysis-ready-data"
--%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ '/tools/for-developers/#wales' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/tools/for-developers/#wales' | relative_url }}">
+</head>
+<body>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/tools/for-developers/#wales' | relative_url }}">For Developers</a>.</p>
+</body>
+</html>

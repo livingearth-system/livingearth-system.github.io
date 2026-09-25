@@ -1,0 +1,29 @@
+{%- comment -%}
+PROJECT SECTIONS — shared layout for the Our Projects detail pages.
+Usage: {% include project-sections.liquid project="living-wales" %}
+Reads _data/our-projects/<project>/index.yml (title, image, content, url).
+Sections alternate image left / image right. Content supports markdown links.
+A "Find out more" button shows only when url is a real link (not "#").
+{%- endcomment -%}
+{% assign sections = site.data['our-projects'][include.project].index %}
+{% assign base_href = 'href="' | append: site.baseurl | append: '/' %}
+{% if sections %}
+<div class="project-sections">
+  {% for item in sections %}
+  <section class="project-section{% cycle '', ' project-section--flip' %}">
+    {% if item.image %}
+    <div class="project-section-media">
+      <img src="{% if item.image contains 'http' %}{{ item.image }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="project-section-body">
+      <h2 class="project-section-title">{{ item.title | downcase | capitalize }}</h2>
+      <div class="project-section-text">{{ item.content | markdownify | replace: 'href="/', base_href }}</div>
+      {% if item.url and item.url != "#" %}
+      <a class="project-section-link" href="{% if item.url contains ':' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" {% if item.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>Find out more &rarr;</a>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endif %}

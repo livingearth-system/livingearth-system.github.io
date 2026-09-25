@@ -37,7 +37,7 @@
                             <a href="#" class="forgot">Forgot your password?</a>
                             <p class="required">* Required fields</p>
                         </form>
-                        <script src="/login/data.json" defer=""></script>
+                        <script src="{{ '/login/data.json' | relative_url }}" defer=""></script>
                     </div>
                 {% else %}
                     {%- if data.downloads -%}
@@ -68,4 +68,4 @@
         <a class="btn btn-primary login-logout" href="../login/">Logout</a>
     {% endif %}
 </section>
-<script src="/assets/js/login.js" defer=""></script>
+<script src="{{ '/assets/js/login.js' | relative_url }}" defer=""></script>

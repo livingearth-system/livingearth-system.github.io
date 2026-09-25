@@ -1,0 +1,170 @@
+{%- comment -%}
+INFO BLOCKS — grid of resource/link/people/logo cards.
+
+Usage:
+  {% include info-blocks.liquid list=page.info_blocks %}
+  {% include info-blocks.liquid list=page.org_blocks heading="Contributing Organisations" id="organisations" variant="horizontal" %}
+  {% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" %}
+
+Parameters:
+  list     — the array to render (falls back to page.info_blocks if omitted)
+  heading  — optional heading shown above the grid
+  id       — optional id, for anchor-linking from jump-nav
+  variant  — "default" (vertical card, image/logo/icon on top) — used by Our Projects
+             "horizontal" (icon/logo on the left, no circle) — organisations
+             "team" (big photo, dark caption with name/role/social link) — people
+
+Each entry needs: title, description, and optionally link_text + url.
+default/horizontal cards also take: image, logo, or icon (map/globe/book/leaf/change/person)
+team cards take: image OR icon (person) as a placeholder, plus optional
+  social_url + social_label (e.g. LinkedIn)
+
+HORIZONTAL VARIANT — two link styles:
+  - Single link: set block.url (+ optional newtab). The whole card becomes
+    a link.
+  - Multiple links: set block.links, a list of { label, url, newtab }. The
+    card is not itself a link; each entry renders as a small text link in
+    the card body instead. Use this when a card needs 2+ destinations
+    (e.g. a paper AND a code repository).
+{%- endcomment -%}
+{% assign blocks = include.list | default: page.info_blocks %}
+{% assign variant = include.variant | default: "default" %}
+{%- if blocks -%}
+<section class="info-blocks info-blocks-{{ variant }}"{% if include.id %} id="{{ include.id }}"{% endif %}>
+  <div class="container">
+    {%- if include.heading -%}<h2 class="info-blocks-heading">{{ include.heading }}</h2>{%- endif -%}
+    <div class="info-blocks-grid">
+      {% for block in blocks %}
+
+        {% if variant == "horizontal" %}
+          {% if block.links %}
+            <div class="info-blocks-card info-blocks-card-horizontal">
+          {% elsif block.url %}
+            <a class="info-blocks-card info-blocks-card-horizontal" href="{% if block.url contains 'http' %}{{ block.url }}{% else %}{{ block.url | relative_url }}{% endif %}"{% if block.newtab %} target="_blank" rel="noopener"{% endif %}>
+          {% else %}
+            <div class="info-blocks-card info-blocks-card-horizontal">
+          {% endif %}
+            <div class="info-blocks-h-media">
+              {% if block.logo %}
+                <img class="info-blocks-h-logo" src="{{ block.logo | relative_url }}" alt="" loading="lazy">
+              {% elsif block.icon %}
+                <span class="info-blocks-h-logo info-blocks-icon">
+                  {% case block.icon %}
+                    {% when "map" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 4v14M15 6v14" stroke="currentColor" stroke-width="1.5"/></svg>
+                    {% when "globe" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.5"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="currentColor" stroke-width="1.5"/></svg>
+                    {% when "book" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 5.5c-1.6-1-4-1.5-6.5-1.5v14c2.5 0 4.9.5 6.5 1.5m0-14c1.6-1 4-1.5 6.5-1.5v14c-2.5 0-4.9.5-6.5 1.5m0-14v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "leaf" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "change" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5M20 4v4h-4M20 12a8 8 0 0 1-14 5M4 20v-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    {% when "person" %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 19c1.2-3.5 4-5.5 7-5.5s5.8 2 7 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    {% else %}
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
+                  {% endcase %}
+                </span>
+              {% endif %}
+            </div>
+            <div class="info-blocks-body">
+              <h3 class="info-blocks-title">{{ block.title }}</h3>
+              <p class="info-blocks-desc">{{ block.description }}</p>
+              {% if block.links %}
+                <div class="info-blocks-h-links">
+                  {% for link in block.links %}
+                    <a class="info-blocks-h-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if link.newtab %} target="_blank" rel="noopener"{% endif %}>
+                      <svg class="info-blocks-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      {{ link.label }}
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          {% if block.links %}</div>{% elsif block.url %}</a>{% else %}</div>{% endif %}
+
+        {% elsif variant == "team" %}
+          <div class="info-blocks-card info-blocks-card-team">
+            {% if block.image %}
+              <div class="info-blocks-team-photo">
+                <img src="{{ block.image | relative_url }}" alt="{{ block.title }}" loading="lazy">
+              </div>
+            {% else %}
+              <div class="info-blocks-team-photo info-blocks-team-photo-placeholder">
+                <span class="info-blocks-icon-wrap">
+                  <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M5 19c1.2-3.5 4-5.5 7-5.5s5.8 2 7 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </div>
+            {% endif %}
+            <div class="info-blocks-team-caption">
+              <h3 class="info-blocks-team-name">{{ block.title }}</h3>
+              <p class="info-blocks-team-role">{{ block.description }}</p>
+              {% if block.social_url %}
+                <a class="info-blocks-team-social" href="{% if block.social_url contains 'http' %}{{ block.social_url }}{% else %}{{ block.social_url | relative_url }}{% endif %}" target="_blank" rel="noopener">
+                  <svg class="info-blocks-team-social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="7.5" cy="8" r="1.3" fill="currentColor"/>
+                    <path d="M7.5 11v6M11.5 11v6M11.5 13.5c0-1.5 1-2.5 2.3-2.5s2.2 1 2.2 2.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  {{ block.social_label | default: "LinkedIn" }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+        {% else %}
+          <div class="info-blocks-card">
+            {% if block.image %}
+              <div class="info-blocks-media">
+                <img src="{{ block.image | relative_url }}" alt="" loading="lazy">
+              </div>
+            {% elsif block.logo %}
+              <div class="info-blocks-media-icon">
+                <span class="info-blocks-icon-wrap info-blocks-logo-wrap">
+                  <img class="info-blocks-logo" src="{{ block.logo | relative_url }}" alt="" loading="lazy">
+                </span>
+              </div>
+            {% elsif block.icon %}
+              <div class="info-blocks-media-icon">
+                <span class="info-blocks-icon-wrap">
+                  {% case block.icon %}
+                    {% when "map" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 4v14M15 6v14" stroke="currentColor" stroke-width="1.5"/></svg>
+                    {% when "globe" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.5"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="currentColor" stroke-width="1.5"/></svg>
+                    {% when "book" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 5.5c-1.6-1-4-1.5-6.5-1.5v14c2.5 0 4.9.5 6.5 1.5m0-14c1.6-1 4-1.5 6.5-1.5v14c-2.5 0-4.9.5-6.5 1.5m0-14v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "leaf" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14C11 5 5 11 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    {% when "change" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5M20 4v4h-4M20 12a8 8 0 0 1-14 5M4 20v-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    {% when "person" %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 19c1.2-3.5 4-5.5 7-5.5s5.8 2 7 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    {% else %}
+                      <svg class="info-blocks-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
+                  {% endcase %}
+                </span>
+              </div>
+            {% endif %}
+            <div class="info-blocks-body">
+              <h3 class="info-blocks-title">{{ block.title }}</h3>
+              <p class="info-blocks-desc">{{ block.description }}</p>
+              {% if block.url %}
+                <a class="info-blocks-link" href="{% if block.url contains 'http' %}{{ block.url }}{% else %}{{ block.url | relative_url }}{% endif %}"{% if block.newtab %} target="_blank" rel="noopener"{% endif %}>
+                  <svg class="info-blocks-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  {{ block.link_text | default: "View Resource" }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif -%}

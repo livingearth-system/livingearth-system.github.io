@@ -1,0 +1,161 @@
+- title: "A globally relevant change taxonomy and evidence-based change framework for land monitoring"
+  authors: "Lucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., Richards, A.E., Tetreault-Campbell, S., Williams, K.J., Mueller, N. and Tissott, B."
+  date: "2022"
+  link: "https://doi.org/10.1111/gcb.16346"
+  newtab: true
+  country: "Global"
+
+- title: "National crop mapping using sentinel-1 time series: A knowledge-based descriptive algorithm"
+  authors: "Planque, C., Lucas, R., Punalekar, S., Chognard, S., Hurford, C., Owers, C., Horton, C., Guest, P., King, S., Williams, S., & Bunting, P."
+  date: "2021"
+  link: "https://doi.org/10.3390/rs13050846"
+  newtab: true
+  country: "Wales"
+
+- title: "Living Wales: automatic and routine environmental monitoring using multi-source Earth observation data"
+  authors: "Planque, C., Punalekar, S., Lucas, R., Chognard, S., Owers, C.J., Clewley, D., Bunting, P., Sykes, H., Horton, C."
+  date: "2020"
+  link: "https://doi.org/10.1117/12.2573763"
+  newtab: true
+  country: "Wales"
+
+- title: "Operational continental-scale land cover mapping of Australia using the Open Data Cube"
+  authors: "Owers, C.J., Lucas, R.M., Clewley, D., Tissott, B., Chua, S.M.T., Hunt, G., Mueller, N., Planque, C., Punalekar, S.M., Bunting, P., Tan, P. and Metternicht, G."
+  date: "2022"
+  link: "https://doi.org/10.1080/17538947.2022.2130461"
+  newtab: true
+  country: "Australia"
+
+- title: "Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development"
+  authors: "Owers, C.J., Lucas, R.M., Clewley, D., Planque, C., Punalekar, S., Tissott, B., Chua, S.M.T., Bunting, P., Mueller, N., & Metternicht, G."
+  date: "2021"
+  link: "https://doi.org/10.1080/20964471.2021.1948179"
+  newtab: true
+  country: "Australia"
+
+- title: "Digital earth: yesterday, today, and tomorrow"
+  authors: "Annoni, A., Nativi, S., Çöltekin, A., Desha, C., Eremchenko, E., Gevaert, C.M., Giuliani, G., Chen, M., Perez-Mora, L., Strobl, J. and Tumampos, S."
+  date: "2023"
+  link: "https://doi.org/10.1080/17538947.2023.2187467"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Change in observed long-term greening across Switzerland – evidence from a three decades NDVI time-series and its relationship with climate and land cover factors"
+  authors: "Obuchowicz, C., Poussin, C. & Giuliani, G."
+  date: "2023"
+  link: "https://doi.org/10.1080/20964471.2023.2268322"
+  newtab: true
+  country: "Switzerland"
+
+- title: "A cross-thematic raster database for ecological research in Switzerland"
+  authors: "Külling, N., Adde, A., Fopp, F., Schweiger, A.K., Broennimann, O., Rey, P.-L., Giuliani, G., Goicolea, T., Petitpierre, B., Zimmermann, N.E., Pellissier, L., Altermatt, F., Lehmann, A., Guisan, A., SWECO25"
+  date: "2025"
+  link: "https://www.nature.com/articles/s41597-023-02899-1"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Beyond the SDG 15.3.1 Good Practice Guidance 1.0 using the Google Earth Engine platform: developing a self-adjusting algorithm to detect significant changes in Water Use Efficiency and Net Primary Production"
+  authors: "Markos, A., Sims, N., Giuliani, G."
+  date: "2022"
+  link: "https://doi.org/10.1080/20964471.2022.2076375"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Assessing the Applications of Earth Observation Data for Monitoring Artisanal and Small-Scale Gold Mining (ASGM) in Developing Countries"
+  authors: "Moomen, A., Lacroix, P., Benvenuti, A., Planque, M., Piller, T., Davis, K., Miranda, M., Ibrahim, E., Giuliani, G."
+  date: "2022"
+  link: "https://doi.org/10.3390/rs14132971"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Think global, cube local: An Earth Observation Data Cube's contribution to the Digital Earth vision"
+  authors: "Sudmanns, M., Augustin, H., Killough, B., Giuliani, G., Tiede, D., Leith, A., Yuan, F."
+  date: "2022"
+  link: "https://doi.org/10.1080/20964471.2022.2099236"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Exploring Switzerland's Land Cover Change dynamics using a national statistical survey"
+  authors: "Thomas, I.N., Giuliani, G."
+  date: "2023"
+  link: "https://doi.org/10.3390/land12071386"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model"
+  authors: "Poussin, C., Timoner, P., Chatenoux, B., Giuliani, G., Peduzzi, P."
+  date: "2023"
+  link: "https://doi.org/10.1016/j.srs.2023.100078"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Downscaling Switzerland Land Use/Land Cover data using nearest neighbors and an expert system"
+  authors: "Giuliani, G., Rodila, D., Külling, N., Maggini, R., Lehmann, A."
+  date: "2022"
+  link: "https://doi.org/10.3390/land11050615"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Essential Variables from Earth Observation for environmental multi-scale indicators and policies"
+  authors: "Lehmann, A., Mazzetti, P., Santoro, M., Masó, J., Serral, I., Spengler, D., Niamir, A., Lacroix, P., Ambrosone, M., McCallum, I., Kussul, N., Patias, P., Rodila, D., Ray, N., Giuliani, G."
+  date: "2022"
+  link: ""
+  newtab: true
+  country: "Switzerland"
+
+- title: "The Swiss Data Cube: Analysis Ready Data archive using Earth Observations of Switzerland"
+  authors: "Chatenoux, B., Richard, J.-P., Small, D., Roeoesli, C., Wingate, V., Poussin, C., Rodila, D., Peduzzi, P., Steinmeier, C., Ginzler, C., Psomas, A., Schaepman, M., Giuliani, G."
+  date: "2021"
+  link: "https://doi.org/10.1038/s41597-021-01076-6"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Drying conditions in Switzerland - Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs"
+  authors: "Poussin, C., Massot, A., Ginzler, C., Weber, D., Chatenoux, B., Lacroix, P., Piller, T., Nguyen, L., Giuliani, G."
+  date: "2021"
+  link: "https://doi.org/10.1080/20964471.2021.1974681"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Knowledge generation using satellite Earth Observations to support Sustainable Development Goals (SDG): a use case on Land Degradation"
+  authors: "Giuliani, G., Mazzetti, P., Santoro, M., Nativi, S., Van Bemmelen, J., Colangeli, G., Lehmann, A."
+  date: "2020"
+  link: "https://doi.org/10.1016/j.jag.2020.102068"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Monitoring Land Degradation at national level using satellite Earth Observation time-series data to support SDG15 - Exploring the potential of Data Cube"
+  authors: "Giuliani, G., Chatenoux, B., Benvenuti, A., Lacroix, P., Santoro, M., Mazzetti, P."
+  date: "2020"
+  link: "https://doi.org/10.1080/20964471.2020.1711633"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Data Cube on Demand (DCoD): Generating Earth Observation Data Cube anywhere"
+  authors: "Giuliani, G., Chatenoux, B., Piller, T., Moser, F., Lacroix, P."
+  date: "2020"
+  link: "https://doi.org/10.1016/j.jag.2019.102035"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD)"
+  authors: "Giuliani, G., Chatenoux, B., De Bono, A., Rodila, D., Richard, J.-P., Allenbach, K., Dao, H., Peduzzi, P."
+  date: "2017"
+  link: "https://doi.org/10.1080/20964471.2017.1398903"
+  newtab: true
+  country: "Switzerland"
+
+- title: "Hierarchical-modular framework for habitat mapping through systematic and informed integration of remote sensing data with contextual information"
+  authors: "Punalekar, S.M., Hurford, C., Lucas, R.M., Planque, C., Chognard, S."
+  date: "2024"
+  link: "https://doi.org/10.1016/j.ecoinf.2024.102714"
+  newtab: true
+  country: "Wales"
+
+- title: "National scale mapping of larch plantations for Wales using the Sentinel-2 data archive"
+  authors: "Punalekar, S.M., Planque, C., Lucas, R.M., Evans, D., Correia, V., Owers, C.J., Poslajko, P., Bunting, P., Chognard, S."
+  date: "2021"
+  link: "https://doi.org/10.1016/j.foreco.2021.119679"
+  newtab: true
+  country: "Wales"
+

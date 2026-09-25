@@ -1,64 +1,69 @@
-<div class="container">
-  {% if include.header %}
-    <div class="section-hero-text">
-      <p>{{ include.header }}</p>
-    </div>
-  {% endif %}
-  {% if include.title %}
-    <div class="row">
-      <p class="col-12">
-        {{ include.title }}
-      </p>
-    </div>
-  {% endif %}
-  {% assign data = site.data['publications'].index %}
-  <div class="grid-columns grid-columns-px-15">
-    <div class="row">
-      {% for item in data limit: 3 %}
-        <div class="col-12 col-sm-6 col-md-4 grid-item">
-          <div class="img-container">
-            {% if forloop.index0 == 0 %}
-              <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
-            {% elsif forloop.index0 == 1 %}
-              <a href="{{ item.url }}"><img src="/assets/img/heading/dea_landcover_murray_hres.png" class="img-fluid" alt="Living Earth logo"></a>
-            {% elsif forloop.index0 == 2 %}
-              <a href="{{ item.url }}"><img src="/assets/img/heading/livingcoasts_moreton_a.png" class="img-fluid" alt="Living Earth logo"></a>
-            {% endif %}
-          </div>
-          <div class="grid-item-content">
-            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
-            <p class="grid-item-subtitle">{{ item.subtitle }}</p>
-            <p class="grid-item-desc">{{ item.content | markdownify | raw}}</p>
-            <p class="grid-item-tagline">{{ item.tagline }}</p>
-          </div>
-        </div>
-      {% endfor %}
-      {% for item in data offset: 3 limit: 3 %}
-        <div class="col-12 col-sm-6 col-md-4 grid-item">
-          <div class="img-container">
-            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
-          </div>
-          <div class="grid-item-content">
-            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
-            <p class="grid-item-subtitle">{{ item.subtitle }}</p>
-            <p class="grid-item-desc">{{ item.content | markdownify | raw}}</p>
-            <p class="grid-item-tagline">{{ item.tagline }}</p>
-          </div>
-        </div>
-      {% endfor %}
-      {% for item in data offset: 6 %}
-        <div class="col-12 col-sm-6 col-md-4 grid-item">
-          <div class="img-container">
-            <a href="{{ item.url }}"><img src="{{ item.image }}" class="img-fluid" alt="Living Earth logo"></a>
-          </div>
-          <div class="grid-item-content">
-            <a class="grid-item-title" href="{{ item.url }}">{{ item.title }}</a>
-            <p class="grid-item-subtitle">{{ item.subtitle }}</p>
-            <p class="grid-item-desc">{{ item.content | markdownify | raw}}</p>
-            <p class="grid-item-tagline">{{ item.tagline }}</p>
-          </div>
-        </div>
+{%- comment -%}
+PUBLICATIONS LIST — filterable by country, displayed as a card grid.
+Data lives in _data/publications.yml (title, authors, date [year string],
+link, newtab, country). Country filter pills are generated from whatever
+values appear in the data. Entries with no link (link: "") render as
+plain text rather than a dead link.
+
+Usage: {% include publications-list.liquid %}
+{%- endcomment -%}
+
+{% assign pubs = site.data.publications | sort: 'date' | reverse %}
+{% assign countries = pubs | map: 'country' | uniq | sort %}
+
+<div class="pub-filters">
+  <div class="pub-filter-group">
+    <span class="pub-filter-label">Country</span>
+    <div class="pub-filter-row" data-filter-type="country">
+      <button class="pub-filter-pill is-active" type="button" data-filter-value="all">All</button>
+      {% for c in countries %}
+      <button class="pub-filter-pill" type="button" data-filter-value="{{ c }}">{{ c }}</button>
       {% endfor %}
     </div>
   </div>
 </div>
+
+<div class="pub-empty" hidden>No publications match this filter.</div>
+
+<div class="pub-grid">
+  {% for pub in pubs %}
+  <div class="pub-card" data-country="{{ pub.country }}">
+    <span class="pub-card-badge">{{ pub.country }}</span>
+    {% if pub.link and pub.link != "" %}
+    <a class="pub-card-title" href="{% if pub.link contains 'http' %}{{ pub.link }}{% else %}{{ pub.link | relative_url }}{% endif %}" {% if pub.newtab %}target="_blank" rel="noopener"{% endif %}>{{ pub.title }}</a>
+    {% else %}
+    <span class="pub-card-title pub-card-title-nolink">{{ pub.title }}</span>
+    {% endif %}
+    <div class="pub-card-authors">{{ pub.authors }}</div>
+    <div class="pub-card-date">{{ pub.date }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var active = 'all';
+  var cards = document.querySelectorAll('.pub-card');
+  var emptyMsg = document.querySelector('.pub-empty');
+  var row = document.querySelector('.pub-filter-row[data-filter-type="country"]');
+
+  function applyFilter() {
+    var visibleCount = 0;
+    cards.forEach(function (card) {
+      var show = active === 'all' || card.getAttribute('data-country') === active;
+      card.hidden = !show;
+      if (show) visibleCount++;
+    });
+    emptyMsg.hidden = visibleCount !== 0;
+  }
+
+  row.querySelectorAll('.pub-filter-pill').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      row.querySelectorAll('.pub-filter-pill').forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      active = btn.getAttribute('data-filter-value');
+      applyFilter();
+    });
+  });
+})();
+</script>
