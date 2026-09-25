@@ -125,3 +125,8 @@
     height: 450px;
   }
 }
+
+/* MOBILE: homepage button — keep "Learn About The Project" inside the screen */
+@media (max-width: 767px) {
+  .welcome-living-button .search { width: 100%; max-width: 100%; box-sizing: border-box; }
+}

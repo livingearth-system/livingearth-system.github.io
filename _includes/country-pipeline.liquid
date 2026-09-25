@@ -436,7 +436,7 @@ scrolls to it on load.
         btn.setAttribute('aria-expanded', 'true');
         btn.classList.add('is-active');
         var desc = panel.querySelector('.country-pipeline-item-desc[data-desc-panel="' + id + '"]');
-        if (desc) { desc.hidden = false; }
+        if (desc) { desc.hidden = false; desc.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
       }
     });
   });

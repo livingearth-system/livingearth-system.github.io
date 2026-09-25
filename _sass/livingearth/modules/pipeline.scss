@@ -519,3 +519,11 @@ a.pipeline-footer-box:hover { background: #336b49; }
   color: #23567b;
   white-space: nowrap;
 }
+
+/* MOBILE: pipeline cards — two per row so the grid and its description fit on screen */
+@media (max-width: 600px) {
+  .pipeline-item-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pipeline-item-img { height: 70px; }
+  .pipeline-item-title { font-size: 12px; padding: 8px 8px 2px; }
+  .pipeline-item-sub { font-size: 11px; padding: 0 8px 10px; }
+}

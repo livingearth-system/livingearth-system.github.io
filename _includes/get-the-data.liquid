@@ -31,7 +31,7 @@
               {% if row.country_region != "" %}
               <tr>
                 <td class="data-table-td">{{ row.country_region }}</td>
-                <td class="data-table-td"><a class="data-table-link" href="{% if row.access_link contains 'http' %}{{ row.access_link }}{% else %}{{ row.access_link | relative_url }}{% endif %}">{{ row.access_link }}</a></td>
+                <td class="data-table-td"><a class="data-table-link" href="{% if row.access_link contains 'http' %}{{ row.access_link }}{% else %}{{ row.access_link | relative_url }}{% endif %}"{% if row.newtab %} target="_blank" rel="noopener"{% endif %}>Open {{ row.country_region | downcase }} map &#8599;</a></td>
               </tr>
               {% endif %}
             {% endfor %}
