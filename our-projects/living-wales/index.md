@@ -4,7 +4,6 @@ permalink: /our-projects/living-wales/
 title: "Living Wales"
 eyebrow: "Our Projects"
 subtitle: Living Wales provides full operational implementation of a national land cover mapping and monitoring system for Wales, a devolved nation of the United Kingdom.
-image: "/assets/img/heading/livingwales_banner.png"
 nocontact: true
 breadcrumb:
   - label: "Living Earth"

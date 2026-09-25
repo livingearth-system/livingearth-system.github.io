@@ -43,6 +43,7 @@ info_blocks:
   - title: "DEA Land Cover"
     description: "Continental mapping of Australia for 33 years"
     url: "https://www.dea.ga.gov.au/products/dea-land-cover"
+    newtab: true
     image: "/assets/img/heading/dea_landcover_murray_hres.png"
 
   - title: "Living Coasts"
@@ -53,12 +54,8 @@ info_blocks:
   - title: "Living Switzerland"
     description: "National mapping of Switzerland through Living Earth."
     url: "http://livingearth.ch"
+    newtab: true
     image: "/assets/img/projects/CH_LCCS3.png"
-
-  - title: "Living PNG"
-    description: "Living Earth for Papua New Guinea"
-    url: "/our-projects/living-PNG/"
-    image: "/assets/img/projects/livingcoasts_png_a.png"
 
   - title: "Dynamic Land"
     description: "Quantitative land cover contents and map generation through Living Earth."
@@ -78,21 +75,25 @@ info_blocks:
   - title: "CCI Biomass"
     description: "Generating global maps of forest biomass"
     url: "http://cci.esa.int/biomass"
+    newtab: true
     image: "/assets/img/projects/cci_biomass_a.png"
 
   - title: "Mamaforest"
     description: "Evaluating sustainable management of the Matang Mangrove Forest Reserve, Peninsular Malaysia"
     url: "https://eo.belspo.be/en/news/mamaforest-managing-mangrove-forests-sky"
+    newtab: true
     image: "/assets/img/projects/mamaforest_a.png"
 
   - title: "Ecopotential"
     description: "Development of EODESM – the forerunner to Living Earth."
     url: "http://www.ecopotential-project.eu/"
+    newtab: true
     image: "/assets/img/projects/ecopotential_a.png"
 
   - title: "BIO_SOS"
     description: "Land cover mapping from spectral data and derived metrics."
     url: "https://cordis.europa.eu/project/id/263435"
+    newtab: true
     image: "/assets/img/projects/biosos_greece_a.png"
 ---
 

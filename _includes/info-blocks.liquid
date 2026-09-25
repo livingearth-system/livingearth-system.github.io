@@ -154,7 +154,7 @@ HORIZONTAL VARIANT — two link styles:
               <h3 class="info-blocks-title">{{ block.title }}</h3>
               <p class="info-blocks-desc">{{ block.description }}</p>
               {% if block.url %}
-                <a class="info-blocks-link" href="{% if block.url contains 'http' %}{{ block.url }}{% else %}{{ block.url | relative_url }}{% endif %}">
+                <a class="info-blocks-link" href="{% if block.url contains 'http' %}{{ block.url }}{% else %}{{ block.url | relative_url }}{% endif %}"{% if block.newtab %} target="_blank" rel="noopener"{% endif %}>
                   <svg class="info-blocks-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   {{ block.link_text | default: "View Resource" }}
                 </a>
