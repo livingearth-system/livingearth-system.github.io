@@ -9,9 +9,10 @@ countries:
 choose: Earth
 
 learning_resources:
-  button_text1: Go to learning resource
+  button_text1: Get the data
   button_text2: Sign in with GitHub
   button_url: /tools/learn/
+  data_url: /tools/for-developers/#download-data
 
 sponsor_logos:
   - name: aberystwyth_university
