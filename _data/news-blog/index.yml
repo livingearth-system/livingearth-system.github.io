@@ -1,5 +1,149 @@
 ---
+# EARSeL 2026 cards (30 Sep). Research blurbs currently just list authors —
+# add a 1–2 sentence summary from each presenter at the start of `subtitle`.
+# Swap the event card image for a photo from Friday.
+- category: "events"
+  button:
+    - class: button-4
+      id: button4
+      name: Events
+  date: Sep 29 – Oct 2, 2026
+  href: 'https://athens2026.earsel.org/'
+  id: infor
+  min: 1 min read
+  oldman-img: /assets/img/heading/europe.jpg
+  subtitle: >
+    Living Earth special session "Mapping states and dynamics of landscapes" (Room B3), chaired by Gregory Giuliani and Richard Lucas, with talks on land cover mapping, futures, Earthtrack, Living Switzerland and more.
+  title: "45th EARSeL Symposium, Athens"
+
 - category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/data/eodata.png
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Giuliani, Lucas, Planque, Chognard, Lambiel, Bonnier, Timoner, Poussin, Mueller.
+  title: "Living Earth: A Scalable Framework for Understanding, Planning, and Recovering Planetary Landscapes"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/heading/dea_landcover_murray_hres.png
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Timoner, Poussin, Planque, Chognard, Chatenoux, Lambiel, Bonnier, Giuliani.
+  title: "Geoembeddings for Land Cover Mapping"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/Future1.jpg
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Lucas, Planque, Giuliani.
+  title: "Living Earth Futures and the Future of Living Earth"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/heading/environmental.jpg
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Balzter, Acil, Mandadi, Ashgzaran, Quegan, Santoro, Lucas.
+  title: "Pressures and Impacts of Global Forest Biomass Gains and Losses from Earth Observation"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/heading/fieldwales.png
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Chognard, Lucas, Planque, Hurford, Giuliani.
+  title: "Earthtrack: A Mobile Application for Environmental Ground Data Collection — A Focus on Land Cover for Wales"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/heading/livingwales_timeseries.png
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Planque, Chatenoux, Chognard, Lucas, Poussin, Timoner, Lambiel, Bonnier, Giuliani.
+  title: "Living Earth in a Box: Flexible and Scalable Solution for Continuous Land Cover Monitoring"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/Future6.jpg
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Franziskakis, Planque, Werner, Vérard, Kasparian, Castelltort, Lucas, Giuliani.
+  title: "Living Earth for Deep-time: Evolving Geography and Climate for the Last 545 Million Years"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/heading/switzerland.jpg
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Poussin, Timoner, Planque, Chognard, Chatenoux, Lambiel, Bonnier, Giuliani.
+  title: "Living Switzerland: Towards a Digital Twin of the Swiss Environment"
+
+- category: "research"
+  button:
+    - class: button-1
+      id: button1
+      name: Research
+  date: Oct 2026
+  href: '#'
+  id: infor
+  min: 2 min read
+  oldman-img: /assets/img/heading/livingcoasts_moreton_a.png
+  subtitle: >
+    Presented at the 45th EARSeL Symposium, Athens. Lucas, Cross, Planque, Brandao, Sorkhabi, Giuliani, Nwokocha, Clewley.
+  title: "Living Earth Connecting Land and Water"
+
+- category: "research"
+  hidden: true   # replaced by the EARSeL 2026 research cards (Richard, 30 Sep) — delete to show again
   button:
     - class: button-1
       id: button1
@@ -14,6 +158,7 @@
   title: The Welsh Data Cube
   
 - category: "research"
+  hidden: true   # replaced by the EARSeL 2026 research cards (Richard, 30 Sep) — delete to show again
   button:
     - class: button-1
       id: button1
@@ -28,6 +173,7 @@
   title: Australian evaluation of Earthtrack.
   
 - category: "research"
+  hidden: true   # replaced by the EARSeL 2026 research cards (Richard, 30 Sep) — delete to show again
   button:
     - class: button-1
       id: button1
@@ -42,6 +188,7 @@
   title: Erosion along the Daintree River
   
 - category: "research"
+  hidden: true   # replaced by the EARSeL 2026 research cards (Richard, 30 Sep) — delete to show again
   button:
     - class: button-1
       id: button1

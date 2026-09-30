@@ -58,7 +58,7 @@ org_blocks:
     logo: "/assets/img/logos/PML.png"
     url: "https://www.pml.ac.uk/"
   - title: "University of Newcastle, Australia"
-    description: "School of Environment and Life Sciences"
+    description: "School of Environmental and Life Sciences"
     logo: "/assets/img/logos/University of Newcastle Aus.png"
     url: "https://www.newcastle.edu.au/school/environmental-and-life-sciences"
   - title: "CSIRO, Australia"
