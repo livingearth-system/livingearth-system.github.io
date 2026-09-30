@@ -17,5 +17,26 @@
 
     {%- include footer.liquid -%}
 
+    {%- comment -%}
+    Site-wide rule: any link to another website opens in a new tab.
+    Covers links in every page, include and data file, plus links added later
+    by scripts (e.g. map pop-ups). Links within livingearthhub.org are unchanged.
+    {%- endcomment -%}
+    <script>
+      (function () {
+        function isExternal(a) {
+          return (a.protocol === 'http:' || a.protocol === 'https:') && a.hostname && a.hostname !== location.hostname;
+        }
+        function mark(a) {
+          if (isExternal(a)) { a.target = '_blank'; a.rel = 'noopener'; }
+        }
+        document.querySelectorAll('a[href]').forEach(mark);
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href]');
+          if (a) mark(a);
+        }, true);
+      })();
+    </script>
+
 </body>
 </html>
