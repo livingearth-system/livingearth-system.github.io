@@ -963,3 +963,12 @@ button.env-des-descriptor-more {
 .env-des-descriptor-panel-link:hover {
   text-decoration: underline;
 }
+
+/* Keep links readable on the dark panels when hovered, clicked or visited
+   (otherwise Bootstrap turns them dark blue on the dark blue panel) */
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:hover,
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:focus,
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:active,
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:visited {
+  color: #c6e5f4;
+}

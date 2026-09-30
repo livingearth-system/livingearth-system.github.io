@@ -138,7 +138,7 @@
       description: "A measure of water turbidity. TSM includes both mineral and organic particles and affects light conditions in the water and the distribution of flora and fauna."
 
 - id: snow
-  title: "Snow"
+  title: "Snow and Ice"
   image: "/assets/img/wales/snow.jpg"
   descriptors:
     - title: "Snow Cover Fraction"
@@ -161,6 +161,14 @@
       unit: "cm"
       image: "/assets/img/wales/big/snow-depth.jpg"
       description: "The total depth of the snowpack, used to estimate the amount of snow covering the ground. Linked with snow water equivalent for water stock monitoring and flood forecasting."
+    - title: "Ice Extent"
+      unit: "area"
+      image: "/assets/img/env_descriptors/ice-extent.jpg"
+      description: "The total area covered by some amount of ice, including open water between ice floes. A typical threshold is 15% ice cover, for both land and water (freshwater to marine)."
+      links:
+        - label: "World Glacier Monitoring Service (WGMS)"
+          url: "https://wgms.ch/"
+          newtab: true
 
 - id: water
   title: "Water"
