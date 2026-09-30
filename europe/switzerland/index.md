@@ -103,6 +103,10 @@ pipeline:
               - title: "Plant Species"
                 image: "/assets/img/switzerland/plant-species.jpg"
                 description: "Categories of plants which show common attributes and are called by a common name. Important for maintaining genetic diversity and wildlife habitats, and often used as indicators of environmental change."
+                links:
+                  - label: "Tree Species Map of Switzerland"
+                    url: "https://www.envidat.ch/#/metadata/tree-species-map-of-switzerland"
+                    newtab: true
               - title: "Woody Biomass"
                 image: "/assets/img/switzerland/woody-biomass.jpg"
                 description: "The total mass of living plant material per woody area. Can consider both above- and below-ground components."

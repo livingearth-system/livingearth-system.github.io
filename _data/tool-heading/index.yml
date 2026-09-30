@@ -1,27 +1,12 @@
-- icon: "/assets/icon/icon-map.svg"
-  status: ""
-  title: "interactive map"
+# Tabs shown across the top of the map tool pages (_includes/tool-heading.liquid).
+# icon: "map" or "pin" (drawn inline in the include).
+# Get the Data, Analyse the Data, Past and Present and Future Landscapes
+# removed for now (30 Sep).
 
-- icon: "/assets/icon/icon-getdata.svg"
-  status: ""
-  title: "get the data"
+- title: "Interactive Map"
+  url: "/tools/interactive-map"
+  icon: "map"
 
-- icon: "/assets/icon/icon-analyze.svg"
-  status: ""
-  title: "analyze the data"
-
-- icon: "/assets/icon/icon-earthTrack.svg"
-  status: ""
-  title: "earthtrack.app"
-
-# - icon: "/assets/icon/icon-industry.svg"
-#   status: ""
-#   title: "organisation specific site"
-
-- icon: "/assets/icon/icon-pastandpresent.svg"
-  status: "disabled"
-  title: "past and present"
-
-- icon: "/assets/icon/icon-future.svg"
-  status: "disabled"
-  title: "future landscapes"
+- title: "Earthtrack App"
+  url: "/tools/earthtrack-app"
+  icon: "pin"

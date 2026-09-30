@@ -1,0 +1,181 @@
+/* ==========================================================================
+   MAP TOOL PAGES — new-style tab bar + light restyle of the sidebars
+   (Interactive Map, Earthtrack). Markup: _includes/tool-heading.liquid.
+   Sidebar markup and map scripts are left untouched — everything here is
+   scoped to .tool_container / .tool-tabs so no other page is affected.
+   ========================================================================== */
+
+/* --- Tab bar ------------------------------------------------------------ */
+
+.tool-tabs-inner {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.tool-tabs {
+  background: #fbf8f5;
+  border-bottom: 1px solid #dbe7ee;
+}
+
+.tool-tabs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tool-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px 15px;
+  border-bottom: 3px solid transparent;
+  color: #23567b;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tool-tab svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.tool-tab:hover {
+  color: #23567b;
+  background: #eef6fb;
+  text-decoration: none;
+}
+
+.tool-tab.is-active {
+  color: #23567b;
+  border-bottom-color: #4294c3;
+}
+
+/* --- Map + sidebar area ------------------------------------------------- */
+
+.tool_container {
+  background: #fbf8f5;
+}
+
+.tool_container .tool_side_bar {
+  background: #fff;
+  padding: 24px 20px;
+  border-right: 1px solid #dbe7ee;
+}
+
+/* Inter everywhere in the sidebar (keeps Font Awesome icons intact) */
+.tool_container .tool_side_bar,
+.tool_container .tool_side_bar *:not(.fa):not([class*="fa-"]) {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Section labels ("Select a year", "Select a base map", ...) */
+.tool_container .tool_side_bar .select-year-title,
+.tool_container .tool_side_bar .select-base-map,
+.tool_container .tool_side_bar .popup_select-country > span,
+.tool_container .tool_side_bar .separated-item span {
+  color: #23567b;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tool_container .tool_side_bar .option-year {
+  color: #6b7f8e;
+}
+
+/* Dropdowns */
+.tool_container .tool_side_bar select {
+  border: 1px solid #c6d9e5;
+  border-radius: 8px;
+  color: #23567b;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.tool_container .tool_side_bar select:focus {
+  outline: none;
+  border-color: #4294c3;
+  box-shadow: 0 0 0 3px rgba(66, 148, 195, 0.2);
+}
+
+/* Category buttons (Land cover, Habitats, ...) — shape only, colours stay
+   as the map scripts set them */
+.tool_container .tool_side_bar .tool-button-banner {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tool_container .tool_side_bar .tool-button-banner p {
+  font-weight: 700;
+}
+
+/* Earthtrack buttons: outline style in brand navy */
+.tool_container .tool_side_bar .tool-button-banner.earthtrack {
+  border: 1px solid #c6d9e5;
+  color: #23567b;
+  background: #fff;
+}
+
+.tool_container .tool_side_bar .tool-button-banner.earthtrack:hover {
+  border-color: #4294c3;
+  background: #eef6fb;
+}
+
+.tool_container .tool_side_bar .tool-button-banner.earthtrack.active {
+  background: #23567b;
+  border-color: #23567b;
+  color: #fff;
+}
+
+.tool_container .tool_side_bar .tool-button-banner.earthtrack.active p {
+  color: #fff;
+}
+
+/* Photo grid on the Earthtrack sidebar */
+.tool_container .tool_side_bar .separated-item-img img {
+  border-radius: 8px;
+}
+
+/* --- Laptop-width windows ----------------------------------------------- */
+/* The map scripts' styles stack the sidebar above the map below 1024px,
+   which catches most laptop browser windows. Keep them side by side down
+   to tablet width; below 861px the original stacked layout takes over. */
+
+@media (min-width: 861px) and (max-width: 1024px) {
+  .tool_container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .tool_container .commom-class-disabled.map-left {
+    width: 40%;
+  }
+
+  .tool_container .map-container {
+    width: 60%;
+  }
+}
+
+/* --- Mobile ------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .tool-tabs-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .tool-tab {
+    flex: 1 1 0;
+    justify-content: center;
+    padding: 14px 10px 11px;
+    font-size: 14px;
+  }
+
+  .tool_container .tool_side_bar {
+    border-right: none;
+    border-bottom: 1px solid #dbe7ee;
+  }
+}
