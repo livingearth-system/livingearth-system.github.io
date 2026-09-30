@@ -18,10 +18,6 @@ jump_nav:
     url: "#future-earth"
 
 explore_blocks:
-  - title: "Land Cover and Habitats"
-    icon: "map"
-    description: "First, map and describe land cover and habitat classes from Earth observations, providing further differentiation using contextual information."
-    url: "/themes/landhabcover/"
   - title: "Change, Impacts and Pressures"
     icon: "change"
     description: "Gather evidence for change impacts by comparing these maps and environmental descriptors used in their construction over time and then reference driving pressures."
