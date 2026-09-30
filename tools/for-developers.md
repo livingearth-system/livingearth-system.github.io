@@ -2,7 +2,7 @@
 layout: directory
 permalink: /knowledge-hub/for-developers/
 
-title: "For Developers"
+title: "Develop"
 eyebrow: "Knowledge Hub"
 subtitle: "Access, analyse, and work with Living Earth's underlying data — from raw satellite archives to analysis-ready products."
 image: "/assets/img/heading/tools-developers-leaves.jpg"
@@ -58,7 +58,7 @@ breadcrumb:
     url: "/"
   - label: "Knowledge Hub"
     url: "/knowledge-hub/"
-  - label: "For Developers"
+  - label: "Develop"
     url: "/knowledge-hub/for-developers/"
 ---
 

@@ -11,6 +11,6 @@ permalink: /developer-hub/
 <meta http-equiv="refresh" content="0; url={{ '/knowledge-hub/for-developers/#code' | relative_url }}">
 </head>
 <body>
-<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/knowledge-hub/for-developers/#code' | relative_url }}">For Developers</a>.</p>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/knowledge-hub/for-developers/#code' | relative_url }}">Develop</a>.</p>
 </body>
 </html>
