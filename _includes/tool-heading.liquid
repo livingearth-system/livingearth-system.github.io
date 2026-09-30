@@ -1,113 +1,62 @@
-<!-- TOOL-HEADING -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('.tool-button');
+wc -l _includes/tool-heading.liquid{%- comment -%}
+TOOL HEADING — breadcrumb + tab bar for the map tool pages
+(Interactive Map, Earthtrack). Used by _layouts/tool_page.html.
 
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        buttons.forEach(function (btn) {
-          btn.classList.remove('active');
-        });
-        button.classList.add('active');
+Tabs come from _data/tool-heading/index.yml (title, url, icon).
+Each tab is a plain link; the one matching the current page is
+highlighted. To add a tab back later, add an entry to that file —
+icon is "map" or "pin" (drawn inline below, no image files needed).
 
-        var oldImagePath = button.querySelector('.svg-icon').src;
+Breadcrumbs come from the page's own `breadcrumb:` front matter,
+same as directory pages.
+{%- endcomment -%}
 
-        var newImagePath = oldImagePath.replace(/\.svg$/, '-white-color.svg');
+{%- if page.breadcrumb -%}
+<nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <div class="container-fluid tool-tabs-inner">
+    {% for crumb in page.breadcrumb %}
+      {% unless forloop.first %}<span class="page-breadcrumb-sep">/</span>{% endunless %}
+      {% if forloop.last %}
+        <span class="page-breadcrumb-current">{{ crumb.label }}</span>
+      {% else %}
+        <a class="page-breadcrumb-link" href="{% if crumb.url contains 'http' %}{{ crumb.url }}{% else %}{{ crumb.url | relative_url }}{% endif %}">{{ crumb.label }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
+{%- endif -%}
 
-        var svgIcon = button.querySelector('.svg-icon');
-        if (svgIcon) {
-          svgIcon.src = newImagePath;
-        }
-      });
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function () {
-
-    var isCaseStudyPage = window.location.href.includes('/about/case-study/');
-    var isDataPage = window.location.href.includes('/data/');
-    var toolPageElement = document.querySelector('.toolpage');
-    var toolButtons = document.querySelectorAll('.tool-button');
-
-    if (isCaseStudyPage || isDataPage) {
-      toolPageElement.classList.add('toolpage-case-study');
-
-      toolButtons.forEach(function (button) {
-        button.classList.add('tool-button-case-study');
-      });
-    }
-  });
-
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('.tool-button');
-    arrayToolTabs = Object.values(buttons)
-    arrayToolTabs.forEach(tab => {
-      const conditionActivate = window.location.href.includes(tab.textContent.replace(/\s+/g, '-').replace(/\./g, '-').toLowerCase().replace(/^-+|-+$/g, ''))
-      if (conditionActivate) {
-        tab.classList.add('active')
-      }
-    })
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var index = Array.from(buttons).indexOf(button);
-
-        var paths = [
-          "/tools/interactive-map",
-          "/tools/get-the-data",
-          "/tools/analyze-the-data",
-          "/tools/earthtrack-app",
-          "/tools/past-and-present",
-          "/tools/future-landscapes"
-        ];
-
-        if (paths[index]) {
-          window.location.href = paths[index];
-        }
-      });
-    });
-
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('.tool-button');
-
-    buttons.forEach(function (button) {
-      var img = button.querySelector('.svg-icon');
-      var newImg = document.createElement('img');
-      newImg.classList.add('svg-icon2');
-      newImg.src = img.src.replace(/\.svg$/, '-white-color.svg');
-      button.insertBefore(newImg, img.nextSibling);
-
-      button.addEventListener('click', function () {
-        buttons.forEach(function (btn) {
-          btn.classList.remove('active');
-          btn.querySelector('.svg-icon').style.display = 'inline-block';
-          btn.querySelector('.svg-icon2').style.display = 'none';
-        });
-
-        button.classList.add('active');
-        img.style.display = 'none';
-        newImg.style.display = 'inline-block';
-      });
-    });
-  });
-
-</script>
-
-
-<section class="tools-section">
-  <div class="container-fluid">
-    <div class="toolpage">
+<section class="tool-tabs">
+  <div class="container-fluid tool-tabs-inner">
+    <nav class="tool-tabs-row" aria-label="Map tools">
       {% for item in site.data.tool-heading.index %}
-        <button class="tool-button{% if item.status == 'disabled' %} tool-button-disable{% endif %}" {% if item.status == 'disabled' %}disabled{% endif %}>
-          <img class="svg-icon" src="{% if item.icon contains 'http' %}{{ item.icon }}{% else %}{{ item.icon | relative_url }}{% endif %}">
-          <p>{{ item.title }}</p>
-        </button>
+        {% assign tab_url = item.url | relative_url %}
+        {% assign here = page.url | relative_url %}
+        <a class="tool-tab{% if here == tab_url %} is-active{% endif %}" href="{{ tab_url }}"{% if here == tab_url %} aria-current="page"{% endif %}>
+          {% if item.icon == "map" %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 4v14M15 6v14" stroke="currentColor" stroke-width="1.7"/></svg>
+          {% elsif item.icon == "pin" %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg>
+          {% endif %}
+          <span>{{ item.title }}</span>
+        </a>
       {% endfor %}
-    </div>
+    </nav>
   </div>
 </section>
-<!-- /TOOL-HEADING -->
+
+{%- comment -%}
+Sidebar button on the map pages ("Get the data"): send it to the
+For Developers data section. Done here rather than in the sidebar
+files so the Earthtrack / map sidebars themselves stay untouched.
+Runs before the sidebar's own click handler and stops it.
+{%- endcomment -%}
+<script>
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('#learningResourceButton');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    window.location.href = "{{ site.data['tool-analyze-the-data-map-sidebar'].index.learning_resources.data_url | relative_url }}";
+  }, true);
+</script>

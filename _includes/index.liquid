@@ -28,6 +28,31 @@
                     {% endif %}
                 </div>
             </div>
+
+            {%- comment -%}
+            "Where is Living Earth?" — shown inside the hero on large screens.
+            Same data as the strip below the hero (_data/countries.yml); the
+            strip only shows on smaller screens where the hero has no room.
+            {%- endcomment -%}
+            <div class="col-lg-4 d-none d-lg-flex hero-countries-col">
+                <div class="hero-countries">
+                    <h2 class="hero-countries-heading">Where is Living Earth?</h2>
+                    <div class="hero-countries-row">
+                        {% for c in site.data.countries %}
+                            <a class="hero-countries-item" href="{% if c.url contains 'http' %}{{ c.url }}{% else %}{{ c.url | relative_url }}{% endif %}">
+                                <span class="hero-countries-icon">
+                                    {% if c.image %}
+                                        <img src="{{ c.image | relative_url }}" alt="">
+                                    {% else %}
+                                        <span class="hero-countries-placeholder">{{ c.title | slice: 0, 1 }}</span>
+                                    {% endif %}
+                                </span>
+                                <span class="hero-countries-label">{{ c.title }}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
