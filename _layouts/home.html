@@ -12,7 +12,7 @@ home: true
 
     {%- include pipeline.liquid -%}
 
-    {%- include stats-band.liquid -%}
+    {%- if site.show_stats_band -%}{%- include stats-band.liquid -%}{%- endif -%}
 
     <div class="container mt-100 mb-100">
 

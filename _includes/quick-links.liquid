@@ -18,7 +18,7 @@ Icons are Heroicons (24x24 outline, MIT licensed), inlined directly —
 no image files needed, styled via currentColor.
 {%- endcomment -%}
 {% assign qlinks = page.quicklinks | default: site.data.quicklinks %}
-{%- if qlinks and page.noquicklinks != true -%}
+{%- if qlinks and page.noquicklinks != true and site.show_quick_links -%}
 <section class="quick-links">
   <div class="container">
     <div class="quick-links-row">

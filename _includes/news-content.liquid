@@ -1,5 +1,5 @@
 <div class="news-header-container">
-  <div class="news-header-search">
+  <div class="news-header-search"{% unless site.show_news_search %} style="display:none"{% endunless %}>
     <input
       class="search-box"
       type="text"
@@ -74,10 +74,15 @@
   <div class="mb-60">
     <div class="row mb-60">
       {% for infor in site.data['news-blog'].index %}
+        {%- comment -%} Items with `hidden: true` in _data/news-blog/index.yml are kept but not shown {%- endcomment -%}
+        {% if infor.hidden %}{% continue %}{% endif %}
+        {%- comment -%} Cards whose href is empty or '#' are shown without a link {%- endcomment -%}
+        {% assign has_link = false %}{% if infor.href and infor.href != '#' and infor.href != '' %}{% assign has_link = true %}{% endif %}
+        {% capture card_href %}{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}{% endcapture %}
         <div class="col-xl-4 col-md-6 blog_item">
           <div class="item mt-60" data-category="{{ infor['category'] }}">
             <div class="stay-up-card">
-              <a href="{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}"><img src="{% if infor.oldman-img contains 'http' %}{{ infor.oldman-img }}{% else %}{{ infor.oldman-img | relative_url }}{% endif %}" alt=""></a>
+              {% if has_link %}<a href="{{ card_href }}"{% if infor.href contains 'http' %} target="_blank" rel="noopener"{% endif %}>{% endif %}<img src="{% if infor.oldman-img contains 'http' %}{{ infor.oldman-img }}{% else %}{{ infor.oldman-img | relative_url }}{% endif %}" alt="">{% if has_link %}</a>{% endif %}
               <div>
                 {% for button in infor.button %}
                   <button class="{{ button.class }}" data-category="{{ infor['category'] }}">
@@ -86,7 +91,7 @@
                 {% endfor %}
               </div>
               <p class="title-img">
-                <a href="{% if infor.href contains 'http' %}{{ infor.href }}{% else %}{{ infor.href | relative_url }}{% endif %}">{{ infor.title }}</a>
+                {% if has_link %}<a href="{{ card_href }}"{% if infor.href contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ infor.title }}</a>{% else %}<span>{{ infor.title }}</span>{% endif %}
               </p>
               <span class="body-img">{{ infor.subtitle }}</span>
               <div class="line-card"></div>
@@ -275,7 +280,7 @@
         const searchFunction = (searchText) => {
             const blogs = document.querySelectorAll('.blog_item')
             blogs.forEach(blog => {
-              const title = blog.querySelector('.title-img>a')
+              const title = blog.querySelector('.title-img>a, .title-img>span')
               if(!title.textContent.toUpperCase().includes(searchText.toUpperCase())) {
                 blog.style.display = 'none'
               } else {

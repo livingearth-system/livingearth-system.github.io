@@ -4,12 +4,9 @@
 - title: About
   url: /about/
   icon: info
-- title: Tools
+- title: Knowledge Hub
   url: /tools/
   icon: tools
-- title: Contact
-  url: /contact/
-  icon: mail
 - title: Data
   url: /tools/for-developers/#download-data
   icon: database

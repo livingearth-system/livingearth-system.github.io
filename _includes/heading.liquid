@@ -74,7 +74,7 @@
     </div>
     <div class="country-subpage-welcome-living-button d-flex justify-content-xs-center justify-content-md-start mt-3">
       {%- if nobuttons != true -%}
-        {%- if button1 != 'none' -%}
+        {%- if button1 != 'none' and button1_url -%}
           <a
             href="{% if button1_url | default: "/contact/" contains 'http' %}{{ button1_url | default: "/contact/" }}{% else %}{{ button1_url | default: "/contact/" | relative_url }}{% endif %}"
             class="country-subpage-search"

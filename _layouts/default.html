@@ -11,9 +11,9 @@
         {{ content }}
     </main>
 
-    {%- unless page.nocontact -%}
+    {%- if site.show_contact_band and page.nocontact != true -%}
         {%- include get-in-touch.liquid -%}
-    {%- endunless -%}
+    {%- endif -%}
 
     {%- include footer.liquid -%}
 

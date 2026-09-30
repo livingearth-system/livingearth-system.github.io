@@ -7,10 +7,8 @@ nobuttons: true
 breadcrumb:
   - label: "Living Earth"
     url: "/"
-  - label: "Tools"
-    url: "/tools/"
-  - label: "Explore and Analyse"
-    url: "/tools/explore-and-analyse/"
+  - label: "Maps"
+    url: "/maps/"
   - label: "Interactive Map"
     url: "/tools/interactive-map"
 ---

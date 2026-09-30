@@ -15,6 +15,10 @@
       unit: "class"
       image: "/assets/img/wales/lifeform.jpg"
       description: "Vegetation life-form (growth form) classes are defined based on structural similarities of plants. Three main life-forms are encountered in nature: woody (trees and shrubs), herbaceous (grasses and forbs) and lichens/mosses."
+      links:
+        - label: "Global Mangrove Watch"
+          url: "https://www.globalmangrovewatch.org/"
+          newtab: true
     - title: "Leaf Type"
       unit: "class"
       image: "/assets/img/wales/big/leaf-type.jpg"
@@ -27,19 +31,30 @@
       unit: "Fraction or percentage"
       image: "/assets/img/wales/big/canopy-cover.jpg"
       description: "The percentage of the ground covered by a vertical projection of the outermost perimeter of the natural spread of plant foliage. Strongly influences water, energy and matter fluxes of land surfaces, particularly hydrological processes."
+      links:
+        - label: "Global Nature Watch map"
+          url: "https://globalnaturewatch.org/map/"
+          newtab: true
     - title: "Canopy Height"
       unit: "m"
       image: "/assets/img/wales/big/canopy-height.jpg"
       description: "The height of a vegetation layer measured from the ground to the average top of the dominant strata (trees, shrubs, forbs, grasses, mosses or lichens)."
+      links:
+        - label: "Global Forest Canopy Height 2019 (GLAD)"
+          url: "https://glad.earthengine.app/view/global-forest-canopy-height-2019"
+          newtab: true
+        - label: "Mapping global forest canopy height through integration of GEDI and Landsat data (Potapov et al. 2021)"
+          url: "https://doi.org/10.1016/j.rse.2020.112165"
+          newtab: true
+          type: publication
     - title: "Crop Type"
       unit: "class"
       image: "/assets/img/wales/big/crop-type.jpg"
       description: "The type of plants cultivated in the fields during the main growing season, for example maize, potatoes, wheat or strawberries."
       links:
-        - label: "National crop mapping using Sentinel-1 (Planque et al. 2021)"
-          url: "https://doi.org/10.3390/rs13050846"
+        - label: "ESA WorldCereal global maps"
+          url: "https://esa-worldcereal.org/en/products/global-maps"
           newtab: true
-          type: publication
     - title: "Plant Species"
       unit: "Presence/Absence or Probability"
       image: "/assets/img/wales/big/plant-species.jpg"

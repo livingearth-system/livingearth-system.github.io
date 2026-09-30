@@ -17,7 +17,8 @@
 
 .th-intents-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Two columns since Explore and Analyse moved out to Maps (30 Sep) */
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   align-items: start;
 }

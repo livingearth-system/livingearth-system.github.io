@@ -17,23 +17,24 @@ jump_nav:
     url: "#vision-mission"
   - label: "Meet the Team"
     url: "#meet-the-team"
-  - label: "Contributing Organisations"
+  - label: "Contributing Organisations: Past and Present"
     url: "#organisations"
 quicklinks:
   - title: Countries
     url: /#countries
     icon: globe
-  - title: Tools
+  - title: Knowledge Hub
     url: /tools/
     icon: tools
-  - title: Contact
-    url: /contact/
-    icon: mail
 team_blocks:
+  # Photos to come from Mona (and Suvarna via Richard) — add `image:` to each card.
   - title: "Richard Lucas"
     description: "Ser Cymru Chair, Aberystwyth University"
     image: "/assets/img/people/RLucas.png"
     url: "https://www.aber.ac.uk/en/dges/staff-profiles/listing/profile/rml2/"
+  - title: "Gregory Giuliani"
+    description: "Senior Lecturer, University of Geneva"
+    icon: person
   - title: "Carole Planque"
     description: "Research Scientist, University of Geneva"
     icon: person
@@ -44,6 +45,18 @@ team_blocks:
     description: "University of Newcastle, Australia"
     icon: person
   - title: "Sebastien Chognard"
+    description: "Researcher, University of Geneva"
+    icon: person
+  - title: "Heiko Balzter"
+    description: "Professor, University of Leicester"
+    icon: person
+  - title: "Pablo Timoner"
+    description: "Researcher, University of Geneva"
+    icon: person
+  - title: "Charlotte Poussin"
+    description: "Researcher, University of Geneva"
+    icon: person
+  - title: "Florian Franziskakis"
     description: "Researcher, University of Geneva"
     icon: person
 
@@ -61,7 +74,7 @@ org_blocks:
     logo: "/assets/img/logos/PML.png"
     url: "https://www.pml.ac.uk/"
   - title: "University of Newcastle, Australia"
-    description: "School of Environment and Life Sciences"
+    description: "School of Environmental and Life Sciences"
     logo: "/assets/img/logos/University of Newcastle Aus.png"
     url: "https://www.newcastle.edu.au/school/environmental-and-life-sciences"
   - title: "CSIRO, Australia"
@@ -105,23 +118,27 @@ org_blocks:
 <section id="vision-mission" class="about-vision">
   <div class="container">
     <h2 class="about-section-heading">Vision &amp; Mission</h2>
+    {%- comment -%} Intro text hidden for now (Richard, 30 Sep) — delete this comment wrapper to bring it back.
     <p class="about-intro">Our approach to consistent mapping land cover from Earth observations was conceptualised through collaborations between Australia and Europe (including the United Kingdom) and national application was first demonstrated for Wales (UK) and Australia. Time-series comparisons of the land cover maps and the environmental descriptors from which they were constructed led to the subsequent development of evidence-based detection and monitoring of change impacts and driving pressures.</p>
+    {%- endcomment -%}
 
+    {%- if site.show_stats_band -%}
     <div class="about-stats-band">
       <div class="about-stat"><span class="about-stat-number">4</span><span class="about-stat-label">Countries</span></div>
       <div class="about-stat"><span class="about-stat-number">1988–2024</span><span class="about-stat-label">Annual and sub-annual mapping</span></div>
       <div class="about-stat"><span class="about-stat-number">3</span><span class="about-stat-label">Satellites</span></div>
       <div class="about-stat"><span class="about-stat-number">7,688,287</span><span class="about-stat-label">Square kilometres mapped</span></div>
     </div>
+    {%- endif -%}
 
     <div class="about-vision-grid">
       <div class="about-vision-card">
-        <h3 class="about-vision-card-heading">Mission statement</h3>
-        <p class="about-vision-card-text">Our mission is to provide the platform for landscape-scale environmental variable analysis, through time, to everyone for free. We take satellite data and process them to provide both analysis-ready data for developers and algorithm-based habitat dynamics map products. We are engineering a solution to visualising large-scale environmental changes, impacts and pressures to save our planet.</p>
-      </div>
-      <div class="about-vision-card">
         <h3 class="about-vision-card-heading">Vision</h3>
         <p class="about-vision-card-text">We aspire to provide high-level, complex environmental dynamics datasets in an easy to use and understand format to everyone. To inspire, support and improve the way we plan landscape-scale change for biodiversity and resilience.</p>
+      </div>
+      <div class="about-vision-card">
+        <h3 class="about-vision-card-heading">Mission</h3>
+        <p class="about-vision-card-text">Our mission is to provide the platform for landscape-scale environmental variable analysis, through time, to everyone for free. We take satellite data and process them to provide both analysis-ready data for developers and algorithm-based habitat dynamics map products. We are engineering a solution to visualising large-scale environmental changes, impacts and pressures to save our planet.</p>
       </div>
       <div class="about-vision-card">
         <h3 class="about-vision-card-heading">Aims</h3>
@@ -137,4 +154,4 @@ org_blocks:
 
 {% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" %}
 
-{% include info-blocks.liquid list=page.org_blocks heading="Contributing Organisations" id="organisations" variant="horizontal" %}
+{% include info-blocks.liquid list=page.org_blocks heading="Contributing Organisations: Past and Present" id="organisations" variant="horizontal" %}

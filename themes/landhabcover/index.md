@@ -1,4 +1,6 @@
 ---
+# Turned off 30 Sep (Richard's amendments list). Delete the next line to bring the page back.
+published: false
 layout: directory
 permalink: /themes/landhabcover/
 

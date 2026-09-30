@@ -77,7 +77,7 @@ newtab, url2_newtab, hide_countries, sub_items per stage).
   <div class="pipeline-panel-countries">
     <span class="pipeline-panel-countries-label">See country specifics:</span>
 {% if stage.url or stage.url2 %}
-<a class="pipeline-panel-country pipeline-panel-country-global" href="{% if stage.url | default: stage.url2 contains 'http' %}{{ stage.url | default: stage.url2 }}{% else %}{{ stage.url | default: stage.url2 | relative_url }}{% endif %}">
+<a class="pipeline-panel-country pipeline-panel-country-global" href="{% if stage.url | default: stage.url2 contains 'http' %}{{ stage.url | default: stage.url2 }}{% else %}{{ stage.url | default: stage.url2 | relative_url }}{% endif %}"{% if stage.newtab %} target="_blank" rel="noopener"{% endif %}>
   <img src="{{ '/assets/img/countries/global.png' | relative_url }}" alt="Global" class="pipeline-panel-country-img">
   <span class="pipeline-panel-country-label">Global</span>
 </a>

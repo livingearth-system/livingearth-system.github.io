@@ -1,18 +1,15 @@
 ---
 layout: directory
-permalink: /tools/explore-and-analyse/
+permalink: /maps/
 
-title: "Explore and Analyse"
-eyebrow: "Tools"
+title: "Maps"
 subtitle: "See Living Earth's maps and data in action — explore the interactive map, or collect and validate your own observations with the Earthtrack app."
 image: "/assets/img/heading/tools-explore-glacier.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"
-  - label: "Tools"
-    url: "/tools/"
-  - label: "Explore and Analyse"
-    url: "/tools/explore-and-analyse/"
+  - label: "Maps"
+    url: "/maps/"
 ---
 
 <div class="container">

@@ -6,7 +6,7 @@ permalink: /publications/
 
 title: "Publications"
 eyebrow: "About"
-subtitle: "Living Earth is a science-based initiative and every effort is made to publish our approaches and outcomes in peer-reviewed journals and books. Articles may be globally-relevant or specific to countries or regions, and include those relating to methods/algorithms, land cover, habitat and change frameworks and map products."
+subtitle: "Living Earth is a science-based initiative and every effort is made to publish our approaches and outcomes in peer-reviewed journals and books. Articles may be globally-relevant or specific to countries or regions, and include those relating to methods/algorithms, land cover, habitat and change frameworks, futures, validation and map products."
 nocontact: false
 breadcrumb:
   - label: "Living Earth"
