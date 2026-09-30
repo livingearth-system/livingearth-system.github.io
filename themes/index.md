@@ -29,22 +29,29 @@ explore_blocks:
 
 
 futures_blocks:
+  # Images match the Future Landscapes stage of the homepage pipeline
   - title: "Imagining"
+    image: "/assets/img/Future2.jpg"
     icon: "globe"
     description: "Future landscapes and revisiting visions as needed."
   - title: "Informing"
+    image: "/assets/img/Future5.jpg"
     icon: "book"
     description: "Decisions by providing capacity to value landscapes (e.g., in terms of carbon, biodiversity, coastal protection, water quality)."
   - title: "Assessing Risk"
+    image: "/assets/img/Future6.jpg"
     icon: "change"
     description: "Including from economic variations (including shocks) and climate change."
   - title: "Exploring"
+    image: "/assets/img/Future3.jpg"
     icon: "map"
     description: "The realism of proposed landscapes under different scenarios of change (e.g., through reference to past EO-derived knowledge and model scenarios to test proposed management interventions)."
   - title: "Harmonising"
+    image: "/assets/img/Future1.jpg"
     icon: "person"
     description: "Viewpoints through co-design and by resolving conflicts."
   - title: "Monitoring"
+    image: "/assets/img/Future4.jpg"
     icon: "change"
     description: "Progress towards ambitions."
 
@@ -83,4 +90,4 @@ water_blocks:
   </div>
 </div>
 
-{% include info-blocks.liquid list=page.futures_blocks heading="Future Earth" id="future-earth" variant="horizontal" %}
+{% include info-blocks.liquid list=page.futures_blocks heading="Future Earth" id="future-earth" %}
