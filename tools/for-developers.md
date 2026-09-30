@@ -3,7 +3,7 @@ layout: directory
 permalink: /tools/for-developers/
 
 title: "For Developers"
-eyebrow: "Tools"
+eyebrow: "Knowledge Hub"
 subtitle: "Access, analyse, and work with Living Earth's underlying data — from raw satellite archives to analysis-ready products."
 image: "/assets/img/heading/tools-developers-leaves.jpg"
 nocontact: false
@@ -42,8 +42,13 @@ code_blocks:
   - title: "Jupyter Notebooks"
     logo: "/assets/img/hubs/developer-hub/jupyter.png"
     description: "Standardised notebooks for exploring and analysing satellite data in your personalised country workspace — use as-is or modify and share."
-    url: "https://knowledge.dea.ga.gov.au/"
-    newtab: true
+    links:
+      - label: "Example: DEA Land Cover"
+        url: "https://knowledge.dea.ga.gov.au/notebooks/DEA_products/DEA_Land_Cover/"
+        newtab: true
+      - label: "All DEA notebooks"
+        url: "https://knowledge.dea.ga.gov.au/"
+        newtab: true
   - title: "Classification Schemes"
     icon: "book"
     description: "Background on the land cover, habitat and change taxonomies that this code implements."
@@ -51,7 +56,7 @@ code_blocks:
 breadcrumb:
   - label: "Living Earth"
     url: "/"
-  - label: "Tools"
+  - label: "Knowledge Hub"
     url: "/tools/"
   - label: "For Developers"
     url: "/tools/for-developers/"

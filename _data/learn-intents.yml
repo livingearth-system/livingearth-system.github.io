@@ -12,3 +12,13 @@
   description: "Classification code, notebooks and repositories for working with Living Earth data."
   icon: "academic-cap"
   url: "/tools/for-developers/#code"
+
+- title: "Publications"
+  description: "Papers and book chapters describing the Living Earth approach and its applications."
+  icon: "book"
+  url: "#publications"
+
+- title: "Example Notebooks"
+  description: "Worked Jupyter notebook examples, starting with Digital Earth Australia's land cover."
+  icon: "academic-cap"
+  url: "#example-notebooks"

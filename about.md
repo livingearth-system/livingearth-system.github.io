@@ -23,7 +23,7 @@ quicklinks:
   - title: Countries
     url: /#countries
     icon: globe
-  - title: Tools
+  - title: Knowledge Hub
     url: /tools/
     icon: tools
   - title: Contact
