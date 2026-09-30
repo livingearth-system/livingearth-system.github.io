@@ -281,3 +281,8 @@ a.info-blocks-card-horizontal {
 .info-blocks-h-link:hover {
   text-decoration: underline;
 }
+/* Team cards without photos (photos="off" on the include) — name + role only */
+.info-blocks-nophotos .info-blocks-team-caption {
+  border-radius: 10px;
+  height: 100%;
+}

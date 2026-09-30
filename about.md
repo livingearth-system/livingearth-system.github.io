@@ -152,6 +152,6 @@ org_blocks:
   </div>
 </section>
 
-{% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" %}
+{% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" photos="off" %}
 
 {% include info-blocks.liquid list=page.org_blocks heading="Contributing Organisations: Past and Present" id="organisations" variant="horizontal" %}
