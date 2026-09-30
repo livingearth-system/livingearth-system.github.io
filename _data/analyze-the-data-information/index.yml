@@ -11,9 +11,9 @@ choose: Earth
 learning_resources:
   button_text1: Get the data
   button_text2: Sign in with GitHub
-  button_url: /tools/learn/
+  button_url: /knowledge-hub/learn/
   # Where the sidebar button goes on the map pages (set in _includes/tool-heading.liquid)
-  data_url: /tools/for-developers/#download-data
+  data_url: /knowledge-hub/for-developers/#download-data
 
 sponsor_logos:
   - name: aberystwyth_university

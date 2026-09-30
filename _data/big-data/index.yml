@@ -30,7 +30,7 @@
   subtitle: "The Welsh Data Cube houses a growing archive of Sentinel-1 radar and Sentinel-2 optical data as well as the products derived from these."
   image: "/assets/img/big_data/welshdatacube.png"
   button: "Learn More"
-  url: "/tools/for-developers/#wales"
+  url: "/knowledge-hub/for-developers/#wales"
 
 - title: "Swiss Data Cube"
   subtitle: "The Swiss Data Cube is a cloud-computing platform providing satellite data processed to an Analysis Ready Data (ARD) format and covering the geographical extent of Switzerland."

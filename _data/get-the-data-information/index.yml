@@ -15,12 +15,12 @@ available-link-data:
         access_link: ""
 
   - title: "How can I download satellite data in an analysis ready data (ARD) format?"
-    description: "Direct links to the ARD for each country or region are listed under <a href=\"/tools/for-developers/#browse-by-country\">Browse by Country</a> above."
+    description: "Direct links to the ARD for each country or region are listed under <a href=\"/knowledge-hub/for-developers/#browse-by-country\">Browse by Country</a> above."
   - title: "How can I download the Living Earth products, such as land cover, habitat and change maps and the environmental descriptors?"
     description: "The products generated through Living Earth can be downloaded directly from the <a href=\"/tools/interactive-map\">interactive map</a>."
 
   - title: "Can I access the data through your country's data cube?"
-    description: "If you do not want to download the data but instead use within the Open Data Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be uploaded and integrated into your workflows. Login links for each country are listed under <a href=\"/tools/for-developers/#browse-by-country\">Browse by Country</a> above."
+    description: "If you do not want to download the data but instead use within the Open Data Cube for your country or region to access the ARD and derived products. You will need to request a login on each occasion. All data and derived products can be downloaded whilst your own datasets can be uploaded and integrated into your workflows. Login links for each country are listed under <a href=\"/knowledge-hub/for-developers/#browse-by-country\">Browse by Country</a> above."
   - title: "How do I get access to the ground observation records submitted to Earthtrack?"
     description: "Earthtrack data are available for viewing on the Earthtrack mobile application immediately following submission.
 

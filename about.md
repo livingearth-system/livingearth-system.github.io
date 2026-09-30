@@ -24,7 +24,7 @@ quicklinks:
     url: /#countries
     icon: globe
   - title: Knowledge Hub
-    url: /tools/
+    url: /knowledge-hub/
     icon: tools
 team_blocks:
   # Photos to come from Mona (and Suvarna via Richard) — add `image:` to each card.

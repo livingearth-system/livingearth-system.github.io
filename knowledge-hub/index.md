@@ -1,4 +1,7 @@
 ---
+# Old Knowledge Hub page, replaced by the new one (tools/tools.md) on 30 Sep.
+# Delete the next line to bring it back (and change its permalink first).
+published: false
 layout: page
 
 permalink: /knowledge-hub/

@@ -1,6 +1,6 @@
 ---
 layout: directory
-permalink: /tools/for-developers/
+permalink: /knowledge-hub/for-developers/
 
 title: "For Developers"
 eyebrow: "Knowledge Hub"
@@ -52,14 +52,14 @@ code_blocks:
   - title: "Classification Schemes"
     icon: "book"
     description: "Background on the land cover, habitat and change taxonomies that this code implements."
-    url: "/tools/learn/#taxonomies"
+    url: "/knowledge-hub/learn/#taxonomies"
 breadcrumb:
   - label: "Living Earth"
     url: "/"
   - label: "Knowledge Hub"
-    url: "/tools/"
+    url: "/knowledge-hub/"
   - label: "For Developers"
-    url: "/tools/for-developers/"
+    url: "/knowledge-hub/for-developers/"
 ---
 
 {%- include for-developers-intents.liquid -%}

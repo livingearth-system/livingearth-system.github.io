@@ -1,6 +1,6 @@
 ---
 layout: directory
-permalink: /tools/learn/
+permalink: /knowledge-hub/learn/
 
 title: "Learn"
 eyebrow: "Knowledge Hub"
@@ -10,9 +10,9 @@ breadcrumb:
   - label: "Living Earth"
     url: "/"
   - label: "Knowledge Hub"
-    url: "/tools/"
+    url: "/knowledge-hub/"
   - label: "Learn"
-    url: "/tools/learn/"
+    url: "/knowledge-hub/learn/"
 taxonomies_blocks:
   - title: "Land Cover"
     icon: "map"
