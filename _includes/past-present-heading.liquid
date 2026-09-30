@@ -72,7 +72,7 @@
       </div>
       <div class="country-subpage-welcome-living-button d-flex justify-content-xs-center justify-content-md-start mt-3">
         {%- if nobuttons != true -%}
-          {%- if button1 != 'none' -%}
+          {%- if button1 != 'none' and button1_url -%}
             <button
               type="button"
               onclick="location.href='{{ button1_url | default: "/contact/" }}'"

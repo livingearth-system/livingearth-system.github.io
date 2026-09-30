@@ -5,6 +5,13 @@ author:
 description:
 show_excerpts: false
 
+# Site-wide on/off switches (30 Sep, Richard's amendments list).
+# Set any of these to true to bring the section back. Needs a Jekyll restart.
+show_quick_links: false    # icon link bar (Countries / About / ...) on home + directory pages
+show_stats_band: false     # "4 Countries / 1988–2024 / ..." band on home + About
+show_contact_band: false   # blue "Get in Touch" band above the footer
+show_news_search: false    # keyword search + A-Z button on News and Events
+
 # Date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:

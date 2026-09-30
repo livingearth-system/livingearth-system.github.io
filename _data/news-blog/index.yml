@@ -70,6 +70,7 @@
   title: Supporting ESA's CCI Biomass Project
   
 - category: "case-study"
+  hidden: true   # hidden for now (Richard, 30 Sep) — delete this line to show again
   button:
     - class: button-2
       id: button2
@@ -84,6 +85,7 @@
   title: Living Coasts
   
 - category: "case-study"
+  hidden: true   # hidden for now (Richard, 30 Sep) — delete this line to show again
   button:
     - class: button-2
       id: button2
@@ -216,7 +218,7 @@
       id: button8
       name: Themes
   date: Sep 11, 2022
-  href: '#'
+  href: '/themes/'
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png

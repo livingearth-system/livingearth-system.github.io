@@ -28,9 +28,6 @@ quicklinks:
   - title: "Case Study"
     url: /case-study/
     icon: casestudy.png
-  - title: "Contact Us"
-    url: /contact/
-    icon: contact.png
   - title: "News and Events"
     url: /news/
     icon: news.png

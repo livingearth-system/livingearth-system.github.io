@@ -1,5 +1,5 @@
 <div class="news-header-container">
-  <div class="news-header-search">
+  <div class="news-header-search"{% unless site.show_news_search %} style="display:none"{% endunless %}>
     <input
       class="search-box"
       type="text"
@@ -74,6 +74,8 @@
   <div class="mb-60">
     <div class="row mb-60">
       {% for infor in site.data['news-blog'].index %}
+        {%- comment -%} Items with `hidden: true` in _data/news-blog/index.yml are kept but not shown {%- endcomment -%}
+        {% if infor.hidden %}{% continue %}{% endif %}
         <div class="col-xl-4 col-md-6 blog_item">
           <div class="item mt-60" data-category="{{ infor['category'] }}">
             <div class="stay-up-card">

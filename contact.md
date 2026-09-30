@@ -1,4 +1,7 @@
 ---
+# Turned off 30 Sep (contact form not working, contact person to confirm).
+# Delete the next line to bring the page back.
+published: false
 layout: directory
 permalink: /contact/
 

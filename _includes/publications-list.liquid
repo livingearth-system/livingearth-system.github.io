@@ -11,7 +11,11 @@ Usage: {% include publications-list.liquid %}
 {%- endcomment -%}
 
 {% assign pubs = site.data.publications | sort: 'date' | reverse %}
-{% assign countries = pubs | map: 'country' | uniq | sort %}
+{% assign all_countries = pubs | map: 'country' | uniq | sort %}
+{%- comment -%} Order: Global first, then the rest alphabetically (Richard, 30 Sep) {%- endcomment -%}
+{% assign countries = "" | split: "" %}
+{% if all_countries contains "Global" %}{% assign countries = countries | push: "Global" %}{% endif %}
+{% for c in all_countries %}{% if c != "Global" %}{% assign countries = countries | push: c %}{% endif %}{% endfor %}
 
 <div class="pub-filters">
   <div class="pub-filter-group">
@@ -38,7 +42,8 @@ Usage: {% include publications-list.liquid %}
 <div class="pub-empty" hidden>No publications match this filter.</div>
 
 <div class="pub-grid">
-  {% for pub in pubs %}
+  {% for group in countries %}
+  {% for pub in pubs %}{% if pub.country == group %}
   <div class="pub-card" data-country="{{ pub.country }}">
     <span class="pub-card-badge">{{ pub.country }}</span>
     {% if pub.link and pub.link != "" %}
@@ -49,6 +54,7 @@ Usage: {% include publications-list.liquid %}
     <div class="pub-card-authors">{{ pub.authors }}</div>
     <div class="pub-card-date">{{ pub.date }}</div>
   </div>
+  {% endif %}{% endfor %}
   {% endfor %}
 </div>
 

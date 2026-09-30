@@ -3,6 +3,27 @@
   detail: "Acquisition and processing to an analysis-ready format."
   url: "https://www.ga.gov.au/scientific-topics/dea/dea-data-and-products/dea-surface-reflectance"
   newtab: true
+  sub_items:
+    - title: "Landsat"
+      subtitle: "NASA / USGS optical archive, 1972 onwards"
+      url: "https://science.nasa.gov/mission/landsat/"
+      newtab: true
+    - title: "Sentinel-1"
+      subtitle: "ESA Copernicus radar"
+      url: "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1"
+      newtab: true
+    - title: "Sentinel-2"
+      subtitle: "ESA Copernicus optical"
+      url: "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2"
+      newtab: true
+    - title: "Planet"
+      subtitle: "Commercial high-resolution daily imagery"
+      url: "https://www.planet.com/"
+      newtab: true
+    - title: "NISAR"
+      subtitle: "NASA–ISRO radar mission"
+      url: "https://science.nasa.gov/mission/nisar/"
+      newtab: true
 
 - icon: ic-leaf
   label: "Environmental Descriptors"
@@ -13,9 +34,6 @@
 - icon: ic-map
   label: "Classification of Land Cover & Habitats"
   detail: "Historical and near real-time classification of the landscape."
-  url: /themes/landhabcover/
-  url2: "/tools/interactive-map"
-  url2_label: "Explore the Interactive Map"
   hide_countries: true
 
 - icon: ic-change
