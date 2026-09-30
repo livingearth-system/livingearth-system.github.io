@@ -19,6 +19,9 @@
         - label: "Global Mangrove Watch"
           url: "https://www.globalmangrovewatch.org/"
           newtab: true
+        - label: "GEM-Forest: global map of forests and tree crops, 2020 (Paluba et al. 2026)"
+          url: "https://zenodo.org/records/18921586"
+          newtab: true
     - title: "Leaf Type"
       unit: "class"
       image: "/assets/img/wales/big/leaf-type.jpg"

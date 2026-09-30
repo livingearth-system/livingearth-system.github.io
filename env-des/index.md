@@ -14,7 +14,7 @@ breadcrumb:
 ---
 
 <section>
-  <h2 class="fd-section-heading">Browse by Category</h2>
+  <h2 class="fd-section-heading">Browse Definitions and Global Datasets</h2>
   {%- include env-des-accordion.liquid -%}
 </section>
 
