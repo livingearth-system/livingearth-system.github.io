@@ -27,10 +27,14 @@ quicklinks:
     url: /tools/
     icon: tools
 team_blocks:
+  # Photos to come from Mona (and Suvarna via Richard) — add `image:` to each card.
   - title: "Richard Lucas"
     description: "Ser Cymru Chair, Aberystwyth University"
     image: "/assets/img/people/RLucas.png"
     url: "https://www.aber.ac.uk/en/dges/staff-profiles/listing/profile/rml2/"
+  - title: "Gregory Giuliani"
+    description: "Senior Lecturer, University of Geneva"
+    icon: person
   - title: "Carole Planque"
     description: "Research Scientist, University of Geneva"
     icon: person
@@ -41,6 +45,18 @@ team_blocks:
     description: "University of Newcastle, Australia"
     icon: person
   - title: "Sebastien Chognard"
+    description: "Researcher, University of Geneva"
+    icon: person
+  - title: "Heiko Balzter"
+    description: "Professor, University of Leicester"
+    icon: person
+  - title: "Pablo Timoner"
+    description: "Researcher, University of Geneva"
+    icon: person
+  - title: "Charlotte Poussin"
+    description: "Researcher, University of Geneva"
+    icon: person
+  - title: "Florian Franziskakis"
     description: "Researcher, University of Geneva"
     icon: person
 
