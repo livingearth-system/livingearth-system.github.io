@@ -147,6 +147,9 @@
           url: "https://doi.org/10.1016/j.srs.2023.100078"
           newtab: true
           type: publication
+        - label: "Copernicus Snow Cover Extent (global)"
+          url: "https://land.copernicus.eu/en/products/snow?tab=snow_cover_extent"
+          newtab: true
     - title: "Snow Water Equivalent"
       unit: "mm"
       image: "/assets/img/wales/big/snow-water-equivalent.jpg"
