@@ -6,7 +6,7 @@
 - title: "Environmental Descriptors"
   subtitle: "Obtaining from existing sources or algorithms for retrieving or classifying from Earth observation data"
   image: "/assets/img/past-present/environmental-descriptors.jpg"
-  url: \"/data/env-des/\"
+  url: "/data/env-des/"
 
 - title: "Mapping"
   subtitle: "Combining the environmental descriptors to generate maps of land cover"
