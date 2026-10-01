@@ -43,7 +43,7 @@ Usage: {% include welsh-states.liquid %}
             <div class="env-des-descriptor-grid env-des-descriptor-grid-3">
               {% for s in h.states %}
               <div class="env-des-descriptor-card">
-                <img src="{{ s.image | relative_url }}" alt="{{ s.title }}" class="env-des-descriptor-image" loading="lazy">
+                {% if s.image %}<img src="{{ s.image | relative_url }}" alt="{{ s.title }}" class="env-des-descriptor-image" loading="lazy">{% endif %}
                 <div class="env-des-descriptor-title">{{ s.title }}</div>
                 {% if s.tag %}<div class="welsh-state-tag-row"><span class="welsh-state-tag{% if s.tag contains 'Modified' %} is-modified{% endif %}">{{ s.tag }}</span></div>{% endif %}
                 <div class="env-des-descriptor-description">{{ s.text | newline_to_br }}</div>

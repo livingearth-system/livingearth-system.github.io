@@ -1,6 +1,6 @@
 ---
-no_hero_art: true
 layout: directory
+image: "/assets/img/heading/dea_landcover_murray_hres.png"
 # Richard to commit
 permalink: /publications/
 

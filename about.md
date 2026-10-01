@@ -15,8 +15,6 @@ breadcrumb:
 jump_nav:
   - label: "Vision & Mission"
     url: "#vision-mission"
-  - label: "Meet the Team"
-    url: "#meet-the-team"
   - label: "Contributing Organisations: Past and Present"
     url: "#organisations"
 quicklinks:
@@ -152,6 +150,6 @@ org_blocks:
   </div>
 </section>
 
-{% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" photos="off" %}
+{% if page.show_team %}{% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" photos="off" %}{% endif %}
 
 {% include info-blocks.liquid list=page.org_blocks heading="Contributing Organisations: Past and Present" id="organisations" variant="horizontal" %}
