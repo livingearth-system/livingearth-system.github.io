@@ -5,6 +5,9 @@
   .news-blog .stay-up-card .line-card { margin-top: auto; }
   .news-blog .stay-up-card:hover { transform: scale(1.03); box-shadow: 0 12px 28px rgba(35, 86, 123, 0.18); z-index: 2; }
   .news-blog .stay-up-card img, .news-blog .stay-up-card:hover img { transform: none !important; }
+  .news-blog .stay-up-card .card-links { display: flex; flex-direction: column; gap: 6px; margin: 4px 0 20px; padding: 0 40px; }
+  .news-blog .stay-up-card .card-links a { display: inline-flex; align-items: center; gap: 8px; margin: 0 !important; padding: 0 !important; font-size: 15px !important; line-height: 1.4 !important; font-weight: 600; color: #23567b; text-decoration: none; }
+  .news-blog .stay-up-card .card-links a:hover { text-decoration: underline; }
 </style>
 
 <div class="news-header-container">
@@ -103,6 +106,7 @@
                 {% if has_link %}<a href="{{ card_href }}"{% if infor.href contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ infor.title }}</a>{% else %}<span>{{ infor.title }}</span>{% endif %}
               </p>
               <span class="body-img">{{ infor.subtitle }}</span>
+              {% if infor.links %}<div class="card-links">{% for l in infor.links %}<a href="{{ l.url }}" target="_blank" rel="noopener"><span aria-hidden="true">&rarr;</span> {{ l.name }}</a>{% endfor %}</div>{% endif %}
               <div class="line-card"></div>
               <div class="date-card">
                 <span>{{ infor.date }}</span>

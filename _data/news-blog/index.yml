@@ -286,7 +286,14 @@
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
   subtitle: >
-    Prof. Richard Lucas presented Living Wales at Protecting Our Planet Day 2025 (POP25), hosted by the Centre for Alternative Technology and live-streamed to schools across the UK. <a href="https://cat.org.uk/posts/protecting-our-planet-day-2025-inspiring-the-next-generation-at-cat/" target="_blank" rel="noopener">Read the CAT write-up</a> · <a href="https://www.stem.org.uk/enrichment/protecting-our-planet/pop-sessions/protecting-our-forests-25" target="_blank" rel="noopener">Protecting our Forests session</a> · <a href="https://www.youtube.com/watch?v=c73Vi2SK7aI&amp;list=PLhgK74tFscGVvXs1-pHqaPf4IrV7_fvA0&amp;index=12" target="_blank" rel="noopener">Watch on YouTube</a>
+    Prof. Richard Lucas presented Living Wales at Protecting Our Planet Day 2025 (POP25), hosted by the Centre for Alternative Technology and live-streamed to schools across the UK.
+  links:
+    - name: "CAT: Protecting Our Planet Day 2025"
+      url: "https://cat.org.uk/posts/protecting-our-planet-day-2025-inspiring-the-next-generation-at-cat/"
+    - name: "STEM Learning: Protecting our Forests"
+      url: "https://www.stem.org.uk/enrichment/protecting-our-planet/pop-sessions/protecting-our-forests-25"
+    - name: "Watch on YouTube"
+      url: "https://www.youtube.com/watch?v=c73Vi2SK7aI&list=PLhgK74tFscGVvXs1-pHqaPf4IrV7_fvA0&index=12"
   title: Living Earth and Protecting Our Planet 2025
   
 - category: "news"
