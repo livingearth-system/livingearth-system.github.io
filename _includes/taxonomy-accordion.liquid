@@ -1,0 +1,48 @@
+{%- comment -%}
+TAXONOMY ACCORDION — Learn page. Same look and behaviour as the
+Environmental Descriptors drop-downs (_includes/env-des-accordion.liquid):
+click a taxonomy to open it, one open at a time.
+
+Data: page.taxonomies_blocks in tools/Learn/index.md. Each item takes
+title, description, and optionally image (small round icon), url +
+link_label (one button), or links (a list of { label, url }).
+{%- endcomment -%}
+<div class="env-des-accordion taxonomy-accordion">
+{% for t in page.taxonomies_blocks %}
+{% assign tid = t.title | slugify %}
+<div class="env-des-accordion-item taxonomy-accordion-item" data-cat="taxonomy-{{ tid }}">
+<button type="button" class="env-des-accordion-header">
+{% if t.image %}<img src="{{ t.image | relative_url }}" alt="" class="env-des-accordion-icon">{% endif %}
+<span class="env-des-accordion-title">{{ t.title }}</span>
+<svg class="env-des-accordion-chevron" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"/></svg>
+</button>
+<div class="env-des-accordion-panel" id="taxonomy-{{ tid }}">
+<div class="env-des-accordion-panel-inner taxonomy-accordion-body">
+<p class="taxonomy-accordion-text">{{ t.description }}</p>
+<div class="taxonomy-accordion-links">
+{% if t.links %}
+{% for link in t.links %}
+<a class="taxonomy-accordion-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.label }} &rarr;</a>
+{% endfor %}
+{% elsif t.url %}
+<a class="taxonomy-accordion-link" href="{% if t.url contains 'http' %}{{ t.url }}{% else %}{{ t.url | relative_url }}{% endif %}">{{ t.link_label | default: "Find out more" }} &rarr;</a>
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('.taxonomy-accordion-item');
+  items.forEach(function (item) {
+    item.querySelector('.env-des-accordion-header').addEventListener('click', function () {
+      var wasOpen = item.classList.contains('open');
+      items.forEach(function (i) { i.classList.remove('open'); });
+      if (!wasOpen) { item.classList.add('open'); }
+    });
+  });
+})();
+</script>

@@ -15,25 +15,25 @@ breadcrumb:
     url: "/knowledge-hub/learn/"
 taxonomies_blocks:
   - title: "Land Cover"
+    image: "/assets/img/themes/landhabcover/dealandcover.png"
+    link_label: "FAO Land Cover Classification System"
     icon: "map"
     description: "FAO's Land Cover Classification System (LCCS v2) — a consistent framework for classifying land cover from local to global scales, with over 12,000 possible classes."
     url: "https://www.fao.org/3/y7220e/y7220e05.htm"
     newtab: true
   - title: "Habitats"
+    image: "/assets/img/themes/landhabcover/livingwaleshabitatmap.png"
+    link_label: "JNCC habitat classification"
     icon: "leaf"
     description: "Country- and region-specific habitat classification, built on FAO LCCS land cover classes combined with local ecological context. Currently generated for Wales."
     url: "https://jncc.gov.uk/resources/9578d07b-e018-4c66-9c1b-47110f14df2a"
     newtab: true
   - title: "Change"
+    image: "/assets/img/themes/change/impacts.png"
+    link_label: "Change, Impacts and Pressures"
     icon: "change"
     description: "A global taxonomy of 246 impact-pressure classes for describing and comparing observed environmental change, built on the Driver-Pressure-State-Impact-Response framework."
-    links:
-      - label: "Read the framework paper"
-        url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
-        newtab: true
-      - label: "View the code on GitHub"
-        url: "https://github.com/livingearth-system/Globalchangeframework"
-        newtab: true
+    url: "/themes/change/"
 publication_blocks:
   - title: "Digital Earth for Sustainable Development Goals"
     icon: "book"
@@ -59,8 +59,5 @@ notebook_blocks:
 
 {%- include learn-intents.liquid -%}
 
-{% include info-blocks.liquid list=page.taxonomies_blocks heading="Taxonomies" id="taxonomies" variant="horizontal" %}
-
-{% include info-blocks.liquid list=page.publication_blocks heading="Publications" id="publications" variant="horizontal" %}
 
 {% include info-blocks.liquid list=page.notebook_blocks heading="Example Notebooks" id="example-notebooks" variant="horizontal" %}

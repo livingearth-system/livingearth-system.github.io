@@ -32,7 +32,8 @@ HORIZONTAL VARIANT — two link styles:
 {%- if blocks -%}
 <section class="info-blocks info-blocks-{{ variant }}{% if include.photos == "off" %} info-blocks-nophotos{% endif %}"{% if include.id %} id="{{ include.id }}"{% endif %}>
   <div class="container">
-    {%- if include.heading -%}<h2 class="info-blocks-heading">{{ include.heading }}</h2>{%- endif -%}
+    {%- if include.heading -%}<h2 class="info-blocks-heading{% if include.subheading %} info-blocks-heading-has-sub{% endif %}">{{ include.heading }}</h2>{%- endif -%}
+    {%- if include.subheading -%}<p class="info-blocks-subheading">{{ include.subheading }}</p>{%- endif -%}
     <div class="info-blocks-grid">
       {% for block in blocks %}
 

@@ -5,9 +5,13 @@ Same card pattern as _includes/for-developers-intents.liquid.
 {%- endcomment -%}
 <div class="fd-intents">
   <h2 class="fd-intents-heading">What do you want to learn about?</h2>
-  <div class="fd-intents-grid">
+  <div class="fd-intents-grid fd-intents-grid-fill">
     {% for item in site.data['learn-intents'] %}
+      {% if item.url == "#taxonomies" %}
+      <button type="button" class="fd-intent-card learn-dropdown-toggle" aria-expanded="false" aria-controls="taxonomies">
+      {% else %}
       <a class="fd-intent-card" href="{% assign first_char = item.url | slice: 0 %}{% if item.url contains 'http' or first_char == '#' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">
+      {% endif %}
         <span class="fd-intent-icon">
           {% if item.icon == 'book' %}
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>
@@ -21,7 +25,47 @@ Same card pattern as _includes/for-developers-intents.liquid.
         </span>
         <span class="fd-intent-title">{{ item.title }}</span>
         <span class="fd-intent-description">{{ item.description }}</span>
-      </a>
+      {% if item.url == "#taxonomies" %}</button>{% else %}</a>{% endif %}
     {% endfor %}
   </div>
+  {%- comment -%} Drop-down opened by the Taxonomies card. Content: page.taxonomies_blocks in tools/Learn/index.md {%- endcomment -%}
+  <div class="learn-dropdown-panel" id="taxonomies" hidden>
+    <div class="learn-dropdown-grid">
+      {% for t in page.taxonomies_blocks %}
+      <div class="learn-dropdown-item">
+        <div class="learn-dropdown-item-head">
+          {% if t.image %}<img src="{{ t.image | relative_url }}" alt="" class="learn-dropdown-item-icon">{% endif %}
+          <h3 class="learn-dropdown-item-title">{{ t.title }}</h3>
+        </div>
+        <p class="learn-dropdown-item-text">{{ t.description }}</p>
+        {% if t.links %}
+          {% for link in t.links %}
+          <a class="learn-dropdown-item-link" href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.label }} &rarr;</a>
+          {% endfor %}
+        {% elsif t.url %}
+          <a class="learn-dropdown-item-link" href="{% if t.url contains 'http' %}{{ t.url }}{% else %}{{ t.url | relative_url }}{% endif %}">{{ t.link_label | default: "Find out more" }} &rarr;</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
+
+<script>
+(function () {
+  var toggle = document.querySelector('.learn-dropdown-toggle');
+  var panel = document.getElementById('taxonomies');
+  if (!toggle || !panel) return;
+  function setOpen(open) {
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.classList.toggle('is-open', open);
+  }
+  toggle.addEventListener('click', function () { setOpen(panel.hidden); });
+  // Links to /knowledge-hub/learn/#taxonomies open it straight away
+  if (window.location.hash === '#taxonomies') {
+    setOpen(true);
+    setTimeout(function () { toggle.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
+  }
+})();
+</script>

@@ -286,3 +286,15 @@ a.info-blocks-card-horizontal {
   border-radius: 10px;
   height: 100%;
 }
+
+/* Optional line under a section heading (subheading="..." on the include) */
+.info-blocks-heading-has-sub {
+  margin-bottom: 6px;
+}
+
+.info-blocks-subheading {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  color: #4a6275;
+  margin: 0 0 24px;
+}
