@@ -1,8 +1,8 @@
 ---
 layout: directory
-permalink: /tools/for-developers/
+permalink: /knowledge-hub/for-developers/
 
-title: "For Developers"
+title: "Develop"
 eyebrow: "Knowledge Hub"
 subtitle: "Access, analyse, and work with Living Earth's underlying data — from raw satellite archives to analysis-ready products."
 image: "/assets/img/heading/tools-developers-leaves.jpg"
@@ -52,14 +52,14 @@ code_blocks:
   - title: "Classification Schemes"
     icon: "book"
     description: "Background on the land cover, habitat and change taxonomies that this code implements."
-    url: "/tools/learn/#taxonomies"
+    url: "/knowledge-hub/learn/#taxonomies"
 breadcrumb:
   - label: "Living Earth"
     url: "/"
   - label: "Knowledge Hub"
-    url: "/tools/"
-  - label: "For Developers"
-    url: "/tools/for-developers/"
+    url: "/knowledge-hub/"
+  - label: "Develop"
+    url: "/knowledge-hub/for-developers/"
 ---
 
 {%- include for-developers-intents.liquid -%}

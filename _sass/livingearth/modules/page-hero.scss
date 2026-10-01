@@ -201,3 +201,13 @@
     background: rgba(4, 18, 32, 0.65);
   }
 }
+
+/* Hero button in brand green (30 Sep) */
+.page-hero-cta,
+.page-hero-cta:hover,
+.page-hero-cta:focus,
+.page-hero-cta:visited {
+  background: #3d7f58;
+  color: #fff;
+  text-decoration: none;
+}

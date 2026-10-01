@@ -5,8 +5,8 @@
   url: /about/
   icon: info
 - title: Knowledge Hub
-  url: /tools/
+  url: /knowledge-hub/
   icon: tools
 - title: Data
-  url: /tools/for-developers/#download-data
+  url: /knowledge-hub/for-developers/#download-data
   icon: database

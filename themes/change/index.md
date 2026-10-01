@@ -6,6 +6,8 @@ title: "Change, Impacts and Pressures"
 eyebrow: "Themes"
 subtitle: "Gathering evidence for the causes (driving pressures) and consequences (impacts) of changes in ecosystems and environments using Earth observation and other spatial datasets."
 image: "/assets/img/heading/change-riverbed.jpg"
+cta_text: "Read the framework paper"
+cta_url: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16346"
 breadcrumb:
   - label: "Living Earth"
     url: "/"

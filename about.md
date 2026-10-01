@@ -24,7 +24,7 @@ quicklinks:
     url: /#countries
     icon: globe
   - title: Knowledge Hub
-    url: /tools/
+    url: /knowledge-hub/
     icon: tools
 team_blocks:
   # Photos to come from Mona (and Suvarna via Richard) — add `image:` to each card.
@@ -74,9 +74,9 @@ org_blocks:
     logo: "/assets/img/logos/PML.png"
     url: "https://www.pml.ac.uk/"
   - title: "University of Newcastle, Australia"
-    description: "School of Environmental and Life Sciences"
+    description: "College of Engineering, Science and Environment"
     logo: "/assets/img/logos/University of Newcastle Aus.png"
-    url: "https://www.newcastle.edu.au/school/environmental-and-life-sciences"
+    url: "https://www.newcastle.edu.au/college/engineering-science-environment"
   - title: "CSIRO, Australia"
     description: "Land and Water; Oceans and Atmosphere, Tropical Ecosystems Research Centre"
     logo: "/assets/img/logos/CSIROLogoMotifRGB-120.png"
@@ -152,6 +152,6 @@ org_blocks:
   </div>
 </section>
 
-{% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" %}
+{% include info-blocks.liquid list=page.team_blocks heading="Meet the Team" id="meet-the-team" variant="team" photos="off" %}
 
 {% include info-blocks.liquid list=page.org_blocks heading="Contributing Organisations: Past and Present" id="organisations" variant="horizontal" %}

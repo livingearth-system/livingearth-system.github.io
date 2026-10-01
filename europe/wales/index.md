@@ -266,7 +266,7 @@ pipeline:
         url: "https://hub.livingwales.space/hub/spawn"
         newtab: true
       - label: "Stream the Data"
-        url: "/tools/for-developers/"
+        url: "/knowledge-hub/for-developers/"
 
 tools_blocks:
   - title: "See on Map"

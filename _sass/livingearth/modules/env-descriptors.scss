@@ -963,3 +963,166 @@ button.env-des-descriptor-more {
 .env-des-descriptor-panel-link:hover {
   text-decoration: underline;
 }
+
+/* Keep links readable on the dark panels when hovered, clicked or visited
+   (otherwise Bootstrap turns them dark blue on the dark blue panel) */
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:hover,
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:focus,
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:active,
+.env-des-descriptor-panel-block .env-des-descriptor-panel-link:visited {
+  color: #c6e5f4;
+}
+/* Learn page cards: stretch to fill the row, whatever the number of cards */
+.fd-intents-grid.fd-intents-grid-fill {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Learn page cards in green, matching the Learn column on the Knowledge Hub page */
+.fd-intents-grid-fill .fd-intent-card {
+  background: #e3efd9;
+}
+.fd-intents-grid-fill .fd-intent-icon svg,
+.fd-intents-grid-fill .fd-intent-title {
+  color: #2f6446;
+}
+.fd-intents-grid-fill .fd-intent-description {
+  color: #3f5a47;
+}
+.fd-intents-grid-fill .fd-intent-card:hover {
+  background: #3d7f58;
+}
+.fd-intents-grid-fill .fd-intent-card:hover .fd-intent-icon svg,
+.fd-intents-grid-fill .fd-intent-card:hover .fd-intent-title,
+.fd-intents-grid-fill .fd-intent-card:hover .fd-intent-description {
+  color: #fbf8f5;
+}
+
+
+/* Taxonomy drop-downs on the Learn page (_includes/taxonomy-accordion.liquid) */
+.taxonomy-accordion-body {
+  max-width: 900px;
+}
+
+.taxonomy-accordion-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3a5a6c;
+  margin: 0 0 16px;
+}
+
+.taxonomy-accordion-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.taxonomy-accordion-link,
+.taxonomy-accordion-link:visited {
+  display: inline-block;
+  background: #3d7f58;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 9px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.taxonomy-accordion-link:hover,
+.taxonomy-accordion-link:focus {
+  background: #2f6446;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Learn page: Taxonomies drop-down under the cards (_includes/learn-intents.liquid) */
+button.fd-intent-card {
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.learn-dropdown-toggle.is-open {
+  background: #3d7f58;
+}
+.learn-dropdown-toggle.is-open .fd-intent-icon svg,
+.learn-dropdown-toggle.is-open .fd-intent-title,
+.learn-dropdown-toggle.is-open .fd-intent-description {
+  color: #fbf8f5;
+}
+
+.learn-dropdown-panel {
+  margin-top: 20px;
+  background: #f4f9f0;
+  border: 1px solid #d6e6cb;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.learn-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.learn-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.learn-dropdown-item-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.learn-dropdown-item-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
+.learn-dropdown-item-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #2f6446;
+  margin: 0;
+}
+
+.learn-dropdown-item-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #3f5a47;
+  margin: 0;
+}
+
+.learn-dropdown-item-link,
+.learn-dropdown-item-link:visited {
+  align-self: flex-start;
+  margin-top: auto;
+  background: #3d7f58;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.learn-dropdown-item-link:hover,
+.learn-dropdown-item-link:focus {
+  background: #2f6446;
+  color: #fff;
+  text-decoration: none;
+}

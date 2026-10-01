@@ -30,9 +30,10 @@ HORIZONTAL VARIANT — two link styles:
 {% assign blocks = include.list | default: page.info_blocks %}
 {% assign variant = include.variant | default: "default" %}
 {%- if blocks -%}
-<section class="info-blocks info-blocks-{{ variant }}"{% if include.id %} id="{{ include.id }}"{% endif %}>
+<section class="info-blocks info-blocks-{{ variant }}{% if include.photos == "off" %} info-blocks-nophotos{% endif %}"{% if include.id %} id="{{ include.id }}"{% endif %}>
   <div class="container">
-    {%- if include.heading -%}<h2 class="info-blocks-heading">{{ include.heading }}</h2>{%- endif -%}
+    {%- if include.heading -%}<h2 class="info-blocks-heading{% if include.subheading %} info-blocks-heading-has-sub{% endif %}">{{ include.heading }}</h2>{%- endif -%}
+    {%- if include.subheading -%}<p class="info-blocks-subheading">{{ include.subheading }}</p>{%- endif -%}
     <div class="info-blocks-grid">
       {% for block in blocks %}
 
@@ -86,7 +87,9 @@ HORIZONTAL VARIANT — two link styles:
 
         {% elsif variant == "team" %}
           <div class="info-blocks-card info-blocks-card-team">
-            {% if block.image %}
+            {%- comment -%} photos="off" on the include = names and roles only, no photo area {%- endcomment -%}
+            {% if include.photos == "off" %}
+            {% elsif block.image %}
               <div class="info-blocks-team-photo">
                 <img src="{{ block.image | relative_url }}" alt="{{ block.title }}" loading="lazy">
               </div>

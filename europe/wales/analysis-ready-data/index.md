@@ -7,10 +7,10 @@ permalink: /europe/wales/analysis-ready-data/
 <head>
 <meta charset="utf-8">
 <title>Redirecting…</title>
-<link rel="canonical" href="{{ '/tools/for-developers/#wales' | relative_url }}">
-<meta http-equiv="refresh" content="0; url={{ '/tools/for-developers/#wales' | relative_url }}">
+<link rel="canonical" href="{{ '/knowledge-hub/for-developers/#wales' | relative_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/knowledge-hub/for-developers/#wales' | relative_url }}">
 </head>
 <body>
-<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/tools/for-developers/#wales' | relative_url }}">For Developers</a>.</p>
+<p>This page has moved. If you are not redirected automatically, go to <a href="{{ '/knowledge-hub/for-developers/#wales' | relative_url }}">Develop</a>.</p>
 </body>
 </html>

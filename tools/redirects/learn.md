@@ -1,6 +1,7 @@
 ---
 layout: null
-permalink: /tools/learning-resources
+permalink: /tools/learn/
+# Old URL kept so existing links and bookmarks still work (moved 30 Sep).
 ---
 <!DOCTYPE html>
 <html lang="en">
