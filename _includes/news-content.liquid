@@ -1,3 +1,15 @@
+<style>
+  .news-blog .blog_item { display: flex; }
+  .news-blog .blog_item > .item { flex: 1; display: flex; flex-direction: column; }
+  .news-blog .stay-up-card { flex: 1; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; position: relative; }
+  .news-blog .stay-up-card .line-card { margin-top: auto; }
+  .news-blog .stay-up-card:hover { transform: scale(1.03); box-shadow: 0 12px 28px rgba(35, 86, 123, 0.18); z-index: 2; }
+  .news-blog .stay-up-card img, .news-blog .stay-up-card:hover img { transform: none !important; }
+  .news-blog .stay-up-card .card-links { display: flex; flex-direction: column; gap: 6px; margin: 4px 0 20px; padding: 0 40px; }
+  .news-blog .stay-up-card .card-links a { display: inline-flex; align-items: center; gap: 8px; margin: 0 !important; padding: 0 !important; font-size: 15px !important; line-height: 1.4 !important; font-weight: 600; color: #23567b; text-decoration: none; }
+  .news-blog .stay-up-card .card-links a:hover { text-decoration: underline; }
+</style>
+
 <div class="news-header-container">
   <div class="news-header-search"{% unless site.show_news_search %} style="display:none"{% endunless %}>
     <input
@@ -94,11 +106,10 @@
                 {% if has_link %}<a href="{{ card_href }}"{% if infor.href contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ infor.title }}</a>{% else %}<span>{{ infor.title }}</span>{% endif %}
               </p>
               <span class="body-img">{{ infor.subtitle }}</span>
+              {% if infor.links %}<div class="card-links">{% for l in infor.links %}<a href="{{ l.url }}" target="_blank" rel="noopener"><span aria-hidden="true">&rarr;</span> {{ l.name }}</a>{% endfor %}</div>{% endif %}
               <div class="line-card"></div>
               <div class="date-card">
                 <span>{{ infor.date }}</span>
-                <div class="dot-card"></div>
-                <span>{{ infor.min }}</span>
               </div>
             </div>
           </div>
@@ -129,7 +140,7 @@
           button.addEventListener('click', function () {
               const category = button.dataset.category;
 
-              document.querySelectorAll('.col-xl-4').forEach(function(column) {
+              document.querySelectorAll('.news-blog .blog_item').forEach(function(column) {
                   const itemsInColumn = column.querySelectorAll('.item');
                   let columnShouldBeVisible = false;
 
@@ -141,18 +152,16 @@
                       }
                   });
 
-                  if (columnShouldBeVisible) {
-                      column.style.display = 'block';
-                  } else {
-                      column.style.display = 'none';
-                  }
+                  // '' (not 'block') so the equal-height flex layout is kept
+                  column.style.display = columnShouldBeVisible ? '' : 'none';
               });
           });
       });
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-      var totalArticles = {{ site.data['news-blog'].index.size }};
+      // Count rendered cards only, so hidden items aren't included
+      var totalArticles = document.querySelectorAll('.news-blog .item').length;
       var currentViewSpan = document.getElementById("current-view");
       var totalArticlesSpan = document.getElementById("total-articles");
 
@@ -187,6 +196,7 @@
         var totalCount = 0;
 
         data.forEach(function(item) {
+            if (item.hidden) { return; }
             var category = item['category'];
             if (counts[category] === undefined) {
                 counts[category] = 0;
@@ -212,13 +222,11 @@
 
         document.addEventListener('DOMContentLoaded', function () {
           const buttons = document.querySelectorAll('.news-header-option button');
-          const items = document.querySelectorAll('.item');
+          const items = document.querySelectorAll('.news-blog .item');
           const totalArticlesSpan = document.getElementById("total-articles");
           const currentViewSpan = document.getElementById("current-view");
           const loadMoreBtn = document.querySelector(".load-more-btn");
 
-          let data = {{ site.data['news-blog'].index | jsonify }};
-          let totalCount = data.length;
           let articlesPerPage = 8;
           let currentPage = 1;
 
@@ -281,11 +289,7 @@
             const blogs = document.querySelectorAll('.blog_item')
             blogs.forEach(blog => {
               const title = blog.querySelector('.title-img>a, .title-img>span')
-              if(!title.textContent.toUpperCase().includes(searchText.toUpperCase())) {
-                blog.style.display = 'none'
-              } else {
-                blog.style.display = 'block'
-              }
+              blog.style.display = title.textContent.toUpperCase().includes(searchText.toUpperCase()) ? '' : 'none'
             })
         }
       })

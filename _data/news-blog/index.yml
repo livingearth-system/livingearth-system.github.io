@@ -208,12 +208,12 @@
       id: button2
       name: Case study
   date: Sep 11, 2022
-  href: '#'
+  href: https://climate.esa.int/en/projects/biomass/
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/ccibiomass-croatia.png
   subtitle: >
-    The ESA CCI Biomass project [link to esa.cci.int/biomass) has generated global maps of above ground biomass (Mg ha-1) at 100 m spatial resolution for 2010 and annually from 2017 to 2020 with further years planned.  Establishing changes in AGB between years is problematic, particularly because different radar sensors were used in their generation and environmental conditions vary between years. Whilst not directly quantifying biomass change, Living Earth’s Global Change Framework and Evidence-Based Change Framework is providing evidence for the types of changes occurring, using the detailed land cover maps for Australia and Wales to guide development of the change algorithms. Knowledge of the reasons for change is also been obtained by referencing pressure datasets obtained from a diverse range of sources, including Earth observations, expert knowledge and  citizen science records. 
+    The ESA CCI Biomass project has generated global maps of above ground biomass (Mg ha-1) at 100 m spatial resolution for 2010 and annually from 2017 to 2020 with further years planned.  Establishing changes in AGB between years is problematic, particularly because different radar sensors were used in their generation and environmental conditions vary between years. Whilst not directly quantifying biomass change, Living Earth’s Global Change Framework and Evidence-Based Change Framework is providing evidence for the types of changes occurring, using the detailed land cover maps for Australia and Wales to guide development of the change algorithms. Knowledge of the reasons for change is also been obtained by referencing pressure datasets obtained from a diverse range of sources, including Earth observations, expert knowledge and  citizen science records. 
   title: Supporting ESA's CCI Biomass Project
   
 - category: "case-study"
@@ -258,7 +258,7 @@
   min: 5 min read
   oldman-img: /assets/img/news/earsel-manchester.png
   subtitle: >
-    Living Earth is being presented in a keynote speech by Prof. Richard Lucas at the Symposum, which focuses on the use of Living Earth to support planetary recovery,
+    Living Earth was presented in a keynote speech by Prof. Richard Lucas at the Symposium, which focused on the use of Living Earth to support planetary recovery,
   title: 43rd EARSeL Symposium, Manchester, UK
   
 - category: "news"
@@ -280,8 +280,29 @@
     - class: button-3
       id: button3
       name: News
+  date: Nov 2025
+  href: https://cat.org.uk/posts/protecting-our-planet-day-2025-inspiring-the-next-generation-at-cat/
+  id: infor
+  min: 5 min read
+  oldman-img: /assets/img/news/pop23-qld.png
+  subtitle: >
+    Prof. Richard Lucas presented Living Wales at Protecting Our Planet Day 2025 (POP25), hosted by the Centre for Alternative Technology and live-streamed to schools across the UK.
+  links:
+    - name: "CAT: Protecting Our Planet Day 2025"
+      url: "https://cat.org.uk/posts/protecting-our-planet-day-2025-inspiring-the-next-generation-at-cat/"
+    - name: "STEM Learning: Protecting our Forests"
+      url: "https://www.stem.org.uk/enrichment/protecting-our-planet/pop-sessions/protecting-our-forests-25"
+    - name: "Watch on YouTube"
+      url: "https://www.youtube.com/watch?v=c73Vi2SK7aI&list=PLhgK74tFscGVvXs1-pHqaPf4IrV7_fvA0&index=12"
+  title: Living Earth and Protecting Our Planet 2025
+  
+- category: "news"
+  button:
+    - class: button-3
+      id: button3
+      name: News
   date: Sep 11, 2022
-  href: '#'
+  href: https://www.stem.org.uk/enrichment/protecting-our-planet-day
   id: infor
   min: 5 min read
   oldman-img: /assets/img/news/pop23-qld.png
