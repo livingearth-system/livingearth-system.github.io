@@ -7,12 +7,14 @@ the silhouette icon (same assets as the home page countries strip).
 Countries with no matching entry (e.g. "Global") fall back to a letter
 badge, same pattern as countries-strip.liquid.
 
+Cards are shown in a single list, newest first, regardless of country.
+
 Usage: {% include publications-list.liquid %}
 {%- endcomment -%}
 
 {% assign pubs = site.data.publications | sort: 'date' | reverse %}
 {% assign all_countries = pubs | map: 'country' | uniq | sort %}
-{%- comment -%} Order: Global first, then the rest alphabetically (Richard, 30 Sep) {%- endcomment -%}
+{%- comment -%} Pill order: Global first, then the rest alphabetically (Richard, 30 Sep) {%- endcomment -%}
 {% assign countries = "" | split: "" %}
 {% if all_countries contains "Global" %}{% assign countries = countries | push: "Global" %}{% endif %}
 {% for c in all_countries %}{% if c != "Global" %}{% assign countries = countries | push: c %}{% endif %}{% endfor %}
@@ -42,19 +44,17 @@ Usage: {% include publications-list.liquid %}
 <div class="pub-empty" hidden>No publications match this filter.</div>
 
 <div class="pub-grid">
-  {% for group in countries %}
-  {% for pub in pubs %}{% if pub.country == group %}
+  {% for pub in pubs %}
   <div class="pub-card" data-country="{{ pub.country }}">
     <span class="pub-card-badge">{{ pub.country }}</span>
     {% if pub.link and pub.link != "" %}
-    <a class="pub-card-title" href="{% if pub.link contains 'http' %}{{ pub.link }}{% else %}{{ pub.link | relative_url }}{% endif %}" {% if pub.newtab %}target="_blank" rel="noopener"{% endif %}>{{ pub.title }}</a>
+    <a class="pub-card-title" href="{% if pub.link contains 'http' %}{{ pub.link }}{% else %}{{ pub.link | relative_url }}{% endif %}" {%if pub.newtab %}target="_blank" rel="noopener"{% endif %}>{{ pub.title }}</a>
     {% else %}
     <span class="pub-card-title pub-card-title-nolink">{{ pub.title }}</span>
     {% endif %}
     <div class="pub-card-authors">{{ pub.authors }}</div>
     <div class="pub-card-date">{{ pub.date }}</div>
   </div>
-  {% endif %}{% endfor %}
   {% endfor %}
 </div>
 
