@@ -15,8 +15,6 @@
   title: "Wales"
   intro: "Analysis-ready satellite data and Open Data Cube access for Wales."
   links:
-    - label: "Living Wales portal (Sentinel-1, Sentinel-2 and Landsat)"
-      url: "https://livingwales.aber.ac.uk/"
     - label: "Request Welsh Data Cube access (email livingwales@aber.ac.uk)"
       url: "mailto:livingwales@aber.ac.uk"
 
